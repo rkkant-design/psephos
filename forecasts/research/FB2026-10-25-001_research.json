@@ -1,0 +1,867 @@
+{
+ "calibration": {
+  "a": 1.0,
+  "b": 0.0
+ },
+ "committed_at_utc": "2026-10-25T05:29:37+00:00",
+ "domain": "ForecastBench",
+ "dossier_sha256": "a949ea78a519bf6c03d4fb37f088c60f95e581e0d665a4b9e0a6bc2e66d63d0b",
+ "forecast_id": "FB2026-10-25-001",
+ "freeze_date": "2026-10-25",
+ "independence_attestation": "No betting odds, prediction-market prices or forecast-aggregator numbers were fetched or consulted for any question in this dossier; market-source questions' embedded freeze prices were deliberately ignored.",
+ "questions": [
+  {
+   "base_rate_used": {
+    "reference_class": "security incidents with confirmed model-weight exfiltration within 6 months",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.1
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "45467",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "metaculus"
+   },
+   "evidence": [
+    "Confirmations of specific weight exfiltration in security incidents are rare and slow; forensic attribution of the July HF swarm incident to actual OpenAI weight theft has not surfaced in 3+ months, and such confirmations typically take years if ever."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.1,
+   "p_research": 0.1,
+   "q": "Will it be confirmed before 2027 that the \"swarm\" in the July 2026 Hugging Face incident exfiltrated any OpenAI model weights?",
+   "reasoning_summary": "Base rate: security incidents with confirmed model-weight exfiltration within 6 months ~ 0.1. Confirmations of specific weight exfiltration in security incidents are rare and slow; forensic attribution of the July HF swarm incident to actual OpenAI weight theft has not surfaced in 3+ months, and such confirmations typically take years if ever. Net of adjustments the final probability is 0.1.",
+   "strongest_opposing_case": "Strongest case against this number: A government advisory or vendor forensic report could land any week; incident is high-profile enough that disclosure pressure exists before year-end."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "years with new signed US-China bilateral trade agreements since 2018",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.1
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "43119",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "metaculus"
+   },
+   "evidence": [
+    "US-China trade relations in 2026 are defined by the Section 301 overcapacity fight and strategic decoupling; a signed-and-jointly-announced NEW bilateral agreement within 10 weeks has no visible negotiating track."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.12,
+   "p_research": 0.12,
+   "q": "Will the US and China jointly announce a new bilateral trade agreement in 2026?",
+   "reasoning_summary": "Base rate: years with new signed US-China bilateral trade agreements since 2018 ~ 0.1. US-China trade relations in 2026 are defined by the Section 301 overcapacity fight and strategic decoupling; a signed-and-jointly-announced NEW bilateral agreement within 10 weeks has no visible negotiating track. Net of adjustments the final probability is 0.12.",
+   "strongest_opposing_case": "Strongest case against this number: A surprise summit deliverable is possible; both sides have incentives to calm markets before year-end and small deals have been branded as agreements before."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "10-week windows with simultaneous >threshold drawdowns in 4+ mega-caps",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.05
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "40767",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "metaculus"
+   },
+   "evidence": [
+    "Requires 4 of 7 Magnificent Seven stocks to crash per criteria before 2027; the S&P sits ~2.5% off its all-time high in late October and a synchronized mega-cap crash inside 10 weeks is a tail event."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-24",
+     "title": "Market snapshot roundup, 24 Oct 2026 (S&P ~7,663; BTC ~$81k; WTI ~$102)",
+     "url": "https://seekingalpha.com/article/4957279-the-1-minute-market-report-october-24-2026"
+    }
+   ],
+   "p_raw": 0.08,
+   "p_research": 0.08,
+   "q": "Will Magnificent Seven shares crash before 2027?",
+   "reasoning_summary": "Base rate: 10-week windows with simultaneous >threshold drawdowns in 4+ mega-caps ~ 0.05. Requires 4 of 7 Magnificent Seven stocks to crash per criteria before 2027; the S&P sits ~2.5% off its all-time high in late October and a synchronized mega-cap crash inside 10 weeks is a tail event. Net of adjustments the final probability is 0.08.",
+   "strongest_opposing_case": "Strongest case against this number: AI-trade concentration is historically extreme and a single earnings shock plus war-driven risk-off could cascade through the correlated mega-caps quickly."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "years since 2021 with NATO-attributed terror attacks staged from Afghanistan",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.07
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "7819",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "metaculus"
+   },
+   "evidence": [
+    "Both conditions (attack traced to Afghanistan-based group AND NATO attribution) within 10 weeks is a conjunction of rare events; no publicly attributed anti-NATO plot from Afghan soil has been confirmed in 2026 so far."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.1,
+   "p_research": 0.1,
+   "q": "Will Taliban-controlled Afghanistan be used as a base for anti-NATO terrorism before 2027?",
+   "reasoning_summary": "Base rate: years since 2021 with NATO-attributed terror attacks staged from Afghanistan ~ 0.07. Both conditions (attack traced to Afghanistan-based group AND NATO attribution) within 10 weeks is a conjunction of rare events; no publicly attributed anti-NATO plot from Afghan soil has been confirmed in 2026 so far. Net of adjustments the final probability is 0.1.",
+   "strongest_opposing_case": "Strongest case against this number: ISKP capability is real and a single mass-casualty attack in Europe with rapid attribution would flip this; intelligence warnings have been recurring."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "years since 2023 with at least one federal AI EO or statute enacted",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.6
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "41193",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "metaculus"
+   },
+   "evidence": [
+    "An executive order counts, which lowers the bar substantially; the administration has been active with AI EOs, though its posture is deregulatory and a specifically safety-framed statute is unlikely in 10 weeks."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.3,
+   "p_research": 0.3,
+   "q": "Will the U.S. enact an AI safety federal statute or executive order in 2026?",
+   "reasoning_summary": "Base rate: years since 2023 with at least one federal AI EO or statute enacted ~ 0.6. An executive order counts, which lowers the bar substantially; the administration has been active with AI EOs, though its posture is deregulatory and a specifically safety-framed statute is unlikely in 10 weeks. Net of adjustments the final probability is 0.3.",
+   "strongest_opposing_case": "Strongest case against this number: The administration's AI actions emphasize acceleration over safety; the resolution may require genuine safety provisions that no pending 2026 action contains."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "calendar years of the Sudan civil war with an effective bilateral ceasefire",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.1
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "41144",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "metaculus"
+   },
+   "evidence": [
+    "Sudan's war grinds on with no credible bilateral ceasefire process; Burhan and Hemedti have no confirmed channel and external mediation (Jeddah, Geneva) has repeatedly failed to produce an effective in-force ceasefire."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.1,
+   "p_research": 0.1,
+   "q": "Will there be a ceasefire in the Sudanese Civil War during 2026?",
+   "reasoning_summary": "Base rate: calendar years of the Sudan civil war with an effective bilateral ceasefire ~ 0.1. Sudan's war grinds on with no credible bilateral ceasefire process; Burhan and Hemedti have no confirmed channel and external mediation (Jeddah, Geneva) has repeatedly failed to produce an effective in-force ceasefire. Net of adjustments the final probability is 0.1.",
+   "strongest_opposing_case": "Strongest case against this number: War fatigue and famine pressure are extreme and a US/Saudi push after the midterms could force a sudden humanitarian truce that qualifies under the criteria."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "years since 2002 with 3+ day international arrival halts at a listed airport",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.03
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "43730",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "metaculus"
+   },
+   "evidence": [
+    "A 3+ consecutive day cessation of international arrival processing at a major US airport is unprecedented outside 9/11 and COVID; requires an extreme trigger (attack, system collapse, shutdown chaos) within 10 weeks."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.1,
+   "p_research": 0.1,
+   "q": "Will US federal agencies cease international arrival processing at any of the following airports for 3 or more consecutive days before 2027?",
+   "reasoning_summary": "Base rate: years since 2002 with 3+ day international arrival halts at a listed airport ~ 0.03. A 3+ consecutive day cessation of international arrival processing at a major US airport is unprecedented outside 9/11 and COVID; requires an extreme trigger (attack, system collapse, shutdown chaos) within 10 weeks. Net of adjustments the final probability is 0.1.",
+   "strongest_opposing_case": "Strongest case against this number: Wartime posture with Iran plus a December shutdown fight creates genuine tail scenarios for security-driven airport disruptions that did not exist last year."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "states newly enacting cage-free laws per 12-month window, 2016-2025",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.4
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "45421",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "metaculus"
+   },
+   "evidence": [
+    "State legislative calendars mostly reconvene in January; a cage-free law enacted by a NEW state before July 2027 depends on 2027 sessions where several bills are pending; the 2015-2025 adoption pace is roughly one state per year."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.3,
+   "p_research": 0.3,
+   "q": "Will at least one additional U.S. state enact a cage-free egg requirement before July 2027?",
+   "reasoning_summary": "Base rate: states newly enacting cage-free laws per 12-month window, 2016-2025 ~ 0.4. State legislative calendars mostly reconvene in January; a cage-free law enacted by a NEW state before July 2027 depends on 2027 sessions where several bills are pending; the 2015-2025 adoption pace is roughly one state per year. Net of adjustments the final probability is 0.3.",
+   "strongest_opposing_case": "Strongest case against this number: Egg-price politics cut against animal-welfare mandates right now, and pending bills can die quietly; the specific before-July deadline clips the usual session timing."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "psychedelic therapies achieving FDA approval by their first projected date",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.05
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "1385",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "metaculus"
+   },
+   "evidence": [
+    "Clinical approval (FDA or equivalent acceptance as treatment) for psilocybin for end-of-life anxiety by Jan 1 2027 would require a completed Phase 3 and approval decision that is not on any public timeline; the MDMA rejection showed the bar."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.03,
+   "p_research": 0.03,
+   "q": "Qualia Research Institute Question Series: Will Psilocybin be a clinically approved treatment for end-of-life anxiety by 2027?",
+   "reasoning_summary": "Base rate: psychedelic therapies achieving FDA approval by their first projected date ~ 0.05. Clinical approval (FDA or equivalent acceptance as treatment) for psilocybin for end-of-life anxiety by Jan 1 2027 would require a completed Phase 3 and approval decision that is not on any public timeline; the MDMA rejection showed the bar. Net of adjustments the final probability is 0.03.",
+   "strongest_opposing_case": "Strongest case against this number: Breakthrough-therapy status and compassionate-use expansions exist; a state-level or accelerated pathway could arguably satisfy a loose reading of accepted treatment."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "novel immigration enforcement program types established per year 2025-26",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.2
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "36331",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "metaculus"
+   },
+   "evidence": [
+    "A formal federal or state bounty-style program rewarding deportation tips would be novel; immigration enforcement rhetoric is intense but no such program has been established through 10 months of 2026."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.25,
+   "p_research": 0.25,
+   "q": "Will the US establish a government program rewarding information leading to deportations before January 3, 2027?",
+   "reasoning_summary": "Base rate: novel immigration enforcement program types established per year 2025-26 ~ 0.2. A formal federal or state bounty-style program rewarding deportation tips would be novel; immigration enforcement rhetoric is intense but no such program has been established through 10 months of 2026. Net of adjustments the final probability is 0.25.",
+   "strongest_opposing_case": "Strongest case against this number: One state AG or DHS pilot could qualify under a broad reading, and enforcement-maximalist states have floated tip-line programs with rewards before."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "communist single-party states losing power in any given year post-1991",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.02
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "42666",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "metaculus"
+   },
+   "evidence": [
+    "The PCC retains full control of Cuba's institutions; economic crisis and emigration have not produced organized capability to displace the government, and 10 weeks is far too short absent a sudden collapse."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.03,
+   "p_research": 0.03,
+   "q": "Will the Cuban government lose power before 2027?",
+   "reasoning_summary": "Base rate: communist single-party states losing power in any given year post-1991 ~ 0.02. The PCC retains full control of Cuba's institutions; economic crisis and emigration have not produced organized capability to displace the government, and 10 weeks is far too short absent a sudden collapse. Net of adjustments the final probability is 0.03.",
+   "strongest_opposing_case": "Strongest case against this number: Blackouts and scarcity have produced the largest protests since 1994 and a succession shock to an aged leadership could cascade unpredictably fast."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "years of Sudan war with a confirmed Burhan-Hemedti in-person meeting",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.05
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "43316",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "metaculus"
+   },
+   "evidence": [
+    "Burhan and Hemedti have refused direct contact through two years of war; a publicly confirmed in-person meeting during 2026 would require a mediation breakthrough of which there is no current sign with 10 weeks left."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.07,
+   "p_research": 0.07,
+   "q": "Will Lt Gen Abdel Fattah al-Burhan and Lt Gen Mohamed Hamdan Dagalo \"Hemedti\" be publicly confirmed to have met in person at any point during 2026?",
+   "reasoning_summary": "Base rate: years of Sudan war with a confirmed Burhan-Hemedti in-person meeting ~ 0.05. Burhan and Hemedti have refused direct contact through two years of war; a publicly confirmed in-person meeting during 2026 would require a mediation breakthrough of which there is no current sign with 10 weeks left. Net of adjustments the final probability is 0.07.",
+   "strongest_opposing_case": "Strongest case against this number: Saudi or UAE pressure could stage a surprise summit; both men have attended Jeddah-track processes before and a photo-op truce meeting is cheap to grant."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "AI-created songs reaching Hot 100 top 20 since 2023",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.05
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "40969",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "metaculus"
+   },
+   "evidence": [
+    "No AI-created song has charted top-20 on the Hot 100; viral AI tracks have been pulled or failed to sustain chart-eligible consumption, and the window is 10 weeks in a holiday-music-dominated chart period."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.12,
+   "p_research": 0.12,
+   "q": "Will an AI-created song chart in the top 20 of the Billboard Hot 100 before 2027?",
+   "reasoning_summary": "Base rate: AI-created songs reaching Hot 100 top 20 since 2023 ~ 0.05. No AI-created song has charted top-20 on the Hot 100; viral AI tracks have been pulled or failed to sustain chart-eligible consumption, and the window is 10 weeks in a holiday-music-dominated chart period. Net of adjustments the final probability is 0.12.",
+   "strongest_opposing_case": "Strongest case against this number: One TikTok-viral AI artist with label distribution could spike streams in a single tracking week, and the bar is one week at #20 on a volatile chart."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "rolling 10-week windows since 1950 containing a 5-day >10% S&P decline",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.03
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "40289",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "metaculus"
+   },
+   "evidence": [
+    "A >10% fall in 5 trading days has occurred only in 1987, 2008, 2020 and March 2025-type extremes; with the index near highs, the 10-week probability of a crash of that velocity is a few percent even in a war environment."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-24",
+     "title": "Market snapshot roundup, 24 Oct 2026 (S&P ~7,663; BTC ~$81k; WTI ~$102)",
+     "url": "https://seekingalpha.com/article/4957279-the-1-minute-market-report-october-24-2026"
+    }
+   ],
+   "p_raw": 0.05,
+   "p_research": 0.05,
+   "q": "Will the US stock market crash by more than 10% in any 5-day trading period before 2027?",
+   "reasoning_summary": "Base rate: rolling 10-week windows since 1950 containing a 5-day >10% S&P decline ~ 0.03. A >10% fall in 5 trading days has occurred only in 1987, 2008, 2020 and March 2025-type extremes; with the index near highs, the 10-week probability of a crash of that velocity is a few percent even in a war environment. Net of adjustments the final probability is 0.05.",
+   "strongest_opposing_case": "Strongest case against this number: An Iran escalation closing Hormuz fully, or an AI-capex unwind hitting correlated mega-caps, gives this cycle fatter tails than the historical base rate implies."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "obesity drugs approved within first expected regulatory cycle",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.55
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "8602",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "metaculus"
+   },
+   "evidence": [
+    "CagriSema completed Phase 3 REDEFINE readouts and Novo filed; an FDA decision window plausibly lands in late 2026 and EMA opinion could also qualify; approval by either regulator by Jan 1 2027 is close to an even-odds timing question."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.55,
+   "p_research": 0.55,
+   "q": "Will the combination of semaglutide and cagrilintide be approved for the treatment of obesity by the FDA or EMA by 2027?",
+   "reasoning_summary": "Base rate: obesity drugs approved within first expected regulatory cycle ~ 0.55. CagriSema completed Phase 3 REDEFINE readouts and Novo filed; an FDA decision window plausibly lands in late 2026 and EMA opinion could also qualify; approval by either regulator by Jan 1 2027 is close to an even-odds timing question. Net of adjustments the final probability is 0.55.",
+   "strongest_opposing_case": "Strongest case against this number: Regulatory slips of one quarter are routine and the FDA under current leadership has added review friction; a Q1-2027 action date would resolve this No."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "eVTOL commercial-launch promises met within the promised calendar year",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.25
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "15134",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "metaculus"
+   },
+   "evidence": [
+    "Joby and Archer have flown demonstration eVTOL flights in Dubai and commercial launch has been promised for 2026; a single paying commercial flight before Jan 1 2027 is plausible but certification and operations slip chronically."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.35,
+   "p_research": 0.35,
+   "q": "Will Dubai's planned aerial taxis be operational before 2027?",
+   "reasoning_summary": "Base rate: eVTOL commercial-launch promises met within the promised calendar year ~ 0.25. Joby and Archer have flown demonstration eVTOL flights in Dubai and commercial launch has been promised for 2026; a single paying commercial flight before Jan 1 2027 is plausible but certification and operations slip chronically. Net of adjustments the final probability is 0.35.",
+   "strongest_opposing_case": "Strongest case against this number: RTA and Joby have announced vertiport completion and said paid service starts in 2026; one inaugural commercial flight is exactly the kind of milestone staged before year-end."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "years since 2019 with waiver-authority-level legal changes",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.3
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "15492",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "metaculus"
+   },
+   "evidence": [
+    "Congressional CRA resolutions revoked specific California waivers in 2025 and litigation continues; a court ruling or enacted law eliminating the waiver AUTHORITY itself by Jan 1 2027 is a higher bar that remains unresolved."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.4,
+   "p_research": 0.4,
+   "q": "Will California's waiver exception under the Clean Air Act be repealed before January 1, 2027?",
+   "reasoning_summary": "Base rate: years since 2019 with waiver-authority-level legal changes ~ 0.3. Congressional CRA resolutions revoked specific California waivers in 2025 and litigation continues; a court ruling or enacted law eliminating the waiver AUTHORITY itself by Jan 1 2027 is a higher bar that remains unresolved. Net of adjustments the final probability is 0.4.",
+   "strongest_opposing_case": "Strongest case against this number: The administration actively seeks to end the waiver regime and a favorable circuit ruling before year-end could qualify depending on the question's precise reading."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "mega-event host economic projections judged met by rapid post-event data",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.1
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "45462",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "metaculus"
+   },
+   "evidence": [
+    "Resolving YES needs credible post-event data showing 6 of 11 US host cities hit projected boosts before Jan 1 2027; rigorous economic studies land months later and World Cup boosts habitually underdeliver versus projections."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.1,
+   "p_research": 0.1,
+   "q": "Will the 2026 World Cup deliver the predicted economic boost to US host cities?",
+   "reasoning_summary": "Base rate: mega-event host economic projections judged met by rapid post-event data ~ 0.1. Resolving YES needs credible post-event data showing 6 of 11 US host cities hit projected boosts before Jan 1 2027; rigorous economic studies land months later and World Cup boosts habitually underdeliver versus projections. Net of adjustments the final probability is 0.1.",
+   "strongest_opposing_case": "Strongest case against this number: Boosterish city and FIFA reports could be deemed credible sources and several cities will publish favorable preliminary numbers before year-end."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "Waymo weekly-ride milestones hit within predicted quarters since 2023",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.15
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "45423",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "metaculus"
+   },
+   "evidence": [
+    "Waymo ran ~250-300k weekly paid rides in early 2026 and scaling has continued across new metros, but 1M weekly by Dec 31 requires a 3-4x jump that outpaces every prior scaling curve segment."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.2,
+   "p_research": 0.2,
+   "q": "Will Waymo achieve 1 million weekly autonomous rides before 2027?",
+   "reasoning_summary": "Base rate: Waymo weekly-ride milestones hit within predicted quarters since 2023 ~ 0.15. Waymo ran ~250-300k weekly paid rides in early 2026 and scaling has continued across new metros, but 1M weekly by Dec 31 requires a 3-4x jump that outpaces every prior scaling curve segment. Net of adjustments the final probability is 0.2.",
+   "strongest_opposing_case": "Strongest case against this number: Freeway unlocks plus new launches compound; if any single week prints 1M with credible sourcing the question resolves and Waymo has beaten scaling forecasts repeatedly."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "China advanced-node milestones achieved vs predicted dates since 2020",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.07
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "20169",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "metaculus"
+   },
+   "evidence": [
+    "150M+ transistors/mm2 requires roughly a 3nm-class process; SMIC remains at N+2/N+3 (5-7nm class) without EUV, and no credible evidence of production-grade 3nm density in China exists; the question window ends in 10 weeks."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.1,
+   "p_research": 0.1,
+   "q": "Will a Chinese fab achieve a process with a density of greater than 150M transistors per square millimeter by 2027?",
+   "reasoning_summary": "Base rate: China advanced-node milestones achieved vs predicted dates since 2020 ~ 0.07. 150M+ transistors/mm2 requires roughly a 3nm-class process; SMIC remains at N+2/N+3 (5-7nm class) without EUV, and no credible evidence of production-grade 3nm density in China exists; the question window ends in 10 weeks. Net of adjustments the final probability is 0.1.",
+   "strongest_opposing_case": "Strongest case against this number: Density estimates carry wide error bars and a favorable third-party teardown of a new Huawei part could be argued to clear the threshold on a generous count."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "Israeli PMs leaving office within 10 weeks of an election loss",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.2
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "40966",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "metaculus"
+   },
+   "evidence": [
+    "Netanyahu faces a Knesset election on Oct 27 2026; even if his bloc loses, coalition formation means he typically remains PM into 2027, so ceasing to hold office BEFORE Jan 1 requires an unusually fast transition or internal replacement."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.22,
+   "p_research": 0.22,
+   "q": "Will Benjamin Netanyahu cease to be Prime Minister of Israel during 2026?",
+   "reasoning_summary": "Base rate: Israeli PMs leaving office within 10 weeks of an election loss ~ 0.2. Netanyahu faces a Knesset election on Oct 27 2026; even if his bloc loses, coalition formation means he typically remains PM into 2027, so ceasing to hold office BEFORE Jan 1 requires an unusually fast transition or internal replacement. Net of adjustments the final probability is 0.22.",
+   "strongest_opposing_case": "Strongest case against this number: A decisive opposition win with quick coalition math, or a plea-deal exit amid his trial, could end his tenure in November-December; election years compress timelines."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "annual departure rate of active US district judges",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.03
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "43980",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "metaculus"
+   },
+   "evidence": [
+    "A specific district judge leaving office within 10 weeks absent announced plans is rare; judicial departures average a few percent per seat-year and no retirement signal for Judge Ross is public."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.05,
+   "p_research": 0.05,
+   "q": "Will U.S. District Judge Eleanor L. Ross leave office before 2027?",
+   "reasoning_summary": "Base rate: annual departure rate of active US district judges ~ 0.03. A specific district judge leaving office within 10 weeks absent announced plans is rare; judicial departures average a few percent per seat-year and no retirement signal for Judge Ross is public. Net of adjustments the final probability is 0.05.",
+   "strongest_opposing_case": "Strongest case against this number: Health events or an unannounced senior-status decision can arrive without warning, and impeachment-pressure politics around the judiciary are elevated."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "probability S&P avoids a >2.2% decline over 10 weeks, historical distribution",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.66
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "41130",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "metaculus"
+   },
+   "evidence": [
+    "S&P closed near 7,663 on Oct 24, about 2.2% above the 7,500 threshold; resolving needs the year-END close above 7,500, i.e. avoiding a >2% net decline over ~10 weeks; historical odds of that in a bull tape are roughly two-thirds."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-24",
+     "title": "Market snapshot roundup, 24 Oct 2026 (S&P ~7,663; BTC ~$81k; WTI ~$102)",
+     "url": "https://seekingalpha.com/article/4957279-the-1-minute-market-report-october-24-2026"
+    }
+   ],
+   "p_raw": 0.68,
+   "p_research": 0.68,
+   "q": "Will the S&P 500 close above 7,500 at the end of 2026?",
+   "reasoning_summary": "Base rate: probability S&P avoids a >2.2% decline over 10 weeks, historical distribution ~ 0.66. S&P closed near 7,663 on Oct 24, about 2.2% above the 7,500 threshold; resolving needs the year-END close above 7,500, i.e. avoiding a >2% net decline over ~10 weeks; historical odds of that in a bull tape are roughly two-thirds. Net of adjustments the final probability is 0.68.",
+   "strongest_opposing_case": "Strongest case against this number: Inflation at 3.7% with a hiking Fed, war-driven oil above $100 and stretched AI valuations make a 2% give-back entirely ordinary; the buffer is thin."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "WHO PQ additions completed within anticipated year",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.2
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "28395",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "metaculus"
+   },
+   "evidence": [
+    "WHO moxidectin prequalification has been anticipated for years; MDGH's submission is in process but PQ listings move slowly and no public signal points to completion before Jan 1 2027."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.2,
+   "p_research": 0.2,
+   "q": "Will the World Health Organization prequalify moxidectin before 2027?",
+   "reasoning_summary": "Base rate: WHO PQ additions completed within anticipated year ~ 0.2. WHO moxidectin prequalification has been anticipated for years; MDGH's submission is in process but PQ listings move slowly and no public signal points to completion before Jan 1 2027. Net of adjustments the final probability is 0.2.",
+   "strongest_opposing_case": "Strongest case against this number: The PQ review has been underway long enough that a year-end listing is plausible and WHO batches announcements in Q4."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "Speakers serving out a full Congress since 2015",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.65
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "40976",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "metaculus"
+   },
+   "evidence": [
+    "Johnson has survived every 2025-26 procedural challenge and his conference has no appetite for another speaker fight before a midterm; the question requires continuity only until Jan 3 2027, with Congress mostly out post-election."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.7,
+   "p_research": 0.7,
+   "q": "Will Mike Johnson remain Speaker of the House until January 3, 2027?",
+   "reasoning_summary": "Base rate: Speakers serving out a full Congress since 2015 ~ 0.65. Johnson has survived every 2025-26 procedural challenge and his conference has no appetite for another speaker fight before a midterm; the question requires continuity only until Jan 3 2027, with Congress mostly out post-election. Net of adjustments the final probability is 0.7.",
+   "strongest_opposing_case": "Strongest case against this number: A December shutdown fight is live and a motion-to-vacate from the right over any CR concession could succeed; his margin is historically thin."
+  }
+ ],
+ "researcher": "claude-fable-5 operator session, 2026-10-25 round-day sprint (authored + rule + family layers)",
+ "resolution_source": "per-question benchmark resolution criteria (see each question's benchmark block)",
+ "resolve_date": null
+}

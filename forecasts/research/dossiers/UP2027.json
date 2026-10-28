@@ -1,0 +1,36 @@
+{
+  "forecast_id": "UP2027",
+  "domain": "India elections",
+  "freeze_date": "2026-10-23",
+  "resolve_date": "2027-03",
+  "researched_at_utc": "2026-10-23T13:00:00+00:00",
+  "researcher": "claude-fable-5, in-session research pass (M_research v1)",
+  "resolution_source": "Election Commission of India official results (results.eci.gov.in), party-wise seat tally at first full declaration of all 403 seats",
+  "independence_attestation": "No betting odds, prediction-market prices or forecast-aggregator numbers were fetched or consulted during this research pass. Honesty caveat: the engine's config files and India ledger (which contain the engine's own M2/M3 probabilities) were read earlier in this session for integration work; the number below was built base-rate-first from the cited research sources, and neither market prices nor the engine's own instrument outputs are averaged in.",
+  "questions": [
+    {
+      "q": "NDA wins majority",
+      "base_rate_used": {
+        "reference_class": "Incumbent Indian state governments (post-2014 nationalized era) remaining the largest force: 22 of 46 elections in the engine's own N=46 retrodiction set (~48%); winning an outright majority is a stricter event. UP-specific: no government was re-elected 1989-2017; BJP 2022 broke the rotation",
+        "value": 0.45,
+        "source": "Psephos multistate retrodiction report (N=46, incumbent retention 22/46); UP electoral history"
+      },
+      "evidence": [
+        "Recent vote-share polls (all unrated agencies): Matrize 2026-09-29 NDA 44 / INDIA 38; Spick Media 2026-09-13 NDA 42.1 / INDIA 39.7; Survey Sarva 2026-09-10 NDA 38.7 / INDIA 40.8; Vote Vibe 2026-08-25 NDA 41.8 / INDIA 38.7 - three of four show NDA ahead by 2-6 points",
+        "2024 LS counter-signal: INDIA (SP+INC) beat NDA in UP (43 of 80 seats); but Nov-2024 bypolls went 7-2 to BJP+RLD, suggesting assembly-level dynamics reverted",
+        "Opposition coordination friction: SP-Congress seat-sharing unresolved as of Oct 2026 (Congress eyeing 125+ seats, SP signalling far fewer; public 'big brother' sniping); a fragmented INDIA vote is the NDA's single biggest structural asset",
+        "BJP machine advancing: Amit Shah to launch the UP campaign at the state executive meeting 2026-10-30/31; RLD confirmed in the NDA",
+        "Possible Akhilesh-Chandrashekhar Azad (ASP) tie-up reported - would consolidate Dalit votes against the NDA and is the main live downside tripwire"
+      ],
+      "strongest_opposing_case": "The INDIA bloc beat the NDA statewide only two years ago (2024 LS), the three-polls-ahead signal comes entirely from unrated agencies with undisclosed methodology (one of four actually shows INDIA ahead), UP's long rotation habit was broken only once, and a sealed SP-INC-ASP combination with efficient transfers could turn a 2-4 point vote deficit into a seat majority the way 2024's coordination did. A 42-39 split with BSP collapse redistributing unpredictably does not guarantee 202 of 403 seats.",
+      "reasoning_summary": "Base ~0.45 (incumbent retention in the nationalized era; majority stricter, UP rotation history argues lower, BJP's 2022 re-election and organizational depth argue higher). Adjust up for the poll lead (3 of 4 unrated polls, NDA +2 to +6), the 7-2 bypoll sweep, and visible SP-INC seat-sharing friction; adjust down for the 2024 LS result (INDIA won the state), unrated-poll quality, and the possible ASP consolidation. FPTP in a bipolar UP converts a sustained 3-4 point lead into a seat majority more often than not. Final: 0.55.",
+      "key_sources": [
+        {"title": "NewKerala: Amit Shah to kick-start BJP's UP poll preparations (state executive 30-31 Oct)", "url": "https://www.newkerala.com/news/a/amit-shah-likely-kick-start-bjps-up-poll-preparations-776.htm", "date": "2026-10-21"},
+        {"title": "Daily Pioneer: SP-Congress alliance tensions ahead of 2027 UP polls", "url": "https://dailypioneer.com/news/iqra-hasan-imran-masood-sp-congress-alliance-leadership-2027-up-polls", "date": "2026-09"},
+        {"title": "The Statesman: Chandrashekhar Azad-Akhilesh Yadav alliance likely in 2027 UP polls", "url": "https://www.thestatesman.com/india/chandrashekhar-azad-akhilesh-yadav-alliance-likely-in-2027-up-assembly-polls-1503460112.html", "date": "2026"},
+        {"title": "Business Standard: UP bypolls Nov 2024 - BJP+ 7 of 9", "url": "https://www.business-standard.com/politics/bypolls-bjp-edges-past-sp-in-up-tmc-consolidates-position-in-west-bengal-124112300481_1.html", "date": "2024-11-23"}
+      ],
+      "p_raw": 0.55
+    }
+  ]
+}

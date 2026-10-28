@@ -1,0 +1,338 @@
+{
+ "KXUNSEC-27JAN-RGRYN": {
+  "base_rate": {"reference_class": "Front-runner across multiple Security Council straw polls becoming UN Secretary-General (Guterres 2016 led all polls and won; but P5 vetoes have derailed leaders before, e.g. 1996, 1981)", "value": 0.5, "source": "Historical UNSG selection processes 1981-2016"},
+  "evidence": [
+   "2026-07-30: First Security Council straw poll — Grynspan led with 10 'encourage' votes, ahead of Rodrigues-Birkett (9) and Grossi (7) (Reuters via Internazionale).",
+   "2026-09-29: Fourth straw poll — Grynspan again led with 10 encourage / 3 discourage / 2 no-opinion; Rodrigues-Birkett and Grossi each 8 encourage, Grossi 7 discourage (The National).",
+   "2026-09-28: Reporting notes 7 candidates remain (Grynspan, Bachelet, Espinosa, Grossi, Otunnu, Rodrigues-Birkett, Sall) and that no candidate yet has clear winning support; colored ballots distinguishing P5 votes had not yet been used, so P5 vetoes unknown.",
+   "Guterres' term ends 31 Dec 2026, so the GA appointment must happen in Nov-Dec 2026 — comfortably before the Jan 5, 2027 deadline if Grynspan is the pick."
+  ],
+  "strongest_opposing_case": "Her 3 'discourage' votes could include a P5 member (US skepticism of multilateralist Latin American candidates is plausible); straw-poll leaders have been vetoed before (Tharoor 2006), and a late consensus compromise candidate could emerge.",
+  "reasoning_summary": "Base rate ~50% for a wire-to-wire straw-poll leader. Grynspan has led all four rounds with the best encourage/discourage balance in a 7-way field, and the timeline forces a decision before the deadline. Discount for unknown P5 vetoes and a still-open field: settle slightly below the base at 0.45.",
+  "key_sources": [
+   {"title": "UN chief race: Costa Rica's Rebeca Grynspan leads fourth Security Council straw poll", "url": "https://www.thenationalnews.com/news/us/2026/09/29/un-chief-race-costa-ricas-rebeca-grynspan-leads-fourth-security-council-straw-poll/", "date": "2026-09-29"},
+   {"title": "Informal poll shows Costa Rica's Grynspan ahead in race to be next UN chief (Reuters)", "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/07/31/informal-poll-shows-costa-rica-s-grynspan-ahead-in-race-to-be-next-un-chief", "date": "2026-07-31"}
+  ],
+  "p": 0.45
+ },
+ "0xe7c57c905638512f6181458503e042ca5096564ebaed3a3d9491bb259369a3c0": {
+  "base_rate": {"reference_class": "Named aspirant winning a Mexican governorship = P(wins party's internal encuesta) x P(party wins state); Morena has retained nearly every state it governs since 2021", "value": 0.35, "source": "Morena internal-poll candidate selection + Morena state retention record 2021-2025"},
+  "evidence": [
+   "2026 (multiple): Senator Julieta Ramirez Padilla leads most published polls for the Morena-PT-PVEM candidacy in Baja California — Rubrum 39.8%, CE Research 40.4%, ALIUS 19.2% vs Burgueno 14.6% (La Politica Online, Jul-Oct 2026).",
+   "2026-07-16: Demoscopia Digital instead puts Tijuana mayor Ismael Burgueno ahead with 33.7% vs Ramirez 18.3% (Cronica/Excelsior) — the internal race is genuinely contested.",
+   "2026: TV Azteca reported a journalist's claim of a US visa issue/investigation around Ramirez (unconfirmed); she took Senate leave to focus on the internal contest.",
+   "Baja California is governed by Morena (Marina del Pilar Avila); the gubernatorial election is June 6, 2027, with Morena's nominee decided by encuesta expected around late 2026/early 2027."
+  ],
+  "strongest_opposing_case": "Demoscopia Digital shows Burgueno leading the internal race by 15 points, the visa controversy could disqualify her politically, and Morena's national leadership (not just polls) shapes the final pick; gender-parity rules could also route the slot differently.",
+  "reasoning_summary": "Structure: P(Morena wins BC) ~0.85 given dominance since 2019. Nomination is the bottleneck: Ramirez leads 3 of 4 published encuestas but one has her well behind, so P(nomination) ~0.45-0.5. 0.85 x 0.47 ~ 0.40; final 0.40.",
+  "key_sources": [
+   {"title": "Julieta Ramirez lidera preferencias rumbo a la gubernatura de Baja California", "url": "https://www.lapoliticaonline.com/mexico/bajacalifornia-mx/julieta-ramirez-lidera-preferencias-rumbo-a-la-gubernatura-de-baja-california/", "date": "2026"},
+   {"title": "Despunta Ismael Burgueno rumbo al 2027 en Baja California", "url": "https://www.cronica.com.mx/estados/2026/07/16/despunta-ismael-burgueno-rumbo-al-2027-en-baja-california/", "date": "2026-07-16"}
+  ],
+  "p": 0.40
+ },
+ "0xe1a717cca1d898e96a2216d4b3c4a4820779896928addfdab74dd861648a6382": {
+  "base_rate": {"reference_class": "Named mayoral candidate of a large-but-not-majority party becoming mayor in a hung South African metro council (Joburg has cycled through many coalition mayors since 2016)", "value": 0.3, "source": "Johannesburg council coalition outcomes 2016-2024"},
+  "evidence": [
+   "2025-09-20: Helen Zille formally accepted the DA nomination as Johannesburg mayoral candidate for the Nov 4, 2026 municipal elections (Business Report / Daily News).",
+   "2026-03: Poll found 65% of Johannesburg voters backed the idea of Zille as mayor, but only 39% said they would vote DA — well short of a majority; analyst Frans Cronje argued she cannot win on these numbers (Daily Investor).",
+   "2026-09-30: Reuters/Polity report her run is shaking up the race and pressuring the ANC-led coalition currently running the city.",
+   "The mayor is elected by the city council, so absent a DA majority (DA got ~26% in 2021) Zille needs either a big DA surge or a multiparty coalition; ANC-EFF-MK style blocs have previously combined to keep the DA out (e.g., ousting of Mpho Phalatse 2022-23)."
+  ],
+  "strongest_opposing_case": "DA polls at only 39% in Joburg; if ANC, EFF, MK and smaller parties coalesce — as they repeatedly did against DA mayors in 2022-23 — Zille is blocked even as leader of the largest party; resolution also requires her to actually assume office by mid-2027.",
+  "reasoning_summary": "Base ~30% for a large-minority-party candidate in a hung council. Upgrades: strongest DA Joburg polling ever (39% vs 26% in 2021), high personal approval (65%), fragmented and unpopular ANC incumbency. Downgrades: council arithmetic and the anti-DA coalition precedent. Net ~0.40.",
+  "key_sources": [
+   {"title": "Helen Zille, 74, enters Joburg mayoral race for DA", "url": "https://businessreport.co.za/news/politics/2025-09-20-breaking-helen-zille-74-enters-joburg-mayoral-race-for-da/", "date": "2025-09-20"},
+   {"title": "Zille shakes up Johannesburg mayor race", "url": "https://www.polity.org.za/article/zille-shakes-up-johannesburg-mayor-race-2026-09-30", "date": "2026-09-30"}
+  ],
+  "p": 0.40
+ },
+ "0x989e60030a12b3b8c3014ca744df34fce5bc014a803f5a0c717557e11a0a04b8": {
+  "base_rate": {"reference_class": "Party trailing by ~25-30 seats in final-month national polling winning most seats in a Spanish general election", "value": 0.1, "source": "Spanish polling-to-result record (even 2023's big PP polling miss left PP first on seats)"},
+  "evidence": [
+   "A snap Spanish general election is set for November 29, 2026 ('29N').",
+   "2026-10-12: GAD3/ABC — PP 133 seats, Vox 65, PSOE 107 (PP+Vox 198, majority is 176).",
+   "2026-10 (fieldwork Oct 1-14): Sigma Dos/El Mundo — PP 31.5% and 136 seats vs PSOE 101-106 (central 104).",
+   "2026-10-09: EsDiario reports three separate polls giving a PP-Vox majority at campaign start; no October poll shows PSOE first."
+  ],
+  "strongest_opposing_case": "Spanish pollsters badly overstated the right in July 2023 (PSOE beat final polls by ~15-20 seats); Sanchez is a proven late-campaign closer and left turnout mobilization against a possible PP-Vox government could compress a 4-6 point gap in five weeks.",
+  "reasoning_summary": "Base ~10% for a party trailing ~27 seats a month out. All October 2026 polls (GAD3, Sigma Dos, others) show PP first by a wide margin. The 2023 precedent shows PSOE can beat its polls, but even then PP stayed first on seats. Hold at 0.10.",
+  "key_sources": [
+   {"title": "Encuesta GAD3: PP y Vox mantienen 198 escanos frente a los 107 del PSOE", "url": "https://www.democrata.es/encuestas/elecciones-generales/encuesta-elecciones-generales-pp-vox-pierden-cuatro-escanos-pero-mantienen-198-frente-107-psoe-segun-gad3/", "date": "2026-10-12"},
+   {"title": "Encuesta Sigma Dos 29N: PSOE 104 escanos, PP 136", "url": "https://www.democrata.es/encuestas/elecciones-generales/encuesta-elecciones-generales-sigma-dos-pp-vox-201-escanos-psoe-117-octubre-2026/", "date": "2026-10-15"}
+  ],
+  "p": 0.10
+ },
+ "0x3377edf8e5a1c9bf41b2a3e88e3c0576f0e2972808cc027c87d5344a57b9ba81": {
+  "base_rate": {"reference_class": "Swiss federal popular initiatives pass ~10% of the time historically; initiatives with broad early polling support pass far more often but typically lose 10-20 points during the campaign", "value": 0.1, "source": "Swiss Federal Chancellery initiative pass record 1891-2025"},
+  "evidence": [
+   "2026-10 (fieldwork Oct 7-19, n=2,949, +/-1.8%): First YouGov Switzerland barometer for the Nov 29 vote reports 'broad support' for the Fairness Initiative (married-couples federal tax initiative), with nearly 3 in 10 voters undecided (Keystone-SDA via blue News).",
+   "The initiative, backed by Die Mitte, abolishes the federal 'marriage penalty' — a pocketbook tax cut with cross-party sympathy; it needs a double majority (people + cantons).",
+   "Marriage-penalty abolition nearly passed in Feb 2016 (49.8% yes, annulled vote later), showing a ~50/50 electorate on the issue a decade ago.",
+   "Approval of either the initiative or an applicable counter-proposal counts for this question; Parliament's individual-taxation reform track runs in parallel and gives opponents a 'wait for the law' argument."
+  ],
+  "strongest_opposing_case": "Early 'broad support' routinely evaporates: Swiss initiatives shed 10-20 points once the Federal Council and Parliament campaign against the revenue cost (multi-billion CHF), and the double majority plus ~30% undecided leave ample room for the usual No drift.",
+  "reasoning_summary": "Base 10% for initiatives, but condition on polling: broad early support, a near-miss 2016 precedent on the same issue, and favorable rural-canton math push it well above base; standard campaign decay and the fiscal-cost counterargument cap it near a coin flip. Final 0.44.",
+  "key_sources": [
+   {"title": "Except for military equipment, clear voting trends are evident (YouGov/Keystone-SDA)", "url": "https://www.bluewin.ch/en/news/switzerland/except-for-military-equipment-clear-voting-trends-are-evident-li.3642919", "date": "2026-10-23"},
+   {"title": "2026 Swiss referendums — ballot listing", "url": "https://en.wikipedia.org/wiki/2026_Swiss_referendums", "date": "2026"}
+  ],
+  "p": 0.44
+ },
+ "0xae515ea2b1b95486007cff8aa4afbd5f677e2760dd8752c1068d9cc55afb6d58": {
+  "base_rate": {"reference_class": "Sitting Brazilian STF justice leaving the court (death, resignation, impeachment) within a ~1-year window; no STF justice has ever been removed by impeachment", "value": 0.04, "source": "STF composition history; justices serve to mandatory retirement at 75 (Moraes is ~57)"},
+  "evidence": [
+   "2026-08-16: Reuters (citing FT) — US government discussed new sanctions against Moraes; earlier Magnitsky sanctions from July 2025 were removed in December 2025.",
+   "2025-2026: ~30 impeachment petitions against Moraes sit in the Senate (Congresso em Foco / Itatiaia); Senate president has never advanced one, and no STF justice has ever been removed.",
+   "No October 2026 reporting of any resignation, removal, health event, or Senate vote; Moraes remains an active justice.",
+   "Moraes oversaw Bolsonaro's coup conviction; Lula's government and the Senate majority have consistently shielded him."
+  ],
+  "strongest_opposing_case": "Renewed US sanctions pressure plus ~30 pending impeachment petitions create tail scenarios — a negotiated exit to defuse US-Brazil tensions ahead of the Oct 2026 Brazilian elections, or a post-election Senate more hostile to the STF acting fast in Nov-Dec.",
+  "reasoning_summary": "Base ~4% annual exit for a 57-year-old justice, and only ~2 months remain in the window. No removal mechanism is in motion, the Senate has buried every petition, and Moraes shows no intent to resign under US pressure. Slightly above floor for tail risk: 0.03.",
+  "key_sources": [
+   {"title": "US considers new sanctions on Brazilian judge, FT reports (Reuters)", "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/08/16/us-considers-new-sanctions-on-brazilian-judge-ft-reports", "date": "2026-08-16"},
+   {"title": "Brazilian justice Alexandre de Moraes faces five impeachment petitions in the Senate", "url": "https://agenciacenarium.com.br/brazilian-justice-alexandre-de-moraes-faces-five-impeachment-petitions-in-the-senate/?lang=en", "date": "2025-07"}
+  ],
+  "p": 0.03
+ },
+ "0x6d4ce755aea297d7a5ce8e17612d852363e3aec79e360c4676b49f3c57e3f230": {
+  "base_rate": {"reference_class": "Swiss popular initiatives pass ~10% historically; initiatives polling >60% yes six weeks out pass roughly half the time after typical campaign decay", "value": 0.1, "source": "Swiss Federal Chancellery initiative record; gfs.bern/YouGov campaign-decay pattern"},
+  "evidence": [
+   "2026-10 (fieldwork Oct 7-19, n=2,949): YouGov Switzerland — 62% yes for the fireworks-restriction initiative, described as receiving broad support (Keystone-SDA via blue News).",
+   "The initiative restricts private fireworks (noise/animal-welfare framing) and collected signatures with unusual ease in 2023; it needs a double majority.",
+   "Federal Council and Parliament recommend rejection, which historically mobilizes late No drift of 10-20 points on initiatives (e.g., pesticide initiative 2021: ~55% early, 39.4% final).",
+   "No counter-proposal is on the ballot; urban-rural split risk on the cantonal majority (rural cantons value fireworks traditions)."
+  ],
+  "strongest_opposing_case": "62% six weeks out is precisely the profile of initiatives that still fail: federal authorities oppose it, tradition/freedom counter-campaigns (pyrotechnics industry, Swiss National Day customs) bite late, and the cantonal majority could fail even if the popular vote squeaks by.",
+  "reasoning_summary": "Base 10%, but 62% early yes with broad cross-group support is a large positive update; typical 10-15 point No decay against Federal Council opposition and the double-majority hurdle pull it back to roughly even. Final 0.45.",
+  "key_sources": [
+   {"title": "Except for military equipment, clear voting trends are evident (YouGov/Keystone-SDA)", "url": "https://www.bluewin.ch/en/news/switzerland/except-for-military-equipment-clear-voting-trends-are-evident-li.3642919", "date": "2026-10-23"},
+   {"title": "2026 Swiss referendums — ballot listing", "url": "https://en.wikipedia.org/wiki/2026_Swiss_referendums", "date": "2026"}
+  ],
+  "p": 0.45
+ },
+ "0x10b5db9b413eff04aa69692bf7c834d16321bdf5ebc774b4adbf7ed3c37da329": {
+  "base_rate": {"reference_class": "Named aspirant winning a Mexican governorship = P(wins Morena encuesta) x P(Morena retains state); evidence on the Zacatecas internal race is thin", "value": 0.2, "source": "Morena candidate-selection encuestas + Morena state retention record"},
+  "evidence": [
+   "Zacatecas holds its gubernatorial election June 6, 2027; the incumbent is Morena's David Monreal (term-limited single sexenio).",
+   "2026-10: Searches found no published Zacatecas encuesta naming Veronica Diaz Robles as front-runner for the Morena nomination — evidence is thin.",
+   "Diaz Robles is a Morena politician from Zacatecas (former federal deputy, federal welfare-delegation background); other frequently mentioned aspirants include Ulises Mejia Haro and Saul Monreal, and gender-parity rules may require a female candidate in some Morena-held states, which would help her.",
+   "Morena has retained the overwhelming majority of states it governs since 2021 and dominates Zacatecas' recent federal results."
+  ],
+  "strongest_opposing_case": "No polling shows her leading a crowded internal field that includes the Monreal family machine (Saul Monreal) and better-known federal figures; losing the encuesta — the most likely single outcome for any one named aspirant — resolves this No regardless of Morena's easy state win.",
+  "reasoning_summary": "Structure: P(Morena wins Zacatecas) ~0.8; P(Diaz Robles wins the nomination) in a multi-aspirant field with no polling edge ~0.25 (slightly above 1/n for parity-rule upside). 0.8 x 0.25 = 0.20. Evidence is thin; wide uncertainty. Final 0.20.",
+  "key_sources": [
+   {"title": "La Politica Online — Mexico 2027 gubernatorial coverage (Zacatecas aspirants)", "url": "https://www.lapoliticaonline.com/mexico/", "date": "2026-10"},
+   {"title": "Julieta Ramirez lidera preferencias rumbo a 2027 (comparative Morena encuesta coverage)", "url": "https://www.lapoliticaonline.com/mexico/bajacalifornia-mx/julieta-ramirez-continua-liderando-las-preferencias-rumbo-al-2027/", "date": "2026"}
+  ],
+  "p": 0.20
+ },
+ "0x0acbe1e5050eff25014d0d6941f58db1187daeb99f9435179adeca0258b8d924": {
+  "base_rate": {"reference_class": "Federal-Council/Parliament-backed proposals pass ~75% of the time in Swiss votes — but ones trailing badly in the first pre-vote poll rarely recover", "value": 0.75, "source": "Swiss Federal Chancellery record for authority-backed proposals; pre-vote polling conversion"},
+  "evidence": [
+   "2026-10 (fieldwork Oct 7-19, n=2,949): YouGov Switzerland — 51% against the AVS/VAT federal decree vs 39% in favor; the proposal 'looks likely to fail' (Keystone-SDA via blue News).",
+   "As a constitutional federal decree it needs a double majority; the same poll found the Yes camp not ahead in a single canton.",
+   "The decree (of 19 June 2026) funds the AVS (13th pension payment obligations) via a VAT increase — a new-tax framing that triggers Swiss status-quo bias against Yes.",
+   "Precedent: the 2024 13th-AVS-pension initiative passed, but subsequent financing votes face classic tax resistance; authority-backed proposals that start ~12 points under water almost never flip by voting day."
+  ],
+  "strongest_opposing_case": "Authority-backed proposals enjoy a ~75% historical pass rate, late campaigns often rally voters to the Federal Council's position, pensioners are a huge mobilized bloc who want the AVS funded, and 10% undecideds could break toward securing their 13th payment.",
+  "reasoning_summary": "Base 75% for a council-backed decree, but the first poll shows 39-51 against with no canton in favor — a dominant negative signal that outweighs the base rate. Some recovery toward authority positions is typical, so not a floor value. Final 0.13.",
+  "key_sources": [
+   {"title": "Except for military equipment, clear voting trends are evident (YouGov/Keystone-SDA)", "url": "https://www.bluewin.ch/en/news/switzerland/except-for-military-equipment-clear-voting-trends-are-evident-li.3642919", "date": "2026-10-23"},
+   {"title": "2026 Swiss referendums — ballot listing", "url": "https://en.wikipedia.org/wiki/2026_Swiss_referendums", "date": "2026"}
+  ],
+  "p": 0.13
+ },
+ "0x4ee59d990cb82947d587bb6f9ea2fffdbf7c85ef4931c3440fbcb95bfe7c9dab": {
+  "base_rate": {"reference_class": "Incumbent Nigerian governor seeking re-election while aligned with the federal ruling party", "value": 0.88, "source": "Nigerian incumbent-governor re-election record 2015-2023 (incumbents on the ruling-party side rarely lose)"},
+  "evidence": [
+   "2026-05-22: Governor Umo Eno (full name Umo Bassey Eno) emerged as APC's Akwa Ibom governorship candidate by consensus in the party primaries (allAfrica/Guardian).",
+   "2025: Eno defected from PDP to APC, aligning the state with the Tinubu federal government; Akwa Ibom's political establishment largely moved with him.",
+   "2026-01-10: allAfrica reports parties in early push for 2027 in Akwa Ibom, with Eno's incumbency dominant; the election is scheduled for Feb 6, 2027.",
+   "No credible reporting of a strong unified opposition candidate in the state; PDP, his former party, is nationally fractured after mass defections."
+  ],
+  "strongest_opposing_case": "His defection could alienate Akwa Ibom's deep PDP base (the state was PDP since 1999), a strong PDP/ADC flagbearer could consolidate protest votes, and resolution requires officially declared results by Oct 31, 2027 amid possible litigation or rerun.",
+  "reasoning_summary": "Base 88% for a ruling-party incumbent governor. Eno holds incumbency, federal alignment, a consensus ticket, and a fractured opposition; modest deduction for defection backlash and result-certification risk. Final 0.85.",
+  "key_sources": [
+   {"title": "APC Governorship Primaries - How 23 Candidates Emerge", "url": "https://allafrica.com/stories/202605220633.html", "date": "2026-05-22"},
+   {"title": "Akwa Ibom - Parties in Early Push for 2027", "url": "https://allafrica.com/stories/202601100019.html", "date": "2026-01-10"}
+  ],
+  "p": 0.85
+ },
+ "0x25a39e7692a267810b1ea79ee60a751e6cfbbee7586dba3378698103623bee80": {
+  "base_rate": {"reference_class": "Opposition challenger vs sitting first-term Nigerian governor of the federal ruling party; challengers win these only occasionally (~15-20%)", "value": 0.18, "source": "Nigerian gubernatorial incumbent-defeat record 2015-2023"},
+  "evidence": [
+   "2026-05-27: Isa Ashiru (Mohammed Ashiru Isa), two-time former PDP governorship candidate in Kaduna, won the ADC governorship ticket with 86,113 votes (Channels TV).",
+   "2023: Ashiru (then PDP) lost to Uba Sani (APC) by a narrow margin (~51-49 in the declared result, heavily litigated) — he has a proven near-majority base in Kaduna.",
+   "2025-2026: ADC became the main national opposition coalition vehicle (Atiku its presidential candidate); ex-governor Nasir El-Rufai's break with APC and alignment with the opposition coalition undermines Uba Sani's machine from within.",
+   "Incumbent Uba Sani (APC) seeks re-election Feb 6, 2027 with federal backing in a state APC has held since 2015."
+  ],
+  "strongest_opposing_case": "Uba Sani is a first-term incumbent with federal might, INEC-environment advantages, and APC's structural control of Kaduna; Ashiru has now lost twice, the opposition vote may split between ADC and a residual PDP candidate, and El-Rufai's support is a double-edged sword in southern Kaduna.",
+  "reasoning_summary": "Base ~18% for a challenger vs a ruling-party incumbent. Upgrades: Ashiru's near-win in 2023, unified ADC opposition platform, El-Rufai defection weakening APC Kaduna. Downgrades: incumbency plus federal alignment usually prevails. Net 0.22.",
+  "key_sources": [
+   {"title": "Isah Ashiru wins ADC governorship ticket in Kaduna", "url": "https://www.channelstv.com/2026/05/27/isah-ashiru-wins-adc-governorship-ticket-in-kaduna/", "date": "2026-05-27"},
+   {"title": "2027: APC consolidates as govs, loyalists sweep primaries", "url": "https://guardian.ng/?p=2845027", "date": "2026-05"}
+  ],
+  "p": 0.22
+ },
+ "0x162e356bfab7ad18fe4e3029d5811d9a95fce95d93858b42924a3b9ffbcf1a93": {
+  "base_rate": {"reference_class": "Party leading national polls by 4-6 points / ~25-30 seats one month before a Spanish general election winning most seats", "value": 0.85, "source": "Spanish polling-leader conversion (leader a month out has won most seats in every modern Spanish general election)"},
+  "evidence": [
+   "Snap general election confirmed for November 29, 2026.",
+   "2026-10-12: GAD3/ABC — PP 133 seats vs PSOE 107; PP+Vox 198.",
+   "2026-10 (fieldwork Oct 1-14): Sigma Dos/El Mundo — PP 31.5%, 136 seats vs PSOE ~104.",
+   "2026-10-09: Three separate polls at campaign start show a PP-Vox seat majority (EsDiario); every published October poll has PP first by a wide margin."
+  ],
+  "strongest_opposing_case": "July 2023 showed Spanish polls can overstate PP by a wide margin, Vox's strength (19-20%) could cannibalize PP seats in small provinces, and a late anti-Vox mobilization wave behind Sanchez could narrow a 4-6 point national gap in the final weeks.",
+  "reasoning_summary": "Base ~85% for a leader this far ahead a month out. PP's lead (~27-30 seats) is consistent across all pollsters and exceeds the 2023 polling error's effect on the seat ordering (PP stayed first even then). Residual risk is late movement, not current ambiguity. Final 0.86.",
+  "key_sources": [
+   {"title": "Encuesta GAD3: PP y Vox mantienen 198 escanos frente a los 107 del PSOE", "url": "https://www.democrata.es/encuestas/elecciones-generales/encuesta-elecciones-generales-pp-vox-pierden-cuatro-escanos-pero-mantienen-198-frente-107-psoe-segun-gad3/", "date": "2026-10-12"},
+   {"title": "Encuesta Sigma Dos 29N: PP 136 escanos, PSOE 104", "url": "https://www.democrata.es/encuestas/elecciones-generales/encuesta-elecciones-generales-sigma-dos-pp-vox-201-escanos-psoe-117-octubre-2026/", "date": "2026-10-15"}
+  ],
+  "p": 0.86
+ },
+ "0x9194103ad3ae2c3d2a1d739358843fccea3c13ab39b1aab58a8bb87e486bbcdb": {
+  "base_rate": {"reference_class": "AfD entering any German state government despite the all-party 'firewall' (Brandmauer); has never happened since the party's founding in 2013", "value": 0.03, "source": "German state coalition formation record 2013-2025"},
+  "evidence": [
+   "2026-09-06: Saxony-Anhalt election — AfD won 43.8% (+23 pts) and 39 of 97 seats, narrowly missing the 42 needed for an absolute majority; CDU collapsed to 17.2% (Wikipedia / European Conservative).",
+   "2026-09-20: Mecklenburg-Vorpommern and Berlin elections held; pre-election projections had AfD ~38% in MV (no confirmed coalition outcome found in searches).",
+   "2026-10: Government formation in Saxony-Anhalt remains unresolved ('TBD'); no report of any party opening coalition talks with AfD; CDU federal leadership maintains the incompatibility resolution.",
+   "Resolution requires an AfD minister in an actually-formed state government by Dec 31, 2026 — coalition talks alone do not count, and German coalition formation typically takes 2-4+ months."
+  ],
+  "strongest_opposing_case": "AfD sits 3 seats from an outright majority in Saxony-Anhalt and may dominate MV; if the splintered remaining parties cannot form a majority, a third-ballot plurality election of an AfD minister-president is constitutionally possible, and a desperate CDU state branch could defect from the firewall before year-end.",
+  "reasoning_summary": "Base ~3% (never happened). The historic 43.8% Saxony-Anhalt result and possible MV dominance create real paths (third-ballot MP election, firewall crack), but AfD missed its majority, all parties still refuse coalitions, and only ~2 months remain for full government formation. Final 0.10.",
+  "key_sources": [
+   {"title": "2026 Saxony-Anhalt state election", "url": "https://en.wikipedia.org/wiki/2026_Saxony-Anhalt_state_election", "date": "2026-09-06"},
+   {"title": "German Elections 2026: Coalition Faces Tough Test Amid AfD Surge", "url": "https://europeanconservative.com/articles/news/german-elections-2026-coalition-faces-tough-test-amid-afd-surge/", "date": "2026-09"}
+  ],
+  "p": 0.10
+ },
+ "0x6caca4e7e45f5e9088fc0ba0615121a2ed235a426860dfb9dc651437ac377c39": {
+  "base_rate": {"reference_class": "Impeachment trials of top Philippine officials reaching a 2/3 Senate conviction (Corona 2012 convicted; Estrada 2001 trial aborted; most never reach verdict)", "value": 0.3, "source": "Philippine impeachment history 2000-2025"},
+  "evidence": [
+   "2026-05: Senators sworn in as judges for VP Sara Duterte's impeachment trial on articles passed by the House (after the Supreme Court voided the first 2025 impeachment attempt and the Senate had earlier remanded articles 18-5 to the House).",
+   "2026-07-06: Senate impeachment trial formally opened; pretrial plan sets a 92-day trial (AP via Las Vegas Sun) — a verdict is expected roughly Nov-Dec 2026, inside the question window.",
+   "2026-08-25: Senate President Escudero said he expects the trial to wrap up by end of 2026.",
+   "Conviction needs 16 of 24 senators; reporting describes the chamber as containing a substantial bloc of Duterte allies elected in the May 2025 midterms (Gulf News/AP)."
+  ],
+  "strongest_opposing_case": "The trial is on schedule to finish inside the window, the Marcos-aligned majority has pursued the case through two impeachments despite a Supreme Court setback, public opinion polls have shown majorities favoring accountability over the confidential-funds scandal, and 16 votes is reachable if Marcos applies full political pressure.",
+  "reasoning_summary": "Base ~30% for conviction in Philippine impeachments. Trial is live with a year-end verdict expected (timing risk low), but the 2/3 bar is high, several senators are open Duterte allies, and acquittal preserves senators' 2028 options. Adjust slightly below base: 0.25.",
+  "key_sources": [
+   {"title": "Philippine Senate opens the impeachment trial of Vice President Sara Duterte", "url": "https://lasvegassun.com/news/2026/jul/05/philippine-senate-opens-the-impeachment-trial-of-v/", "date": "2026-07-06"},
+   {"title": "Philippines swears in senators for VP Duterte's impeachment trial", "url": "https://www.nst.com.my/amp/world/region/2026/05/1442381/philippines-swears-senators-vp-dutertes-impeachment-trial", "date": "2026-05"}
+  ],
+  "p": 0.25
+ },
+ "0x9b8a472f0f5f8a3b2c11b345d969ed90203c800b8c60ef4e4b7f5ad38df5338f": {
+  "base_rate": {"reference_class": "PM-designate whose cabinet has already won a parliamentary confidence vote formally assuming office", "value": 0.97, "source": "Investiture-to-inauguration conversion in parliamentary systems"},
+  "evidence": [
+   "2026-05-05: Bolojan government fell via a 281-4 no-confidence vote (PSD and AUR backed); Bolojan stayed on as caretaker.",
+   "2026 (Jun-Oct): President Nicusor Dan's first nominees failed — Eugen Tomac withdrew, Adrian Vestea failed to win support; Niculescu was the fourth candidate asked to form a government.",
+   "2026-10-20: Romania's parliament approved the pro-EU cabinet proposed by PM-designate Luca Niculescu with 280 votes (233 needed), ending months of deadlock (Kuwait Times/AFP).",
+   "The question requires formal presidential appointment plus the confidence vote; the confidence vote has occurred and swearing-in before President Dan is a routine formality that follows within days."
+  ],
+  "strongest_opposing_case": "Resolution needs the full formal sequence completed — a last-minute Constitutional Court challenge, a withdrawal before the swearing-in, or some dispute over whether an earlier caretaker arrangement counts as 'next PM' could in theory intervene before office is assumed.",
+  "reasoning_summary": "Base ~97% once a confidence vote has passed. Niculescu's cabinet won 280 votes on Oct 20, 2026 and no interim PM with a confidence vote preceded him, so he is the 'next PM' for resolution purposes; only formality risk remains. Final 0.96.",
+  "key_sources": [
+   {"title": "Romanian parliament approves pro-EU govt after deadlock (AFP)", "url": "https://kuwaittimes.com/article/51997/world/romanian-parliament-approves-pro-eu-govt-after-deadlock/", "date": "2026-10-20"},
+   {"title": "Romanian president picks Liberal former mayor as PM to form new government", "url": "https://www.aljazeera.com/amp/news/2026/6/14/romanian-president-picks-liberal-former-mayor-as-pm-to-form-new-government", "date": "2026-06-14"}
+  ],
+  "p": 0.96
+ },
+ "0xac70999ddbe55471d25c03cfa2b8bf4fe66f28cd29973d3faac7e7c12e5942cb": {
+  "base_rate": {"reference_class": "Opposition challenger (prior losing candidate) vs first-term ruling-party incumbent governor in Nigeria", "value": 0.15, "source": "Nigerian gubernatorial incumbent-defeat record 2015-2023"},
+  "evidence": [
+   "Incumbent Francis Nwifuru (APC) is eligible for and seeking a second term in Ebonyi; APC swept its governorship primaries by consensus for sitting governors in May 2026 (Guardian, 2026-05).",
+   "Ifeanyi Chukwuma Odii ('Anyichuks') was the PDP's 2023 Ebonyi governorship candidate and lost to Nwifuru in the declared result; searches found no October 2026 confirmation of his 2027 party ticket — evidence on his current platform is thin.",
+   "PDP is nationally weakened by mass defections to APC and the ADC coalition through 2025-26, reducing the structure behind any Odii run.",
+   "Election scheduled Feb 6, 2027; Ebonyi's state machinery and most of its political establishment are aligned with APC and the federal government."
+  ],
+  "strongest_opposing_case": "Odii is a wealthy self-funder with a real 2023 base, southeast politics is volatile with possible pro-Obi (NDC/LP) coattails in Igboland, and Nwifuru's declared 2023 win was itself contested — a unified opposition behind Odii could flip a low-turnout state.",
+  "reasoning_summary": "Base ~15% for a returning challenger vs a ruling-party incumbent; downgrade for unconfirmed 2027 ticket, PDP's national disintegration, and APC control of Ebonyi's establishment; small upside for his funding and southeast anti-APC sentiment. Final 0.08 (thin evidence).",
+  "key_sources": [
+   {"title": "2027: APC consolidates as govs, loyalists sweep primaries", "url": "https://guardian.ng/?p=2845027", "date": "2026-05"},
+   {"title": "APC Governorship Primaries - How 23 Candidates Emerge", "url": "https://allafrica.com/stories/202605220633.html", "date": "2026-05-22"}
+  ],
+  "p": 0.08
+ },
+ "0x4544aa7ad41414e793201c30eee6896699f2f6e5ce8db59dd8d7a2fee7109268": {
+  "base_rate": {"reference_class": "Federal-ruling-party candidate in an open-seat Nigerian governorship race where the opposition party holds the state (term-limited incumbent)", "value": 0.45, "source": "Nigerian open-seat gubernatorial outcomes 2015-2023 (roughly even, tilted to whichever side has federal power and local machine)"},
+  "evidence": [
+   "2026-05: Ahmed (Tijjani) Galadima won the APC governorship primary in Adamawa with 414,444 reported votes, defeating Abdulrazak Namdas and Abdulrahman Haske after some aspirants withdrew in his favor (VON/allAfrica) — note minor name-form discrepancy (Ahmed vs Tijjani) across reports.",
+   "Incumbent Ahmadu Fintiri (PDP) is term-limited in 2027, making Adamawa an open seat; the election is Feb 6, 2027.",
+   "2025-26: PDP suffered national fragmentation (its 2027 presidential bench left for ADC/NDC), weakening the party structure defending Adamawa; APC holds federal power and most northeast states.",
+   "No Adamawa head-to-head polling found; evidence on the general-election matchup is thin."
+  ],
+  "strongest_opposing_case": "Fintiri's PDP machine has won Adamawa twice and can transfer support to an anointed successor, Atiku Abubakar (an Adamawa native) now leads the ADC opposition coalition and will contest his home state fiercely, and the APC primary name confusion hints at internal friction.",
+  "reasoning_summary": "Base ~45% for the federal-ruling-party nominee in an opposition-held open seat. APC's national momentum and defection wave argue up; Fintiri's succession machine and Atiku's home-state pull argue down. Thin direct evidence; stay near base at 0.42.",
+  "key_sources": [
+   {"title": "Tijjani Galadima emerges APC governorship candidate in Adamawa", "url": "https://von.gov.ng/tijjani-galadima-emerges-apc-governorship-candidate-in-adamawa/", "date": "2026-05"},
+   {"title": "Full List: APC Governorship Primary Winners across Nigeria", "url": "https://newscentraltv.com/?p=410902", "date": "2026-05"}
+  ],
+  "p": 0.42
+ },
+ "0xb582528a5fe14a93da51bba48e709e59ca27737f203b5172c6bebf503ed7047b": {
+  "base_rate": {"reference_class": "Federal-ruling-party candidate in an open-seat Nigerian governorship where the opposition (PDP) holds the state with a popular term-limited governor", "value": 0.4, "source": "Nigerian open-seat gubernatorial outcomes 2015-2023; Oyo's history of alternation"},
+  "evidence": [
+   "2026-05: Senator Sharafadeen Abiodun Alli swept APC's direct primary across all 33 Oyo LGAs to become its governorship candidate, beating out minister Adebayo Adelabu's camp (Arise TV); on 2026-07-03 he received his INEC nomination form and unveiled Adesoji Adedeji as running mate (ThisDay).",
+   "Incumbent Seyi Makinde (PDP) is term-limited in 2027; one May 2026 report listed Makinde as Accord's presidential candidate (unconfirmed/conflicting), signaling possible PDP-platform turmoil in Oyo.",
+   "PDP's national collapse (presidential bench defected to ADC/NDC) weakens the platform defending Oyo; APC holds federal power and most of the southwest, Tinubu's home region.",
+   "No Oyo general-election polling found; evidence on the matchup is thin."
+  ],
+  "strongest_opposing_case": "Makinde is one of Nigeria's most popular governors and his machine (whatever platform it lands on) can elect a successor; Oyo rejected APC in 2019 and 2023, Alli is a first-time statewide standard-bearer, and southwest APC infighting (Adelabu camp) could depress its vote.",
+  "reasoning_summary": "Base ~40% for the ruling-party nominee against a popular term-limited opposition governor's succession plan. APC's unified ticket, federal/southwest alignment and PDP platform chaos push up; Makinde's personal popularity pushes down. Final 0.38.",
+  "key_sources": [
+   {"title": "Oyo APC unveils Alli as governorship candidate, Adelabu loses out", "url": "https://www.arise.tv/oyo-apc-unveils-alli-as-governorship-candidate-adelabu-loses-out/", "date": "2026-05"},
+   {"title": "Alli Receives INEC Nomination Form as Oyo APC Gov Candidate", "url": "https://www.thisdaylive.com/2026/07/03/alli-receives-inec-nomination-form-as-oyo-apc-gov-candidate-unveils-adedeji-as-running-mate/", "date": "2026-07-03"}
+  ],
+  "p": 0.38
+ },
+ "0x8126317d621047fb13d508a2651eecc8d38305904671822a62309c5aabd353aa": {
+  "base_rate": {"reference_class": "Three-time candidate / far-right standard-bearer winning the French presidency = P(eligible and runs) x P(wins two-round election); Le Pen lost runoffs in 2017 (34%) and 2022 (41.5%)", "value": 0.15, "source": "French two-round presidential history; RN runoff ceiling"},
+  "evidence": [
+   "2026-07-07: Paris Court of Appeal upheld Le Pen's embezzlement conviction but reduced her ineligibility to 45 months; with 30 months deemed served, ~15 months remained — coverage says a 2027 run 'remains possible' yet the arithmetic (15 months from July 2026 reaches ~Oct 2027, past the April 2027 vote) leaves her eligibility genuinely unclear (Sigmalive/AP).",
+   "2026-07: Both Le Pen and the prosecutor general could appeal to the Court of Cassation within 10 days, so the legal outcome was still not final.",
+   "Le Pen has said she might not run if constraints make campaigning impractical; RN's designated fallback is Jordan Bardella, who polls at or above her first-round numbers.",
+   "2025-2026 polling consistently put the RN candidate (her or Bardella) first in round one (~33-37%), but runoff projections against a unified-center candidate remained close to or below 50%."
+  ],
+  "strongest_opposing_case": "If Cassation suspends or shortens the ban she runs as the round-one favorite amid historic unpopularity of the governing center, repeated RN runoff gains (34->41.5%) suggest the ceiling is gone, and a fragmented left could hand her a winnable runoff opponent.",
+  "reasoning_summary": "Decompose: P(eligible and is the RN candidate) ~0.40 given the ambiguous 15-remaining-months ruling and Bardella alternative; P(wins | runs) ~0.35 on strong round-one but unresolved runoff math. 0.40 x 0.35 ~ 0.14; round to 0.13.",
+  "key_sources": [
+   {"title": "Le Pen's 2027 presidential run remains possible after appeal verdict", "url": "https://en.sigmalive.com/le-pens-2027-presidential-run-remains-possible-after-appeal-verdict/", "date": "2026-07"},
+   {"title": "Marine Le Pen's 2027 bid for French presidency is at stake in Paris court ruling (AP)", "url": "https://lasvegassun.com/news/2026/jul/07/marine-le-pens-2027-bid-for-french-presidency-is-a/", "date": "2026-07-07"}
+  ],
+  "p": 0.13
+ },
+ "0xe00cb03a0aefe8f4a06338da171a8df62edd2056622843931f4d5af4199afffe": {
+  "base_rate": {"reference_class": "Third-party/minor-platform candidate defeating an incumbent president in Nigeria; no Nigerian president has lost to a candidate outside the two dominant structures", "value": 0.05, "source": "Nigerian presidential elections 1999-2023 (only incumbent loss: Jonathan to APC's unified mega-coalition, 2015)"},
+  "evidence": [
+   "2025-12-31: Peter Obi left the Labour Party and later joined the small Nigeria Democratic Congress (NDC); 2026-05-29: NDC ratified him as its presidential candidate (Daily Trust/kolaking).",
+   "2026-05: The opposition 'coalition' fractured — Atiku won the ADC primary (1.85M votes) while Obi went NDC and Labour picked Chibuzo Okereke; allAfrica (2026-05-26) describes opposition parties 'in disarray' with factional candidates.",
+   "Obi took 25% and ~6.1M votes in 2023 on the Labour platform; the NDC has far less national structure, polling agents, or state-level machinery.",
+   "Election set for Jan 16, 2027; a runoff is possible if no candidate meets the 25%-in-24-states spread, but Obi's vote is regionally concentrated (southeast/south-south plus urban centers)."
+  ],
+  "strongest_opposing_case": "Economic hardship under Tinubu is severe and broad, Obi retains the most enthusiastic personal following in the country, and a first-ever runoff scenario in a fragmented field could let him consolidate the entire anti-Tinubu vote in a head-to-head.",
+  "reasoning_summary": "Base ~5% for a minor-platform challenger vs an incumbent. Obi's proven 25% base and anti-incumbent mood argue up; the three-way opposition split (Atiku/ADC, Obi/NDC, LP), his weak party machinery, and the geographic-spread requirement argue down. Final 0.06.",
+  "key_sources": [
+   {"title": "2027 Presidency - Opposition Parties in Disarray, Produce Factional Candidates", "url": "https://allafrica.com/stories/202605260094.html", "date": "2026-05-26"},
+   {"title": "NDC to ratify Obi as 6 parties pick flagbearers", "url": "https://dailytrust.com/ndc-to-ratify-obi-as-6-parties-pick-flagbearers/", "date": "2026-05"}
+  ],
+  "p": 0.06
+ },
+ "0xdb66349b5658e7ce54667294bb61ca2f98d68f8afde5c711284d7e9c5a5e5787": {
+  "base_rate": {"reference_class": "Incumbent Nigerian president seeking re-election; incumbents won 1999, 2003, 2011, 2019 and lost only 2015 (to a unified opposition mega-merger)", "value": 0.8, "source": "Nigerian presidential incumbency record 1999-2023"},
+  "evidence": [
+   "2026-05-24: Tinubu won the APC presidential primary with ~11.0M affirmation votes against token opposition (Channels TV).",
+   "2026-05-26: Opposition is fractured three-plus ways — Atiku (ADC), Obi (NDC), Okereke (LP), plus minor parties; allAfrica describes 'disarray' and factional candidates, the opposite of the unified 2015 template that beat an incumbent.",
+   "2025-26: Wave of PDP governors and senators defected to APC, giving Tinubu control of most state machineries ahead of the Jan 16, 2027 vote.",
+   "Tinubu won 2023 with only 36.6% in a three-way race; the 2027 field is even more fragmented, and the 25%-spread rule plus runoff provisions favor the structure-rich incumbent."
+  ],
+  "strongest_opposing_case": "Severe cost-of-living pain, fuel-subsidy and naira-reform fallout make Tinubu genuinely unpopular; if hardship drives a historic protest wave or the opposition executes a late single-candidate alliance (as in 2015), an incumbent can lose — it has happened once.",
+  "reasoning_summary": "Base ~80% for an incumbent. The fragmented opposition (Atiku/Obi split confirmed at May 2026 primaries), mass defections to APC, and incumbent control of electoral machinery push above base; economic anger and low 2023 vote share temper it. Final 0.78.",
+  "key_sources": [
+   {"title": "Tinubu wins APC presidential primary (Channels TV)", "url": "https://www.channelstv.com/?p=1029559", "date": "2026-05-24"},
+   {"title": "2027 Presidency - Opposition Parties in Disarray, Produce Factional Candidates", "url": "https://allafrica.com/stories/202605260094.html", "date": "2026-05-26"}
+  ],
+  "p": 0.78
+ }
+}

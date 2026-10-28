@@ -1,0 +1,147 @@
+{
+ "forecast_id": "AS2026",
+ "freeze_date": "2026-03-16",
+ "params": {
+  "alpha": 0.529,
+  "n_sim": 10000,
+  "poll_agencies_rated": false,
+  "seed": 42,
+  "sigma_c": 13.23,
+  "sigma_state_m2": 6.3,
+  "sigma_state_m3": 6.0,
+  "tau": 0.5
+ },
+ "quality_flags": [
+  "Both pre-freeze polls are unrated agencies, published the day of the EC schedule announcement; M3 sigma 6.0.",
+  "AIUDF has no poll column (lumped in Others) -> its questions are M3-blind (WATCH-NOPOLL) and the M3 seat sim excludes it, inflating NDA/ASOM M3 seat counts in AIUDF strongholds; min() gate partially protects.",
+  "Freeze set to 2026-03-16 (T-24d, just after EC announcement) instead of strict T-28d (2026-03-12), same rationale as KL2026: the T-28 revision has empty poll tables. Decision made before seeing any result.",
+  "Poll record read from the last pre-election frozen revision (2026-04-08); a 'Chanakya' row with no publication date was excluded (cannot verify pre-freeze).",
+  "Opposition fragmentation (Raijor Dal and AIUDF outside ASOM, UPPL alone) is severe; baseline reblocking cannot capture local BTR seat deals"
+ ],
+ "questions": [
+  {
+   "p_gate": 0.6474,
+   "p_m2": 0.6474,
+   "p_m3": 0.7581,
+   "question": "NDA wins majority",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.7773,
+   "p_m2": 0.8219,
+   "p_m3": 0.7773,
+   "question": "NDA is largest",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.0741,
+   "p_m2": 0.0741,
+   "p_m3": 0.2227,
+   "question": "ASOM wins majority",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.1781,
+   "p_m2": 0.1781,
+   "p_m3": 0.2227,
+   "question": "ASOM is largest",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": null,
+   "p_m2": 0.0,
+   "p_m3": null,
+   "question": "AIUDF wins majority",
+   "verdict": "WATCH-NOPOLL"
+  },
+  {
+   "p_gate": null,
+   "p_m2": 0.0,
+   "p_m3": null,
+   "question": "AIUDF is largest",
+   "verdict": "WATCH-NOPOLL"
+  },
+  {
+   "p_gate": 1.0,
+   "p_m2": 1.0,
+   "p_m3": 1.0,
+   "question": "Winner (largest) in {NDA, ASOM}",
+   "verdict": "CALL-YES"
+  },
+  {
+   "p_gate": null,
+   "p_m2": 0.9993,
+   "p_m3": null,
+   "question": "AIUDF under 25 seats",
+   "verdict": "WATCH-NOPOLL"
+  }
+ ],
+ "run_at_utc": "2026-10-16T14:45:40+00:00",
+ "seats_m2": {
+  "AIUDF": {
+   "med": 14,
+   "p5": 10,
+   "p95": 19,
+   "p_largest": 0.0,
+   "p_majority": 0.0
+  },
+  "ASOM": {
+   "med": 43,
+   "p5": 22,
+   "p95": 66,
+   "p_largest": 0.1781,
+   "p_majority": 0.0741
+  },
+  "NDA": {
+   "med": 69,
+   "p5": 44,
+   "p95": 91,
+   "p_largest": 0.8219,
+   "p_majority": 0.6474
+  }
+ },
+ "seats_m3": {
+  "ASOM": {
+   "med": 52,
+   "p5": 30,
+   "p95": 77,
+   "p_largest": 0.2227,
+   "p_majority": 0.2227
+  },
+  "NDA": {
+   "med": 74,
+   "p5": 49,
+   "p95": 96,
+   "p_largest": 0.7773,
+   "p_majority": 0.7581
+  }
+ },
+ "state_shares": {
+  "baseline": {
+   "AIUDF": 9.56,
+   "ASOM": 33.25,
+   "NDA": 44.03
+  },
+  "ge": {
+   "AIUDF": 3.16,
+   "ASOM": 39.42,
+   "NDA": 46.4
+  },
+  "m2_pred": {
+   "AIUDF": 6.17,
+   "ASOM": 36.52,
+   "NDA": 45.28
+  },
+  "m3_pred": {
+   "ASOM": 38.6,
+   "NDA": 43.7
+  }
+ },
+ "title": "Assam Legislative Assembly 2026 (holdout)",
+ "tripwires": [
+  {
+   "effect": "bloc structure changes; re-run",
+   "watch": "ASOM-AIUDF or ASOM-Raijor Dal rapprochement before 9 Apr"
+  }
+ ]
+}

@@ -1,0 +1,196 @@
+{
+ "forecast_id": "UP2027",
+ "freeze_date": "2026-10-16",
+ "new_entrant_flag": {},
+ "params": {
+  "alpha": 0.461,
+  "n_sim": 10000,
+  "poll_agencies_rated": false,
+  "seed": 42,
+  "sigma_c": 10.64,
+  "sigma_state_m2": 6.3,
+  "sigma_state_m3": 6.0,
+  "tau": 0.5
+ },
+ "quality_flags": [
+  "ALL four polls are from unrated agencies; none discloses methodology/sample/fieldwork dates (aitimeline.in audit, Sep 2026). M3 runs with inflated sigma and this forecast cannot upgrade to CALL on these polls alone.",
+  "BSP polled range 0.8-11.0 pct across agencies - a 10-point spread on one party is a pollster-quality symptom, not information.",
+  "INDIA bloc composition not final: SP-INC seat-sharing unresolved at freeze (INC demands ~150 seats, SP signals ~50)."
+ ],
+ "questions": [
+  {
+   "p_gate": 0.575,
+   "p_m2": 0.612,
+   "p_m3": 0.575,
+   "question": "NDA wins majority",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.589,
+   "p_m2": 0.6371,
+   "p_m3": 0.589,
+   "question": "NDA is largest",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.34,
+   "p_m2": 0.34,
+   "p_m3": 0.3996,
+   "question": "INDIA wins majority",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.3629,
+   "p_m2": 0.3629,
+   "p_m3": 0.411,
+   "question": "INDIA is largest",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.0,
+   "p_m2": 0.0,
+   "p_m3": 0.0,
+   "question": "BSP wins majority",
+   "verdict": "CALL-NO"
+  },
+  {
+   "p_gate": 0.0,
+   "p_m2": 0.0,
+   "p_m3": 0.0,
+   "question": "BSP is largest",
+   "verdict": "CALL-NO"
+  },
+  {
+   "p_gate": 0.9556,
+   "p_m2": 0.9556,
+   "p_m3": 0.9934,
+   "question": "BSP under 25 seats",
+   "verdict": "CALL-YES"
+  },
+  {
+   "p_gate": 0.8721,
+   "p_m2": 0.8822,
+   "p_m3": 0.8721,
+   "question": "NDA at least 150 seats",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.6668,
+   "p_m2": 0.6668,
+   "p_m3": 0.7346,
+   "question": "INDIA at least 150 seats",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 1.0,
+   "p_m2": 1.0,
+   "p_m3": 1.0,
+   "question": "Winner (largest) in {NDA, INDIA}",
+   "verdict": "CALL-YES"
+  }
+ ],
+ "resolution": {
+  "resolve_by": "2027-03-31",
+  "rules": [
+   "Bloc seat totals = sum of seats won by the member parties listed in `blocs` as composed at freeze; post-result defections, mergers and letters of support are ignored",
+   "If an alliance splits BEFORE polling, a re-run forecast (new ledger rows) supersedes; these rows still resolve against freeze-time bloc composition",
+   "'wins majority' = bloc seats >= 202 of 403 at first full declaration; countermanded/postponed seats count as not won unless they decide the question, in which case resolution waits for them",
+   "'is largest' = strictly more seats than every other modeled bloc (independents and unmodeled parties are not blocs); an exact tie resolves NO for all blocs",
+   "Seat-threshold questions (e.g. 'BSP under 25 seats') resolve on the same official tally",
+   "If the election is not held by 2027-12-31, rows resolve VOID: logged and excluded from scoring, never silently dropped"
+  ],
+  "source": "Election Commission of India official results (results.eci.gov.in), party-wise seat tally at first full declaration of all 403 seats"
+ },
+ "run_at_utc": "2026-10-23T09:18:24+00:00",
+ "seats_m2": {
+  "BSP": {
+   "med": 5,
+   "p5": 0,
+   "p95": 23,
+   "p_largest": 0.0,
+   "p_majority": 0.0
+  },
+  "INDIA": {
+   "med": 176,
+   "p5": 83,
+   "p95": 270,
+   "p_largest": 0.3629,
+   "p_majority": 0.34
+  },
+  "NDA": {
+   "med": 219,
+   "p5": 126,
+   "p95": 314,
+   "p_largest": 0.6371,
+   "p_majority": 0.612
+  }
+ },
+ "seats_m3": {
+  "BSP": {
+   "med": 2,
+   "p5": 0,
+   "p95": 12,
+   "p_largest": 0.0,
+   "p_majority": 0.0
+  },
+  "INDIA": {
+   "med": 187,
+   "p5": 94,
+   "p95": 273,
+   "p_largest": 0.411,
+   "p_majority": 0.3996
+  },
+  "NDA": {
+   "med": 212,
+   "p5": 127,
+   "p95": 306,
+   "p_largest": 0.589,
+   "p_majority": 0.575
+  }
+ },
+ "state_shares": {
+  "baseline": {
+   "BSP": 12.97,
+   "INDIA": 33.45,
+   "NDA": 46.24
+  },
+  "ge": {
+   "BSP": 9.46,
+   "INDIA": 43.37,
+   "NDA": 44.01
+  },
+  "m2_pred": {
+   "BSP": 11.35,
+   "INDIA": 38.03,
+   "NDA": 45.21
+  },
+  "m3_pred": {
+   "BSP": 5.65,
+   "INDIA": 38.51,
+   "NDA": 44.36
+  }
+ },
+ "title": "Uttar Pradesh Assembly 2027",
+ "tripwires": [
+  {
+   "effect": "INDIA loses tau x INC transfer (~1.2 pts) and opposition fragments further; NDA majority probability rises materially",
+   "watch": "SP-INC seat-sharing collapses (INC exits or fights separately)"
+  },
+  {
+   "effect": "M3 upgrades to rated sigma; gate becomes meaningfully decidable",
+   "watch": "A rated agency (CVoter/CSDS-Lokniti/Axis) publishes a vote-share poll"
+  },
+  {
+   "effect": "insider-flow signal; sustained one-way flow is grounds to re-run forecast",
+   "watch": "Ticket-season defection flow (late 2026/early 2027), net direction weighted by defector quality"
+  },
+  {
+   "effect": "changes Dalit-vote split assumptions; re-run with ASP as modeled entrant",
+   "watch": "BSP-ASP(KR) dynamics: ASP contesting ~87 seats; any BSP-ASP tie-up or BSP revival sign"
+  },
+  {
+   "effect": "freeze window formally ends; issue updated pre-registered forecast",
+   "watch": "EC announces schedule / phase dates"
+  }
+ ]
+}

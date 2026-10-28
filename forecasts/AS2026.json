@@ -1,0 +1,56 @@
+{
+  "forecast_id": "AS2026",
+  "title": "Assam Legislative Assembly 2026 (holdout)",
+  "state": "AS",
+  "expected_date": "2026-04-09 (counting 2026-05-04)",
+  "freeze_date": "2026-03-16",
+  "majority": 64,
+  "n_seats": 126,
+  "baseline_ae": "AS2021",
+  "ge_election": "GEAS2024",
+  "blocs": {
+    "NDA": {
+      "ae_base": {"BJP": "1", "AGP": "1", "BPF": "t"},
+      "ge": {"BJP": "1", "AGP": "1", "BPF": "t"},
+      "note": "BJP+AGP as 2021; BPF SWITCHED from 2021 Mahajot to NDA (11 seats in BTR) -> tau both scopes (BPF fought GE2024 outside the NDA seat deal too). UPPL LEFT the NDA (no seat talks, contesting alone) -> excluded despite being a 2021/GE2024 NDA member"
+    },
+    "ASOM": {
+      "ae_base": {"INC": "1", "CPM": "1", "AJP": "t", "CPIML": "t"},
+      "ge": {"INC": "1", "CPM": "1", "AJP": "t", "CPIML": "t"},
+      "note": "Asom Sonmilito Morcha, Congress-led 8-party front revived Nov 2025: INC, CPM (both with INC in 2021 Mahajot -> 1), AJP (contested alone 2021, 3.76 -> tau), CPIML, APHLC (no data). Raijor Dal LEFT over seats, Mar 2026. AIUDF and BPF, 2021 Mahajot members, are both OUT"
+    },
+    "AIUDF": {
+      "ae_base": {"AIUDF": "1"},
+      "ge": {"AIUDF": "1"},
+      "note": "contesting alone (9 declared at freeze); own-vote baseline 9.56 (AE2021) / 3.16 (GE2024)"
+    }
+  },
+  "polls": [
+    {"agency": "IANS-Matrize", "date": "2026-03-15", "NDA": 43.5, "ASOM": 39.5, "AIUDF": null, "rated": false},
+    {"agency": "Vote Vibe CNN-News18", "date": "2026-03-15", "NDA": 43.9, "ASOM": 37.7, "AIUDF": null, "rated": false}
+  ],
+  "poll_window_days": 90,
+  "poll_corrections": {
+    "NDA": 0.0,
+    "ASOM": 0.0,
+    "AIUDF": 0.0,
+    "rule": "no AS vote-share poll history in the N=46 ledger (2016/2021 polls were seat projections only) -> corrections 0"
+  },
+  "sigma_state_m2": 6.3,
+  "sigma_state_m3_rated": 4.0,
+  "sigma_state_m3_unrated": 6.0,
+  "sub_questions": [
+    {"q": "Winner (largest) in {NDA, ASOM}", "bloc": "__top2__", "op": "in", "threshold": ["NDA", "ASOM"]},
+    {"q": "AIUDF under 25 seats", "bloc": "AIUDF", "op": "<", "threshold": 25}
+  ],
+  "quality_flags": [
+    "Both pre-freeze polls are unrated agencies, published the day of the EC schedule announcement; M3 sigma 6.0.",
+    "AIUDF has no poll column (lumped in Others) -> its questions are M3-blind (WATCH-NOPOLL) and the M3 seat sim excludes it, inflating NDA/ASOM M3 seat counts in AIUDF strongholds; min() gate partially protects.",
+    "Freeze set to 2026-03-16 (T-24d, just after EC announcement) instead of strict T-28d (2026-03-12), same rationale as KL2026: the T-28 revision has empty poll tables. Decision made before seeing any result.",
+    "Poll record read from the last pre-election frozen revision (2026-04-08); a 'Chanakya' row with no publication date was excluded (cannot verify pre-freeze).",
+    "Opposition fragmentation (Raijor Dal and AIUDF outside ASOM, UPPL alone) is severe; baseline reblocking cannot capture local BTR seat deals"
+  ],
+  "tripwires": [
+    {"watch": "ASOM-AIUDF or ASOM-Raijor Dal rapprochement before 9 Apr", "effect": "bloc structure changes; re-run"}
+  ]
+}

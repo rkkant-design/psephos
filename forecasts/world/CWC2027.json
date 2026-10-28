@@ -1,0 +1,47 @@
+{
+  "forecast_id": "CWC2027",
+  "title": "Cricket World Cup 2027",
+  "domain": "Cricket",
+  "freeze_date": "2026-10-23",
+  "resolve_date": "2027-11",
+  "adapter": "ratings_tournament",
+  "research": true,
+  "market": {
+    "source": "OLBG bookmaker outrights (undated, 2026) averaged with Manifold prediction market (~1.8k traded)",
+    "bookmaker_odds": {"India": 3.5, "Australia": 5.0, "England": 7.0, "South Africa": 7.5},
+    "manifold": {"India": 0.33, "Australia": 0.20, "South Africa": 0.14, "England": 0.13}
+  },
+  "model": {
+    "source": "ICC Men's ODI team ratings, table as of 2026-10-22 (Wikipedia)",
+    "note": "P(champion) proportional to exp(rating/tau), tau=8 rating points (stated prior, not fitted); hosts South Africa get +3 rating home bonus (stated prior)",
+    "ratings": {"India": 115, "New Zealand": 109, "South Africa": 104, "Pakistan": 103, "Australia": 102, "Sri Lanka": 95, "Afghanistan": 94, "England": 93, "Bangladesh": 81, "West Indies": 79, "Zimbabwe": 64, "Ireland": 53, "Scotland": 45, "Netherlands": 44},
+    "host_bonus": {"South Africa": 3, "Zimbabwe": 3}
+  },
+  "resolution": {
+    "source": "ICC official result of the Cricket World Cup 2027 final (icc-cricket.com), expected 2027-11",
+    "resolve_by": "2027-12-31",
+    "rules": [
+      "Winner = team awarded the trophy per ICC official result, including a final decided by DLS or a super over",
+      "Shared trophy (final abandoned with no reserve-day result): every 'X wins' question resolves YES for each co-champion; set-membership questions resolve YES if any co-champion is in the set",
+      "'Winner from current ICC top 8' resolves against the eight teams named in the question's entity list at freeze (2026-10-22 ratings), not the ratings at tournament time",
+      "Tournament cancelled or not completed with no trophy awarded = VOID, logged and excluded from scoring"
+    ]
+  },
+  "questions": [
+    {"q": "India win the World Cup", "entity": "India"},
+    {"q": "Winner in {India, Australia, South Africa, England}", "entity": ["India", "Australia", "South Africa", "England"]},
+    {"q": "Winner from current ICC top 8", "entity": ["India", "New Zealand", "South Africa", "Pakistan", "Australia", "Sri Lanka", "Afghanistan", "England"]}
+  ],
+  "quality_flags": [
+    "13 months to resolution - the engine's instruments are at their weakest this far out; expect WATCH on anything sharp.",
+    "Instruments openly disagree on England: the market makes them 3rd favourite (7.0) while ICC ratings rank them 8th. That divergence is the product, not a bug.",
+    "Bookmaker odds snapshot is undated; Manifold is thin (~1.8k traded). Market instrument is low-grade and treated as such.",
+    "Model is championship-share by rating, not a tournament simulation - format (14 teams, SA/Zim/Namibia, Oct-Nov 2027) not yet modeled.",
+    "Market instrument prices only 4 teams, so its probability for any wider set (e.g. 'top 8') is a FLOOR, not an estimate - the true market number is higher. Gate verdicts are unaffected (floor only makes the gate more conservative)."
+  ],
+  "tripwires": [
+    {"watch": "Major books publish dated outrights (closer to tournament)", "effect": "re-run with fresh market"},
+    {"watch": "ICC ratings shift 5+ points for any contender", "effect": "re-run"},
+    {"watch": "Tournament draw/format announced", "effect": "upgrade model to group-stage simulation"}
+  ]
+}

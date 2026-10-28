@@ -1,0 +1,65 @@
+{
+  "forecast_id": "PB2027",
+  "title": "Punjab Assembly 2027",
+  "state": "PB",
+  "expected_date": "2027-02",
+  "freeze_date": "2026-10-23",
+  "majority": 59,
+  "n_seats": 117,
+  "baseline_ae": "PB2022",
+  "ge_election": "GEPB2024",
+  "blocs": {
+    "AAP": {"ae_base": {"AAP": "1"}, "ge": {"AAP": "1"}, "note": "incumbent, contesting alone"},
+    "INC": {"ae_base": {"INC": "1"}, "ge": {"INC": "1"}, "note": "alone; no INDIA-bloc tie-up with AAP in Punjab"},
+    "SAD": {"ae_base": {"SAD": "1"}, "ge": {"SAD": "1"}, "note": "alone; no SAD-BSP alliance stated for 2027"},
+    "BJP": {"ae_base": {"BJP": "1"}, "ge": {"BJP": "1"}, "note": "alone since 2021 farm-law split"}
+  },
+  "polls": [
+    {"agency": "SCORE", "date": "2026-10-15", "AAP": 38.0, "INC": 24.0, "SAD": 12.5, "BJP": 14.0, "rated": false},
+    {"agency": "Inside Election", "date": "2026-09-21", "AAP": 34.0, "INC": 30.0, "SAD": 12.0, "BJP": 12.0, "rated": false},
+    {"agency": "News Leader-Matrize", "date": "2026-09-21", "AAP": 27.0, "INC": 30.0, "SAD": 19.0, "BJP": 16.0, "rated": false},
+    {"agency": "People's Pulse", "date": "2026-07-31", "AAP": 37.0, "INC": 31.0, "SAD": 6.0, "BJP": 8.0, "rated": false}
+  ],
+  "poll_window_days": 90,
+  "poll_corrections": {
+    "AAP": 0.0, "INC": 0.0, "SAD": 0.0, "BJP": 0.0,
+    "rule": "no PB pollster-error ledger built yet (2022 final-window vote-share polls not yet curated); corrections 0, unrated sigma applies"
+  },
+  "sigma_state_m2": 6.3,
+  "sigma_state_m3_rated": 4.0,
+  "sigma_state_m3_unrated": 6.0,
+  "new_entrant_flag": {
+    "triggered": true,
+    "entrant": "Akali Dal (Waris Punjab De) - Amritpal Singh",
+    "evidence": "polling 8.5-14% (SCORE 8.5, People's Pulse 14) with zero presence in PB2022 baseline and GE2024; satisfies the N=46 rule 'serious contender invisible to both baseline AE and prior GE'. TN2026/TVK precedent: all CALLs suppressed to WATCH-FLAG."
+  },
+  "resolution": {
+    "source": "Election Commission of India official results (results.eci.gov.in), party-wise seat tally at first full declaration of all 117 seats",
+    "resolve_by": "2027-03-31",
+    "rules": [
+      "Bloc seat totals = sum of seats won by the member parties listed in `blocs` as composed at freeze; post-result defections, mergers and letters of support are ignored",
+      "If an alliance splits BEFORE polling, a re-run forecast (new ledger rows) supersedes; these rows still resolve against freeze-time bloc composition",
+      "'wins majority' = bloc seats >= 59 of 117 at first full declaration; countermanded/postponed seats count as not won unless they decide the question, in which case resolution waits for them",
+      "'is largest' = strictly more seats than every other modeled bloc (independents and unmodeled parties are not blocs); an exact tie resolves NO for all blocs",
+      "Seat-threshold questions resolve on the same official tally",
+      "If the election is not held by 2027-12-31, rows resolve VOID: logged and excluded from scoring, never silently dropped"
+    ]
+  },
+  "sub_questions": [
+    {"q": "BJP under 15 seats", "bloc": "BJP", "op": "<", "threshold": 15},
+    {"q": "SAD under 20 seats", "bloc": "SAD", "op": "<", "threshold": 20},
+    {"q": "Winner (largest) in {AAP, INC}", "bloc": "__top2__", "op": "in", "threshold": ["AAP", "INC"]}
+  ],
+  "quality_flags": [
+    "NEW-ENTRANT FLAG ACTIVE: Waris Punjab De (Amritpal Singh) polls 8.5-14% with no electoral baseline - the exact TVK/TN2026 pattern. All would-be CALLs are suppressed to WATCH-FLAG per the validated N=46 rule.",
+    "All final-window polls are unrated agencies; two partisan-affiliated polls (Desh Ka Verdict/INC, Aapka Opinion/AAP) excluded - seat-only projections, no vote shares.",
+    "Poll spread is extreme: AAP 27-38, SAD 6-19 across agencies in the same window.",
+    "WPD is not a simulatable bloc (zero baseline): its 8-14% will come asymmetrically from AAP's and SAD's Panthic vote, which the uniform-swing Monte Carlo cannot represent."
+  ],
+  "tripwires": [
+    {"watch": "WPD trajectory in later polls (toward 20%+ = TN2026 fracture pattern; fade below 5% = flag review)", "effect": "fracture would invalidate all two-way simulations; fade would lift the flag and make the gate decidable"},
+    {"watch": "Any SAD-BSP or SAD-WPD alliance formation", "effect": "re-bloc and re-run with tau transfers"},
+    {"watch": "A rated agency (CVoter/CSDS/Axis) publishes a vote-share poll", "effect": "M3 upgrades to rated sigma"},
+    {"watch": "Ticket-season defection flows, net direction", "effect": "insider-flow signal; sustained one-way flow triggers re-run"}
+  ]
+}

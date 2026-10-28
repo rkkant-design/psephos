@@ -1,0 +1,146 @@
+[
+ {
+  "id": "41490",
+  "source": "metaculus",
+  "question": "Will Vivek Ramaswamy win the 2026 Ohio gubernatorial election?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/41490.",
+  "market_resolution_criteria": "This question resolves as Yes if Vivek Ramaswamy wins the 2026 Ohio gubernatorial election, according to either certified results provided by state election officials, or a consensus of credible media reports.",
+  "background": "The [2026 Ohio gubernatorial election](https://en.wikipedia.org/wiki/2026_Ohio_gubernatorial_election) is scheduled to take place on November 3, 2026, to elect the next governor of Ohio. The primary elections will take place on May 5, 2026. Incumbent Republican Governor Mike DeWine is term-limited and cannot seek a third consecutive term.\n\nOnce considered a key battleground state and bellwether, Ohio has shifted significantly to the right in the last decade. At the state level, Republicans hold [a government trifecta and a triplex](https://ballotpedia.org/State_government_trifectas_and_triplexes), and incumbent governor DeWine was re-elected in 2022 by a 25-point margin. In the 2024 presidential election, Republican candidate Donald Trump carried the state by 11.2 points, the widest margin of victory for any presidential nominee in the state since 1984.&#x20;\n\n[Vivek Ramaswamy](https://e",
+  "close": "2026-11-03T12:00:00+00:00"
+ },
+ {
+  "id": "43941",
+  "source": "metaculus",
+  "question": "Will Karen Bass be reelected Mayor of Los Angeles in 2026?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/43941.",
+  "market_resolution_criteria": "This question resolves **Yes** if Karen Bass is officially declared the winner of the 2026 Los Angeles mayoral election after any recounts.",
+  "background": "Karen Ruth Bass is an American politician who has served as the [43rd\u00a0mayor of Los Angeles](https://mayor.lacity.gov/)\u00a0since 2022, representing the Democratic Party.&#x20;\n\nOn June 3, 2026 [Bass advanced to a November runoff](https://apnews.com/article/los-angeles-mayor-election-bass-pratt-ca624a57c9e717ecdf0f86756b0d370b) \"as she fights to stay in City Hall against challengers from both ends of the political spectrum.\" Her first term has been framed by the\u00a0[most destructive wildfire in city history](https://apnews.com/article/california-wildfires-los-angeles-deaths-75642a4e6cd66a34cbced64c10dd4f3b)\u00a0and an ongoing struggle with widespread homelessness.\n\nOn June 9, 2026, progressive city council member Nithya Raman\u00a0[has also advanced](https://apnews.com/projects/elections-2026/california-primary-results/), \"setting up an unexpected matchup between two Democrats and former political allies",
+  "close": "2026-11-02T12:00:00+00:00"
+ },
+ {
+  "id": "KXCLOSESTGOVERNOR-27JAN20-GA",
+  "source": "kalshi",
+  "question": "Will Georgia have the smallest margin of victory in 2026 United States gubernatorial elections? [Yes: Georgia]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxclosestgovernor/x/kxclosestgovernor-27jan20.",
+  "market_resolution_criteria": "If Georgia has the smallest margin of victory among all elections in the 2026 United States gubernatorial elections as of Jan 20, 2027, then the market resolves to Yes. Margin of victory is calculated as the absolute percentage point difference between first and second place finishers. For two-candidate races, this is winner's percentage minus runner-up's percentage. For multi-candidate races, only the gap between first and second counts. For yes/no referenda, it's the absolute difference between yes and no percentages. If official results aren't available by the deadline but at least 95% of expected vote is counted, preliminary results are used. In case of identical margins (tied to the hundredth of a percentage point), tied options split the payout equally. Postponed elections or those without sufficient results by the deadline resolve to No. Outcome verified from official state or local election division websites (https://www.vote.gov/); the official electoral commissions or secretaries of state for each jurisdiction holding elections within  (https://www.vote.gov/); official government websites of the relevant jurisdictions (https://www.usa.gov/); The New York Times (https://www.nytimes.com/); the Associated Press (https://apnews.com/); Reuters (https://www.reuters.com); Bloomberg News (https://www.bloomberg.com/news); CNN (https://www.cnn.com/); NBC News (https://www.nbcnews.com/); ABC News (https://abcnews.go.com/); CBS News (https://www.cbsnews.com); Fox News (https://www.foxnews.com/); The Wall Street Journal (https://www.wsj.com/); The Washington Post (https://www.washingtonpost.com/); Politico (https://www.politico.com); FiveThirtyEight (https://projects.fivethirtyeight.com/biden-approval-rating/?cid=rrpromo); Ballotpedia (https://www.ballotpedia.org).",
+  "background": "N/A",
+  "close": "2027-01-20T04:59:00+00:00"
+ },
+ {
+  "id": "KXVAPORTTEU-27JAN31-T3.15",
+  "source": "kalshi",
+  "question": "Will Port of Virginia total container volume for 2026 be above 3.15 million TEUs? [Yes: Above 3.15 million TEUs]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxvaportteu/x/kxvaportteu-27jan31.",
+  "market_resolution_criteria": "If the Port of Virginia total container volume for calendar year 2026 is above \n\n3.15 million TEUs, then the market resolves to Yes. The Underlying is the Port of Virginia\u2019s total twenty-foot equivalent units (TEUs) for January through December 2026. Loaded and empty import and export TEUs are all included in the published total. The Port publishes these figures through its official Monthly Statistics workbook. Outcome verified from The Port of Virginia (https://operations.portofvirginia.com/port-statistics/).",
+  "background": "N/A",
+  "close": "2027-01-31T16:29:00+00:00"
+ },
+ {
+  "id": "KXFEDCHGCOUNT-27JAN01-E2",
+  "source": "kalshi",
+  "question": "Will the number of rate changes before 2027 be exactly 2? [Yes: Exactly 2]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxfedchgcount/x/kxfedchgcount-27jan01.",
+  "market_resolution_criteria": "If the number of rate changes before 2027 is exactly 2, then the market resolves to Yes. A \u2018rate change\u2019 means a single decision that changes the target range, regardless of size (e.g., a 50 bp hike counts as one). A later 50 bp cut counts as an additional rate change. Outcome verified from Federal Reserve (https://www.federalreserve.gov/newsevents/pressreleases.htm).",
+  "background": "N/A",
+  "close": "2027-01-01T04:59:00+00:00"
+ },
+ {
+  "id": "KXDSENATESEATS-27-ABOVE52",
+  "source": "kalshi",
+  "question": "Will the Democratic Party hold more than 52 seats in the 120th Congress? [Yes: Above 52]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxdsenateseats/x/kxdsenateseats-27.",
+  "market_resolution_criteria": "If the Democratic Party has above 52 Senate seats on Feb 1, 2027, then the market resolves to Yes. Individuals caucusing with either party will be included with them (e.g. an Independent who caucuses with a party, like Vermont Senator Bernie Sanders who caucuses with the Democrats, would be counted as a Democrat). Outcome verified from United States Congress (https://www.congress.gov/).",
+  "background": "N/A",
+  "close": "2027-02-01T15:00:00+00:00"
+ },
+ {
+  "id": "KXILNUCLEAR-27FEB28-T95.0",
+  "source": "kalshi",
+  "question": "Will Illinois utility-scale net electricity generation from nuclear energy for 2026 be above 95.0 TWh? [Yes: Above 95.0 TWh]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxilnuclear/x/kxilnuclear-27feb28.",
+  "market_resolution_criteria": "If EIA reports that Illinois utility-scale net electricity generation from nuclear energy for calendar year 2026 is above \n\n95.0 TWh, then the market resolves to Yes. The Underlying is Illinois\u2019s calendar-year total nuclear electricity net generation, expressed in terawatt-hours (TWh). EIA reports the underlying generation data in megawatthours (MWh); 1 TWh = 1,000,000 MWh. Generation from nuclear facilities located in Illinois is included. Resolution is based on the first EIA publication containing complete January\u2013December 2026 data; subsequent revisions do not affect resolution. Outcome verified from U.S. Energy Information Administration (https://www.eia.gov/nuclear/generation/index.php).",
+  "background": "N/A",
+  "close": "2027-02-28T14:59:00+00:00"
+ },
+ {
+  "id": "KXAMZN-26OCTEMP-1580000.0",
+  "source": "kalshi",
+  "question": "Will Amazon.com Inc. report Above 1.58 million employees (full-time & part-time, excl. contractors/temps) in Q3 2026? [Yes: Above 1.58 million]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxamzn/x/kxamzn-26octemp.",
+  "market_resolution_criteria": "If Amazon.com Inc. reports Above 1580000.0 employees (full-time & part-time, excl. contractors/temps) in Q3 2026, then the market resolves to Yes. Kalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the underlying company. All trademarks, logos, and brand names are the property of their respective owners. Outcome verified from Fiscal.ai (https://fiscal.ai).",
+  "background": "N/A",
+  "close": "2027-02-25T04:00:00+00:00"
+ },
+ {
+  "id": "KXKYDISTEMP-26DEC02-T7542",
+  "source": "kalshi",
+  "question": "Will Kentucky private employment in Distilleries (NAICS 312140) for June 2026 be above 7,542 jobs? [Yes: Above 7,542 jobs]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxkydistemp/x/kxkydistemp-26dec02.",
+  "market_resolution_criteria": "If BLS reports that Kentucky private employment in Distilleries (NAICS 312140) for June 2026 is above 7,542 jobs, then the market resolves to Yes. The Underlying is the BLS Quarterly Census of Employment and Wages data for Kentucky, private ownership, NAICS 312140 Distilleries, for June 2026. The 7,542-job threshold is fixed and will not change if the June 2025 figure is subsequently revised. Outcome verified from Bureau of Labor Statistics (https://www.bls.gov/cew/data.htm).",
+  "background": "N/A",
+  "close": "2026-12-02T14:59:00+00:00"
+ },
+ {
+  "id": "KXLMND-26NOVCUST-3500000",
+  "source": "kalshi",
+  "question": "Will Lemonade Inc. report Above 3.5 million total customers in Q3 2026? [Yes: Above 3.5 million]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxlmnd/x/kxlmnd-26novcust.",
+  "market_resolution_criteria": "If Lemonade Inc. reports Above 3500000 total customers in Q3 2026, then the market resolves to Yes. Kalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the underlying company. All trademarks, logos, and brand names are the property of their respective owners. Outcome verified from Fiscal.ai (https://fiscal.ai).",
+  "background": "N/A",
+  "close": "2027-03-10T05:00:00+00:00"
+ },
+ {
+  "id": "KXMARCELLUSGAS-27MAR31-T10.00",
+  "source": "kalshi",
+  "question": "Will dry natural gas production from the Marcellus formation for 2026 be above 10.00 Tcf? [Yes: Above 10.00 Tcf]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxmarcellusgas/x/kxmarcellusgas-27mar31.",
+  "market_resolution_criteria": "If EIA reports that dry natural gas production from the Marcellus formation for calendar year 2026 is above \n\n10.00 Tcf, then the market resolves to Yes. The Underlying is EIA\u2019s Marcellus formation dry natural gas production series. Monthly average production rates will be converted into monthly volumes using the number of calendar days in each month and summed across January\u2013December 2026. Production from the broader Appalachia region or Utica formation will not be included. EIA publishes the relevant shale-production series through its STEO data products. Outcome verified from U.S. Energy Information Administration (https://www.eia.gov/outlooks/steo/tables/pdf/10btab.pdf).",
+  "background": "N/A",
+  "close": "2027-03-31T15:29:00+00:00"
+ },
+ {
+  "id": "KXWICORNYIELD-27JAN31-T176",
+  "source": "kalshi",
+  "question": "Will Wisconsin's corn for grain yield per harvested acre for 2026 be above 176 bu/acre? [Yes: Above 176 bu/acre]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxwicornyield/x/kxwicornyield-27jan31.",
+  "market_resolution_criteria": "If USDA NASS reports that Wisconsin's corn for grain yield per harvested acre for 2026 is above \n\n176 bu/acre, then the market resolves to Yes. Resolution will be based on Wisconsin\u2019s 2026 corn for grain yield per harvested acre, as reported by USDA NASS in the first Crop Production Annual Summary containing the final 2026 estimate. Yield is measured in bushels per harvested acre. Corn silage yield will not be considered. Subsequent revisions will not affect resolution. Outcome verified from USDA NASS (https://www.nass.usda.gov/Publications/Todays_Reports/reports/cropan26.pdf?utm_source=chatgpt.com).",
+  "background": "N/A",
+  "close": "2027-01-31T16:29:00+00:00"
+ },
+ {
+  "id": "KXGOVTSHUTDOWN-26DEC12",
+  "source": "kalshi",
+  "question": "Will the US government be shut down on Dec 12, 2026?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxgovtshutdown/x/kxgovtshutdown-26dec12.",
+  "market_resolution_criteria": "If the United States federal government is at least partially shut down due to a lapse of appropriations at 10:00 AM ET on Dec 12, 2026, then the market resolves to Yes. A shutdown is defined as the government's orderly suspension of agency work that is not legally excepted, typically accompanied by furloughing the employees who perform that work, when funding is unavailable.\n\nExamples that would resolve the market to Yes:\n\nOMB releases a formal directive that orders heads of the affected agencies to \"execute plans for an orderly shutdown,\" which is in effect as of 10:00 AM ET on Dec 12, 2026\nOPM posts a current operating status that indicates that \"due to a partial lapse in appropriations, Federal Government operations vary by agency\"\n\nExamples that would NOT resolve the market to Yes:\n\nA technical lapse in appropriations occurs, but OMB directs agencies to continue standard operations\nGovernment closures or operating status changes resulting from Federal holidays, inclement weather, or other emergencies, unless such closures coincide with a shutdown due to a lapse in appropriations Outcome verified from Office of Management and Budget (https://www.whitehouse.gov/omb/); United States Office of Personnel Management (https://www.opm.gov/policy-data-oversight/snow-dismissal-procedures/current-status/).",
+  "background": "N/A",
+  "close": "2026-12-12T15:00:00+00:00"
+ },
+ {
+  "id": "KXTROPSTORM-26DEC01-T10",
+  "source": "kalshi",
+  "question": "Will there be more than 10  Atlantic hurricanes in 2026? [Yes: Above 10]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxtropstorm/x/kxtropstorm-26dec01.",
+  "market_resolution_criteria": "If the NOAA's National Hurricane Center records more than 10 storms with maximum sustained windspeeds of 39 miles per hour or above between January 1, 2026 and December 01, 2026, then the market resolves to Yes. The market will expire at the sooner of the occurrence of the event, or one day after December 01, 2026. The market will expire at the sooner of the occurrence of the event, or one day after December 01, 2026. Outcome verified from National Oceanic and Atmospheric Administration (https://www.nhc.noaa.gov/).",
+  "background": "N/A",
+  "close": "2026-12-02T04:59:00+00:00"
+ },
+ {
+  "id": "KXSDCORNYIELD-27JAN31-T145",
+  "source": "kalshi",
+  "question": "Will South Dakota's corn for grain yield per harvested acre for 2026 be above 145 bu/acre? [Yes: Above 145 bu/acre]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxsdcornyield/x/kxsdcornyield-27jan31.",
+  "market_resolution_criteria": "If USDA NASS reports that South Dakota's corn for grain yield per harvested acre for 2026 is above \n\n145 bu/acre, then the market resolves to Yes. Resolution will be based on South Dakota\u2019s 2026 corn for grain yield per harvested acre, as reported by USDA NASS in the first Crop Production Annual Summary containing the final 2026 estimate. Yield is measured in bushels per harvested acre. Corn silage yield will not be considered. Subsequent revisions will not affect resolution. Outcome verified from USDA National Agricultural Statistics Service (https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=South+Dakota&year=2026).",
+  "background": "N/A",
+  "close": "2027-01-31T14:59:00+00:00"
+ },
+ {
+  "id": "KXPAYROLLS-26OCT-T30000",
+  "source": "kalshi",
+  "question": "Will above 30000 jobs be added in October 2026? [Yes: Above 30,000]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxpayrolls/x/kxpayrolls-26oct.",
+  "market_resolution_criteria": "If the increase in total non-farm payroll employment is above 30000 as reported by the Bureau of Labor Statistics Monthly Employment Situation Report for the month of October 2026, then the market resolves to Yes. The market closes at 8:29 AM ET on the expected date of the data release. Outcome verified from BLS (https://www.bls.gov/news.release/empsit.htm).",
+  "background": "N/A",
+  "close": "2026-11-06T13:29:00+00:00"
+ }
+]

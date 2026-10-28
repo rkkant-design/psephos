@@ -1,0 +1,861 @@
+{
+ "forecast_id": "FB2026-10-25-014",
+ "domain": "ForecastBench",
+ "freeze_date": "2026-10-25",
+ "resolve_date": null,
+ "researcher": "claude-fable-5 operator session, 2026-10-25 round-day sprint (authored + rule + family layers)",
+ "resolution_source": "per-question benchmark resolution criteria (see each question's benchmark block)",
+ "independence_attestation": "No betting odds, prediction-market prices or forecast-aggregator numbers were fetched or consulted for any question in this dossier; market-source questions' embedded freeze prices were deliberately ignored.",
+ "questions": [
+  {
+   "q": "Will there be more fatalities in Namibia for the 30 days before {resolution_date} compared to the 30-day average of fatalities over the 360 days preceding {forecast_due_date}?\n\ne.g. If the forecast due date is 2024-01-01 and we have the following data:\nDate,fatalities\n2023-11-11,1\n2023-10-10,2\nto calculate the 30-day average of fatalities over the preceding 360 days, we\u2019d have: (1+2)/12=0.25.\n\nIn this example, for the question to resolve positively, 1 or more fatalities would need to occur in the 30 days leading up to the resolution. | horizon 2026-11-01",
+   "benchmark": {
+    "source": "acled",
+    "id": "f589903c3cf04c63fb6430efc92bcbe05d6a3933ecf8dfa9af070457a010c082",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-01"
+   },
+   "resolution_note": "Resolves to the value calculated from the ACLED dataset once the data is published.",
+   "base_rate_used": {
+    "reference_class": "P(30-day event count exceeds its 360-day 30-day mean) for right-skewed conflict count data",
+    "value": 0.15,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'acled', horizon 2026-11-01: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for acled at horizon 2026-11-01: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.15.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "acled source data family (underlying series documentation)",
+     "url": "https://acleddata.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.15
+  },
+  {
+   "q": "Will there be more fatalities in Namibia for the 30 days before {resolution_date} compared to the 30-day average of fatalities over the 360 days preceding {forecast_due_date}?\n\ne.g. If the forecast due date is 2024-01-01 and we have the following data:\nDate,fatalities\n2023-11-11,1\n2023-10-10,2\nto calculate the 30-day average of fatalities over the preceding 360 days, we\u2019d have: (1+2)/12=0.25.\n\nIn this example, for the question to resolve positively, 1 or more fatalities would need to occur in the 30 days leading up to the resolution. | horizon 2026-11-24",
+   "benchmark": {
+    "source": "acled",
+    "id": "f589903c3cf04c63fb6430efc92bcbe05d6a3933ecf8dfa9af070457a010c082",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-24"
+   },
+   "resolution_note": "Resolves to the value calculated from the ACLED dataset once the data is published.",
+   "base_rate_used": {
+    "reference_class": "P(30-day event count exceeds its 360-day 30-day mean) for right-skewed conflict count data",
+    "value": 0.15,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'acled', horizon 2026-11-24: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for acled at horizon 2026-11-24: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.15.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "acled source data family (underlying series documentation)",
+     "url": "https://acleddata.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.15
+  },
+  {
+   "q": "Will there be more fatalities in Namibia for the 30 days before {resolution_date} compared to the 30-day average of fatalities over the 360 days preceding {forecast_due_date}?\n\ne.g. If the forecast due date is 2024-01-01 and we have the following data:\nDate,fatalities\n2023-11-11,1\n2023-10-10,2\nto calculate the 30-day average of fatalities over the preceding 360 days, we\u2019d have: (1+2)/12=0.25.\n\nIn this example, for the question to resolve positively, 1 or more fatalities would need to occur in the 30 days leading up to the resolution. | horizon 2027-01-23",
+   "benchmark": {
+    "source": "acled",
+    "id": "f589903c3cf04c63fb6430efc92bcbe05d6a3933ecf8dfa9af070457a010c082",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-01-23"
+   },
+   "resolution_note": "Resolves to the value calculated from the ACLED dataset once the data is published.",
+   "base_rate_used": {
+    "reference_class": "P(30-day event count exceeds its 360-day 30-day mean) for right-skewed conflict count data",
+    "value": 0.15,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'acled', horizon 2027-01-23: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for acled at horizon 2027-01-23: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.15.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "acled source data family (underlying series documentation)",
+     "url": "https://acleddata.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.15
+  },
+  {
+   "q": "Will there be more fatalities in Namibia for the 30 days before {resolution_date} compared to the 30-day average of fatalities over the 360 days preceding {forecast_due_date}?\n\ne.g. If the forecast due date is 2024-01-01 and we have the following data:\nDate,fatalities\n2023-11-11,1\n2023-10-10,2\nto calculate the 30-day average of fatalities over the preceding 360 days, we\u2019d have: (1+2)/12=0.25.\n\nIn this example, for the question to resolve positively, 1 or more fatalities would need to occur in the 30 days leading up to the resolution. | horizon 2027-04-23",
+   "benchmark": {
+    "source": "acled",
+    "id": "f589903c3cf04c63fb6430efc92bcbe05d6a3933ecf8dfa9af070457a010c082",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-04-23"
+   },
+   "resolution_note": "Resolves to the value calculated from the ACLED dataset once the data is published.",
+   "base_rate_used": {
+    "reference_class": "P(30-day event count exceeds its 360-day 30-day mean) for right-skewed conflict count data",
+    "value": 0.15,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'acled', horizon 2027-04-23: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for acled at horizon 2027-04-23: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.15.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "acled source data family (underlying series documentation)",
+     "url": "https://acleddata.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.15
+  },
+  {
+   "q": "Will there be more fatalities in Namibia for the 30 days before {resolution_date} compared to the 30-day average of fatalities over the 360 days preceding {forecast_due_date}?\n\ne.g. If the forecast due date is 2024-01-01 and we have the following data:\nDate,fatalities\n2023-11-11,1\n2023-10-10,2\nto calculate the 30-day average of fatalities over the preceding 360 days, we\u2019d have: (1+2)/12=0.25.\n\nIn this example, for the question to resolve positively, 1 or more fatalities would need to occur in the 30 days leading up to the resolution. | horizon 2027-10-25",
+   "benchmark": {
+    "source": "acled",
+    "id": "f589903c3cf04c63fb6430efc92bcbe05d6a3933ecf8dfa9af070457a010c082",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-10-25"
+   },
+   "resolution_note": "Resolves to the value calculated from the ACLED dataset once the data is published.",
+   "base_rate_used": {
+    "reference_class": "P(30-day event count exceeds its 360-day 30-day mean) for right-skewed conflict count data",
+    "value": 0.171,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'acled', horizon 2027-10-25: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for acled at horizon 2027-10-25: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.171.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "acled source data family (underlying series documentation)",
+     "url": "https://acleddata.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.171
+  },
+  {
+   "q": "Will there be more 'Explosions/Remote violence' in Namibia for the 30 days before {resolution_date} compared to the 30-day average of 'Explosions/Remote violence' over the 360 days preceding {forecast_due_date}?\n\ne.g. If the forecast due date is 2024-01-01 and we have the following data:\nDate,'Explosions/Remote violence'\n2023-11-11,1\n2023-10-10,2\nto calculate the 30-day average of 'Explosions/Remote violence' over the preceding 360 days, we\u2019d have: (1+2)/12=0.25.\n\nIn this example, for the question to resolve positively, 1 or more 'Explosions/Remote violence' would need to occur in the 30 days leading up to the resolution. | horizon 2026-11-01",
+   "benchmark": {
+    "source": "acled",
+    "id": "9101f21194ebeb198969cb5ed205b28e84da8007453817b4bbb6bd4268da3431",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-01"
+   },
+   "resolution_note": "Resolves to the value calculated from the ACLED dataset once the data is published.",
+   "base_rate_used": {
+    "reference_class": "P(30-day event count exceeds its 360-day 30-day mean) for right-skewed conflict count data",
+    "value": 0.15,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'acled', horizon 2026-11-01: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for acled at horizon 2026-11-01: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.15.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "acled source data family (underlying series documentation)",
+     "url": "https://acleddata.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.15
+  },
+  {
+   "q": "Will there be more 'Explosions/Remote violence' in Namibia for the 30 days before {resolution_date} compared to the 30-day average of 'Explosions/Remote violence' over the 360 days preceding {forecast_due_date}?\n\ne.g. If the forecast due date is 2024-01-01 and we have the following data:\nDate,'Explosions/Remote violence'\n2023-11-11,1\n2023-10-10,2\nto calculate the 30-day average of 'Explosions/Remote violence' over the preceding 360 days, we\u2019d have: (1+2)/12=0.25.\n\nIn this example, for the question to resolve positively, 1 or more 'Explosions/Remote violence' would need to occur in the 30 days leading up to the resolution. | horizon 2026-11-24",
+   "benchmark": {
+    "source": "acled",
+    "id": "9101f21194ebeb198969cb5ed205b28e84da8007453817b4bbb6bd4268da3431",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-24"
+   },
+   "resolution_note": "Resolves to the value calculated from the ACLED dataset once the data is published.",
+   "base_rate_used": {
+    "reference_class": "P(30-day event count exceeds its 360-day 30-day mean) for right-skewed conflict count data",
+    "value": 0.15,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'acled', horizon 2026-11-24: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for acled at horizon 2026-11-24: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.15.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "acled source data family (underlying series documentation)",
+     "url": "https://acleddata.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.15
+  },
+  {
+   "q": "Will there be more 'Explosions/Remote violence' in Namibia for the 30 days before {resolution_date} compared to the 30-day average of 'Explosions/Remote violence' over the 360 days preceding {forecast_due_date}?\n\ne.g. If the forecast due date is 2024-01-01 and we have the following data:\nDate,'Explosions/Remote violence'\n2023-11-11,1\n2023-10-10,2\nto calculate the 30-day average of 'Explosions/Remote violence' over the preceding 360 days, we\u2019d have: (1+2)/12=0.25.\n\nIn this example, for the question to resolve positively, 1 or more 'Explosions/Remote violence' would need to occur in the 30 days leading up to the resolution. | horizon 2027-01-23",
+   "benchmark": {
+    "source": "acled",
+    "id": "9101f21194ebeb198969cb5ed205b28e84da8007453817b4bbb6bd4268da3431",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-01-23"
+   },
+   "resolution_note": "Resolves to the value calculated from the ACLED dataset once the data is published.",
+   "base_rate_used": {
+    "reference_class": "P(30-day event count exceeds its 360-day 30-day mean) for right-skewed conflict count data",
+    "value": 0.15,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'acled', horizon 2027-01-23: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for acled at horizon 2027-01-23: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.15.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "acled source data family (underlying series documentation)",
+     "url": "https://acleddata.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.15
+  },
+  {
+   "q": "Will there be more 'Explosions/Remote violence' in Namibia for the 30 days before {resolution_date} compared to the 30-day average of 'Explosions/Remote violence' over the 360 days preceding {forecast_due_date}?\n\ne.g. If the forecast due date is 2024-01-01 and we have the following data:\nDate,'Explosions/Remote violence'\n2023-11-11,1\n2023-10-10,2\nto calculate the 30-day average of 'Explosions/Remote violence' over the preceding 360 days, we\u2019d have: (1+2)/12=0.25.\n\nIn this example, for the question to resolve positively, 1 or more 'Explosions/Remote violence' would need to occur in the 30 days leading up to the resolution. | horizon 2027-04-23",
+   "benchmark": {
+    "source": "acled",
+    "id": "9101f21194ebeb198969cb5ed205b28e84da8007453817b4bbb6bd4268da3431",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-04-23"
+   },
+   "resolution_note": "Resolves to the value calculated from the ACLED dataset once the data is published.",
+   "base_rate_used": {
+    "reference_class": "P(30-day event count exceeds its 360-day 30-day mean) for right-skewed conflict count data",
+    "value": 0.15,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'acled', horizon 2027-04-23: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for acled at horizon 2027-04-23: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.15.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "acled source data family (underlying series documentation)",
+     "url": "https://acleddata.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.15
+  },
+  {
+   "q": "Will there be more 'Explosions/Remote violence' in Namibia for the 30 days before {resolution_date} compared to the 30-day average of 'Explosions/Remote violence' over the 360 days preceding {forecast_due_date}?\n\ne.g. If the forecast due date is 2024-01-01 and we have the following data:\nDate,'Explosions/Remote violence'\n2023-11-11,1\n2023-10-10,2\nto calculate the 30-day average of 'Explosions/Remote violence' over the preceding 360 days, we\u2019d have: (1+2)/12=0.25.\n\nIn this example, for the question to resolve positively, 1 or more 'Explosions/Remote violence' would need to occur in the 30 days leading up to the resolution. | horizon 2027-10-25",
+   "benchmark": {
+    "source": "acled",
+    "id": "9101f21194ebeb198969cb5ed205b28e84da8007453817b4bbb6bd4268da3431",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-10-25"
+   },
+   "resolution_note": "Resolves to the value calculated from the ACLED dataset once the data is published.",
+   "base_rate_used": {
+    "reference_class": "P(30-day event count exceeds its 360-day 30-day mean) for right-skewed conflict count data",
+    "value": 0.171,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'acled', horizon 2027-10-25: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for acled at horizon 2027-10-25: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.171.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "acled source data family (underlying series documentation)",
+     "url": "https://acleddata.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.171
+  },
+  {
+   "q": "Will there be more 'Violence against civilians' in Laos for the 30 days before {resolution_date} compared to the 30-day average of 'Violence against civilians' over the 360 days preceding {forecast_due_date}?\n\ne.g. If the forecast due date is 2024-01-01 and we have the following data:\nDate,'Violence against civilians'\n2023-11-11,1\n2023-10-10,2\nto calculate the 30-day average of 'Violence against civilians' over the preceding 360 days, we\u2019d have: (1+2)/12=0.25.\n\nIn this example, for the question to resolve positively, 1 or more 'Violence against civilians' would need to occur in the 30 days leading up to the resolution. | horizon 2026-11-01",
+   "benchmark": {
+    "source": "acled",
+    "id": "749d1a20eff8580abbf2a1bfe90e79d7381da8fc2614fb693e09c3669035b522",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-01"
+   },
+   "resolution_note": "Resolves to the value calculated from the ACLED dataset once the data is published.",
+   "base_rate_used": {
+    "reference_class": "P(30-day event count exceeds its 360-day 30-day mean) for right-skewed conflict count data",
+    "value": 0.15,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'acled', horizon 2026-11-01: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for acled at horizon 2026-11-01: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.15.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "acled source data family (underlying series documentation)",
+     "url": "https://acleddata.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.15
+  },
+  {
+   "q": "Will there be more 'Violence against civilians' in Laos for the 30 days before {resolution_date} compared to the 30-day average of 'Violence against civilians' over the 360 days preceding {forecast_due_date}?\n\ne.g. If the forecast due date is 2024-01-01 and we have the following data:\nDate,'Violence against civilians'\n2023-11-11,1\n2023-10-10,2\nto calculate the 30-day average of 'Violence against civilians' over the preceding 360 days, we\u2019d have: (1+2)/12=0.25.\n\nIn this example, for the question to resolve positively, 1 or more 'Violence against civilians' would need to occur in the 30 days leading up to the resolution. | horizon 2026-11-24",
+   "benchmark": {
+    "source": "acled",
+    "id": "749d1a20eff8580abbf2a1bfe90e79d7381da8fc2614fb693e09c3669035b522",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-24"
+   },
+   "resolution_note": "Resolves to the value calculated from the ACLED dataset once the data is published.",
+   "base_rate_used": {
+    "reference_class": "P(30-day event count exceeds its 360-day 30-day mean) for right-skewed conflict count data",
+    "value": 0.15,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'acled', horizon 2026-11-24: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for acled at horizon 2026-11-24: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.15.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "acled source data family (underlying series documentation)",
+     "url": "https://acleddata.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.15
+  },
+  {
+   "q": "Will there be more 'Violence against civilians' in Laos for the 30 days before {resolution_date} compared to the 30-day average of 'Violence against civilians' over the 360 days preceding {forecast_due_date}?\n\ne.g. If the forecast due date is 2024-01-01 and we have the following data:\nDate,'Violence against civilians'\n2023-11-11,1\n2023-10-10,2\nto calculate the 30-day average of 'Violence against civilians' over the preceding 360 days, we\u2019d have: (1+2)/12=0.25.\n\nIn this example, for the question to resolve positively, 1 or more 'Violence against civilians' would need to occur in the 30 days leading up to the resolution. | horizon 2027-01-23",
+   "benchmark": {
+    "source": "acled",
+    "id": "749d1a20eff8580abbf2a1bfe90e79d7381da8fc2614fb693e09c3669035b522",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-01-23"
+   },
+   "resolution_note": "Resolves to the value calculated from the ACLED dataset once the data is published.",
+   "base_rate_used": {
+    "reference_class": "P(30-day event count exceeds its 360-day 30-day mean) for right-skewed conflict count data",
+    "value": 0.15,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'acled', horizon 2027-01-23: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for acled at horizon 2027-01-23: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.15.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "acled source data family (underlying series documentation)",
+     "url": "https://acleddata.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.15
+  },
+  {
+   "q": "Will there be more 'Violence against civilians' in Laos for the 30 days before {resolution_date} compared to the 30-day average of 'Violence against civilians' over the 360 days preceding {forecast_due_date}?\n\ne.g. If the forecast due date is 2024-01-01 and we have the following data:\nDate,'Violence against civilians'\n2023-11-11,1\n2023-10-10,2\nto calculate the 30-day average of 'Violence against civilians' over the preceding 360 days, we\u2019d have: (1+2)/12=0.25.\n\nIn this example, for the question to resolve positively, 1 or more 'Violence against civilians' would need to occur in the 30 days leading up to the resolution. | horizon 2027-04-23",
+   "benchmark": {
+    "source": "acled",
+    "id": "749d1a20eff8580abbf2a1bfe90e79d7381da8fc2614fb693e09c3669035b522",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-04-23"
+   },
+   "resolution_note": "Resolves to the value calculated from the ACLED dataset once the data is published.",
+   "base_rate_used": {
+    "reference_class": "P(30-day event count exceeds its 360-day 30-day mean) for right-skewed conflict count data",
+    "value": 0.15,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'acled', horizon 2027-04-23: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for acled at horizon 2027-04-23: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.15.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "acled source data family (underlying series documentation)",
+     "url": "https://acleddata.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.15
+  },
+  {
+   "q": "Will there be more 'Violence against civilians' in Laos for the 30 days before {resolution_date} compared to the 30-day average of 'Violence against civilians' over the 360 days preceding {forecast_due_date}?\n\ne.g. If the forecast due date is 2024-01-01 and we have the following data:\nDate,'Violence against civilians'\n2023-11-11,1\n2023-10-10,2\nto calculate the 30-day average of 'Violence against civilians' over the preceding 360 days, we\u2019d have: (1+2)/12=0.25.\n\nIn this example, for the question to resolve positively, 1 or more 'Violence against civilians' would need to occur in the 30 days leading up to the resolution. | horizon 2027-10-25",
+   "benchmark": {
+    "source": "acled",
+    "id": "749d1a20eff8580abbf2a1bfe90e79d7381da8fc2614fb693e09c3669035b522",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-10-25"
+   },
+   "resolution_note": "Resolves to the value calculated from the ACLED dataset once the data is published.",
+   "base_rate_used": {
+    "reference_class": "P(30-day event count exceeds its 360-day 30-day mean) for right-skewed conflict count data",
+    "value": 0.171,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'acled', horizon 2027-10-25: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for acled at horizon 2027-10-25: Poisson survival at freeze mean 0.08333333333333333, damped for overdispersion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.171.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "acled source data family (underlying series documentation)",
+     "url": "https://acleddata.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.171
+  },
+  {
+   "q": "Will there be more fatalities in Colombia for the 30 days before {resolution_date} compared to the 30-day average of fatalities over the 360 days preceding {forecast_due_date}?\n\ne.g. If the forecast due date is 2024-01-01 and we have the following data:\nDate,fatalities\n2023-11-11,1\n2023-10-10,2\nto calculate the 30-day average of fatalities over the preceding 360 days, we\u2019d have: (1+2)/12=0.25.\n\nIn this example, for the question to resolve positively, 1 or more fatalities would need to occur in the 30 days leading up to the resolution. | horizon 2026-11-01",
+   "benchmark": {
+    "source": "acled",
+    "id": "bc4e2c7a75762278171adcd6edfeef65bec47ccb435f193f290ec0441a042ceb",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-01"
+   },
+   "resolution_note": "Resolves to the value calculated from the ACLED dataset once the data is published.",
+   "base_rate_used": {
+    "reference_class": "P(30-day event count exceeds its 360-day 30-day mean) for right-skewed conflict count data",
+    "value": 0.432,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'acled', horizon 2026-11-01: Poisson survival at freeze mean 163.83333333333334, damped for overdispersion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for acled at horizon 2026-11-01: Poisson survival at freeze mean 163.83333333333334, damped for overdispersion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.432.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "acled source data family (underlying series documentation)",
+     "url": "https://acleddata.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.432
+  },
+  {
+   "q": "Will there be more fatalities in Colombia for the 30 days before {resolution_date} compared to the 30-day average of fatalities over the 360 days preceding {forecast_due_date}?\n\ne.g. If the forecast due date is 2024-01-01 and we have the following data:\nDate,fatalities\n2023-11-11,1\n2023-10-10,2\nto calculate the 30-day average of fatalities over the preceding 360 days, we\u2019d have: (1+2)/12=0.25.\n\nIn this example, for the question to resolve positively, 1 or more fatalities would need to occur in the 30 days leading up to the resolution. | horizon 2026-11-24",
+   "benchmark": {
+    "source": "acled",
+    "id": "bc4e2c7a75762278171adcd6edfeef65bec47ccb435f193f290ec0441a042ceb",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-24"
+   },
+   "resolution_note": "Resolves to the value calculated from the ACLED dataset once the data is published.",
+   "base_rate_used": {
+    "reference_class": "P(30-day event count exceeds its 360-day 30-day mean) for right-skewed conflict count data",
+    "value": 0.432,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'acled', horizon 2026-11-24: Poisson survival at freeze mean 163.83333333333334, damped for overdispersion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for acled at horizon 2026-11-24: Poisson survival at freeze mean 163.83333333333334, damped for overdispersion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.432.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "acled source data family (underlying series documentation)",
+     "url": "https://acleddata.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.432
+  },
+  {
+   "q": "Will there be more fatalities in Colombia for the 30 days before {resolution_date} compared to the 30-day average of fatalities over the 360 days preceding {forecast_due_date}?\n\ne.g. If the forecast due date is 2024-01-01 and we have the following data:\nDate,fatalities\n2023-11-11,1\n2023-10-10,2\nto calculate the 30-day average of fatalities over the preceding 360 days, we\u2019d have: (1+2)/12=0.25.\n\nIn this example, for the question to resolve positively, 1 or more fatalities would need to occur in the 30 days leading up to the resolution. | horizon 2027-01-23",
+   "benchmark": {
+    "source": "acled",
+    "id": "bc4e2c7a75762278171adcd6edfeef65bec47ccb435f193f290ec0441a042ceb",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-01-23"
+   },
+   "resolution_note": "Resolves to the value calculated from the ACLED dataset once the data is published.",
+   "base_rate_used": {
+    "reference_class": "P(30-day event count exceeds its 360-day 30-day mean) for right-skewed conflict count data",
+    "value": 0.432,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'acled', horizon 2027-01-23: Poisson survival at freeze mean 163.83333333333334, damped for overdispersion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for acled at horizon 2027-01-23: Poisson survival at freeze mean 163.83333333333334, damped for overdispersion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.432.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "acled source data family (underlying series documentation)",
+     "url": "https://acleddata.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.432
+  },
+  {
+   "q": "Will there be more fatalities in Colombia for the 30 days before {resolution_date} compared to the 30-day average of fatalities over the 360 days preceding {forecast_due_date}?\n\ne.g. If the forecast due date is 2024-01-01 and we have the following data:\nDate,fatalities\n2023-11-11,1\n2023-10-10,2\nto calculate the 30-day average of fatalities over the preceding 360 days, we\u2019d have: (1+2)/12=0.25.\n\nIn this example, for the question to resolve positively, 1 or more fatalities would need to occur in the 30 days leading up to the resolution. | horizon 2027-04-23",
+   "benchmark": {
+    "source": "acled",
+    "id": "bc4e2c7a75762278171adcd6edfeef65bec47ccb435f193f290ec0441a042ceb",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-04-23"
+   },
+   "resolution_note": "Resolves to the value calculated from the ACLED dataset once the data is published.",
+   "base_rate_used": {
+    "reference_class": "P(30-day event count exceeds its 360-day 30-day mean) for right-skewed conflict count data",
+    "value": 0.432,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'acled', horizon 2027-04-23: Poisson survival at freeze mean 163.83333333333334, damped for overdispersion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for acled at horizon 2027-04-23: Poisson survival at freeze mean 163.83333333333334, damped for overdispersion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.432.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "acled source data family (underlying series documentation)",
+     "url": "https://acleddata.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.432
+  },
+  {
+   "q": "Will there be more fatalities in Colombia for the 30 days before {resolution_date} compared to the 30-day average of fatalities over the 360 days preceding {forecast_due_date}?\n\ne.g. If the forecast due date is 2024-01-01 and we have the following data:\nDate,fatalities\n2023-11-11,1\n2023-10-10,2\nto calculate the 30-day average of fatalities over the preceding 360 days, we\u2019d have: (1+2)/12=0.25.\n\nIn this example, for the question to resolve positively, 1 or more fatalities would need to occur in the 30 days leading up to the resolution. | horizon 2027-10-25",
+   "benchmark": {
+    "source": "acled",
+    "id": "bc4e2c7a75762278171adcd6edfeef65bec47ccb435f193f290ec0441a042ceb",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-10-25"
+   },
+   "resolution_note": "Resolves to the value calculated from the ACLED dataset once the data is published.",
+   "base_rate_used": {
+    "reference_class": "P(30-day event count exceeds its 360-day 30-day mean) for right-skewed conflict count data",
+    "value": 0.423,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'acled', horizon 2027-10-25: Poisson survival at freeze mean 163.83333333333334, damped for overdispersion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for acled at horizon 2027-10-25: Poisson survival at freeze mean 163.83333333333334, damped for overdispersion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.423.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "acled source data family (underlying series documentation)",
+     "url": "https://acleddata.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.423
+  },
+  {
+   "q": "Will there be more 'Riots' in Belgium for the 30 days before {resolution_date} compared to the 30-day average of 'Riots' over the 360 days preceding {forecast_due_date}?\n\ne.g. If the forecast due date is 2024-01-01 and we have the following data:\nDate,'Riots'\n2023-11-11,1\n2023-10-10,2\nto calculate the 30-day average of 'Riots' over the preceding 360 days, we\u2019d have: (1+2)/12=0.25.\n\nIn this example, for the question to resolve positively, 1 or more 'Riots' would need to occur in the 30 days leading up to the resolution. | horizon 2026-11-01",
+   "benchmark": {
+    "source": "acled",
+    "id": "17689a41f6c3eb3235aca6db896d554e99f76492a0ecb0ddf5455d41eec41bb2",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-01"
+   },
+   "resolution_note": "Resolves to the value calculated from the ACLED dataset once the data is published.",
+   "base_rate_used": {
+    "reference_class": "P(30-day event count exceeds its 360-day 30-day mean) for right-skewed conflict count data",
+    "value": 0.359,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'acled', horizon 2026-11-01: Poisson survival at freeze mean 2.25, damped for overdispersion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for acled at horizon 2026-11-01: Poisson survival at freeze mean 2.25, damped for overdispersion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.359.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "acled source data family (underlying series documentation)",
+     "url": "https://acleddata.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.359
+  },
+  {
+   "q": "Will there be more 'Riots' in Belgium for the 30 days before {resolution_date} compared to the 30-day average of 'Riots' over the 360 days preceding {forecast_due_date}?\n\ne.g. If the forecast due date is 2024-01-01 and we have the following data:\nDate,'Riots'\n2023-11-11,1\n2023-10-10,2\nto calculate the 30-day average of 'Riots' over the preceding 360 days, we\u2019d have: (1+2)/12=0.25.\n\nIn this example, for the question to resolve positively, 1 or more 'Riots' would need to occur in the 30 days leading up to the resolution. | horizon 2026-11-24",
+   "benchmark": {
+    "source": "acled",
+    "id": "17689a41f6c3eb3235aca6db896d554e99f76492a0ecb0ddf5455d41eec41bb2",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-24"
+   },
+   "resolution_note": "Resolves to the value calculated from the ACLED dataset once the data is published.",
+   "base_rate_used": {
+    "reference_class": "P(30-day event count exceeds its 360-day 30-day mean) for right-skewed conflict count data",
+    "value": 0.359,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'acled', horizon 2026-11-24: Poisson survival at freeze mean 2.25, damped for overdispersion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for acled at horizon 2026-11-24: Poisson survival at freeze mean 2.25, damped for overdispersion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.359.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "acled source data family (underlying series documentation)",
+     "url": "https://acleddata.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.359
+  },
+  {
+   "q": "Will there be more 'Riots' in Belgium for the 30 days before {resolution_date} compared to the 30-day average of 'Riots' over the 360 days preceding {forecast_due_date}?\n\ne.g. If the forecast due date is 2024-01-01 and we have the following data:\nDate,'Riots'\n2023-11-11,1\n2023-10-10,2\nto calculate the 30-day average of 'Riots' over the preceding 360 days, we\u2019d have: (1+2)/12=0.25.\n\nIn this example, for the question to resolve positively, 1 or more 'Riots' would need to occur in the 30 days leading up to the resolution. | horizon 2027-01-23",
+   "benchmark": {
+    "source": "acled",
+    "id": "17689a41f6c3eb3235aca6db896d554e99f76492a0ecb0ddf5455d41eec41bb2",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-01-23"
+   },
+   "resolution_note": "Resolves to the value calculated from the ACLED dataset once the data is published.",
+   "base_rate_used": {
+    "reference_class": "P(30-day event count exceeds its 360-day 30-day mean) for right-skewed conflict count data",
+    "value": 0.359,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'acled', horizon 2027-01-23: Poisson survival at freeze mean 2.25, damped for overdispersion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for acled at horizon 2027-01-23: Poisson survival at freeze mean 2.25, damped for overdispersion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.359.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "acled source data family (underlying series documentation)",
+     "url": "https://acleddata.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.359
+  },
+  {
+   "q": "Will there be more 'Riots' in Belgium for the 30 days before {resolution_date} compared to the 30-day average of 'Riots' over the 360 days preceding {forecast_due_date}?\n\ne.g. If the forecast due date is 2024-01-01 and we have the following data:\nDate,'Riots'\n2023-11-11,1\n2023-10-10,2\nto calculate the 30-day average of 'Riots' over the preceding 360 days, we\u2019d have: (1+2)/12=0.25.\n\nIn this example, for the question to resolve positively, 1 or more 'Riots' would need to occur in the 30 days leading up to the resolution. | horizon 2027-04-23",
+   "benchmark": {
+    "source": "acled",
+    "id": "17689a41f6c3eb3235aca6db896d554e99f76492a0ecb0ddf5455d41eec41bb2",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-04-23"
+   },
+   "resolution_note": "Resolves to the value calculated from the ACLED dataset once the data is published.",
+   "base_rate_used": {
+    "reference_class": "P(30-day event count exceeds its 360-day 30-day mean) for right-skewed conflict count data",
+    "value": 0.359,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'acled', horizon 2027-04-23: Poisson survival at freeze mean 2.25, damped for overdispersion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for acled at horizon 2027-04-23: Poisson survival at freeze mean 2.25, damped for overdispersion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.359.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "acled source data family (underlying series documentation)",
+     "url": "https://acleddata.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.359
+  },
+  {
+   "q": "Will there be more 'Riots' in Belgium for the 30 days before {resolution_date} compared to the 30-day average of 'Riots' over the 360 days preceding {forecast_due_date}?\n\ne.g. If the forecast due date is 2024-01-01 and we have the following data:\nDate,'Riots'\n2023-11-11,1\n2023-10-10,2\nto calculate the 30-day average of 'Riots' over the preceding 360 days, we\u2019d have: (1+2)/12=0.25.\n\nIn this example, for the question to resolve positively, 1 or more 'Riots' would need to occur in the 30 days leading up to the resolution. | horizon 2027-10-25",
+   "benchmark": {
+    "source": "acled",
+    "id": "17689a41f6c3eb3235aca6db896d554e99f76492a0ecb0ddf5455d41eec41bb2",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-10-25"
+   },
+   "resolution_note": "Resolves to the value calculated from the ACLED dataset once the data is published.",
+   "base_rate_used": {
+    "reference_class": "P(30-day event count exceeds its 360-day 30-day mean) for right-skewed conflict count data",
+    "value": 0.372,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'acled', horizon 2027-10-25: Poisson survival at freeze mean 2.25, damped for overdispersion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for acled at horizon 2027-10-25: Poisson survival at freeze mean 2.25, damped for overdispersion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.372.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "acled source data family (underlying series documentation)",
+     "url": "https://acleddata.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.372
+  }
+ ]
+}

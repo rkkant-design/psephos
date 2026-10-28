@@ -1,0 +1,442 @@
+{
+ "KXNYCASKRENT-27JAN31-T4000": {
+  "base_rate": {
+   "reference_class": "StreetEasy NYC citywide median asking rent in December vs the prior September peak: seasonal Sep-to-Dec declines have run roughly 1-3%, so December holds above a level 3.6% below September in most years",
+   "value": 0.75,
+   "source": "StreetEasy NYC rental market data page, monthly citywide median asking rent history"
+  },
+  "evidence": [
+   "2026-10 (Sep 2026 report): StreetEasy citywide median asking rent $4,150, up 3.9% YoY; inventory down 15.3% YoY to 29,029 units, steepest drop in four years",
+   "2026-05: citywide median asking rent hit record $4,199 (May 2026), up 7.3% YoY; Manhattan $4,927, Brooklyn $3,895 records",
+   "2026-09: Manhattan median asking rent held at $4,995, bucking the usual late-summer dip (it fell 2.2% Aug-Sep 2024 and 2.6% in 2025)",
+   "2026-10: StreetEasy notes rising mortgage rates are keeping would-be buyers renting, which could re-accelerate rent growth into winter"
+  ],
+  "strongest_opposing_case": "NYC rents are strongly seasonal and December is the annual trough: a typical 3-4% slide from the September level of $4,150 lands almost exactly at $4,000, and YoY growth has already decelerated sharply (3.9% vs 6.5% a year ago), so a soft winter market with rising unemployment could pull the December print to $3,950-$4,000 and resolve No.",
+  "reasoning_summary": "Base rate ~0.75 that December holds within 3.6% of the September level. Sep 2026 is $4,150, so Dec needs only >=$4,000.01; implied Dec 2025 was ~$3,900 and 3-4% YoY growth puts Dec 2026 near $4,030-4,070. Record-low inventory and rate-locked buyers support rents; decelerating YoY growth and the December seasonal trough are the risks. Final p=0.78.",
+  "key_sources": [
+   {"title": "StreetEasy NYC Rental Market Data", "url": "https://streeteasy.com/blog/nyc-housing-market-data/rentals/", "date": "2026-10"},
+   {"title": "NYC September 2026 StreetEasy listings/rent report (WRE News)", "url": "https://wrenews.com/nyc-september-2026-streeteasy-listings-contracts-rent-report/", "date": "2026-10"},
+   {"title": "StreetEasy: Manhattan rental inventory falls for 24th consecutive month", "url": "https://streeteasy.com/blog/manhattan-rental-inventory-falls-24th-consecutive-month/", "date": "2026-10"}
+  ],
+  "p": 0.78
+ },
+ "KXCPIYOY-26DEC-T3.8": {
+  "base_rate": {
+   "reference_class": "Arithmetic on published NSA indexes: Dec 2025 CPI-U NSA = 324.054, Sep 2026 = 336.940; Dec 2026 YoY rounds above 3.8% iff the Oct-Dec 3-month NSA change is >= -0.12%. Over the last decade the median Sep-to-Dec NSA change is roughly -0.3% to +0.3%",
+   "value": 0.65,
+   "source": "FRED CPIAUCNS monthly index levels; BLS CPI releases"
+  },
+  "evidence": [
+   "2026-10-22: Sep 2026 CPI YoY 3.7% (336.940/324.800); headline +0.6% MoM SA, gasoline +9.1% accounting for over half the monthly rise",
+   "2026-10-23: Cleveland Fed nowcast has Q4 2026 headline CPI running ~5.1% annualized (~0.4%/month SA), Oct MoM 0.25%",
+   "2026-10-14: FRED CPIAUCNS shows Dec 2025 NSA index 324.054, so the YoY base is low (index fell Sep-Dec 2025)",
+   "2026-10-22: AAA reports national average gas fell 6 cents on the week to $4.27 on winter-blend switch, but crude is near $100/bbl on Strait of Hormuz instability"
+  ],
+  "strongest_opposing_case": "The Sep print was more than half gasoline, and retail gas is already rolling over seasonally (-6c last week on winter blend); a Q4 energy retracement like Jun 2026 (-0.4% MoM) could drag the NSA index down ~0.5% over three months, putting Dec YoY at 3.6-3.7% and resolving No despite current momentum.",
+  "reasoning_summary": "Arithmetic first: Dec 2026 NSA index must stay >= 336.53, i.e. Oct-Dec NSA change >= -0.12% from Sep's 336.940. Expected 3-month NSA change is ~+0.2-0.7% given Cleveland Fed's hot Q4 nowcast (~0.4%/mo SA) and $100 crude, vs seasonal drag of ~-0.6pp. Only a sizeable energy-led decline resolves No. Base ~0.65, adjusted up for momentum and low base. Final p=0.77.",
+  "key_sources": [
+   {"title": "BLS Consumer Price Index News Release, September 2026", "url": "https://www.bls.gov/news.release/cpi.htm", "date": "2026-10-22"},
+   {"title": "FRED CPIAUCNS (CPI-U NSA index)", "url": "https://fred.stlouisfed.org/data/CPIAUCNS", "date": "2026-10-14"},
+   {"title": "Cleveland Fed Inflation Nowcasting", "url": "https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting", "date": "2026-10-23"}
+  ],
+  "p": 0.77
+ },
+ "KXAAAGASMAX-26DEC31-5.20": {
+  "base_rate": {
+   "reference_class": "AAA national average regular gas has never exceeded $5.20 in history; the all-time record is $5.016 (June 2022). Frequency of a >20% national retail gas spike within ~9 weeks, in winter: close to zero outside a major supply shock",
+   "value": 0.03,
+   "source": "AAA gas price history; FRED GASREGW"
+  },
+  "evidence": [
+   "2026-10-23: AAA national average $4.29 (Oct 23), down from $4.41 on Oct 1; fell 6 cents in the week ended Oct 22 on winter-blend switch",
+   "2026-10-22: AAA notes crude oil nearing $100/bbl amid Strait of Hormuz instability, limiting the seasonal decline; this October is the most expensive October on record",
+   "2026-10-22: 2026 peak levels observed around $4.4-4.5; no report of the national average approaching $5 at any point in 2026",
+   "Historical: all-time AAA record national average is $5.016 (June 14, 2022); $5.20 has never been reached"
+  ],
+  "strongest_opposing_case": "Crude is already near $100/bbl with an active Strait of Hormuz threat; a full closure or wider Gulf war could add $30-50/bbl within weeks, and a ~$1 retail passthrough from $4.3-4.4 would clear $5.20 even in winter, as 2022 showed gas can move $1+ in under three months.",
+  "reasoning_summary": "Base rate near zero: $5.20 is 20 cents above the all-time record and 21% above today's $4.29, with winter demand and winter-blend seasonality pushing prices down, not up. The only path is a severe geopolitical oil shock (Hormuz closure) within 9 weeks; crude at ~$100 makes that tail fatter than normal. Base 0.03, shock premium added. Final p=0.06.",
+  "key_sources": [
+   {"title": "AAA: Gas Prices Not Budging Much as Crude Oil Remains High", "url": "https://newsroom.aaa.com/2026/10/gas-prices-not-budging-much-as-crude-oil-remains-high/", "date": "2026-10-22"},
+   {"title": "AAA national average gas prices", "url": "https://gasprices.aaa.com/?state=US", "date": "2026-10-23"},
+   {"title": "FRED GASREGW (EIA weekly regular gas price)", "url": "https://fred.stlouisfed.org/series/GASREGW", "date": "2026-10-19"}
+  ],
+  "p": 0.06
+ },
+ "KXCPI-26OCT-T0.3": {
+  "base_rate": {
+   "reference_class": "Monthly SA headline CPI prints, last 24 months: 2026 ran hot (Mar +0.9, Apr +0.6, May +0.5, Jun -0.4, Jul +0.1, Aug +0.4, Sep +0.6 - 4 of 7 above 0.3), 2025 mostly 0.2-0.3; overall ~35-40% of prints exceeded 0.3",
+   "value": 0.38,
+   "source": "BLS CPI news releases, Table A, 2025-2026"
+  },
+  "evidence": [
+   "2026-10-23: Cleveland Fed nowcast for Oct 2026 headline CPI is +0.25% MoM (and 3.75% YoY), updated with most of October's daily oil and weekly gas data in hand",
+   "2026-10-22: AAA national average gas fell from $4.41 (Oct 1) to $4.29 (Oct 23) - the Sep gasoline surge (+9.1%) is not repeating in October",
+   "2026-10-22: Sep 2026 print was +0.6% MoM SA with gasoline contributing over half; core ran +0.3%",
+   "Release scheduled 2026-11-10, 8:30 ET"
+  ],
+  "strongest_opposing_case": "Sep came in at +0.6% with core at +0.3% and accelerating tariff/energy passthrough; if October core prints 0.35+ and food/energy surprise even slightly (crude near $100 keeps upward pressure on fuel oil, utilities and airfares), a 0.4% headline print is entirely plausible - 3 of the last 4 months beat the nowcast direction.",
+  "reasoning_summary": "Base rate ~0.38 for a >0.3 print in this regime. The late-October Cleveland Fed nowcast of +0.25% is the best single estimate and is well-informed (gas data largely observed, falling). Resolution needs a reported 0.4+, i.e. actual >=0.35, about 0.8 sigma above the nowcast (sigma ~0.12-0.13 at this horizon). Slight upside skew for tariff passthrough. Final p=0.22.",
+  "key_sources": [
+   {"title": "Cleveland Fed Inflation Nowcasting", "url": "https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting", "date": "2026-10-23"},
+   {"title": "BLS Consumer Price Index News Release, September 2026", "url": "https://www.bls.gov/news.release/cpi.htm", "date": "2026-10-22"},
+   {"title": "AAA Fuel Prices news", "url": "https://gasprices.aaa.com/news/", "date": "2026-10-22"}
+  ],
+  "p": 0.22
+ },
+ "KXCPI-26OCT-T0.1": {
+  "base_rate": {
+   "reference_class": "Monthly SA headline CPI prints, last 24 months: roughly 75-80% printed 0.2 or higher (only Jun 2026 at -0.4, Jul 2026 at +0.1, and a couple of soft 2025 months fell at or below 0.1)",
+   "value": 0.75,
+   "source": "BLS CPI news releases, Table A, 2025-2026"
+  },
+  "evidence": [
+   "2026-10-23: Cleveland Fed nowcast for Oct 2026 headline is +0.25% MoM - comfortably above the 0.15 actual needed to report 0.2",
+   "2026-10-22: core CPI has run +0.2 to +0.3 SA every month since April 2026, providing a floor under headline even if energy is flat",
+   "2026-10-23: AAA gas down only ~3% from Oct 1, far milder than the June 2026 energy collapse that produced the year's single negative print",
+   "Release scheduled 2026-11-10"
+  ],
+  "strongest_opposing_case": "Gasoline is falling through October (-12c from Oct 1) and the Sep print borrowed from the gas spike; June 2026 showed this energy-led regime can swing headline to -0.4 in one month, so a sharper late-October pump-price slide plus a soft shelter month could produce a 0.1 or 0.0 print.",
+  "reasoning_summary": "Base rate ~0.75 for a reported 0.2+ print. The +0.25% nowcast sits ~0.8 sigma above the 0.15 actual threshold (sigma ~0.13 with most October energy data observed), giving ~0.78; core momentum at 0.3 supports the floor, while falling gas is the main drag already captured by the nowcast. Final p=0.78.",
+  "key_sources": [
+   {"title": "Cleveland Fed Inflation Nowcasting", "url": "https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting", "date": "2026-10-23"},
+   {"title": "BLS Consumer Price Index News Release, September 2026", "url": "https://www.bls.gov/news.release/cpi.htm", "date": "2026-10-22"}
+  ],
+  "p": 0.78
+ },
+ "KXCPICOREYOY-26NOV-T3.1": {
+  "base_rate": {
+   "reference_class": "Arithmetic on published NSA core indexes: Nov 2025 core NSA = 330.425, Sep 2026 = 339.287; Nov 2026 core YoY exceeds 3.1% only if the Oct+Nov core NSA index rises >= +0.46% (about +0.47%/month SA) - a pace not seen since 2022-23",
+   "value": 0.02,
+   "source": "FRED CPILFENS; BLS CPI releases"
+  },
+  "evidence": [
+   "2026-10-22: Sep 2026 core CPI YoY is 2.6% (339.287/330.804); core MoM SA has run 0.2, 0.3, 0.3 over Jul-Sep",
+   "2026-10-23: Cleveland Fed nowcasts Oct core CPI YoY at ~2.48% and Q4 core at ~3.0% annualized (~0.25%/month)",
+   "2026-10-14: FRED CPILFENS shows the Nov 2025 base at 330.425, implying flat core prices Oct-Nov would already yield 2.68% YoY",
+   "To report above 3.1 the index needs >=340.83 by November - two consecutive ~0.45-0.5 SA core months"
+  ],
+  "strongest_opposing_case": "Tariff and energy passthrough into core goods and airfares is building (core accelerated 2.4->2.6 in two months), and single hot months of 0.4-0.5 core occurred in 2021-22; two such months would clear the bar, so the scenario is not physically impossible in an overheating Q4.",
+  "reasoning_summary": "Pure arithmetic: core YoY >3.1 requires a 2-month NSA core gain of +0.46%, roughly +0.95% SA cumulative - more than triple the current 0.25-0.3 monthly pace and ~2.4 sigma above the expected +0.1% NSA path (sigma ~0.15). Base rate ~0.02; small bump for tariff-passthrough tail risk. Final p=0.03.",
+  "key_sources": [
+   {"title": "FRED CPILFENS (core CPI NSA index)", "url": "https://fred.stlouisfed.org/data/CPILFENS", "date": "2026-10-14"},
+   {"title": "BLS Consumer Price Index News Release, September 2026", "url": "https://www.bls.gov/news.release/cpi.htm", "date": "2026-10-22"},
+   {"title": "Cleveland Fed Inflation Nowcasting", "url": "https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting", "date": "2026-10-23"}
+  ],
+  "p": 0.03
+ },
+ "KXCPI-26NOV-T0.2": {
+  "base_rate": {
+   "reference_class": "Monthly SA headline CPI prints, last 24 months: ~45-50% reported 0.3 or higher (5 of the last 7 months in 2026 did: Mar 0.9, Apr 0.6, May 0.5, Aug 0.4, Sep 0.6)",
+   "value": 0.47,
+   "source": "BLS CPI news releases, Table A, 2025-2026"
+  },
+  "evidence": [
+   "2026-10-23: Cleveland Fed Q4 nowcast of ~5.1% annualized headline implies Nov MoM around +0.4-0.5 SA",
+   "2026-10-22: crude near $100/bbl keeps energy pressure elevated even as retail gas eases seasonally",
+   "2026-10-22: core CPI steady at +0.3 SA per month, so headline needs only mildly positive food/energy to report 0.3",
+   "Release scheduled 2026-12-10; November is six weeks out, so nowcast uncertainty is materially larger than for October"
+  ],
+  "strongest_opposing_case": "Retail gasoline is in seasonal decline (winter blend, lower demand) and fell 6 cents in the latest week; if crude retreats from $100 as Hormuz tensions ease, November headline could echo July (+0.1) or June (-0.4), both of which happened this year in exactly this gas-driven regime.",
+  "reasoning_summary": "Base rate ~0.47 for a 0.3+ print in this regime. The Cleveland Fed Q4 path centers November near +0.4 SA, about 0.6-0.7 sigma above the 0.25 actual threshold at this horizon (sigma ~0.22-0.25), giving ~0.65-0.7; shaved for the visible seasonal gas downtrend that the hot Q4 nowcast may overweight. Final p=0.62.",
+  "key_sources": [
+   {"title": "Cleveland Fed Inflation Nowcasting", "url": "https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting", "date": "2026-10-23"},
+   {"title": "BLS Consumer Price Index News Release, September 2026", "url": "https://www.bls.gov/news.release/cpi.htm", "date": "2026-10-22"},
+   {"title": "AAA Fuel Prices news", "url": "https://gasprices.aaa.com/news/", "date": "2026-10-22"}
+  ],
+  "p": 0.62
+ },
+ "KXCPICOREYOY-26NOV-T2.6": {
+  "base_rate": {
+   "reference_class": "Arithmetic on published NSA core indexes: with Nov 2025 base 330.425 and Sep 2026 at 339.287, a FLAT core index through November already yields 2.68% YoY; Yes fails only if the 2-month core NSA change is <= -0.03%, and 2-month core NSA declines of that size are rare when core SA is running +0.3/month",
+   "value": 0.72,
+   "source": "FRED CPILFENS; BLS CPI releases"
+  },
+  "evidence": [
+   "2026-10-22: Sep 2026 core YoY 2.6%, accelerating from 2.4% in August; core MoM SA +0.3 in both Aug and Sep",
+   "2026-10-14: Nov 2025 core NSA base is 330.425 (core index FELL 0.11% from Sep to Nov 2025), creating a favorable base effect of ~+0.1pp",
+   "2026-10-23: Cleveland Fed Q4 core nowcast ~3.0% annualized (~0.25/month) implies Nov core YoY near 2.7-2.8%",
+   "Seasonal drag: NSA core typically runs ~0.5pp below SA over Oct+Nov combined (2025 analog: -0.115% NSA vs ~+0.4% SA)"
+  ],
+  "strongest_opposing_case": "Exactly 2.6 reported resolves No under the strict 'above' rule, and the expected print of 2.7-2.8 is only one soft month away: if core slows back to 0.1-0.2 SA (as in May-Jul 2026, which printed 0.2, 0.0, 0.2) the NSA seasonal drag pulls YoY to 2.5-2.6 and the question fails.",
+  "reasoning_summary": "Arithmetic: flat core prices give 2.68% YoY, and the current +0.3/month pace points to ~2.75-2.8 reported (2.8). Needs 2-month NSA change >= -0.03% vs an expected +0.1% (sigma ~0.17-0.20), roughly +0.7 sigma of cushion. Risk is a return to the 0.0-0.2 core months seen mid-2026. Base 0.72, nudged up for core acceleration and energy passthrough. Final p=0.75.",
+  "key_sources": [
+   {"title": "FRED CPILFENS (core CPI NSA index)", "url": "https://fred.stlouisfed.org/data/CPILFENS", "date": "2026-10-14"},
+   {"title": "BLS Consumer Price Index News Release, September 2026", "url": "https://www.bls.gov/news.release/cpi.htm", "date": "2026-10-22"},
+   {"title": "Cleveland Fed Inflation Nowcasting", "url": "https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting", "date": "2026-10-23"}
+  ],
+  "p": 0.75
+ },
+ "KXFED-26DEC-T4.00": {
+  "base_rate": {
+   "reference_class": "When the FOMC's own SEP dots signal at least one more move in the current direction within the year, the Fed has delivered at one of the remaining meetings in roughly 75-85% of cases (tightening cycles 1994, 2004-06, 2017-18, 2022-23)",
+   "value": 0.8,
+   "source": "Federal Reserve SEP history; FOMC statements"
+  },
+  "evidence": [
+   "2026-09-16: FOMC raised the target range 25bp to 3.75-4.00% on a 12-0 vote; September SEP showed 16 of 18 officials see at least one more 25bp hike in 2026",
+   "2026-10-20: Reuters poll (Oct 16-20): 94 of 100 economists expect a hold on Oct 28; all 100 expect a 25bp hike at the Dec 8-9 meeting; ~60% see the terminal range at 4.00-4.25%",
+   "2026-10-22: Sep CPI re-accelerated to 3.7% YoY (headline) with core at 2.6% and rising - the inflation backdrop that motivated the September hike has worsened",
+   "Two meetings remain before resolution counts: Oct 27-28 and Dec 8-9; a hike at either puts the upper bound above 4.00%"
+  ],
+  "strongest_opposing_case": "Chair Warsh has offered little guidance and the Committee prefers a 'deliberate' pace; if October and November CPI cool sharply as gasoline retraces (Oct nowcast is only +0.25) and payrolls soften (unemployment already 4.2%, youth joblessness rising), the Fed could hold at both meetings and keep the upper bound at exactly 4.00%, resolving No.",
+  "reasoning_summary": "Base rate ~0.80 when the dot plot signals one more hike. Resolution needs a hike at either remaining 2026 meeting: P = P(Oct hike ~0.09) + P(Oct hold)*P(Dec hike ~0.84) = ~0.85. Unanimous economist expectation of a December hike plus 16/18 dots and re-accelerating CPI support it; data-dependence and a possible Q4 inflation cooldown are the drag. Final p=0.84.",
+  "key_sources": [
+   {"title": "Federal Reserve FOMC statement, September 16, 2026", "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm", "date": "2026-09-16"},
+   {"title": "Reuters poll: Fed to skip October but raise rates in December (US News syndication)", "url": "https://money.usnews.com/investing/news/articles/2026-10-20/fed-to-skip-october-but-raise-rates-again-in-december-nearly-all-economists-say-reuters-poll", "date": "2026-10-20"},
+   {"title": "BLS Consumer Price Index News Release, September 2026", "url": "https://www.bls.gov/news.release/cpi.htm", "date": "2026-10-22"}
+  ],
+  "p": 0.84
+ },
+ "KXCPIYOY-26NOV-T4.0": {
+  "base_rate": {
+   "reference_class": "Arithmetic on published NSA indexes: Nov 2025 base 324.122, Sep 2026 index 336.940; Nov 2026 YoY reports above 4.0% iff the Oct+Nov NSA index change is >= +0.09% - note a FLAT index already gives 3.955% (reported 4.0, which is NOT above 4.0)",
+   "value": 0.55,
+   "source": "FRED CPIAUCNS; BLS CPI releases"
+  },
+  "evidence": [
+   "2026-10-22: Sep 2026 YoY 3.7%, up from 3.4% in Aug; NSA index 336.940 vs Nov 2025 base 324.122 (the base index fell 0.21% from Sep to Nov 2025, adding ~0.2pp of mechanical YoY lift)",
+   "2026-10-23: Cleveland Fed nowcast: Oct +0.25% MoM SA and Q4 ~5.1% annualized, implying a positive Oct+Nov NSA change of roughly +0.2% after ~-0.45pp of seasonal drag",
+   "2026-10-22: retail gasoline easing (-12c since Oct 1) tempers the hot nowcast path",
+   "Resolution from the one-decimal BLS value; needs reported 4.1+"
+  ],
+  "strongest_opposing_case": "Above 4.0 needs prices to actually RISE on an NSA basis across Oct-Nov, when the Nov NSA seasonal is reliably negative (~-0.3pp) and gasoline is in seasonal decline; the 2025 analog saw the NSA index fall 0.21% over these same two months, which here would give ~3.9 and resolve No.",
+  "reasoning_summary": "Arithmetic: requires Oct+Nov NSA change >= +0.09%. Expected ~+0.20% (Cleveland Oct 0.25 SA, Nov ~0.4 SA, less ~0.45pp seasonal), sigma ~0.35: roughly +0.3 sigma of cushion gives ~0.62. Energy momentum and the low Nov-2025 base argue Yes; the strict rounding bar (4.1+ reported) and falling retail gas cap it. Final p=0.63, monotone below the 3.9 threshold.",
+  "key_sources": [
+   {"title": "FRED CPIAUCNS (CPI-U NSA index)", "url": "https://fred.stlouisfed.org/data/CPIAUCNS", "date": "2026-10-14"},
+   {"title": "BLS Consumer Price Index News Release, September 2026", "url": "https://www.bls.gov/news.release/cpi.htm", "date": "2026-10-22"},
+   {"title": "Cleveland Fed Inflation Nowcasting", "url": "https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting", "date": "2026-10-23"}
+  ],
+  "p": 0.63
+ },
+ "KXYOUTHUN-26DEC04-T7.5": {
+  "base_rate": {
+   "reference_class": "BLS 16-24 SA unemployment rate (LNS14024887): has not printed below 7.5% at any point since early 2024; a 2.5+pp two-month drop in this series has never occurred outside survey anomalies",
+   "value": 0.01,
+   "source": "BLS series LNS14024887 / FRED"
+  },
+  "evidence": [
+   "2026-10-02: Sep 2026 Employment Situation: 16-19 unemployment 14.5% SA, 20-24 at 8.0% SA (up from 7.1% in Aug) - the combined 16-24 rate is roughly 10%",
+   "2026-10-02: overall unemployment rate 4.2% and 'little changed'; labor market cooling, not tightening, as the Fed hikes",
+   "2025-09: for scale, the 20-24 rate alone was 9.2% in Sep 2025 and has stayed well above 7% throughout 2025-26",
+   "Only two qualifying releases remain in 2026 (Oct data on ~Nov 6, Nov data on Dec 4)"
+  ],
+  "strongest_opposing_case": "The question resolves Yes on ANY remaining 2026 release, and household-survey age-group rates are noisy; still, even the most favorable one-month sampling swing on record would not take a ~10% combined rate below 7.5%, so the realistic steel-man is limited to a data error or definitional surprise in the series used.",
+  "reasoning_summary": "The combined 16-24 SA rate implied by September's components (teens 14.5%, 20-24 at 8.0%) is near 10%, and it is rising as the economy slows under Fed tightening. Falling below 7.5% within two releases would require an unprecedented ~2.5pp collapse in youth unemployment while the aggregate rate holds at 4.2%. Base rate ~0.01; kept at the floor. Final p=0.02.",
+  "key_sources": [
+   {"title": "BLS Employment Situation, September 2026, Table A-10", "url": "https://www.bls.gov/web/empsit/cpseea10.htm", "date": "2026-10-02"},
+   {"title": "BLS TED: Unemployment rate little changed at 4.2 percent in September 2026", "url": "https://www.bls.gov/opub/ted/2026/unemployment-rate-little-changed-at-4-2-percent-in-september-2026.htm", "date": "2026-10-02"},
+   {"title": "BLS/FRED series LNS14024887", "url": "https://fred.stlouisfed.org/series/LNS14024887", "date": "2026-10-02"}
+  ],
+  "p": 0.02
+ },
+ "KXCPICOREYOY-26NOV-T2.9": {
+  "base_rate": {
+   "reference_class": "Arithmetic on published NSA core indexes: needs Oct+Nov core NSA gain >= +0.26% (about +0.38%/month SA after seasonal drag) vs the current +0.3 SA pace; 2-month core accelerations of that size occur in maybe 1 in 6 two-month windows in tariff/passthrough regimes",
+   "value": 0.15,
+   "source": "FRED CPILFENS; BLS CPI releases"
+  },
+  "evidence": [
+   "2026-10-22: Sep core YoY 2.6% (NSA 339.287 vs 330.804); needs index >= 340.17 by Nov to report above 2.9",
+   "2026-10-22: core MoM SA 0.3 in Aug and Sep - the fastest pace of 2026 but still short of the ~0.38-0.4 needed for two straight months",
+   "2026-10-23: Cleveland Fed Oct core YoY nowcast ~2.48% and Q4 core ~3.0% annualized (~0.25/month) - below the required pace",
+   "2026-10-14: favorable Nov 2025 base (330.425) already contributes ~+0.1pp"
+  ],
+  "strongest_opposing_case": "Core is visibly accelerating (2.4 -> 2.6 in two months) with gasoline passthrough into airfares and tariff passthrough into core goods still arriving; two months of 0.4 SA core - seen repeatedly in 2021-23 - would print 2.9-3.0 YoY and clear the strict bar, and the Fed's hiking itself signals staff expect exactly this.",
+  "reasoning_summary": "Arithmetic: reported above 2.9 requires a 2-month core NSA rise of +0.26% vs an expected +0.1% (sigma ~0.15-0.20), i.e. ~0.9-1.1 sigma above center - roughly 15%. Cleveland Fed core nowcast (~0.25/month) sits below the required ~0.38/month pace. Acceleration risk is real but the bar demands a step-change, not continuation. Final p=0.15, monotone between the 2.6 and 3.1 thresholds.",
+  "key_sources": [
+   {"title": "FRED CPILFENS (core CPI NSA index)", "url": "https://fred.stlouisfed.org/data/CPILFENS", "date": "2026-10-14"},
+   {"title": "BLS Consumer Price Index News Release, September 2026", "url": "https://www.bls.gov/news.release/cpi.htm", "date": "2026-10-22"},
+   {"title": "Cleveland Fed Inflation Nowcasting", "url": "https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting", "date": "2026-10-23"}
+  ],
+  "p": 0.15
+ },
+ "KXFEDDECISION-26DEC-H0": {
+  "base_rate": {
+   "reference_class": "FOMC meetings where the SEP median and near-unanimous economist surveys point to a hike at that specific meeting: the Fed has held anyway in roughly 15-20% of such cases (data-dependence, intermeeting shocks)",
+   "value": 0.2,
+   "source": "FOMC decision history vs pre-meeting Reuters/Bloomberg economist surveys"
+  },
+  "evidence": [
+   "2026-10-20: Reuters poll - all 100 economists expect a 25bp hike at the Dec 8-9 meeting (up from fewer than half in the prior survey); 94/100 expect an October hold",
+   "2026-09-16: September SEP: 16 of 18 officials saw at least one more 2026 hike; Committee hiked 25bp to 3.75-4.00%, 12-0",
+   "2026-10-22: Sep CPI 3.7% YoY and rising - holds the pressure on; but Oct CPI nowcast of just +0.25 MoM shows the data could cool before Dec 9",
+   "Chair Warsh has given little explicit guidance; two CPI prints (Nov 10, Dec 10 - the latter after the meeting) and two payrolls land before the decision"
+  ],
+  "strongest_opposing_case": "A hold is the status-quo outcome at most meetings, the Committee is explicitly 'deliberate', the chair is uncommitted, and if the gasoline-led spike unwinds in the Oct/Nov data (Oct nowcast only +0.25, retail gas falling) while unemployment drifts up from 4.2%, the Fed could plausibly skip December as it did October, resolving Yes.",
+  "reasoning_summary": "This is the complement of a December move. Scenario math: P(Oct hold 0.90) x P(Dec hold given Oct hold ~0.16) + P(Oct hike 0.09) x P(Dec hold given Oct hike ~0.65) = ~0.20. Unanimous economist expectation plus 16/18 dots and re-accelerating CPI make a December hold the clear minority case, but six weeks of data risk keep it near the historical ~0.2 miss rate. Final p=0.20.",
+  "key_sources": [
+   {"title": "Reuters poll: Fed to skip October but raise rates in December (US News syndication)", "url": "https://money.usnews.com/investing/news/articles/2026-10-20/fed-to-skip-october-but-raise-rates-again-in-december-nearly-all-economists-say-reuters-poll", "date": "2026-10-20"},
+   {"title": "Federal Reserve FOMC statement, September 16, 2026", "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm", "date": "2026-09-16"},
+   {"title": "Cleveland Fed Inflation Nowcasting", "url": "https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting", "date": "2026-10-23"}
+  ],
+  "p": 0.2
+ },
+ "KXCPIYOY-26NOV-T3.7": {
+  "base_rate": {
+   "reference_class": "Arithmetic on published NSA indexes: fails only if the Oct+Nov NSA index change is <= -0.20% (index below 336.28 vs Sep's 336.940); 2-month NSA declines of 0.2%+ into November happen mainly in falling-energy years (e.g. late 2025 hit exactly -0.21%)",
+   "value": 0.82,
+   "source": "FRED CPIAUCNS; BLS CPI releases"
+  },
+  "evidence": [
+   "2026-10-22: Sep 2026 YoY already 3.7% and the Nov 2025 base (324.122) is 0.21% BELOW the Sep 2025 base, so Nov YoY rises ~0.2pp mechanically even at flat prices (flat index = 3.955% = reported 4.0)",
+   "2026-10-23: Cleveland Fed: Oct +0.25 MoM and Q4 ~5.1% annualized - a positive expected NSA path",
+   "2026-10-22: crude near $100/bbl limits downside in energy even as retail gas eases seasonally",
+   "Needs reported 3.8+ (actual >= ~3.75)"
+  ],
+  "strongest_opposing_case": "In late 2025 the NSA index fell exactly 0.21% over Sep-Nov - precisely the decline that would resolve this No - and that happened with gasoline drifting down just as it is now; a sharp Q4 energy retracement after September's +9.1% gasoline spike could repeat it.",
+  "reasoning_summary": "Arithmetic: No requires a 2-month NSA fall of 0.20%+, while the expected path is ~+0.20% (Cleveland Oct 0.25 SA, Nov ~0.4 SA, minus ~0.45pp seasonal), about 1.1 sigma of cushion (sigma ~0.35). The 2025 analog shows the No scenario is attainable in a falling-gas tape, but current energy momentum and the low base make Yes the strong favorite. Final p=0.87.",
+  "key_sources": [
+   {"title": "FRED CPIAUCNS (CPI-U NSA index)", "url": "https://fred.stlouisfed.org/data/CPIAUCNS", "date": "2026-10-14"},
+   {"title": "BLS Consumer Price Index News Release, September 2026", "url": "https://www.bls.gov/news.release/cpi.htm", "date": "2026-10-22"},
+   {"title": "Cleveland Fed Inflation Nowcasting", "url": "https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting", "date": "2026-10-23"}
+  ],
+  "p": 0.87
+ },
+ "KXFEDDECISION-26DEC-H25": {
+  "base_rate": {
+   "reference_class": "FOMC meetings with a unanimous pre-meeting economist consensus for a 25bp move and a supporting SEP: the signaled move is delivered ~75-85% of the time; exactly 25bp (not 50, not 0) is the overwhelmingly standard increment in this cycle",
+   "value": 0.78,
+   "source": "FOMC decision history vs Reuters/Bloomberg economist surveys"
+  },
+  "evidence": [
+   "2026-10-20: Reuters poll (Oct 16-20): all 100 economists expect a 25bp hike at the Dec 8-9 meeting; 94/100 expect an Oct 28 hold; ~60% see 4.00-4.25% as the peak",
+   "2026-09-16: Fed hiked 25bp to 3.75-4.00% (12-0); SEP showed 16 of 18 officials projecting at least one more 2026 hike",
+   "2026-10-22: Sep CPI 3.7% YoY (from 3.4%), core 2.6% (from 2.4%) - inflation momentum supports delivering the signaled hike",
+   "Every move this cycle has been 25bp; a 50bp hike or a cut in Dec would be a major surprise"
+  ],
+  "strongest_opposing_case": "Six weeks and two CPI/payroll rounds separate today from Dec 9: the October nowcast is just +0.25 as gasoline retraces, unemployment is 4.2% and youth joblessness is climbing, and an uncommitted Chair Warsh with a 'deliberate' Committee could skip December exactly as happened in October - or hike in October instead, which also resolves this No.",
+  "reasoning_summary": "Scenario math: P(Oct hold 0.90) x P(Dec 25bp hike given hold ~0.82) + P(Oct hike 0.09) x P(Dec 25bp hike after back-to-back ~0.35) = ~0.77. Unanimous survey consensus, 16/18 dots, and re-accelerating CPI anchor the Yes case; data-dependence and the chance the hike lands in October instead account for most of the No mass. Final p=0.76.",
+  "key_sources": [
+   {"title": "Reuters poll: Fed to skip October but raise rates in December (US News syndication)", "url": "https://money.usnews.com/investing/news/articles/2026-10-20/fed-to-skip-october-but-raise-rates-again-in-december-nearly-all-economists-say-reuters-poll", "date": "2026-10-20"},
+   {"title": "Federal Reserve FOMC statement, September 16, 2026", "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm", "date": "2026-09-16"},
+   {"title": "BLS Consumer Price Index News Release, September 2026", "url": "https://www.bls.gov/news.release/cpi.htm", "date": "2026-10-22"}
+  ],
+  "p": 0.76
+ },
+ "KXCPIYOY-26NOV-T3.8": {
+  "base_rate": {
+   "reference_class": "Arithmetic on published NSA indexes: fails only if the Oct+Nov NSA change is <= -0.10% (index below 336.60); over the last decade roughly a quarter of Oct+Nov windows saw NSA declines that large, almost all in falling-gas years",
+   "value": 0.75,
+   "source": "FRED CPIAUCNS; BLS CPI releases"
+  },
+  "evidence": [
+   "2026-10-22: Sep 2026 index 336.940 vs Nov 2025 base 324.122; threshold index for reported 3.9+ is 336.60 - 0.10% BELOW the September level",
+   "2026-10-23: Cleveland Fed expected path (Oct +0.25 SA, Q4 5.1% annualized) implies the index rises, not falls, into November",
+   "2026-10-22: gasoline is the swing factor: +9.1% in Sep, now retracing (-12c since Oct 1)",
+   "Base effect: Nov 2025 base is 0.21% below Sep 2025 base, adding ~0.2pp to YoY mechanically"
+  ],
+  "strongest_opposing_case": "The threshold only needs a 0.1% two-month NSA dip to fail, and November NSA seasonals are reliably negative; a gasoline retracement of the September spike (June 2026 already showed -0.4% in one month) would comfortably produce the required decline and a 3.7-3.8 reported print.",
+  "reasoning_summary": "Arithmetic: No requires a 2-month NSA fall of 0.10%+ vs an expected +0.20% rise (sigma ~0.35), ~0.85 sigma of cushion = ~0.80. Energy momentum, $100 crude, and the low Nov 2025 base favor Yes; seasonal November weakness and the gas retracement are the realistic No path. Final p=0.80, monotone between the 3.7 (0.87) and 3.9 (0.72) thresholds.",
+  "key_sources": [
+   {"title": "FRED CPIAUCNS (CPI-U NSA index)", "url": "https://fred.stlouisfed.org/data/CPIAUCNS", "date": "2026-10-14"},
+   {"title": "BLS Consumer Price Index News Release, September 2026", "url": "https://www.bls.gov/news.release/cpi.htm", "date": "2026-10-22"},
+   {"title": "Cleveland Fed Inflation Nowcasting", "url": "https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting", "date": "2026-10-23"}
+  ],
+  "p": 0.8
+ },
+ "KXCPIYOY-26NOV-T3.9": {
+  "base_rate": {
+   "reference_class": "Arithmetic on published NSA indexes: Yes iff the Nov 2026 NSA index is at least flat vs September (change >= -0.005%); historically the Oct+Nov NSA change is positive in roughly 55-65% of years, more often when energy is rising",
+   "value": 0.6,
+   "source": "FRED CPIAUCNS; BLS CPI releases"
+  },
+  "evidence": [
+   "2026-10-22: flat prices Sep->Nov give YoY of 3.955% (336.940/324.122), which reports as 4.0 and clears the 3.9 bar exactly at zero index change",
+   "2026-10-23: Cleveland Fed path implies a positive 2-month NSA change (~+0.2%) via Oct +0.25 SA and a hot Q4",
+   "2026-10-22: core alone contributes ~+0.25 SA per month of support; energy direction is the uncertainty",
+   "2025 analog: the Sep->Nov NSA change was -0.21%, which here would report 3.7-3.8 and resolve No"
+  ],
+  "strongest_opposing_case": "This threshold flips on essentially a coin-flip of whether NSA prices rise at all over Oct-Nov: the November seasonal is negative, retail gas is already sliding, and the identical two-month window in 2025 printed -0.21%, which would resolve this No with room to spare.",
+  "reasoning_summary": "Arithmetic: Yes requires the 2-month NSA change to be >= ~0.0% vs an expected +0.20% (sigma ~0.35), ~0.6 sigma of cushion = ~0.72. The low Nov 2025 base does most of the work (flat prices already report 4.0); the No case needs an outright NSA decline, plausible only if gasoline retraces meaningfully. Final p=0.72, monotone between 3.8 (0.80) and 4.0 (0.63).",
+  "key_sources": [
+   {"title": "FRED CPIAUCNS (CPI-U NSA index)", "url": "https://fred.stlouisfed.org/data/CPIAUCNS", "date": "2026-10-14"},
+   {"title": "BLS Consumer Price Index News Release, September 2026", "url": "https://www.bls.gov/news.release/cpi.htm", "date": "2026-10-22"},
+   {"title": "Cleveland Fed Inflation Nowcasting", "url": "https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting", "date": "2026-10-23"}
+  ],
+  "p": 0.72
+ },
+ "KXWALLSTBONUS-27MAR31-T275000": {
+  "base_rate": {
+   "reference_class": "OSC average securities-industry bonus, year-over-year growth distribution 2010-2025: +11.4% (the growth needed from $246,900 to >$275,000) has been exceeded in roughly 5 of the last 15 years, typically in strong trading/IB years",
+   "value": 0.35,
+   "source": "NY State Comptroller annual Wall Street bonus reports"
+  },
+  "evidence": [
+   "2026-03: OSC reported the 2025 average bonus at a record $246,900 (+6%) on a record $49.2B pool (+9%) and $65.1B industry profits (+30%)",
+   "2026-10-07: OSC: Wall Street H1 2026 profits of ~$46B already exceeded NYC's full-year forecast; compensation spending at NYSE member firms up 18.8% YoY in H1",
+   "2026-10-07: DiNapoli expects the 2026 bonus pool to increase 'barring significant economic disruption'; Johnson Associates (Aug) projects IB/trading bonuses up 20%+, slower segments ~5%",
+   "Risks flagged: tariff escalation stalled hiring momentum in early 2026; Fed is hiking into Q4, and the official estimate lands only in March 2027"
+  ],
+  "strongest_opposing_case": "The average (not the pool) must clear $275k: headcount growth and the lagging, deferred structure of payouts dilute per-head gains, 2025's +30% profit year produced only +6% average bonus growth, and a Q4 risk-off episode as the Fed hikes into 4%+ inflation could compress year-end accruals - the comptroller himself conditions his upbeat outlook on no 'significant economic disruption'.",
+  "reasoning_summary": "Base rate ~0.35 for an +11.4% average-bonus jump. H1 evidence is unusually strong: comp spending +18.8%, record profits, and consultant projections of +20% in the dominant IB/trading segments imply a blended average near $275-285k. But averages lag pools, 2025 showed big profit gains translating to modest average growth, and Q4 macro risk is live. Net: modestly better than a coin flip. Final p=0.58.",
+  "key_sources": [
+   {"title": "OSC: DiNapoli - $246,900 Average Bonus on Wall Street, Up 6 Percent in 2025", "url": "https://www.osc.ny.gov/press/releases/2026/03/dinapoli-246900-average-bonus-on-wall-street-up-6-percent-in-2025", "date": "2026-03"},
+   {"title": "OSC: Wall Street First-Half Profits Soar to Nearly $46 Billion", "url": "https://www.osc.ny.gov/press/releases/2026/10/wall-street-first-half-profits-soar-nearly-46-billion", "date": "2026-10-07"},
+   {"title": "Markets Media: Average Wall Street Bonus Rose 6% in 2025", "url": "https://www.marketsmedia.com/average-wall-street-bonus-up-6-in-2025/", "date": "2026-03"}
+  ],
+  "p": 0.58
+ },
+ "KXFEDDECISION-27MAR-H25": {
+  "base_rate": {
+   "reference_class": "Probability the Fed delivers a 25bp hike at one specific meeting ~5 months out, when most forecasters see the terminal rate only one hike away: historically such far-dated specific-meeting hikes land ~10-20% of the time",
+   "value": 0.15,
+   "source": "FOMC decision history; Reuters economist survey terminal-rate distributions"
+  },
+  "evidence": [
+   "2026-10-20: Reuters poll: ~60% of economists see the policy rate peaking at 4.00-4.25% (i.e., done after a December hike); 38 of 92 predict at least two further increases",
+   "2026-09-16: September SEP signaled one more 2026 hike; no 2027 path was committed",
+   "2026-10-23: Cleveland Fed Q4 nowcasts (headline ~5.1% annualized, core ~3.0%) suggest inflation pressure could persist into 2027, keeping further hikes on the table",
+   "Jan 26-27, 2027 meeting precedes March 16-17; if more tightening is needed, January is an equally likely slot, diluting the March-specific probability"
+  ],
+  "strongest_opposing_case": "If the Q4 inflation impulse persists (Cleveland Fed sees ~5% annualized headline) the Fed may still be tightening in early 2027, and 40% of surveyed economists already expect at least two more hikes; March is a SEP/press-conference meeting, historically a favored slot for continuing a live hiking cycle, so 25-30% would not be unreasonable.",
+  "reasoning_summary": "Base rate ~0.15 for a specific far-dated meeting hike near the consensus terminal rate. Majority of economists see the cycle ending at 4.00-4.25% after December, implying a March 2027 hold; the ~40% minority expecting more tightening must still split that extra hike across Jan/Mar/Apr meetings. Inflation persistence risk nudges up, meeting-slot dilution nudges down. Final p=0.15.",
+  "key_sources": [
+   {"title": "Reuters poll: Fed to skip October but raise rates in December (US News syndication)", "url": "https://money.usnews.com/investing/news/articles/2026-10-20/fed-to-skip-october-but-raise-rates-again-in-december-nearly-all-economists-say-reuters-poll", "date": "2026-10-20"},
+   {"title": "Federal Reserve FOMC statement, September 16, 2026", "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm", "date": "2026-09-16"},
+   {"title": "Cleveland Fed Inflation Nowcasting", "url": "https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting", "date": "2026-10-23"}
+  ],
+  "p": 0.15
+ },
+ "0x8a4196617dcb703e49d9bb36d3847bf6a75fd364dbd19f8d408ac944bf1a03d8": {
+  "base_rate": {
+   "reference_class": "Same event as the December 25bp-hike decision question: FOMC meetings with unanimous economist consensus plus supporting SEP deliver the signaled 25bp move ~75-85% of the time",
+   "value": 0.78,
+   "source": "FOMC decision history vs Reuters/Bloomberg economist surveys"
+  },
+  "evidence": [
+   "2026-10-20: Reuters poll (Oct 16-20): all 100 economists expect a 25bp hike at the Dec 8-9, 2026 meeting; 94/100 expect the Oct 27-28 meeting to hold at 3.75-4.00%",
+   "2026-09-16: FOMC hiked 25bp to 3.75-4.00% (12-0); Sep SEP: 16 of 18 officials saw at least one more 2026 hike",
+   "2026-10-22: Sep CPI re-accelerated to 3.7% YoY with core at 2.6% and rising; every change this cycle has been in 25bp increments",
+   "Resolution measures the change vs the pre-December-meeting level, so an October hike followed by a December hold resolves this market to 'No change', not +25"
+  ],
+  "strongest_opposing_case": "The December decision is six weeks and two CPI/payrolls rounds away: October's nowcast is a mild +0.25 as gasoline retraces, the labor market is softening at 4.2% unemployment, and a 'deliberate' Committee under an uncommitted Chair Warsh could skip December just as it is expected to skip October - or front-load the hike in October, either of which resolves this to no 25bp December change.",
+  "reasoning_summary": "Identical event to the exchange-listed December 25bp question, held consistent: P = P(Oct hold 0.90) x P(Dec +25 given hold 0.82) + P(Oct hike 0.09) x P(Dec +25 after back-to-back 0.35) = ~0.77. Unanimous economist consensus, 16/18 SEP dots, and re-accelerating inflation drive the Yes; data-dependence and the October-instead path supply the No mass. Final p=0.76.",
+  "key_sources": [
+   {"title": "Reuters poll: Fed to skip October but raise rates in December (US News syndication)", "url": "https://money.usnews.com/investing/news/articles/2026-10-20/fed-to-skip-october-but-raise-rates-again-in-december-nearly-all-economists-say-reuters-poll", "date": "2026-10-20"},
+   {"title": "Federal Reserve FOMC statement, September 16, 2026", "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm", "date": "2026-09-16"},
+   {"title": "BLS Consumer Price Index News Release, September 2026", "url": "https://www.bls.gov/news.release/cpi.htm", "date": "2026-10-22"}
+  ],
+  "p": 0.76
+ },
+ "0x19383006e0698d09c73ce34cd933f10a4ac4fb51555d23b220969d1590828365": {
+  "base_rate": {
+   "reference_class": "Joint probability of a specific three-meeting sequence where leg one is already realized: P(Oct pause) x P(Dec hike given Oct pause); surveyed-consensus paths of this type complete at roughly 70-80%",
+   "value": 0.72,
+   "source": "FOMC decision history vs pre-meeting economist surveys"
+  },
+  "evidence": [
+   "2026-09-16: Leg 1 is DONE - the Fed hiked 25bp to 3.75-4.00% at the Sep 15-16 meeting (12-0), so the sequence is alive and needs Oct pause + Dec hike",
+   "2026-10-20: Reuters poll: 94 of 100 economists expect an Oct 27-28 hold (leg 2), and all 100 expect a December hike (leg 3)",
+   "2026-09-16: SEP showed 16/18 officials projecting at least one more 2026 hike - consistent with exactly this skip-then-hike path",
+   "Any qualifying hike (not just 25bp) satisfies leg 3; a cut anywhere, an Oct hike, or a Dec hold all resolve 'Other'"
+  ],
+  "strongest_opposing_case": "Two independent legs must both land: a 6-9% chance the Fed front-loads the hike on Oct 28 (killing the pause leg three days from now), and then a ~15-20% chance a 'deliberate', data-dependent Committee skips December if the gasoline spike unwinds in the Oct/Nov CPI prints - compounding to a one-in-four chance of failure despite consensus backing.",
+  "reasoning_summary": "September's hike already satisfies leg 1. Joint math: P(Oct pause) ~0.90 (94/100 economists, no urgency three days out) x P(Dec hike given pause) ~0.83 (unanimous survey, 16/18 dots, hot Q4 nowcast; any hike size counts) = ~0.74. Failure modes are an October front-load or a December skip on cooling data. Final p=0.74, consistent with the December hike questions.",
+  "key_sources": [
+   {"title": "Federal Reserve FOMC statement, September 16, 2026", "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm", "date": "2026-09-16"},
+   {"title": "Reuters poll: Fed to skip October but raise rates in December (US News syndication)", "url": "https://money.usnews.com/investing/news/articles/2026-10-20/fed-to-skip-october-but-raise-rates-again-in-december-nearly-all-economists-say-reuters-poll", "date": "2026-10-20"},
+   {"title": "Cleveland Fed Inflation Nowcasting", "url": "https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting", "date": "2026-10-23"}
+  ],
+  "p": 0.74
+ }
+}

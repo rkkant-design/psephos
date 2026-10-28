@@ -1,0 +1,191 @@
+[
+ {
+  "id": "KXNYCASKRENT-27JAN31-T4000",
+  "source": "kalshi",
+  "question": "Will New York City\u2019s median asking rent for December 2026 be above $4,000? [Yes: Above $4,000]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxnycaskrent/x/kxnycaskrent-27jan31.",
+  "market_resolution_criteria": "If StreetEasy reports that New York City\u2019s median asking rent for December 2026 is above $4,000, then the market resolves to Yes. The Underlying is the NYC \u2192 Rentals \u2192 Median asking rent value published by StreetEasy for December 2026. This metric reflects asking rents for rental listings, not rents on executed leases or an average of monthly rents during 2026. Outcome verified from StreetEasy (https://streeteasy.com/blog/nyc-housing-market-data/rentals/).",
+  "background": "N/A",
+  "close": "2027-01-31T14:59:00+00:00"
+ },
+ {
+  "id": "KXCPIYOY-26DEC-T3.8",
+  "source": "kalshi",
+  "question": "Will the rate of CPI inflation be above 3.8% for the year ending in December 2026? [Yes: Above 3.8%]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxcpiyoy/x/kxcpiyoy-26dec.",
+  "market_resolution_criteria": "If the Consumer Price Index (CPI) increases by more than 3.8% in the twelve months ending December 2026 (as represented by the one-decimal place value reported by the Bureau of Labor Statistics), then the market resolves to Yes. In the case of a delay in data caused by a federal government shutdown impacting the reliability of the Source Agency, the market\u2019s latest Expiration Date will be extended to the sooner of the release of the Underlying or six months after the end of the government shutdown Outcome verified from Bureau of Labor Statistics (https://www.bls.gov/cpi/).",
+  "background": "N/A",
+  "close": "2027-01-13T13:29:00+00:00"
+ },
+ {
+  "id": "KXAAAGASMAX-26DEC31-5.20",
+  "source": "kalshi",
+  "question": "Will average **gas prices** be above $5.20 by Dec 31, 2026? [Yes: Above $5.20]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxaaagasmax/x/kxaaagasmax-26dec31.",
+  "market_resolution_criteria": "If AAA reports that the maximum price of national average regular gas for the US is greater than $5.20 at any time from Issuance through Dec 31, 2026, inclusive, then the market resolves to Yes. Outcome verified from AAA (https://gasprices.aaa.com/).",
+  "background": "N/A",
+  "close": "2026-12-31T06:25:00+00:00"
+ },
+ {
+  "id": "KXCPI-26OCT-T0.3",
+  "source": "kalshi",
+  "question": "Will CPI rise more than 0.3% in October 2026? [Yes: Above 0.3%]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxcpi/x/kxcpi-26oct.",
+  "market_resolution_criteria": "If the Consumer Price Index (CPI) increases by more than 0.3% (single-decimal) in October 2026, then the market resolves to Yes. The market will always close at 8:25 AM ET on the scheduled day of the data release (November 10, 2026). Please note: the Expiration Value is the single-decimal value published at the Source Agency. In the case of a delay in data caused by a federal government shutdown impacting the reliability of the Source Agency, the market\u2019s latest Expiration Date will be extended to the sooner of the release of the Underlying or six months after the end of the government shutdown. Outcome verified from Bureau of Labor Statistics (https://www.bls.gov/cpi/).",
+  "background": "N/A",
+  "close": "2026-11-10T13:25:00+00:00"
+ },
+ {
+  "id": "KXCPI-26OCT-T0.1",
+  "source": "kalshi",
+  "question": "Will CPI rise more than 0.1% in October 2026? [Yes: Above 0.1%]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxcpi/x/kxcpi-26oct.",
+  "market_resolution_criteria": "If the Consumer Price Index (CPI) increases by more than 0.1% (single-decimal) in October 2026, then the market resolves to Yes. The market will always close at 8:25 AM ET on the scheduled day of the data release (November 10, 2026). Please note: the Expiration Value is the single-decimal value published at the Source Agency. In the case of a delay in data caused by a federal government shutdown impacting the reliability of the Source Agency, the market\u2019s latest Expiration Date will be extended to the sooner of the release of the Underlying or six months after the end of the government shutdown. Outcome verified from Bureau of Labor Statistics (https://www.bls.gov/cpi/).",
+  "background": "N/A",
+  "close": "2026-11-10T13:25:00+00:00"
+ },
+ {
+  "id": "KXCPICOREYOY-26NOV-T3.1",
+  "source": "kalshi",
+  "question": "Will the rate of core CPI inflation be above 3.1% for the year ending in November 2026? [Yes: Above 3.1%]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxcpicoreyoy/x/kxcpicoreyoy-26nov.",
+  "market_resolution_criteria": "If the Consumer Price Index (CPI) for All Urban Consumers: All Items less Food and Energy increases by more than 3.1% in the twelve months ending November 2026 (as represented by the one-decimal place value reported by the Bureau of Labor Statistics), then the market resolves to Yes. In the case of a delay in data caused by a federal government shutdown impacting the reliability of the Source Agency, the market\u2019s latest Expiration Date will be extended to the sooner of the release of the Underlying or six months after the end of the government shutdown. Outcome verified from Bureau of Labor Statistics (https://www.bls.gov/cpi/).",
+  "background": "N/A",
+  "close": "2026-12-10T13:25:00+00:00"
+ },
+ {
+  "id": "KXCPI-26NOV-T0.2",
+  "source": "kalshi",
+  "question": "Will CPI rise more than 0.2% in November 2026? [Yes: Above 0.2%]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxcpi/x/kxcpi-26nov.",
+  "market_resolution_criteria": "If the Consumer Price Index (CPI) increases by more than 0.2% (single-decimal) in November 2026, then the market resolves to Yes. The market will always close at 8:25 AM ET on the scheduled day of the data release (December 10, 2026). Please note: the Expiration Value is the single-decimal value published at the Source Agency. In the case of a delay in data caused by a federal government shutdown impacting the reliability of the Source Agency, the market\u2019s latest Expiration Date will be extended to the sooner of the release of the Underlying or six months after the end of the government shutdown. Outcome verified from Bureau of Labor Statistics (https://www.bls.gov/cpi/).",
+  "background": "N/A",
+  "close": "2026-12-10T13:25:00+00:00"
+ },
+ {
+  "id": "KXCPICOREYOY-26NOV-T2.6",
+  "source": "kalshi",
+  "question": "Will the rate of core CPI inflation be above 2.6% for the year ending in November 2026? [Yes: Above 2.6%]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxcpicoreyoy/x/kxcpicoreyoy-26nov.",
+  "market_resolution_criteria": "If the Consumer Price Index (CPI) for All Urban Consumers: All Items less Food and Energy increases by more than 2.6% in the twelve months ending November 2026 (as represented by the one-decimal place value reported by the Bureau of Labor Statistics), then the market resolves to Yes. In the case of a delay in data caused by a federal government shutdown impacting the reliability of the Source Agency, the market\u2019s latest Expiration Date will be extended to the sooner of the release of the Underlying or six months after the end of the government shutdown. Outcome verified from Bureau of Labor Statistics (https://www.bls.gov/cpi/).",
+  "background": "N/A",
+  "close": "2026-12-10T13:25:00+00:00"
+ },
+ {
+  "id": "KXFED-26DEC-T4.00",
+  "source": "kalshi",
+  "question": "Will the upper bound of the federal funds rate be above 4.00% following the Fed's Dec 9, 2026 meeting? [Yes: Above 4.00%]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxfed/x/kxfed-26dec.",
+  "market_resolution_criteria": "If the upper bound of the target federal funds rate published on the Federal Reserve's official website is greater than 4.00% following the Federal Reserve's Dec 9, 2026 meeting, then the market resolves to Yes. This market will expire the first 2:05 PM ET following the release of a Federal Reserve statement for their Dec 9, 2026 meeting or one week following the last day of that meeting. Outcome verified from Federal Reserve Board of Governors (https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm).",
+  "background": "N/A",
+  "close": "2026-12-09T18:55:00+00:00"
+ },
+ {
+  "id": "KXCPIYOY-26NOV-T4.0",
+  "source": "kalshi",
+  "question": "Will the rate of CPI inflation be above 4.0% for the year ending in November 2026? [Yes: Above 4.0%]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxcpiyoy/x/kxcpiyoy-26nov.",
+  "market_resolution_criteria": "If the Consumer Price Index (CPI) increases by more than 4.0% in the twelve months ending November 2026 (as represented by the one-decimal place value reported by the Bureau of Labor Statistics), then the market resolves to Yes. In the case of a delay in data caused by a federal government shutdown impacting the reliability of the Source Agency, the market\u2019s latest Expiration Date will be extended to the sooner of the release of the Underlying or six months after the end of the government shutdown Outcome verified from Bureau of Labor Statistics (https://www.bls.gov/cpi/).",
+  "background": "N/A",
+  "close": "2026-12-10T13:29:00+00:00"
+ },
+ {
+  "id": "KXYOUTHUN-26DEC04-T7.5",
+  "source": "kalshi",
+  "question": "Will the unemployment rate for ages 16 to 24 (seasonally adjusted) for 2026 fall below 7.5%?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxyouthun/x/kxyouthun-26dec04.",
+  "market_resolution_criteria": "If, in any of the remaining Employment Situation releases published after Issuance in calendar year 2026, the unemployment rate for ages 16 to 24, seasonally adjusted, is below 7.5%, then the market resolves to Yes. This market covers only Employment Situation releases scheduled to occur in calendar year 2026 and does not include the release scheduled for January 2027, even though that release may report December 2026 data.\n\nThe relevant statistic is the BLS unemployment rate for ages 16 to 24, seasonally adjusted, series LNS14024887. FRED series LNS14024887 may be used as a reference source. Outcome verified from Bureau of Labor Statistics (https://data.bls.gov/dataViewer/view/timeseries/LNS14024887); FRED (https://fred.stlouisfed.org/series/LNS14024887).",
+  "background": "N/A",
+  "close": "2026-12-04T13:29:00+00:00"
+ },
+ {
+  "id": "KXCPICOREYOY-26NOV-T2.9",
+  "source": "kalshi",
+  "question": "Will the rate of core CPI inflation be above 2.9% for the year ending in November 2026? [Yes: Above 2.9%]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxcpicoreyoy/x/kxcpicoreyoy-26nov.",
+  "market_resolution_criteria": "If the Consumer Price Index (CPI) for All Urban Consumers: All Items less Food and Energy increases by more than 2.9% in the twelve months ending November 2026 (as represented by the one-decimal place value reported by the Bureau of Labor Statistics), then the market resolves to Yes. In the case of a delay in data caused by a federal government shutdown impacting the reliability of the Source Agency, the market\u2019s latest Expiration Date will be extended to the sooner of the release of the Underlying or six months after the end of the government shutdown. Outcome verified from Bureau of Labor Statistics (https://www.bls.gov/cpi/).",
+  "background": "N/A",
+  "close": "2026-12-10T13:25:00+00:00"
+ },
+ {
+  "id": "KXFEDDECISION-26DEC-H0",
+  "source": "kalshi",
+  "question": "Will the Federal Reserve Hike rates by 0bps at their December 2026 meeting? [Yes: Fed maintains rate]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxfeddecision/x/kxfeddecision-26dec.",
+  "market_resolution_criteria": "If the Federal Reserve does a Hike of 0bps on December 09, 2026, then the market resolves to Yes. The outcomes are mutually exclusive: at most one can resolve to Yes. For example, a 50-basis-point hike resolves \u201cHike   25 bps\u201d to Yes and \u201cHike 25 bps\u201d to No.\n\nIf the scheduled FOMC meeting is canceled and does not occur on its scheduled date, \u201cFed maintains rate\u201d resolves to Yes and all other outcomes resolve to No. Outcome verified from Federal Reserve (https://www.federalreserve.gov).",
+  "background": "N/A",
+  "close": "2026-12-09T18:59:00+00:00"
+ },
+ {
+  "id": "KXCPIYOY-26NOV-T3.7",
+  "source": "kalshi",
+  "question": "Will the rate of CPI inflation be above 3.7% for the year ending in November 2026? [Yes: Above 3.7%]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxcpiyoy/x/kxcpiyoy-26nov.",
+  "market_resolution_criteria": "If the Consumer Price Index (CPI) increases by more than 3.7% in the twelve months ending November 2026 (as represented by the one-decimal place value reported by the Bureau of Labor Statistics), then the market resolves to Yes. In the case of a delay in data caused by a federal government shutdown impacting the reliability of the Source Agency, the market\u2019s latest Expiration Date will be extended to the sooner of the release of the Underlying or six months after the end of the government shutdown Outcome verified from Bureau of Labor Statistics (https://www.bls.gov/cpi/).",
+  "background": "N/A",
+  "close": "2026-12-10T13:29:00+00:00"
+ },
+ {
+  "id": "KXFEDDECISION-26DEC-H25",
+  "source": "kalshi",
+  "question": "Will the Federal Reserve Hike rates by 25bps at their December 2026 meeting? [Yes: Hike 25bps]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxfeddecision/x/kxfeddecision-26dec.",
+  "market_resolution_criteria": "If the Federal Reserve does a Hike of 25bps on December 09, 2026, then the market resolves to Yes. The outcomes are mutually exclusive: at most one can resolve to Yes. For example, a 50-basis-point hike resolves \u201cHike   25 bps\u201d to Yes and \u201cHike 25 bps\u201d to No.\n\nIf the scheduled FOMC meeting is canceled and does not occur on its scheduled date, \u201cFed maintains rate\u201d resolves to Yes and all other outcomes resolve to No. Outcome verified from Federal Reserve (https://www.federalreserve.gov).",
+  "background": "N/A",
+  "close": "2026-12-09T18:59:00+00:00"
+ },
+ {
+  "id": "KXCPIYOY-26NOV-T3.8",
+  "source": "kalshi",
+  "question": "Will the rate of CPI inflation be above 3.8% for the year ending in November 2026? [Yes: Above 3.8%]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxcpiyoy/x/kxcpiyoy-26nov.",
+  "market_resolution_criteria": "If the Consumer Price Index (CPI) increases by more than 3.8% in the twelve months ending November 2026 (as represented by the one-decimal place value reported by the Bureau of Labor Statistics), then the market resolves to Yes. In the case of a delay in data caused by a federal government shutdown impacting the reliability of the Source Agency, the market\u2019s latest Expiration Date will be extended to the sooner of the release of the Underlying or six months after the end of the government shutdown Outcome verified from Bureau of Labor Statistics (https://www.bls.gov/cpi/).",
+  "background": "N/A",
+  "close": "2026-12-10T13:29:00+00:00"
+ },
+ {
+  "id": "KXCPIYOY-26NOV-T3.9",
+  "source": "kalshi",
+  "question": "Will the rate of CPI inflation be above 3.9% for the year ending in November 2026? [Yes: Above 3.9%]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxcpiyoy/x/kxcpiyoy-26nov.",
+  "market_resolution_criteria": "If the Consumer Price Index (CPI) increases by more than 3.9% in the twelve months ending November 2026 (as represented by the one-decimal place value reported by the Bureau of Labor Statistics), then the market resolves to Yes. In the case of a delay in data caused by a federal government shutdown impacting the reliability of the Source Agency, the market\u2019s latest Expiration Date will be extended to the sooner of the release of the Underlying or six months after the end of the government shutdown Outcome verified from Bureau of Labor Statistics (https://www.bls.gov/cpi/).",
+  "background": "N/A",
+  "close": "2026-12-10T13:29:00+00:00"
+ },
+ {
+  "id": "KXWALLSTBONUS-27MAR31-T275000",
+  "source": "kalshi",
+  "question": "Will average Wall Street bonus for 2026 be above $275,000? [Yes: Above $275,000]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxwallstbonus/x/kxwallstbonus-27mar31.",
+  "market_resolution_criteria": "If the New York State Comptroller reports the average Wall Street bonus for 2026 is above $275,000, then the market resolves to Yes. The Underlying is the New York State Comptroller\u2019s annual estimate of the average bonus for securities-industry (NAICS 523) employees working in New York City for 2026.\n\nThe OSC estimate includes cash bonuses and deferred compensation for which taxes have been withheld, and excludes stock options and other deferred compensation for which taxes have not yet been withheld. Subsequent revisions will not affect resolution. Outcome verified from New York State Comptroller (https://www.osc.ny.gov/reports?field_report_topics_target_id%5B263916%5D=263916).",
+  "background": "N/A",
+  "close": "2027-03-31T13:59:00+00:00"
+ },
+ {
+  "id": "KXFEDDECISION-27MAR-H25",
+  "source": "kalshi",
+  "question": "Will the Federal Reserve Hike rates by 25bps at their March 2027 meeting? [Yes: Hike 25bps]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxfeddecision/x/kxfeddecision-27mar.",
+  "market_resolution_criteria": "If the Federal Reserve does a Hike of 25bps on March 17, 2027, then the market resolves to Yes. The outcomes are mutually exclusive: at most one can resolve to Yes. For example, a 50-basis-point hike resolves \u201cHike   25 bps\u201d to Yes and \u201cHike 25 bps\u201d to No.\n\nIf the scheduled FOMC meeting is canceled and does not occur on its scheduled date, \u201cFed maintains rate\u201d resolves to Yes and all other outcomes resolve to No. Outcome verified from Federal Reserve (https://www.federalreserve.gov).",
+  "background": "N/A",
+  "close": "2027-03-17T17:59:00+00:00"
+ },
+ {
+  "id": "0x8a4196617dcb703e49d9bb36d3847bf6a75fd364dbd19f8d408ac944bf1a03d8",
+  "source": "polymarket",
+  "question": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636.",
+  "market_resolution_criteria": "The FED interest rates are defined in this market by the upper bound of the target federal funds range. The decisions on the target federal funds range are made by the Federal Open Market Committee (FOMC) meetings.\n\nThis market will resolve to the amount of basis points the upper bound of the target federal funds rate is changed by versus the level it was prior to the Federal Reserve's December 2026 meeting.\n\nIf the target federal funds rate is changed to a level not expressed in the displayed options, the change will be rounded up to the nearest 25 and will resolve to the relevant bracket. (e.g. if there's a cut/increase of 12.5 bps it will be considered to be 25 bps)\n\nThe resolution source for this market is the FOMC\u2019s statement after its meeting scheduled for December 8-9, 2026 according to the official calendar: https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm.\n\nThe level and change of the target federal funds rate is also published at the official website of the Federal Reserve at https://www.federalreserve.gov/monetarypolicy/openmarket.htm.\n\nThis market may resolve as soon as the FOMC\u2019s statement for their December meeting with relevant data is issued. If no statement is released by the end date of the next scheduled meeting, this market will resolve to the \"No change\" bracket.",
+  "background": "N/A",
+  "close": "2026-12-09T23:59:00+00:00"
+ },
+ {
+  "id": "0x19383006e0698d09c73ce34cd933f10a4ac4fb51555d23b220969d1590828365",
+  "source": "polymarket",
+  "question": "Will the Fed Hike\u2013Pause\u2013Hike in the next three decisions (Sep\u2013Oct\u2013Dec)?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-fed-hikepausehike-in-the-next-three-decisions-sepoctdec.",
+  "market_resolution_criteria": "The FED interest rates are defined in this market by the upper bound of the target federal funds rate. The decisions on the target federal funds rate are made by the Federal Open Market Committee (FOMC) meetings.\n\nThis market will resolve according to the decisions made by the next three Federal Open Market Committee (FOMC) meetings: September 15-16; October 27-28; and December 8-9.\n\nA qualifying cut occurs when the new upper bound of the target federal funds rate is lower compared to the level it was prior to the respective meeting.\n\nA qualifying hike occurs when the new upper bound of the target federal funds rate is higher compared to the level it was prior to the respective meeting.\n\nA qualifying pause occurs when the new upper bound of the target federal funds rate is equal to the level it was prior to the respective meeting.\n\nIf the Fed publishes a different combination than any listed, this market will resolve to \"Other\". Any rate cut will be encompassed by \"Other\".\n\nEmergency rate changes outside the regularly scheduled meetings will not be considered.\n\nThe resolution source for this market is the FOMC\u2019s statement after its meetings:\nhttps://www.federalreserve.gov/monetarypolicy/fomccalendars.htm\n\nThe level and change of the target federal funds rate is also published at the official website of the Federal Reserve:\nhttps://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+  "background": "N/A",
+  "close": "2026-12-09T23:59:00+00:00"
+ }
+]

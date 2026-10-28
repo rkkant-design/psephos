@@ -1,0 +1,158 @@
+{
+ "forecast_id": "TN2026",
+ "freeze_date": "2026-03-26",
+ "params": {
+  "alpha": 0.492,
+  "n_sim": 10000,
+  "poll_agencies_rated": false,
+  "seed": 42,
+  "sigma_c": 14.97,
+  "sigma_state_m2": 6.3,
+  "sigma_state_m3": 6.0,
+  "tau": 0.5
+ },
+ "quality_flags": [
+  "ALL three pre-freeze polls are unrated agencies; Agni News Agency is an outlier/quality symptom (SPA 44.9 pct + '180+ seats' projection on a claimed n=101,643) but is kept mechanically - no cherry-picking at freeze.",
+  "TVK (polling 10-15 pct) has zero AE/GE base: M2 cannot see it, and the vote it draws will shift both main blocs in ways the baseline-shift sim does not model. This election is a stress test of the engine's new-entrant blind spot.",
+  "NTK (6.7 pct AE2021, 8.2 pct GE2024) contests all 234 alone but has no poll column (lumped in Others); not modeled as a bloc.",
+  "Spellings: TMC(M) carries 0.95 at GE2024; AMMK below reporting threshold at GE2024 (contributes ~0)."
+ ],
+ "questions": [
+  {
+   "p_gate": 0.4232,
+   "p_m2": 0.7926,
+   "p_m3": 0.4232,
+   "question": "SPA wins majority",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.4897,
+   "p_m2": 0.8056,
+   "p_m3": 0.4897,
+   "question": "SPA is largest",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.1879,
+   "p_m2": 0.1879,
+   "p_m3": 0.4497,
+   "question": "NDA wins majority",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.1944,
+   "p_m2": 0.1944,
+   "p_m3": 0.5103,
+   "question": "NDA is largest",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.0,
+   "p_m2": 0.0,
+   "p_m3": 0.0,
+   "question": "TVK wins majority",
+   "verdict": "CALL-NO"
+  },
+  {
+   "p_gate": 0.0,
+   "p_m2": 0.0,
+   "p_m3": 0.0,
+   "question": "TVK is largest",
+   "verdict": "CALL-NO"
+  },
+  {
+   "p_gate": 1.0,
+   "p_m2": 1.0,
+   "p_m3": 1.0,
+   "question": "Winner (largest) in {SPA, NDA}",
+   "verdict": "CALL-YES"
+  },
+  {
+   "p_gate": 0.9917,
+   "p_m2": 0.9999,
+   "p_m3": 0.9917,
+   "question": "TVK under 40 seats",
+   "verdict": "CALL-YES"
+  }
+ ],
+ "run_at_utc": "2026-10-16T14:45:36+00:00",
+ "seats_m2": {
+  "NDA": {
+   "med": 89,
+   "p5": 42,
+   "p95": 142,
+   "p_largest": 0.1944,
+   "p_majority": 0.1879
+  },
+  "SPA": {
+   "med": 144,
+   "p5": 90,
+   "p95": 191,
+   "p_largest": 0.8056,
+   "p_majority": 0.7926
+  },
+  "TVK": {
+   "med": 1,
+   "p5": 0,
+   "p95": 5,
+   "p_largest": 0.0,
+   "p_majority": 0.0
+  }
+ },
+ "seats_m3": {
+  "NDA": {
+   "med": 114,
+   "p5": 64,
+   "p95": 164,
+   "p_largest": 0.5103,
+   "p_majority": 0.4497
+  },
+  "SPA": {
+   "med": 112,
+   "p5": 62,
+   "p95": 162,
+   "p_largest": 0.4897,
+   "p_majority": 0.4232
+  },
+  "TVK": {
+   "med": 6,
+   "p5": 1,
+   "p95": 24,
+   "p_largest": 0.0,
+   "p_majority": 0.0
+  }
+ },
+ "state_shares": {
+  "baseline": {
+   "NDA": 41.5,
+   "SPA": 46.28,
+   "TVK": 0.0
+  },
+  "ge": {
+   "NDA": 38.25,
+   "SPA": 48.72,
+   "TVK": 0
+  },
+  "m2_pred": {
+   "NDA": 39.9,
+   "SPA": 47.48,
+   "TVK": 0.0
+  },
+  "m3_pred": {
+   "NDA": 40.67,
+   "SPA": 40.14,
+   "TVK": 13.07
+  }
+ },
+ "title": "Tamil Nadu Legislative Assembly 2026 (holdout)",
+ "tripwires": [
+  {
+   "effect": "bloc structure changes; re-run",
+   "watch": "TVK alliance reversal (joins NDA or SPA)"
+  },
+  {
+   "effect": "M3 upgrades to rated sigma",
+   "watch": "A rated agency publishes vote shares before 23 Apr"
+  }
+ ]
+}

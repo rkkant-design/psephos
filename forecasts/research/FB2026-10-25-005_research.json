@@ -1,0 +1,867 @@
+{
+ "calibration": {
+  "a": 1.0,
+  "b": 0.0
+ },
+ "committed_at_utc": "2026-10-25T05:29:37+00:00",
+ "domain": "ForecastBench",
+ "dossier_sha256": "7f300a6a14e1b83b25e43da45c3982b59fc8b942115e1ddb2347942e8e417b9c",
+ "forecast_id": "FB2026-10-25-005",
+ "freeze_date": "2026-10-25",
+ "independence_attestation": "No betting odds, prediction-market prices or forecast-aggregator numbers were fetched or consulted for any question in this dossier; market-source questions' embedded freeze prices were deliberately ignored.",
+ "questions": [
+  {
+   "base_rate_used": {
+    "reference_class": "Amazon Q3 YoY headcount increases since 2022",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.5
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXAMZN-26OCTEMP-1580000.0",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Amazon's Q3 headcount has printed 1.54-1.56M recently with holiday pre-hiring pushing Q3 totals up; above 1.58M is near the top of the plausible band but AI-era hiring freezes cap growth."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.55,
+   "p_research": 0.55,
+   "q": "Will Amazon.com Inc. report Above 1.58 million employees (full-time & part-time, excl. contractors/temps) in Q3 2026? [Yes: Above 1.58 million]",
+   "reasoning_summary": "Base rate: Amazon Q3 YoY headcount increases since 2022 ~ 0.5. Amazon's Q3 headcount has printed 1.54-1.56M recently with holiday pre-hiring pushing Q3 totals up; above 1.58M is near the top of the plausible band but AI-era hiring freezes cap growth. Net of adjustments the final probability is 0.55.",
+   "strongest_opposing_case": "Strongest case against this number: 2026 layoff waves plus robotics substitution could hold Q3 flat near 1.55M; Amazon has guided toward headcount discipline."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "single-name BNA win probability pre-nominations",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.12
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXGRAMBNA-69-SIE",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Best New Artist fields are deep and Sienna Spiro, while a 2026 breakout, competes against bigger-streaming debuts; winner-take-all on an 8-nominee field centers single-name probabilities low."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.15,
+   "p_research": 0.15,
+   "q": "Will SIENNA SPIRO win Best New Artist at the Grammys? [Yes: SIENNA SPIRO]",
+   "reasoning_summary": "Base rate: single-name BNA win probability pre-nominations ~ 0.12. Best New Artist fields are deep and Sienna Spiro, while a 2026 breakout, competes against bigger-streaming debuts; winner-take-all on an 8-nominee field centers single-name probabilities low. Net of adjustments the final probability is 0.15.",
+   "strongest_opposing_case": "Strongest case against this number: If she lands the Nov nominations with momentum (SNL slot, critics' narratives), BNA often rewards exactly her vocal-traditionalist profile."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "MN D federal margins of 5+ since 2018",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.55
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXMIDTERMMOV-MNSEND-P5",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Flanagan (D-MN) by 5+: Minnesota's D+4 lean plus D+9 environment makes a mid-to-high single-digit win the central case for an open-seat Dem in a state Rs have not won federally since 2002."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-23",
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls"
+    }
+   ],
+   "p_raw": 0.6,
+   "p_research": 0.6,
+   "q": "Will the margin of victory for Democrats in the U.S. Senate election in Minnesota be at least 5 percentage points? [Yes: Flanagan, 5+ pts]",
+   "reasoning_summary": "Base rate: MN D federal margins of 5+ since 2018 ~ 0.55. Flanagan (D-MN) by 5+: Minnesota's D+4 lean plus D+9 environment makes a mid-to-high single-digit win the central case for an open-seat Dem in a state Rs have not won federally since 2002. Net of adjustments the final probability is 0.6.",
+   "strongest_opposing_case": "Strongest case against this number: MN statewide margins compressed to 4-5 in 2022-24 and an open seat without Klobuchar's brand could land in the 3-4 range."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "NC federal margins of 9+ since 2008",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.12
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXMIDTERMMOV-NCSEND-P9",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Cooper (D-NC) by 9+: he is the strongest Dem recruit in NC history and D+9 makes him a clear favorite, but NC federal races live inside 6 points; 9+ requires a collapse of the R nominee."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-23",
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls"
+    }
+   ],
+   "p_raw": 0.25,
+   "p_research": 0.25,
+   "q": "Will the margin of victory for Democrats in the U.S. Senate election in North Carolina be at least 9 percentage points? [Yes: Cooper, 9+ pts]",
+   "reasoning_summary": "Base rate: NC federal margins of 9+ since 2008 ~ 0.12. Cooper (D-NC) by 9+: he is the strongest Dem recruit in NC history and D+9 makes him a clear favorite, but NC federal races live inside 6 points; 9+ requires a collapse of the R nominee. Net of adjustments the final probability is 0.25.",
+   "strongest_opposing_case": "Strongest case against this number: Cooper has won statewide six times and never lost; against a weak nominee in a wave, double digits happened for him in 2016's gov race."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "Collins challengers winning since 1996",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.45
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXMIDTERMMOV-MESEND-P1",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Maine Senate (Collins defense): Dem Jackson winning AT ALL is near even in D+9 against the last New England R; winning by 1+ is almost identical to winning, so the probability tracks the win probability."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-23",
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls"
+    }
+   ],
+   "p_raw": 0.52,
+   "p_research": 0.52,
+   "q": "Will the margin of victory for Democrats in the U.S. Senate election in Maine be at least 1 percentage points? [Yes: Jackson, 1+ pts]",
+   "reasoning_summary": "Base rate: Collins challengers winning since 1996 ~ 0.45. Maine Senate (Collins defense): Dem Jackson winning AT ALL is near even in D+9 against the last New England R; winning by 1+ is almost identical to winning, so the probability tracks the win probability. Net of adjustments the final probability is 0.52.",
+   "strongest_opposing_case": "Strongest case against this number: Collins has beaten every environment since 1996 and Maine splits tickets; her 2020 escape in a D+8 year is the direct precedent."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "MI D Senate margins of 5+ in D+ years",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.5
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXMIDTERMMOV-MISEND-P5",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Michigan Senate (open, El-Sayed as Dem nominee) by 5+: D+9 makes the Dem favored but El-Sayed's progressive profile in a swing state suggests a 2-6 point win more than a blowout."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-23",
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls"
+    }
+   ],
+   "p_raw": 0.45,
+   "p_research": 0.45,
+   "q": "Will the margin of victory for Democrats in the U.S. Senate election in Michigan be at least 5 percentage points? [Yes: Sayed, 5+ pts]",
+   "reasoning_summary": "Base rate: MI D Senate margins of 5+ in D+ years ~ 0.5. Michigan Senate (open, El-Sayed as Dem nominee) by 5+: D+9 makes the Dem favored but El-Sayed's progressive profile in a swing state suggests a 2-6 point win more than a blowout. Net of adjustments the final probability is 0.45.",
+   "strongest_opposing_case": "Strongest case against this number: MI broke late-and-big for Dems in 2018's similar environment (Stabenow +6.5) and Rogers already lost statewide in 2024."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "repeat nominees improving on prior loss",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.3
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXMISENATE-26-MROG",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Rogers (R) won the nomination again after his narrow 2024 loss but faces a worse environment at D+9; Michigan open-seat dynamics favor the Dem by mid-single digits."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-23",
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls"
+    }
+   ],
+   "p_raw": 0.25,
+   "p_research": 0.25,
+   "q": "Who will win the 2026 Michigan Senate race? [Yes: Mike Rogers]",
+   "reasoning_summary": "Base rate: repeat nominees improving on prior loss ~ 0.3. Rogers (R) won the nomination again after his narrow 2024 loss but faces a worse environment at D+9; Michigan open-seat dynamics favor the Dem by mid-single digits. Net of adjustments the final probability is 0.25.",
+   "strongest_opposing_case": "Strongest case against this number: Rogers nearly won in 2024 with less money; incumbent-party drag plus El-Sayed's polarizing profile gives Rogers his clearest path."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "Brown margins of 4+ across his cycles",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.3
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXMIDTERMMOV-OHSEND-P4",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Brown (D-OH) winning by 4+ in R+6 Ohio: D+9 plus Brown's brand makes a win plausible (~55-58%) but 4+ specifically happened for him only in friendlier Ohios."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-23",
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls"
+    }
+   ],
+   "p_raw": 0.3,
+   "p_research": 0.3,
+   "q": "Will the margin of victory for Democrats in the U.S. Senate election in Ohio be at least 4 percentage points? [Yes: Brown, 4+ pts]",
+   "reasoning_summary": "Base rate: Brown margins of 4+ across his cycles ~ 0.3. Brown (D-OH) winning by 4+ in R+6 Ohio: D+9 plus Brown's brand makes a win plausible (~55-58%) but 4+ specifically happened for him only in friendlier Ohios. Net of adjustments the final probability is 0.3.",
+   "strongest_opposing_case": "Strongest case against this number: Brown's union coalition plus a collapsing R suburban margin could reproduce his 2018 +6.8 exactly in this environment."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "ND annual output above 421M in $80+ oil years",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.65
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXNDKOIL-27FEB26-T421.101",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "North Dakota crude production has run 1.15-1.2M bbl/day in 2026 (\u2248420-440M annually); with $100 oil incentivizing output, clearing 421.101M for the year is the modestly favored side."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.6,
+   "p_research": 0.6,
+   "q": "Will North Dakota\u2019s field production of crude oil for 2026 be above 421.101 million barrels? [Yes: Above 421.101 million barrels]",
+   "reasoning_summary": "Base rate: ND annual output above 421M in $80+ oil years ~ 0.65. North Dakota crude production has run 1.15-1.2M bbl/day in 2026 (\u2248420-440M annually); with $100 oil incentivizing output, clearing 421.101M for the year is the modestly favored side. Net of adjustments the final probability is 0.6.",
+   "strongest_opposing_case": "Strongest case against this number: Bakken decline rates are steep and winter disruptions in Q4 can erase the margin; 2024 printed just under this line."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "KY distillery June prints vs prior-year highs",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.45
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXKYDISTEMP-26DEC02-T7542",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Kentucky distillery employment has flattened as the bourbon boom cooled and tariff retaliation hit exports; June 2026 above 7,542 needs the series near its all-time high despite announced layoffs."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.4,
+   "p_research": 0.4,
+   "q": "Will Kentucky private employment in Distilleries (NAICS 312140) for June 2026 be above 7,542 jobs? [Yes: Above 7,542 jobs]",
+   "reasoning_summary": "Base rate: KY distillery June prints vs prior-year highs ~ 0.45. Kentucky distillery employment has flattened as the bourbon boom cooled and tariff retaliation hit exports; June 2026 above 7,542 needs the series near its all-time high despite announced layoffs. Net of adjustments the final probability is 0.4.",
+   "strongest_opposing_case": "Strongest case against this number: The series' trend was still upward through 2025 and June is seasonally strong; a flat print would still clear the line."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "YA franchise films scoring >85 since 2015",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.1
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXRT-HUN-85",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Franchise prequels land 60-80 on RT; Sunrise on the Reaping has strong source material but 'above 85' is the top decile for YA franchise films (Ballad hit 64)."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.15,
+   "p_research": 0.15,
+   "q": "The Hunger Games: Sunrise on the Reaping Rotten Tomatoes score? [Yes: Above 85]",
+   "reasoning_summary": "Base rate: YA franchise films scoring >85 since 2015 ~ 0.1. Franchise prequels land 60-80 on RT; Sunrise on the Reaping has strong source material but 'above 85' is the top decile for YA franchise films (Ballad hit 64). Net of adjustments the final probability is 0.15.",
+   "strongest_opposing_case": "Strongest case against this number: The book was the best-reviewed Hunger Games entry and the director's track record suggests a critical ceiling-breaker is possible."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "core prints above trend+0.1 in tariff quarters",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.4
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXCPICOREYOY-26NOV-T3.1",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Core CPI YoY has been running near 3.0 with headline at 3.7; November core above 3.1% needs continued tariff pass-through into goods, plausible but above the current run rate."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-16",
+     "title": "Fed holds expected Oct 28; Sep hike to 3.75-4.00%; CPI 3.7% YoY Sep",
+     "url": "https://www.cnbc.com/2026/10/16/kevin-warsh-fed-october-rate-hike-interest-rates-markets.html"
+    }
+   ],
+   "p_raw": 0.42,
+   "p_research": 0.42,
+   "q": "Will the rate of core CPI inflation be above 3.1% for the year ending in November 2026? [Yes: Above 3.1%]",
+   "reasoning_summary": "Base rate: core prints above trend+0.1 in tariff quarters ~ 0.4. Core CPI YoY has been running near 3.0 with headline at 3.7; November core above 3.1% needs continued tariff pass-through into goods, plausible but above the current run rate. Net of adjustments the final probability is 0.42.",
+   "strongest_opposing_case": "Strongest case against this number: Core has surprised high twice in 2026 and shelter's re-acceleration is exactly the persistent component that drags core above 3.1."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "studio biopics scoring >85",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.1
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXRT-IPL-85",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "I Play Rocky (biopic) above 85 on RT: biopics cluster 50-80; without festival premiere data indicating rapture, the top decile is unlikely."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.1,
+   "p_research": 0.1,
+   "q": "I Play Rocky Rotten Tomatoes score? [Yes: Above 85]",
+   "reasoning_summary": "Base rate: studio biopics scoring >85 ~ 0.1. I Play Rocky (biopic) above 85 on RT: biopics cluster 50-80; without festival premiere data indicating rapture, the top decile is unlikely. Net of adjustments the final probability is 0.1.",
+   "strongest_opposing_case": "Strongest case against this number: A November festival debut with standing ovations would re-rate this instantly; the director's prior film scored 90+."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "preseason-mid-pack teams winning conf titles",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.15
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXNCAAFPAC12-26-FRES",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Fresno State in the rebuilt Pac-12: a mid-pack preseason projection with the title requiring a conference-championship run against Boise State's class of the league."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.25,
+   "p_research": 0.25,
+   "q": "Will Fresno St. win the College Football Pac-12 Championship? [Yes: Fresno St.]",
+   "reasoning_summary": "Base rate: preseason-mid-pack teams winning conf titles ~ 0.15. Fresno State in the rebuilt Pac-12: a mid-pack preseason projection with the title requiring a conference-championship run against Boise State's class of the league. Net of adjustments the final probability is 0.25.",
+   "strongest_opposing_case": "Strongest case against this number: Fresno's 2026 season has gone well in-conference and championship games are single-elimination coin flips against even favorites."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "quarters with >25% customer growth",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.03
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXLMND-26NOVCUST-3500000",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Lemonade reported ~2.7M customers in mid-2026 growing ~15%/yr; 3.5M by Q3's report requires a 30% jump in one quarter, far beyond any prior cadence."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.08,
+   "p_research": 0.08,
+   "q": "Will Lemonade Inc. report Above 3.5 million total customers in Q3 2026? [Yes: Above 3.5 million]",
+   "reasoning_summary": "Base rate: quarters with >25% customer growth ~ 0.03. Lemonade reported ~2.7M customers in mid-2026 growing ~15%/yr; 3.5M by Q3's report requires a 30% jump in one quarter, far beyond any prior cadence. Net of adjustments the final probability is 0.08.",
+   "strongest_opposing_case": "Strongest case against this number: An acquisition closing in Q3 could add customers inorganically; Lemonade has teased M&A."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "Marcellus years above 10 Tcf since 2021",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.65
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXMARCELLUSGAS-27MAR31-T10.00",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Marcellus dry gas output has run 10.1-10.4 Tcf/yr; clearing 10.00 for 2026 holds unless H2 curtailments from low regional prices bite deeper than usual."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.6,
+   "p_research": 0.6,
+   "q": "Will dry natural gas production from the Marcellus formation for 2026 be above 10.00 Tcf? [Yes: Above 10.00 Tcf]",
+   "reasoning_summary": "Base rate: Marcellus years above 10 Tcf since 2021 ~ 0.65. Marcellus dry gas output has run 10.1-10.4 Tcf/yr; clearing 10.00 for 2026 holds unless H2 curtailments from low regional prices bite deeper than usual. Net of adjustments the final probability is 0.6.",
+   "strongest_opposing_case": "Strongest case against this number: Appalachian producers curtailed aggressively in 2026's soft gas market and pipeline constraints cap recovery; 9.8-9.9 is within reach."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "WI yields above 176 in past decade",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.6
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXWICORNYIELD-27JAN31-T176",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Wisconsin corn yields trend ~178-185 bu/acre in good years; 2026 growing season reports were favorable in the western belt, making above-176 the modest favorite."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.55,
+   "p_research": 0.55,
+   "q": "Will Wisconsin's corn for grain yield per harvested acre for 2026 be above 176 bu/acre? [Yes: Above 176 bu/acre]",
+   "reasoning_summary": "Base rate: WI yields above 176 in past decade ~ 0.6. Wisconsin corn yields trend ~178-185 bu/acre in good years; 2026 growing season reports were favorable in the western belt, making above-176 the modest favorite. Net of adjustments the final probability is 0.55.",
+   "strongest_opposing_case": "Strongest case against this number: One August derecho or early frost zone can pull state averages below 170; USDA's Jan finalization often revises down."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "Hunger Games entries above 75",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.6
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXRT-HUN-75",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Above 75 for Sunrise on the Reaping: the franchise's main entries scored 76-90 but the last prequel hit 64; strong source material argues the main-series band."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.42,
+   "p_research": 0.42,
+   "q": "The Hunger Games: Sunrise on the Reaping Rotten Tomatoes score? [Yes: Above 75]",
+   "reasoning_summary": "Base rate: Hunger Games entries above 75 ~ 0.6. Above 75 for Sunrise on the Reaping: the franchise's main entries scored 76-90 but the last prequel hit 64; strong source material argues the main-series band. Net of adjustments the final probability is 0.42.",
+   "strongest_opposing_case": "Strongest case against this number: Prequel fatigue plus November critic crowding has lowered franchise scores since 2023."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "Nov MoM >0.2 in high-inflation years",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.55
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXCPI-26NOV-T0.2",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "November MoM above 0.2% (0.3%+): the 2026 run rate with elevated energy makes 0.3+ slightly favored."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-16",
+     "title": "Fed holds expected Oct 28; Sep hike to 3.75-4.00%; CPI 3.7% YoY Sep",
+     "url": "https://www.cnbc.com/2026/10/16/kevin-warsh-fed-october-rate-hike-interest-rates-markets.html"
+    }
+   ],
+   "p_raw": 0.58,
+   "p_research": 0.58,
+   "q": "Will CPI rise more than 0.2% in November 2026? [Yes: Above 0.2%]",
+   "reasoning_summary": "Base rate: Nov MoM >0.2 in high-inflation years ~ 0.55. November MoM above 0.2% (0.3%+): the 2026 run rate with elevated energy makes 0.3+ slightly favored. Net of adjustments the final probability is 0.58.",
+   "strongest_opposing_case": "Strongest case against this number: Holiday discounting and a crude pullback post-midterms could produce the year's soft print."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "2-month core drops of 0.5pp",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.95
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXCPICOREYOY-26NOV-T2.6",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Core CPI YoY below 2.6 by November would require a half-point collapse from ~3.0 in two months - essentially impossible given shelter inertia."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-16",
+     "title": "Fed holds expected Oct 28; Sep hike to 3.75-4.00%; CPI 3.7% YoY Sep",
+     "url": "https://www.cnbc.com/2026/10/16/kevin-warsh-fed-october-rate-hike-interest-rates-markets.html"
+    }
+   ],
+   "p_raw": 0.9,
+   "p_research": 0.9,
+   "q": "Will the rate of core CPI inflation be above 2.6% for the year ending in November 2026? [Yes: Above 2.6%]",
+   "reasoning_summary": "Base rate: 2-month core drops of 0.5pp ~ 0.95. Core CPI YoY below 2.6 by November would require a half-point collapse from ~3.0 in two months - essentially impossible given shelter inertia. Net of adjustments the final probability is 0.9.",
+   "strongest_opposing_case": "Strongest case against this number: Only a methodology revision or an extreme goods deflation shock could produce it."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "Dec hikes delivered when 70% expected",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.7
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXFED-26DEC-T4.00",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Upper bound above 4.00% after Dec 9: currently 4.00 exactly; resolving needs the December hike (~70% per economist consensus) or an October surprise hike."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-16",
+     "title": "Fed holds expected Oct 28; Sep hike to 3.75-4.00%; CPI 3.7% YoY Sep",
+     "url": "https://www.cnbc.com/2026/10/16/kevin-warsh-fed-october-rate-hike-interest-rates-markets.html"
+    }
+   ],
+   "p_raw": 0.7,
+   "p_research": 0.7,
+   "q": "Will the upper bound of the federal funds rate be above 4.00% following the Fed's Dec 9, 2026 meeting? [Yes: Above 4.00%]",
+   "reasoning_summary": "Base rate: Dec hikes delivered when 70% expected ~ 0.7. Upper bound above 4.00% after Dec 9: currently 4.00 exactly; resolving needs the December hike (~70% per economist consensus) or an October surprise hike. Net of adjustments the final probability is 0.7.",
+   "strongest_opposing_case": "Strongest case against this number: Growth cracks from war-oil could stay the Fed's hand in December; three holds in a row is the dovish tail."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "2-month accelerations of 0.3pp+",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.3
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXCPIYOY-26NOV-T4.0",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "November YoY above 4.0% needs +0.3pp acceleration from September's 3.7 in two months; possible with energy base effects but above the central path."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-16",
+     "title": "Fed holds expected Oct 28; Sep hike to 3.75-4.00%; CPI 3.7% YoY Sep",
+     "url": "https://www.cnbc.com/2026/10/16/kevin-warsh-fed-october-rate-hike-interest-rates-markets.html"
+    }
+   ],
+   "p_raw": 0.28,
+   "p_research": 0.28,
+   "q": "Will the rate of CPI inflation be above 4.0% for the year ending in November 2026? [Yes: Above 4.0%]",
+   "reasoning_summary": "Base rate: 2-month accelerations of 0.3pp+ ~ 0.3. November YoY above 4.0% needs +0.3pp acceleration from September's 3.7 in two months; possible with energy base effects but above the central path. Net of adjustments the final probability is 0.28.",
+   "strongest_opposing_case": "Strongest case against this number: October's oil surge feeds November's print directly and 2026 has repeatedly surprised high."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "youth unemployment prints below 8% since 1990",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.02
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXYOUTHUN-26DEC04-T7.5",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "US 16-24 unemployment runs 9-11%; below 7.5% in any remaining 2026 release would be a modern-era record low for the series, not plausible in a cooling labor market."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-16",
+     "title": "Fed holds expected Oct 28; Sep hike to 3.75-4.00%; CPI 3.7% YoY Sep",
+     "url": "https://www.cnbc.com/2026/10/16/kevin-warsh-fed-october-rate-hike-interest-rates-markets.html"
+    }
+   ],
+   "p_raw": 0.05,
+   "p_research": 0.05,
+   "q": "Will the unemployment rate for ages 16 to 24 (seasonally adjusted) for 2026 fall below 7.5%?",
+   "reasoning_summary": "Base rate: youth unemployment prints below 8% since 1990 ~ 0.02. US 16-24 unemployment runs 9-11%; below 7.5% in any remaining 2026 release would be a modern-era record low for the series, not plausible in a cooling labor market. Net of adjustments the final probability is 0.05.",
+   "strongest_opposing_case": "Strongest case against this number: Seasonal-adjustment quirks have produced outlier youth prints before, though never near 7.5."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "core holding >=2.9 given current 3.0",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.6
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXCPICOREYOY-26NOV-T2.9",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Core above 2.9% in November: the run rate sits right at ~3.0, so this is the just-above-even side of a knife-edge threshold."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-16",
+     "title": "Fed holds expected Oct 28; Sep hike to 3.75-4.00%; CPI 3.7% YoY Sep",
+     "url": "https://www.cnbc.com/2026/10/16/kevin-warsh-fed-october-rate-hike-interest-rates-markets.html"
+    }
+   ],
+   "p_raw": 0.6,
+   "p_research": 0.6,
+   "q": "Will the rate of core CPI inflation be above 2.9% for the year ending in November 2026? [Yes: Above 2.9%]",
+   "reasoning_summary": "Base rate: core holding >=2.9 given current 3.0 ~ 0.6. Core above 2.9% in November: the run rate sits right at ~3.0, so this is the just-above-even side of a knife-edge threshold. Net of adjustments the final probability is 0.6.",
+   "strongest_opposing_case": "Strongest case against this number: Two soft shelter prints would drop core to 2.8 and the Fed's hikes are starting to bite goods pricing."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "holds delivered when hike 70% expected",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.27
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXFEDDECISION-26DEC-H0",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "December hold (0bps): consensus puts a hike at ~70-73%, leaving hold as the quarter-probability outcome; war-growth uncertainty is the hold case."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-16",
+     "title": "Fed holds expected Oct 28; Sep hike to 3.75-4.00%; CPI 3.7% YoY Sep",
+     "url": "https://www.cnbc.com/2026/10/16/kevin-warsh-fed-october-rate-hike-interest-rates-markets.html"
+    }
+   ],
+   "p_raw": 0.25,
+   "p_research": 0.25,
+   "q": "Will the Federal Reserve Hike rates by 0bps at their December 2026 meeting? [Yes: Fed maintains rate]",
+   "reasoning_summary": "Base rate: holds delivered when hike 70% expected ~ 0.27. December hold (0bps): consensus puts a hike at ~70-73%, leaving hold as the quarter-probability outcome; war-growth uncertainty is the hold case. Net of adjustments the final probability is 0.25.",
+   "strongest_opposing_case": "Strongest case against this number: If October data shows labor cracking, the Fed historically pauses into uncertainty regardless of inflation optics."
+  }
+ ],
+ "researcher": "claude-fable-5 operator session, 2026-10-25 round-day sprint (authored + rule + family layers)",
+ "resolution_source": "per-question benchmark resolution criteria (see each question's benchmark block)",
+ "resolve_date": null
+}

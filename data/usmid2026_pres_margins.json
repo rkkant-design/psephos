@@ -1,0 +1,22 @@
+{
+ "source": "Wikipedia, 2024 United States presidential election, results-by-state table (https://en.wikipedia.org/wiki/2024_United_States_presidential_election)",
+ "fetched": "2026-10-24",
+ "definition": "margin = Dem (Harris) % minus Rep (Trump) %, signed, statewide",
+ "national_margin": -1.5,
+ "national_note": "Trump 49.8% vs Harris 48.3% national popular vote; Dem minus Rep = -1.5",
+ "margins": {
+  "Alabama": -30.5, "Alaska": -13.1, "Arizona": -5.5, "Arkansas": -30.6,
+  "California": 20.1, "Colorado": 11.0, "Connecticut": 14.5, "Delaware": 14.7,
+  "Florida": -13.1, "Georgia": -2.2, "Hawaii": 23.1, "Idaho": -36.5,
+  "Illinois": 10.9, "Indiana": -19.0, "Iowa": -13.2, "Kansas": -16.1,
+  "Kentucky": -30.5, "Louisiana": -22.0, "Maine": 6.9, "Maryland": 28.5,
+  "Massachusetts": 25.2, "Michigan": -1.4, "Minnesota": 4.2, "Mississippi": -22.9,
+  "Missouri": -18.4, "Montana": -19.9, "Nebraska": -20.5, "Nevada": -3.1,
+  "New Hampshire": 2.8, "New Jersey": 5.9, "New Mexico": 6.0, "New York": 12.6,
+  "North Carolina": -3.2, "North Dakota": -36.5, "Ohio": -11.2, "Oklahoma": -34.3,
+  "Oregon": 14.3, "Pennsylvania": -1.7, "Rhode Island": 13.8, "South Carolina": -17.9,
+  "South Dakota": -29.2, "Tennessee": -29.7, "Texas": -13.7, "Utah": -21.6,
+  "Vermont": 31.5, "Virginia": 5.8, "Washington": 18.2, "West Virginia": -41.9,
+  "Wisconsin": -0.9, "Wyoming": -45.8
+ }
+}

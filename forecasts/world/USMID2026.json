@@ -1,0 +1,49 @@
+{
+  "forecast_id": "USMID2026",
+  "title": "US Midterm Elections 2026",
+  "domain": "US elections",
+  "freeze_date": "2026-10-26",
+  "resolve_date": "2026-11-03",
+  "adapter": "us_house",
+  "research": true,
+  "market": {
+    "source": "Polymarket (gamma-api), fetched 2026-10-26 (which-party-will-win-the-house/senate-in-2026); senate_dem moved 0.675 -> 0.645 since 10-24",
+    "house_dem": 0.915,
+    "senate_dem": 0.645
+  },
+  "model": {
+    "generic_ballot_margin": 9.1,
+    "margin_source": "Silver Bulletin average D+9.1 (2026-10-23); prior D+8.9 (10-07); Pew D+8 (10-10), Reuters/Ipsos D+12 (10-20) consistent",
+    "tipping_point": 2.5,
+    "tipping_note": "post-redistricting analyses: GOP can lose House popular vote by ~1 pt and keep control; Dems need roughly D+2-3",
+    "sigma": 3.5,
+    "sigma_note": "historical generic-ballot-to-outcome error plus 10 days of drift",
+    "senate_model": 0.5465,
+    "senate_note": "race-level correlated Monte Carlo roll-up, USMIDRACES2026 run 2026-10-24 (sha ffe4c93d...): 35 per-seat structural probits, one shared national error (sd 5), 100k sims; Dems need 51 with 34 held seats not up"
+  },
+  "resolution": {
+    "source": "Official state certifications as aggregated by Associated Press race calls; control counted at the seating of the 120th Congress (2027-01-03)",
+    "resolve_by": "2027-01-03",
+    "rules": [
+      "House majority = party holding >= 218 of 435 seats per final certified results, NOT election-night leads; uncalled races resolve by their eventual certified winner",
+      "Senate majority = party controlling the floor at seating, with independents counted toward the party they caucus with (caucusing rule); a 50-50 Senate resolves to the Vice President's party",
+      "Rows resolve early, before 2027-01-03, if and when AP-called races put control beyond arithmetic dispute",
+      "A seat vacant at seating (death/resignation after certification) counts for the party that won it",
+      "Recounts and litigation: resolution waits for certified outcomes; no row resolves on a contested margin"
+    ]
+  },
+  "questions": [
+    {"q": "Democrats win House majority", "market": "house_dem", "model": "house_dem"},
+    {"q": "Republicans keep House majority", "market": "house_rep", "model": "house_rep"},
+    {"q": "Democrats win Senate majority", "market": "senate_dem", "model": "senate_dem"}
+  ],
+  "quality_flags": [
+    "Resolves in 10 days - the fastest real-world test the world engine will get.",
+    "Senate model is the race-level correlated Monte Carlo roll-up (USMIDRACES2026, scripts/usmid_races.py): 35 structural per-seat probits with one shared national error term. Candidate-blind by design.",
+    "Model tipping-point (+2.5) is taken from published redistricting analyses, not fitted by us."
+  ],
+  "tripwires": [
+    {"watch": "Generic-ballot average moves 3+ points before Nov 3", "effect": "re-run"},
+    {"watch": "Polymarket House price crosses 0.95 either way", "effect": "re-run; dual gate may become decidable"}
+  ]
+}

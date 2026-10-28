@@ -1,0 +1,200 @@
+<title>The Case for Psephos</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: single-column brief for a decision-maker; stat-led hero, then evidence, market, pricing, plan. */
+:root{
+  --bg:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+  --grid:#e1e0d9; --baseline:#c3c2b7; --ring:rgba(11,11,11,.10);
+  --accent:#2a78d6; --accent-ink:#1c5cab;
+  --good:#0ca30c; --good-text:#006300; --serious:#ec835a; --critical:#d03b3b;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100;
+  --sans:"Libre Franklin",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0d0d0d; --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --baseline:#383835; --ring:rgba(255,255,255,.10);
+    --accent:#3987e5; --accent-ink:#86b6ef; --good-text:#0ca30c;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0d0d0d; --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781;
+  --grid:#2c2c2a; --baseline:#383835; --ring:rgba(255,255,255,.10);
+  --accent:#3987e5; --accent-ink:#86b6ef; --good-text:#0ca30c;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500;
+  color-scheme:dark;
+}
+body{background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px)); padding-right:max(16px,env(safe-area-inset-right,0px)); padding-block:0;}
+.wrap{max-width:840px; margin:0 auto; padding-block:36px 80px;}
+header.m{border-bottom:2px solid var(--ink); padding-bottom:16px;}
+.brand{font-size:20px; font-weight:800;} .brand span{color:var(--accent);}
+.kicker{font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin:26px 0 8px;}
+h1{font-size:34px; font-weight:800; letter-spacing:-.015em; margin:0 0 12px; text-wrap:balance;}
+.lede{font-size:17px; color:var(--ink2); max-width:64ch;}
+h2{font-size:14px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); border-bottom:1px solid var(--grid); padding-bottom:7px; margin:46px 0 16px;}
+p{font-size:15px; color:var(--ink2); max-width:70ch;}
+p b, li b{color:var(--ink);}
+.statstrip{display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; margin:22px 0 0;}
+.stat{background:var(--surface); border:1px solid var(--ring); border-radius:8px; padding:13px 16px;}
+.stat .v{font-size:26px; font-weight:800; line-height:1.1;}
+.stat .k{font-size:12px; color:var(--ink2); margin-top:4px;}
+.stat .e{font-size:11.5px; color:var(--muted); margin-top:8px; border-top:1px solid var(--grid); padding-top:7px; line-height:1.5;}
+.grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px;}
+.cardx{background:var(--surface); border:1px solid var(--ring); border-radius:8px; padding:14px 16px; font-size:13.5px; color:var(--ink2); min-width:0;}
+.cardx b{display:block; color:var(--ink); font-size:14.5px; margin-bottom:5px;}
+figure{margin:20px 0; background:var(--surface); border:1px solid var(--ring); border-radius:10px; padding:16px 14px 6px;}
+figcaption{font-size:12px; color:var(--muted); padding:8px 6px; text-align:center;}
+svg{display:block; width:100%; height:auto; font-family:var(--sans);}
+svg text{fill:var(--ink);} svg .sub{fill:var(--ink2); font-size:10px;} svg .tiny{fill:var(--muted); font-size:9px;} svg .mono{font-family:var(--mono);}
+/* market bars */
+.mkt{display:grid; gap:12px; margin:16px 0;}
+.mrow{display:grid; grid-template-columns:minmax(140px,220px) 1fr; gap:6px 14px; align-items:center;}
+.mrow .ml{font-size:13.5px; font-weight:600;}
+.mrow .mb{height:18px; background:var(--grid); border-radius:5px; position:relative; min-width:0;}
+.mrow .mb>div{position:absolute; top:0; bottom:0; left:0; border-radius:5px;}
+.mrow .mv{grid-column:2; font-family:var(--mono); font-size:11.5px; color:var(--ink2);}
+/* pricing */
+.tiers{display:grid; grid-template-columns:repeat(auto-fit,minmax(215px,1fr)); gap:12px;}
+.tier{background:var(--surface); border:1px solid var(--ring); border-radius:10px; padding:16px; display:flex; flex-direction:column; gap:8px; min-width:0;}
+.tier.hot{border:2px solid var(--accent);}
+.tier .tn{font-weight:800; font-size:15px;}
+.tier .tp{font-size:22px; font-weight:800;} .tier .tp small{font-size:12px; font-weight:500; color:var(--ink2);}
+.tier .tw{font-family:var(--mono); font-size:10px; letter-spacing:.06em; color:var(--muted); text-transform:uppercase;}
+.tier ul{margin:0; padding-left:16px; font-size:12.5px; color:var(--ink2);}
+.tier li{margin:4px 0;}
+.callout{border-left:3px solid var(--serious); background:var(--surface); border-radius:0 8px 8px 0; padding:12px 16px; margin:18px 0; font-size:14px; color:var(--ink2); max-width:68ch;}
+.callout b{color:var(--ink);}
+ol.ask{margin:0; padding-left:20px; font-size:14.5px; color:var(--ink2); max-width:68ch;}
+ol.ask li{margin:9px 0;} ol.ask b{color:var(--ink);}
+footer{margin-top:56px; border-top:1px solid var(--grid); padding-top:14px; font-size:12px; color:var(--muted); line-height:1.6;}
+@media (max-width:560px){ h1{font-size:26px;} .mrow{grid-template-columns:1fr;} .mrow .mv{grid-column:1;} }
+</style>
+<div class="wrap">
+<header class="m">
+  <div class="brand">Psephos<span>.</span> <span style="font-weight:400;color:var(--muted);font-size:13px">by Trueinfo Labs</span></div>
+  <div class="kicker">Internal pitch &middot; October 2026</div>
+  <h1>India's first verifiably honest prediction engine &mdash; built, live, and already on the record.</h1>
+  <p class="lede">Psephos forecasts elections, sport and world events with multiple independent methods, certifies a CALL only when they all agree beyond 95%, and seals every forecast into the Bitcoin blockchain before the event. The entire category it replaces was banned in India five months ago. The window is open, we are standing in it, and the 2027 election cycle is the stage.</p>
+  <div class="statstrip">
+    <div class="stat"><div class="v">34/37</div><div class="k">certified calls correct to date (91.9%)</div>
+      <div class="e">A "call" is issued only when every independent method is 95%+ sure. Of 37 graded so far, 34 were right &mdash; 28/28 in backtests on past elections, 6/9 in live 2026 forecasts. The one failure mode is now an automatic safety rule.</div></div>
+    <div class="stat"><div class="v">60+</div><div class="k">elections &amp; events covered, searchable app live</div>
+      <div class="e">Indian state elections, US midterms, the Premier League (weekly match picks) and the Cricket World Cup &mdash; one working product, not a one-election experiment.</div></div>
+    <div class="stat"><div class="v">100%</div><div class="k">of forecasts hash-sealed before the event</div>
+      <div class="e">Every forecast is cryptographically fingerprinted the moment it is made and anchored in the Bitcoin blockchain. Anyone can verify we predicted it before it happened; nobody &mdash; including us &mdash; can edit the record.</div></div>
+    <div class="stat"><div class="v">11 days</div><div class="k">to the first big public test: US midterms, Nov 3</div>
+      <div class="e">The nearest forecast gets graded in public on 3 November &mdash; right or wrong, the record grows on a real clock, not on promises.</div></div>
+  </div>
+</header>
+
+<h2>Why now &mdash; a legally cleared field</h2>
+<p>India had a massive, proven appetite for event prediction: opinion-trading apps (Probo, TradeX, SportsBaazi) grew to tens of millions of users letting people stake money on yes/no questions. In 2025&ndash;26 the law removed all of it: the Online Gaming Act classified them as money games, the apps shut their real-money business, and the government blocked Polymarket and Kalshi for Indian users. The demand did not disappear &mdash; its supply did.</p>
+<figure>
+<svg viewBox="0 0 760 150" role="img" aria-label="Timeline: demand proven, supply banned, Psephos enters">
+  <line x1="30" y1="78" x2="730" y2="78" stroke="var(--baseline)" stroke-width="1.6"/>
+  <circle cx="110" cy="78" r="7" fill="var(--s4)"/>
+  <text x="110" y="50" text-anchor="middle" font-weight="700" font-size="12">2022-25</text>
+  <text x="110" y="104" text-anchor="middle" class="sub">Opinion-trading apps</text>
+  <text x="110" y="118" text-anchor="middle" class="sub">prove mass demand</text>
+  <circle cx="330" cy="78" r="7" fill="var(--critical)"/>
+  <text x="330" y="50" text-anchor="middle" font-weight="700" font-size="12">May 2026</text>
+  <text x="330" y="104" text-anchor="middle" class="sub">Gaming Act rules: real-money</text>
+  <text x="330" y="118" text-anchor="middle" class="sub">apps shut, foreign ones blocked</text>
+  <circle cx="540" cy="78" r="7" fill="var(--s1)"/>
+  <text x="540" y="50" text-anchor="middle" font-weight="700" font-size="12">Oct 2026</text>
+  <text x="540" y="104" text-anchor="middle" class="sub">Psephos live: forecasts as</text>
+  <text x="540" y="118" text-anchor="middle" class="sub">information, fully legal</text>
+  <circle cx="690" cy="78" r="7" fill="var(--s3)"/>
+  <text x="690" y="50" text-anchor="middle" font-weight="700" font-size="12">2027</text>
+  <text x="690" y="104" text-anchor="middle" class="sub">UP, Punjab, UK,</text>
+  <text x="690" y="118" text-anchor="middle" class="sub">GJ, HP elections</text>
+</svg>
+<figcaption>The information layer &mdash; probabilities as analysis, no money staked &mdash; is the one layer that is both legal and empty.</figcaption>
+</figure>
+<p>There is no FiveThirtyEight of India, no Mantic of India. What exists: TV pollsters (content, not product), political consultancies (services, not instruments), and astrology apps. Globally, Mantic raised <b>$29M</b> on AI forecasting with zero India presence and a single-method engine; Psephos already runs four independent methods with a measured reason they must be combined.</p>
+
+<h2>What we have already built</h2>
+<div class="grid2">
+  <div class="cardx"><b>The engine</b>Four instruments per question: a structural model (reads 60 years of results, no news), bias-corrected polls, de-vigged markets, and a protocol-driven research pass. 10,000-run simulations; a CALL only when the methods independently clear 95%.</div>
+  <div class="cardx"><b>The record</b>46 elections back-tested (zero wrong gate calls), a real out-of-sample cycle in 2026 (the one miss-pattern became a safety rule now active in Punjab), Brier-scored probabilities including the open ones, and a lifetime 34/37 on certified calls.</div>
+  <div class="cardx"><b>The trust machinery</b>Every forecast SHA-256-hashed at freeze, anchored into Bitcoin via OpenTimestamps, misses displayed in red forever. "We called it in October" becomes checkable by strangers &mdash; no competitor in this market can say that.</div>
+  <div class="cardx"><b>The product</b>A live app: searchable forecasts, a moments calendar (elections, matches, launches), free-form Ask with instant protocol-driven estimates, weekly self-updating autopilot, and a public changelog. Entered independent benchmarks (ForecastBench) against the world's best AI forecasters.</div>
+</div>
+
+<h2>Market &mdash; directional sizing</h2>
+<p>Figures below are directional estimates for discussion, not audited sizing; the serviceable wedge is what matters at this stage.</p>
+<div class="mkt">
+  <div class="mrow"><div class="ml">Political consulting &amp; campaign analytics, India</div><div class="mb"><div style="width:92%;background:var(--s1);opacity:.75"></div></div><div class="mv">Rs 1,500-3,000+ Cr per major cycle (directional) &mdash; buyers already pay for exactly this judgment, uncalibrated</div></div>
+  <div class="mrow"><div class="ml">Election media: polls, forecast content, licensing</div><div class="mb"><div style="width:55%;background:var(--s2);opacity:.75"></div></div><div class="mv">Every major outlet buys polls each cycle; none can claim a verifiable record &mdash; our cleanest first revenue</div></div>
+  <div class="mrow"><div class="ml">Corporate &amp; financial event-risk advisory</div><div class="mb"><div style="width:40%;background:var(--s3);opacity:.75"></div></div><div class="mv">Policy/regulatory probability feeds for strategy teams and risk desks</div></div>
+  <div class="mrow"><div class="ml">Global AI forecasting (expansion ceiling)</div><div class="mb"><div style="width:70%;background:var(--s4);opacity:.75"></div></div><div class="mv">Mantic: $29M raised; benchmarks give us a refereed scoreboard against them</div></div>
+</div>
+<p><b>Audience engine:</b> the displaced opinion-trading public (tens of millions) plus India's election-obsessed news market &mdash; served legally with probabilities as content. B2C builds the credibility and reach; B2B converts it to revenue.</p>
+
+<h2>Pricing &mdash; illustrative tiers to validate with first customers</h2>
+<div class="tiers">
+  <div class="tier"><div class="tw">B2C &middot; reach</div><div class="tn">Psephos Free</div><div class="tp">Rs 0</div>
+    <ul><li>All public forecasts &amp; track record</li><li>Moments calendar</li><li>The credibility engine &mdash; every reader sees the sealed record</li></ul></div>
+  <div class="tier"><div class="tw">B2C &middot; subscription</div><div class="tn">Psephos Plus</div><div class="tp">Rs 499<small>/month</small></div>
+    <ul><li>Unlimited Ask (instant estimates)</li><li>Alerts when a WATCH becomes a CALL</li><li>Matchweek picks &amp; early analyses</li></ul></div>
+  <div class="tier hot"><div class="tw">B2B &middot; flagship</div><div class="tn">Media License</div><div class="tp">Rs 25-75L<small>/election cycle</small></div>
+    <ul><li>White-label forecast desk for a channel or publisher</li><li>Silence-period-compliant workflows built in</li><li>"Powered by a Bitcoin-sealed record" &mdash; a differentiator no rival newsroom can copy</li></ul></div>
+  <div class="tier"><div class="tw">B2B &middot; recurring</div><div class="tn">Pro / API</div><div class="tp">Rs 2-5L<small>/month</small></div>
+    <ul><li>Consultancies, corporates, risk desks</li><li>API access + custom question coverage</li><li>Private briefings on tripwire events</li></ul></div>
+</div>
+<p style="margin-top:12px">Anchors, not a rate card: the media license is priced against what one opinion-poll contract already costs an outlet per cycle; Plus is priced against news subscriptions, not gambling apps &mdash; deliberately, for regulatory positioning.</p>
+
+<h2>Go-to-market &mdash; a credibility ladder with dated rungs</h2>
+<figure>
+<svg viewBox="0 0 760 210" role="img" aria-label="Four-step ladder from benchmarks to the 2029 general election">
+  <g>
+    <rect x="20" y="130" width="165" height="52" rx="8" fill="var(--surface)" stroke="var(--s1)" stroke-width="1.6"/>
+    <text x="102" y="151" text-anchor="middle" font-weight="700" font-size="12">Now - Q1 2027</text>
+    <text x="102" y="167" text-anchor="middle" class="sub">Benchmarks + record grows</text>
+    <rect x="205" y="95" width="165" height="52" rx="8" fill="var(--surface)" stroke="var(--s2)" stroke-width="1.6"/>
+    <text x="287" y="116" text-anchor="middle" font-weight="700" font-size="12">Feb-Mar 2027</text>
+    <text x="287" y="132" text-anchor="middle" class="sub">India cycle scorecard;</text>
+    <text x="287" y="144" text-anchor="middle" class="tiny">1-2 media pilots</text>
+    <rect x="390" y="60" width="165" height="52" rx="8" fill="var(--surface)" stroke="var(--s3)" stroke-width="1.6"/>
+    <text x="472" y="81" text-anchor="middle" font-weight="700" font-size="12">Dec 2027</text>
+    <text x="472" y="97" text-anchor="middle" class="sub">GJ + HP elections;</text>
+    <text x="472" y="109" text-anchor="middle" class="tiny">license renewals, Pro tier</text>
+    <rect x="575" y="25" width="165" height="52" rx="8" fill="var(--accent)"/>
+    <text x="657" y="46" text-anchor="middle" font-weight="800" font-size="12" fill="#fff">2029 General Election</text>
+    <text x="657" y="62" text-anchor="middle" font-size="10" fill="#fff">the only verified forecaster</text>
+    <text x="657" y="74" text-anchor="middle" font-size="10" fill="#fff">in the country</text>
+  </g>
+  <path d="M185 150 L205 128" stroke="var(--baseline)" stroke-width="1.6" fill="none"/>
+  <path d="M370 115 L390 93" stroke="var(--baseline)" stroke-width="1.6" fill="none"/>
+  <path d="M555 80 L575 58" stroke="var(--baseline)" stroke-width="1.6" fill="none"/>
+  <text x="380" y="200" text-anchor="middle" class="sub">Each rung is an event that scores us in public - the ladder climbs on proof, not promises.</text>
+</svg>
+<figcaption>UP, Punjab and Uttarakhand 2027 forecasts are already frozen and sealed &mdash; the Feb-Mar scorecard is unavoidable, which is the point.</figcaption>
+</figure>
+
+<h2>Why this is defensible</h2>
+<div class="grid2">
+  <div class="cardx"><b>A provable record</b>Self-reported accuracy is marketing; a Bitcoin-anchored ledger is evidence. A competitor can copy features, not two years of sealed history.</div>
+  <div class="cardx"><b>Abstention as the product</b>We certify which forecasts can be acted on and refuse the rest. Anyone whose revenue depends on always answering cannot copy a product built on refusing.</div>
+  <div class="cardx"><b>Structural depth</b>Constituency-level models, measured alliance-transfer coefficients, pollster-error ledgers &mdash; numbers that live in decades of ingested results, not in news a generalist AI can read.</div>
+  <div class="cardx"><b>India home field</b>The data, the languages, the election rhythm, the displaced audience &mdash; and a measured science (our instruments' errors correlate at 0.745; we publish it) that global single-method rivals do not.</div>
+</div>
+
+<h2>Risks, stated plainly</h2>
+<div class="callout"><b>The record is young.</b> 37 resolved certified calls is proof of method, not yet statistical proof of 95% precision; that takes ~60+, which the weekly match forecasts and the 2027 cycle will supply. <b>Regulation:</b> publishing forecasts near polling dates is restricted (silence periods); compliance is designed into the media product, and we sell information, never wagering. <b>Cyclicality:</b> elections cluster; sport and world events exist in the product to smooth engagement and scoring between cycles. <b>Instruments inherit India's poll quality;</b> that is exactly why the engine corrects pollsters with their measured errors and refuses to certify through bad data.</div>
+
+<h2>What we need to go from engine to business</h2>
+<ol class="ask">
+  <li><b>A green light to productionize:</b> move the app from a private page to our own domain on the standard stack, with the engine running server-side (est. a few weeks of focused build).</li>
+  <li><b>A small operating budget:</b> data sources, compute, and a legal review of the media product's silence-period workflow.</li>
+  <li><b>Two media conversations before January:</b> the Feb-Mar 2027 scorecard is the pitch; a pilot signed before the cycle rides the proof as it happens.</li>
+  <li><b>A decision on identity:</b> we currently compete in global benchmarks anonymously; going public with the brand is a step we should take deliberately, ideally on the back of the midterms and first benchmark scores.</li>
+</ol>
+
+<footer>Prepared by Trueinfo Labs &middot; October 2026 &middot; Product: the Psephos engine and app (live). All track-record figures are computed from the pre-registration ledgers; market figures marked directional are estimates for discussion. Psephos provides probabilistic analysis for research; it is not a betting product and offers no financial advice.</footer>
+</div>

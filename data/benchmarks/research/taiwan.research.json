@@ -1,0 +1,381 @@
+{
+ "KXTAIPEIMAYOR-26NOV28-CWAN": {
+  "base_rate": {
+   "reference_class": "Incumbent KMT Taipei mayors seeking re-election (KMT has won every Taipei mayoral race since 1998 except the Ko Wen-je independent wins; incumbent mayors in Taiwan's six special municipalities win re-election ~80% of the time)",
+   "value": 0.78,
+   "source": "Historical Taipei mayoral results 1998-2022 (CEC archives via Wikipedia); 2022 Chiang won 42.3% in a 3-way race"
+  },
+  "evidence": [
+   "2026-09-07 (Focus Taiwan): Candidate registration closed Sep 4; Taipei field is Chiang Wan-an (KMT, incumbent), Puma Shen/Shen Po-yang (DPP), plus four minor/independent candidates — a de facto two-way race.",
+   "2026-05-28 (TVBS poll): Chiang led Shen 58% to 30% (+28), leading even among voters aged 20-29; Chiang favorability 57/22, Shen 31/38.",
+   "2026-10-20 (Taipei Times, Taipei Trust in Democracy Association poll, n=1075, MoE 3pts, fieldwork ~Oct 14-16): Shen 50.3% vs Chiang 33.3%; prior month same pollster had Chiang +1.2 (41.7-40.5). Suitability: Shen 56.6% suitable vs Chiang 41.2%.",
+   "2026-10-18 (Focus Taiwan): Chiang touting first-term record (childcare centers 4 to 45); Shen fighting rumors; first televised debate agreed for Oct 31.",
+   "2026-10 (The Diplomat headline): race described as having 'surprising drama' — consistent with real tightening from the May blowout, though the Shen +17 figure comes from a single green-leaning pollster (designed by Tai Li-an, ex-Formosa) and contradicts all other 2026 polling."
+  ],
+  "strongest_opposing_case": "The only October poll shows Shen ahead by 17 points with a 9.8-point one-month surge among independents, Chiang's suitability rating underwater (41% suitable vs 47% unsuitable), and the same pollster already had the race tied in September — if that trend is real, the incumbent loses.",
+  "reasoning_summary": "Base rate ~0.78 for an incumbent KMT Taipei mayor. May TVBS had Chiang +28 in a structurally blue city with a consolidated blue field. The October green-leaning single pollster showing Shen +17 is an extreme outlier versus every other 2026 survey, but its month-over-month movement signals genuine tightening, and the pending Oct 31 debate adds variance. Adjust down from 0.78 to 0.70.",
+  "key_sources": [
+   {"title": "Poll: Shen leads Chiang in Taipei mayor race", "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/20/2003866309", "date": "2026-10-20"},
+   {"title": "TVBS poll: Chiang Wan-an leads Shen by 28 points", "url": "https://news.tvbs.com.tw/english/3066617", "date": "2026-05-28"},
+   {"title": "2026 local elections: County, city head candidates", "url": "https://focustaiwan.tw/politics/202609075001", "date": "2026-09-07"},
+   {"title": "Chiang touts first-term results; Shen denies cash gift rumors", "url": "https://focustaiwan.tw/politics/202610180010", "date": "2026-10-18"}
+  ],
+  "p": 0.70
+ },
+ "KXTAIPEIMAYOR-26NOV28-SPY": {
+  "base_rate": {
+   "reference_class": "DPP nominees in Taipei mayoral elections since 1998: 0 wins in 7 attempts; DPP challengers to incumbent special-municipality mayors win ~20% of the time",
+   "value": 0.18,
+   "source": "Taipei mayoral results 1998-2022 (CEC archives via Wikipedia)"
+  },
+  "evidence": [
+   "2026-09-07 (Focus Taiwan): Shen Po-yang (Puma Shen, DPP) is registered and is the sole major challenger to Chiang Wan-an; no TPP candidate, so the anti-KMT vote is not split as in 2022.",
+   "2026-10-20 (Taipei Times): Taipei Trust in Democracy Association poll has Shen 50.3% vs Chiang 33.3%, a 9.8-point one-month surge driven partly by independents; 56.6% rate Shen suitable to be mayor.",
+   "2026-05-28 (TVBS): Shen trailed by 28 points shortly after announcing on May 13; Taiwan Brain Trust at that time had Chiang 52.9% vs Shen 29.7%.",
+   "2026-10-15 (Focus Taiwan): first Chiang-Shen televised debate set for Oct 31 — a high-variance event for a challenger closing late."
+  ],
+  "strongest_opposing_case": "No DPP candidate has won Taipei since Chen Shui-bian in 1994; every non-green-pollster survey in 2026 showed Chiang comfortably ahead, and the lone Shen-ahead poll is from a single green-leaning outfit whose 17-point swing in one month strains credibility.",
+  "reasoning_summary": "Base rate for a DPP Taipei challenger ~0.18. Upward adjustments: a consolidated two-way field (no TPP spoiler), Shen's strong suitability numbers, and a documented October tightening even in the pollster's own prior wave. Downward: structural blue lean and incumbent record. Net: slightly above base rate at 0.29, complement-consistent with Chiang at 0.70.",
+  "key_sources": [
+   {"title": "Poll: Shen leads Chiang in Taipei mayor race", "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/20/2003866309", "date": "2026-10-20"},
+   {"title": "TVBS poll: Chiang Wan-an leads Shen by 28 points", "url": "https://news.tvbs.com.tw/english/3066617", "date": "2026-05-28"},
+   {"title": "2026 local elections: County, city head candidates", "url": "https://focustaiwan.tw/politics/202609075001", "date": "2026-09-07"}
+  ],
+  "p": 0.29
+ },
+ "0xea3b1d0099085f43a3098b3e1fbcbe62284ce1bda99384b3d46b82ff202ac016": {
+  "base_rate": {
+   "reference_class": "DPP winning the most of Taiwan's 22 mayor/magistrate seats: achieved only once in the last four local election cycles (2014); ruling party historically suffers a midterm penalty (2014, 2018, 2022 all went against the sitting president's party)",
+   "value": 0.15,
+   "source": "2014/2018/2022 Taiwanese local election results (Wikipedia; CEC)"
+  },
+  "evidence": [
+   "2022 baseline: KMT won 13-14 of 22 head-of-government seats, DPP 5 (its worst local result ever), TPP 1, independents the rest — DPP must roughly double its seats to lead.",
+   "2026-08/09 (Kharis Templeman election previews): structural map still favors KMT — Taoyuan, Keelung, Miaoli, Nantou, Changhua, Yunlin, Hualien, Kinmen, Lienchiang, Hsinchu County and Taitung all rated safe/likely/leans KMT; DPP safe/likely only in Tainan, Kaohsiung, Pingtung, Chiayi County, with Yilan leans-DPP and Penghu a toss-up.",
+   "2026-10-20 (Taipei Times): late DPP momentum in the two biggest blue-held prizes (Shen ahead in a Taipei poll; Su Chiao-hui +13 over Lee Shu-chuan in New Taipei per the same green-leaning pollster) — but even sweeping both, a realistic DPP ceiling is ~9-10 seats vs KMT ~11-13.",
+   "2025-2026 national context (Wikipedia/Focus Taiwan): the 2025 mass recall of KMT legislators failed completely, KMT elected new chair Cheng Li-wun (Nov 2025) who maintains the KMT-TPP alliance; the Lai administration faces a hostile legislature — a classic anti-ruling-party midterm environment."
+  ],
+  "strongest_opposing_case": "A uniform late swing to the DPP is visible in October polls of Taipei and New Taipei; if the DPP sweeps Taipei, New Taipei, Taichung, Yilan, Penghu and Hsinchu City while holding its south, it reaches ~11 seats and the alphabetical tie-breaker (Democratic... before Kuomintang) also favors it in any tie.",
+  "reasoning_summary": "Base rate ~0.15 for DPP plurality given the midterm penalty and the 2022 5-seat floor. The county/rural map is so blue-tilted that even a strong DPP night (flipping 2-3 municipalities) likely leaves KMT ahead on seat count. October metro-poll momentum and the DPP-favorable tie-breaker justify only a small bump down from... adjustment to 0.10 after weighting Templeman's race-by-race map showing ~11 KMT-leaning seats.",
+  "key_sources": [
+   {"title": "Taiwan's 2026 Local Elections Preview (5) — Summing Up", "url": "https://www.kharistempleman.com/blog/taiwan-2026-local-elections-preview-5-wrap-up", "date": "2026-09"},
+   {"title": "2022 Taiwanese local elections", "url": "https://en.wikipedia.org/wiki/2022_Taiwanese_local_elections", "date": "2022-11-26"},
+   {"title": "2026 Taiwanese local elections", "url": "https://en.wikipedia.org/wiki/2026_Taiwanese_local_elections", "date": "2026-10"},
+   {"title": "A Look Ahead to Taiwan's 2026 Local Elections", "url": "https://www.nbr.org/publication/a-look-ahead-to-taiwans-2026-local-elections/", "date": "2026"}
+  ],
+  "p": 0.10
+ },
+ "0xe232f2c2d14a5ab8275e34cbc068944206df7fa382c279fca0745c8dd0522e0e": {
+  "base_rate": {
+   "reference_class": "DPP challengers for an open Taichung mayoralty after two terms of popular KMT incumbent (Lu Shiow-yen); Taichung has flipped parties at 3 of the last 5 open/challenge cycles but KMT won it 2018 and 2022 by wide margins",
+   "value": 0.3,
+   "source": "Taichung mayoral results 2010-2022 (CEC via Wikipedia)"
+  },
+  "evidence": [
+   "2026-03-31 (Focus Taiwan): KMT nominated legislator Johnny Chiang (Chiang Chi-chen) after internal polling; DPP runs legislator Ho Hsin-chun — both confirmed registered (Focus Taiwan candidate list, 2026-09-07).",
+   "2026-01 (TVBS): Johnny Chiang led Ho Hsin-chun 46% to 31% (+15); Ho's support among 20-29s had surged from 22% to 44%.",
+   "2026-10-14 (Focus Taiwan): Johnny Chiang campaigning on a robotics-hub platform; Ho holding rallies with DPP councilors; no October public poll found — Jan numbers are the latest credible ones.",
+   "Context: outgoing KMT mayor Lu Shiow-yen won 2022 by ~20 points and remains popular; Taichung was a key site of KMT chair Cheng Li-wun's 20,000-person rallies starting mid-October."
+  ],
+  "strongest_opposing_case": "Taichung is Taiwan's classic swing city (DPP's Lin Chia-lung won it in 2014), Ho's youth support doubled in the Jan TVBS poll, no public polling since January leaves the race state genuinely unknown, and the October metro swing to the DPP seen in Taipei/New Taipei could extend to Taichung.",
+  "reasoning_summary": "Base rate ~0.30 for a DPP pickup of open Taichung. The last public poll (TVBS, Jan 2026) had Johnny Chiang +15, he inherits a popular two-term KMT administration, and he is a strong, well-known nominee (former KMT chairman, local legislator). Lack of fresh polling and possible late green swing cap how low to go. Final 0.25.",
+  "key_sources": [
+   {"title": "KMT names Johnny Chiang as Taichung mayoral candidate", "url": "https://focustaiwan.tw/politics/202603310009", "date": "2026-03-31"},
+   {"title": "2026 local elections: County, city head candidates", "url": "https://focustaiwan.tw/politics/202609075001", "date": "2026-09-07"},
+   {"title": "Taiwan's parties ramp up campaigning ahead of Nov. 28 local elections", "url": "https://focustaiwan.tw/politics/202610140024", "date": "2026-10-14"}
+  ],
+  "p": 0.25
+ },
+ "0x5530aaf28138eb571e391eb31433c8d0f14942ab264e0e1c8ea51039e43832cf": {
+  "base_rate": {
+   "reference_class": "KMT nominees in Yilan County, a historically deep-green county the KMT nonetheless won in 2018 and 2022; defending-party nominee after an incumbent corruption scandal wins ~35-40%",
+   "value": 0.4,
+   "source": "Yilan magistrate results 1989-2022 (CEC via Wikipedia); KMT incumbent Lin Zi-miao's corruption case"
+  },
+  "evidence": [
+   "2026-09-07 (Focus Taiwan): registered field — Wu Tsung-hsien (KMT legislator), Lin Kuo-chang (DPP), plus three independents.",
+   "2026-05-04 (Focus Taiwan/Taiwan News): Wu Tsung-hsien clinched the KMT-TPP opposition-alliance nomination, but in the joint poll Lin Kuo-chang had 28.9% vs Wu's 27.6% — the DPP candidate led even the blue camp's own survey.",
+   "2026-03 (Formosa e-paper, Mar 16-18): Lin Kuo-chang led Wu Tsung-hsien by 2.8 points.",
+   "2026-08/09 (Kharis Templeman preview): Yilan rated 'Leans DPP' — green fundamentals plus KMT baggage from the outgoing administration's corruption prosecution."
+  ],
+  "strongest_opposing_case": "KMT has won Yilan twice in a row, Wu Tsung-hsien is a high-profile legislator with unified KMT-TPP backing, every poll so far is within the margin of error, and three independent candidates could fragment the green-leaning protest vote.",
+  "reasoning_summary": "Base rate ~0.40 for the KMT holding Yilan. Adjust down: DPP's Lin led both the March Formosa poll and the blue camp's own May joint poll, the county's long-run green lean reasserts in a two-way race, the outgoing KMT magistrate's corruption case drags the brand, and Templeman rates it Leans DPP. Final 0.38 for Wu.",
+  "key_sources": [
+   {"title": "Wu Tsung-hsien wins opposition alliance nomination for Yilan", "url": "https://focustaiwan.tw/politics/202605040010", "date": "2026-05-04"},
+   {"title": "Taiwan's 2026 Local Elections Preview — ratings", "url": "https://www.kharistempleman.com/blog/taiwan-2026-local-elections-preview-5-wrap-up", "date": "2026-09"},
+   {"title": "2026 local elections: County, city head candidates", "url": "https://focustaiwan.tw/politics/202609075001", "date": "2026-09-07"}
+  ],
+  "p": 0.38
+ },
+ "0x7279975d5426546b5a28aea4b7d0ac683ddfa23b4e958079faca70de26409429": {
+  "base_rate": {
+   "reference_class": "DPP nominees for Taitung magistrate: Taitung is one of the bluest counties in Taiwan; DPP has won it once (1997) in over three decades",
+   "value": 0.15,
+   "source": "Taitung magistrate results 1989-2022 (CEC via Wikipedia)"
+  },
+  "evidence": [
+   "2026-09-07 (Focus Taiwan): registered field — Chen Ying (DPP legislator), Wu Hsiu-hua (KMT), plus two independents; KMT incumbent Rao Ching-ling is term-limited.",
+   "2026-05 (CNEWS poll, late May): head-to-head Wu Hsiu-hua 51.3% vs Chen Ying 22.4%; three-way scenario Wu 44.2%, Chen 15.0%, Liu Chao-hao 13.4%, undecided 27.4%.",
+   "2026-08/09 (Kharis Templeman preview): Taitung rated 'Leans KMT' (KMT-favoring fundamentals in the east-coast counties)."
+  ],
+  "strongest_opposing_case": "Chen Ying is a long-serving indigenous legislator with real county-wide name recognition, nearly 30% of May respondents were undecided, no post-May public polling exists, and independents on the ballot could split the pan-blue vote in a low-turnout county.",
+  "reasoning_summary": "Base rate ~0.15 for a DPP Taitung win. The only 2026 poll has Chen Ying down 29 points head-to-head, the county's deep-blue fundamentals are intact, and expert ratings put it leans-KMT at worst for the blue camp. Slight credit for undecideds and her incumbent-legislator profile. Final 0.10.",
+  "key_sources": [
+   {"title": "Taiwan's 2026 Local Elections Preview (4) — South, East, and Offshore Islands", "url": "https://www.kharistempleman.com/blog/taiwan-2026-local-elections-preview-4-south-east-and-offshore-islands", "date": "2026-08"},
+   {"title": "2026 local elections: County, city head candidates", "url": "https://focustaiwan.tw/politics/202609075001", "date": "2026-09-07"},
+   {"title": "CNEWS Taitung magistrate poll (Wu 51.3% vs Chen 22.4%)", "url": "https://www.taiwannews.com.tw/en/news/6353730", "date": "2026-05"}
+  ],
+  "p": 0.10
+ },
+ "0x0c56e5dfd8a9716cdd20ab789d72883a7a87bb732eeec55186cb636460db7edc": {
+  "base_rate": {
+   "reference_class": "DPP nominees for Hsinchu County magistrate: DPP has never won Hsinchu County in the direct-election era; Hakka-belt county votes reliably blue at local level",
+   "value": 0.15,
+   "source": "Hsinchu County magistrate results 1989-2022 (CEC via Wikipedia)"
+  },
+  "evidence": [
+   "2026-09-07 (Focus Taiwan): registered field — Cheng Chao-fang (DPP, Zhubei mayor), Hsu Hsin-ying (KMT legislator), Chu Ting-yu (independent); KMT incumbent Yang Wen-ke term-limited.",
+   "2026 (Taiwan News): Hsu Hsin-ying secured the KMT nomination; Cheng Chao-fang accepted the DPP's draft — no public head-to-head poll of the matchup found as of 2026-10-25.",
+   "2026-08/09 (Kharis Templeman preview): Hsinchu County rated 'Leans KMT'.",
+   "Context: Cheng is the popular mayor of fast-growing Zhubei (tech-worker influx has made the county younger and less monolithically blue), which is why the rating is leans rather than safe KMT."
+  ],
+  "strongest_opposing_case": "Cheng Chao-fang runs the county's population center Zhubei with a strong local record, the county's demographics are shifting rapidly toward young tech migrants, an independent (Chu Ting-yu) may siphon blue votes, and there is zero public polling to confirm a KMT lead.",
+  "reasoning_summary": "Base rate ~0.15 for a DPP Hsinchu County win — the party has never won it. Hsu Hsin-ying is a well-known legislator with unified blue support in a structurally blue Hakka county rated Leans KMT by Templeman. Modest upgrade for Cheng's Zhubei base, demographic change and the blue-splitting independent. Final 0.20.",
+  "key_sources": [
+   {"title": "Taiwan's 2026 Local Elections Preview — ratings", "url": "https://www.kharistempleman.com/blog/taiwan-2026-local-elections-preview-5-wrap-up", "date": "2026-09"},
+   {"title": "2026 local elections: County, city head candidates", "url": "https://focustaiwan.tw/politics/202609075001", "date": "2026-09-07"},
+   {"title": "Hsu Hsin-ying secures KMT nomination for Hsinchu County", "url": "https://www.taiwannews.com.tw/en/news/6324809", "date": "2026-05"}
+  ],
+  "p": 0.20
+ },
+ "0x0ff4131bebd7e76a8d4e10951cf22ed92616ed2b5631d71e80721e7afd94f6ed": {
+  "base_rate": {
+   "reference_class": "KMT nominees for open New Taipei mayoralty: KMT has held New Taipei continuously since 2010 (Chu, Hou), winning the last two races by 14-29 points",
+   "value": 0.62,
+   "source": "New Taipei mayoral results 2010-2022 (CEC via Wikipedia)"
+  },
+  "evidence": [
+   "2026-09-07 (Focus Taiwan): registered field — Lee Shu-chuan (KMT, former Taipei deputy mayor), Su Chiao-hui (DPP legislator), Su Hui-huang (independent); Hou Yu-ih term-limited; the TPP (Huang Kuo-chang had polled ~15% in January) ultimately did not field a candidate, consolidating the blue vote.",
+   "2026-01-22 (Formosa e-paper): three-way poll Lee 34.2%, Su Chiao-hui 32.7%, Huang Kuo-chang (TPP) 15.4% — tight even before blue consolidation.",
+   "2026-10-20 (Taiwan News/Taipei Times, Taipei Trust in Democracy Association): Su Chiao-hui 43.1% vs Lee 30.0% (+13.1) — but this is the same green-leaning pollster showing a +17 Shen lead in Taipei the same day.",
+   "Context: Lee ('Uncle Chuan') built a strong engineer-administrator reputation as Taipei deputy mayor; Su is the daughter of ex-premier Su Tseng-chang with a decade of constituency service in the city."
+  ],
+  "strongest_opposing_case": "The only October poll has Su up 13 points, Lee has never run for office himself and entered late, Su has run a disciplined two-year ground campaign, and even the January blue-friendly Formosa poll had the race within 1.5 points before Su gained momentum.",
+  "reasoning_summary": "Base rate ~0.62 for the KMT holding New Taipei. Blue-vote consolidation (no TPP candidate) and Lee's high favorability support a KMT edge, but the January poll was near-tied and the sole October survey (green-leaning house) has Su +13, signaling at minimum a genuine toss-up drift. Cut to 0.55, a modest KMT edge with wide uncertainty.",
+  "key_sources": [
+   {"title": "Formosa poll: Lee 34.2%, Su 32.7%, Huang 15.4% in New Taipei", "url": "https://www.taiwannews.com.tw/en/news/6251868", "date": "2026-01-22"},
+   {"title": "Poll: Su Chiao-hui leads Lee Shu-chuan by 13.1 points", "url": "https://www.taiwannews.com.tw/news/6461460", "date": "2026-10-20"},
+   {"title": "2026 local elections: County, city head candidates", "url": "https://focustaiwan.tw/politics/202609075001", "date": "2026-09-07"}
+  ],
+  "p": 0.55
+ },
+ "0xd0a4cdae9e1bf187195863b172242ec3c4a9f0332b43cad2fb008753e560593d": {
+  "base_rate": {
+   "reference_class": "KMT nominees for Hsinchu County magistrate (KMT/blue-camp candidates have won every Hsinchu County race in the democratic era; KMT retention of own open seats in 2022 ran ~85%)",
+   "value": 0.8,
+   "source": "Hsinchu County magistrate results 1989-2022 (CEC via Wikipedia)"
+  },
+  "evidence": [
+   "2026-09-07 (Focus Taiwan): Hsu Hsin-ying registered as the KMT candidate vs Cheng Chao-fang (DPP) and independent Chu Ting-yu.",
+   "2026-05 (Taiwan News): Hsu, a sitting legislator and former Minkuotang founder who rejoined the KMT, secured the KMT nomination for the open seat (incumbent Yang Wen-ke term-limited).",
+   "2026-08/09 (Kharis Templeman preview): rated 'Leans KMT'; no public head-to-head poll found through 2026-10-25."
+  ],
+  "strongest_opposing_case": "Hsu once split the blue camp by founding her own party and may face residual distrust, independent Chu Ting-yu could divide blue votes, and DPP's Cheng governs booming Zhubei, home to a growing young tech electorate that doesn't vote traditional blue lines.",
+  "reasoning_summary": "Base rate ~0.80 for the KMT candidate in never-DPP Hsinchu County. Hsu Hsin-ying is a two-time county-wide vote winner (legislator) with the blue establishment behind her. Shave slightly for the blue-splitting independent, her party-switching history and absence of confirming polls. Final 0.78 (complement of Cheng at 0.20 with ~2% for independents).",
+  "key_sources": [
+   {"title": "Hsu Hsin-ying secures KMT nomination for Hsinchu County", "url": "https://www.taiwannews.com.tw/en/news/6324809", "date": "2026-05"},
+   {"title": "2026 local elections: County, city head candidates", "url": "https://focustaiwan.tw/politics/202609075001", "date": "2026-09-07"},
+   {"title": "Taiwan's 2026 Local Elections Preview — ratings", "url": "https://www.kharistempleman.com/blog/taiwan-2026-local-elections-preview-5-wrap-up", "date": "2026-09"}
+  ],
+  "p": 0.78
+ },
+ "0x133b51a6851a2ee619e841693c0f75f3c3fdc8d75d69eadd3f0c0fe9105c50ee": {
+  "base_rate": {
+   "reference_class": "KMT nominees for Kaohsiung mayor: 1 win (Han Kuo-yu 2018) in the last 7 contests; DPP has otherwise held Kaohsiung since 1998 and won 2022 by ~25 points",
+   "value": 0.2,
+   "source": "Kaohsiung mayoral results 1998-2022 (CEC via Wikipedia); Ko Chih-en lost to Chen Chi-mai 2022"
+  },
+  "evidence": [
+   "2026-09-07 (Focus Taiwan): registered field — Ko Chih-en (KMT legislator, 2022 nominee), Lai Jui-lung (DPP legislator), plus three minor/independent candidates; DPP incumbent Chen Chi-mai term-limited.",
+   "2026-01 (ETtoday): Ko 44.0% vs Lai 37.7% — Ko ahead early while the DPP was still exiting its four-way primary.",
+   "2026-07/08 (Newtalk): Lai 43.9% vs Ko 32.3%; (Big Media, early Aug, online): Lai 47.8% vs Ko 46.1% — post-primary consolidation moved the race to Lai.",
+   "2026-10-01 (Focus Taiwan): Lai released his first campaign video; Ko working traditional markets — race actively contested but no October public poll found."
+  ],
+  "strongest_opposing_case": "Ko Chih-en led by 6 points as recently as January, consistently outpolls the KMT brand among unaffiliated Kaohsiung voters, faces a Lai who won a four-way primary that left intra-DPP bruises, and one August online poll had the race inside two points.",
+  "reasoning_summary": "Base rate ~0.20 for a KMT Kaohsiung win. Ko's strong personal brand and early lead argue up; the post-primary polls flipping to Lai (+1.6 to +11.6), the city's deep-green fundamentals, and the 2022 25-point blowout argue down. A midterm anti-DPP environment keeps it from collapsing further. Final 0.29.",
+  "key_sources": [
+   {"title": "ETtoday poll: Ko Chih-en 44% vs Lai Jui-lung 37.7%", "url": "https://www.taiwannews.com.tw/news/6294228", "date": "2026-01"},
+   {"title": "Kaohsiung campaign: Lai releases first video, Ko visits markets", "url": "https://focustaiwan.tw/politics/202610010017", "date": "2026-10-01"},
+   {"title": "2026 local elections: County, city head candidates", "url": "https://focustaiwan.tw/politics/202609075001", "date": "2026-09-07"}
+  ],
+  "p": 0.29
+ },
+ "0xbf7a9da08326512f76129d4accf9f7d852dbf1cb7dd2c512479ff40c872f5659": {
+  "base_rate": {
+   "reference_class": "Incumbent KMT Taipei mayors seeking re-election (KMT won every Taipei race since 1998 absent an independent phenomenon; special-municipality incumbents re-elected ~80%)",
+   "value": 0.78,
+   "source": "Taipei mayoral results 1998-2022 (CEC archives via Wikipedia)"
+  },
+  "evidence": [
+   "2026-09-07 (Focus Taiwan): Chiang Wan-an (KMT) registered for re-election; main challenger Puma Shen (DPP); four minor candidates; no TPP spoiler unlike 2022.",
+   "2026-05-28 (TVBS): Chiang 58% vs Shen 30%, leading all age groups including 20-29.",
+   "2026-10-20 (Taipei Times, Taipei Trust in Democracy Association): Shen 50.3% vs Chiang 33.3% — single green-leaning pollster, but its own September wave already had the race tied (41.7-40.5), evidencing real tightening.",
+   "2026-10-18 (Focus Taiwan): Chiang campaigning on childcare and first-term delivery; televised debate Oct 31."
+  ],
+  "strongest_opposing_case": "October polling shows Chiang's suitability underwater (41% vs 47%), a 17-point Shen lead among a 1,075-person sample, 48.7% saying the DPP deserves a chance to govern Taipei, and movement concentrated among independents — the profile of an incumbent losing his majority coalition.",
+  "reasoning_summary": "Identical event to the other Taipei-Chiang question: base rate ~0.78 for an incumbent KMT Taipei mayor, marked down for the documented October tightening (tied September wave, outlier Shen +17 October wave from a green-leaning house) and debate risk, held up by the May +28 TVBS lead and Taipei's blue structure. Final 0.70.",
+  "key_sources": [
+   {"title": "Poll: Shen leads Chiang in Taipei mayor race", "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/20/2003866309", "date": "2026-10-20"},
+   {"title": "TVBS poll: Chiang Wan-an leads Shen by 28 points", "url": "https://news.tvbs.com.tw/english/3066617", "date": "2026-05-28"},
+   {"title": "Chiang touts first-term results; Shen denies cash gift rumors", "url": "https://focustaiwan.tw/politics/202610180010", "date": "2026-10-18"}
+  ],
+  "p": 0.70
+ },
+ "0xbc34e02e0b1102cb7aeeff54ac8698c57b7913cda913a56e8b71c4806cd4a0e6": {
+  "base_rate": {
+   "reference_class": "DPP nominees in Yilan County, the party's historic heartland (DPP governed Yilan 1981-2005 and 2009-2018); challenger vs scandal-tainted outgoing KMT administration",
+   "value": 0.55,
+   "source": "Yilan magistrate results 1981-2022 (CEC via Wikipedia)"
+  },
+  "evidence": [
+   "2026-09-07 (Focus Taiwan): Lin Kuo-chang (DPP, lawyer) registered vs Wu Tsung-hsien (KMT) and three independents.",
+   "2026-03 (Formosa e-paper, Mar 16-18): Lin led Wu by 2.8 points.",
+   "2026-05-04 (Focus Taiwan/Taiwan News): even the KMT-TPP alliance's own joint nomination poll had Lin 28.9% vs Wu 27.6%.",
+   "2026-08/09 (Kharis Templeman preview): Yilan rated 'Leans DPP'; outgoing KMT magistrate Lin Zi-miao's corruption prosecution weighs on the blue ticket."
+  ],
+  "strongest_opposing_case": "Yilan has voted KMT in the last two magistrate races, Wu Tsung-hsien is a nationally visible legislator with unified KMT-TPP backing, all polls are inside the margin of error, and multiple independents could leak votes the DPP needs in a plurality race.",
+  "reasoning_summary": "Base rate ~0.55 for the DPP recapturing its heartland against a corruption-tainted outgoing KMT administration. Lin led the March Formosa poll and the blue camp's own May joint poll; Templeman rates the county Leans DPP; the national anti-DPP midterm wind and Wu's profile keep it close. Final 0.60 (complement of Wu 0.38 plus ~2% independents).",
+  "key_sources": [
+   {"title": "Wu Tsung-hsien wins opposition alliance nomination for Yilan (joint poll detail)", "url": "https://focustaiwan.tw/politics/202605040010", "date": "2026-05-04"},
+   {"title": "Taiwan's 2026 Local Elections Preview — ratings", "url": "https://www.kharistempleman.com/blog/taiwan-2026-local-elections-preview-5-wrap-up", "date": "2026-09"},
+   {"title": "2026 local elections: County, city head candidates", "url": "https://focustaiwan.tw/politics/202609075001", "date": "2026-09-07"}
+  ],
+  "p": 0.60
+ },
+ "0x2464652e9f2b4b0dd5f228aae58d17222f1102d6d3cea1a7f898a8e0880e5a8e": {
+  "base_rate": {
+   "reference_class": "Incumbent KMT magistrates of Lienchiang (Matsu) seeking re-election: the KMT has won essentially every Lienchiang race in the democratic era, typically with 55-70%; incumbents there are near-unbeatable",
+   "value": 0.88,
+   "source": "Lienchiang magistrate results 1993-2022 (CEC via Wikipedia); Wang Chung-ming won 2022"
+  },
+  "evidence": [
+   "2026-09-07 (Focus Taiwan): registered field is just two candidates — incumbent Wang Chung-ming (KMT) and independent Tsao Erh-yuan; no DPP candidate even filed.",
+   "2026-10 (Wikipedia, 2026 Taiwanese local elections): Wang listed among the eight incumbents seeking re-election; Lienchiang is the KMT's safest jurisdiction (deep-blue frontline island, ~10,000 voters).",
+   "2026-08/09 (Kharis Templeman preview, offshore islands section): Lienchiang grouped with the safest KMT offshore seats."
+  ],
+  "strongest_opposing_case": "Matsu's tiny electorate (~10k voters) makes any race volatile — a strong local independent with clan networks can flip hundreds of decisive votes, and one-on-one contests against incumbents have occasionally been close in offshore counties (e.g., Kinmen upsets).",
+  "reasoning_summary": "Base rate ~0.88 for a KMT incumbent in Taiwan's bluest county. Wang faces a single independent, no DPP or TPP opponent, and no reported scandal; offshore-island small-sample volatility is the only real risk. Nudge slightly up from base rate to 0.90.",
+  "key_sources": [
+   {"title": "2026 local elections: County, city head candidates", "url": "https://focustaiwan.tw/politics/202609075001", "date": "2026-09-07"},
+   {"title": "2026 Taiwanese local elections (incumbents table)", "url": "https://en.wikipedia.org/wiki/2026_Taiwanese_local_elections", "date": "2026-10"},
+   {"title": "Taiwan's 2026 Local Elections Preview (4) — South, East, and Offshore Islands", "url": "https://www.kharistempleman.com/blog/taiwan-2026-local-elections-preview-4-south-east-and-offshore-islands", "date": "2026-08"}
+  ],
+  "p": 0.90
+ },
+ "0xa157fcc18df3d9ca0655349b496c2bda2f13756f69c94d1dbca487863b01486c": {
+  "base_rate": {
+   "reference_class": "DPP nominees for Kaohsiung mayor: DPP has won 6 of the last 7 Kaohsiung races (all except Han Kuo-yu 2018) and won 2022 by ~25 points",
+   "value": 0.75,
+   "source": "Kaohsiung mayoral results 1998-2022 (CEC via Wikipedia)"
+  },
+  "evidence": [
+   "2026 (Taiwan News/Focus Taiwan): Lai Jui-lung won the competitive four-way DPP primary (over Chiu Yi-ying, Lin Tai-hua, Hsu Chih-chieh) and registered as nominee (Focus Taiwan list, 2026-09-07) against KMT's Ko Chih-en.",
+   "2026-07/08 (Newtalk): Lai 43.9% vs Ko 32.3% (+11.6).",
+   "2026-08 (Big Media, online, MoE 2.4): Lai 47.8% vs Ko 46.1% (+1.6) — closest post-primary reading.",
+   "2026-01 (ETtoday): Ko led 44.0-37.7 pre-primary, showing Ko's personal strength; post-primary green consolidation reversed it.",
+   "2026-10-01 (Focus Taiwan): both campaigns fully engaged; no October public poll found."
+  ],
+  "strongest_opposing_case": "Ko Chih-en led by 6 in January and trailed by under 2 in one August online poll; a bruising four-way DPP primary, the anti-ruling-party midterm environment, and Han Kuo-yu's 2018 precedent prove deep-green Kaohsiung can flip when the DPP is nationally unpopular.",
+  "reasoning_summary": "Base rate ~0.75 for the DPP holding Kaohsiung. Post-primary polls show Lai ahead by 2-12 points, the city's green fundamentals are the strongest of any special municipality alongside Tainan, and Ko already lost county-wide by 25 in 2022. Discount modestly for the midterm wind and Ko's crossover appeal. Final 0.70.",
+  "key_sources": [
+   {"title": "Kaohsiung campaign: Lai releases first video, Ko visits markets", "url": "https://focustaiwan.tw/politics/202610010017", "date": "2026-10-01"},
+   {"title": "Big Media poll: Lai 47.78% vs Ko 46.14%", "url": "https://www.taiwannews.com.tw/news/6419067", "date": "2026-08"},
+   {"title": "2026 local elections: County, city head candidates", "url": "https://focustaiwan.tw/politics/202609075001", "date": "2026-09-07"}
+  ],
+  "p": 0.70
+ },
+ "0x9da40c171ec15e8220688f8f3498f7aff07fbcb23bdfc0e3817bc39f091e64f0": {
+  "base_rate": {
+   "reference_class": "KMT nominees for Penghu magistrate: Penghu alternates frequently (KMT won 2018, DPP 2022); open-seat races there are historical toss-ups decided by small margins",
+   "value": 0.45,
+   "source": "Penghu magistrate results 1993-2022 (CEC via Wikipedia)"
+  },
+  "evidence": [
+   "2026-09-07 (Focus Taiwan): registered field — Chen Chen-chung (KMT), Wu Shu-chin (DPP), plus a TSP candidate and three independents (six total); DPP incumbent Chen Kuang-fu is not on the ballot.",
+   "2026-07-14~08-03 (ETtoday poll): Chen Chen-chung led with 30% vs Wu Shu-chin 21% and independent Yeh Chu-lin 18% — a 9-point KMT lead with a large undecided share.",
+   "2026-08/09 (Kharis Templeman preview): Penghu rated 'Toss-up'."
+  ],
+  "strongest_opposing_case": "Penghu's six-way field with strong independents (Yeh at 18%) makes a 30% plurality fragile; the DPP won the county in 2022, its machine can consolidate late, and island races hinge on turnout operations a summer poll cannot capture.",
+  "reasoning_summary": "Base rate ~0.45 for the KMT in toss-up Penghu. The only public poll (ETtoday, Jul-Aug) has Chen Chen-chung +9 over the DPP's Wu with the vote fragmented among independents, and the national environment tilts blue. Fragmentation cuts both ways and expert rating stays toss-up, so only a modest bump. Final 0.55.",
+  "key_sources": [
+   {"title": "ETtoday Penghu poll: Chen 30%, Wu 21%, Yeh 18%", "url": "https://www.taiwannews.com.tw/en/news/6373901", "date": "2026-08"},
+   {"title": "Taiwan's 2026 Local Elections Preview (4) — South, East, and Offshore Islands", "url": "https://www.kharistempleman.com/blog/taiwan-2026-local-elections-preview-4-south-east-and-offshore-islands", "date": "2026-08"},
+   {"title": "2026 local elections: County, city head candidates", "url": "https://focustaiwan.tw/politics/202609075001", "date": "2026-09-07"}
+  ],
+  "p": 0.55
+ },
+ "0xc0f076bc4d90a44df34a729277e9d1f294f0cb60d2c3b1b3800908b1e15b923b": {
+  "base_rate": {
+   "reference_class": "KMT winning the most of Taiwan's 22 mayor/magistrate seats: achieved in 3 of the last 4 local cycles (2018, 2022, and 2010-era equivalents); opposition party to the sitting president has won every local midterm since 2014",
+   "value": 0.8,
+   "source": "2014/2018/2022 Taiwanese local election results (Wikipedia; CEC)"
+  },
+  "evidence": [
+   "2022 baseline: KMT took 13-14 of 22 seats vs DPP 5 — the KMT starts with a huge incumbency and open-seat-defense advantage.",
+   "2026-08/09 (Kharis Templeman previews): safe/likely/leans-KMT seats include Taoyuan, Keelung, Miaoli, Nantou, Changhua, Yunlin, Hualien, Kinmen, Lienchiang, Hsinchu County, Taitung (~11 before counting Taipei/New Taipei/Taichung); DPP safe/likely roughly Tainan, Kaohsiung, Pingtung, Chiayi County plus leans-DPP Yilan.",
+   "2025-11-01 (Focus Taiwan/Wikipedia): failed 2025 mass recall left KMT legislators intact; new chair Cheng Li-wun sustains KMT-TPP cooperation, which avoided vote-splitting in New Taipei (no TPP candidate) and Yilan (joint nomination).",
+   "2026-10-20 (Taipei Times): countervailing late-October DPP momentum in Taipei and New Taipei polls — losing both plus Taichung would cut KMT to ~10-11, still likely a plurality.",
+   "Tie-breaker note: in an exact tie the market resolves to the alphabetically first English name, which favors DPP — a marginal drag on KMT probability."
+  ],
+  "strongest_opposing_case": "If the October metro swing is real and uniform, the DPP could flip Taipei, New Taipei and Taichung while holding its five 2022 seats and taking Yilan, Penghu and Hsinchu City, reaching ~10-11 seats, and the alphabetical tie-breaker hands any tie to the DPP, not the KMT.",
+  "reasoning_summary": "Base rate ~0.80 for KMT plurality: midterm penalty against the ruling DPP plus the KMT's deep structural advantage in county races (11+ seats rated safe/likely/leans blue before the big-city toss-ups). Even a bad KMT night in the metros leaves ~10-12 seats vs a realistic DPP ceiling of ~9-10. Late DPP momentum and the DPP-favoring tie-breaker trim it. Final 0.88.",
+  "key_sources": [
+   {"title": "Taiwan's 2026 Local Elections Preview (5) — Summing Up", "url": "https://www.kharistempleman.com/blog/taiwan-2026-local-elections-preview-5-wrap-up", "date": "2026-09"},
+   {"title": "2022 Taiwanese local elections", "url": "https://en.wikipedia.org/wiki/2022_Taiwanese_local_elections", "date": "2022-11-26"},
+   {"title": "Taiwan's 2026 local elections test the opposition alliance", "url": "https://eastasiaforum.org/2026/08/19/taiwans-2026-local-elections-test-the-opposition-alliance/", "date": "2026-08-19"},
+   {"title": "A Look Ahead to Taiwan's 2026 Local Elections", "url": "https://www.nbr.org/publication/a-look-ahead-to-taiwans-2026-local-elections/", "date": "2026"}
+  ],
+  "p": 0.88
+ },
+ "0x3e99612283f8182aefc17bbb51087f43c423608e2e0b2196a1512e145160a648": {
+  "base_rate": {
+   "reference_class": "DPP nominees for Tainan mayor: DPP has won every Tainan mayoral/magistrate race since 1997, usually by double digits (2022 closest at ~5 points)",
+   "value": 0.85,
+   "source": "Tainan results 1997-2022 (CEC via Wikipedia)"
+  },
+  "evidence": [
+   "2026 (Taiwan News): Chen Ting-fei won the DPP Tainan primary with 60.85%, defeating Lin Chun-hsien decisively — no lingering nomination dispute reported.",
+   "2026-09-07 (Focus Taiwan): registered field — Chen Ting-fei (DPP), Hsieh Lung-chieh (KMT), one minor-party and one independent candidate; incumbent Huang Wei-che term-limited.",
+   "2026-10 (Focus Taiwan campaign coverage): no public poll showing the KMT's Hsieh competitive was found through 2026-10-25; Tainan draws little national attention compared with the toss-up metros, itself a sign the race is not viewed as close."
+  ],
+  "strongest_opposing_case": "The 2022 Tainan race was unexpectedly close (~5 points) amid local corruption controversies; a strong anti-DPP midterm wave plus 2025-26 flood-recovery grievances in the south could compress Chen's margin, and Hsieh Lung-chieh is a seasoned Tainan politician.",
+  "reasoning_summary": "Base rate ~0.85 for the DPP in Tainan, its safest big city since 1997. Chen Ting-fei won the primary cleanly with over 60%, faces a KMT opponent with no polling evidence of competitiveness, and analysts rate Tainan safe/likely DPP. The 2022 near-miss and midterm wind warrant no premium above base. Final 0.85.",
+  "key_sources": [
+   {"title": "Chen Ting-fei wins DPP Tainan mayoral primary with 60.85%", "url": "https://www.taiwannews.com.tw/en/news/6354515", "date": "2026"},
+   {"title": "2026 local elections: County, city head candidates", "url": "https://focustaiwan.tw/politics/202609075001", "date": "2026-09-07"},
+   {"title": "Taiwan's 2026 Local Elections Preview (4) — South, East, and Offshore Islands", "url": "https://www.kharistempleman.com/blog/taiwan-2026-local-elections-preview-4-south-east-and-offshore-islands", "date": "2026-08"}
+  ],
+  "p": 0.85
+ },
+ "0x598c99fbef3a7d4fb2c3a5af62e67e4ef5f5f7447e966569aee6c917bff12a25": {
+  "base_rate": {
+   "reference_class": "DPP nominees for New Taipei mayor: 0 wins since the municipality was created in 2010 (four straight KMT wins), but two races (2010, 2018 primary-era) were single-digit",
+   "value": 0.35,
+   "source": "New Taipei mayoral results 2010-2022 (CEC via Wikipedia)"
+  },
+  "evidence": [
+   "2026-09-07 (Focus Taiwan): Su Chiao-hui (DPP) registered vs Lee Shu-chuan (KMT) and one independent; no TPP candidate, removing the three-way dynamic.",
+   "2026-01-22 (Formosa e-paper): Su 32.7% vs Lee 34.2% (Huang Kuo-chang TPP 15.4%) — within 1.5 points even before the TPP exit.",
+   "2026-10-20 (Taiwan News/Taipei Times, Taipei Trust in Democracy Association): Su 43.1% vs Lee 30.0% (+13.1) — the pollster leans green, but it is the only October reading and matches its Taipei wave direction.",
+   "Context: Su Chiao-hui has represented a New Taipei constituency since 2016, ran a two-year ground campaign, and is the daughter of former premier Su Tseng-chang, who twice ran for the seat."
+  ],
+  "strongest_opposing_case": "No DPP candidate has ever won New Taipei; Lee Shu-chuan polls exceptionally on competence from his Taipei deputy-mayor tenure, the blue vote is consolidated with no TPP spoiler, and the sole poll showing Su +13 is from a green-leaning house contradicted by January's blue-tilted near-tie.",
+  "reasoning_summary": "Base rate ~0.35 for a DPP New Taipei win. Su was within 1.5 points of Lee in January even with a TPP candidate in the field, and the only October poll has her +13; Lee's late entry and first-time-candidate status add KMT risk. Structural KMT advantage and poll-house uncertainty keep Lee the nominal favorite. Final 0.44.",
+  "key_sources": [
+   {"title": "Poll: Su Chiao-hui leads Lee Shu-chuan by 13.1 points", "url": "https://www.taiwannews.com.tw/news/6461460", "date": "2026-10-20"},
+   {"title": "Formosa poll: Lee 34.2%, Su 32.7%, Huang 15.4% in New Taipei", "url": "https://www.taiwannews.com.tw/en/news/6251868", "date": "2026-01-22"},
+   {"title": "2026 local elections: County, city head candidates", "url": "https://focustaiwan.tw/politics/202609075001", "date": "2026-09-07"}
+  ],
+  "p": 0.44
+ }
+}

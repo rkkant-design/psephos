@@ -1,0 +1,161 @@
+{
+ "source": "Polymarket gamma-api public-search (anonymous), state-level Democratic House seat-count band events",
+ "fetched_utc": "2026-10-24T16:52:44+00:00",
+ "note": "recorded as market context for the House seat-total distribution; never a gate instrument (no district models built)",
+ "events": [
+  {
+   "event_slug": "how-many-house-seats-will-the-democrats-win-in-minnesota",
+   "liquidity": 92965.33,
+   "bands": [
+    {
+     "band": "Will Democrats win fewer than 3 House seats in Minnesota in the 2026 midterm elections?",
+     "p_yes": 0.01
+    },
+    {
+     "band": "Will Democrats win exactly 3 House seats in Minnesota in the 2026 midterm elections?",
+     "p_yes": 0.028
+    },
+    {
+     "band": "Will Democrats win exactly 4 House seats in Minnesota in the 2026 midterm elections?",
+     "p_yes": 0.67
+    },
+    {
+     "band": "Will Democrats win exactly 5 House seats in Minnesota in the 2026 midterm elections?",
+     "p_yes": 0.25
+    },
+    {
+     "band": "Will Democrats win 6 or more House seats in Minnesota in the 2026 midterm elections?",
+     "p_yes": 0.04
+    }
+   ]
+  },
+  {
+   "event_slug": "how-many-house-seats-will-the-democrats-win-in-michigan",
+   "liquidity": 112279.58,
+   "bands": [
+    {
+     "band": "Will Democrats win fewer than 5 House seats in Michigan in the 2026 midterm elections?",
+     "p_yes": 0.003
+    },
+    {
+     "band": "Will Democrats win exactly 5 House seats in Michigan in the 2026 midterm elections?",
+     "p_yes": 0.0025
+    },
+    {
+     "band": "Will Democrats win exactly 6 House seats in Michigan in the 2026 midterm elections?",
+     "p_yes": 0.12
+    },
+    {
+     "band": "Will Democrats win exactly 7 House seats in Michigan in the 2026 midterm elections?",
+     "p_yes": 0.19
+    },
+    {
+     "band": "Will Democrats win exactly 8 House seats in Michigan in the 2026 midterm elections?",
+     "p_yes": 0.265
+    },
+    {
+     "band": "Will Democrats win exactly 9 House seats in Michigan in the 2026 midterm elections?",
+     "p_yes": 0.34
+    },
+    {
+     "band": "Will Democrats win 10 or more House seats in Michigan in the 2026 midterm elections?",
+     "p_yes": 0.066
+    }
+   ]
+  },
+  {
+   "event_slug": "how-many-house-seats-will-the-democrats-win-in-california",
+   "liquidity": 128269.67,
+   "bands": [
+    {
+     "band": "Will Democrats win fewer than 43 House seats in California in the 2026 midterm elections?",
+     "p_yes": 0.0025
+    },
+    {
+     "band": "Will Democrats win exactly 43 House seats in California in the 2026 midterm elections?",
+     "p_yes": 0.0025
+    },
+    {
+     "band": "Will Democrats win exactly 44 House seats in California in the 2026 midterm elections?",
+     "p_yes": 0.0355
+    },
+    {
+     "band": "Will Democrats win exactly 45 House seats in California in the 2026 midterm elections?",
+     "p_yes": 0.0225
+    },
+    {
+     "band": "Will Democrats win exactly 46 House seats in California in the 2026 midterm elections?",
+     "p_yes": 0.0405
+    },
+    {
+     "band": "Will Democrats win exactly 47 House seats in California in the 2026 midterm elections?",
+     "p_yes": 0.135
+    },
+    {
+     "band": "Will Democrats win exactly 48 House seats in California in the 2026 midterm elections?",
+     "p_yes": 0.785
+    },
+    {
+     "band": "Will Democrats win 49 or more House seats in California in the 2026 midterm elections?",
+     "p_yes": 0.0445
+    }
+   ]
+  },
+  {
+   "event_slug": "how-many-house-seats-will-the-democrats-win-in-virginia",
+   "liquidity": 118523.5,
+   "bands": [
+    {
+     "band": "Will Democrats win fewer than 5 House seats in Virginia in the 2026 midterm elections?",
+     "p_yes": 0.005
+    },
+    {
+     "band": "Will Democrats win exactly 5 House seats in Virginia in the 2026 midterm elections?",
+     "p_yes": 0.0065
+    },
+    {
+     "band": "Will Democrats win exactly 6 House seats in Virginia in the 2026 midterm elections?",
+     "p_yes": 0.115
+    },
+    {
+     "band": "Will Democrats win exactly 7 House seats in Virginia in the 2026 midterm elections?",
+     "p_yes": 0.26
+    },
+    {
+     "band": "Will Democrats win exactly 8 House seats in Virginia in the 2026 midterm elections?",
+     "p_yes": 0.36
+    },
+    {
+     "band": "Will Democrats win 9 or more House seats in Virginia in the 2026 midterm elections?",
+     "p_yes": 0.275
+    }
+   ]
+  },
+  {
+   "event_slug": "how-many-house-seats-will-the-democrats-win-in-iowa",
+   "liquidity": 82246.15,
+   "bands": [
+    {
+     "band": "Will Democrats win exactly 0 House seats in Iowa in the 2026 midterm elections?",
+     "p_yes": 0.087
+    },
+    {
+     "band": "Will Democrats win exactly 1 House seat in Iowa in the 2026 midterm elections?",
+     "p_yes": 0.071
+    },
+    {
+     "band": "Will Democrats win exactly 2 House seats in Iowa in the 2026 midterm elections?",
+     "p_yes": 0.29
+    },
+    {
+     "band": "Will Democrats win exactly 3 House seats in Iowa in the 2026 midterm elections?",
+     "p_yes": 0.565
+    },
+    {
+     "band": "Will Democrats win exactly 4 House seats in Iowa in the 2026 midterm elections?",
+     "p_yes": 0.0105
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,861 @@
+{
+ "forecast_id": "FB2026-10-25-057",
+ "domain": "ForecastBench",
+ "freeze_date": "2026-10-25",
+ "resolve_date": null,
+ "researcher": "claude-fable-5 operator session, 2026-10-25 round-day sprint (authored + rule + family layers)",
+ "resolution_source": "per-question benchmark resolution criteria (see each question's benchmark block)",
+ "independence_attestation": "No betting odds, prediction-market prices or forecast-aggregator numbers were fetched or consulted for any question in this dossier; market-source questions' embedded freeze prices were deliberately ignored.",
+ "questions": [
+  {
+   "q": "Will Bio-Techne Corporation (TECH) have a higher rate of return than ONEOK, Inc. (OKE) between {forecast_due_date} and {resolution_date}?\n\nFor each resolution date, a stock's rate of return is calculated as its market close price on that date divided by its market close price on {forecast_due_date}, minus one. Prices are adjusted for stock splits and reverse splits. Dividends are not included. If either stock is delisted (e.g., through acquisition, merger, or bankruptcy), the most recent market close price before delisting is used for all subsequent resolution dates. | horizon 2027-10-25",
+   "benchmark": {
+    "source": "yfinance",
+    "id": "TECH_OKE",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-10-25"
+   },
+   "resolution_note": "Resolves using the market close prices at https://finance.yahoo.com/quote/TECH and https://finance.yahoo.com/quote/OKE. If a date in the question coincides with a day the market is closed (weekend, holiday, etc.) the previous market close price is used.",
+   "base_rate_used": {
+    "reference_class": "relative stock-pair performance, near-efficient random walk",
+    "value": 0.51,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'yfinance', horizon 2027-10-25: base 0.50 with 30-day momentum tilt +0.01 from freeze changes ['+0.2', '-7.4']."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for yfinance at horizon 2027-10-25: base 0.50 with 30-day momentum tilt +0.01 from freeze changes ['+0.2', '-7.4']. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.51.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "yfinance source data family (underlying series documentation)",
+     "url": "https://finance.yahoo.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.51
+  },
+  {
+   "q": "Will Rockwell Automation, Inc. (ROK) have a higher rate of return than Workday, Inc. (WDAY) between {forecast_due_date} and {resolution_date}?\n\nFor each resolution date, a stock's rate of return is calculated as its market close price on that date divided by its market close price on {forecast_due_date}, minus one. Prices are adjusted for stock splits and reverse splits. Dividends are not included. If either stock is delisted (e.g., through acquisition, merger, or bankruptcy), the most recent market close price before delisting is used for all subsequent resolution dates. | horizon 2026-11-01",
+   "benchmark": {
+    "source": "yfinance",
+    "id": "ROK_WDAY",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-01"
+   },
+   "resolution_note": "Resolves using the market close prices at https://finance.yahoo.com/quote/ROK and https://finance.yahoo.com/quote/WDAY. If a date in the question coincides with a day the market is closed (weekend, holiday, etc.) the previous market close price is used.",
+   "base_rate_used": {
+    "reference_class": "relative stock-pair performance, near-efficient random walk",
+    "value": 0.54,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'yfinance', horizon 2026-11-01: base 0.50 with 30-day momentum tilt +0.04 from freeze changes ['+1.2', '+0.8']."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for yfinance at horizon 2026-11-01: base 0.50 with 30-day momentum tilt +0.04 from freeze changes ['+1.2', '+0.8']. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.54.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "yfinance source data family (underlying series documentation)",
+     "url": "https://finance.yahoo.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.54
+  },
+  {
+   "q": "Will Rockwell Automation, Inc. (ROK) have a higher rate of return than Workday, Inc. (WDAY) between {forecast_due_date} and {resolution_date}?\n\nFor each resolution date, a stock's rate of return is calculated as its market close price on that date divided by its market close price on {forecast_due_date}, minus one. Prices are adjusted for stock splits and reverse splits. Dividends are not included. If either stock is delisted (e.g., through acquisition, merger, or bankruptcy), the most recent market close price before delisting is used for all subsequent resolution dates. | horizon 2026-11-24",
+   "benchmark": {
+    "source": "yfinance",
+    "id": "ROK_WDAY",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-24"
+   },
+   "resolution_note": "Resolves using the market close prices at https://finance.yahoo.com/quote/ROK and https://finance.yahoo.com/quote/WDAY. If a date in the question coincides with a day the market is closed (weekend, holiday, etc.) the previous market close price is used.",
+   "base_rate_used": {
+    "reference_class": "relative stock-pair performance, near-efficient random walk",
+    "value": 0.54,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'yfinance', horizon 2026-11-24: base 0.50 with 30-day momentum tilt +0.04 from freeze changes ['+1.2', '+0.8']."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for yfinance at horizon 2026-11-24: base 0.50 with 30-day momentum tilt +0.04 from freeze changes ['+1.2', '+0.8']. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.54.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "yfinance source data family (underlying series documentation)",
+     "url": "https://finance.yahoo.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.54
+  },
+  {
+   "q": "Will Rockwell Automation, Inc. (ROK) have a higher rate of return than Workday, Inc. (WDAY) between {forecast_due_date} and {resolution_date}?\n\nFor each resolution date, a stock's rate of return is calculated as its market close price on that date divided by its market close price on {forecast_due_date}, minus one. Prices are adjusted for stock splits and reverse splits. Dividends are not included. If either stock is delisted (e.g., through acquisition, merger, or bankruptcy), the most recent market close price before delisting is used for all subsequent resolution dates. | horizon 2027-01-23",
+   "benchmark": {
+    "source": "yfinance",
+    "id": "ROK_WDAY",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-01-23"
+   },
+   "resolution_note": "Resolves using the market close prices at https://finance.yahoo.com/quote/ROK and https://finance.yahoo.com/quote/WDAY. If a date in the question coincides with a day the market is closed (weekend, holiday, etc.) the previous market close price is used.",
+   "base_rate_used": {
+    "reference_class": "relative stock-pair performance, near-efficient random walk",
+    "value": 0.53,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'yfinance', horizon 2027-01-23: base 0.50 with 30-day momentum tilt +0.03 from freeze changes ['+1.2', '+0.8']."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for yfinance at horizon 2027-01-23: base 0.50 with 30-day momentum tilt +0.03 from freeze changes ['+1.2', '+0.8']. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.53.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "yfinance source data family (underlying series documentation)",
+     "url": "https://finance.yahoo.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.53
+  },
+  {
+   "q": "Will Rockwell Automation, Inc. (ROK) have a higher rate of return than Workday, Inc. (WDAY) between {forecast_due_date} and {resolution_date}?\n\nFor each resolution date, a stock's rate of return is calculated as its market close price on that date divided by its market close price on {forecast_due_date}, minus one. Prices are adjusted for stock splits and reverse splits. Dividends are not included. If either stock is delisted (e.g., through acquisition, merger, or bankruptcy), the most recent market close price before delisting is used for all subsequent resolution dates. | horizon 2027-04-23",
+   "benchmark": {
+    "source": "yfinance",
+    "id": "ROK_WDAY",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-04-23"
+   },
+   "resolution_note": "Resolves using the market close prices at https://finance.yahoo.com/quote/ROK and https://finance.yahoo.com/quote/WDAY. If a date in the question coincides with a day the market is closed (weekend, holiday, etc.) the previous market close price is used.",
+   "base_rate_used": {
+    "reference_class": "relative stock-pair performance, near-efficient random walk",
+    "value": 0.52,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'yfinance', horizon 2027-04-23: base 0.50 with 30-day momentum tilt +0.02 from freeze changes ['+1.2', '+0.8']."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for yfinance at horizon 2027-04-23: base 0.50 with 30-day momentum tilt +0.02 from freeze changes ['+1.2', '+0.8']. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.52.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "yfinance source data family (underlying series documentation)",
+     "url": "https://finance.yahoo.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.52
+  },
+  {
+   "q": "Will Rockwell Automation, Inc. (ROK) have a higher rate of return than Workday, Inc. (WDAY) between {forecast_due_date} and {resolution_date}?\n\nFor each resolution date, a stock's rate of return is calculated as its market close price on that date divided by its market close price on {forecast_due_date}, minus one. Prices are adjusted for stock splits and reverse splits. Dividends are not included. If either stock is delisted (e.g., through acquisition, merger, or bankruptcy), the most recent market close price before delisting is used for all subsequent resolution dates. | horizon 2027-10-25",
+   "benchmark": {
+    "source": "yfinance",
+    "id": "ROK_WDAY",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-10-25"
+   },
+   "resolution_note": "Resolves using the market close prices at https://finance.yahoo.com/quote/ROK and https://finance.yahoo.com/quote/WDAY. If a date in the question coincides with a day the market is closed (weekend, holiday, etc.) the previous market close price is used.",
+   "base_rate_used": {
+    "reference_class": "relative stock-pair performance, near-efficient random walk",
+    "value": 0.51,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'yfinance', horizon 2027-10-25: base 0.50 with 30-day momentum tilt +0.01 from freeze changes ['+1.2', '+0.8']."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for yfinance at horizon 2027-10-25: base 0.50 with 30-day momentum tilt +0.01 from freeze changes ['+1.2', '+0.8']. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.51.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "yfinance source data family (underlying series documentation)",
+     "url": "https://finance.yahoo.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.51
+  },
+  {
+   "q": "Will Charles River Laboratories International, Inc. (CRL) have a higher rate of return than Norwegian Cruise Line Holdings Ltd. (NCLH) between {forecast_due_date} and {resolution_date}?\n\nFor each resolution date, a stock's rate of return is calculated as its market close price on that date divided by its market close price on {forecast_due_date}, minus one. Prices are adjusted for stock splits and reverse splits. Dividends are not included. If either stock is delisted (e.g., through acquisition, merger, or bankruptcy), the most recent market close price before delisting is used for all subsequent resolution dates. | horizon 2026-11-01",
+   "benchmark": {
+    "source": "yfinance",
+    "id": "CRL_NCLH",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-01"
+   },
+   "resolution_note": "Resolves using the market close prices at https://finance.yahoo.com/quote/CRL and https://finance.yahoo.com/quote/NCLH. If a date in the question coincides with a day the market is closed (weekend, holiday, etc.) the previous market close price is used.",
+   "base_rate_used": {
+    "reference_class": "relative stock-pair performance, near-efficient random walk",
+    "value": 0.54,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'yfinance', horizon 2026-11-01: base 0.50 with 30-day momentum tilt +0.04 from freeze changes ['+6.1', '+0.6']."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for yfinance at horizon 2026-11-01: base 0.50 with 30-day momentum tilt +0.04 from freeze changes ['+6.1', '+0.6']. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.54.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "yfinance source data family (underlying series documentation)",
+     "url": "https://finance.yahoo.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.54
+  },
+  {
+   "q": "Will Charles River Laboratories International, Inc. (CRL) have a higher rate of return than Norwegian Cruise Line Holdings Ltd. (NCLH) between {forecast_due_date} and {resolution_date}?\n\nFor each resolution date, a stock's rate of return is calculated as its market close price on that date divided by its market close price on {forecast_due_date}, minus one. Prices are adjusted for stock splits and reverse splits. Dividends are not included. If either stock is delisted (e.g., through acquisition, merger, or bankruptcy), the most recent market close price before delisting is used for all subsequent resolution dates. | horizon 2026-11-24",
+   "benchmark": {
+    "source": "yfinance",
+    "id": "CRL_NCLH",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-24"
+   },
+   "resolution_note": "Resolves using the market close prices at https://finance.yahoo.com/quote/CRL and https://finance.yahoo.com/quote/NCLH. If a date in the question coincides with a day the market is closed (weekend, holiday, etc.) the previous market close price is used.",
+   "base_rate_used": {
+    "reference_class": "relative stock-pair performance, near-efficient random walk",
+    "value": 0.54,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'yfinance', horizon 2026-11-24: base 0.50 with 30-day momentum tilt +0.04 from freeze changes ['+6.1', '+0.6']."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for yfinance at horizon 2026-11-24: base 0.50 with 30-day momentum tilt +0.04 from freeze changes ['+6.1', '+0.6']. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.54.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "yfinance source data family (underlying series documentation)",
+     "url": "https://finance.yahoo.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.54
+  },
+  {
+   "q": "Will Charles River Laboratories International, Inc. (CRL) have a higher rate of return than Norwegian Cruise Line Holdings Ltd. (NCLH) between {forecast_due_date} and {resolution_date}?\n\nFor each resolution date, a stock's rate of return is calculated as its market close price on that date divided by its market close price on {forecast_due_date}, minus one. Prices are adjusted for stock splits and reverse splits. Dividends are not included. If either stock is delisted (e.g., through acquisition, merger, or bankruptcy), the most recent market close price before delisting is used for all subsequent resolution dates. | horizon 2027-01-23",
+   "benchmark": {
+    "source": "yfinance",
+    "id": "CRL_NCLH",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-01-23"
+   },
+   "resolution_note": "Resolves using the market close prices at https://finance.yahoo.com/quote/CRL and https://finance.yahoo.com/quote/NCLH. If a date in the question coincides with a day the market is closed (weekend, holiday, etc.) the previous market close price is used.",
+   "base_rate_used": {
+    "reference_class": "relative stock-pair performance, near-efficient random walk",
+    "value": 0.53,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'yfinance', horizon 2027-01-23: base 0.50 with 30-day momentum tilt +0.03 from freeze changes ['+6.1', '+0.6']."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for yfinance at horizon 2027-01-23: base 0.50 with 30-day momentum tilt +0.03 from freeze changes ['+6.1', '+0.6']. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.53.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "yfinance source data family (underlying series documentation)",
+     "url": "https://finance.yahoo.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.53
+  },
+  {
+   "q": "Will Charles River Laboratories International, Inc. (CRL) have a higher rate of return than Norwegian Cruise Line Holdings Ltd. (NCLH) between {forecast_due_date} and {resolution_date}?\n\nFor each resolution date, a stock's rate of return is calculated as its market close price on that date divided by its market close price on {forecast_due_date}, minus one. Prices are adjusted for stock splits and reverse splits. Dividends are not included. If either stock is delisted (e.g., through acquisition, merger, or bankruptcy), the most recent market close price before delisting is used for all subsequent resolution dates. | horizon 2027-04-23",
+   "benchmark": {
+    "source": "yfinance",
+    "id": "CRL_NCLH",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-04-23"
+   },
+   "resolution_note": "Resolves using the market close prices at https://finance.yahoo.com/quote/CRL and https://finance.yahoo.com/quote/NCLH. If a date in the question coincides with a day the market is closed (weekend, holiday, etc.) the previous market close price is used.",
+   "base_rate_used": {
+    "reference_class": "relative stock-pair performance, near-efficient random walk",
+    "value": 0.52,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'yfinance', horizon 2027-04-23: base 0.50 with 30-day momentum tilt +0.02 from freeze changes ['+6.1', '+0.6']."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for yfinance at horizon 2027-04-23: base 0.50 with 30-day momentum tilt +0.02 from freeze changes ['+6.1', '+0.6']. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.52.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "yfinance source data family (underlying series documentation)",
+     "url": "https://finance.yahoo.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.52
+  },
+  {
+   "q": "Will Charles River Laboratories International, Inc. (CRL) have a higher rate of return than Norwegian Cruise Line Holdings Ltd. (NCLH) between {forecast_due_date} and {resolution_date}?\n\nFor each resolution date, a stock's rate of return is calculated as its market close price on that date divided by its market close price on {forecast_due_date}, minus one. Prices are adjusted for stock splits and reverse splits. Dividends are not included. If either stock is delisted (e.g., through acquisition, merger, or bankruptcy), the most recent market close price before delisting is used for all subsequent resolution dates. | horizon 2027-10-25",
+   "benchmark": {
+    "source": "yfinance",
+    "id": "CRL_NCLH",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-10-25"
+   },
+   "resolution_note": "Resolves using the market close prices at https://finance.yahoo.com/quote/CRL and https://finance.yahoo.com/quote/NCLH. If a date in the question coincides with a day the market is closed (weekend, holiday, etc.) the previous market close price is used.",
+   "base_rate_used": {
+    "reference_class": "relative stock-pair performance, near-efficient random walk",
+    "value": 0.51,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'yfinance', horizon 2027-10-25: base 0.50 with 30-day momentum tilt +0.01 from freeze changes ['+6.1', '+0.6']."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for yfinance at horizon 2027-10-25: base 0.50 with 30-day momentum tilt +0.01 from freeze changes ['+6.1', '+0.6']. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.51.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "yfinance source data family (underlying series documentation)",
+     "url": "https://finance.yahoo.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.51
+  },
+  {
+   "q": "Will Quest Diagnostics Incorporated (DGX) have a higher rate of return than Norwegian Cruise Line Holdings Ltd. (NCLH) between {forecast_due_date} and {resolution_date}?\n\nFor each resolution date, a stock's rate of return is calculated as its market close price on that date divided by its market close price on {forecast_due_date}, minus one. Prices are adjusted for stock splits and reverse splits. Dividends are not included. If either stock is delisted (e.g., through acquisition, merger, or bankruptcy), the most recent market close price before delisting is used for all subsequent resolution dates. | horizon 2026-11-01",
+   "benchmark": {
+    "source": "yfinance",
+    "id": "DGX_NCLH",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-01"
+   },
+   "resolution_note": "Resolves using the market close prices at https://finance.yahoo.com/quote/DGX and https://finance.yahoo.com/quote/NCLH. If a date in the question coincides with a day the market is closed (weekend, holiday, etc.) the previous market close price is used.",
+   "base_rate_used": {
+    "reference_class": "relative stock-pair performance, near-efficient random walk",
+    "value": 0.46,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'yfinance', horizon 2026-11-01: base 0.50 with 30-day momentum tilt -0.04 from freeze changes ['-2.0', '+0.6']."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for yfinance at horizon 2026-11-01: base 0.50 with 30-day momentum tilt -0.04 from freeze changes ['-2.0', '+0.6']. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.46.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "yfinance source data family (underlying series documentation)",
+     "url": "https://finance.yahoo.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.46
+  },
+  {
+   "q": "Will Quest Diagnostics Incorporated (DGX) have a higher rate of return than Norwegian Cruise Line Holdings Ltd. (NCLH) between {forecast_due_date} and {resolution_date}?\n\nFor each resolution date, a stock's rate of return is calculated as its market close price on that date divided by its market close price on {forecast_due_date}, minus one. Prices are adjusted for stock splits and reverse splits. Dividends are not included. If either stock is delisted (e.g., through acquisition, merger, or bankruptcy), the most recent market close price before delisting is used for all subsequent resolution dates. | horizon 2026-11-24",
+   "benchmark": {
+    "source": "yfinance",
+    "id": "DGX_NCLH",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-24"
+   },
+   "resolution_note": "Resolves using the market close prices at https://finance.yahoo.com/quote/DGX and https://finance.yahoo.com/quote/NCLH. If a date in the question coincides with a day the market is closed (weekend, holiday, etc.) the previous market close price is used.",
+   "base_rate_used": {
+    "reference_class": "relative stock-pair performance, near-efficient random walk",
+    "value": 0.46,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'yfinance', horizon 2026-11-24: base 0.50 with 30-day momentum tilt -0.04 from freeze changes ['-2.0', '+0.6']."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for yfinance at horizon 2026-11-24: base 0.50 with 30-day momentum tilt -0.04 from freeze changes ['-2.0', '+0.6']. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.46.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "yfinance source data family (underlying series documentation)",
+     "url": "https://finance.yahoo.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.46
+  },
+  {
+   "q": "Will Quest Diagnostics Incorporated (DGX) have a higher rate of return than Norwegian Cruise Line Holdings Ltd. (NCLH) between {forecast_due_date} and {resolution_date}?\n\nFor each resolution date, a stock's rate of return is calculated as its market close price on that date divided by its market close price on {forecast_due_date}, minus one. Prices are adjusted for stock splits and reverse splits. Dividends are not included. If either stock is delisted (e.g., through acquisition, merger, or bankruptcy), the most recent market close price before delisting is used for all subsequent resolution dates. | horizon 2027-01-23",
+   "benchmark": {
+    "source": "yfinance",
+    "id": "DGX_NCLH",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-01-23"
+   },
+   "resolution_note": "Resolves using the market close prices at https://finance.yahoo.com/quote/DGX and https://finance.yahoo.com/quote/NCLH. If a date in the question coincides with a day the market is closed (weekend, holiday, etc.) the previous market close price is used.",
+   "base_rate_used": {
+    "reference_class": "relative stock-pair performance, near-efficient random walk",
+    "value": 0.47,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'yfinance', horizon 2027-01-23: base 0.50 with 30-day momentum tilt -0.03 from freeze changes ['-2.0', '+0.6']."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for yfinance at horizon 2027-01-23: base 0.50 with 30-day momentum tilt -0.03 from freeze changes ['-2.0', '+0.6']. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.47.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "yfinance source data family (underlying series documentation)",
+     "url": "https://finance.yahoo.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.47
+  },
+  {
+   "q": "Will Quest Diagnostics Incorporated (DGX) have a higher rate of return than Norwegian Cruise Line Holdings Ltd. (NCLH) between {forecast_due_date} and {resolution_date}?\n\nFor each resolution date, a stock's rate of return is calculated as its market close price on that date divided by its market close price on {forecast_due_date}, minus one. Prices are adjusted for stock splits and reverse splits. Dividends are not included. If either stock is delisted (e.g., through acquisition, merger, or bankruptcy), the most recent market close price before delisting is used for all subsequent resolution dates. | horizon 2027-04-23",
+   "benchmark": {
+    "source": "yfinance",
+    "id": "DGX_NCLH",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-04-23"
+   },
+   "resolution_note": "Resolves using the market close prices at https://finance.yahoo.com/quote/DGX and https://finance.yahoo.com/quote/NCLH. If a date in the question coincides with a day the market is closed (weekend, holiday, etc.) the previous market close price is used.",
+   "base_rate_used": {
+    "reference_class": "relative stock-pair performance, near-efficient random walk",
+    "value": 0.48,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'yfinance', horizon 2027-04-23: base 0.50 with 30-day momentum tilt -0.02 from freeze changes ['-2.0', '+0.6']."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for yfinance at horizon 2027-04-23: base 0.50 with 30-day momentum tilt -0.02 from freeze changes ['-2.0', '+0.6']. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.48.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "yfinance source data family (underlying series documentation)",
+     "url": "https://finance.yahoo.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.48
+  },
+  {
+   "q": "Will Quest Diagnostics Incorporated (DGX) have a higher rate of return than Norwegian Cruise Line Holdings Ltd. (NCLH) between {forecast_due_date} and {resolution_date}?\n\nFor each resolution date, a stock's rate of return is calculated as its market close price on that date divided by its market close price on {forecast_due_date}, minus one. Prices are adjusted for stock splits and reverse splits. Dividends are not included. If either stock is delisted (e.g., through acquisition, merger, or bankruptcy), the most recent market close price before delisting is used for all subsequent resolution dates. | horizon 2027-10-25",
+   "benchmark": {
+    "source": "yfinance",
+    "id": "DGX_NCLH",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-10-25"
+   },
+   "resolution_note": "Resolves using the market close prices at https://finance.yahoo.com/quote/DGX and https://finance.yahoo.com/quote/NCLH. If a date in the question coincides with a day the market is closed (weekend, holiday, etc.) the previous market close price is used.",
+   "base_rate_used": {
+    "reference_class": "relative stock-pair performance, near-efficient random walk",
+    "value": 0.49,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'yfinance', horizon 2027-10-25: base 0.50 with 30-day momentum tilt -0.01 from freeze changes ['-2.0', '+0.6']."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for yfinance at horizon 2027-10-25: base 0.50 with 30-day momentum tilt -0.01 from freeze changes ['-2.0', '+0.6']. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.49.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "yfinance source data family (underlying series documentation)",
+     "url": "https://finance.yahoo.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.49
+  },
+  {
+   "q": "Will Becton, Dickinson and Company (BDX) have a higher rate of return than Chevron Corporation (CVX) between {forecast_due_date} and {resolution_date}?\n\nFor each resolution date, a stock's rate of return is calculated as its market close price on that date divided by its market close price on {forecast_due_date}, minus one. Prices are adjusted for stock splits and reverse splits. Dividends are not included. If either stock is delisted (e.g., through acquisition, merger, or bankruptcy), the most recent market close price before delisting is used for all subsequent resolution dates. | horizon 2026-11-01",
+   "benchmark": {
+    "source": "yfinance",
+    "id": "BDX_CVX",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-01"
+   },
+   "resolution_note": "Resolves using the market close prices at https://finance.yahoo.com/quote/BDX and https://finance.yahoo.com/quote/CVX. If a date in the question coincides with a day the market is closed (weekend, holiday, etc.) the previous market close price is used.",
+   "base_rate_used": {
+    "reference_class": "relative stock-pair performance, near-efficient random walk",
+    "value": 0.54,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'yfinance', horizon 2026-11-01: base 0.50 with 30-day momentum tilt +0.04 from freeze changes ['+2.0', '+0.8']."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for yfinance at horizon 2026-11-01: base 0.50 with 30-day momentum tilt +0.04 from freeze changes ['+2.0', '+0.8']. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.54.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "yfinance source data family (underlying series documentation)",
+     "url": "https://finance.yahoo.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.54
+  },
+  {
+   "q": "Will Becton, Dickinson and Company (BDX) have a higher rate of return than Chevron Corporation (CVX) between {forecast_due_date} and {resolution_date}?\n\nFor each resolution date, a stock's rate of return is calculated as its market close price on that date divided by its market close price on {forecast_due_date}, minus one. Prices are adjusted for stock splits and reverse splits. Dividends are not included. If either stock is delisted (e.g., through acquisition, merger, or bankruptcy), the most recent market close price before delisting is used for all subsequent resolution dates. | horizon 2026-11-24",
+   "benchmark": {
+    "source": "yfinance",
+    "id": "BDX_CVX",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-24"
+   },
+   "resolution_note": "Resolves using the market close prices at https://finance.yahoo.com/quote/BDX and https://finance.yahoo.com/quote/CVX. If a date in the question coincides with a day the market is closed (weekend, holiday, etc.) the previous market close price is used.",
+   "base_rate_used": {
+    "reference_class": "relative stock-pair performance, near-efficient random walk",
+    "value": 0.54,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'yfinance', horizon 2026-11-24: base 0.50 with 30-day momentum tilt +0.04 from freeze changes ['+2.0', '+0.8']."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for yfinance at horizon 2026-11-24: base 0.50 with 30-day momentum tilt +0.04 from freeze changes ['+2.0', '+0.8']. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.54.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "yfinance source data family (underlying series documentation)",
+     "url": "https://finance.yahoo.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.54
+  },
+  {
+   "q": "Will Becton, Dickinson and Company (BDX) have a higher rate of return than Chevron Corporation (CVX) between {forecast_due_date} and {resolution_date}?\n\nFor each resolution date, a stock's rate of return is calculated as its market close price on that date divided by its market close price on {forecast_due_date}, minus one. Prices are adjusted for stock splits and reverse splits. Dividends are not included. If either stock is delisted (e.g., through acquisition, merger, or bankruptcy), the most recent market close price before delisting is used for all subsequent resolution dates. | horizon 2027-01-23",
+   "benchmark": {
+    "source": "yfinance",
+    "id": "BDX_CVX",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-01-23"
+   },
+   "resolution_note": "Resolves using the market close prices at https://finance.yahoo.com/quote/BDX and https://finance.yahoo.com/quote/CVX. If a date in the question coincides with a day the market is closed (weekend, holiday, etc.) the previous market close price is used.",
+   "base_rate_used": {
+    "reference_class": "relative stock-pair performance, near-efficient random walk",
+    "value": 0.53,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'yfinance', horizon 2027-01-23: base 0.50 with 30-day momentum tilt +0.03 from freeze changes ['+2.0', '+0.8']."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for yfinance at horizon 2027-01-23: base 0.50 with 30-day momentum tilt +0.03 from freeze changes ['+2.0', '+0.8']. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.53.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "yfinance source data family (underlying series documentation)",
+     "url": "https://finance.yahoo.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.53
+  },
+  {
+   "q": "Will Becton, Dickinson and Company (BDX) have a higher rate of return than Chevron Corporation (CVX) between {forecast_due_date} and {resolution_date}?\n\nFor each resolution date, a stock's rate of return is calculated as its market close price on that date divided by its market close price on {forecast_due_date}, minus one. Prices are adjusted for stock splits and reverse splits. Dividends are not included. If either stock is delisted (e.g., through acquisition, merger, or bankruptcy), the most recent market close price before delisting is used for all subsequent resolution dates. | horizon 2027-04-23",
+   "benchmark": {
+    "source": "yfinance",
+    "id": "BDX_CVX",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-04-23"
+   },
+   "resolution_note": "Resolves using the market close prices at https://finance.yahoo.com/quote/BDX and https://finance.yahoo.com/quote/CVX. If a date in the question coincides with a day the market is closed (weekend, holiday, etc.) the previous market close price is used.",
+   "base_rate_used": {
+    "reference_class": "relative stock-pair performance, near-efficient random walk",
+    "value": 0.52,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'yfinance', horizon 2027-04-23: base 0.50 with 30-day momentum tilt +0.02 from freeze changes ['+2.0', '+0.8']."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for yfinance at horizon 2027-04-23: base 0.50 with 30-day momentum tilt +0.02 from freeze changes ['+2.0', '+0.8']. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.52.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "yfinance source data family (underlying series documentation)",
+     "url": "https://finance.yahoo.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.52
+  },
+  {
+   "q": "Will Becton, Dickinson and Company (BDX) have a higher rate of return than Chevron Corporation (CVX) between {forecast_due_date} and {resolution_date}?\n\nFor each resolution date, a stock's rate of return is calculated as its market close price on that date divided by its market close price on {forecast_due_date}, minus one. Prices are adjusted for stock splits and reverse splits. Dividends are not included. If either stock is delisted (e.g., through acquisition, merger, or bankruptcy), the most recent market close price before delisting is used for all subsequent resolution dates. | horizon 2027-10-25",
+   "benchmark": {
+    "source": "yfinance",
+    "id": "BDX_CVX",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-10-25"
+   },
+   "resolution_note": "Resolves using the market close prices at https://finance.yahoo.com/quote/BDX and https://finance.yahoo.com/quote/CVX. If a date in the question coincides with a day the market is closed (weekend, holiday, etc.) the previous market close price is used.",
+   "base_rate_used": {
+    "reference_class": "relative stock-pair performance, near-efficient random walk",
+    "value": 0.51,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'yfinance', horizon 2027-10-25: base 0.50 with 30-day momentum tilt +0.01 from freeze changes ['+2.0', '+0.8']."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for yfinance at horizon 2027-10-25: base 0.50 with 30-day momentum tilt +0.01 from freeze changes ['+2.0', '+0.8']. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.51.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "yfinance source data family (underlying series documentation)",
+     "url": "https://finance.yahoo.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.51
+  },
+  {
+   "q": "Will DTE Energy Company (DTE) have a higher rate of return than McKesson Corporation (MCK) between {forecast_due_date} and {resolution_date}?\n\nFor each resolution date, a stock's rate of return is calculated as its market close price on that date divided by its market close price on {forecast_due_date}, minus one. Prices are adjusted for stock splits and reverse splits. Dividends are not included. If either stock is delisted (e.g., through acquisition, merger, or bankruptcy), the most recent market close price before delisting is used for all subsequent resolution dates. | horizon 2026-11-01",
+   "benchmark": {
+    "source": "yfinance",
+    "id": "DTE_MCK",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-01"
+   },
+   "resolution_note": "Resolves using the market close prices at https://finance.yahoo.com/quote/DTE and https://finance.yahoo.com/quote/MCK. If a date in the question coincides with a day the market is closed (weekend, holiday, etc.) the previous market close price is used.",
+   "base_rate_used": {
+    "reference_class": "relative stock-pair performance, near-efficient random walk",
+    "value": 0.46,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'yfinance', horizon 2026-11-01: base 0.50 with 30-day momentum tilt -0.04 from freeze changes ['-7.4', '+4.6']."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for yfinance at horizon 2026-11-01: base 0.50 with 30-day momentum tilt -0.04 from freeze changes ['-7.4', '+4.6']. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.46.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "yfinance source data family (underlying series documentation)",
+     "url": "https://finance.yahoo.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.46
+  },
+  {
+   "q": "Will DTE Energy Company (DTE) have a higher rate of return than McKesson Corporation (MCK) between {forecast_due_date} and {resolution_date}?\n\nFor each resolution date, a stock's rate of return is calculated as its market close price on that date divided by its market close price on {forecast_due_date}, minus one. Prices are adjusted for stock splits and reverse splits. Dividends are not included. If either stock is delisted (e.g., through acquisition, merger, or bankruptcy), the most recent market close price before delisting is used for all subsequent resolution dates. | horizon 2026-11-24",
+   "benchmark": {
+    "source": "yfinance",
+    "id": "DTE_MCK",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-24"
+   },
+   "resolution_note": "Resolves using the market close prices at https://finance.yahoo.com/quote/DTE and https://finance.yahoo.com/quote/MCK. If a date in the question coincides with a day the market is closed (weekend, holiday, etc.) the previous market close price is used.",
+   "base_rate_used": {
+    "reference_class": "relative stock-pair performance, near-efficient random walk",
+    "value": 0.46,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'yfinance', horizon 2026-11-24: base 0.50 with 30-day momentum tilt -0.04 from freeze changes ['-7.4', '+4.6']."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for yfinance at horizon 2026-11-24: base 0.50 with 30-day momentum tilt -0.04 from freeze changes ['-7.4', '+4.6']. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.46.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "yfinance source data family (underlying series documentation)",
+     "url": "https://finance.yahoo.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.46
+  },
+  {
+   "q": "Will DTE Energy Company (DTE) have a higher rate of return than McKesson Corporation (MCK) between {forecast_due_date} and {resolution_date}?\n\nFor each resolution date, a stock's rate of return is calculated as its market close price on that date divided by its market close price on {forecast_due_date}, minus one. Prices are adjusted for stock splits and reverse splits. Dividends are not included. If either stock is delisted (e.g., through acquisition, merger, or bankruptcy), the most recent market close price before delisting is used for all subsequent resolution dates. | horizon 2027-01-23",
+   "benchmark": {
+    "source": "yfinance",
+    "id": "DTE_MCK",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-01-23"
+   },
+   "resolution_note": "Resolves using the market close prices at https://finance.yahoo.com/quote/DTE and https://finance.yahoo.com/quote/MCK. If a date in the question coincides with a day the market is closed (weekend, holiday, etc.) the previous market close price is used.",
+   "base_rate_used": {
+    "reference_class": "relative stock-pair performance, near-efficient random walk",
+    "value": 0.47,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'yfinance', horizon 2027-01-23: base 0.50 with 30-day momentum tilt -0.03 from freeze changes ['-7.4', '+4.6']."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for yfinance at horizon 2027-01-23: base 0.50 with 30-day momentum tilt -0.03 from freeze changes ['-7.4', '+4.6']. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.47.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "yfinance source data family (underlying series documentation)",
+     "url": "https://finance.yahoo.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.47
+  },
+  {
+   "q": "Will DTE Energy Company (DTE) have a higher rate of return than McKesson Corporation (MCK) between {forecast_due_date} and {resolution_date}?\n\nFor each resolution date, a stock's rate of return is calculated as its market close price on that date divided by its market close price on {forecast_due_date}, minus one. Prices are adjusted for stock splits and reverse splits. Dividends are not included. If either stock is delisted (e.g., through acquisition, merger, or bankruptcy), the most recent market close price before delisting is used for all subsequent resolution dates. | horizon 2027-04-23",
+   "benchmark": {
+    "source": "yfinance",
+    "id": "DTE_MCK",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-04-23"
+   },
+   "resolution_note": "Resolves using the market close prices at https://finance.yahoo.com/quote/DTE and https://finance.yahoo.com/quote/MCK. If a date in the question coincides with a day the market is closed (weekend, holiday, etc.) the previous market close price is used.",
+   "base_rate_used": {
+    "reference_class": "relative stock-pair performance, near-efficient random walk",
+    "value": 0.48,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'yfinance', horizon 2027-04-23: base 0.50 with 30-day momentum tilt -0.02 from freeze changes ['-7.4', '+4.6']."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for yfinance at horizon 2027-04-23: base 0.50 with 30-day momentum tilt -0.02 from freeze changes ['-7.4', '+4.6']. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.48.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "yfinance source data family (underlying series documentation)",
+     "url": "https://finance.yahoo.com",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.48
+  }
+ ]
+}

@@ -1,0 +1,95 @@
+{
+ "domain": "Cricket",
+ "entity_probs": {
+  "market": {
+   "Australia": 0.205,
+   "England": 0.14,
+   "India": 0.315,
+   "South Africa": 0.14
+  },
+  "model": {
+   "Afghanistan": 0.0289,
+   "Australia": 0.0785,
+   "Bangladesh": 0.0057,
+   "England": 0.0255,
+   "India": 0.3988,
+   "Ireland": 0.0002,
+   "Netherlands": 0.0001,
+   "New Zealand": 0.1884,
+   "Pakistan": 0.089,
+   "Scotland": 0.0001,
+   "South Africa": 0.1467,
+   "Sri Lanka": 0.0327,
+   "West Indies": 0.0044,
+   "Zimbabwe": 0.001
+  }
+ },
+ "forecast_id": "CWC2027",
+ "freeze_date": "2026-10-23",
+ "gate_rule": "2-of-3: CALL when >=2 instruments clear 0.95 the same way and none contradicts by >0.20 the other way; p_gate = median",
+ "instruments": {
+  "market_source": "OLBG bookmaker outrights (undated, 2026) averaged with Manifold prediction market (~1.8k traded)",
+  "model_note": "P(champion) proportional to exp(rating/tau), tau=8 rating points (stated prior, not fitted); hosts South Africa get +3 rating home bonus (stated prior)",
+  "research_sha256": "25b8da7d3c753956024e1925799438363e1b35ca628b359740979d10012b8a46"
+ },
+ "quality_flags": [
+  "13 months to resolution - the engine's instruments are at their weakest this far out; expect WATCH on anything sharp.",
+  "Instruments openly disagree on England: the market makes them 3rd favourite (7.0) while ICC ratings rank them 8th. That divergence is the product, not a bug.",
+  "Bookmaker odds snapshot is undated; Manifold is thin (~1.8k traded). Market instrument is low-grade and treated as such.",
+  "Model is championship-share by rating, not a tournament simulation - format (14 teams, SA/Zim/Namibia, Oct-Nov 2027) not yet modeled.",
+  "Market instrument prices only 4 teams, so its probability for any wider set (e.g. 'top 8') is a FLOOR, not an estimate - the true market number is higher. Gate verdicts are unaffected (floor only makes the gate more conservative)."
+ ],
+ "questions": [
+  {
+   "p_gate": 0.315,
+   "p_market": 0.315,
+   "p_model": 0.3988,
+   "p_research": 0.28,
+   "q": "India win the World Cup",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.6496,
+   "p_market": 0.8,
+   "p_model": 0.6496,
+   "p_research": 0.63,
+   "q": "Winner in {India, Australia, South Africa, England}",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.96,
+   "p_market": 0.8,
+   "p_model": 0.9886,
+   "p_research": 0.96,
+   "q": "Winner from current ICC top 8",
+   "verdict": "CALL-YES"
+  }
+ ],
+ "resolution": {
+  "resolve_by": "2027-12-31",
+  "rules": [
+   "Winner = team awarded the trophy per ICC official result, including a final decided by DLS or a super over",
+   "Shared trophy (final abandoned with no reserve-day result): every 'X wins' question resolves YES for each co-champion; set-membership questions resolve YES if any co-champion is in the set",
+   "'Winner from current ICC top 8' resolves against the eight teams named in the question's entity list at freeze (2026-10-22 ratings), not the ratings at tournament time",
+   "Tournament cancelled or not completed with no trophy awarded = VOID, logged and excluded from scoring"
+  ],
+  "source": "ICC official result of the Cricket World Cup 2027 final (icc-cricket.com), expected 2027-11"
+ },
+ "resolve_date": "2027-11",
+ "run_at_utc": "2026-10-23T09:41:49+00:00",
+ "title": "Cricket World Cup 2027",
+ "tripwires": [
+  {
+   "effect": "re-run with fresh market",
+   "watch": "Major books publish dated outrights (closer to tournament)"
+  },
+  {
+   "effect": "re-run",
+   "watch": "ICC ratings shift 5+ points for any contender"
+  },
+  {
+   "effect": "upgrade model to group-stage simulation",
+   "watch": "Tournament draw/format announced"
+  }
+ ]
+}

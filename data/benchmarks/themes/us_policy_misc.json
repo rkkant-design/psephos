@@ -1,0 +1,218 @@
+[
+ {
+  "id": "43119",
+  "source": "metaculus",
+  "question": "Will the US and China jointly announce a new bilateral trade agreement in 2026?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/43119.",
+  "market_resolution_criteria": "This question will resolve **Yes** if a new bilateral trade agreement between the US and China is signed and jointly announced before January 1, 2027. Government officials from both countries must independently announce/confirm the bilateral trade agreement and be published on official government websites (such as The White House and Chinese Ministry of Commerce).\n\nThe trade agreement does not need to come into effect before January 1, 2027 to resolve **Yes**.\n\nAmendments to existing agreements do not count.",
+  "background": "The US and China have one of the world\u2019s largest trading relationships but do not have a comprehensive bilateral free trade agreement. While strategic competition has defined the narrative in the recent relationship, the 2020 [\u201cPhase One\u201d agreement](https://ustr.gov/phase-one) signed by the first Trump Administration set out a limited agreement that could pave the way for future agreements.\n\nUS President Donald J. Trump is [set to visit Beijing for a summit in May](https://www.reuters.com/world/china/trump-visit-china-may-14-15-white-house-says-2026-03-25/) and there are talks about the US hosting President Xi Jinping later in 2026.",
+  "close": "2026-12-31T22:59:00+00:00"
+ },
+ {
+  "id": "43730",
+  "source": "metaculus",
+  "question": "Will US federal agencies cease international arrival processing at any of the following airports for 3 or more consecutive days before 2027?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/43730.",
+  "market_resolution_criteria": "This question resolves as **Yes** if, before January 1, 2027 (UTC), [credible sources](https://www.metaculus.com/faq/#definitions) report that US federal agencies have ceased processing international passenger arrivals at any one of the following US airports for three or more consecutive days:\n\n* Hartsfield\u2013Jackson Atlanta International Airport (ATL)\n* Boston Logan International Airport (BOS)\n* Denver International Airport (DEN)\n* Dallas/Fort Worth International Airport (DFW)\n* Newark Liberty International Airport (EWR)\n* Washington Dulles International Airport (IAD)\n* George Bush Intercontinental Airport (IAH)\n* John F. Kennedy International Airport (JFK)\n* Los Angeles International Airport (LAX)\n* Miami International Airport (MIA)\n* Minneapolis\u2013Saint Paul International Airport (MSP)\n* O'Hare International Airport (ORD)\n* Philadelphia International Airport (PHL)\n* Seattle\u2013Tacoma International Airport (SEA)\n* San Francisco International Airport (SFO)",
+  "background": "On May 27, 2026, United States Department of Homeland Security Secretary Markwayne Mullin [said on Fox News](https://abc7news.com/post/markwayne-mullin-fox-news-dhs-considering-plans-stop-customs-processing-airports-sanctuary-cities-including-sfo/19181789/) that the Trump administration is \"drawing up plans\" to halt Customs and Border Protection processing of international arrivals at airports in cities the administration designates as [sanctuary jurisdictions](https://time.com/article/2026/05/27/dhs-international-flight-processing-sanctuary-city-airports-mullin/). Reporting has named SFO, LAX, JFK, EWR, ORD, DEN, BOS, PHL, SEA, and [others as potential targets](https://nomadlawyer.org/airports-international-airport-dhs-sanctuary-cities-april-2026). As of the question's launch, no formal policy has been issued, and Mullin said the effort is \"not initiating yet.\" Industry groups have [war",
+  "close": "2026-12-31T23:59:00+00:00"
+ },
+ {
+  "id": "45421",
+  "source": "metaculus",
+  "question": "Will at least one additional U.S. state enact a cage-free egg requirement before July 2027?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/45421.",
+  "market_resolution_criteria": "This question will resolve as **Yes** if, before July 1, 2027, a U.S. state without an existing cage-free law in effect as of September 1, 2026, enacts a new cage-free requirement.\n\nA cage-free requirement is a law or rule that either bans the use of cages for in-state hens or bans the sale of eggs from non-cage-free hens.",
+  "background": "Over the past century, the global population of egg-laying hens came to be largely contained in [battery cages](https://en.wikipedia.org/wiki/Battery_cage). Such cages came to prominence because of the economic advantages they offer, but in more recent years, concerns have been raised by animal-welfare advocates that the use of cages causes excessive suffering. Consequently, battery cages have been banned in the European Union since 2012, and they are also banned in Bhutan, Norway, and Switzerland.\n\nWithin the United States, [various states](https://www.wherefoodcomesfrom.com/post/what-does-cage-free-eggs-mean) have [passed laws](https://www.aspca.org/improving-laws-animals/public-policy/farm-animal-confinement-bans) either requiring laying hens within the state to be cage-free or requiring eggs sold within the state to be from cage-free hens. States with laws that are either currently i",
+  "close": "2026-12-18T23:00:00+00:00"
+ },
+ {
+  "id": "1385",
+  "source": "metaculus",
+  "question": "Qualia Research Institute Question Series: Will Psilocybin be a clinically approved treatment for end-of-life anxiety by 2027?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/1385.",
+  "market_resolution_criteria": "**So will we hit the mark? By January 1st, 2027, will psilocybin be an accepted treatment for end-of-life anxiety/depression? Positive resolution is by FDA approval in the US or MHRA approval in the UK.**",
+  "background": "*This is the second in a [three-part series](https://www.metaculus.com/questions/?search=cat:series--qualia-research-institute) of questions suggested by the [Qualia Research Institute](https://qualiaresearchinstitute.org/), with particular thanks to Andr\u00e9s G\u00f3mez Emilsson, whom you can find blogging at the always interesting [QualiaComputing.com](https://qualiacomputing.com/)*  \n\nThe three other questions in the series are:\n\n- [Will MDMA be approved for the treatment of PTSD by 2025?](https://www.metaculus.com/questions/1384/)\n- [Will Psilocybin be a clinically approved treatment for end-of-life anxiety by 2027?](https://www.metaculus.com/questions/1385/)\n- [Will we see evidence that Piracetam is a more effective Alzheimer's treatment than Memantine by 2021?](https://www.metaculus.com/questions/1386/)\n\nPsilocybin, the active compound that gives magic mushrooms their magic, is classified ",
+  "close": "2026-12-31T06:01:00+00:00"
+ },
+ {
+  "id": "36331",
+  "source": "metaculus",
+  "question": "Will the US establish a government program rewarding information leading to deportations before January 3, 2027?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/36331.",
+  "market_resolution_criteria": "This question will resolve as **Yes** if, before January 3, 2027, a United States federal or state government formally establishes a program that provides monetary rewards to civilians for providing information leading to the deportation of individuals from the US.\n\nFor this question to resolve as Yes:\n\n* The program must be officially established by a federal executive branch department (e.g., DHS, ICE, DOJ), a state executive branch agency, or a federal or state legislature through enacted legislation.\n* The program must offer monetary compensation or financial incentives in exchange for providing information that contributes to the deportation of undocumented immigrants or individuals otherwise subject to removal proceedings.\n* The program must become active before January 1, 2027.\n\nThis question will not resolve as Yes if:\n\n* There is no monetary reward involved (e.g., a general tip line or anonymous reporting system without financial compensation).\n* The program is proposed or debated but not officially established and implemented before the deadline.\n* The program is created only by a private organization rather than a government entity.\n* The monetary rewards are only offered to law enforcement officers or government employees, rather than civilians.",
+  "background": "Throughout US history, there have been various forms of civilian tip lines and enforcement incentives related to immigration, but none yet offering paid rewards. Currently, the US Immigration and Customs Enforcement (ICE) tip line allows civilians to report suspected immigration violations, but it does not offer monetary incentives. Given the ongoing debates about immigration policy and border enforcement, there is a possibility that certain states or the federal government could introduce a monetary reward system to encourage civilian participation in deportation efforts.\n\n*This forecast question was created by Bright Line Watch, a nonpartisan watchdog group. Forecast on their other questions* [*here*](https://www.metaculus.com/c/brightlinewatch/)*.*&#x20;",
+  "close": "2027-01-01T04:59:00+00:00"
+ },
+ {
+  "id": "8602",
+  "source": "metaculus",
+  "question": "Will the combination of semaglutide and cagrilintide be approved for the treatment of obesity by the FDA or EMA by 2027?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/8602.",
+  "market_resolution_criteria": "This question will resolve positively if either the US Food and Drug Administration or the European Medicines Agency approve a paired form of semaglutide and cagrilintide (in any ratio) for the treatment of weight loss by 2027-01-01.  This may include a successful development from Novo Nordisk, or any other pharmaceutical company.  The approved drug may have any ratio of semaglutide and cagrilintide, but may not include any other active ingredient",
+  "background": "There have been a number of promising early results in drug research and development to treat obesity, particularly results with [Semaglutide](https://en.wikipedia.org/wiki/Semaglutide). Novo Nordisk recently completed a [phase 1b trial](https://doi.org/10.1016/S0140-6736(21)00845-X) pairing semaglutide with the amylin analog cagrilintide. Over 20 weeks, the addition of cagrilintide nearly doubled the rate of weight loss caused by semaglutide alone, suggesting that in a longer trial the combination may equal the weight loss caused by bariatric surgery. The combination caused somewhat more gastrointestinal side effects than semaglutide alone, but there was no indication of serious adverse events.",
+  "close": "2026-12-31T17:00:00+00:00"
+ },
+ {
+  "id": "15134",
+  "source": "metaculus",
+  "question": "Will Dubai's planned aerial taxis be operational before 2027?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/15134.",
+  "market_resolution_criteria": "This question will resolve as **Yes** upon any successful, commercial eVTOL aircraft flight (whether from Joby or any other air taxi developer) taking place in Dubai, UAE, based on media reports from [credible sources](https://www.metaculus.com/help/faq/#definitions). For purposes of this question, this is defined as an eVTOL flight with:\n\n1. at least one ticketed passenger\n2. no passengers harmed in the flight \n3. the aircraft not reported to have incurred significant damage from the flight. \n4. the aircraft taking off from one vertiport and landing at another.\n\nThis question resolves as **No** if no such successful, commercial eVTOL flight is reported to have taken place in Dubai before January 1, 2027",
+  "background": "On February 13, 2023, Dubai's ruler Sheikh Mohammed bin Rashid Al Maktoum [announced](https://www.rta.ae/wps/portal/rta/ae/home/news-and-media/all-news/NewsDetails/mohammed-bin-rashid-approves-models-of-aerial-taxi-vertiports-at-world-government-summit) plans for electric flying taxis in Dubai in 2026,  which will include a network of vertiports connecting key areas of the city. See also [Arab News - Dubai says flying taxis to take off by 2026 from 4 stations across city](https://www.arabnews.com/node/2250066/middle-east) and the [tweet](https://twitter.com/HHShkMohd/status/1624760548100382721) by Sheikh Mohammed with a computer-generated video clip of the planned aerial taxis by Joby Aviation, Inc.\n\nJoby Aviation has spent more than a decade designing and testing a piloted vertical take-off and landing (eVTOL) aircraft, to be used for what it calls the Urban Air Mobility market. If it r",
+  "close": "2026-12-31T04:06:00+00:00"
+ },
+ {
+  "id": "15492",
+  "source": "metaculus",
+  "question": "Will California's waiver exception under the Clean Air Act be repealed before January 1, 2027?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/15492.",
+  "market_resolution_criteria": "This question will resolve as **Yes** if, before January 1, 2027, an enacted law or judicial ruling eliminates California's ability to receive waivers to set its own emissions standards for motor vehicles. The law or ruling need not invalidate all existing waivers granted to California, so long as it removes the ability of California to be granted new waivers. An enacted law need not take effect before January 1, 2027, so long as it is signed by the President before that date.\n\nA judicial ruling qualifies as eliminating California's ability to receive waivers if it is either issued by the Supreme Court of the United States or if it is issued by a lower court such that it removes California's ability to receive waivers for 180 consecutive days without being overturned. The 180 day period need not end before January 1, 2027. If a lower court has produced such a ruling and the 180 day period has not ended before January 1, 2027, Metaculus will wait until the 180 day period has completed or the ruling has been overturned to resolve.",
+  "background": "The [Clean Air Act](https://en.wikipedia.org/wiki/Clean_Air_Act_(United_States)ss) (CAA) is the broad name given to the United States' air quality laws, which are administered by the [Environmental Protection Agency](https://en.wikipedia.org/wiki/United_States_Environmental_Protection_Agency) (EPA). Originally passed in 1963, the CAA has been [amended numerous times](https://www.epa.gov/clean-air-act-overview/evolution-clean-air-act). The CAA prevents states from imposing their own emissions regulations for new vehicles, with an exception that states [which had imposed vehicle emissions regulations prior to March 30, 1966](https://crsreports.congress.gov/product/pdf/RL/RL30853) may apply for a waiver to enforce their own emissions regulations contingent on the regulations being more stringent than the national regulations, along with several other conditions.\n\nAs the only state meeting t",
+  "close": "2027-01-01T05:00:00+00:00"
+ },
+ {
+  "id": "45462",
+  "source": "metaculus",
+  "question": "Will the 2026 World Cup deliver the predicted economic boost to US host cities?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/45462.",
+  "market_resolution_criteria": "The question will resolve as Yes if, before January 1, 2027, credible post-event data show that at least 6 of the 11 U.S. host cities achieved at least 75% of their own pre-tournament projected economic impact.\n\nThe question will resolve as No if, before January 1, 2027, credible post-event data show that at least 6 of the 11 U.S. host cities failed to achieve at least 75% of their own pre-tournament projected economic impact.\n\nThe question will resolve as Ambiguous if, as of January 1, 2027, reliable and sufficiently comparable post-event data is unavailable for enough host cities to resolve the question as Yes or No.",
+  "background": "*This forecasting question is associated with the Verity controversy:* [Will the FIFA World Cup 2026 be an economic positive for host nations?](https://www.verity.news/controversy/Will-World-Cup-North-America-deliver-the-predicted-economic-boost-to-US-host-cities)\n\nThe [2026 FIFA World Cup](https://en.wikipedia.org/wiki/2026_FIFA_World_Cup), co-hosted by the United States, Canada, and Mexico, was the largest World Cup in history, [expanding from 32 to 48 teams and increasing the tournament from 64 to 104 matches](https://www.nytimes.com/athletic/7324882/2026/06/05/world-cup-32-48-expansion-africa-underdogs-golden-boot/). [Eleven U.S. cities](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/host-cities) hosted matches, and before the tournament, [FIFA and local organizing committees promoted the event as a major opportunity to boost tourism, consumer spending, employm",
+  "close": "2027-01-01T04:59:00+00:00"
+ },
+ {
+  "id": "43980",
+  "source": "metaculus",
+  "question": "Will U.S. District Judge Eleanor L. Ross leave office before 2027?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/43980.",
+  "market_resolution_criteria": "This question will resolve as **Yes** if, at any time after this question opens and before January 1, 2027, District Judge Eleanor L. Ross ceases to hold her position in the United States District Court for the Northern District of Georgia due to resignation, retirement, impeachment or removal for any reason.",
+  "background": "On June 10, 2026, [two congressional Republicans from Georgia introduced impeachment resolutions](https://apnews.com/article/federal-judge-misconduct-georgia-impeachment-4b2f18e46c7dc32825d6bc1278d1a1f7) against U.S. District Judge Eleanor L. Ross in Atlanta who was [disciplined after an investigation](https://apnews.com/article/federal-judge-police-officer-sex-reprimand-a1caf9894fce24596321c41f600072a9) found she had sex with a police officer in her chambers, attended a partisan political event and lied to investigators looking into the alleged misconduct. According to [the AP](https://www.wrdw.com/2026/06/10/impeachment-sought-against-federal-judge-over-alleged-sex-chambers/):\n\n> Ross received a \u201cprivate reprimand\u201d after the investigation confirmed the sexual activity and found she attended a partisan event and initially lied to deny the allegations.\n\nThe House Judiciary Committee can ",
+  "close": "2026-12-31T23:59:00+00:00"
+ },
+ {
+  "id": "28395",
+  "source": "metaculus",
+  "question": "Will the World Health Organization prequalify moxidectin before 2027?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/28395.",
+  "market_resolution_criteria": "This question resolves as **Yes** if, before January 1, 2027, the World Health Organization (WHO) adds moxidectin to its prequalification (PQ) list, according to official WHO announcements or other [credible sources](https://www.metaculus.com/help/faq/#definitions). If this does not occur before that date, this question resolves as **No**.",
+  "background": "In June 2024, GiveWell made a $637,549 grant to [Medicines Development for Global Health](https://www.medicinesdevelopment.com/) (MDGH), a not-for-profit pharmaceutical organization focused on developing medicines for neglected diseases in low- and middle-income countries, to complete the World Health Organization\u2019s (WHO\u2019s) prequalification process for moxidectin.\n\nAccording to [the WHO](https://www.who.int/news-room/fact-sheets/detail/onchocerciasis):\n\n>Onchocerciasis, commonly known as \u201criver blindness\u201d, is caused by the parasitic worm Onchocerca volvulus. It is transmitted to humans through exposure to repeated bites of infected blackflies of the genus Simulium. Symptoms include severe itching, disfiguring skin conditions, and visual impairment, including permanent blindness. More than 99% of infected people live in 31 African countries. The disease also exists in some foci in two cou",
+  "close": "2026-12-30T17:00:00+00:00"
+ },
+ {
+  "id": "40976",
+  "source": "metaculus",
+  "question": "Will Mike Johnson remain Speaker of the House until January 3, 2027?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/40976.",
+  "market_resolution_criteria": "This question will resolve as **Yes** if Mike Johnson remains Speaker of the US House of Representatives from December 13, 2025, continuously until the end of the 119th Congress, on January 3, 2027. If he is not Speaker of the House at any point before the end of the 119th Congress, this question will resolve as **No**.&#x20;",
+  "background": "The 119th United States Congress convened on January 3, 2025, and [re-elected the 56th Speaker of the House Republican Mike Johnson](https://www.speaker.gov/2025/01/04/house-adopts-rules-for-the-119th-congress/). Republicans began with a slim majority 219 to 215 (with 1 vacant).\n\nDespite being the Speaker of the House since October 25, 2023, Johnson has recently come under pressure from his own party. As [reported by Politico](https://www.politico.com/news/2025/12/04/mike-johnson-ndaa-pentagon-bill-00677847) on December 4, 2025, House Republicans are \"questioning the speaker\u2019s hold on his tenuous House majority. Next week, he has to prove he\u2019s capable of governing.\"\n\n> The annual Pentagon policy bill is due on the floor just in time to test Johnson\u2019s ability to command and cajole his conference with must-pass legislation at stake. Already GOP leaders have had to [delay release of bill te",
+  "close": "2027-01-02T23:59:00+00:00"
+ },
+ {
+  "id": "36478",
+  "source": "metaculus",
+  "question": "Will a wild animal be infected with the New World screwworm in the contiguous US, before 2027?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/36478.",
+  "market_resolution_criteria": "This question will resolve as **Yes** if, before 00:00 GMT on January 1, 2027, a United States government agency, such as the USDA-APHIS, confirms that a free-ranging wild animal in the [contiguous United States](https://en.wikipedia.org/wiki/Contiguous_United_States) has been infected by the New World screwworm (Cochliomyia hominivorax). Otherwise, the question will resolve as **No**.",
+  "background": "* [According to APHIS](https://www.aphis.usda.gov/livestock-poultry-disease/cattle/ticks/screwworm/outbreak-central-america), the New World screwworm has been spreading northward from the current barrier zone along the Dari\u00e9n Gap in Panama.\n* Climate change [seems to be contributing](https://doi.org/10.1111/afe.12046) to an expansion of habitat suitability northward in the Americas.\n* See [here](https://forum.effectivealtruism.org/posts/d2HJ3eysBdPoiZBnJ/launching-screwworm-free-future-funding-and-support-request) for a summary of recent developments and attempts to combat the spread of the parasite.\n* An identical question on Manifold can be found [here](https://manifold.markets/Liedholm/will-a-wild-animal-be-infected-with).\n* A previous outbreak took place [among deer in the Florida Keys in 2016](https://www.aphis.usda.gov/sites/default/files/nws-epi-report.pdf).",
+  "close": "2026-12-31T23:59:00+00:00"
+ },
+ {
+  "id": "38950",
+  "source": "metaculus",
+  "question": "#3 - Will the Tiger Point Wastewater Treatment Facility expansion be finished before February 2027?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/38950.",
+  "market_resolution_criteria": "![](https://cdn.metaculus.com/user_uploaded/Screenshot_2025-08-16_at_1.17.50AM.png)\n\nScroll down to the Background section for more on this question and why it's important for our community.\n\nThis question will resolve **Yes** if the City of Gulf Breeze officially reports that the Tiger Point Wastewater Treatment Facility expansion is substantially complete before February 1, 2027. Otherwise, it will resolve **No**. Official city updates or public project documents will be used for confirmation.",
+  "background": "Gulf Breeze is expanding the Tiger Point Wastewater Treatment Facility to help serve more homes and support future growth. The project will increase the facility's capacity from 2.0 to 3.5 million gallons per day\u2014allowing more households to move off septic systems and connect to city sewer.\n\nConstruction began in August 2024, and as of mid-2025, the work was about 25% complete. The expansion is being funded by a mix of state and federal dollars, plus a new \\$14 monthly fee for utility customers.\n\nCity plans show the project is scheduled to be finished by January 2027. This forecast asks: will the construction be complete before February 1, 2027?\n\n**Resources**\n\nGulf Breeze operates an active stormwater management program designed to reduce pollution and flooding, managed under the EPA\u2019s Municipal Separate Storm Sewer System (MS4) permit requirements ([City of Gulf Breeze Stormwater Manag",
+  "close": "2027-02-02T05:58:00+00:00"
+ },
+ {
+  "id": "44883",
+  "source": "metaculus",
+  "question": "Will a Section 301 overcapacity determination result in new US tariffs or trade measures specifically targeting China before 2027?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/44883.",
+  "market_resolution_criteria": "This question resolves Yes if, before January 1, 2027, a final determination in USTR's Section 301 industrial-overcapacity investigation (initiated March 2026) results in the imposition of new tariffs, duties, import restrictions, or other trade measures that apply to imports from the People's Republic of China.",
+  "background": "USTR's Section 301 overcapacity investigation, initiated March 17, 2026, covers 16 major trading partners and examines state-driven overproduction in sectors including steel, automobiles, and semiconductors. Unlike the companion forced-labor investigation; which produced tariffs across roughly 60 partners in July 2026; the overcapacity probe targets the industrial-policy practices most closely associated with China's development model, though its stated scope includes multiple economies.\n\nSection 301 investigations can conclude with a range of outcomes, from no action to significant tariffs. The forced-labor investigation demonstrated the administration's willingness to convert these probes into broad tariff actions.&#x20;",
+  "close": "2026-12-27T23:00:00+00:00"
+ },
+ {
+  "id": "38955",
+  "source": "metaculus",
+  "question": "#7 - Will the Montrose and Florida Avenue septic-to-sewer project finish by the end of 2026?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/38955.",
+  "market_resolution_criteria": "Scroll down to the Background section for more on this question and why it's important for our community.\n\nThis question will resolve **Yes** if the City of Gulf Breeze confirms that the Montrose and Florida Avenue septic-to-sewer project is fully completed by December 31, 2026. If work continues into 2027, the question resolves **No**.",
+  "background": "Gulf Breeze is replacing septic tanks with central sewer connections across the city, including in two key neighborhoods: the Florida Avenue\u2013Dolphin Street\u2013Hillcrest area and the Montrose Boulevard\u2013Navy Cove\u2013Berry Avenue area.\n\nWork on this combined project is planned to begin in 2025, with construction expected to wrap up by Fall 2026. This forecast asks: will it all be done by the end of 2026?\n\nIf you live in one of these neighborhoods or have thoughts about the septic-to-sewer upgrades, we'd love to hear from you in the comments.",
+  "close": "2027-01-01T05:58:00+00:00"
+ },
+ {
+  "id": "38957",
+  "source": "metaculus",
+  "question": "#9 - Will the Bay Cliffs septic-to-sewer project be completed by the end of 2026?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/38957.",
+  "market_resolution_criteria": "Scroll down to the Background section for more on this question and why it's important for our community.\n\nThis question resolves **Yes** if the City of Gulf Breeze confirms that the Bay Cliffs septic-to-sewer (STS) project is fully completed by December 31, 2026. If significant work remains after that date, it resolves **No**. The city's official records will be used to determine the outcome.",
+  "background": "The Bay Cliffs septic-to-sewer conversion is one of several neighborhood projects in Gulf Breeze's plan to eliminate all septic tanks within city limits by 2029. With funding from a \\$12.8 million federal NRDA grant awarded in 2024, the City is working to connect homes in the Bay Cliffs area to the main sewer system and retire outdated septic systems.\n\nThis forecast asks: will all work on the Bay Cliffs project be completed by the end of 2026?\n\nThe latest updates from the city website:&#x20;\n\n> 8.5.2025: A redesign proposal for this project has been approved by City Council on 8.4.2025. This design process is expected to be completed December 2025, and anticipated construction starting February 2026.\n> &#x20;\n> 5.8.25: Staff is currently collaborating with GMC on the redesign proposal and expects to have all the necessary information to present the proposal to the GBRWS Board in June, se",
+  "close": "2027-01-01T05:58:00+00:00"
+ },
+ {
+  "id": "43281",
+  "source": "metaculus",
+  "question": "Will FURA introduce another cultivated meat dish on its menu before July 2027?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/43281.",
+  "market_resolution_criteria": "This question will resolve as **Yes** if at any time before July 1, 2027, FURA has at least one item on its menu that contains a cultured meat other than Japanese quail.",
+  "background": "[FURA](https://www.fura.space/) is a restaurant in Singapore which focuses on sustainability and creativity. FURA uses ingredients with a low carbon footprint. FURA\u2019s Journal of Future Food menu offers guests a range of planet-friendly options like insect proteins, cell-cultured milk and quail and coffee-free coffee.&#x20;\n\nThe restaurant open in October 2023 and as at April 2026 has one cultured meat dish on its [menu](https://www.fura.space/menu) - cultured Japanese quail.",
+  "close": "2027-06-30T20:00:00+00:00"
+ },
+ {
+  "id": "KXFEDERALCHARGE-27JAN01-PSTR",
+  "source": "kalshi",
+  "question": "Will Peter Strzok be charged with a any crime before Jan 1, 2027? [Yes: Peter Strzok]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxfederalcharge/x/kxfederalcharge-27jan01.",
+  "market_resolution_criteria": "If Peter Strzok has been formally charged with a federal crime  after Issuance and before Jan 1, 2027, then the market resolves to Yes. Charges filed in military courts are included. The reinstatement of charges filed prior to Issuance does not count; only the filing of a new charging document after Issuance triggers the Payout Criterion.\n\nFormal charges require the filing of a criminal complaint, information, or indictment with an appropriate court. Arrests without charges, being named as a target of investigation, civil lawsuits, and administrative actions do not constitute charges. Traffic violations that don't require court appearances and sealed charges that remain sealed through the deadline also don't count. If charges are filed and then dismissed before the deadline, the market still resolves to Yes. Pre-trial diversion agreements involving formal charges count as charges. For groups of individuals, charges against any member of the specified group trigger the criterion. Outcome verified from the New York Times (https://www.nytimes.com); the Associated Press (https://apnews.com/); Bloomberg (https://www.bloomberg.com); Reuters (https://www.reuters.com); Axios (https://www.axios.com); The Washington Post (https://www.washingtonpost.com/); The Wall Street Journal (https://www.wsj.com/); Semafor (https://semafor.com); The Information (https://www.theinformation.com); Politico (https://www.politico.com/); NBC (https://www.nbcnews.com/); CNN (https://www.cnn.com/); ABC (https://abcnews.go.com/); CBS (https://www.cbsnews.com/); MSNBC (https://www.msnbc.com); BBC (https://www.bbc.co.uk); NPR (https://www.npr.org).",
+  "background": "N/A",
+  "close": "2027-01-01T04:59:00+00:00"
+ },
+ {
+  "id": "0x612126703db7fb7eaa44906b2c7de42300a6cb6e0615c1e360e96e328b6433e5",
+  "source": "polymarket",
+  "question": "Will FISA Section 702 reauthorization become law this year?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-fisa-section-702-reauthorization-become-law-this-year.",
+  "market_resolution_criteria": "This market will resolve to \"Yes\" if legislation that reauthorizes FISA Title VII, including Section 702, for two years is passed by both chambers of the U.S. Congress and signed into law by December 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nQualifying legislation includes Public Law 118-49.\n\nQualifying legislation may include joint resolutions and must pass both the House and the Senate, and must be signed by the President, become law without signature while Congress remains in session, or become law through veto override. Presidential pocket vetoes that expire resolve to \"No\".\n\nThe primary resolution sources for this market will be Congress.gov\u2019s legislation tracker (https://www.congress.gov/bill/119th-congress/house-bill/22), the Library of Congress (congress.gov), and other official information from the government of the United States; however, a consensus of credible reporting may also be used.",
+  "background": "N/A",
+  "close": "2027-01-01T04:59:00+00:00"
+ },
+ {
+  "id": "0xa222013f2baf3e9eb0613b7dc45d2fd8a3e63177c21bd282d9bb5133d6a44986",
+  "source": "polymarket",
+  "question": "Will Samuel Alito announce his retirement by December 31, 2026?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-samuel-alito-announce-his-retirement-by-december-31-2026-573-343-622.",
+  "market_resolution_criteria": "This market will resolve to \"Yes\" if Samuel Alito announces that he will retire from his position as Associate Justice of the Supreme Court of the United States by the specified date at 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nThe announced timing of his retirement may be immediate, at the end of the current Supreme Court term, or at any point in the future.\n\nAny qualifying announcement from Alito will count for a \"Yes\" resolution, regardless of whether the announced retirement goes into effect.\n\nThe resolution source for this market will be official announcements from Alito or one of his official representatives.",
+  "background": "N/A",
+  "close": "2027-01-01T04:59:00+00:00"
+ },
+ {
+  "id": "0xa86594cc30a08748fbf8406af27473294bc927873cb90c89b6e233b4c3af7499",
+  "source": "polymarket",
+  "question": "Will Chris Hill win the 2026 Collin County Judge election?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-chris-hill-win-the-2026-collin-county-judge-election-20260626003643463.",
+  "market_resolution_criteria": "The 2026 Collin County Judge election will be held on November 3, 2026, to elect the County Judge of Collin County, TX.\n\nThis market will resolve according to the candidate who becomes the next County Judge of Collin County as a result of this election.\n\nTemporary, interim, or placeholder County Judges appointed before the election will not be considered.\n\nIf the result of this election isn't known by April 30, 2027, 11:59 PM ET, the market will resolve to \u201cOther.\u201d\n\nThe primary resolution source for this market will be a consensus of credible reporting; however, if there is any ambiguity in the results, this market will resolve according to official information from the State of Texas and Collin County.",
+  "background": "N/A",
+  "close": "2026-11-04T04:59:00+00:00"
+ },
+ {
+  "id": "0x326df6a10a6cdd74bdc1ef77906037e90b1f1d6dd1fdcbf6580aea62de094a96",
+  "source": "polymarket",
+  "question": "Will Trump sell 1-100 Gold Cards in 2026?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-trump-sell-1-100-gold-cards-in-2026.",
+  "market_resolution_criteria": "Donald Trump has announced a \u201cGold Card\u201d plan to offer a pathway citizenship to citizenship in exchange for a $5m payment.\n\nThis market will resolve according to the number of individuals who purchase a \u201cGold Card\u201d between January 1 and December 31, 2026, 11:59 PM ET. \n\nAny individual participating in a new program created after February 26, 2025, by the Trump Administration which is either referred to as a Gold Card, or involves a new pathway to U.S. citizenship, work permits, or any other form of legal residency status in exchange for payments or investment will qualify. \n\nIf the reported value falls exactly between two brackets, then this market will resolve to the higher range bracket.\n\nThe resolution source will be official information from the Trump Administration. If the Trump Administration does not publish the number of individuals who receive Gold Cards by December 31, 11:59 PM ET, this market will resolve based on a consensus of credible reporting.",
+  "background": "N/A",
+  "close": "2026-12-31T23:59:00+00:00"
+ },
+ {
+  "id": "0x5851bae96eeb26f343fa3c39602ce4d63f58629afdbc58bf409d565425f23443",
+  "source": "polymarket",
+  "question": "Will Trump deport 400-500k people?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-trump-deport-400-500k-people-588.",
+  "market_resolution_criteria": "During the 2024 FY ICE removed 271,484 non citizens (see: https://www.ice.gov/doclib/eoy/iceAnnualReportFY2024.pdf).\n\nThis market will resolve according to the number of non citizens removed by U.S. Immigration and Customs Enforcement (ICE) in the 2026 fiscal year. \n\nThe resolution source will be the FY 2026 ICE Annual Report. If the FY 2026 ICE Annual Report is not published by February 28, 2027, 11:59 PM ET, another credible resolution source will be used.",
+  "background": "N/A",
+  "close": "2027-03-01T04:59:00+00:00"
+ }
+]

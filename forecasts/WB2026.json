@@ -1,0 +1,64 @@
+{
+  "forecast_id": "WB2026",
+  "title": "West Bengal Legislative Assembly 2026 (holdout)",
+  "state": "WB",
+  "expected_date": "2026-04-23/29 (counting 2026-05-04)",
+  "freeze_date": "2026-03-26",
+  "majority": 148,
+  "n_seats": 294,
+  "baseline_ae": "WB2021",
+  "ge_election": "GEWB2024",
+  "blocs": {
+    "AITC": {
+      "ae_base": {"AITC": "1"},
+      "ge": {"AITC": "1"},
+      "note": "contesting essentially alone (291 of 294), per frozen rev 2026-03-26"
+    },
+    "BJP": {
+      "ae_base": {"BJP": "1"},
+      "ge": {"BJP": "1"},
+      "note": "contesting 293; ISF seat-sharing 'yet to be finalized' at freeze - ISF (1.39 in 2021) NOT included"
+    },
+    "LF": {
+      "ae_base": {"CPM": "1", "AIFB": "1", "RSP": "1", "CPI": "1", "CPIML": "t"},
+      "ge": {"CPM": "1"},
+      "note": "Left Front WITHOUT INC (2021 Sanyukta Morcha dissolved); CPIML joined (10 seats) - was outside in 2021, tau transfer. GE2024: only CPM registers a share in state_shares_all"
+    },
+    "INC": {
+      "ae_base": {"INC": "1"},
+      "ge": {"INC": "1"},
+      "note": "INC contesting all 294 alone per frozen rev; own-vote baseline (2.97 AE2021, 4.72 GE2024) - both earned under Left-INC seat adjustment, so solo baseline may overstate"
+    }
+  },
+  "polls": [
+    {"agency": "IANS-Matrize", "date": "2026-03-15", "AITC": 44.0, "BJP": 42.0, "LF": null, "INC": null, "rated": false},
+    {"agency": "VoteVibe CNN-News18", "date": "2026-03-23", "AITC": 41.9, "BJP": 34.9, "LF": null, "INC": null, "rated": false}
+  ],
+  "poll_window_days": 90,
+  "poll_corrections": {
+    "AITC": 3.3,
+    "BJP": 0.46,
+    "LF": 0.0,
+    "INC": 0.0,
+    "rule": "0.5 x mean of WB ledger errors (actual - final-window polled), WB2021 only: AITC 48.64-42.03=+6.61 -> +3.3; BJP 38.85-37.93=+0.92 -> +0.46. LF/INC: no 2026 poll split exists (merged 13-15% cell in frozen rev) and the 2021 SM error (-7.2) belongs to a bloc that no longer exists -> 0"
+  },
+  "sigma_state_m2": 6.3,
+  "sigma_state_m3_rated": 4.0,
+  "sigma_state_m3_unrated": 6.0,
+  "sub_questions": [
+    {"q": "Winner (largest) in {AITC, BJP}", "bloc": "__top2__", "op": "in", "threshold": ["AITC", "BJP"]},
+    {"q": "LF under 30 seats", "bloc": "LF", "op": "<", "threshold": 30},
+    {"q": "INC under 30 seats", "bloc": "INC", "op": "<", "threshold": 30}
+  ],
+  "quality_flags": [
+    "Both pre-freeze polls are unrated agencies (IANS-Matrize, VoteVibe CNN-News18); M3 runs at inflated sigma 6.0.",
+    "LF+ and INC have NO separate poll numbers at freeze (Wikipedia table merges LF+/INC/Others into one 13-15% colspan cell) -> their questions are M3-blind (WATCH-NOPOLL) and the M3 seat sim excludes them, which mechanically inflates AITC/BJP M3 seat counts; the dual gate's min() partially protects.",
+    "BJP-ISF seat sharing unresolved at freeze; ISF excluded from BJP bloc.",
+    "Baseline AE (WB2021) covers 290 of 294 ACs in ae_long; seat sims run on 290.",
+    "2021 WB polls underestimated AITC by 6.6 pts; correction +3.3 applied per ledger rule."
+  ],
+  "tripwires": [
+    {"watch": "BJP-ISF alliance finalized", "effect": "BJP bloc gains ~1.4pt transfer-weighted; re-run"},
+    {"watch": "A rated agency (CVoter/Axis/CSDS) publishes pre-election vote shares", "effect": "M3 upgrades to rated sigma"}
+  ]
+}

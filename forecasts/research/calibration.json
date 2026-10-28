@@ -1,0 +1,7 @@
+{
+  "a": 1.0,
+  "b": 0.0,
+  "note": "Post-hoc calibration for M_research: p_research = sigmoid(a*logit(p_raw) + b). Neutral (a=1, b=0, identity) until tuned on >= 30 resolved research questions via `python scripts/m_research.py tune`. tune PRINTS a candidate fit; adopting it (editing this file) is a user decision. A change applies to new commits only - already-ledgered rows are never restated (append-only law).",
+  "tuned_on_n": 0,
+  "last_tuned": null
+}

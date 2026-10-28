@@ -1,0 +1,4 @@
+source,n,error_corr,same_sign_rate,joint_large_miss,independent_would_predict
+forward_resolved,26,0.962,0.962,0.3077,0.1775
+retrodiction_n46,128,0.663,0.906,0.0938,0.0488
+pooled,154,0.745,0.916,0.1299,0.0675

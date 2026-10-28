@@ -1,0 +1,494 @@
+{
+  "43119": {
+    "base_rate": {
+      "reference_class": "Comprehensive new bilateral trade agreements signed between major-power rivals within a single pre-specified year (not truce extensions or frameworks)",
+      "value": 0.1,
+      "source": "Historical: US-China Phase One took ~18 months of negotiation after talks began; most announced 'frameworks' never become signed agreements within the year"
+    },
+    "evidence": [
+      "2026-09-25: Trump-Xi White House summit produced only 'limited understandings'; tariff cuts agreed on ~$60B of non-sensitive goods with no adoption timeline; deadline for a broader trade accord explicitly pushed into 2027",
+      "2026-09 (pre-summit): trade truce extended from November 2026 to January 2027, keeping pause on higher tariffs and rare-earth controls",
+      "2026-09/10: analysts described the summit as a 'managed stalemate'; absence of a Chinese CEO delegation cast doubt on the two-way investment scheme floated at the May Beijing summit",
+      "Upcoming: Trump to visit China for APEC Shenzhen in November 2026; Xi to the US for G20 Florida in December 2026 - two more leader-level windows before the deadline"
+    ],
+    "strongest_opposing_case": "Two more Trump-Xi meetings (APEC November, G20 December) occur before year-end, both leaders want a headline deal, and the truce architecture plus the $60B tariff-cut understanding could be packaged and signed as a 'Phase Two'-style agreement with joint official announcements.",
+    "reasoning_summary": "Base rate ~10% for a signed comprehensive bilateral deal in a given year between rivals. The September 2026 summit explicitly deferred the broader accord into 2027 and extended the truce only to January 2027, which signals no signed agreement is imminent; amendments/extensions do not count under the criteria. Two remaining summits provide upside but negotiators themselves set a 2027 timetable. Final: 0.10.",
+    "key_sources": [
+      {"title": "US and China say trade deal drawing closer as Trump and Xi prepare for meeting", "url": "https://www.michiganpublic.org/2025-10-26/us-and-china-say-trade-deal-drawing-closer-as-trump-and-xi-prepare-for-meeting", "date": "2025-10-26"},
+      {"title": "Trump and Xi's stalemate summit was a glitzy gift to China", "url": "https://tribune.com.pk/story/2631894/trump-and-xis-stalemate-summit-was-a-glitzy-gift-to-china", "date": "2026-09-28"},
+      {"title": "US-China Deal Framework Sets Stage for 'Productive' Trump-Xi Talks", "url": "https://us.ibfd.org/knowledge-hub/tax-news/us-china-deal-framework-sets-stage-productive-trump-xi-talks-treasury", "date": "2026-09"}
+    ],
+    "p": 0.1
+  },
+  "43730": {
+    "base_rate": {
+      "reference_class": "Threatened but unprecedented federal actions with severe self-inflicted economic cost being executed within months of first being floated",
+      "value": 0.05,
+      "source": "Structural prior: CBP arrival processing has never been deliberately halted at a major US airport for 3+ days, including during government shutdowns (CBP officers are essential/excepted)"
+    },
+    "evidence": [
+      "2026-04-07: DHS Secretary Markwayne Mullin said CBP 'could stop' processing international travelers at sanctuary-city airports; Reuters framed it as a possibility tied to a funding standoff, not a decision",
+      "2026-05-27: Mullin on Fox News said plans were being 'drawn up' but the effort was 'not initiating yet'",
+      "As of 2026-10-25: no reporting found that any halt took effect at any of the 15 listed airports; airline and travel industry groups warned of severe trade/tourism damage",
+      "Structural: halting arrivals at hubs like JFK/LAX/ORD would strand US citizens too and invite immediate litigation; no legal mechanism has been published"
+    ],
+    "strongest_opposing_case": "The administration has repeatedly converted floated immigration threats into action (tariff-style shock tactics), a DHS funding standoff could escalate in the lame-duck period, and only one airport for three days is needed across fifteen qualifying airports.",
+    "reasoning_summary": "Base rate ~5% for executing an unprecedented, economically self-harming threat within the remaining window. Floated April-May 2026, still not initiated by late October with ~2 months left; shutdowns don't stop CBP processing, and industry/legal resistance is strong. Small bump for this administration's willingness to act on threats. Final: 0.05.",
+    "key_sources": [
+      {"title": "DHS says US could stop processing international travelers at some airports in 'sanctuary cities' (Reuters)", "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/04/07/dhs-says-us-could-stop-processing-international-travelers-at-some-airports-in-sanctuary-cities", "date": "2026-04-07"},
+      {"title": "DHS considering plans to stop customs processing at airports in sanctuary cities including SFO", "url": "https://abc7news.com/post/markwayne-mullin-fox-news-dhs-considering-plans-stop-customs-processing-airports-sanctuary-cities-including-sfo/19181789/", "date": "2026-05-27"}
+    ],
+    "p": 0.05
+  },
+  "45421": {
+    "base_rate": {
+      "reference_class": "Annual rate of a new US state enacting a cage-free law: ~10 states adopted over 2008-2023 (~0.6/yr), but zero new adoptions 2024-2026 amid egg-price backlash",
+      "value": 0.15,
+      "source": "ASPCA/Humane Society state law tallies; recent trend of suspensions (Nevada 2025) rather than new mandates"
+    },
+    "evidence": [
+      "2026-10 search: no state without a pre-Sep-2026 cage-free law was found to have enacted one in 2026; recent activity is bills only (Illinois SB3655 introduced 2024; New York A652 referred to committee, 2025-26 session)",
+      "2025: record egg prices triggered backlash - some states moved to delay or suspend cage-free mandates rather than add new ones (Utah pushed compliance toward 2030)",
+      "Window runs to 2027-07-01, which includes the full Jan-Jun 2027 legislative sessions in ~40 non-adopter states",
+      "Adoption momentum peaked 2019-2021 (CO, UT, NV, AZ); no new state has enacted since Rhode Island (2022)"
+    ],
+    "strongest_opposing_case": "The question window includes an entire 2027 legislative season across roughly 40 states; pending bills in Illinois and New York could pass once egg prices normalize, and only one success among dozens of legislatures is needed for Yes.",
+    "reasoning_summary": "Long-run base rate ~0.6 adoptions/year implies ~45% over a 10-month window with a full session, but the 2024-2026 realized rate is zero and the political wind (egg prices, suspensions) blows against new mandates. Weighting recent trend heavily while crediting the broad multi-state window and live bills: final 0.13.",
+    "key_sources": [
+      {"title": "State legislatures advance cage-free bans", "url": "https://www.feedstuffs.com/news/state-legislatures-advance-cage-free-bans", "date": "2024"},
+      {"title": "Cage-free law proposed in Illinois legislature (SB3655)", "url": "https://wattagnet.com/egg/cage-free-laying-systems/article/15665030/cagefree-law-proposed-in-illinois-legislature", "date": "2024-02"},
+      {"title": "NY Assembly A652 (2025-26 session) cage-free egg production bill", "url": "https://legislation.nysenate.gov/pdf/bills/2025/a652", "date": "2025"}
+    ],
+    "p": 0.13
+  },
+  "1385": {
+    "base_rate": {
+      "reference_class": "Drugs receiving FDA/MHRA approval for an indication with no filed application for that indication ~2 months before deadline",
+      "value": 0.01,
+      "source": "FDA review timelines: even priority reviews take 6+ months from submission; no NDA for end-of-life anxiety exists"
+    },
+    "evidence": [
+      "2026-02: Compass Pathways' Phase 3 COMP006 met its primary endpoint - but for treatment-resistant depression, not end-of-life anxiety",
+      "2026-Q3: Compass's final NDA submission for COMP360 in TRD is 'on track for Q4 2026' per its 10-Q, with potential launch guided to H1 2027 at the earliest - so even the TRD approval cannot land before Jan 1, 2027",
+      "2026-04: FDA issued a National Priority Voucher for COMP360 in TRD which could compress review to 1-2 months once filed, but filing itself is only happening in Q4 2026",
+      "No sponsor has a filed FDA or MHRA application for psilocybin in end-of-life/existential anxiety; that indication remains in earlier-stage academic trials"
+    ],
+    "strongest_opposing_case": "The FDA priority voucher could theoretically compress COMP360 review to 1-2 months after a Q4 2026 filing, and a White House executive order is pushing agencies to accelerate psychedelic approvals, creating a nonzero tail for a shock year-end approval.",
+    "reasoning_summary": "Base rate near zero: approval requires a filed application for the specific indication, and none exists for end-of-life anxiety at FDA or MHRA. The nearest program (COMP360) targets TRD and only completes its NDA in Q4 2026 with launch guided to H1 2027. Even a voucher-accelerated review cannot plausibly deliver an end-of-life-anxiety approval by Jan 1, 2027. Final: 0.02.",
+    "key_sources": [
+      {"title": "COMPASS Pathways Form 10-Q FY2026 (COMP360 NDA timeline)", "url": "https://www.sec.gov/Archives/edgar/data/0001816590/000181659026000058/cmps-20260630.htm", "date": "2026-08"},
+      {"title": "COMPASS Pathways Q2 2026 press release (8-K)", "url": "https://www.sec.gov/Archives/edgar/data/0001816590/000181659026000059/q22026pressrelease.htm", "date": "2026-07"}
+    ],
+    "p": 0.02
+  },
+  "36331": {
+    "base_rate": {
+      "reference_class": "Novel government programs formally established and active within a ~6-year question window given no concrete proposal pending (Bright Line Watch democratic-erosion indicator class)",
+      "value": 0.05,
+      "source": "Structural prior: US has never paid civilians for deportation-leading tips; viral claims to that effect were debunked by ICE itself"
+    },
+    "evidence": [
+      "2025-01: ICE told PolitiFact it 'does not offer rewards for tips related to civil immigration enforcement'; the $750-per-tip claim was ruled false (payment authority exists only for criminal investigations and is discretionary)",
+      "2026-05: NPR reported ICE is paying local police agencies incentives under 287(g)-style programs - rewards to law enforcement, which the resolution criteria explicitly exclude",
+      "2026: recruitment bonuses up to $50,000 go to new ICE hires, not civilian informants",
+      "As of 2026-10-25: no federal or state statute or executive program paying civilians for deportation-leading information was found; ~2 months remain"
+    ],
+    "strongest_opposing_case": "The administration has aggressively expanded enforcement incentives (police payments, hiring bonuses, deportation targets), a red-state legislature or DHS could stand up a paid tip program quickly, and the bar is any single federal OR state program becoming active.",
+    "reasoning_summary": "Base rate ~5%: no such program has ever existed, ICE formally disclaims paying civil-enforcement tipsters, and existing money flows (police incentives, recruit bonuses) are explicitly excluded by the criteria. With only ~10 weeks left and no pending proposal found, only a small escalation premium applies. Final: 0.05.",
+    "key_sources": [
+      {"title": "No, US immigration officials are not paying $750 for tips (PolitiFact)", "url": "https://api.politifact.com/factchecks/2025/jan/23/instagram-posts/no-us-immigration-officials-are-not-paying-750-for", "date": "2025-01-23"},
+      {"title": "ICE is giving local police big money to help with immigration enforcement (NPR)", "url": "https://www.wdiy.org/2026-05-07/ice-is-giving-local-police-big-money-to-help-with-immigration-enforcement", "date": "2026-05-07"}
+    ],
+    "p": 0.05
+  },
+  "8602": {
+    "base_rate": {
+      "reference_class": "FDA first-cycle approval rate for obesity/metabolic drugs with two successful pivotal Phase 3 trials (~80-85%), discounted by probability the decision lands before the Jan 1, 2027 cutoff",
+      "value": 0.5,
+      "source": "FDA novel-drug first-cycle approval statistics; standard 10-month PDUFA clock from a Dec 2025 submission / ~Feb 2026 acceptance lands at/just past year-end"
+    },
+    "evidence": [
+      "2025-12: Novo Nordisk submitted CagriSema for weight management to the FDA based on REDEFINE 1 and REDEFINE 2 (REDEFINE 1: 22.7% mean weight loss at 68 weeks vs 16.1% for semaglutide alone)",
+      "2026-02: Novo 6-K and analyst coverage anticipate an FDA decision in late 2026 / Q4 2026; commercial launch guided to late 2026 or early 2027",
+      "2026-05/07: no public PDUFA date confirmed; the filing does not appear to carry Priority Review, implying a standard 10-month review from acceptance (~Feb 2026 acceptance -> ~Dec 2026 action date)",
+      "EMA path: EU filing runs on CHMP opinion + European Commission decision timetable; unlikely to beat the FDA to a formal approval before Jan 1, 2027"
+    ],
+    "strongest_opposing_case": "A standard review of a December 2025 submission puts the PDUFA action date right at or just after year-end; any minor clock extension, labeling negotiation, or manufacturing (API capacity) question pushes the decision into early 2027 and resolves No despite near-certain eventual approval.",
+    "reasoning_summary": "Conditional approval odds are high (~85% first-cycle for strong dual Phase 3 obesity data from an established sponsor). The binding uncertainty is timing: a Dec 2025 submission on a standard clock gives a ~Q4 2026 action date straddling the deadline, with no confirmed PDUFA date and known FDA slippage risk. P(decision before Jan 1) ~0.55 x P(approval|decision) ~0.87, EMA adds little. Final: 0.48.",
+    "key_sources": [
+      {"title": "Novo Nordisk Form 6-K FY2026", "url": "https://www.sec.gov/Archives/edgar/data/353278/000117184326000996/f6k_022326.htm", "date": "2026-02-23"},
+      {"title": "CagriSema FDA Review: Novo Nordisk NDA Timeline Explained", "url": "https://lifesciencedaily.news/cagrisema-fda-review-novo-nordisk-nda-timeline-explained/", "date": "2026"},
+      {"title": "CagriSema FDA Approval Timeline & Status", "url": "https://www.findhonestcare.com/metabolic-innovations/cagrisema/fda-timeline/", "date": "2026-07"}
+    ],
+    "p": 0.48
+  },
+  "15134": {
+    "base_rate": {
+      "reference_class": "eVTOL industry announced commercial-launch dates being met in the stated year (chronic slippage; no company has yet flown a paying passenger city service anywhere)",
+      "value": 0.2,
+      "source": "Sector history: Volocopter missed Paris 2024 paid service; EHang/Archer/Joby timelines have slipped repeatedly"
+    },
+    "evidence": [
+      "2025-11: first Dubai vertiport (DXB) ~60% complete, completion expected Q1 2026; three more sites announced (Dubai Mall, Atlantis The Royal, AUD)",
+      "2025/2026: Joby completed UAE's first piloted point-to-point eVTOL flight (Margham to Al Maktoum, 17 minutes); RTA official targeted paid commercial service 'toward the end of 2026', with pre-launch passenger flights to be non-commercial",
+      "As of 2026-10-25: no report found of a ticketed commercial passenger flight in Dubai, GCAA type certification completion, or a launch date announcement",
+      "Resolution needs a ticketed passenger flying vertiport-to-vertiport with no harm/damage before Jan 1, 2027 - a single inaugural flight suffices"
+    ],
+    "strongest_opposing_case": "Dubai's RTA has explicitly targeted end-2026 paid service, the DXB vertiport was near completion in early 2026, piloted flights already succeeded, and a single symbolic ticketed inaugural flight before New Year - a very Dubai move - is all that is required to resolve Yes.",
+    "reasoning_summary": "Base rate ~20% for eVTOL launch promises being kept on the year. Dubai is the best-resourced program globally (exclusive RTA deal, vertiport nearly built, successful piloted flights) and only one ticketed flight is needed, which argues above base rate; but with ~9 weeks left there is no certification or launch-date news, and FAA/GCAA certification remains the unfinished long pole. Final: 0.15.",
+    "key_sources": [
+      {"title": "First Air Taxi Service to Launch in Dubai in 2026 (IEEE Spectrum)", "url": "https://spectrum.ieee.org/joby-air-taxi", "date": "2025"},
+      {"title": "Dubai puts public safety first ahead of 2026 air taxi launch (Gulf News)", "url": "https://gulfnews.com/amp/story/uae%2Fdubai-puts-public-safety-first-ahead-of-2026-air-taxi-launch-1.500356165", "date": "2025-11"},
+      {"title": "After desert, airport trials success, Joby air taxi heads to Dubai skies (Gulf News)", "url": "https://gulfnews.com/uae/after-desert-airport-trials-success-joby-air-taxi-heads-to-dubai-skies-1.500351988", "date": "2025-11"}
+    ],
+    "p": 0.15
+  },
+  "15492": {
+    "base_rate": {
+      "reference_class": "Structural change to a 60-year-old statutory scheme via new legislation or final court ruling within a ~2-month residual window, against current adverse rulings",
+      "value": 0.05,
+      "source": "CAA Section 209(b) waiver authority has survived every administration since 1967; filibuster blocks repeal legislation; courts currently ruling FOR California"
+    },
+    "evidence": [
+      "2026-06: EPA reclassified California waivers as CRA 'rules' to let the Senate repeal them by simple majority",
+      "2026-09-02: Judge Beryl Howell (D.D.C.) issued a preliminary injunction ordering EPA to reverse the reclassification, holding waivers are not CRA rules and California is likely to succeed on the merits - a ruling protecting, not removing, waiver ability",
+      "2026-09-15: Trump administration appealed; no appellate ruling found as of 2026-10-25",
+      "No enacted statute eliminates waiver authority; Senate GOP proposals to repeal California's authority have not passed (60-vote threshold for ordinary legislation); and the question requires removal of the ability to receive NEW waivers, not just revocation of existing ones"
+    ],
+    "strongest_opposing_case": "The D.C. Circuit could stay or reverse Howell's injunction quickly, the administration is pressing multiple parallel tracks (CRA reclassification, SAFE-style rulemaking, Senate bills), and a lower-court ruling before Jan 1 would start the 180-day clock even if the period ends in 2027.",
+    "reasoning_summary": "Base rate ~5%. The live judicial posture runs opposite to Yes: the September 2026 injunction protects California's waiver ability and found California likely to win on the merits. Legislation faces the filibuster and none is near passage. Only an abrupt appellate reversal plus 180-day survival, or a SCOTUS ruling, could qualify - neither is pending. Final: 0.04.",
+    "key_sources": [
+      {"title": "Federal Judge Blocks Trump EPA's Efforts to Attack Clean Air Waivers (Sierra Club)", "url": "https://www.sierraclub.org/press-releases/2026/09/federal-judge-blocks-trump-epa-s-efforts-attack-clean-air-waivers", "date": "2026-09-02"},
+      {"title": "Trump admin appeals ruling that blocked EPA from repealing California clean air waiver", "url": "https://gmauthority.com/blog/2026/09/trump-admin-appeals-ruling-that-blocked-epa-from-repealing-california-clear-air-waiver/", "date": "2026-09-15"},
+      {"title": "Court Stalls EPA Plan to Override California's Vehicle Pollution Standards (Inside Climate News)", "url": "https://insideclimatenews.org/?p=113400", "date": "2026-09"}
+    ],
+    "p": 0.04
+  },
+  "45462": {
+    "base_rate": {
+      "reference_class": "Mega-event economic impacts meeting boosters' own pre-event projections per rigorous post-event data (academic consensus: projections are 'highly exaggerated'; actuals typically fall far short)",
+      "value": 0.15,
+      "source": "Sports-economics literature (Matheson, Zimbalist); 1994 US World Cup post-hoc estimates showed host-city losses up to $9.3B vs projected gains"
+    },
+    "evidence": [
+      "2026 post-event: Bank of America's analysis found host-city gains concentrated in restaurant/bar spending during knockout rounds, but concluded the lift to overall US consumer spending and GDP 'appears to have been more modest,' partly reallocation from non-host cities",
+      "2026: BofA CEO headline claim of a '$20 billion' US injection exists, but it is a national aggregate, not city-by-city comparisons against each city's own pre-tournament projections",
+      "Pre-event (2026-05): Oxford Economics projected 'marginal and short-lived' GDP/employment gains; Data Appeal/Mabrian put US host-city visitor spending at only ~$556M",
+      "Resolution mechanics: Yes requires credible post-event data showing >=6 of 11 cities achieved >=75% of their OWN projections before Jan 1, 2027 - comparable city-level actual-vs-projection audits rarely exist within 6 months; Ambiguous is a live outcome"
+    ],
+    "strongest_opposing_case": "Pre-tournament city projections were often modest ranges, FIFA/host committees will publish favorable post-event tallies they control, and if boosters' own friendly consultancies score the cities, 6 of 11 'achieving 75% of projection' could be certified on paper before January.",
+    "reasoning_summary": "Base rate ~15% that mega-event actuals are shown to meet 75% of boosters' projections by credible data. Post-event evidence so far (BofA) says gains were real but modest and partly reallocative, and no city-level actual-vs-projection audit exists; the most likely literal outcome is Ambiguous/unresolvable by Jan 1, with No-leaning evidence if data does emerge. Forecasting P(Yes): 0.15.",
+    "key_sources": [
+      {"title": "On the ball: World Cup 2026 final score (Bank of America Institute)", "url": "https://institute.bankofamerica.com/economic-insights/on-the-ball-2026-final-score.html", "date": "2026"},
+      {"title": "World Cup travel demand rises, but not all host cities will get the economic win (Euronews)", "url": "https://www.euronews.com/travel/2026/05/01/world-cup-travel-demand-rises-but-not-all-host-cities-will-get-the-economic-win", "date": "2026-05-01"},
+      {"title": "Why World Cup may not bring big boost to US economy (Newsweek)", "url": "https://www.newsweek.com/why-world-cup-may-not-bring-big-boost-us-economy-12015826", "date": "2026"}
+    ],
+    "p": 0.15
+  },
+  "43980": {
+    "base_rate": {
+      "reference_class": "Federal judges leaving office within months of misconduct findings absent criminal charges; impeachment+Senate conviction of Article III judges is historically rare (8 convictions in US history) and never completed in ~6 months",
+      "value": 0.08,
+      "source": "Federal Judicial Center impeachment history; judges with lifetime tenure typically resist resignation absent indictment"
+    },
+    "evidence": [
+      "2026-05: Eleventh Circuit special committee report found Ross made 'false statements' to the chief judges investigating her; she received only a private reprimand",
+      "2026-06-10: two Georgia House Republicans introduced impeachment resolutions; Judiciary Chairman Jim Jordan said staff had 'already put together a memo' but impeachment was threatened, not advanced",
+      "2026-06-16/17: Ross recused from a Georgia voter-records case at DOJ request - a recusal, not a resignation; no resignation signal found",
+      "As of 2026-10-25: no reporting of House Judiciary action, floor vote, or resignation; a Senate trial and two-thirds conviction before Dec 31 is procedurally implausible"
+    ],
+    "strongest_opposing_case": "Sustained GOP pressure, a documented false-statements finding, and DOJ hostility could make her position untenable; a negotiated resignation (as Judge Kent in 2009 under indictment pressure) could come suddenly before year-end without needing any Senate trial.",
+    "reasoning_summary": "Base rate ~8% for departure within months of a non-criminal reprimand. Impeachment-and-conviction by Dec 31 is essentially impossible given no committee action by late October. The only realistic Yes path is voluntary resignation, and Ross has shown fight (recusal under protest, no exit signals). Final: 0.06.",
+    "key_sources": [
+      {"title": "Top Republican Weighs Impeachment for Reprimanded Atlanta Judge (Bloomberg Government)", "url": "https://news.bloomberglaw.com/bloomberg-government-news/top-republican-weighs-impeachment-for-reprimanded-atlanta-judge", "date": "2026-06-03"},
+      {"title": "US Judge Eleanor Ross quits Georgia election case amid courthouse sex scandal", "url": "https://gazettengr.com/u-s-judge-eleanor-ross-quits-georgia-election-case-amid-courthouse-sex-scandal/", "date": "2026-06-17"},
+      {"title": "Impeachment sought against federal judge over alleged sex in chambers (AP via WRDW)", "url": "https://www.wrdw.com/2026/06/10/impeachment-sought-against-federal-judge-over-alleged-sex-chambers/", "date": "2026-06-10"}
+    ],
+    "p": 0.06
+  },
+  "28395": {
+    "base_rate": {
+      "reference_class": "WHO prequalification decisions landing within a specific ~2-month residual window for a product whose PQ dossier process was funded in 2024 on a 3-year grant",
+      "value": 0.1,
+      "source": "WHO PQ timelines typically run 1-3 years from dossier submission; GiveWell's June 2024 grant to MDGH was explicitly a 3-year grant (through ~2027)"
+    },
+    "evidence": [
+      "2024-06: GiveWell made a $637,549, 3-year grant to MDGH to complete WHO prequalification for moxidectin - a horizon implying completion closer to 2027 than 2026",
+      "2024-12: Ghana FDA approved moxidectin for adults and children 4+ (WHO-announced milestone); FDA approval (8mg, ages 12+) long in hand - regulatory package is mature",
+      "2026-10: Gates Foundation committed $1.5M to MDGH for large-scale low-cost manufacturing of moxidectin - active investment, but the grant page does not indicate PQ is complete or imminent",
+      "As of 2026-10-25: no WHO announcement or credible report that moxidectin has been added to the PQ list; ~9 weeks remain"
+    ],
+    "strongest_opposing_case": "The dossier work has been funded since mid-2024, Ghana approval and WHO's own December 2024 celebration of moxidectin suggest institutional goodwill, and WHO PQ listings are published with little advance notice - a year-end addition could simply not be visible yet in searches.",
+    "reasoning_summary": "Base rate ~10% for the decision landing in the final 2 months of the window. The 3-year grant structure (2024-2027), the October 2026 Gates grant focused on manufacturing scale-up rather than celebrating PQ, and the absence of any WHO listing or MDGH announcement all point to the process still running. Final: 0.10.",
+    "key_sources": [
+      {"title": "GiveWell grant: MDGH - moxidectin WHO prequalification", "url": "https://givewell.org/node/4102", "date": "2024-06"},
+      {"title": "Moxidectin approved by the Ghana FDA - a new milestone in the fight against river blindness (WHO)", "url": "https://www.who.int/news/item/12-12-2024-moxidectin-approved-by-the-ghana-food-and-drugs-authority-a-new-milestone-in-the-fight-against-river-blindness", "date": "2024-12-12"},
+      {"title": "Gates Foundation committed grant to Medicines Development for Global Health (INV-107040)", "url": "https://www.gatesfoundation.org/about/committed-grants/2026/10/inv-107040", "date": "2026-10"}
+    ],
+    "p": 0.1
+  },
+  "40976": {
+    "base_rate": {
+      "reference_class": "Sitting Speakers finishing a Congress once past mid-term: only 1 of ~60 modern Speaker-terms ended via mid-Congress removal (McCarthy 2023); resignations mid-Congress (O'Neill-era onward: Wright, Boehner, Ryan stayed to term's end or next Congress)",
+      "value": 0.93,
+      "source": "House historical records; motion-to-vacate removal has succeeded once in US history"
+    },
+    "evidence": [
+      "2026-06-30 and 2026-07: photo captions confirm 'U.S. Speaker of the House Mike Johnson (R-LA)' still in office at Capitol events - continuous service since the Dec 13, 2025 baseline",
+      "2026-10-25: searches for Sep-Oct 2026 news surface no ouster attempt, no motion to vacate, and no resignation reporting - an ouster would be dominant national news",
+      "2025-12: Politico reported Johnson under pressure over NDAA management with a tenuous majority, but he survived that test window",
+      "Remaining risk window is only ~10 weeks, including a lame-duck session after the Nov 3 midterms where a losing majority sometimes turns on leadership - but the Speaker remains Speaker until Jan 3 regardless of the election outcome"
+    ],
+    "strongest_opposing_case": "A razor-thin majority plus a bruising midterm loss on Nov 3 could trigger a revolt or a face-saving early resignation in the lame duck; Johnson already faced open questioning of his hold on the conference in December 2025, and only a handful of defectors are needed on a motion to vacate.",
+    "reasoning_summary": "Base rate ~93% for a Speaker completing the final stretch of a Congress. Johnson verified in office through at least July 2026 with no removal news since; the question needs only ~10 more weeks of survival. Midterm-loss lame-duck turmoil is the main residual risk, but even ousted-party Speakers (Ryan, Pelosi) have always served to Jan 3. Final: 0.93.",
+    "key_sources": [
+      {"title": "Mike Johnson speaks on Supreme Court birthright citizenship decision (photo caption confirming Speaker status)", "url": "https://katv.com/news/connect-to-congress/gallery/republicans-sharpen-communism-attacks-ahead-of-november-midterms-democratic-socialists-politics-progressives", "date": "2026-07"},
+      {"title": "Mike Johnson NDAA Pentagon bill pressure (Politico)", "url": "https://www.politico.com/news/2025/12/04/mike-johnson-ndaa-pentagon-bill-00677847", "date": "2025-12-04"}
+    ],
+    "p": 0.93
+  },
+  "36478": {
+    "base_rate": {
+      "reference_class": "Active New World screwworm outbreaks producing a confirmed wildlife case: the 2016 Florida Keys outbreak was discovered in wild Key deer; established local transmission historically spills into wildlife, but detection/confirmation in free-ranging animals lags domestic surveillance",
+      "value": 0.5,
+      "source": "USDA-APHIS 2016-17 Florida Keys epidemiological report; myiasis in wildlife is underdetected because affected animals die or hide"
+    },
+    "evidence": [
+      "2026-06-03: first US local NWS case since 1966 confirmed in a calf in Zavala County, Texas; by June 11, six cases across Zavala, La Salle, Gillespie, Edwards counties (cattle, goats)",
+      "2026-06-24: cases in two more Texas counties brought the US total to 16; a dog case was reassigned to Lea County, New Mexico",
+      "2026-07-06: USDA count reached 32 US detections - all domestic animals; explicitly no wildlife or feral infections found and no wild flies caught in surveillance traps at that date",
+      "2026-07: Texas quarantine zones span 20+ counties with roadside inspections, sterile fly releases, and expanded surveillance; peak fly season (Jul-Oct) followed, implying the outbreak likely grew further"
+    ],
+    "strongest_opposing_case": "Through 32 confirmed cases and months of intensive trapping, zero wildlife infections and zero wild flies were found, suggesting transmission stayed anchored to livestock movement; wildlife myiasis is rarely detected even where present, so formal USDA confirmation of a free-ranging wild animal may simply never happen before Dec 31.",
+    "reasoning_summary": "Base rate ~50% given an established in-country outbreak (the 2016 precedent began with wild deer). Texas has had sustained local transmission since June through the peak warm season across deer-dense counties, and USDA surveillance is intense - but all 32 known cases were domestic and confirmation in free-ranging wildlife is detection-limited. Slightly above even, as six more months of spread and hunting-season carcass scrutiny (fall deer harvest) raise discovery odds. Final: 0.52.",
+    "key_sources": [
+      {"title": "New screwworm cases found in two more Texas counties as US total reaches 16", "url": "https://www.hppr.org/hppr-news/2026-06-24/new-screwworm-cases-found-in-two-more-texas-counties-as-u-s-total-reaches-16", "date": "2026-06-24"},
+      {"title": "New World Screwworm cases rise to 32 as Texas battles outbreak", "url": "https://www.fox26houston.com/news/new-world-screwworm-cases-rise-32-texas-battles-outbreak", "date": "2026-07-06"},
+      {"title": "USDA confirms two more New World screwworm cases in Texas (Texas Public Radio)", "url": "https://www.tpr.org/environment/2026-06-08/usda-confirms-two-more-new-world-screwworm-cases-in-texas", "date": "2026-06-08"}
+    ],
+    "p": 0.52
+  },
+  "38950": {
+    "base_rate": {
+      "reference_class": "Large municipal wastewater construction projects finishing by original schedule (~30-50% on-time), further conditioned on the sponsor's OWN current schedule already showing completion after the deadline",
+      "value": 0.05,
+      "source": "Municipal infrastructure on-time completion literature; City of Gulf Breeze project pages"
+    },
+    "evidence": [
+      "2025 (mid): project reported ~25% complete roughly a year after the August 2024 construction start on the 2.0->3.5 MGD expansion",
+      "2026 (current city page): the city's own Tiger Point capital-fee page states the expansion is '25% complete and on track for a June 2027 completion' - the official target has slipped past the question's Feb 1, 2027 deadline",
+      "Older city project page (updated 2024-10) gave a January 2027 estimate, confirming schedule drift of ~5 months",
+      "Project cost ~$64M, financed partly via a new $14/month ERC fee phased over 2-3 years - financing phase-in further suggests a multi-year build"
+    ],
+    "strongest_opposing_case": "Municipal progress percentages are often stale; if the heavy civil work was front-loaded and equipment commissioning goes fast, the contractor could declare 'substantial completion' (a lower bar than final completion) a few months ahead of the June 2027 target, squeaking under February 1.",
+    "reasoning_summary": "Base rate for on-schedule municipal plant expansions ~30-50%, but the controlling fact is that Gulf Breeze's own current schedule says June 2027 - five months after the deadline - with the project only ~25% complete at the one-year mark. Beating one's own official schedule by 5 months on a $64M treatment plant is rare. Final: 0.04.",
+    "key_sources": [
+      {"title": "Expanding for the Future: The Tiger Point Wastewater and Reclamation Facility (City of Gulf Breeze)", "url": "https://cityofgulfbreeze.us/proposed-sewer-capital-fee", "date": "2026"},
+      {"title": "1.5 MGD Expansion for Tiger Point Waste Water Treatment Facility (City of Gulf Breeze)", "url": "https://cityofgulfbreeze.us/city_project/1-5-mgd-expansion-for-tiger-point-waste-water-treatment-facility", "date": "2024-10"}
+    ],
+    "p": 0.04
+  },
+  "44883": {
+    "base_rate": {
+      "reference_class": "Section 301 investigations producing final action against the primary target within ~9 months of initiation (statutory limit 12 months; 2017 China probe took ~10 months to tariffs; 2026 forced-labor companion probe took ~4 months)",
+      "value": 0.4,
+      "source": "USTR Section 301 case history; Kelley Drye / Clark Hill client analyses of the March 2026 initiation"
+    },
+    "evidence": [
+      "2026-03-11/17: USTR initiated the structural-overcapacity Section 301 probe covering 16 economies including China, across steel, aluminum, autos, batteries, semiconductors, solar",
+      "2026-07: the companion forced-labor 301 investigation produced tariffs across ~60 partners - demonstrating this administration converts probes to tariffs fast; Ambassador Greer pledged a quicker-than-12-month overcapacity timeline (one analysis flagged possible conclusion by Jul 24, 2026)",
+      "2026-09: US-China truce extended to January 2027 and the Trump-Xi summit deferred contentious files - new China-specific overcapacity tariffs before Jan 1 would collide with active summit diplomacy (APEC Nov, G20 Dec)",
+      "As of 2026-10-25: no final overcapacity determination or China-applicable measure from this probe found; the statutory deadline (March 2027) removes any forcing event in 2026"
+    ],
+    "strongest_opposing_case": "Greer promised a fast conclusion, the July forced-labor precedent shows determinations can convert to broad tariffs within four months, and a determination hitting 16 economies could technically 'apply to imports from the PRC' even if China enforcement is nominally deferred - partial or symbolic measures would still resolve Yes.",
+    "reasoning_summary": "Base rate ~40% for action within the year given this administration's speed. Adjust down: the probe missed its rumored July conclusion, no determination exists by late October, and the extended truce plus back-to-back Trump-Xi summits (Nov APEC, Dec G20) create strong diplomatic incentive to hold China measures until after January 2027. Adjust up slightly for the possibility measures land but exempt little. Final: 0.25.",
+    "key_sources": [
+      {"title": "USTR Launches Broad Section 301 Investigations Regarding Excess Capacity in Manufacturing Sectors (Kelley Drye)", "url": "https://www.kelleydrye.com/viewpoints/blogs/trade-and-manufacturing-monitor/ustr-launches-broad-section-301-investigations-regarding-excess-capacity-in-manufacturing-sectors", "date": "2026-03"},
+      {"title": "Tariffs return through the front door: USTR launches new Section 301 probes (Clark Hill)", "url": "https://www.clarkhill.com/news-events/news/tariffs-return-through-the-front-door-ustr-launches-new-section-301-probes", "date": "2026-03"},
+      {"title": "US-China trade truce reportedly extended by two months at Trump-Xi summit", "url": "https://digg.com/world-business/uzodnk7d", "date": "2026-09"}
+    ],
+    "p": 0.25
+  },
+  "38955": {
+    "base_rate": {
+      "reference_class": "Small municipal septic-to-sewer neighborhood conversions finishing by their originally announced quarter (~30-40% on-time; 'fully completed' is a stricter bar than substantial completion)",
+      "value": 0.3,
+      "source": "Municipal utility project completion literature; City of Gulf Breeze septic-to-sewer program pages"
+    },
+    "evidence": [
+      "Plan of record: construction to begin 2025 with wrap-up expected Fall 2026 - the city's own schedule has only ~3 months of float against the Dec 31, 2026 deadline",
+      "2026-10 search: no 2026 progress update found for the Montrose/Navy Cove/Berry or Florida Ave/Dolphin/Hillcrest segments on city or news sources - silence cuts both ways but prevents confirming on-time start",
+      "Program context: sister project Bay Cliffs underwent a full redesign (gravity to low-pressure) in 2025, showing this city's STS program is prone to scope/schedule churn",
+      "Gulf Breeze's overall goal is eliminating all septic tanks by 2029, so individual segment slippage carries little penalty for the city"
+    ],
+    "strongest_opposing_case": "The combined project was the program's most advanced segment with construction slated for 2025 and a Fall 2026 finish; if work started on schedule, a 12-18 month neighborhood sewer job completes comfortably by December and the city simply hasn't drawn news coverage.",
+    "reasoning_summary": "Base rate ~30-40% on-time for municipal STS conversions. The city's own plan (finish Fall 2026) leaves minimal buffer to Dec 31; no 2026 evidence confirms construction started on time, and the program's sibling project suffered a redesign-driven slip. 'Fully completed' including restorations and final connections typically trails substantial completion by months. Final: 0.15.",
+    "key_sources": [
+      {"title": "NRDA Grant: Septic to Sewer Conversion Project (City of Gulf Breeze)", "url": "https://cityofgulfbreeze.us/?p=22636", "date": "2025"},
+      {"title": "City of Gulf Breeze receives millions for wastewater treatment (WEAR TV)", "url": "https://weartv.com/news/local/city-of-gulf-breeze-receives-millions-for-wastewater-treatment", "date": "2025"}
+    ],
+    "p": 0.15
+  },
+  "38957": {
+    "base_rate": {
+      "reference_class": "Neighborhood sewer conversion projects completing within ~11 months of a construction start that itself follows a redesign (near-zero when construction began Feb 2026 at earliest and full completion is required by Dec 2026)",
+      "value": 0.05,
+      "source": "City of Gulf Breeze project page timeline; municipal construction duration norms (neighborhood STS builds run 12-24 months)"
+    },
+    "evidence": [
+      "2025-08-05: City Council approved a redesign proposal (gravity to low-pressure sewer system); design completion expected December 2025, construction 'anticipated starting February 2026'",
+      "2025-05: city page said the project was still in design and had not been advertised for bids",
+      "2026-10 search: no report that construction is complete; even on the city's own best case, the build window is Feb-Dec 2026 (~10 months) for an entire neighborhood conversion plus septic abandonment at each home",
+      "Resolution requires 'fully completed' with the city's official records as arbiter - if significant work remains after Dec 31, it resolves No"
+    ],
+    "strongest_opposing_case": "Low-pressure/grinder systems install much faster than gravity sewers - that was the point of the redesign - so a February start with an aggressive contractor could conceivably finish all connections and restorations inside ten months if permitting and supply cooperated.",
+    "reasoning_summary": "Base rate near 5%: construction was anticipated to start only February 2026 after a redesign, bids had not even been advertised as of May 2025, and the question demands full completion by Dec 31, 2026. A 10-month total build-and-connect window for a whole neighborhood, with this program's history of slippage, makes Yes very unlikely. Final: 0.04.",
+    "key_sources": [
+      {"title": "Bay Cliffs STS Conversion (City of Gulf Breeze project page)", "url": "https://cityofgulfbreeze.us/city_project/bay-cliffs-sts-conversion", "date": "2025-08"},
+      {"title": "Shoreline Phase I Septic to Sewer Project (City of Gulf Breeze, comparable LPS scope)", "url": "https://cityofgulfbreeze.us/city_project/shoreline-septic-to-sewer-phase-i", "date": "2025"}
+    ],
+    "p": 0.04
+  },
+  "43281": {
+    "base_rate": {
+      "reference_class": "A novelty-focused restaurant adding a dish from a nascent supply category within ~14 months, conditional on regulatory approval of a second cultivated species in Singapore (GOOD Meat chicken already approved; Vow quail approved)",
+      "value": 0.25,
+      "source": "Singapore Food Agency cultivated-meat approvals history (world's most permissive regime); FURA's own positioning as a future-food showcase"
+    },
+    "evidence": [
+      "2026-04: FURA's menu carried exactly one cultivated meat item - Vow's cultured Japanese quail - per the question background",
+      "Singapore has already approved non-quail cultivated products: GOOD Meat's cultivated chicken (approved 2020, sold intermittently in Singapore) - so a qualifying ingredient legally exists in-market",
+      "Supply reality: cultivated meat production remains tiny and loss-making; GOOD Meat halted and restarted Singapore sales repeatedly in 2024-2025, and Vow's product line (quail, quail-based foie) is FURA's current partner",
+      "Window runs to 2027-07-01 (~8 months from forecast date); FURA refreshes its 'Journal of Future Food' menu seasonally, creating multiple menu-change opportunities"
+    ],
+    "strongest_opposing_case": "FURA is explicitly a future-food showcase that iterates its menu seasonally, cultivated chicken is already approved in Singapore, and Vow itself keeps launching new species formats - one PR-friendly menu drop any time before July 2027 resolves Yes.",
+    "reasoning_summary": "Structural prior ~25%: the legal pathway exists (approved cultivated chicken in Singapore) and FURA's identity favors novelty, but economics are hostile - cultivated meat supply is scarce and expensive, FURA's existing partnership is quail-centric, and no announcement of a second cultured species on its menu was found as of Oct 2026. Thin evidence, so staying near the structural prior. Final: 0.22.",
+    "key_sources": [
+      {"title": "FURA - Journal of Future Food menu", "url": "https://www.fura.space/menu", "date": "2026-04"},
+      {"title": "FURA restaurant site (concept and positioning)", "url": "https://www.fura.space/", "date": "2026"}
+    ],
+    "p": 0.22
+  },
+  "KXFEDERALCHARGE-27JAN01-PSTR": {
+    "base_rate": {
+      "reference_class": "Politically charged DOJ investigations of named individuals producing new formal charges within a ~14-month window from grand jury subpoena stage (Durham probe analog: multi-year probe of Russiagate originators yielded 3 marginal indictments out of dozens investigated)",
+      "value": 0.12,
+      "source": "Durham special counsel record 2019-2023; statute-of-limitations constraints on 2016-2018 conduct"
+    },
+    "evidence": [
+      "2025-11-07: federal grand jury in the Southern District of Florida reportedly subpoenaed Strzok, Lisa Page, and John Brennan in a Russiagate-origins probe, with up to 30 subpoenas expected",
+      "2026-06: no charges filed against Strzok as of mid-2026 - roughly 7 months after the subpoenas with no reported indictment",
+      "Legal constraint: the 5-year federal statute of limitations on Strzok's 2016-2018 conduct has lapsed; prosecutors would need a continuing-conspiracy or new-conduct theory, which weakens indictment odds and has drawn skepticism even from sympathetic commentators",
+      "As of 2026-10-25: no NYT/AP/Reuters-class report of a Strzok charging document; ~9 weeks remain"
+    ],
+    "strongest_opposing_case": "An active grand jury has been seated for nearly a year under an administration openly demanding Russiagate prosecutions; DOJ already indicted Comey in 2025 on a stretch theory, showing willingness to charge despite limitations problems, and a pre-midterm or year-end indictment wave is plausible.",
+    "reasoning_summary": "Base rate ~12% from the Durham analog (long probes, few indictments). Upward: active SDFL grand jury, administration pressure, demonstrated willingness to bring aggressive cases against Trump critics. Downward: SOL on core conduct expired, 11 months of grand jury activity without a Strzok charge, and only ~9 weeks left. Final: 0.10.",
+    "key_sources": [
+      {"title": "Strzok, Page, Brennan subpoenaed by federal grand jury in Russiagate probe", "url": "https://redstate.com/bobhoge/2025/11/07/supbeonas-flying-strzok-lisa-page-john-brennan-reportedly-served-as-dozens-more-expected-n2195987", "date": "2025-11-07"},
+      {"title": "Former top FBI agent Peter Strzok subpoenaed (Scripps News)", "url": "https://scrippsnews.com/stories/former-top-fbi-agent-peter-strzok-subpoenaed", "date": "2025-11"}
+    ],
+    "p": 0.1
+  },
+  "0x612126703db7fb7eaa44906b2c7de42300a6cb6e0615c1e360e96e328b6433e5": {
+    "base_rate": {
+      "reference_class": "Congress passing contested surveillance reauthorizations AFTER letting the authority lapse, within the same calendar year, when court certifications remove operational urgency",
+      "value": 0.1,
+      "source": "FISA history: the 2008-2012 and 2024 reauthorizations passed under expiry-deadline pressure; when 702 briefly lapsed in April 2024, existing FISC certifications kept collection running and urgency evaporated"
+    },
+    "evidence": [
+      "Statute lapsed: Section 702 sunset April 20, 2026 (set by the 2024 RISAA, PL 118-49); Brookings flagged the unclear path months in advance",
+      "2026-06-11: EPIC reported the House VOTED DOWN a further extension, making lapse effective; crucially, the FISC has recertified 702 surveillance through March 2027, so collection continues regardless - removing the operational forcing function for 2026",
+      "2026-04: House Democrats had backed a three-year authorization without privacy amendments, but the resolution criteria require a TWO-year reauthorization of Title VII - competing bills (GSRA 2026, SAFE Act, Protect Liberty Act) carry different terms and reforms",
+      "As of 2026-10-25: no report of any 702 reauthorization signed into law in 2026; Congress is consumed by midterms and a lame-duck agenda"
+    ],
+    "strongest_opposing_case": "The FISC certifications expire March 2027, creating real pressure to legislate in the December lame duck, and surveillance reauthorizations have repeatedly been air-dropped into year-end NDAA or omnibus packages with little warning - a two-year clean extension is the path of least resistance.",
+    "reasoning_summary": "Base rate ~10% once an authority has lapsed without urgency. The House rejected extension in June, FISC certification through March 2027 removes the forcing deadline from 2026, reform factions are deadlocked across incompatible bills, and the criteria demand specifically a two-year Title VII reauthorization signed by Dec 31. A lame-duck NDAA rider is the only realistic Yes path. Final: 0.07.",
+    "key_sources": [
+      {"title": "A key intelligence law expires in April and the path for reauthorization is unclear (Brookings)", "url": "https://www.brookings.edu/articles/a-key-intelligence-law-expires-in-april-and-the-path-for-reauthorization-is-unclear", "date": "2026"},
+      {"title": "FISA Section 702 almost certain to expire after House votes against extension (EPIC)", "url": "https://epic.org/fisa-section-702-almost-certain-to-expire-after-house-votes-against-extension-epic-continues-to-urge-reforms/", "date": "2026-06-11"}
+    ],
+    "p": 0.07
+  },
+  "0xa222013f2baf3e9eb0613b7dc45d2fd8a3e63177c21bd282d9bb5133d6a44986": {
+    "base_rate": {
+      "reference_class": "Supreme Court justices announcing retirement in a given year while publicly committing to stay (justices who stated an intent to remain have essentially never reversed within months); midterm-year retirements under same-party presidents historically cluster in June, already passed",
+      "value": 0.05,
+      "source": "SCOTUS retirement timing history (Kennedy 2018, Breyer 2022 announced Jan-Jun); no post-October retirement announcement in the modern era"
+    },
+    "evidence": [
+      "2026-06-30: Supreme Court public information office denied an NPR report (quickly retracted) that Alito was retiring; he was not among the announced retirements that day",
+      "Spring 2026: Fox News and CBS reported Alito planned to remain on the bench despite conservative pressure to step down while the GOP holds the Senate",
+      "2026-08: Alito, 76, told the Wall Street Journal 'Obviously I'm here for another term' - committing through the October 2026-June 2027 term",
+      "As of 2026-10-25: new term already underway with Alito sitting; only ~9 weeks remain in the window; announcements of a future-dated retirement would count but none is signaled"
+    ],
+    "strongest_opposing_case": "Conservative pressure to lock in his seat before a possible GOP Senate loss in the November midterms is intense and well documented; a surprise post-election announcement of a future (end-of-term 2027) retirement would count for Yes and would be strategically rational if Republicans lose the Senate.",
+    "reasoning_summary": "Base rate ~5% for a justice announcing retirement in the last 9 weeks of a year after publicly committing to serve the term. Alito's August on-record statement, the Court's June denial, and the start of the new term with him seated all point No. The midterm-driven strategic-announcement scenario (announcing a 2027 retirement now) keeps the tail alive. Final: 0.05.",
+    "key_sources": [
+      {"title": "Supreme Court denies report that Justice Samuel Alito is retiring", "url": "https://www.wrdw.com/2026/06/30/supreme-court-denies-report-that-justice-samuel-alito-is-retiring/", "date": "2026-06-30"},
+      {"title": "Alito: 'Obviously I'm here for another term' (WSJ interview coverage)", "url": "https://legalinsurrection.com/2026/08/alito-obviously-im-here-for-another-term/", "date": "2026-08"}
+    ],
+    "p": 0.05
+  },
+  "0xa86594cc30a08748fbf8406af27473294bc927873cb90c89b6e233b4c3af7499": {
+    "base_rate": {
+      "reference_class": "Republican incumbents winning countywide general elections in Collin County, TX (GOP has won every countywide race for decades; 2022 county judge race won by double digits; Trump carried the county in 2024)",
+      "value": 0.9,
+      "source": "Collin County election returns 2018-2024; Texas county partisan lean data"
+    },
+    "evidence": [
+      "2026-03: incumbent Chris Hill won the Republican primary with 78.31% (67,155 votes) over Rick Grady (21.69%)",
+      "General election Nov 3, 2026: Hill faces Democrat John R. 'Buster' Brown, who ran unopposed in his primary - a low-profile challenger",
+      "Hill is a two-term incumbent (first elected county judge 2018, re-elected 2022) with prior service as Precinct 3 commissioner 2013-2017",
+      "Context: Collin County remains Republican-leaning though suburban-trending; a Democratic-wave midterm could compress but very unlikely erase a double-digit countywide GOP baseline"
+    ],
+    "strongest_opposing_case": "Collin County is among the fastest-bluing large suburban counties in Texas, 2026 is shaping up as an adverse midterm for the president's party, and a backlash environment plus suburban swing could produce the county's first Democratic countywide win against a primary-bruised incumbent.",
+    "reasoning_summary": "Base rate ~90% for a GOP incumbent countywide in Collin. Hill's dominant primary win shows no intra-party collapse, his opponent is a first-time countywide Democrat, and the county's GOP baseline margin (roughly 10-20 points in recent cycles) exceeds plausible wave swings. Midterm environment risk trims the ceiling slightly. Final: 0.9.",
+    "key_sources": [
+      {"title": "Incumbent Chris Hill wins Collin County Judge Republican primary race (Community Impact)", "url": "https://communityimpact.com/mckinney/election/incumbent-chris-hill-wins-collin-county-judge-republican-primary-race/", "date": "2026-03"},
+      {"title": "2026 Collin County Judge election (Wikipedia)", "url": "https://en.wikipedia.org/wiki/2026_Collin_County_Judge_election", "date": "2026"}
+    ],
+    "p": 0.9
+  },
+  "0x326df6a10a6cdd74bdc1ef77906037e90b1f1d6dd1fdcbf6580aea62de094a96": {
+    "base_rate": {
+      "reference_class": "New federal immigrant-investor programs' first-year realized volume versus announced demand (EV precedent: EB-5 issued ~1,000 visas across its first SEVEN years; government processing of novel $1M+ applications is slow)",
+      "value": 0.4,
+      "source": "EB-5 program history (USCIS); observed Gold Card throughput of 1 approval in the program's first ~4 months"
+    },
+    "evidence": [
+      "2026-04-23: Commerce Secretary Lutnick testified under oath that exactly ONE person had been approved for a Gold Card, with 'hundreds in the queue' - directly contradicting his earlier claims of 1,000 sold in a day and '$1.3 billion' in sales (Dec 2025)",
+      "Program mechanics: launched December 2025 as a $1M 'gift' fast-track (down from the announced $5M); approvals, not marketing claims, are the countable event",
+      "2026 (through Oct): no official Trump-administration publication of cumulative Gold Card sales found; resolution may fall back to 'consensus of credible reporting', which so far anchors on the 1-approved figure plus hundreds pending",
+      "Bracket logic: 1 purchase in 2026 is already confirmed (floor above zero); the question is whether 2026 approvals stay <=100 or blow past it if the queue is processed en masse before Dec 31"
+    ],
+    "strongest_opposing_case": "With 'hundreds in the queue' as of April and an administration hungry for revenue headlines, a single batch-approval event before December could push the 2026 count past 100; alternatively, credible reporting could anchor on Lutnick's inflated sales claims rather than the one verified approval, also breaking the 1-100 bracket upward.",
+    "reasoning_summary": "The floor is secured (1 approval confirmed April 2026), so the bracket fight is 1-100 vs >100. Throughput evidence (1 approval in ~4 months despite hundreds pending) suggests vetting friction keeps 2026 totals low, but 8 remaining months plus political incentive to tout big numbers makes a >100 batch plausible, and reporting ambiguity (claims vs approvals) adds resolution noise in both directions. Final: 0.35.",
+    "key_sources": [
+      {"title": "Just 1 Trump Gold Card Has Been Approved So Far, Lutnick Says (The Fiscal Times)", "url": "https://www.thefiscaltimes.com/2026/04/23/Just-1-Trump-Gold-Card-Has-Been-Approved-So-Far-Lutnick-Says", "date": "2026-04-23"},
+      {"title": "Lutnick admits under oath he's only sold one Trump Gold Card visa (Mediaite)", "url": "https://www.mediaite.com/politics/howard-lutnick-admits-under-oath-that-hes-only-sold-one-trump-gold-card-visa-for-1m-after-claiming-on-a-podcast-hed-sold-1000-of-them/", "date": "2026-04"},
+      {"title": "Trump's $5M Gold Card visa - only 1 sold so far (Yahoo Finance)", "url": "https://finance.yahoo.com/economy/policy/articles/trump-5m-gold-card-visa-160500873.html", "date": "2026"}
+    ],
+    "p": 0.35
+  },
+  "0x5851bae96eeb26f343fa3c39602ce4d63f58629afdbc58bf409d565425f23443": {
+    "base_rate": {
+      "reference_class": "Extrapolation of observed FY2026 ICE removal pace to fiscal year-end (356,389 removals through July 11 = ~1,255/day; linear projection ~458k; bracket 400-500k captures the central mass of plausible end-states)",
+      "value": 0.65,
+      "source": "ICE FY2026 data release of July 20, 2026; FY2024 baseline 271,484 (ICE Annual Report); FY2025 total 319,980"
+    },
+    "evidence": [
+      "2026-07-20: ICE data showed 356,389 removals in FY2026 through July 11 - already exceeding FY2025's full-year 319,980 and approaching the modern record of 438,421 (FY2013, Obama)",
+      "Pace math: ~1,255-1,260 removals/day over 284 days; the remaining 81 days of FY2026 (through Sep 30) at constant pace add ~102k, projecting ~458k - mid-bracket",
+      "To finish BELOW 400k would require the final-quarter pace to collapse to ~540/day (down 57%) - implausible given expanded OBBBA detention/removal funding and an accelerating trend; to exceed 500k requires ~1,775/day (up 41%) - possible only with an unprecedented surge",
+      "Resolution source is the FY2026 ICE Annual Report's removal count (ICE-only, as in the FY2024 report's 271,484), not inflated DHS 'removals and returns' combos - the July 356k figure is the like-for-like ICE series"
+    ],
+    "strongest_opposing_case": "ICE's pace was still accelerating as new OBBBA-funded detention capacity came online in summer 2026, so a final-quarter surge above 1,775/day could push the annual-report figure past 500k; alternatively the Annual Report could adopt a broader combined ICE+CBP count, also breaking the bracket upward.",
+    "reasoning_summary": "The pace-based projection lands at ~458k, squarely mid-bracket. The FY ended Sep 30, so the outcome is already determined and only reporting remains; downside (<400k) is nearly impossible given 356k by July 11, and upside (>500k) requires a 40%+ final-quarter acceleration that no reporting suggests occurred. Main residual risks are definitional (which count the Annual Report prints) and a late surge. Final: 0.7.",
+    "key_sources": [
+      {"title": "ICE: 350,000+ individuals removed in fiscal year 2026 (Good Morning America/ABC)", "url": "https://www.goodmorningamerica.com/news/story/ice-350000-individuals-removed-fiscal-year-2026-134948878", "date": "2026-07-20"},
+      {"title": "ICE says it's deported 356,000 people this year (Latin Times)", "url": "https://www.latintimes.com/detainees-at-krome-detention-center-ice-says-its-deported-356000-people-this-year-while-70-detainees-have-no-conviction-599101", "date": "2026-07"},
+      {"title": "ICE FY2024 Annual Report (baseline 271,484 removals)", "url": "https://www.ice.gov/doclib/eoy/iceAnnualReportFY2024.pdf", "date": "2024-12"}
+    ],
+    "p": 0.7
+  }
+}

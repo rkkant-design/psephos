@@ -1,0 +1,2 @@
+n_alliances,tau_median,tau_q25,tau_q75,pilot_prior,note
+11,0.5,0.38,0.74,0.75,partner_base_mean>=2pt alliances only; tau=b_partner/b_anchor

@@ -1,0 +1,3 @@
+state,window_days,beneficiary,net,gross,signal,label,n_events,flows
+PB,180,WPD,5,7,0.714,moderate,2,"{""AAP"": -2, ""INC"": 2, ""SAD"": -5, ""WPD"": 5}"
+UP,180,NDA,15,15,1.0,strong,3,"{""INDIA"": -15, ""NDA"": 15}"

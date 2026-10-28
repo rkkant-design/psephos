@@ -1,0 +1,182 @@
+{
+ "forecast_id": "WB2026",
+ "freeze_date": "2026-03-26",
+ "params": {
+  "alpha": 0.642,
+  "n_sim": 10000,
+  "poll_agencies_rated": false,
+  "seed": 42,
+  "sigma_c": 12.62,
+  "sigma_state_m2": 6.3,
+  "sigma_state_m3": 6.0,
+  "tau": 0.5
+ },
+ "quality_flags": [
+  "Both pre-freeze polls are unrated agencies (IANS-Matrize, VoteVibe CNN-News18); M3 runs at inflated sigma 6.0.",
+  "LF+ and INC have NO separate poll numbers at freeze (Wikipedia table merges LF+/INC/Others into one 13-15% colspan cell) -> their questions are M3-blind (WATCH-NOPOLL) and the M3 seat sim excludes them, which mechanically inflates AITC/BJP M3 seat counts; the dual gate's min() partially protects.",
+  "BJP-ISF seat sharing unresolved at freeze; ISF excluded from BJP bloc.",
+  "Baseline AE (WB2021) covers 290 of 294 ACs in ae_long; seat sims run on 290.",
+  "2021 WB polls underestimated AITC by 6.6 pts; correction +3.3 applied per ledger rule."
+ ],
+ "questions": [
+  {
+   "p_gate": 0.7613,
+   "p_m2": 0.7613,
+   "p_m3": 0.7717,
+   "question": "AITC wins majority",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.7951,
+   "p_m2": 0.8033,
+   "p_m3": 0.7951,
+   "question": "AITC is largest",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.163,
+   "p_m2": 0.163,
+   "p_m3": 0.1915,
+   "question": "BJP wins majority",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.1967,
+   "p_m2": 0.1967,
+   "p_m3": 0.2049,
+   "question": "BJP is largest",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": null,
+   "p_m2": 0.0,
+   "p_m3": null,
+   "question": "LF wins majority",
+   "verdict": "WATCH-NOPOLL"
+  },
+  {
+   "p_gate": null,
+   "p_m2": 0.0,
+   "p_m3": null,
+   "question": "LF is largest",
+   "verdict": "WATCH-NOPOLL"
+  },
+  {
+   "p_gate": null,
+   "p_m2": 0.0,
+   "p_m3": null,
+   "question": "INC wins majority",
+   "verdict": "WATCH-NOPOLL"
+  },
+  {
+   "p_gate": null,
+   "p_m2": 0.0,
+   "p_m3": null,
+   "question": "INC is largest",
+   "verdict": "WATCH-NOPOLL"
+  },
+  {
+   "p_gate": 1.0,
+   "p_m2": 1.0,
+   "p_m3": 1.0,
+   "question": "Winner (largest) in {AITC, BJP}",
+   "verdict": "CALL-YES"
+  },
+  {
+   "p_gate": null,
+   "p_m2": 0.9985,
+   "p_m3": null,
+   "question": "LF under 30 seats",
+   "verdict": "WATCH-NOPOLL"
+  },
+  {
+   "p_gate": null,
+   "p_m2": 0.9993,
+   "p_m3": null,
+   "question": "INC under 30 seats",
+   "verdict": "WATCH-NOPOLL"
+  }
+ ],
+ "run_at_utc": "2026-10-16T14:45:35+00:00",
+ "seats_m2": {
+  "AITC": {
+   "med": 178,
+   "p5": 107,
+   "p95": 240,
+   "p_largest": 0.8033,
+   "p_majority": 0.7613
+  },
+  "BJP": {
+   "med": 106,
+   "p5": 46,
+   "p95": 177,
+   "p_largest": 0.1967,
+   "p_majority": 0.163
+  },
+  "INC": {
+   "med": 2,
+   "p5": 0,
+   "p95": 8,
+   "p_largest": 0.0,
+   "p_majority": 0.0
+  },
+  "LF": {
+   "med": 2,
+   "p5": 0,
+   "p95": 11,
+   "p_largest": 0.0,
+   "p_majority": 0.0
+  }
+ },
+ "seats_m3": {
+  "AITC": {
+   "med": 180,
+   "p5": 110,
+   "p95": 238,
+   "p_largest": 0.7951,
+   "p_majority": 0.7717
+  },
+  "BJP": {
+   "med": 110,
+   "p5": 52,
+   "p95": 180,
+   "p_largest": 0.2049,
+   "p_majority": 0.1915
+  }
+ },
+ "state_shares": {
+  "baseline": {
+   "AITC": 48.64,
+   "BJP": 38.85,
+   "INC": 2.97,
+   "LF": 5.36
+  },
+  "ge": {
+   "AITC": 46.16,
+   "BJP": 39.08,
+   "INC": 4.72,
+   "LF": 5.73
+  },
+  "m2_pred": {
+   "AITC": 47.05,
+   "BJP": 39.0,
+   "INC": 4.09,
+   "LF": 5.6
+  },
+  "m3_pred": {
+   "AITC": 46.25,
+   "BJP": 38.91
+  }
+ },
+ "title": "West Bengal Legislative Assembly 2026 (holdout)",
+ "tripwires": [
+  {
+   "effect": "BJP bloc gains ~1.4pt transfer-weighted; re-run",
+   "watch": "BJP-ISF alliance finalized"
+  },
+  {
+   "effect": "M3 upgrades to rated sigma",
+   "watch": "A rated agency (CVoter/Axis/CSDS) publishes pre-election vote shares"
+  }
+ ]
+}

@@ -1,0 +1,861 @@
+{
+ "forecast_id": "FB2026-10-25-009",
+ "domain": "ForecastBench",
+ "freeze_date": "2026-10-25",
+ "resolve_date": null,
+ "researcher": "claude-fable-5 operator session, 2026-10-25 round-day sprint (authored + rule + family layers)",
+ "resolution_source": "per-question benchmark resolution criteria (see each question's benchmark block)",
+ "independence_attestation": "No betting odds, prediction-market prices or forecast-aggregator numbers were fetched or consulted for any question in this dossier; market-source questions' embedded freeze prices were deliberately ignored.",
+ "questions": [
+  {
+   "q": "Will the Democratic Party win the CA-48 House seat?",
+   "benchmark": {
+    "source": "polymarket",
+    "id": "0xf8864cc923193924f175991ede770984839c7fd8e57386e6cbd9aa32eb62f6d6",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-democratic-party-win-the-ca-48-house-seat.",
+   "base_rate_used": {
+    "reference_class": "question-type prior: party-wins-race question: near-even two-party prior absent race-specific research",
+    "value": 0.45,
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'party-wins-race question: near-even two-party prior absent race-specific research', assigned p=0.45."
+   ],
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction.",
+   "reasoning_summary": "Layer-B rule fill. Classified as: party-wins-race question: near-even two-party prior absent race-specific research; assigned the class prior p=0.45 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.45
+  },
+  {
+   "q": "Will the Republican Party win the AK-AL House seat?",
+   "benchmark": {
+    "source": "polymarket",
+    "id": "0x909e3566fa0384f39020837073fe6e9fac5fe340b49998f284737c04fddd3212",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-republican-party-win-the-ak-al-house-seat.",
+   "base_rate_used": {
+    "reference_class": "question-type prior: party-wins-race question: near-even two-party prior absent race-specific research",
+    "value": 0.45,
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'party-wins-race question: near-even two-party prior absent race-specific research', assigned p=0.45."
+   ],
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction.",
+   "reasoning_summary": "Layer-B rule fill. Classified as: party-wins-race question: near-even two-party prior absent race-specific research; assigned the class prior p=0.45 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.45
+  },
+  {
+   "q": "Will the Democratic Party win the NY-03 House seat?",
+   "benchmark": {
+    "source": "polymarket",
+    "id": "0xd7e7300ecc03a88948a89186d7f06b1000750a7f4a0778e40566d50af9ef3147",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-democratic-party-win-the-ny-03-house-seat.",
+   "base_rate_used": {
+    "reference_class": "question-type prior: party-wins-race question: near-even two-party prior absent race-specific research",
+    "value": 0.45,
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'party-wins-race question: near-even two-party prior absent race-specific research', assigned p=0.45."
+   ],
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction.",
+   "reasoning_summary": "Layer-B rule fill. Classified as: party-wins-race question: near-even two-party prior absent race-specific research; assigned the class prior p=0.45 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.45
+  },
+  {
+   "q": "Will Mohammed Ashiru Isa win the 2027 Kaduna State gubernatorial election?",
+   "benchmark": {
+    "source": "polymarket",
+    "id": "0x25a39e7692a267810b1ea79ee60a751e6cfbbee7586dba3378698103623bee80",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://polymarket.com/market/will-mohammed-ashiru-isa-win-the-2027-kaduna-state-gubernatorial-election.",
+   "base_rate_used": {
+    "reference_class": "question-type prior: unclassified market question: neutral-conservative prior",
+    "value": 0.35,
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'unclassified market question: neutral-conservative prior', assigned p=0.35."
+   ],
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction.",
+   "reasoning_summary": "Layer-B rule fill. Classified as: unclassified market question: neutral-conservative prior; assigned the class prior p=0.35 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.35
+  },
+  {
+   "q": "Will none of these coins hit a $1B FDV?",
+   "benchmark": {
+    "source": "polymarket",
+    "id": "0x820729aadc283c1acec9aa0fab994d0aae15dd372c29df515134cd0548650d13",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://polymarket.com/market/will-none-of-these-coins-hit-a-1b-fdv.",
+   "base_rate_used": {
+    "reference_class": "question-type prior: unclassified market question: neutral-conservative prior",
+    "value": 0.35,
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'unclassified market question: neutral-conservative prior', assigned p=0.35."
+   ],
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction.",
+   "reasoning_summary": "Layer-B rule fill. Classified as: unclassified market question: neutral-conservative prior; assigned the class prior p=0.35 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.35
+  },
+  {
+   "q": "Anthropic IPO before 2027?",
+   "benchmark": {
+    "source": "polymarket",
+    "id": "0x6522024c060166830e53a48b0db1cab9296601a8539ab005124db5e4bf50a303",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://polymarket.com/market/anthropic-ipo-before-2027.",
+   "base_rate_used": {
+    "reference_class": "question-type prior: unclassified market question: neutral-conservative prior",
+    "value": 0.35,
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'unclassified market question: neutral-conservative prior', assigned p=0.35."
+   ],
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction.",
+   "reasoning_summary": "Layer-B rule fill. Classified as: unclassified market question: neutral-conservative prior; assigned the class prior p=0.35 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.35
+  },
+  {
+   "q": "Will Russia and Ukraine hold any diplomatic meeting by December 31, 2026?",
+   "benchmark": {
+    "source": "polymarket",
+    "id": "0x8c674a435065fb526778f141587c07e3e44a0ecdf4b4ad647e6f094aa8a6262c",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://polymarket.com/market/will-russia-and-ukraine-hold-any-diplomatic-meeting-by-december-31-2026-20260819-697-428.",
+   "base_rate_used": {
+    "reference_class": "question-type prior: event-by-date question: discrete status-quo breaks within short windows are the minority case",
+    "value": 0.22,
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'event-by-date question: discrete status-quo breaks within short windows are the minority case', assigned p=0.22."
+   ],
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction.",
+   "reasoning_summary": "Layer-B rule fill. Classified as: event-by-date question: discrete status-quo breaks within short windows are the minority case; assigned the class prior p=0.22 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.22
+  },
+  {
+   "q": "Will PP win the most seats in the 2026 Spanish general election?",
+   "benchmark": {
+    "source": "polymarket",
+    "id": "0x162e356bfab7ad18fe4e3029d5811d9a95fce95d93858b42924a3b9ffbcf1a93",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://polymarket.com/market/will-pp-win-the-most-seats-in-the-2026-spanish-general-election.",
+   "base_rate_used": {
+    "reference_class": "question-type prior: unclassified market question: neutral-conservative prior",
+    "value": 0.35,
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'unclassified market question: neutral-conservative prior', assigned p=0.35."
+   ],
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction.",
+   "reasoning_summary": "Layer-B rule fill. Classified as: unclassified market question: neutral-conservative prior; assigned the class prior p=0.35 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.35
+  },
+  {
+   "q": "Will Chiang Wan-an win the next Taipei Mayor election?",
+   "benchmark": {
+    "source": "polymarket",
+    "id": "0xbf7a9da08326512f76129d4accf9f7d852dbf1cb7dd2c512479ff40c872f5659",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://polymarket.com/market/will-chiang-wan-an-win-the-next-taipei-mayor-election-20260813125857101.",
+   "base_rate_used": {
+    "reference_class": "question-type prior: unclassified market question: neutral-conservative prior",
+    "value": 0.35,
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'unclassified market question: neutral-conservative prior', assigned p=0.35."
+   ],
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction.",
+   "reasoning_summary": "Layer-B rule fill. Classified as: unclassified market question: neutral-conservative prior; assigned the class prior p=0.35 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.35
+  },
+  {
+   "q": "Will Lin Kuo-chang win the next Yilan County Magistrate election?",
+   "benchmark": {
+    "source": "polymarket",
+    "id": "0xbc34e02e0b1102cb7aeeff54ac8698c57b7913cda913a56e8b71c4806cd4a0e6",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://polymarket.com/market/will-lin-kuo-chang-win-the-next-yilan-county-magistrate-election-20260813135716202.",
+   "base_rate_used": {
+    "reference_class": "question-type prior: unclassified market question: neutral-conservative prior",
+    "value": 0.35,
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'unclassified market question: neutral-conservative prior', assigned p=0.35."
+   ],
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction.",
+   "reasoning_summary": "Layer-B rule fill. Classified as: unclassified market question: neutral-conservative prior; assigned the class prior p=0.35 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.35
+  },
+  {
+   "q": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
+   "benchmark": {
+    "source": "polymarket",
+    "id": "0x8a4196617dcb703e49d9bb36d3847bf6a75fd364dbd19f8d408ac944bf1a03d8",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636.",
+   "base_rate_used": {
+    "reference_class": "question-type prior: unclassified market question: neutral-conservative prior",
+    "value": 0.35,
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'unclassified market question: neutral-conservative prior', assigned p=0.35."
+   ],
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction.",
+   "reasoning_summary": "Layer-B rule fill. Classified as: unclassified market question: neutral-conservative prior; assigned the class prior p=0.35 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.35
+  },
+  {
+   "q": "Will Wang Chung-ming win the next Lienchiang County Magistrate election?",
+   "benchmark": {
+    "source": "polymarket",
+    "id": "0x2464652e9f2b4b0dd5f228aae58d17222f1102d6d3cea1a7f898a8e0880e5a8e",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://polymarket.com/market/will-wang-chung-ming-win-the-next-lienchiang-county-magistrate-election-202608131357161601.",
+   "base_rate_used": {
+    "reference_class": "question-type prior: unclassified market question: neutral-conservative prior",
+    "value": 0.35,
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'unclassified market question: neutral-conservative prior', assigned p=0.35."
+   ],
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction.",
+   "reasoning_summary": "Layer-B rule fill. Classified as: unclassified market question: neutral-conservative prior; assigned the class prior p=0.35 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.35
+  },
+  {
+   "q": "Extended FDV above $150M one day after launch?",
+   "benchmark": {
+    "source": "polymarket",
+    "id": "0x45514e0fcd922a740e67ab064a9042d3e964006712f9540947808ae82067ed23",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://polymarket.com/market/extended-fdv-above-150m-one-day-after-launch-452.",
+   "base_rate_used": {
+    "reference_class": "question-type prior: threshold question without freeze context: slightly under even to reflect threshold-setting bias",
+    "value": 0.42,
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'threshold question without freeze context: slightly under even to reflect threshold-setting bias', assigned p=0.42."
+   ],
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction.",
+   "reasoning_summary": "Layer-B rule fill. Classified as: threshold question without freeze context: slightly under even to reflect threshold-setting bias; assigned the class prior p=0.42 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.42
+  },
+  {
+   "q": "Will Trump sell 1-100 Gold Cards in 2026?",
+   "benchmark": {
+    "source": "polymarket",
+    "id": "0x326df6a10a6cdd74bdc1ef77906037e90b1f1d6dd1fdcbf6580aea62de094a96",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://polymarket.com/market/will-trump-sell-1-100-gold-cards-in-2026.",
+   "base_rate_used": {
+    "reference_class": "question-type prior: unclassified market question: neutral-conservative prior",
+    "value": 0.35,
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'unclassified market question: neutral-conservative prior', assigned p=0.35."
+   ],
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction.",
+   "reasoning_summary": "Layer-B rule fill. Classified as: unclassified market question: neutral-conservative prior; assigned the class prior p=0.35 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.35
+  },
+  {
+   "q": "Will the AfD be part of a German state government in 2026?",
+   "benchmark": {
+    "source": "polymarket",
+    "id": "0x9194103ad3ae2c3d2a1d739358843fccea3c13ab39b1aab58a8bb87e486bbcdb",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-afd-be-part-of-a-german-state-government-in-2026.",
+   "base_rate_used": {
+    "reference_class": "question-type prior: unclassified market question: neutral-conservative prior",
+    "value": 0.35,
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'unclassified market question: neutral-conservative prior', assigned p=0.35."
+   ],
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction.",
+   "reasoning_summary": "Layer-B rule fill. Classified as: unclassified market question: neutral-conservative prior; assigned the class prior p=0.35 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.35
+  },
+  {
+   "q": "Will Itamar Ben Gvir be the next Israeli Minister of National Security?",
+   "benchmark": {
+    "source": "polymarket",
+    "id": "0x7b56773c80336f8a7b31dea50da0f26c8457a943c4ec9a90a54cadbf35649a22",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://polymarket.com/market/will-itamar-ben-gvir-be-the-next-israeli-minister-of-national-security.",
+   "base_rate_used": {
+    "reference_class": "question-type prior: unclassified market question: neutral-conservative prior",
+    "value": 0.35,
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'unclassified market question: neutral-conservative prior', assigned p=0.35."
+   ],
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction.",
+   "reasoning_summary": "Layer-B rule fill. Classified as: unclassified market question: neutral-conservative prior; assigned the class prior p=0.35 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.35
+  },
+  {
+   "q": "Israel x Iran ceasefire continues through November 30?",
+   "benchmark": {
+    "source": "polymarket",
+    "id": "0x2dcbc71a3f8108936e768b503d565fbda7a644b2a0bd9ed45f74982a2bb11fba",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://polymarket.com/market/israel-x-iran-ceasefire-continues-through-november-30.",
+   "base_rate_used": {
+    "reference_class": "question-type prior: status-quo persistence question: incumbncy/continuation holds more often than not over short windows",
+    "value": 0.62,
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'status-quo persistence question: incumbncy/continuation holds more often than not over short windows', assigned p=0.62."
+   ],
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction.",
+   "reasoning_summary": "Layer-B rule fill. Classified as: status-quo persistence question: incumbncy/continuation holds more often than not over short windows; assigned the class prior p=0.62 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.62
+  },
+  {
+   "q": "Military action against Saudi Oil Pipeline (East-West) by November 30?",
+   "benchmark": {
+    "source": "polymarket",
+    "id": "0x9e69d69cdbccdef7f8543d02dc2a60d299121286463cc5bbaf57b0aff5693a68",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://polymarket.com/market/military-action-against-saudi-oil-pipeline-east-west-by-november-30.",
+   "base_rate_used": {
+    "reference_class": "question-type prior: event-by-date question: discrete status-quo breaks within short windows are the minority case",
+    "value": 0.22,
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'event-by-date question: discrete status-quo breaks within short windows are the minority case', assigned p=0.22."
+   ],
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction.",
+   "reasoning_summary": "Layer-B rule fill. Classified as: event-by-date question: discrete status-quo breaks within short windows are the minority case; assigned the class prior p=0.22 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.22
+  },
+  {
+   "q": "Will the Fed Hike\u2013Pause\u2013Hike in the next three decisions (Sep\u2013Oct\u2013Dec)?",
+   "benchmark": {
+    "source": "polymarket",
+    "id": "0x19383006e0698d09c73ce34cd933f10a4ac4fb51555d23b220969d1590828365",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-fed-hikepausehike-in-the-next-three-decisions-sepoctdec.",
+   "base_rate_used": {
+    "reference_class": "question-type prior: unclassified market question: neutral-conservative prior",
+    "value": 0.35,
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'unclassified market question: neutral-conservative prior', assigned p=0.35."
+   ],
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction.",
+   "reasoning_summary": "Layer-B rule fill. Classified as: unclassified market question: neutral-conservative prior; assigned the class prior p=0.35 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.35
+  },
+  {
+   "q": "Will Lai Jui-lung win the next Kaohsiung Mayor election?",
+   "benchmark": {
+    "source": "polymarket",
+    "id": "0xa157fcc18df3d9ca0655349b496c2bda2f13756f69c94d1dbca487863b01486c",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://polymarket.com/market/will-lai-jui-lung-win-the-next-kaohsiung-mayor-election-20260813125857602.",
+   "base_rate_used": {
+    "reference_class": "question-type prior: unclassified market question: neutral-conservative prior",
+    "value": 0.35,
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'unclassified market question: neutral-conservative prior', assigned p=0.35."
+   ],
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction.",
+   "reasoning_summary": "Layer-B rule fill. Classified as: unclassified market question: neutral-conservative prior; assigned the class prior p=0.35 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.35
+  },
+  {
+   "q": "Will Chen Chen-chung win the next Penghu County Magistrate election?",
+   "benchmark": {
+    "source": "polymarket",
+    "id": "0x9da40c171ec15e8220688f8f3498f7aff07fbcb23bdfc0e3817bc39f091e64f0",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://polymarket.com/market/will-chen-chen-chung-win-the-next-penghu-county-magistrate-election-202608131357161401.",
+   "base_rate_used": {
+    "reference_class": "question-type prior: unclassified market question: neutral-conservative prior",
+    "value": 0.35,
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'unclassified market question: neutral-conservative prior', assigned p=0.35."
+   ],
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction.",
+   "reasoning_summary": "Layer-B rule fill. Classified as: unclassified market question: neutral-conservative prior; assigned the class prior p=0.35 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.35
+  },
+  {
+   "q": "Pakistan military action against Yemen by December 31, 2026?",
+   "benchmark": {
+    "source": "polymarket",
+    "id": "0x1f6926c8e2a2d7caf40dbf7e64f422dc7f06a5c4da435ec1b256abb82283396d",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://polymarket.com/market/pakistan-military-action-against-yemen-by-december-31-2026-20260909.",
+   "base_rate_used": {
+    "reference_class": "question-type prior: event-by-date question: discrete status-quo breaks within short windows are the minority case",
+    "value": 0.22,
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'event-by-date question: discrete status-quo breaks within short windows are the minority case', assigned p=0.22."
+   ],
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction.",
+   "reasoning_summary": "Layer-B rule fill. Classified as: event-by-date question: discrete status-quo breaks within short windows are the minority case; assigned the class prior p=0.22 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.22
+  },
+  {
+   "q": "Will the Philippine Senate convict Sara Duterte? ",
+   "benchmark": {
+    "source": "polymarket",
+    "id": "0x6caca4e7e45f5e9088fc0ba0615121a2ed235a426860dfb9dc651437ac377c39",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-philippine-senate-convict-sara-duterte.",
+   "base_rate_used": {
+    "reference_class": "question-type prior: unclassified market question: neutral-conservative prior",
+    "value": 0.35,
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'unclassified market question: neutral-conservative prior', assigned p=0.35."
+   ],
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction.",
+   "reasoning_summary": "Layer-B rule fill. Classified as: unclassified market question: neutral-conservative prior; assigned the class prior p=0.35 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.35
+  },
+  {
+   "q": "Will a new country buy Bitcoin by December 31, 2026?",
+   "benchmark": {
+    "source": "polymarket",
+    "id": "0x590733a087d9e14aa053182b38573b22ae45cd257bb11119de537ad5ce44f088",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://polymarket.com/market/will-a-new-country-buy-bitcoin-by-december-31-2026-135.",
+   "base_rate_used": {
+    "reference_class": "question-type prior: event-by-date question: discrete status-quo breaks within short windows are the minority case",
+    "value": 0.22,
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'event-by-date question: discrete status-quo breaks within short windows are the minority case', assigned p=0.22."
+   ],
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction.",
+   "reasoning_summary": "Layer-B rule fill. Classified as: event-by-date question: discrete status-quo breaks within short windows are the minority case; assigned the class prior p=0.22 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.22
+  },
+  {
+   "q": "Israel x Iran ceasefire continues through December 31?",
+   "benchmark": {
+    "source": "polymarket",
+    "id": "0x1c4c6a698f0591ddf0c96e1beb56f8c75112ef849331bf3b0388f14830a7421d",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://polymarket.com/market/israel-x-iran-ceasefire-continues-through-december-31-415.",
+   "base_rate_used": {
+    "reference_class": "question-type prior: status-quo persistence question: incumbncy/continuation holds more often than not over short windows",
+    "value": 0.62,
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'status-quo persistence question: incumbncy/continuation holds more often than not over short windows', assigned p=0.62."
+   ],
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction.",
+   "reasoning_summary": "Layer-B rule fill. Classified as: status-quo persistence question: incumbncy/continuation holds more often than not over short windows; assigned the class prior p=0.62 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.62
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+  "forecast_id": "KL2026",
+  "title": "Kerala Legislative Assembly 2026 (holdout)",
+  "state": "KL",
+  "expected_date": "2026-04-09 (counting 2026-05-04)",
+  "freeze_date": "2026-03-16",
+  "majority": 71,
+  "n_seats": 140,
+  "baseline_ae": "KL2021",
+  "ge_election": "GEKL2024",
+  "blocs": {
+    "LDF": {
+      "ae_base": {"CPM": "1", "CPI": "1", "KCM": "1", "JDS": "1", "NCP": "1"},
+      "ge": {"CPM": "1", "CPI": "1", "KCM": "1", "JDS": "1", "NCP": "1"},
+      "note": "2021 LDF intact per frozen rev 2026-03-12 (CPM, CPI, KC(M), JD(S)-successor ISJD, NCP(SP), RJD, INL, minor KCs); all stayed -> weight 1 vs AE2021"
+    },
+    "UDF": {
+      "ae_base": {"INC": "1", "IUML": "1", "KEC": "1", "RSP": "1", "KERALA CONGRESS (JACOB)": "1"},
+      "ge": {"INC": "1", "IUML": "1", "KEC": "1", "RSP": "1"},
+      "note": "2021 UDF intact (INC, IUML, KC-Joseph=KEC, RSP, KC-Jacob) plus new micro-entrants (KDP, RMP, CMP, AIFB, TMC-Kerala) with negligible 2021 base"
+    },
+    "NDA": {
+      "ae_base": {"BJP": "1", "BDJS": "1", "TWENTY 20 PARTY": "t"},
+      "ge": {"BJP": "1", "BDJS": "1", "TWENTY 20 PARTY": "t"},
+      "note": "BJP+BDJS as 2021; Twenty20 Kizhakkambalam joined NDA (contested alone 2021, 0.71 -> tau); AIADMK-KL negligible"
+    }
+  },
+  "polls": [
+    {"agency": "IANS-Matrize", "date": "2026-03-15", "LDF": 42.5, "UDF": 41.5, "NDA": 12.5, "rated": false}
+  ],
+  "poll_window_days": 90,
+  "poll_corrections": {
+    "LDF": 0.0,
+    "UDF": 0.0,
+    "NDA": 0.0,
+    "rule": "no KL vote-share poll history in the N=46 ledger (2016/2021 polls were seat projections only) -> corrections 0"
+  },
+  "sigma_state_m2": 6.3,
+  "sigma_state_m3_rated": 4.0,
+  "sigma_state_m3_unrated": 6.0,
+  "sub_questions": [
+    {"q": "Winner (largest) in {LDF, UDF}", "bloc": "__top2__", "op": "in", "threshold": ["LDF", "UDF"]},
+    {"q": "NDA under 10 seats", "bloc": "NDA", "op": "<", "threshold": 10}
+  ],
+  "quality_flags": [
+    "ONE pre-freeze poll only (IANS-Matrize 15 Mar, unrated, n=12,015; midpoints of 42-43/41-42/12-13 ranges). M3 rests on a single unrated poll at sigma 6.0.",
+    "Freeze set to 2026-03-16 (T-24d, just after the EC schedule announcement of 15 Mar) instead of strict T-28d (2026-03-12): the 12 Mar frozen revision has EMPTY poll tables and the only published pre-campaign poll is dated 15 Mar. Decision made before seeing any result. At strict T-28 this forecast would be poll-less.",
+    "Poll record read from the last pre-election frozen revision (2026-04-08) because the 16 Mar revision's tables were still empty; only the poll PUBLISHED on/before freeze was admitted. Post-freeze polls (incl. rated CVoter 31 Mar) were visible in that revision but excluded.",
+    "History note: Kerala has alternated LDF/UDF every election since 1982 except 2021; LDF seeks a third consecutive term."
+  ],
+  "tripwires": [
+    {"watch": "Rated CVoter/Axis pre-election poll", "effect": "M3 upgrades to rated sigma (CVoter did publish 31 Mar - post-freeze, excluded)"}
+  ]
+}

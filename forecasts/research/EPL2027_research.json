@@ -1,0 +1,167 @@
+{
+ "calibration": {
+  "a": 1.0,
+  "b": 0.0
+ },
+ "committed_at_utc": "2026-10-23T09:41:35+00:00",
+ "domain": "Football",
+ "dossier_sha256": "97f4ad6849a78680a162dbb9ff73bd885dbb0d158bc680bf228bd934189e6f30",
+ "forecast_id": "EPL2027",
+ "freeze_date": "2026-10-23",
+ "independence_attestation": "No betting odds, prediction-market prices or forecast-aggregator numbers were fetched or consulted during this research pass. Honesty caveat: the engine's config files (which contain market blocks) were read earlier in this session for integration work; the numbers below were built base-rate-first from the cited research sources and no market figure is cited, used, or averaged in.",
+ "questions": [
+  {
+   "base_rate_used": {
+    "reference_class": "Two blended references: (a) PL teams starting a season with 7+ straight wins - only Chelsea 2005-06 and Liverpool 2019-20 before now, both won the title (2/2, tiny n); (b) the broader class of early-season leaders after ~7-8 games, roughly half of whom win the title",
+    "source": "Premier League historical starts (SI/Opta roundups of best starts); blend of 2/2 perfect-start record with ~0.5 leader-after-8 rate",
+    "value": 0.55
+   },
+   "evidence": [
+    "Table as of 2026-10-19 (MD7): City 21 pts (7/7 wins, GD +12), Arsenal 18, Brighton 16 (GD +18), Chelsea 13, Liverpool 12; Haaland leads scoring with 8",
+    "City's 7/7 is only the third such start in PL history; the prior two both converted to titles",
+    "Arsenal are the defending champions (won 2025-26 by 6 points over City) and sit only 3 behind with 31 games left - the chaser is the strongest possible kind",
+    "Material tail risk: City are appealing a verdict finding them guilty of 114 charges relating to financial rules (2009-2018). The forecast's own resolution rule says a sanctioned table is the real table, so an in-season points deduction would directly hit this question"
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-19",
+     "title": "Wikipedia: 2026-27 Premier League (table as of 2026-10-19, City 7/7, 114-charge appeal note)",
+     "url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Premier_League"
+    },
+    {
+     "date": "2026-10",
+     "title": "SI: Best winning starts in Premier League history and how they ended",
+     "url": "https://www.si.com/soccer/best-winning-starts-premier-league-history-how-they-ended"
+    },
+    {
+     "date": "2026-10",
+     "title": "Premier League: Which teams have had best starts to a season?",
+     "url": "https://www.premierleague.com/news/3695749"
+    }
+   ],
+   "p_raw": 0.48,
+   "p_research": 0.48,
+   "q": "Man City win the title",
+   "reasoning_summary": "Base ~0.55 (perfect-start record 2/2 blended with ~0.5 for leaders after 7-8 games, small-n discounted). Adjust down for the quality of the chaser (defending champions 3 points back) and down again for non-trivial sanction tail risk (~10% chance a deduction materially applies this season). Adjust up modestly for the perfect start and Haaland's form. Net: 0.48.",
+   "strongest_opposing_case": "Seven games is 18% of a season; titles are not won in October. Arsenal just beat this City side to the title months ago and trail by one result. City's underlying margin (GD +12 vs Brighton's +18) is good, not dominant. And the 114-charge guilty verdict hangs over the season: even a modest points deduction applied to the 2026-27 table would likely be decisive, and that risk is uniquely City's."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "Defending champions sitting 2nd, ~3 points off the lead after 7-8 games; defending champions retain the PL title roughly a third of the time overall",
+    "source": "PL history: 10 of 33 completed PL titles were retained by the holder; position after 7 games only mildly updates this",
+    "value": 0.3
+   },
+   "evidence": [
+    "Arsenal 18 pts from 7 (6W 1L), 3 behind City, as of 2026-10-19",
+    "Arsenal won 2025-26 by 6 points over City - the squad that beat this exact rival is intact and the sample of 7 games contains their only loss",
+    "City's sanction tail risk is, symmetrically, Arsenal's single biggest upside scenario"
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-19",
+     "title": "Wikipedia: 2026-27 Premier League",
+     "url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Premier_League"
+    },
+    {
+     "date": "2026",
+     "title": "Planet Football: PL table 2026 calendar year / 2025-26 final table context",
+     "url": "https://www.planetfootball.com/premier-league/premier-league-table-2026-calendar-year"
+    }
+   ],
+   "p_raw": 0.3,
+   "p_research": 0.3,
+   "q": "Arsenal win the title",
+   "reasoning_summary": "Base ~0.30 for a defending champion one result off the lead. Small downgrade for City's perfect start (the gap is deeds, not fixture noise); small upgrade for proven head-to-head superiority last season and the City sanction scenario. Net: 0.30 stands.",
+   "strongest_opposing_case": "City have dropped zero points and have the league's best scorer; a 3-point gap to a team converting at 100% compounds quickly, and Arsenal already burned their head-to-head margin for error by losing once. Brighton (+18 GD) could also take points off Arsenal in the chasing pack."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "Probability the champion comes from the top two after 7-8 games: in most PL seasons the eventual champion is already in the top two at this stage (roughly three-quarters of seasons)",
+    "source": "PL history of champion position after ~8 games (Opta/Analyst early-season roundups)",
+    "value": 0.75
+   },
+   "evidence": [
+    "Sum of the two individual assessments above (0.48 + 0.30 = 0.78) cross-checks the set directly",
+    "The nearest outsiders: Brighton 3rd (16 pts, GD +18 but no title pedigree), Chelsea 5 off the pace, Liverpool 9 off after 7 games"
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-19",
+     "title": "Wikipedia: 2026-27 Premier League",
+     "url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Premier_League"
+    },
+    {
+     "date": "2023-09",
+     "title": "The Analyst: Best starts to a Premier League season",
+     "url": "https://theanalyst.com/2023/09/best-starts-to-premier-league-season/"
+    }
+   ],
+   "p_raw": 0.78,
+   "p_research": 0.78,
+   "q": "Winner in {Man City, Arsenal}",
+   "reasoning_summary": "Set probability = sum of member assessments, 0.78, consistent with the ~0.75 base rate for the champion already being top-two at this stage. Brighton is the live third candidate and caps this below 0.85. Final: 0.78.",
+   "strongest_opposing_case": "Brighton's +18 goal difference in 7 games is an elite underlying signal and they have no European distraction pedigree pressure; Leicester 2015-16 proved a non-traditional champion can come from this kind of start. Liverpool at 9 back with Isak scoring is not dead across 31 games."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "Teams 9 points off the lead after 7 games winning the PL title: very rare - comebacks of 9+ points from this early exist (e.g. Man City 2011-12 trailed by less; Man United 1992-93) but are a few percent of seasons",
+    "source": "PL history of deficits overturned from matchday 7-8 positions",
+    "value": 0.05
+   },
+   "evidence": [
+    "Liverpool 12 pts from 7 (3W 3D 1L), 9 behind a City side converting at 100%",
+    "Isak has 5 league goals (2nd in the league) - the attack functions; the draws are the leak",
+    "Three teams, not one, stand between Liverpool and the lead (City, Arsenal, Brighton)"
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-19",
+     "title": "Wikipedia: 2026-27 Premier League",
+     "url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Premier_League"
+    },
+    {
+     "date": "2026-10",
+     "title": "Premier League best starts roundup",
+     "url": "https://www.premierleague.com/news/3695749"
+    }
+   ],
+   "p_raw": 0.05,
+   "p_research": 0.05,
+   "q": "Liverpool win the title",
+   "reasoning_summary": "Base ~0.05 for a 9-point deficit after 7 games, needing to overhaul three teams. Squad quality argues no further discount; the multi-team traffic ahead argues no upgrade. Final: 0.05.",
+   "strongest_opposing_case": "A 9-point gap in October has been closed before; Liverpool's underlying quality (recent champions pedigree, elite scorer) exceeds a 12-from-7 start, and if City take a points deduction the entire chasing pack reprices at once."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "Probability the eventual champion is in the top 5 after 7-8 games: in PL history the champion has almost always been top-5 at this point (Leicester 2015-16 were top-5 after 8; true outside-top-5-at-MD8 champions are exceptional)",
+    "source": "PL history of champion position after ~8 games",
+    "value": 0.93
+   },
+   "evidence": [
+    "The named five (City, Arsenal, Brighton, Chelsea, Liverpool) hold the top 5 as of 2026-10-19; the question resolves against these five clubs as frozen, per resolution rules",
+    "Best-placed outsiders: Brentford/Leeds/Everton at 10 pts, 11 behind City - all would need a historic run plus a five-team collapse",
+    "Every plausible title contender by squad value and recent history is inside the frozen set except Man United (7 pts, 14 behind)"
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-19",
+     "title": "Wikipedia: 2026-27 Premier League",
+     "url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Premier_League"
+    },
+    {
+     "date": "2023-09",
+     "title": "The Analyst: Best starts to a Premier League season",
+     "url": "https://theanalyst.com/2023/09/best-starts-to-premier-league-season/"
+    }
+   ],
+   "p_raw": 0.92,
+   "p_research": 0.92,
+   "q": "Winner from current top 5",
+   "reasoning_summary": "Base ~0.93 that the champion is already top-5 at MD7-8. The frozen set contains every current plausible contender; outsiders are 11+ points back. Slight discount for 31 games of variance and the sanction-chaos scenario. Final: 0.92.",
+   "strongest_opposing_case": "The frozen-list rule cuts both ways: if a Newcastle/Man United tier side surges while Chelsea and Liverpool fade, the set loses its insurance members. A City points deduction would also inject chaos benefiting exactly the mid-table chasers outside the five."
+  }
+ ],
+ "researcher": "claude-fable-5, in-session research pass (M_research v1)",
+ "resolution_source": "Final official 2026-27 Premier League table (premierleague.com/tables) after the last matchday (~2027-05)",
+ "resolve_date": "2027-05"
+}

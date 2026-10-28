@@ -1,0 +1,227 @@
+[
+ {
+  "id": "40969",
+  "source": "metaculus",
+  "question": "Will an AI-created song chart in the top 20 of the Billboard Hot 100 before 2027?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/40969.",
+  "market_resolution_criteria": "This question will resolve as **Yes** if a song largely created by AI lists in the top 20 on any weekly [Billboard Hot 100](https://www.billboard.com/charts/hot-100/) chart released before January 1, 2027.",
+  "background": "During 2025, AI created songs have began to place on various [Billboard](https://en.wikipedia.org/wiki/Billboard_\\(magazine\\)) charts, with at least six songs landing in the charts within the year. As of late 2025, this trend is accelerating leading to speculation an AI created song may soon chart on the Billboard Hot 100.\n\n[How Many AI Artists Have Debuted on Billboard\u2019s Charts?:](https://www.billboard.com/lists/ai-artists-on-billboard-charts/childpets-galore/)\n\n> Notably, at least one AI artist has debuted in each of the past five chart weeks, a streak suggesting this trend is quickly accelerating.",
+  "close": "2026-12-26T00:00:00+00:00"
+ },
+ {
+  "id": "43274",
+  "source": "metaculus",
+  "question": "Will Professor Layton and the New World of Steam be released in 2026?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/43274.",
+  "market_resolution_criteria": "This question will resolve as Yes if [Professor Layton and the New World of Steam](https://en.wikipedia.org/wiki/Professor_Layton_and_the_New_World_of_Steam) is publicly released before 2027.",
+  "background": "[Professor Layton](https://en.wikipedia.org/wiki/Professor_Layton) is a puzzle-adventure video game series originally created in 2007 developed by Level-5.\n\nThe Eighth main game in the series, [Professor Layton and the New World of Steam](https://en.wikipedia.org/wiki/Professor_Layton_and_the_New_World_of_Steam), is scheduled to be released during 2026.",
+  "close": "2026-11-28T23:00:00+00:00"
+ },
+ {
+  "id": "KXSLATECOUNT-26Q4-L60",
+  "source": "kalshi",
+  "question": "Will there be at least 60 wide film releases in Q4 2026? [Yes: At least 60]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxslatecount/x/kxslatecount-26q4.",
+  "market_resolution_criteria": "If the number of wide film releases on the Domestic Release Schedule by Box Office Mojo in Q4 2026 is at least 60, then the market resolves to Yes. Kalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with Box Office Mojo. All trademarks, logos, and brand names are the property of their respective owners. Outcome verified from Box Office Mojo (https://www.boxofficemojo.com/quarter/q4/2026/?grossesOption=totalGrosses&releaseScale=wide).",
+  "background": "N/A",
+  "close": "2027-01-01T04:59:59+00:00"
+ },
+ {
+  "id": "KXOSCARNOMACTR-27-REN",
+  "source": "kalshi",
+  "question": "2027 Best Actress Oscar nominations? [Yes: Renate Reinsve]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxoscarnomactr/x/kxoscarnomactr-27.",
+  "market_resolution_criteria": "If Renate Reinsve has been nominated for Best Actress at the 99th Academy Awards, then the market resolves to Yes. The 99th Academy Awards Nominations are expected to be announced in January 2027.\n\nThis market and these products have not been endorsed by the Oscars. Any references to Oscars, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Oscars and Kalshi. Outcome verified from Academy of Motion Picture Arts and Sciences (https://www.oscars.org/oscars).",
+  "background": "N/A",
+  "close": "2027-01-21T15:00:00+00:00"
+ },
+ {
+  "id": "KXNFLWINS-27LAR-3",
+  "source": "kalshi",
+  "question": "Will the Los Angeles R pro football team win at least 3 games this season? [Yes: 3+ wins]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxnflwins/x/kxnflwins-27lar.",
+  "market_resolution_criteria": "If the Los Angeles R Pro Football team wins at least 3 games in the 2026-27 regular season, then the market resolves to Yes. Kalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners. Outcome verified from the Governing League (https://www.nfl.com/); ESPN (https://www.espn.com/).",
+  "background": "N/A",
+  "close": "2027-01-18T05:00:00+00:00"
+ },
+ {
+  "id": "KXOSCARNOMACTO-27-SEB",
+  "source": "kalshi",
+  "question": "2027 Best Actor Oscar nominations? [Yes: Sebastian Stan]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxoscarnomacto/x/kxoscarnomacto-27.",
+  "market_resolution_criteria": "If Sebastian Stan has been nominated for Best Actor at the 99th Academy Awards, then the market resolves to Yes. The 99th Academy Awards Nominations are expected to be announced in January 2027.\n\nThis market and these products have not been endorsed by the Oscars. Any references to Oscars, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Oscars and Kalshi. Outcome verified from Academy of Motion Picture Arts and Sciences (https://www.oscars.org/oscars).",
+  "background": "N/A",
+  "close": "2027-01-21T15:00:00+00:00"
+ },
+ {
+  "id": "KXOSCARNOMPIC-27-DIG",
+  "source": "kalshi",
+  "question": "2027 Best Picture Oscar nominations? [Yes: Digger]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxoscarnompic/x/kxoscarnompic-27.",
+  "market_resolution_criteria": "If Digger has been nominated for Best Picture at the 99th Academy Awards, then the market resolves to Yes. The 99th Academy Awards Nominations are expected to be announced in January 2027.\n\nThis market and these products have not been endorsed by the Oscars. Any references to Oscars, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Oscars and Kalshi. Outcome verified from Academy of Motion Picture Arts and Sciences (https://www.oscars.org/oscars).",
+  "background": "N/A",
+  "close": "2027-01-21T15:00:00+00:00"
+ },
+ {
+  "id": "KXFOLLOWERCOUNTCLAV-27-500000",
+  "source": "kalshi",
+  "question": "Will clavicular have At least 500000 Followers before Jan 1, 2027? [Yes: At least 500,000]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxfollowercountclav/x/kxfollowercountclav-27.",
+  "market_resolution_criteria": "If clavicular has At least 500000 Followers on Kick before Jan 1, 2027, then the market resolves to Yes. The follower count is determined by the publicly displayed count on the account's profile page. If the platform displays abbreviated numbers (e.g., \"1.2M\"), the most precise available count will be used. The count is assessed at 11:59 PM ET before the target date. If the account is permanently suspended or deleted, the market resolves to last fair price. If the account becomes private and follower counts are invisible, the market resolves to No. Temporary suspensions that are lifted before the target date do not affect resolution if follower counts become visible again. Outcome verified from clavicular (https://kick.com/clavicular).",
+  "background": "N/A",
+  "close": "2027-01-01T04:59:00+00:00"
+ },
+ {
+  "id": "KXOSCARNOMPIC-27-CLU",
+  "source": "kalshi",
+  "question": "2027 Best Picture Oscar nominations? [Yes: Club Kid]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxoscarnompic/x/kxoscarnompic-27.",
+  "market_resolution_criteria": "If Club Kid has been nominated for Best Picture at the 99th Academy Awards, then the market resolves to Yes. The 99th Academy Awards Nominations are expected to be announced in January 2027.\n\nThis market and these products have not been endorsed by the Oscars. Any references to Oscars, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Oscars and Kalshi. Outcome verified from Academy of Motion Picture Arts and Sciences (https://www.oscars.org/oscars).",
+  "background": "N/A",
+  "close": "2027-01-21T15:00:00+00:00"
+ },
+ {
+  "id": "KXENGAGEMENTSWEENEYBRUAN-26",
+  "source": "kalshi",
+  "question": "Will Sydney Sweeney and Scooter Braun be engaged in 2026? [Yes: Before 2027]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxengagementsweeneybruan/x/kxengagementsweeneybruan-26.",
+  "market_resolution_criteria": "If Sydney Sweeney and Scooter Braun are reported to be engaged to be married before Dec 31, 2026, then the market resolves to Yes. Outcome verified from The Source Agencies are (https://kalshi.com/); in hierarchical order (https://kalshi.com/); \ue907 statements from person (e (https://kalshi.com/).",
+  "background": "N/A",
+  "close": "2026-12-31T04:59:00+00:00"
+ },
+ {
+  "id": "KXGRAMBNA-69-SIE",
+  "source": "kalshi",
+  "question": "Will SIENNA SPIRO win Best New Artist at the Grammys? [Yes: SIENNA SPIRO]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxgrambna/x/kxgrambna-69.",
+  "market_resolution_criteria": "If  SIENNA SPIRO has won Best New Artist at the 69th Annual Grammy Awards, then the market resolves to Yes. Outcome verified from Recording Academy (https://www.grammy.com/).",
+  "background": "N/A",
+  "close": "2027-02-09T04:59:00+00:00"
+ },
+ {
+  "id": "KXRT-HUN-85",
+  "source": "kalshi",
+  "question": "The Hunger Games: Sunrise on the Reaping Rotten Tomatoes score? [Yes: Above 85]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxrt/x/kxrt-hun.",
+  "market_resolution_criteria": "If The Hunger Games: Sunrise on the Reaping has a Tomatometer score of above 85 on Nov 23, 2026 at 10:00 AM ET, then the market resolves to Yes. The \"Fresh!\" and \"Certified Fresh!\" subtitles are meant for illustrative purposes only. The Tomatometer score must be above the strike value to resolve as YES (for example, a score of 75 would resolve \"Above 75\" as No.) The market will be determined the Monday after wide release at 10:00 AM ET.\n\nThis market and these products have not been endorsed by Rotten Tomatoes. Any references to Rotten Tomatoes or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Rotten Tomatoes and Kalshi. Outcome verified from Rotten Tomatoes (https://www.rottentomatoes.com/m/the_hunger_games_sunrise_on_the_reaping).",
+  "background": "N/A",
+  "close": "2026-11-23T15:00:00+00:00"
+ },
+ {
+  "id": "KXRT-IPL-85",
+  "source": "kalshi",
+  "question": "I Play Rocky Rotten Tomatoes score? [Yes: Above 85]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxrt/x/kxrt-ipl.",
+  "market_resolution_criteria": "If I Play Rocky has a Tomatometer score of above 85 on Nov 23, 2026 at 10:00 AM ET, then the market resolves to Yes. The \"Fresh!\" and \"Certified Fresh!\" subtitles are meant for illustrative purposes only. The Tomatometer score must be above the strike value to resolve as YES (for example, a score of 75 would resolve \"Above 75\" as No.) The market will be determined the Monday after wide release at 10:00 AM ET.\n\nThis market and these products have not been endorsed by Rotten Tomatoes. Any references to Rotten Tomatoes or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Rotten Tomatoes and Kalshi. Outcome verified from Rotten Tomatoes (https://www.rottentomatoes.com/m/i_play_rocky).",
+  "background": "N/A",
+  "close": "2026-11-23T15:00:00+00:00"
+ },
+ {
+  "id": "KXNCAAFPAC12-26-FRES",
+  "source": "kalshi",
+  "question": "Will Fresno St. win the College Football Pac-12 Championship? [Yes: Fresno St.]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxncaafpac12/x/kxncaafpac12-26.",
+  "market_resolution_criteria": "If Fresno St. wins the 2026 College Football Pac-12 Championship Game, then the market resolves to Yes. Kalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners. Outcome verified from ESPN (https://www.espn.com/); Fox Sports (https://www.foxsports.com/); The Wall Street Journal (https://www.wsj.com/).",
+  "background": "N/A",
+  "close": "2026-12-06T15:00:00+00:00"
+ },
+ {
+  "id": "KXRT-HUN-75",
+  "source": "kalshi",
+  "question": "The Hunger Games: Sunrise on the Reaping Rotten Tomatoes score? [Yes: Above 75]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxrt/x/kxrt-hun.",
+  "market_resolution_criteria": "If The Hunger Games: Sunrise on the Reaping has a Tomatometer score of above 75 on Nov 23, 2026 at 10:00 AM ET, then the market resolves to Yes. The \"Fresh!\" and \"Certified Fresh!\" subtitles are meant for illustrative purposes only. The Tomatometer score must be above the strike value to resolve as YES (for example, a score of 75 would resolve \"Above 75\" as No.) The market will be determined the Monday after wide release at 10:00 AM ET.\n\nThis market and these products have not been endorsed by Rotten Tomatoes. Any references to Rotten Tomatoes or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Rotten Tomatoes and Kalshi. Outcome verified from Rotten Tomatoes (https://www.rottentomatoes.com/m/the_hunger_games_sunrise_on_the_reaping).",
+  "background": "N/A",
+  "close": "2026-11-23T15:00:00+00:00"
+ },
+ {
+  "id": "KXRT-IPL-75",
+  "source": "kalshi",
+  "question": "I Play Rocky Rotten Tomatoes score? [Yes: Above 75]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxrt/x/kxrt-ipl.",
+  "market_resolution_criteria": "If I Play Rocky has a Tomatometer score of above 75 on Nov 23, 2026 at 10:00 AM ET, then the market resolves to Yes. The \"Fresh!\" and \"Certified Fresh!\" subtitles are meant for illustrative purposes only. The Tomatometer score must be above the strike value to resolve as YES (for example, a score of 75 would resolve \"Above 75\" as No.) The market will be determined the Monday after wide release at 10:00 AM ET.\n\nThis market and these products have not been endorsed by Rotten Tomatoes. Any references to Rotten Tomatoes or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Rotten Tomatoes and Kalshi. Outcome verified from Rotten Tomatoes (https://www.rottentomatoes.com/m/i_play_rocky).",
+  "background": "N/A",
+  "close": "2026-11-23T15:00:00+00:00"
+ },
+ {
+  "id": "KXRT-HUN-80",
+  "source": "kalshi",
+  "question": "The Hunger Games: Sunrise on the Reaping Rotten Tomatoes score? [Yes: Above 80]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxrt/x/kxrt-hun.",
+  "market_resolution_criteria": "If The Hunger Games: Sunrise on the Reaping has a Tomatometer score of above 80 on Nov 23, 2026 at 10:00 AM ET, then the market resolves to Yes. The \"Fresh!\" and \"Certified Fresh!\" subtitles are meant for illustrative purposes only. The Tomatometer score must be above the strike value to resolve as YES (for example, a score of 75 would resolve \"Above 75\" as No.) The market will be determined the Monday after wide release at 10:00 AM ET.\n\nThis market and these products have not been endorsed by Rotten Tomatoes. Any references to Rotten Tomatoes or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Rotten Tomatoes and Kalshi. Outcome verified from Rotten Tomatoes (https://www.rottentomatoes.com/m/the_hunger_games_sunrise_on_the_reaping).",
+  "background": "N/A",
+  "close": "2026-11-23T15:00:00+00:00"
+ },
+ {
+  "id": "KXRT-IPL-80",
+  "source": "kalshi",
+  "question": "I Play Rocky Rotten Tomatoes score? [Yes: Above 80]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxrt/x/kxrt-ipl.",
+  "market_resolution_criteria": "If I Play Rocky has a Tomatometer score of above 80 on Nov 23, 2026 at 10:00 AM ET, then the market resolves to Yes. The \"Fresh!\" and \"Certified Fresh!\" subtitles are meant for illustrative purposes only. The Tomatometer score must be above the strike value to resolve as YES (for example, a score of 75 would resolve \"Above 75\" as No.) The market will be determined the Monday after wide release at 10:00 AM ET.\n\nThis market and these products have not been endorsed by Rotten Tomatoes. Any references to Rotten Tomatoes or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Rotten Tomatoes and Kalshi. Outcome verified from Rotten Tomatoes (https://www.rottentomatoes.com/m/i_play_rocky).",
+  "background": "N/A",
+  "close": "2026-11-23T15:00:00+00:00"
+ },
+ {
+  "id": "KXCRITICSPIC-27-ODY",
+  "source": "kalshi",
+  "question": "Will The Odyssey win Best Picture at the 32nd Critics Choice Awards? [Yes: The Odyssey]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxcriticspic/x/kxcriticspic-27.",
+  "market_resolution_criteria": "If The Odyssey has won Best Picture at the 32nd Critics Choice Awards, then the market resolves to Yes. The 32nd Critics Choice Awards are expected to be held on January 03, 2027.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the 32nd Critics Choice Awards. All trademarks, logos, and brand names are the property of their respective owners. Outcome verified from Critics Choice Awards (https://www.criticschoice.com/).",
+  "background": "N/A",
+  "close": "2027-01-04T15:00:00+00:00"
+ },
+ {
+  "id": "KXGRAMMYNOMAOTY-69-DAN",
+  "source": "kalshi",
+  "question": "2026 Grammy nominees for Album of the Year? [Yes: Dandelion]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxgrammynomaoty/x/kxgrammynomaoty-69.",
+  "market_resolution_criteria": "If Dandelion has been nominated for Album of the Year at the 69th Grammy Awards, then the market resolves to Yes. This market and these products have not been endorsed by the Grammys. Any references to the Grammys, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Grammys and Kalshi. Outcome verified from Recording Academy (https://www.grammy.com/).",
+  "background": "N/A",
+  "close": "2026-11-02T04:59:00+00:00"
+ },
+ {
+  "id": "KXRT-HUN-70",
+  "source": "kalshi",
+  "question": "The Hunger Games: Sunrise on the Reaping Rotten Tomatoes score? [Yes: Above 70]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxrt/x/kxrt-hun.",
+  "market_resolution_criteria": "If The Hunger Games: Sunrise on the Reaping has a Tomatometer score of above 70 on Nov 23, 2026 at 10:00 AM ET, then the market resolves to Yes. The \"Fresh!\" and \"Certified Fresh!\" subtitles are meant for illustrative purposes only. The Tomatometer score must be above the strike value to resolve as YES (for example, a score of 75 would resolve \"Above 75\" as No.) The market will be determined the Monday after wide release at 10:00 AM ET.\n\nThis market and these products have not been endorsed by Rotten Tomatoes. Any references to Rotten Tomatoes or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Rotten Tomatoes and Kalshi. Outcome verified from Rotten Tomatoes (https://www.rottentomatoes.com/m/the_hunger_games_sunrise_on_the_reaping).",
+  "background": "N/A",
+  "close": "2026-11-23T15:00:00+00:00"
+ },
+ {
+  "id": "0x360909b1b607eca6207dc846804e16ed5e43dbeb4242b91ecc1352ed18cc95ef",
+  "source": "polymarket",
+  "question": "Will Hanwha Life Esports win Worlds 2026?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-hanwha-life-esports-win-worlds-2026.",
+  "market_resolution_criteria": "This market will resolve according to the winner of the 2026 League of Legends World Championship (Worlds 2026), currently scheduled for October 15 to November 14, 2026.\n\nIf this tournament is postponed after November 28, 2026, 11:59 PM ET, canceled, or a winner has not been declared within this timeframe, this market will resolve to \"Other\".\n\nIf multiple teams are declared winners, this market will resolve in favor of the team whose listed team name comes first alphabetically.\n\nThe resolution source for this market will be official information from the tournament organizer, Riot Games, via the LoL Esports website (https://lolesports.com). However, a consensus of credible reporting (e.g., Liquipedia at https://liquipedia.net/leagueoflegends/World_Championship/2026) may also be used.",
+  "background": "N/A",
+  "close": "2026-11-29T04:59:00+00:00"
+ },
+ {
+  "id": "0x76c1a69f2b0a7fcfa97b56ddbeaad1981a8cb3d8f24c1adce62ffa2d010ebbe0",
+  "source": "polymarket",
+  "question": "Will Spider-Man: Brand New Day have the best domestic opening weekend in 2026?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-spider-man-brand-new-day-have-the-best-domestic-opening-weekend-in-2026.",
+  "market_resolution_criteria": "This market will resolve according to the title of the movie which grosses more domestically on its opening weekend than any other movie in 2026. The \u201cWeekend Box Office Performance\u201d table on the page for the relevant movie on https://www.the-numbers.com/movies/year/2026 will be used to resolve this market once the values for the 3-day opening weekend are final (i.e. not studio estimates).\n\nThis market will resolve to \"Yes\" if the relevant movie grosses more on its 3-day domestic opening weekend than any other movie in 2026. Otherwise, this market will resolve to \"No\".\n\nPlease note, this market will resolve according to the The Numbers figures provided under Weekend Box Office Performance for the 3-day weekend, regardless of whether domestic refers to only the USA, or to USA and Canada, etc.\n\nResolution will be based specifically on the figures provided for this movie's 3-day opening weekend (Friday, Saturday, Sunday), regardless of whether the movie has a 4 or 5-day opening weekend.\n\nIf another movie's opening weekend box office performance surpasses that of the named movie after numbers for both are finalized, this market may immediately resolve to \"No\".\n\nIf this movie's opening weekend box office performance ties with any other's, the movie whose title comes first in alphabetical order will win.\n\nIf there is no final data available by January 31, 2027, 11:59 PM ET, another credible resolution source will be chosen.",
+  "background": "N/A",
+  "close": "2027-02-01T04:59:00+00:00"
+ },
+ {
+  "id": "0x938e6a0a011f9534ffd2d86c65dde3aeb7c66ad06cee29ead70b832179c3b6de",
+  "source": "polymarket",
+  "question": "Will Bad Bunny be the top artist for 2026?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-bad-bunny-be-the-top-spotify-artist-for-2026.",
+  "market_resolution_criteria": "Spotify releases an annual report of its most streamed artist (see: https://newsroom.spotify.com/2025-12-03/wrapped-top-artists-songs-albums-podcasts-audiobooks/). This market refers to the most streamed Spotify artist for 2026. \n\nThis market will resolve according to the name of the artist listed by Spotify as the top artist of 2026.\n\nIf Spotify does not release who their top artist for 2026 is by January 31, 2027, 11:59 PM ET, this market will resolve to \"Other\". \n\nThe resolution source for this market will be official information from Spotify, typically released as part of Spotify Wrapped. \n\nThis market and these products have not been endorsed by Spotify. Any references to Spotify, Spotify charts, streaming data, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Spotify and Polymarket. Spotify and related marks are the property of Spotify AB and its group companies.",
+  "background": "N/A",
+  "close": "2027-02-01T04:59:00+00:00"
+ },
+ {
+  "id": "0xd6118440343968bb7dba587482a24e77308f438df8f76077363249248e240ef5",
+  "source": "polymarket",
+  "question": "Will New Orleans Saints win the 2026 NFC South?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-new-orleans-saints-win-the-2026-nfc-south.",
+  "market_resolution_criteria": "This market will resolve according to the team that is declared as the NFC South division champion for the 2026 NFL regular season.\n\nIf multiple teams tie atop the division, this market will resolve according to the official tiebreak procedure of the NFL.\n\nIf the 2026 NFL regular season is cancelled, postponed after January 17, 2027, 11:59 PM ET, or there is otherwise no winner declared for this division within that timeframe, this market will resolve to \u201cOther\u201d.\n\nThe primary resolution source for this market will be official information from the NFL; however, a consensus of credible reporting may also be used.",
+  "background": "N/A",
+  "close": "2027-01-18T04:59:00+00:00"
+ }
+]

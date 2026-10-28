@@ -1,0 +1,867 @@
+{
+ "calibration": {
+  "a": 1.0,
+  "b": 0.0
+ },
+ "committed_at_utc": "2026-10-25T05:29:37+00:00",
+ "domain": "ForecastBench",
+ "dossier_sha256": "6581cf46009a5b4a5c4a3a9c9887287178249535f9cfbc1f6ecd5e5c4ae91eb2",
+ "forecast_id": "FB2026-10-25-003",
+ "freeze_date": "2026-10-25",
+ "independence_attestation": "No betting odds, prediction-market prices or forecast-aggregator numbers were fetched or consulted for any question in this dossier; market-source questions' embedded freeze prices were deliberately ignored.",
+ "questions": [
+  {
+   "base_rate_used": {
+    "reference_class": "blockaded chokepoints restoring >40% normal flow within 6 months",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.3
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXHORMUZAVG-27JAN01-A30",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "The Strait of Hormuz has been blockaded/disrupted since mid-2026 with transit far below normal (~70-80 pre-war); resolving needs the 7-day average ABOVE 30 at some point in H2 2026, which requires a reopening deal that remains unsigned."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-20",
+     "title": "Iran war status: blockade, Hormuz closure, ceasefire proposals",
+     "url": "https://www.pbs.org/newshour/world/iran-and-u-s-reach-an-initial-deal-to-extend-the-ceasefire-and-open-the-strait-of-hormuz-but-challenges-remain"
+    }
+   ],
+   "p_raw": 0.3,
+   "p_research": 0.3,
+   "q": "Will the 7-day moving average of transit calls through the Strait of Hormuz as reported by the IMF PortWatch be above 30 after July 6, 2026 and before Jan 1, 2027? [Yes: Above 30]",
+   "reasoning_summary": "Base rate: blockaded chokepoints restoring >40% normal flow within 6 months ~ 0.3. The Strait of Hormuz has been blockaded/disrupted since mid-2026 with transit far below normal (~70-80 pre-war); resolving needs the 7-day average ABOVE 30 at some point in H2 2026, which requires a reopening deal that remains unsigned. Net of adjustments the final probability is 0.3.",
+   "strongest_opposing_case": "Strongest case against this number: Iran's own ceasefire proposal centers on reopening the strait and both sides have economic desperation; a November deal could restore 30+ transits within days given queued traffic."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "P(any one named tossup is the single closest of 36)",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.1
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXCLOSESTGOVERNOR-27JAN20-GA",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Georgia's open governor race is competitive but 'smallest margin among ~36 races' is a strong condition; several races (KS, AZ, NV-style tossups) compete for closest, so even a 2-point GA result often is not the minimum."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-23",
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls"
+    }
+   ],
+   "p_raw": 0.15,
+   "p_research": 0.15,
+   "q": "Will Georgia have the smallest margin of victory in 2026 United States gubernatorial elections? [Yes: Georgia]",
+   "reasoning_summary": "Base rate: P(any one named tossup is the single closest of 36) ~ 0.1. Georgia's open governor race is competitive but 'smallest margin among ~36 races' is a strong condition; several races (KS, AZ, NV-style tossups) compete for closest, so even a 2-point GA result often is not the minimum. Net of adjustments the final probability is 0.15.",
+   "strongest_opposing_case": "Strongest case against this number: If GA lands inside 1 point as polls suggest it could, few other races historically finish tighter; GA was the closest-margin state in several recent federal cycles."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "KS open-seat governor races won by GOP since 1990",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.55
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "GOVPARTYKS-27-R",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Kansas is R+10 federally but has elected Dem governors in 5 of the last 8 cycles; with Kelly termed out and a D+9 national year, the open-seat race leans only narrowly R (Masterson) if at all."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-23",
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls"
+    }
+   ],
+   "p_raw": 0.45,
+   "p_research": 0.45,
+   "q": "Will the Republican party win the governorship in Kansas [Yes: Ty Masterson]",
+   "reasoning_summary": "Base rate: KS open-seat governor races won by GOP since 1990 ~ 0.55. Kansas is R+10 federally but has elected Dem governors in 5 of the last 8 cycles; with Kelly termed out and a D+9 national year, the open-seat race leans only narrowly R (Masterson) if at all. Net of adjustments the final probability is 0.45.",
+   "strongest_opposing_case": "Strongest case against this number: KS reverts to R in open years without a Sebelius/Kelly-type figure, and the GOP's statewide infrastructure usually prevails outside Dem-incumbent defenses."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "OR governor D wins since 1986",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.92
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "GOVPARTYOR-26-D",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Oregon has not elected an R governor since 1982; Kotek's approval is middling but the D+9 environment and the state's D+8 lean make a Dem hold overwhelming."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-23",
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls"
+    }
+   ],
+   "p_raw": 0.88,
+   "p_research": 0.88,
+   "q": "Will the Democratic party win the governorship in Oregon [Yes: Tina Kotek]",
+   "reasoning_summary": "Base rate: OR governor D wins since 1986 ~ 0.92. Oregon has not elected an R governor since 1982; Kotek's approval is middling but the D+9 environment and the state's D+8 lean make a Dem hold overwhelming. Net of adjustments the final probability is 0.88.",
+   "strongest_opposing_case": "Strongest case against this number: 2022 showed Oregon can get close with a strong unaffiliated spoiler dynamic; a crime/homelessness-centered campaign against an unpopular incumbent has a real ceiling."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "Cannes-winning lead performances earning Oscar noms",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.6
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXOSCARNOMACTR-27-REN",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Reinsve carries major festival buzz (Sentimental Value won big at Cannes) and nominations for festival-anointed lead actresses convert at high rates at the 99th Oscars nominations in January."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.55,
+   "p_research": 0.55,
+   "q": "2027 Best Actress Oscar nominations? [Yes: Renate Reinsve]",
+   "reasoning_summary": "Base rate: Cannes-winning lead performances earning Oscar noms ~ 0.6. Reinsve carries major festival buzz (Sentimental Value won big at Cannes) and nominations for festival-anointed lead actresses convert at high rates at the 99th Oscars nominations in January. Net of adjustments the final probability is 0.55.",
+   "strongest_opposing_case": "Strongest case against this number: Category competition is brutal and international-film leads get crowded out when the Best Picture slate shifts; precursor misses in Nov-Dec would flip this fast."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "months with YoY CPI rising 0.1pp+ amid oil shocks",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.5
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXCPIYOY-26DEC-T3.8",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "CPI YoY printed 3.7% for September and is trending up on tariff and oil pass-through; December YoY above 3.8% needs roughly +0.1-0.2pp more, plausible with $100 oil but not locked."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-16",
+     "title": "Fed holds expected Oct 28; Sep hike to 3.75-4.00%; CPI 3.7% YoY Sep",
+     "url": "https://www.cnbc.com/2026/10/16/kevin-warsh-fed-october-rate-hike-interest-rates-markets.html"
+    }
+   ],
+   "p_raw": 0.5,
+   "p_research": 0.5,
+   "q": "Will the rate of CPI inflation be above 3.8% for the year ending in December 2026? [Yes: Above 3.8%]",
+   "reasoning_summary": "Base rate: months with YoY CPI rising 0.1pp+ amid oil shocks ~ 0.5. CPI YoY printed 3.7% for September and is trending up on tariff and oil pass-through; December YoY above 3.8% needs roughly +0.1-0.2pp more, plausible with $100 oil but not locked. Net of adjustments the final probability is 0.5.",
+   "strongest_opposing_case": "Strongest case against this number: Base effects from late-2025 and any Hormuz de-escalation would pull energy down fast; the Fed's hikes are explicitly aimed at bending this curve by year-end."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "GA open statewide races won by GOP in D+ years",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.5
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "GOVPARTYGA-26-R",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Georgia's open governor seat in a D+9 year: the state's R lean (~R+3) fights the environment; nominee quality on the R side is contested and Dems have consolidated, making this a genuine tossup with slight D edge."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-23",
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls"
+    }
+   ],
+   "p_raw": 0.45,
+   "p_research": 0.45,
+   "q": "Will the Republican party win the governorship in Georgia [Yes: Rick Jackson]",
+   "reasoning_summary": "Base rate: GA open statewide races won by GOP in D+ years ~ 0.5. Georgia's open governor seat in a D+9 year: the state's R lean (~R+3) fights the environment; nominee quality on the R side is contested and Dems have consolidated, making this a genuine tossup with slight D edge. Net of adjustments the final probability is 0.45.",
+   "strongest_opposing_case": "Strongest case against this number: Georgia Republicans hold every statewide office and midterm electorates there have skewed R; Kemp-coalition voters returning for the R nominee is the modal outcome."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "frontrunner candidates winning UNSG selections since 1990",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.35
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXUNSEC-27JAN-RGRYN",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "The UNSG selection for the 2027 term is underway with Latin American women frontrunners; Grynspan is a leading candidate but the P5 veto gauntlet makes any single name's confirmation before Jan 5 uncertain."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.35,
+   "p_research": 0.35,
+   "q": "Who will be the next Secretary-General of UN? [Yes: Rebeca Grynspan]",
+   "reasoning_summary": "Base rate: frontrunner candidates winning UNSG selections since 1990 ~ 0.35. The UNSG selection for the 2027 term is underway with Latin American women frontrunners; Grynspan is a leading candidate but the P5 veto gauntlet makes any single name's confirmation before Jan 5 uncertain. Net of adjustments the final probability is 0.35.",
+   "strongest_opposing_case": "Strongest case against this number: The Security Council has signaled a wrap-up by late 2026 and Grynspan's UNCTAD profile plus regional consensus make her the single most likely name."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "NFL non-tanking playoff-caliber teams winning <3 games next season",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.98
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXNFLWINS-27LAR-3",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "The LA Rams were a 2025 playoff team and sit mid-season 2026 with a competitive roster; failing to reach 3 wins in a 17-game season is a collapse scenario essentially absent from their current trajectory."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.97,
+   "p_research": 0.97,
+   "q": "Will the Los Angeles R pro football team win at least 3 games this season? [Yes: 3+ wins]",
+   "reasoning_summary": "Base rate: NFL non-tanking playoff-caliber teams winning <3 games next season ~ 0.98. The LA Rams were a 2025 playoff team and sit mid-season 2026 with a competitive roster; failing to reach 3 wins in a 17-game season is a collapse scenario essentially absent from their current trajectory. Net of adjustments the final probability is 0.97.",
+   "strongest_opposing_case": "Strongest case against this number: Catastrophic QB injury plus tank dynamics can produce 2-15 seasons; if they sit at 2 wins entering December the math tightens quickly."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "WI open-gov races won by party favored by national environment",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.65
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "GOVPARTYWI-26-D",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Wisconsin's open governor race (Crowley for Dems) in a D+9 year: WI is a true 50-50 state but the environment plus Dem statewide win streak in non-Trump years makes the D hold favored."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-23",
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls"
+    }
+   ],
+   "p_raw": 0.7,
+   "p_research": 0.7,
+   "q": "Will the Democratic party win the governorship in Wisconsin [Yes: David Crowley]",
+   "reasoning_summary": "Base rate: WI open-gov races won by party favored by national environment ~ 0.65. Wisconsin's open governor race (Crowley for Dems) in a D+9 year: WI is a true 50-50 state but the environment plus Dem statewide win streak in non-Trump years makes the D hold favored. Net of adjustments the final probability is 0.7.",
+   "strongest_opposing_case": "Strongest case against this number: Open seats erase incumbency protection in the nation's most elastic state; a strong R nominee running on cost-of-living could win exactly as in 2010/2014."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "prior-year nominees repeating without a buzzy vehicle",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.15
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXOSCARNOMACTO-27-SEB",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Sebastian Stan earned a 2025 nomination but his 2026 slate lacks a clear awards vehicle with equivalent heat; Best Actor fields are the most competitive and precursor buzz lists other names."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.25,
+   "p_research": 0.25,
+   "q": "2027 Best Actor Oscar nominations? [Yes: Sebastian Stan]",
+   "reasoning_summary": "Base rate: prior-year nominees repeating without a buzzy vehicle ~ 0.15. Sebastian Stan earned a 2025 nomination but his 2026 slate lacks a clear awards vehicle with equivalent heat; Best Actor fields are the most competitive and precursor buzz lists other names. Net of adjustments the final probability is 0.25.",
+   "strongest_opposing_case": "Strongest case against this number: One late-breaking festival pickup or a surging performance in a Dec qualifying release could vault him in as the Academy has shown him favor recently."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "films without Oct buzz landing BP noms",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.08
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXOSCARNOMPIC-27-DIG",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "'Digger' lacks visible precursor presence in the 2026 awards conversation; Best Picture's 10 slots go overwhelmingly to films with festival or guild heat by October."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.15,
+   "p_research": 0.15,
+   "q": "2027 Best Picture Oscar nominations? [Yes: Digger]",
+   "reasoning_summary": "Base rate: films without Oct buzz landing BP noms ~ 0.08. 'Digger' lacks visible precursor presence in the 2026 awards conversation; Best Picture's 10 slots go overwhelmingly to films with festival or guild heat by October. Net of adjustments the final probability is 0.15.",
+   "strongest_opposing_case": "Strongest case against this number: October-blind spots happen (CODA pattern): a streamer push in November can resurrect a quiet title into the ten."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "port annual volumes falling >10% YoY outside recessions",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.8
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXVAPORTTEU-27JAN31-T3.15",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Port of Virginia moved ~3.5M TEU in 2025 and 2026 volumes have held up despite trade turbulence; clearing 3.15M for calendar 2026 needs only ~90% of last year's throughput."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.75,
+   "p_research": 0.75,
+   "q": "Will Port of Virginia total container volume for 2026 be above 3.15 million TEUs? [Yes: Above 3.15 million TEUs]",
+   "reasoning_summary": "Base rate: port annual volumes falling >10% YoY outside recessions ~ 0.8. Port of Virginia moved ~3.5M TEU in 2025 and 2026 volumes have held up despite trade turbulence; clearing 3.15M for calendar 2026 needs only ~90% of last year's throughput. Net of adjustments the final probability is 0.75.",
+   "strongest_opposing_case": "Strongest case against this number: A Q4 import collapse from tariff escalation plus war-shipping disruption could cut volumes sharply; 301 measures land exactly in this window."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "IA R statewide incumbents surviving D+ waves",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.8
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXATTYGENIA-26-R",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Iowa AG Brenna Bird is an R incumbent in a state that has moved R+8; even a D+9 national year historically leaves Iowa statewide offices red, though by narrowed margins."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-23",
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls"
+    }
+   ],
+   "p_raw": 0.75,
+   "p_research": 0.75,
+   "q": "Will the Republican party win the Attorney General race in Iowa? [Yes: Brenna Bird]",
+   "reasoning_summary": "Base rate: IA R statewide incumbents surviving D+ waves ~ 0.8. Iowa AG Brenna Bird is an R incumbent in a state that has moved R+8; even a D+9 national year historically leaves Iowa statewide offices red, though by narrowed margins. Net of adjustments the final probability is 0.75.",
+   "strongest_opposing_case": "Strongest case against this number: Iowa's 2026 polling has shown surprising Dem strength (JD Scholten-style overperformance) and Bird's national-litigation profile is polarizing."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "years with exactly 2 Fed changes given 1 by October",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.55
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXFEDCHGCOUNT-27JAN01-E2",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "2026 has one change so far (Sep hike); with October a near-certain hold and December a ~70% hike, 'exactly 2' is the modal path at roughly the product of hold-then-hike probabilities."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-16",
+     "title": "Fed holds expected Oct 28; Sep hike to 3.75-4.00%; CPI 3.7% YoY Sep",
+     "url": "https://www.cnbc.com/2026/10/16/kevin-warsh-fed-october-rate-hike-interest-rates-markets.html"
+    }
+   ],
+   "p_raw": 0.6,
+   "p_research": 0.6,
+   "q": "Will the number of rate changes before 2027 be exactly 2? [Yes: Exactly 2]",
+   "reasoning_summary": "Base rate: years with exactly 2 Fed changes given 1 by October ~ 0.55. 2026 has one change so far (Sep hike); with October a near-certain hold and December a ~70% hike, 'exactly 2' is the modal path at roughly the product of hold-then-hike probabilities. Net of adjustments the final probability is 0.6.",
+   "strongest_opposing_case": "Strongest case against this number: An emergency inter-meeting move on an oil-inflation spiral, or a December hold on growth fears, would land the count at 1 or 3; war economies break meeting calendars."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "state listing growth H2 during AI buildout",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.7
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXPADATACENTERS-26DEC31-T190",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Data Center Map's Pennsylvania listing has grown steadily through the AI buildout and stood near the threshold in mid-2026; listings additions in H2 typically add several facilities."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.75,
+   "p_research": 0.75,
+   "q": "Will Pennsylvania have at least 190 data centers listed in 2026? [Yes: At least 190]",
+   "reasoning_summary": "Base rate: state listing growth H2 during AI buildout ~ 0.7. Data Center Map's Pennsylvania listing has grown steadily through the AI buildout and stood near the threshold in mid-2026; listings additions in H2 typically add several facilities. Net of adjustments the final probability is 0.75.",
+   "strongest_opposing_case": "Strongest case against this number: Listing counts are curation-dependent and can be revised down; a flat H2 would leave the count just under 190."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "R wins in D+12-or-more districts",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.03
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXHOUSETX35-26-R",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "TX-35 is a D+15 Austin-San Antonio district; an R win there would require a collapse scenario inconsistent with a D+9 national environment."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-23",
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls"
+    }
+   ],
+   "p_raw": 0.05,
+   "p_research": 0.05,
+   "q": "Will Republican win the House race for TX-35? [Yes: Carlos De La Cruz]",
+   "reasoning_summary": "Base rate: R wins in D+12-or-more districts ~ 0.03. TX-35 is a D+15 Austin-San Antonio district; an R win there would require a collapse scenario inconsistent with a D+9 national environment. Net of adjustments the final probability is 0.05.",
+   "strongest_opposing_case": "Strongest case against this number: Mid-decade re-redistricting in Texas scrambled some districts; if TX-35's lines shifted materially R in the 2025 remap this probability is understated."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "chip-policy bills enacted within first year of introduction",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.2
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXBILLS-CHIP",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "The Chip Security Act's location-verification mandate has bipartisan sponsors but the broader deregulatory posture and crowded calendar leave it short of floor time before Jan 1; export-control changes have come via BIS rules instead."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.25,
+   "p_research": 0.25,
+   "q": "Will legislation that requires location-verification security mechanisms on certain advanced chips before export become law before Jan 1, 2027? [Yes: Export-control chip security]",
+   "reasoning_summary": "Base rate: chip-policy bills enacted within first year of introduction ~ 0.2. The Chip Security Act's location-verification mandate has bipartisan sponsors but the broader deregulatory posture and crowded calendar leave it short of floor time before Jan 1; export-control changes have come via BIS rules instead. Net of adjustments the final probability is 0.25.",
+   "strongest_opposing_case": "Strongest case against this number: Chip-smuggling-to-China scandals in 2026 built real momentum and the provision could ride an NDAA that passes in December."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "mid-tier streamer 6-figure follower jumps per quarter",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.3
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXFOLLOWERCOUNTCLAV-27-500000",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Kick follower growth for mid-tier streamers is streaky; without current trajectory data the base case is that a specific 500k threshold by Jan 1 lands only if the streamer was already close in October."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.3,
+   "p_research": 0.3,
+   "q": "Will clavicular have At least 500000 Followers before Jan 1, 2027? [Yes: At least 500,000]",
+   "reasoning_summary": "Base rate: mid-tier streamer 6-figure follower jumps per quarter ~ 0.3. Kick follower growth for mid-tier streamers is streaky; without current trajectory data the base case is that a specific 500k threshold by Jan 1 lands only if the streamer was already close in October. Net of adjustments the final probability is 0.3.",
+   "strongest_opposing_case": "Strongest case against this number: One viral clip or a platform-promoted event can add six figures in days on Kick where follower inflation runs hot."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "films without Oct buzz landing BP noms",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.08
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXOSCARNOMPIC-27-CLU",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "'Club Kid' shows no major precursor footprint; the BP field by late October already has 12-15 credible contenders with festival pedigrees crowding the ten slots."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.12,
+   "p_research": 0.12,
+   "q": "2027 Best Picture Oscar nominations? [Yes: Club Kid]",
+   "reasoning_summary": "Base rate: films without Oct buzz landing BP noms ~ 0.08. 'Club Kid' shows no major precursor footprint; the BP field by late October already has 12-15 credible contenders with festival pedigrees crowding the ten slots. Net of adjustments the final probability is 0.12.",
+   "strongest_opposing_case": "Strongest case against this number: A Spirit-Awards-sweep type surge from an indie darling in December can break in late; distributor campaigns matter more than October buzz."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "R+3 seats flipping in D+8 waves",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.6
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "HOUSEIA3-26-D",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "IA-03 is R+3 with an R incumbent, but D+9 environments flip exactly these seats (it flipped in 2018's wave); Dem nominee Trone Garriott has outraised expectations."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-23",
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls"
+    }
+   ],
+   "p_raw": 0.62,
+   "p_research": 0.62,
+   "q": "Will Democratic win the House race for IA-3? [Yes: Sarah Trone Garriott]",
+   "reasoning_summary": "Base rate: R+3 seats flipping in D+8 waves ~ 0.6. IA-03 is R+3 with an R incumbent, but D+9 environments flip exactly these seats (it flipped in 2018's wave); Dem nominee Trone Garriott has outraised expectations. Net of adjustments the final probability is 0.62.",
+   "strongest_opposing_case": "Strongest case against this number: Iowa's rightward drift is structural and its midterm electorate is older and redder; the 2018 analogy predates the state's realignment."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "R+6 incumbents surviving D+8 waves",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.78
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXHOUSERACE-MN01-26-R",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "MN-01 leans R+6 and Finstad is a compatible incumbent; D+9 compresses but rarely closes a 6-point district gap against an unscandalized incumbent."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-23",
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls"
+    }
+   ],
+   "p_raw": 0.72,
+   "p_research": 0.72,
+   "q": "Will Republican win the House race for MN-01? [Yes: Brad Finstad]",
+   "reasoning_summary": "Base rate: R+6 incumbents surviving D+8 waves ~ 0.78. MN-01 leans R+6 and Finstad is a compatible incumbent; D+9 compresses but rarely closes a 6-point district gap against an unscandalized incumbent. Net of adjustments the final probability is 0.72.",
+   "strongest_opposing_case": "Strongest case against this number: Southern Minnesota swung hard in prior wave years and Dem trial-lawyer money has targeted the seat heavily this cycle."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "months Anthropic held #1 LiveBench coding in past year",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.55
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXCODINGMODEL-26DEC-ANTH",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Anthropic's Claude models have led coding benchmarks through most of 2025-26 (LiveBench coding average included) and the Claude 5 family extends that line; holding the top slot through Dec 31 is the single most likely outcome."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.55,
+   "p_research": 0.55,
+   "q": "Which AI company will have the best coding model on Dec 31, 2026? [Yes: Anthropic]",
+   "reasoning_summary": "Base rate: months Anthropic held #1 LiveBench coding in past year ~ 0.55. Anthropic's Claude models have led coding benchmarks through most of 2025-26 (LiveBench coding average included) and the Claude 5 family extends that line; holding the top slot through Dec 31 is the single most likely outcome. Net of adjustments the final probability is 0.55.",
+   "strongest_opposing_case": "Strongest case against this number: OpenAI and Google ship December releases precisely to top year-end boards and LiveBench's coding average has flipped leaders on single releases repeatedly."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "R+7 incumbents surviving D+8 waves",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.78
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXHOUSERACE-OH07-26-R",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "OH-07 is R+7 with incumbent Max Miller; the D+9 tide narrows but does not erase a 7-point lean with no incumbent scandal."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-23",
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls"
+    }
+   ],
+   "p_raw": 0.7,
+   "p_research": 0.7,
+   "q": "Will Republican win the House race for OH-07? [Yes: Max Miller]",
+   "reasoning_summary": "Base rate: R+7 incumbents surviving D+8 waves ~ 0.78. OH-07 is R+7 with incumbent Max Miller; the D+9 tide narrows but does not erase a 7-point lean with no incumbent scandal. Net of adjustments the final probability is 0.7.",
+   "strongest_opposing_case": "Strongest case against this number: Northeast Ohio seats have over-swung in wave years and Miller's primary controversies left residual weakness."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "months with AAA national avg >$5.20 ever (Jun 2022 only)",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.05
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXAAAGASMAX-26DEC31-5.20",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "National average regular gas peaked near $4.10-4.40 even with WTI around $100-103; reaching a $5.20 AAA national max by Dec 31 would need a further crude spike toward $140 or a refining catastrophe."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-16",
+     "title": "Fed holds expected Oct 28; Sep hike to 3.75-4.00%; CPI 3.7% YoY Sep",
+     "url": "https://www.cnbc.com/2026/10/16/kevin-warsh-fed-october-rate-hike-interest-rates-markets.html"
+    }
+   ],
+   "p_raw": 0.07,
+   "p_research": 0.07,
+   "q": "Will average **gas prices** be above $5.20 by Dec 31, 2026? [Yes: Above $5.20]",
+   "reasoning_summary": "Base rate: months with AAA national avg >$5.20 ever (Jun 2022 only) ~ 0.05. National average regular gas peaked near $4.10-4.40 even with WTI around $100-103; reaching a $5.20 AAA national max by Dec 31 would need a further crude spike toward $140 or a refining catastrophe. Net of adjustments the final probability is 0.07.",
+   "strongest_opposing_case": "Strongest case against this number: A full Hormuz closure after the midterms is a stated scenario in war planning; 2022 proved $5.00+ is reachable within weeks under supply shock."
+  }
+ ],
+ "researcher": "claude-fable-5 operator session, 2026-10-25 round-day sprint (authored + rule + family layers)",
+ "resolution_source": "per-question benchmark resolution criteria (see each question's benchmark block)",
+ "resolve_date": null
+}

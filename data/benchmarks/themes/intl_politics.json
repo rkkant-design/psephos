@@ -1,0 +1,191 @@
+[
+ {
+  "id": "KXUNSEC-27JAN-RGRYN",
+  "source": "kalshi",
+  "question": "Who will be the next Secretary-General of UN? [Yes: Rebeca Grynspan]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxunsec/x/kxunsec-27jan.",
+  "market_resolution_criteria": "If Rebeca Grynspan is confirmed as Secretary-General for UN before Jan 5, 2027, then the market resolves to Yes. An announcement alone is sufficient to resolve the market. Outcome verified from The UN  (https://www.un.org/en).",
+  "background": "N/A",
+  "close": "2027-01-05T15:00:00+00:00"
+ },
+ {
+  "id": "0xe7c57c905638512f6181458503e042ca5096564ebaed3a3d9491bb259369a3c0",
+  "source": "polymarket",
+  "question": "Will Julieta Ram\u00edrez Padilla win the 2027 Baja California Governor Election?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-julieta-ramirez-padilla-win-the-2027-baja-california-governor-election-20260803173850226.",
+  "market_resolution_criteria": "Gubernatorial elections are currently scheduled to be held in Baja California on June 6, 2027.\n\nThis market will resolve according to the listed candidate who wins the 2027 Baja California gubernatorial elections. Any interim or caretaker Governor will not qualify.\n\nIf the results are not known definitively by December 31, 2027, 11:59 PM ET, this market will resolve to \u201cOther\u201d.\n\nThis market will resolve based on the results of this election, as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve solely based on official results as reported by government sources of Baja California and Mexico, including the Electoral Institute of Baja California and the National Electoral Institute of Mexico.",
+  "background": "N/A",
+  "close": "2027-06-07T03:59:00+00:00"
+ },
+ {
+  "id": "0xe1a717cca1d898e96a2216d4b3c4a4820779896928addfdab74dd861648a6382",
+  "source": "polymarket",
+  "question": "Will Helen Zille be the next mayor of Johannesburg?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-helen-zille-be-the-next-mayor-of-johannesburg-20260609220255151.",
+  "market_resolution_criteria": "Municipal elections are currently scheduled to be held in South Africa on November 4, 2026.\n\nThis market will resolve to the first individual who officially assumes the role of Mayor of Johannesburg following the 2026 South African municipal elections.\n\nA qualifying individual must be elected mayor by the Johannesburg City Council. Temporary, interim, or placeholder mayors appointed before the election will not be considered.\n \nIf the result of this election isn't known by June 30, 2027, 11:59 PM ET, the market will resolve to \"Other\".\n\nThe primary resolution source for this market will be official information from the government of South Africa, including the Electoral Commission of South Africa (https://elections.org.za); however, a consensus of credible reporting may also be used.",
+  "background": "N/A",
+  "close": "2026-11-17T23:59:00+00:00"
+ },
+ {
+  "id": "0x989e60030a12b3b8c3014ca744df34fce5bc014a803f5a0c717557e11a0a04b8",
+  "source": "polymarket",
+  "question": "Will PSOE win the most seats in the 2026 Spanish general election?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-psoe-win-the-most-seats-in-the-2026-spanish-general-election.",
+  "market_resolution_criteria": "Legislative elections to elect the 350 members of the Congress of Deputies of Spain are scheduled to take place on November 29, 2026.\n\nThis market will resolve according to the political party that wins the greatest number of seats in the Congress of Deputies of Spain as a result of this election.\n\nIf the results of the specified election are not definitively known by November 30, 2027, 11:59 PM ET, this market will resolve to \"Other\".\n\nParties will be primarily ranked by the number of seats won in the specified election, counted according to the attribution rules below. If two or more parties are tied on seats, ties will be broken by the total number of valid votes received nationwide by each party, including votes attributed to its regional designations, with higher vote totals ranking higher. Votes attributed to PSC will count toward PSOE. Votes cast for a joint coalition list will not count toward an individual constituent party for this tie-break, even where elected candidates from that list count toward the party\u2019s seat total. If parties remain tied, ties will be broken by alphabetical order of the listed party names. This market will resolve to the party that occupies the highest finishing position after applying this ranking.\n\nSeats will be counted where they are attributed to the specified party. If a listed party contests the election under a regional designation, all seats and votes attributed to that designation will count toward the listed party. For example, the Partit dels Socialistes de Catalunya (PSC) will be treated as a regional designation of PSOE. If a listed party contests as part of a coalition, only seats won by candidates who were members of the listed party on election day will count toward that party. Except as provided above, seats attributed to another party or electoral designation will not count, regardless of electoral cooperation, endorsements, coalition agreements, or subsequent changes in party affiliation or parliamentary-group membership.\n\nThis market will resolve based on the results of the elections, as indicated by a consensus of credible reporting. In the case of ambiguity, this market will resolve solely based on the results as reported by the Spanish Ministry of the Interior (https://infoelectoral.interior.gob.es/).",
+  "background": "N/A",
+  "close": "2026-11-30T04:59:00+00:00"
+ },
+ {
+  "id": "0x3377edf8e5a1c9bf41b2a3e88e3c0576f0e2972808cc027c87d5344a57b9ba81",
+  "source": "polymarket",
+  "question": "Will the Popular initiative \u2018Yes to fair federal taxation for married couples \u2013 To finally put an end to marriage discrimination!\u2019 be approved in Switzerland\u2019s November 29, 2026 popular vote?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-popular-initiative-yes-to-fair-federal-taxation-for-married-couples-to-finally-put-an-end-to-marriage-discrimination-be-approved-in-switzerlands-november-29-2026-popular-vote-copy-copy-20260713145734572.",
+  "market_resolution_criteria": "As of market creation, four referenda are scheduled to be held in Switzerland on November 29, 2026: \n\n- Issue 1: Federal decree of 19 June 2026 on additional funding for the AVS through an increase in VAT\n- Issue 2: Popular initiative \u2018For a restriction on fireworks\u2019\n- Issue 3: Popular initiative \u2018Yes to fair federal taxation for married couples \u2013 To finally put an end to marriage discrimination!\u2019\n- Issue 4: Amendment of 19 December 2025 to the Federal Act on War Material (LFMG)\n\nThis market will resolve to \u201cYes\u201d if the listed referendum is approved under the applicable legal threshold in the specified popular vote. Otherwise, this market will resolve to \u201cNo.\u201d\n\nThis market will resolve to \u201cYes\u201d if either the popular initiative or, where applicable, the federal counter-proposal is approved under the applicable legal threshold, regardless of any tie-breaker vote.\n\nIf the referendum is officially rescheduled, the same rule applies to the new ballot and its corresponding deadlines. This market will resolve to \u201cNo\u201d if, for any reason, the results of the respective vote are not known definitively by the date the subsequent Referendum in Switzerland is scheduled to be held.\n\nThe resolution source will be based on a consensus of credible reporting. In the event of ambiguity, this market will resolve solely based on the official certified referendum results published by Swiss government authorities, such as the Swiss Federal Chancellery and the information portal provided by the Swiss authorities (https://www.ch.ch/en/votes-and-elections/). Subsequent litigation, administrative challenges, or failure of any post-approval implementation steps will not be considered.",
+  "background": "N/A",
+  "close": "2026-11-29T00:00:00+00:00"
+ },
+ {
+  "id": "0xae515ea2b1b95486007cff8aa4afbd5f677e2760dd8752c1068d9cc55afb6d58",
+  "source": "polymarket",
+  "question": "Alexandre de Moraes out as Brazil Supreme Court Justice?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/alexandre-de-moraes-out-as-brazil-supreme-court-justice.",
+  "market_resolution_criteria": "This market will resolve to \u201cYes\u201d if Alexandre de Moraes ceases to be a Justice of Brazil\u2019s Supreme Federal Court for any period of time between market creation and December 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \u201cNo\u201d.\n\nAn announcement of Alexandre de Moraes's resignation/removal before this market's end date will immediately resolve this market to \"Yes\", regardless of when the announced resignation/removal goes into effect.\n\nThe resolution source for this market will be official information from Alexandre de Moraes and the government of Brazil; however, a consensus of credible reporting may also be used.\n",
+  "background": "N/A",
+  "close": "2027-01-01T04:59:00+00:00"
+ },
+ {
+  "id": "0x6d4ce755aea297d7a5ce8e17612d852363e3aec79e360c4676b49f3c57e3f230",
+  "source": "polymarket",
+  "question": "Will the Popular initiative \u2018For a restriction on fireworks\u2019 be approved in Switzerland\u2019s November 29, 2026 popular vote?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-popular-initiative-for-a-restriction-on-fireworks-be-approved-in-switzerlands-november-29-2026-popular-vote-copy-20260713145734571.",
+  "market_resolution_criteria": "As of market creation, four referenda are scheduled to be held in Switzerland on November 29, 2026: \n\n- Issue 1: Federal decree of 19 June 2026 on additional funding for the AVS through an increase in VAT\n- Issue 2: Popular initiative \u2018For a restriction on fireworks\u2019\n- Issue 3: Popular initiative \u2018Yes to fair federal taxation for married couples \u2013 To finally put an end to marriage discrimination!\u2019\n- Issue 4: Amendment of 19 December 2025 to the Federal Act on War Material (LFMG)\n\nThis market will resolve to \u201cYes\u201d if the listed referendum is approved under the applicable legal threshold in the specified popular vote. Otherwise, this market will resolve to \u201cNo.\u201d\n\nThis market will resolve to \u201cYes\u201d if either the popular initiative or, where applicable, the federal counter-proposal is approved under the applicable legal threshold, regardless of any tie-breaker vote.\n\nIf the referendum is officially rescheduled, the same rule applies to the new ballot and its corresponding deadlines. This market will resolve to \u201cNo\u201d if, for any reason, the results of the respective vote are not known definitively by the date the subsequent Referendum in Switzerland is scheduled to be held.\n\nThe resolution source will be based on a consensus of credible reporting. In the event of ambiguity, this market will resolve solely based on the official certified referendum results published by Swiss government authorities, such as the Swiss Federal Chancellery and the information portal provided by the Swiss authorities (https://www.ch.ch/en/votes-and-elections/). Subsequent litigation, administrative challenges, or failure of any post-approval implementation steps will not be considered.",
+  "background": "N/A",
+  "close": "2026-11-29T00:00:00+00:00"
+ },
+ {
+  "id": "0x10b5db9b413eff04aa69692bf7c834d16321bdf5ebc774b4adbf7ed3c37da329",
+  "source": "polymarket",
+  "question": "Will Ver\u00f3nica D\u00edaz Robles win the 2027 Zacatecas Governor Election?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-veronica-diaz-robles-win-the-2027-zacatecas-governor-election-20260803173858833.",
+  "market_resolution_criteria": "Gubernatorial elections are currently scheduled to be held in Zacatecas on June 6, 2027.\n\nThis market will resolve according to the listed candidate who wins the 2027 Zacatecas gubernatorial elections. Any interim or caretaker Governor will not qualify.\n\nIf the results are not known definitively by December 31, 2027, 11:59 PM ET, this market will resolve to \u201cOther\u201d.\n\nThis market will resolve based on the results of this election, as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve solely based on official results as reported by government sources of Zacatecas and Mexico, including the Electoral Institute of Zacatecas and the National Electoral Institute of Mexico.",
+  "background": "N/A",
+  "close": "2027-06-07T03:59:00+00:00"
+ },
+ {
+  "id": "0x0acbe1e5050eff25014d0d6941f58db1187daeb99f9435179adeca0258b8d924",
+  "source": "polymarket",
+  "question": "Will the Federal decree of 19 June 2026 on additional funding for the AVS through an increase in VAT be approved in Switzerland\u2019s November 29, 2026 popular vote?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-federal-decree-of-19-june-2026-on-additional-funding-for-the-avs-through-an-increase-in-vat-be-approved-in-switzerlands-november-29-2026-popular-vote-20260713145734570.",
+  "market_resolution_criteria": "As of market creation, four referenda are scheduled to be held in Switzerland on November 29, 2026: \n\n- Issue 1: Federal decree of 19 June 2026 on additional funding for the AVS through an increase in VAT\n- Issue 2: Popular initiative \u2018For a restriction on fireworks\u2019\n- Issue 3: Popular initiative \u2018Yes to fair federal taxation for married couples \u2013 To finally put an end to marriage discrimination!\u2019\n- Issue 4: Amendment of 19 December 2025 to the Federal Act on War Material (LFMG)\n\nThis market will resolve to \u201cYes\u201d if the listed referendum is approved under the applicable legal threshold in the specified popular vote. Otherwise, this market will resolve to \u201cNo.\u201d\n\nThis market will resolve to \u201cYes\u201d if either the popular initiative or, where applicable, the federal counter-proposal is approved under the applicable legal threshold, regardless of any tie-breaker vote.\n\nIf the referendum is officially rescheduled, the same rule applies to the new ballot and its corresponding deadlines. This market will resolve to \u201cNo\u201d if, for any reason, the results of the respective vote are not known definitively by the date the subsequent Referendum in Switzerland is scheduled to be held.\n\nThe resolution source will be based on a consensus of credible reporting. In the event of ambiguity, this market will resolve solely based on the official certified referendum results published by Swiss government authorities, such as the Swiss Federal Chancellery and the information portal provided by the Swiss authorities (https://www.ch.ch/en/votes-and-elections/). Subsequent litigation, administrative challenges, or failure of any post-approval implementation steps will not be considered.",
+  "background": "N/A",
+  "close": "2026-11-29T00:00:00+00:00"
+ },
+ {
+  "id": "0x4ee59d990cb82947d587bb6f9ea2fffdbf7c85ef4931c3440fbcb95bfe7c9dab",
+  "source": "polymarket",
+  "question": "Will Eno Umo Bassey win the 2027 Akwa Ibom State gubernatorial election?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-eno-umo-bassey-win-the-2027-akwa-ibom-state-gubernatorial-election.",
+  "market_resolution_criteria": "Gubernatorial elections are currently scheduled to be held in Akwa Ibom State, Nigeria, on February 6, 2027. If the election is officially rescheduled, this market will resolve based on the election held to choose the Governor for the term beginning in 2027.\n\nThis market will resolve according to the listed candidate who wins the 2027 Akwa Ibom State gubernatorial election. Any interim, acting, or caretaker Governor will not qualify.\n\nIf the results are not known definitively by October 31, 2027, 11:59 PM ET, this market will resolve to \"Other\".\n\nTo be elected Governor, a candidate must satisfy the requirements under Nigerian law, including receiving the highest number of votes cast and the constitutionally required geographic distribution of votes. If no candidate wins the election outright, this market will remain open to account for any further election or runoff, provided this occurs before the resolution deadline. If no candidate has been officially elected by the resolution deadline, this market will resolve to \"Other\".\n\nThis market will resolve based on the results of this election, as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve solely based on official results published by Nigeria's Independent National Electoral Commission (INEC) and Nigerian government sources.",
+  "background": "N/A",
+  "close": "2027-02-07T04:59:00+00:00"
+ },
+ {
+  "id": "0x25a39e7692a267810b1ea79ee60a751e6cfbbee7586dba3378698103623bee80",
+  "source": "polymarket",
+  "question": "Will Mohammed Ashiru Isa win the 2027 Kaduna State gubernatorial election?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-mohammed-ashiru-isa-win-the-2027-kaduna-state-gubernatorial-election.",
+  "market_resolution_criteria": "Gubernatorial elections are currently scheduled to be held in Kaduna State, Nigeria, on February 6, 2027. If the election is officially rescheduled, this market will resolve based on the election held to choose the Governor for the term beginning in 2027.\n\nThis market will resolve according to the listed candidate who wins the 2027 Kaduna State gubernatorial election. Any interim, acting, or caretaker Governor will not qualify.\n\nIf the results are not known definitively by October 31, 2027, 11:59 PM ET, this market will resolve to \"Other\".\n\nTo be elected Governor, a candidate must satisfy the requirements under Nigerian law, including receiving the highest number of votes cast and the constitutionally required geographic distribution of votes. If no candidate wins the election outright, this market will remain open to account for any further election or runoff, provided this occurs before the resolution deadline. If no candidate has been officially elected by the resolution deadline, this market will resolve to \"Other\".\n\nThis market will resolve based on the results of this election, as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve solely based on official results published by Nigeria's Independent National Electoral Commission (INEC) and Nigerian government sources.",
+  "background": "N/A",
+  "close": "2027-02-07T04:59:00+00:00"
+ },
+ {
+  "id": "0x162e356bfab7ad18fe4e3029d5811d9a95fce95d93858b42924a3b9ffbcf1a93",
+  "source": "polymarket",
+  "question": "Will PP win the most seats in the 2026 Spanish general election?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-pp-win-the-most-seats-in-the-2026-spanish-general-election.",
+  "market_resolution_criteria": "Legislative elections to elect the 350 members of the Congress of Deputies of Spain are scheduled to take place on November 29, 2026.\n\nThis market will resolve according to the political party that wins the greatest number of seats in the Congress of Deputies of Spain as a result of this election.\n\nIf the results of the specified election are not definitively known by November 30, 2027, 11:59 PM ET, this market will resolve to \"Other\".\n\nParties will be primarily ranked by the number of seats won in the specified election, counted according to the attribution rules below. If two or more parties are tied on seats, ties will be broken by the total number of valid votes received nationwide by each party, including votes attributed to its regional designations, with higher vote totals ranking higher. Votes attributed to PSC will count toward PSOE. Votes cast for a joint coalition list will not count toward an individual constituent party for this tie-break, even where elected candidates from that list count toward the party\u2019s seat total. If parties remain tied, ties will be broken by alphabetical order of the listed party names. This market will resolve to the party that occupies the highest finishing position after applying this ranking.\n\nSeats will be counted where they are attributed to the specified party. If a listed party contests the election under a regional designation, all seats and votes attributed to that designation will count toward the listed party. For example, the Partit dels Socialistes de Catalunya (PSC) will be treated as a regional designation of PSOE. If a listed party contests as part of a coalition, only seats won by candidates who were members of the listed party on election day will count toward that party. Except as provided above, seats attributed to another party or electoral designation will not count, regardless of electoral cooperation, endorsements, coalition agreements, or subsequent changes in party affiliation or parliamentary-group membership.\n\nThis market will resolve based on the results of the elections, as indicated by a consensus of credible reporting. In the case of ambiguity, this market will resolve solely based on the results as reported by the Spanish Ministry of the Interior (https://infoelectoral.interior.gob.es/).",
+  "background": "N/A",
+  "close": "2026-11-30T04:59:00+00:00"
+ },
+ {
+  "id": "0x9194103ad3ae2c3d2a1d739358843fccea3c13ab39b1aab58a8bb87e486bbcdb",
+  "source": "polymarket",
+  "question": "Will the AfD be part of a German state government in 2026?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-afd-be-part-of-a-german-state-government-in-2026.",
+  "market_resolution_criteria": "This market will resolve to \u201cYes\u201d if the Alternative f\u00fcr Deutschland (AfD) is part of the state government (Landesregierung) of any of Germany's 16 federal states at any point between market creation and December 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \u201cNo\u201d.\n\nA party is considered part of a state government if it provides at least one Minister in that state's government, including the Minister-President. In the city-states of Berlin, Hamburg and Bremen, a party is considered part of the state government if it provides at least one Senator, including the Governing Mayor, First Mayor or President of the Senate.\n\nA state government is considered formed when the state parliament elects the Minister-President (or, in the city-states, the Governing Mayor, First Mayor or President of the Senate) and that government has formally taken office. Coalition agreements, ministerial nominations, or announced coalition negotiations will not qualify on their own.\n\nParties that merely support a state government (e.g., through confidence-and-supply arrangements, parliamentary support agreements, toleration agreements, or similar) without holding a Minister or Senator post will not qualify.\n\nIf the AfD is not part of any German state government by December 31, 2026, 11:59 PM ET, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve based on a consensus of credible reporting. In case of ambiguity, this market will resolve based on official information published by the relevant state government and state parliament.",
+  "background": "N/A",
+  "close": "2027-01-01T04:59:00+00:00"
+ },
+ {
+  "id": "0x6caca4e7e45f5e9088fc0ba0615121a2ed235a426860dfb9dc651437ac377c39",
+  "source": "polymarket",
+  "question": "Will the Philippine Senate convict Sara Duterte? ",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-philippine-senate-convict-sara-duterte.",
+  "market_resolution_criteria": "This market will resolve to \"Yes\" if the Senate of the Philippines convicts Sara Duterte of any of the articles of impeachment passed by the House of Representatives of the Philippines in May, 2026 by December 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market may resolve early in favor of \"No\" if the Senate rejects, remands, or otherwise disposes of all of the relevant articles of impeachment without convicting Duterte.\n\nThe primary resolution source is the Senate of the Philippines and other official information from the government of the Philippines, however other credible reporting may be used.",
+  "background": "N/A",
+  "close": "2027-01-01T04:59:00+00:00"
+ },
+ {
+  "id": "0x9b8a472f0f5f8a3b2c11b345d969ed90203c800b8c60ef4e4b7f5ad38df5338f",
+  "source": "polymarket",
+  "question": "Will Luca Niculescu be the next Prime Minister of Romania?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-luca-niculescu-be-the-next-prime-minister-of-romania.",
+  "market_resolution_criteria": "This market will resolve to the next individual who officially assumes the office of Prime Minister of Romania by December 31, 2027, 11:59 PM ET.\n\nTo count for resolution, the individual must be formally appointed by the President of Romania and receive a vote of confidence from Parliament, resulting in the official formation of a new government. Any interim or caretaker Prime Minister who does not receive a parliamentary vote of confidence will not count toward the resolution of this market.\n\nIf no such Prime Minister takes office by December 31, 2027, 11:59 PM ET, this market will resolve to \u201cOther\u201d.\n\nThe primary resolution source for this market will be official information from the Government of Romania; however, a consensus of credible reporting may also be used.",
+  "background": "N/A",
+  "close": "2026-12-31T00:00:00+00:00"
+ },
+ {
+  "id": "0xac70999ddbe55471d25c03cfa2b8bf4fe66f28cd29973d3faac7e7c12e5942cb",
+  "source": "polymarket",
+  "question": "Will Ifeanyi Chukwuma Odii win the 2027 Ebonyi State gubernatorial election?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-ifeanyi-chukwuma-odii-win-the-2027-ebonyi-state-gubernatorial-election.",
+  "market_resolution_criteria": "Gubernatorial elections are currently scheduled to be held in Ebonyi State, Nigeria, on February 6, 2027. If the election is officially rescheduled, this market will resolve based on the election held to choose the Governor for the term beginning in 2027.\n\nThis market will resolve according to the listed candidate who wins the 2027 Ebonyi State gubernatorial election. Any interim, acting, or caretaker Governor will not qualify.\n\nIf the results are not known definitively by October 31, 2027, 11:59 PM ET, this market will resolve to \"Other\".\n\nTo be elected Governor, a candidate must satisfy the requirements under Nigerian law, including receiving the highest number of votes cast and the constitutionally required geographic distribution of votes. If no candidate wins the election outright, this market will remain open to account for any further election or runoff, provided this occurs before the resolution deadline. If no candidate has been officially elected by the resolution deadline, this market will resolve to \"Other\".\n\nThis market will resolve based on the results of this election, as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve solely based on official results published by Nigeria's Independent National Electoral Commission (INEC) and Nigerian government sources.",
+  "background": "N/A",
+  "close": "2027-02-07T04:59:00+00:00"
+ },
+ {
+  "id": "0x4544aa7ad41414e793201c30eee6896699f2f6e5ce8db59dd8d7a2fee7109268",
+  "source": "polymarket",
+  "question": "Will Ahmed Galadima win the 2027 Adamawa State gubernatorial election?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-ahmed-galadima-win-the-2027-adamawa-state-gubernatorial-election.",
+  "market_resolution_criteria": "Gubernatorial elections are currently scheduled to be held in Adamawa State, Nigeria, on February 6, 2027. If the election is officially rescheduled, this market will resolve based on the election held to choose the Governor for the term beginning in 2027.\n\nThis market will resolve according to the listed candidate who wins the 2027 Adamawa State gubernatorial election. Any interim, acting, or caretaker Governor will not qualify.\n\nIf the results are not known definitively by October 31, 2027, 11:59 PM ET, this market will resolve to \"Other\".\n\nTo be elected Governor, a candidate must satisfy the requirements under Nigerian law, including receiving the highest number of votes cast and the constitutionally required geographic distribution of votes. If no candidate wins the election outright, this market will remain open to account for any further election or runoff, provided this occurs before the resolution deadline. If no candidate has been officially elected by the resolution deadline, this market will resolve to \"Other\".\n\nThis market will resolve based on the results of this election, as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve solely based on official results published by Nigeria's Independent National Electoral Commission (INEC) and Nigerian government sources.",
+  "background": "N/A",
+  "close": "2027-02-07T04:59:00+00:00"
+ },
+ {
+  "id": "0xb582528a5fe14a93da51bba48e709e59ca27737f203b5172c6bebf503ed7047b",
+  "source": "polymarket",
+  "question": "Will Sharafadeen Abiodun Alli win the 2027 Oyo State gubernatorial election?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-sharafadeen-abiodun-alli-win-the-2027-oyo-state-gubernatorial-election.",
+  "market_resolution_criteria": "Gubernatorial elections are currently scheduled to be held in Oyo State, Nigeria, on February 6, 2027. If the election is officially rescheduled, this market will resolve based on the election held to choose the Governor for the term beginning in 2027.\n\nThis market will resolve according to the listed candidate who wins the 2027 Oyo State gubernatorial election. Any interim, acting, or caretaker Governor will not qualify.\n\nIf the results are not known definitively by October 31, 2027, 11:59 PM ET, this market will resolve to \"Other\".\n\nTo be elected Governor, a candidate must satisfy the requirements under Nigerian law, including receiving the highest number of votes cast and the constitutionally required geographic distribution of votes. If no candidate wins the election outright, this market will remain open to account for any further election or runoff, provided this occurs before the resolution deadline. If no candidate has been officially elected by the resolution deadline, this market will resolve to \"Other\".\n\nThis market will resolve based on the results of this election, as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve solely based on official results published by Nigeria's Independent National Electoral Commission (INEC) and Nigerian government sources.",
+  "background": "N/A",
+  "close": "2027-02-07T04:59:00+00:00"
+ },
+ {
+  "id": "0x8126317d621047fb13d508a2651eecc8d38305904671822a62309c5aabd353aa",
+  "source": "polymarket",
+  "question": "Will Marine Le Pen win the 2027 French presidential election?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-marine-le-pen-win-the-2027-french-presidential-election.",
+  "market_resolution_criteria": "The next French presidential election is currently expected to be held around April 2027.  This market pertains to the outcome of the next French presidential election, regardless of whether it follows the scheduled end of the current term or is held earlier. \n\nThe President of France is elected via a two-round system; a candidate must secure over 50% of the vote to win outright in the first round. If no candidate achieves this, the top two contenders advance to a runoff.\n\nThis market will resolve according to the candidate who wins this election.\n\nThis market includes any potential second round. If, for any reason, the results of the election are not known by December 31, 2027, 11:59 PM ET, this market will resolve to \"Other\".\n\nThis market will resolve based on the result of the election as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve based solely on the official results as reported by the French Government, specifically the Ministry of the Interior (https://www.interieur.gouv.fr/).",
+  "background": "N/A",
+  "close": "2027-04-19T03:59:00+00:00"
+ },
+ {
+  "id": "0xe00cb03a0aefe8f4a06338da171a8df62edd2056622843931f4d5af4199afffe",
+  "source": "polymarket",
+  "question": "Will Peter Obi win the 2027 Nigerian Presidential Election?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-peter-obi-win-the-2027-nigerian-presidential-election-20260602163030948.",
+  "market_resolution_criteria": "Presidential elections are scheduled to be held in Nigeria on January 16, 2027.\n\nThis market will resolve according to the listed candidate who wins the 2027 Nigerian presidential election. \n\nThis market includes any potential second round. \n\nIf the results are not known definitively by October 31, 2027, 11:59 PM ET, this market will resolve to \"Other\".\n\nThis market will resolve based on the results of this election, as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve solely based on official results as reported by Nigerian government sources, including the Independent National Electoral Commission (https://www.inecnigeria.org/).",
+  "background": "N/A",
+  "close": "2027-01-17T04:59:00+00:00"
+ },
+ {
+  "id": "0xdb66349b5658e7ce54667294bb61ca2f98d68f8afde5c711284d7e9c5a5e5787",
+  "source": "polymarket",
+  "question": "Will Bola Tinubu win the 2027 Nigerian Presidential Election?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-bola-tinubu-win-the-2027-nigerian-presidential-election-20260602163030949.",
+  "market_resolution_criteria": "Presidential elections are scheduled to be held in Nigeria on January 16, 2027.\n\nThis market will resolve according to the listed candidate who wins the 2027 Nigerian presidential election. \n\nThis market includes any potential second round. \n\nIf the results are not known definitively by October 31, 2027, 11:59 PM ET, this market will resolve to \"Other\".\n\nThis market will resolve based on the results of this election, as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve solely based on official results as reported by Nigerian government sources, including the Independent National Electoral Commission (https://www.inecnigeria.org/).",
+  "background": "N/A",
+  "close": "2027-01-17T04:59:00+00:00"
+ }
+]

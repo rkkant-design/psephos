@@ -1,0 +1,74 @@
+{
+ "domain": "US elections",
+ "entity_probs": {
+  "market": {
+   "house_dem": 0.915,
+   "house_rep": 0.085,
+   "senate_dem": 0.645
+  },
+  "model": {}
+ },
+ "forecast_id": "USMID2026",
+ "freeze_date": "2026-10-26",
+ "gate_rule": "2-of-3: CALL when >=2 instruments clear 0.95 the same way and none contradicts by >0.20 the other way; p_gate = median",
+ "instruments": {
+  "market_source": "Polymarket (gamma-api), fetched 2026-10-26 (which-party-will-win-the-house/senate-in-2026); senate_dem moved 0.675 -> 0.645 since 10-24",
+  "model_note": "Silver Bulletin average D+9.1 (2026-10-23); prior D+8.9 (10-07); Pew D+8 (10-10), Reuters/Ipsos D+12 (10-20) consistent",
+  "research_sha256": "219c6a66a8ea38432d1cc64cd36026d4517615c01297e8a13960b1b4f8fc715f"
+ },
+ "quality_flags": [
+  "Resolves in 10 days - the fastest real-world test the world engine will get.",
+  "Senate model is the race-level correlated Monte Carlo roll-up (USMIDRACES2026, scripts/usmid_races.py): 35 structural per-seat probits with one shared national error term. Candidate-blind by design.",
+  "Model tipping-point (+2.5) is taken from published redistricting analyses, not fitted by us."
+ ],
+ "questions": [
+  {
+   "p_gate": 0.915,
+   "p_market": 0.915,
+   "p_model": 0.9703,
+   "p_research": 0.9,
+   "q": "Democrats win House majority",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.085,
+   "p_market": 0.085,
+   "p_model": 0.0297,
+   "p_research": 0.1,
+   "q": "Republicans keep House majority",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.5465,
+   "p_market": 0.645,
+   "p_model": 0.5465,
+   "p_research": 0.4,
+   "q": "Democrats win Senate majority",
+   "verdict": "WATCH"
+  }
+ ],
+ "resolution": {
+  "resolve_by": "2027-01-03",
+  "rules": [
+   "House majority = party holding >= 218 of 435 seats per final certified results, NOT election-night leads; uncalled races resolve by their eventual certified winner",
+   "Senate majority = party controlling the floor at seating, with independents counted toward the party they caucus with (caucusing rule); a 50-50 Senate resolves to the Vice President's party",
+   "Rows resolve early, before 2027-01-03, if and when AP-called races put control beyond arithmetic dispute",
+   "A seat vacant at seating (death/resignation after certification) counts for the party that won it",
+   "Recounts and litigation: resolution waits for certified outcomes; no row resolves on a contested margin"
+  ],
+  "source": "Official state certifications as aggregated by Associated Press race calls; control counted at the seating of the 120th Congress (2027-01-03)"
+ },
+ "resolve_date": "2026-11-03",
+ "run_at_utc": "2026-10-26T05:27:55+00:00",
+ "title": "US Midterm Elections 2026",
+ "tripwires": [
+  {
+   "effect": "re-run",
+   "watch": "Generic-ballot average moves 3+ points before Nov 3"
+  },
+  {
+   "effect": "re-run; dual gate may become decidable",
+   "watch": "Polymarket House price crosses 0.95 either way"
+  }
+ ]
+}

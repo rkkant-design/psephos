@@ -1,0 +1,118 @@
+{
+ "generated": "2026-10-26",
+ "overall_binary": {
+  "n": 61,
+  "brier": 0.2718,
+  "log": -1.3027
+ },
+ "india": {
+  "n": 61,
+  "brier": 0.2718,
+  "log": -1.3027,
+  "by_instrument": {
+   "M2": {
+    "n": 35,
+    "brier": 0.2353,
+    "log": -1.1965
+   },
+   "M3": {
+    "n": 26,
+    "brier": 0.3209,
+    "log": -1.4457
+   }
+  }
+ },
+ "world": {
+  "n": 0,
+  "brier": null,
+  "log": null,
+  "by_instrument": {}
+ },
+ "us_races": {
+  "n": 0,
+  "brier": null,
+  "log": null,
+  "by_instrument": {},
+  "note": "race-level US midterm rows (usmid_races_ledger.csv); dual instruments scored per race"
+ },
+ "skill_model_vs_market_us_races": {
+  "n_questions": 0,
+  "brier_model": null,
+  "brier_market": null,
+  "edge": null,
+  "note": "no world question with both instruments has resolved yet"
+ },
+ "research": {
+  "n": 0,
+  "brier": null,
+  "log": null,
+  "note": "M_research (LLM research-forecaster) scored on calibrated p_research; same questions may also appear under india/world via their own instruments - each instrument answers for itself"
+ },
+ "matches": {
+  "n": 10,
+  "brier": 0.774,
+  "log": -1.2516,
+  "note": "three-way Brier, scale 0-2 (uniform ref 0.667); never pooled with binary"
+ },
+ "matches_skill_model_vs_market": {
+  "n_matches": 0,
+  "matchweeks": [],
+  "note": "no resolved match carries market columns yet (v2 starts MW9)"
+ },
+ "calibration": [
+  {
+   "bin": "0-5%",
+   "n": 14,
+   "claimed": 0.0,
+   "realized": 0.143
+  },
+  {
+   "bin": "5-20%",
+   "n": 9,
+   "claimed": 0.172,
+   "realized": 0.444
+  },
+  {
+   "bin": "20-40%",
+   "n": 25,
+   "claimed": 0.272,
+   "realized": 0.44
+  },
+  {
+   "bin": "40-60%",
+   "n": 17,
+   "claimed": 0.487,
+   "realized": 0.176
+  },
+  {
+   "bin": "60-80%",
+   "n": 9,
+   "claimed": 0.73,
+   "realized": 0.444
+  },
+  {
+   "bin": "80-95%",
+   "n": 4,
+   "claimed": 0.81,
+   "realized": 0.5
+  },
+  {
+   "bin": "95-100%",
+   "n": 13,
+   "claimed": 0.999,
+   "realized": 0.692
+  }
+ ],
+ "skill_model_vs_market": {
+  "n_questions": 0,
+  "brier_model": null,
+  "brier_market": null,
+  "edge": null,
+  "note": "no world question with both instruments has resolved yet"
+ },
+ "notes": [
+  "Every resolved pre-registered probability is scored - WATCH rows included. Hit-rate on CALLs alone is gameable by abstention; this table is not.",
+  "Binary Brier: 0 perfect, 0.25 = always saying 50%, 1 = certain and wrong. Log scores use p clipped at 1e-4.",
+  "Latest run per question is the scored row (re-runs supersede by timestamp, same rule as the ledger)."
+ ]
+}

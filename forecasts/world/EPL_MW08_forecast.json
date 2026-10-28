@@ -1,0 +1,239 @@
+{
+ "forecast_id": "EPL2627-MW08",
+ "freeze_date": "2026-10-23",
+ "matches": [
+  {
+   "away": "Nott'm Forest",
+   "date_utc": "2026-10-23 19:00:00Z",
+   "home": "Ipswich",
+   "lambda_away": 1.042,
+   "lambda_home": 1.708,
+   "match_id": "EPL2627-M077",
+   "matchweek": 8,
+   "p_away": 0.2308,
+   "p_draw": 0.2395,
+   "p_home": 0.5297
+  },
+  {
+   "away": "Man City",
+   "date_utc": "2026-10-24 11:30:00Z",
+   "home": "Aston Villa",
+   "lambda_away": 1.713,
+   "lambda_home": 1.037,
+   "match_id": "EPL2627-M072",
+   "matchweek": 8,
+   "p_away": 0.5322,
+   "p_draw": 0.239,
+   "p_home": 0.2288
+  },
+  {
+   "away": "Everton",
+   "date_utc": "2026-10-24 14:00:00Z",
+   "home": "Arsenal",
+   "lambda_away": 0.884,
+   "lambda_home": 1.866,
+   "match_id": "EPL2627-M071",
+   "matchweek": 8,
+   "p_away": 0.1734,
+   "p_draw": 0.2217,
+   "p_home": 0.6048
+  },
+  {
+   "away": "Fulham",
+   "date_utc": "2026-10-24 14:00:00Z",
+   "home": "Coventry",
+   "lambda_away": 1.161,
+   "lambda_home": 1.589,
+   "match_id": "EPL2627-M074",
+   "matchweek": 8,
+   "p_away": 0.2783,
+   "p_draw": 0.2488,
+   "p_home": 0.4729
+  },
+  {
+   "away": "Spurs",
+   "date_utc": "2026-10-24 16:30:00Z",
+   "home": "Chelsea",
+   "lambda_away": 0.924,
+   "lambda_home": 1.826,
+   "match_id": "EPL2627-M073",
+   "matchweek": 8,
+   "p_away": 0.1871,
+   "p_draw": 0.2267,
+   "p_home": 0.5862
+  },
+  {
+   "away": "Newcastle",
+   "date_utc": "2026-10-25 14:00:00Z",
+   "home": "Crystal Palace",
+   "lambda_away": 1.239,
+   "lambda_home": 1.511,
+   "match_id": "EPL2627-M075",
+   "matchweek": 8,
+   "p_away": 0.3118,
+   "p_draw": 0.2528,
+   "p_home": 0.4354
+  },
+  {
+   "away": "Brentford",
+   "date_utc": "2026-10-25 14:00:00Z",
+   "home": "Hull",
+   "lambda_away": 1.239,
+   "lambda_home": 1.511,
+   "match_id": "EPL2627-M076",
+   "matchweek": 8,
+   "p_away": 0.3118,
+   "p_draw": 0.2528,
+   "p_home": 0.4354
+  },
+  {
+   "away": "Brighton",
+   "date_utc": "2026-10-25 14:00:00Z",
+   "home": "Liverpool",
+   "lambda_away": 1.358,
+   "lambda_home": 1.392,
+   "match_id": "EPL2627-M078",
+   "matchweek": 8,
+   "p_away": 0.3645,
+   "p_draw": 0.2554,
+   "p_home": 0.3801
+  },
+  {
+   "away": "Bournemouth",
+   "date_utc": "2026-10-25 14:00:00Z",
+   "home": "Man Utd",
+   "lambda_away": 1.161,
+   "lambda_home": 1.589,
+   "match_id": "EPL2627-M079",
+   "matchweek": 8,
+   "p_away": 0.2783,
+   "p_draw": 0.2488,
+   "p_home": 0.4729
+  },
+  {
+   "away": "Leeds",
+   "date_utc": "2026-10-25 16:30:00Z",
+   "home": "Sunderland",
+   "lambda_away": 1.437,
+   "lambda_home": 1.313,
+   "match_id": "EPL2627-M080",
+   "matchweek": 8,
+   "p_away": 0.4008,
+   "p_draw": 0.2549,
+   "p_home": 0.3443
+  }
+ ],
+ "matchweek": 8,
+ "priors": {
+  "c_goals_per_ppg": 1.5,
+  "home_adv_goals": 0.35,
+  "k": 12.0,
+  "league_ppg": 1.37,
+  "mu_total": 2.75,
+  "note": "independent Poisson, no Dixon-Coles draw correction, one instrument - scored, never gate-CALLed"
+ },
+ "resolution": "fixturedownload.com epl-2026 feed final score; league result after 90min+stoppage; abandoned match resolves on the completed restaging; awarded/forfeited results count as the official score",
+ "run_at_utc": "2026-10-23T09:16:14+00:00",
+ "table_basis": {
+  "Arsenal": {
+   "p": 7,
+   "ppg_shrunk": 1.8126,
+   "pts": 18
+  },
+  "Aston Villa": {
+   "p": 7,
+   "ppg_shrunk": 1.2863,
+   "pts": 8
+  },
+  "Bournemouth": {
+   "p": 7,
+   "ppg_shrunk": 1.1811,
+   "pts": 6
+  },
+  "Brentford": {
+   "p": 7,
+   "ppg_shrunk": 1.3916,
+   "pts": 10
+  },
+  "Brighton": {
+   "p": 7,
+   "ppg_shrunk": 1.7074,
+   "pts": 16
+  },
+  "Chelsea": {
+   "p": 7,
+   "ppg_shrunk": 1.5495,
+   "pts": 13
+  },
+  "Coventry": {
+   "p": 7,
+   "ppg_shrunk": 1.1811,
+   "pts": 6
+  },
+  "Crystal Palace": {
+   "p": 7,
+   "ppg_shrunk": 1.2337,
+   "pts": 7
+  },
+  "Everton": {
+   "p": 7,
+   "ppg_shrunk": 1.3916,
+   "pts": 10
+  },
+  "Fulham": {
+   "p": 7,
+   "ppg_shrunk": 1.1284,
+   "pts": 5
+  },
+  "Hull": {
+   "p": 7,
+   "ppg_shrunk": 1.3389,
+   "pts": 9
+  },
+  "Ipswich": {
+   "p": 7,
+   "ppg_shrunk": 1.3389,
+   "pts": 9
+  },
+  "Leeds": {
+   "p": 7,
+   "ppg_shrunk": 1.3916,
+   "pts": 10
+  },
+  "Liverpool": {
+   "p": 7,
+   "ppg_shrunk": 1.4968,
+   "pts": 12
+  },
+  "Man City": {
+   "p": 7,
+   "ppg_shrunk": 1.9705,
+   "pts": 21
+  },
+  "Man Utd": {
+   "p": 7,
+   "ppg_shrunk": 1.2337,
+   "pts": 7
+  },
+  "Newcastle": {
+   "p": 7,
+   "ppg_shrunk": 1.2863,
+   "pts": 8
+  },
+  "Nott'm Forest": {
+   "p": 7,
+   "ppg_shrunk": 1.1284,
+   "pts": 5
+  },
+  "Spurs": {
+   "p": 7,
+   "ppg_shrunk": 1.1811,
+   "pts": 6
+  },
+  "Sunderland": {
+   "p": 7,
+   "ppg_shrunk": 1.0758,
+   "pts": 4
+  }
+ }
+}

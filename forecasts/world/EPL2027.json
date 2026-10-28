@@ -1,0 +1,68 @@
+{
+  "forecast_id": "EPL2027",
+  "title": "Premier League Winner 2026-27",
+  "domain": "Football",
+  "freeze_date": "2026-10-26",
+  "resolve_date": "2027-05",
+  "adapter": "league_sim",
+  "research": true,
+  "market": {
+    "source": "Bookmaker outright odds, TNT Sports comparison dated 2026-10-20 13:50 BST, best price across bet365/BetMGM/Ladbrokes/William Hill/Betfred - PREDATES MW8 (City lost to Villa 24-Oct); staleness flagged",
+    "odds": {"Arsenal": 1.53, "Man City": 5.0, "Chelsea": 11.0, "Brighton": 17.0, "Liverpool": 21.0},
+    "others_implied": 0.02
+  },
+  "model": {
+    "table_asof": "2026-10-25 (Matchday 8 complete, Wikipedia 2026-27 Premier League)",
+    "note": "strength = games-played-shrunk PPG (k=12 prior games to league mean 1.37), fixed draw rate 0.24, 31 remaining games simulated independently, title by points then GD noise",
+    "teams": [
+      {"team": "Man City", "p": 8, "pts": 21, "gd": 11},
+      {"team": "Arsenal", "p": 8, "pts": 21, "gd": 8},
+      {"team": "Brighton", "p": 8, "pts": 16, "gd": 16},
+      {"team": "Liverpool", "p": 8, "pts": 15, "gd": 3},
+      {"team": "Chelsea", "p": 8, "pts": 13, "gd": 2},
+      {"team": "Brentford", "p": 8, "pts": 11, "gd": 5},
+      {"team": "Leeds", "p": 8, "pts": 11, "gd": 3},
+      {"team": "Newcastle", "p": 8, "pts": 11, "gd": -2},
+      {"team": "Aston Villa", "p": 8, "pts": 11, "gd": -3},
+      {"team": "Hull City", "p": 8, "pts": 10, "gd": 1},
+      {"team": "Everton", "p": 8, "pts": 10, "gd": -1},
+      {"team": "Ipswich", "p": 8, "pts": 10, "gd": -4},
+      {"team": "Bournemouth", "p": 8, "pts": 9, "gd": -1},
+      {"team": "Tottenham", "p": 8, "pts": 9, "gd": -2},
+      {"team": "Fulham", "p": 8, "pts": 8, "gd": -2},
+      {"team": "Man United", "p": 8, "pts": 7, "gd": -3},
+      {"team": "Crystal Palace", "p": 8, "pts": 7, "gd": -10},
+      {"team": "Nottm Forest", "p": 8, "pts": 6, "gd": -4},
+      {"team": "Coventry", "p": 8, "pts": 6, "gd": -9},
+      {"team": "Sunderland", "p": 8, "pts": 5, "gd": -8}
+    ]
+  },
+  "resolution": {
+    "source": "Final official 2026-27 Premier League table (premierleague.com/tables) after the last matchday (~2027-05)",
+    "resolve_by": "2027-06-15",
+    "rules": [
+      "Champion = club ranked 1st in the final OFFICIAL table, including any points deductions, awarded results or sanctions applied before the table is confirmed (points-deduction rule: the sanctioned table is the real table)",
+      "'Winner from current top 5' resolves against the five clubs named in the question's entity list at freeze, not whoever is top-5 later",
+      "If the season is curtailed, rows resolve on the league's official champion declaration (incl. a PPG-decided table); no champion declared = VOID, logged and excluded from scoring",
+      "A title stripped retroactively AFTER first confirmation of the final table does not change resolution"
+    ]
+  },
+  "questions": [
+    {"q": "Man City win the title", "entity": "Man City"},
+    {"q": "Arsenal win the title", "entity": "Arsenal"},
+    {"q": "Winner in {Man City, Arsenal}", "entity": ["Man City", "Arsenal"]},
+    {"q": "Liverpool win the title", "entity": "Liverpool"},
+    {"q": "Winner from current top 5", "entity": ["Man City", "Arsenal", "Brighton", "Chelsea", "Liverpool"]}
+  ],
+  "quality_flags": [
+    "THE DISAGREEMENT, DECODED (2026-10-23): the market favours Arsenal while our table model favours City - and it is not just stale odds. Polymarket prices a City POINTS DEDUCTION by June 2027 at 74.5% (charges verdict pending). Our model simulates the table as it stands and cannot see sanction risk; the market can. Until the verdict, the title race is genuinely open and this forecast stays WATCH.",
+    "Market odds (2026-10-20) predate MW8, where City lost at Villa and Arsenal drew level on points (both 21 at MD8); the model sees the MD8 table the market has not priced. Timing gap noted 2026-10-26.",
+    "Model simulates teams independently vs average opposition - no fixture list, no injuries, no schedule strength. It is a deliberate coarse instrument; 7 games of evidence get heavy regression to the mean.",
+    "Reference point (not an instrument): Opta supercomputer after MD5 had Arsenal 43.7%, City 39.8%."
+  ],
+  "tripwires": [
+    {"watch": "Man City charges verdict announced (deduction market at 74.5% on 2026-10-23)", "effect": "re-run immediately; a points deduction reshapes the entire title race"},
+    {"watch": "Fresh dated outright odds published", "effect": "re-run with current market"},
+    {"watch": "Title race gap changes by 6+ points", "effect": "re-run"}
+  ]
+}

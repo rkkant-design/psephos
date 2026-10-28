@@ -1,0 +1,37 @@
+{
+ "matchweek": 9,
+ "built_utc": "2026-10-24T16:45:00+00:00",
+ "market": {
+  "source": "oddschecker.com PL coupon best-price 1X2",
+  "source_url": "https://www.oddschecker.com/football/leagues-cups/english/premier-league",
+  "fetched_utc": "2026-10-24T16:38:00+00:00",
+  "odds_date": "2026-10-24",
+  "odds_format": "fractional",
+  "note": "Best available price per outcome across the UK books oddschecker lists; de-vigged by proportional normalization in epl_matches.py. Overround on best-price aggregation is small by construction.",
+  "odds": {
+   "EPL2627-M084": {"home": "11/13", "draw": "3/1", "away": "14/5"},
+   "EPL2627-M081": {"home": "6/5", "draw": "11/4", "away": "23/10"},
+   "EPL2627-M083": {"home": "21/20", "draw": "14/5", "away": "13/5"},
+   "EPL2627-M085": {"home": "9/5", "draw": "5/2", "away": "17/11"},
+   "EPL2627-M086": {"home": "13/8", "draw": "5/2", "away": "28/17"},
+   "EPL2627-M088": {"home": "7/10", "draw": "10/3", "away": "7/2"},
+   "EPL2627-M090": {"home": "11/17", "draw": "10/3", "away": "4/1"},
+   "EPL2627-M082": {"home": "21/20", "draw": "11/4", "away": "13/5"},
+   "EPL2627-M087": {"home": "11/5", "draw": "13/5", "away": "6/5"},
+   "EPL2627-M089": {"home": "5/4", "draw": "11/4", "away": "2/1"}
+  }
+ },
+ "midweek_matches": {
+  "source": "oddschecker.com EFL Cup coupon (round-4 fixture list, fetched 2026-10-24); UEFA 2026-27 calendar cross-check: UCL MD3 was Oct 20-21, MD4 is Nov 3-4 (uefa.com league-phase fixture list), so no European midweek falls in the Oct 27-30 window",
+  "fetched_utc": "2026-10-24T16:40:00+00:00",
+  "matches": [
+   {"date": "2026-10-27", "competition": "EFL Cup R4", "teams": ["Arsenal"], "note": "Fleetwood v Arsenal; Fleetwood not a PL side"},
+   {"date": "2026-10-28", "competition": "EFL Cup R4", "teams": ["Man City", "Brighton"]},
+   {"date": "2026-10-28", "competition": "EFL Cup R4", "teams": ["Bournemouth", "Aston Villa"]},
+   {"date": "2026-10-28", "competition": "EFL Cup R4", "teams": ["Fulham", "Crystal Palace"]},
+   {"date": "2026-10-28", "competition": "EFL Cup R4", "teams": ["Sunderland", "Brentford"]},
+   {"date": "2026-10-28", "competition": "EFL Cup R4", "teams": ["Liverpool", "Chelsea"]},
+   {"date": "2026-10-29", "competition": "EFL Cup R4", "teams": ["Everton", "Newcastle"]}
+  ]
+ }
+}

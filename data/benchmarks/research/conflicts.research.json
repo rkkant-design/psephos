@@ -1,0 +1,254 @@
+{
+ "7819": {
+  "base_rate": {
+   "reference_class": "Years of Taliban rule (Aug 2021 - Oct 2026, ~5.2 years) with zero attacks killing 10+ in a NATO nation attributed by US/NATO/EU to the Taliban or a Taliban-supported group; annualized qualifying-event rate ~0, with ~2 months of window remaining",
+   "value": 0.02,
+   "source": "Historical record since Taliban takeover; CRS Afghanistan brief; UN sanctions monitoring reports"
+  },
+  "evidence": [
+   "2026-09: UN monitors and media document al-Qaeda members returning to Afghanistan and ~8 new camps, but no external attack on a NATO state attributed to them (RFE/RL via GlobalSecurity, 2026-09-08).",
+   "2026 (Feb onward): Taliban's armed conflict is with Pakistan (non-NATO) - cross-border 'open war' per Pakistan's defense minister; Taliban externally focused there, not on NATO states (CRS R45122; Al Jazeera 2026-09-27).",
+   "Through Oct 2026: no credible report of any 2026 terrorist attack in a NATO country attributed by the US, NATO, or EU to the Taliban or a Taliban-funded/protected organization.",
+   "ISKP, the group most active against Western targets, is a Taliban enemy, not Taliban-supported, so its attacks would not qualify under the criteria."
+  ],
+  "strongest_opposing_case": "UN monitors confirm al-Qaeda has rebuilt training camps under Taliban protection; a single mass-casualty AQ-linked attack in Europe or on a US facility before Dec 31, with rapid US/EU attribution, would flip this - attribution of plots to Afghanistan-based networks has happened before.",
+  "reasoning_summary": "Base rate: zero qualifying events in 5.2 years of Taliban rule, implying a very low per-month hazard. Adjust slightly up for documented al-Qaeda camp reconstitution in 2026, slightly down for the strict triple requirement (10+ deaths outside Afghanistan, in/against a NATO nation, plus official US/NATO/EU attribution to a Taliban-linked group) and only ~9 weeks remaining. Final: 0.02.",
+  "key_sources": [
+   {"title": "25 Years After 9/11, Could Afghanistan Again Become A Launchpad For Global Terror? (RFE/RL)", "url": "https://www.globalsecurity.org/security/library/news/2026/09/sec-260908-rferl02.htm", "date": "2026-09-08"},
+   {"title": "Afghanistan: Background and U.S. Policy in Brief (CRS)", "url": "https://www.congress.gov/crs-product/R45122", "date": "2026"},
+   {"title": "Afghanistan says 28 fighters killed as Islamabad, Kabul trade accusations", "url": "https://www.aljazeera.com/news/2026/9/27/afghanistan-says-28-fighters-killed-as-islamabad-kabul-trade-accusations", "date": "2026-09-27"}
+  ],
+  "p": 0.02
+ },
+ "41144": {
+  "base_rate": {
+   "reference_class": "Sudan RSF-SAF ceasefire attempts since Apr 2023 (Jeddah rounds, Manama, Geneva, ALPS): multiple short truces declared (24h-7d), zero bilateral ceasefires of 30+ day intent in 3.5 years; ~2 months of 2026 remain",
+   "value": 0.05,
+   "source": "Jeddah Declaration track record 2023-2025; UN/Swiss Geneva mechanism reporting 2026"
+  },
+  "evidence": [
+   "2026-10-06: Burhan publicly rules out negotiations with the RSF, vows to retake all territory in Darfur, Kordofan and Blue Nile militarily (Al Jazeera).",
+   "2026-10-15: Burhan nonetheless sends message to Trump saying Sudan is 'committed to US-sponsored peace efforts'; US has a 90-day humanitarian truce proposal on the table - RSF accepts in principle, SAF demands RSF first withdraw from cities (Sudan Tribune / UN News).",
+   "2026-10-21: Geneva talks convened by UN/Switzerland proceed WITHOUT either warring party (mediator-coordination only); one report says the round failed again (Radio Tamazuj, Peoples Gazette).",
+   "2026-10-22: SAF continues near-daily airstrikes on RSF-held areas; UN reports 1,100+ civilians killed by drones in H1 2026 - no de-escalation on the ground."
+  ],
+  "strongest_opposing_case": "A concrete US 90-day truce proposal exists, the RSF has accepted it in principle, Burhan signaled commitment to US-sponsored efforts to Trump on Oct 15, and the criteria resolve Yes on signed 30+ day INTENT even if immediately violated - US pressure could force a signature within two months.",
+  "reasoning_summary": "Base rate ~0/3.5yr for 30+ day-intent bilateral ceasefires gives a low prior for any 2-month window (~5%). Adjust up for an active, specific US 90-day truce proposal with RSF acceptance and Trump-administration pressure; adjust down for Burhan's explicit Oct 6 rejection of talks, SAF precondition of RSF withdrawal, and warring parties absent from Geneva. Final: 0.08.",
+  "key_sources": [
+   {"title": "Sudan's al-Burhan rejects talks, vows to retake all territory from RSF", "url": "https://www.aljazeera.com/news/2026/10/7/sudans-al-burhan-rejects-talks-vows-to-retake-all-territory-from-rsf", "date": "2026-10-07"},
+   {"title": "Sudan conflict: Peace efforts resume to end 'drone war' (UN News)", "url": "https://news.un.org/en/story/2026/10/1168638", "date": "2026-10"},
+   {"title": "Talks resume in Geneva as Sudan war deepens humanitarian crisis (Radio Tamazuj)", "url": "https://www.radiotamazuj.org/en/news/article/talks-resume-in-geneva-as-sudan-war-deepens-humanitarian-crisis", "date": "2026-10-21"}
+  ],
+  "p": 0.08
+ },
+ "42666": {
+  "base_rate": {
+   "reference_class": "Annual loss-of-power rate for entrenched single-party authoritarian regimes under economic crisis (~1-3%/yr historically; PCC specifically survived the 1990s Special Period, 2021 and 2024-26 protest waves); ~2 months remain in window",
+   "value": 0.01,
+   "source": "Comparative authoritarian-survival literature; PCC 67-year tenure through repeated crises"
+  },
+  "evidence": [
+   "2026-10-23/24: Diaz-Canel tours Central Havana amid blackouts of up to 90 hours in some provinces; ~2.7M people lack reliable clean water; hostile social-media reaction but no mass street uprising in October (CiberCuba, CBS Miami).",
+   "2026-03: 150+ protests recorded in a single month, incl. attack on a PCC office in Moron - yet the state apparatus held; discontent remains diffuse, not organized (Wikipedia 2024-2026 Cuban protests).",
+   "2026-01-29 and 2026-05-01: US declared Cuba an 'unusual and extraordinary threat' and enabled secondary sanctions; EU Parliament called for sanctions on Diaz-Canel in June - pressure rising but no elite split or security-force defection reported.",
+   "Through Oct 2026: PCC retains full de facto control; no credible reporting of a rival power center, military fracture, or transition negotiation."
+  ],
+  "strongest_opposing_case": "Worst energy crisis on record, 90-hour blackouts, water failure for millions, a US administration that just removed Maduro by force in January and formally designated Cuba a threat - a sudden protest cascade or US action in the final two months is not unthinkable.",
+  "reasoning_summary": "Base rate: entrenched one-party regimes lose power ~1-3% per year even in crisis; pro-rated to ~9 weeks that is well under 1%. Adjust up modestly for unprecedented energy collapse, the demonstration effect of the US Venezuela intervention, and explicit US escalation; adjust down for no organized opposition, loyal security forces, and 67 years of crisis survival. Final: 0.02.",
+  "key_sources": [
+   {"title": "'We cannot get tired,' says Diaz-Canel in Los Sitios (CiberCuba)", "url": "https://en.cibercuba.com/noticias/2026-10-24-u1-e209395-s27061-nid343660-nos-podemos-cansar-dice-diaz-canel-sitios-cubanos", "date": "2026-10-24"},
+   {"title": "Protests erupt again in Cuba amid blackouts as Diaz-Canel warns U.S. to stay away (CBS Miami)", "url": "https://www.cbsnews.com/miami/news/cuba-blackout-protests-diaz-canel/", "date": "2026"},
+   {"title": "2024-2026 Cuban protests (Wikipedia)", "url": "https://en.wikipedia.org/wiki/2024%E2%80%932026_Cuban_protests", "date": "2026-10"}
+  ],
+  "p": 0.02
+ },
+ "43316": {
+  "base_rate": {
+   "reference_class": "Burhan-Hemedti in-person meeting attempts since Apr 2023: 0 of several (Djibouti Dec 2023/Jan 2024 collapsed, IGAD Kampala Jan 2024 Burhan boycotted, Abiy mediation mid-2024 failed) - 0% over 3.5 years; ~2 months remain",
+   "value": 0.02,
+   "source": "The EastAfrican, Al Jazeera 2023-24 mediation record"
+  },
+  "evidence": [
+   "2026-10-06: Burhan explicitly rules out any negotiations with the RSF and vows total military victory (Al Jazeera) - direct leader-level contact is the maximal form of what he rejected.",
+   "2026-10-21: Geneva mediator talks deliberately exclude both warring parties; no proximity format exists, let alone a leaders' summit (Radio Tamazuj).",
+   "Resolution bar is unusually strict: two Tier-1 wires + an official acknowledgment + dated/located reporting of physical same-room presence - even a secret meeting would likely fail confirmation.",
+   "No reported Burhan-Hemedti meeting Jan-Oct 2026; the two have not been confirmed in the same room since before 15 Apr 2023."
+  ],
+  "strongest_opposing_case": "Trump-administration pressure produced leader-level breakthroughs elsewhere (Venezuela, Russia-Ukraine rounds); if the US ties the 90-day truce to a Jeddah- or Riyadh-hosted signing summit, both men could appear together within weeks, as Gulf sponsors have leverage over each.",
+  "reasoning_summary": "Base rate: every attempt to bring the two together since 2023 failed (0/4+), so the prior for any given 2-month window is a few percent at most. Adjust down further for Burhan's Oct 6 rejection of all talks and the triple-confirmation requirement; adjust up marginally for active US/Gulf truce diplomacy that could culminate in a signing ceremony. Final: 0.03.",
+  "key_sources": [
+   {"title": "Sudan's al-Burhan rejects talks, vows to retake all territory from RSF", "url": "https://www.aljazeera.com/news/2026/10/7/sudans-al-burhan-rejects-talks-vows-to-retake-all-territory-from-rsf", "date": "2026-10-07"},
+   {"title": "Sudan army chief rules out talks with paramilitary RSF (Sudan Tribune)", "url": "https://sudantribune.com/article/319683", "date": "2026-10"},
+   {"title": "Sudan warring chiefs Burhan, Hemedti fail to meet (The EastAfrican)", "url": "https://www.theeastafrican.co.ke/tea/rest-of-africa/sudan-warring-chiefs-burhan-hemedti-fail-to-meet-4476188", "date": "2024-01"}
+  ],
+  "p": 0.03
+ },
+ "45806": {
+  "base_rate": {
+   "reference_class": "South Sudan national elections held vs. scheduled since 2011 independence: 0 of 5 scheduled dates (2015, 2018, 2021, 2023, 2024 all postponed) - 0% historical follow-through",
+   "value": 0.08,
+   "source": "South Sudan electoral history; repeated R-ARCSS extension record"
+  },
+  "evidence": [
+   "2026-06-22: NEC declared the election for 22 Dec 2026; 39 parties registered within a fortnight; SPLM-IO legal identity transferred to Kiir-friendly Stephen Par Kuol faction while Machar remains detained on treason charges (BBC, Radio Tamazuj).",
+   "2026-10 (through ~Oct 16): NEC confirms NO voter has been registered anywhere, no electoral register exists, and no registration start date announced - with ~9 weeks to polling day (Radio Yei).",
+   "2026-10-02: NEC presented voter-registration books to President Kiir; registration to be manual/paper-based nationwide; government provided $25M by late Sept with more promised (Sudans Post, Streamline Feed).",
+   "2026-09-15: Analysts (Robert Lansing Institute) warn a December vote is becoming logistically very difficult and potentially more dangerous than another delay; centre locations, ID requirements, IDP/diaspora registration all unresolved."
+  ],
+  "strongest_opposing_case": "Kiir has every incentive to hold a coronation vote with Machar jailed and the SPLM-IO captured; a date is officially set, materials printed, money flowing, and the criteria need only ONE polling day of voting confirmed by two outlets - a rushed, low-quality vote in government-held areas could satisfy that.",
+  "reasoning_summary": "Base rate: 0/5 scheduled elections ever held, so a low prior (~8%) for on-time voting. Adjust up materially because this cycle shows unprecedented concrete steps (official date, party registration, printed registers, partial funding) and the bar is minimal (any single polling day); adjust back down because zero voters were registered as of mid-October with manual nationwide registration still unstarted ~9 weeks out. Final: 0.15.",
+  "key_sources": [
+   {"title": "No Voter Has Registered Yet - Election Commission (Radio Yei)", "url": "https://radioyei.org/news/2026-south-sudan-elections/no-voter-has-registered-yet-election-commission/", "date": "2026-10"},
+   {"title": "South Sudan Electoral Commission Presents Voter Materials to President Kiir", "url": "https://streamlinefeed.co.ke/news/south-sudan-electoral-commission-presents-voter-materials-to-president-kiir-ahead-of-december-polls", "date": "2026-10-02"},
+   {"title": "South Sudan's December 2026 Elections: Why a Vote Is Becoming Increasingly Difficult (Robert Lansing Institute)", "url": "https://lansinginstitute.org/2026/09/15/south-sudans-december-2026-elections-why-a-vote-is-becoming-increasingly-difficult-and-potentially-more-dangerous-than-another-delay/", "date": "2026-09-15"}
+  ],
+  "p": 0.15
+ },
+ "40543": {
+  "base_rate": {
+   "reference_class": "Russian-developed LLMs in LMArena/Arena top-100: 0 as of Nov 2025 and no verified entry through Oct 2026 (11 of 14 window months elapsed with no occurrence)",
+   "value": 0.03,
+   "source": "Arena (ex-LMArena) text leaderboard observation; absence of any reported Russian entry in 2026 coverage"
+  },
+  "evidence": [
+   "2026-10: No 2026 report of GigaChat, YandexGPT/Alice AI, or any Russian model appearing on the Arena (arena.ai, rebranded Jan 2026) overall text leaderboard; aggregator leaderboards list ~243 models with US/Chinese models dominating.",
+   "2026 independent benchmark (MySummit, management tasks): all GigaChat models in the bottom half; Yandex's Alice AI LLM v3 in the bottom quarter; Yandex's own ecosystem reportedly serves DeepSeek V4 Flash as its best model - Russian labs lean on Chinese models rather than competing globally.",
+   "2025-08: Yandex claimed YandexGPT 5.1 Pro beats GPT-4.1 in 56% of internal cases - unconfirmed independently and never validated on Arena.",
+   "Entering the top 100 requires the lab to submit the model for international crowdsourced battles; sanctions and strategic insularity make submission itself unlikely before Jan 2027."
+  ],
+  "strongest_opposing_case": "Top-100 (not top-10) is a modest bar on a 243-model board; frontier Russian models are unbenchmarked internationally, and a single Sber or Yandex submission of their newest model could plausibly clear the long tail of older entries within weeks.",
+  "reasoning_summary": "Base rate: zero Russian models in the top 100 through 11 of 14 window months gives a low prior for the final ~2 months. Adjust slightly up because top-100 is a relatively low bar and newest Russian models are untested on Arena; adjust down because independent 2026 benchmarks place them well behind, labs show no intent to submit, and Yandex itself routes to DeepSeek. Final: 0.04.",
+  "key_sources": [
+   {"title": "GigaChat in 2026: Honest Review (MySummit benchmark)", "url": "https://mysummit.school/blog/en/gigachat-sber-review-2026/", "date": "2026"},
+   {"title": "YandexGPT in 2026: A Review of Russia's AI Platform for Business", "url": "https://mysummit.school/blog/en/yandexgpt-review-2026/", "date": "2026"},
+   {"title": "LMArena (Chatbot Arena) Elo Leaderboard - 243 Models Ranked", "url": "https://metatext.io/benchmarks/lmarena-elo", "date": "2026-10"}
+  ],
+  "p": 0.04
+ },
+ "0xfb13ea7fb958d280d2a8a1e9d94709b6749a9af50a9304d588ea38234b145147": {
+  "base_rate": {
+   "reference_class": "Contested frontline villages under an active, reinforced Russian offensive axis: ISW-confirmed capture within ~10 weeks happens in roughly a third to half of cases; Russia gained only ~100 km2 / 69 settlements in all of 2026 (slow tempo), but Vodianske sits directly on the Dobropillia pincer's path and has been fought over since July",
+   "value": 0.40,
+   "source": "ISW 2026 territorial-gain tally; 2026 Dobropillia offensive record"
+  },
+  "evidence": [
+   "2026-08: Russian MoD claimed capture of Vodianske; Reuters could not verify, and Ukrainian forces were subsequently reported to have pushed Russian troops back near the village - ISW evidently never carried it as controlled (Axar/Devdiscourse; Wikipedia 2026 Dobropillia offensive).",
+   "2026-10-15: Russia redeployed elements of the 41st Army to the Dobropillia axis; analysts expect 51st CAA pushes south/southwest of Dobropillia - Vodianske lies on this axis between Pokrovsk and Dobropillia (Euromaidan Press).",
+   "2026-10-21: ISW relays Russian claims of INFILTRATION toward Svitle, Vodyanske, Chernihivka, Krasnopodillya - infiltration shading explicitly does not qualify under the resolution rules (Critical Threats).",
+   "2026-10-07/18: Russian small-group infiltration tactics across the Dobropillia-Pokrovsk sector; claimed capture of nearby Petrivka; Ukrainian Azov counterattacks continue and recently retook ground in the sector (NV, euobserver)."
+  ],
+  "strongest_opposing_case": "Russia has fought for this exact village since July without ISW-qualifying control, Ukrainian forces counterattacked successfully near it, ISW currently codes only 'infiltration' (non-qualifying), and ISW's conservative two-cycle persistence rule plus winter conditions could easily run out the ~9.5 weeks.",
+  "reasoning_summary": "Base rate ~0.40 for a directly-targeted contested village over 10 weeks of an active reinforced offensive. Adjust up for fresh Russian reinforcements (41st Army), repeated claimed advances, and the low bar of 'Advances' shading over one intersection; adjust down for the August false-capture precedent, Ukrainian counterattacks holding the village, current status being non-qualifying infiltration, and ISW conservatism. Final: 0.42.",
+  "key_sources": [
+   {"title": "Russia is back at Dobropillia a year after it failed there (Euromaidan Press)", "url": "https://euromaidanpress.com/2026/10/15/dobropillya/", "date": "2026-10-15"},
+   {"title": "Russian Offensive Campaign Assessment, October 21, 2026 (ISW/Critical Threats)", "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-october-21-2026", "date": "2026-10-21"},
+   {"title": "2026 Dobropillia offensive (Wikipedia)", "url": "https://en.wikipedia.org/wiki/2026_Dobropillia_offensive", "date": "2026-10"}
+  ],
+  "p": 0.42
+ },
+ "0x8c674a435065fb526778f141587c07e3e44a0ecdf4b4ad647e6f094aa8a6262c": {
+  "base_rate": {
+   "reference_class": "RU-UA in-person negotiation rounds while both sides are engaged in a mediated process: 3 rounds in Istanbul mid-2025 and 3 Trump-brokered rounds in 2026 (latest Geneva, Feb 2026) - roughly one round per 2-3 months when diplomacy is active, but an 8-month gap since February shows stalls can run long; ~9.5 weeks remain",
+   "value": 0.55,
+   "source": "2025 Istanbul rounds; 2026 Trump-administration mediation record (AP/Washington Post)"
+  },
+  "evidence": [
+   "2026-10-24: Putin says Moscow is ready to resume US-mediated talks with Kyiv in NOVEMBER; a new round would be the fourth brokered by the Trump administration after Geneva in February (AP via MPR News/Washington Post).",
+   "2026-10-23: Active US push for renewed talks (Witkoff mission, Melania Trump channel) even as both sides trade strikes on energy infrastructure (CNBC, ABC News).",
+   "2026-10: A local ceasefire was agreed to let aid reach a stranded Kherson town - the sides demonstrably can reach narrow mediated arrangements; the resolution counts indirect in-person meetings through authorized mediators.",
+   "Caution: Trump-Zelensky relations reportedly at a new low; the Oct 11 'energy ceasefire' announced by Trump produced nothing, and no November meeting date/venue is confirmed yet."
+  ],
+  "strongest_opposing_case": "No qualifying round has happened in the ~8 months since Geneva despite continuous mediation talk; Russia keeps attaching maximalist preconditions (withdrawal from four oblasts, NATO renunciation), Trump-Zelensky ties are at a low, and 'ready in November' announcements have slipped repeatedly before.",
+  "reasoning_summary": "Base rate: with an active mediated process, a round within ~2.3 months is historically better than even, but the 8-month post-Geneva drought cuts the naive rate. Adjust up for Putin's explicit November commitment, intense current US shuttle diplomacy, and the broad criteria (indirect mediator-run in-person meetings qualify, humanitarian-adjacent negotiation not excluded); adjust down for unresolved preconditions and announcement slippage. Final: 0.72.",
+  "key_sources": [
+   {"title": "Ukraine and Russia eye new peace talks, but steep obstacles remain (AP)", "url": "https://www.mprnews.org/story/2026/10/24/ukraine-and-russia-eye-new-peace-talks-but-steep-obstacles-remain", "date": "2026-10-24"},
+   {"title": "Russia and Ukraine trade fresh strikes despite renewed push for U.S.-brokered peace talks (CNBC)", "url": "https://www.cnbc.com/2026/10/23/russia-ukraine-strikes-peace-talks.html", "date": "2026-10-23"},
+   {"title": "Ukraine and Russia eye new peace talks - and Melania Trump's mission (Washington Post)", "url": "https://www.washingtonpost.com/world/2026/10/24/russia-ukraine-war-putin-zelenskyy-trump-witkoff/7e0bc22c-cf8d-11f1-ac04-9f58578a68b4_story.html", "date": "2026-10-24"}
+  ],
+  "p": 0.72
+ },
+ "0x1cd3f72c814065a8f7f03ddfce24f7ae3018c0778e00546f52423e41de2c531f": {
+  "base_rate": {
+   "reference_class": "Russian capture of comparable Donbas cities (Bakhmut ~8 mo of urban assault, Avdiivka ~4 mo final phase, Toretsk ~8 mo): once Russian troops are fighting inside the urban core, full/qualifying control of northern districts typically follows within 4-9 months; the cafe sits in NORTHWESTERN Kostyantynivka (48.538N 37.688E, ~1.2km N and ~1.5km W of center) and ~5.2 months remain",
+   "value": 0.50,
+   "source": "Bakhmut/Avdiivka/Toretsk capture timelines; ISW city assessments"
+  },
+  "evidence": [
+   "2026-10-16: ISW assesses Russian forces have infiltrated but NOT consolidated in significant portions of southern and central Kostyantynivka, and sees NO evidence of Russian presence in NORTHERN Kostyantynivka; a milblogger claim of full control is unverified (ISW via Critical Threats/Kyiv Post).",
+   "2026-07: Gerasimov falsely claimed Kostyantynivka captured and Kramatorsk outskirts reached; ISW counts only ~100 km2 and 69 settlements gained in all of 2026 - Russian claims consistently outrun ISW shading.",
+   "2026-10-23: ISW reports Ukrainian forces recently ADVANCED west of Kostyantynivka - a counterattack relieving pressure on the city's flank (Kyiv Post).",
+   "2026-10-06/07: Russian offensive operations within and west of the city continued without confirmed advances; Russia uses glide bombs on settlements north of the city, indicating the north remains Ukrainian-held."
+  ],
+  "strongest_opposing_case": "ISW shows no Russian presence at all in northern Kostyantynivka, infiltration shading does not qualify, Ukrainian forces are counterattacking successfully west of the city, Russia's 2026 tempo is only ~100 km2/year, and the building needs qualifying shading plus a full persistence cycle by Mar 31 - Toretsk-style stalemates have lasted longer than 5 months.",
+  "reasoning_summary": "Base rate ~0.50: with Russians already fighting inside the city core, historical urban-capture timelines (4-9 months to roll up remaining districts) make a 5.2-month capture of a northwest building roughly a coin flip. Adjust up slightly for sustained Russian priority on this axis and the lower 'Advances' shading bar; adjust down for zero confirmed presence in the north, active Ukrainian counterattacks, and ISW's conservatism against inflated Russian claims. Final: 0.52.",
+  "key_sources": [
+   {"title": "Russian Offensive Campaign Assessment, October 16, 2026 (ISW/Critical Threats)", "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-october-16-2026", "date": "2026-10-16"},
+   {"title": "ISW Russian Offensive Campaign Assessment, October 23, 2026 (Kyiv Post)", "url": "https://www.kyivpost.com/post/88028", "date": "2026-10-23"},
+   {"title": "Russian Offensive Campaign Assessment, October 6, 2026 (ISW/Critical Threats)", "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-october-6-2026", "date": "2026-10-06"}
+  ],
+  "p": 0.52
+ },
+ "0x357319ded51afc8843eb0ddcf345c2de1f7613e97357f7942e1e228961f4e723": {
+  "base_rate": {
+   "reference_class": "Probability a 4.5-year interstate war produces a mutually agreed GENERAL ceasefire within a given ~3-month window while talks are at pre-negotiation stage: historically low (~5-10%); 2026 precedent - three negotiation rounds plus an announced 'energy ceasefire' (Oct 11) all failed to produce any general pause",
+   "value": 0.07,
+   "source": "Interstate-war termination literature; 2026 RU-UA negotiation record (AP/CNBC)"
+  },
+  "evidence": [
+   "2026-10-24: Putin explicitly REJECTS a temporary ceasefire, insisting on 'lasting security arrangements' first; Russia demands Ukrainian withdrawal from all four annexed regions, NATO renunciation, military cuts (AP).",
+   "2026-10-24: Kyiv's position is the opposite sequencing - freeze on current lines first, then talks; the two positions are mutually exclusive on the very thing the market requires (a dated mutual suspension of fighting).",
+   "2026-10-11: Trump-announced 'energy ceasefire' failed to yield any meaningful outcome; attacks on energy infrastructure continued, 500,000+ Ukrainians lost power in a late-October strike (CNBC) - and sectoral deals would not qualify anyway.",
+   "2026-10: Only a local humanitarian pause (one Kherson town) achieved - explicitly non-qualifying under the general-pause requirement."
+  ],
+  "strongest_opposing_case": "A fourth US-brokered round is expected in November with maximal Trump-administration pressure and Melania Trump's channel; if Putin judges battlefield gains plateauing and sanctions biting, a framework deal with a dated general truce signed by Jan 31 is conceivable - the market resolves on agreement, not implementation.",
+  "reasoning_summary": "Base rate ~5-10% for a general ceasefire agreement within ~14 weeks of a stalled 4.5-year war. Adjust slightly up for an active US-mediated track, Putin's stated November readiness, and resolution on signature alone; adjust down hard for Russia's explicit rejection of ceasefire-first sequencing, maximalist territorial demands, failure of every 2026 partial truce, and the strict general-pause-with-date requirement. Final: 0.09.",
+  "key_sources": [
+   {"title": "Ukraine and Russia eye new peace talks, but steep obstacles remain (AP)", "url": "https://www.mprnews.org/story/2026/10/24/ukraine-and-russia-eye-new-peace-talks-but-steep-obstacles-remain", "date": "2026-10-24"},
+   {"title": "Russia and Ukraine trade fresh strikes despite renewed push for U.S.-brokered peace talks (CNBC)", "url": "https://www.cnbc.com/2026/10/23/russia-ukraine-strikes-peace-talks.html", "date": "2026-10-23"},
+   {"title": "Ukraine and Russia eye new peace talks (Washington Post)", "url": "https://www.washingtonpost.com/world/2026/10/24/russia-ukraine-war-putin-zelenskyy-trump-witkoff/7e0bc22c-cf8d-11f1-ac04-9f58578a68b4_story.html", "date": "2026-10-24"}
+  ],
+  "p": 0.09
+ },
+ "0x67f3f8d0a0ecdfc008c99650284a4674388a8c3029b0eb7ca0abd65dde8d996f": {
+  "base_rate": {
+   "reference_class": "Deposed and externally imprisoned heads of state regaining the official position within the same year: essentially 0% historically (Noriega 1989 analog: never restored)",
+   "value": 0.01,
+   "source": "Historical record of US-removed leaders (Noriega precedent); 2026 US intervention timeline"
+  },
+  "evidence": [
+   "2026-01-03: US forces struck Caracas and captured Maduro and Cilia Flores; both flown to New York and indicted on drug-trafficking charges, pleading not guilty (PBS, CBS, NBC).",
+   "2026-01+: Venezuela's Supreme Court appointed Delcy Rodriguez acting president (initially for 90 days); she remains the governing head of state under heavy US leverage as of the CFR tracker update ~2026-10-19.",
+   "2026: Trump says US troops stay off the ground as long as Rodriguez 'does what we want'; US holds seized oil (up to 50M barrels) as leverage; sanctions lifted on oil trade, industry privatization underway (Time, Wikipedia 2026 US intervention).",
+   "2026-10: Maduro remains jailed in New York awaiting trial; no credible reporting of any restoration path, and the UN head-of-state listing would reflect the Rodriguez government."
+  ],
+  "strongest_opposing_case": "The resolution turns on official Venezuelan-government/UN designation on Dec 31; if Chavista institutions (which CFR notes remain largely intact) defiantly re-proclaimed the absent Maduro as de jure head of state and the UN protocol list lagged, an ambiguous listing could theoretically still name him.",
+  "reasoning_summary": "Base rate: leaders captured, extradited and criminally charged abroad are restored to office within the year ~0% of the time. Maduro has been imprisoned in New York since January 2026 and Delcy Rodriguez holds the acting presidency under US supervision; nothing in reporting through late October suggests reversal. Tiny residual for designation ambiguity or a wildcard political deal. Final: 0.02.",
+  "key_sources": [
+   {"title": "U.S. strikes Venezuela and says leader Maduro has been captured and flown out of the country (PBS)", "url": "https://www.pbs.org/newshour/world/us-strikes-venezuela-and-says-its-leader-maduro-has-been-captured-and-flown-out-of-the-country", "date": "2026-01"},
+   {"title": "Instability in Venezuela (CFR Global Conflict Tracker)", "url": "https://www.cfr.org/global-conflict-tracker/conflict/instability-venezuela", "date": "2026-10-19"},
+   {"title": "2026 United States intervention in Venezuela (Wikipedia)", "url": "https://en.wikipedia.org/wiki/2026_United_States_intervention_in_Venezuela", "date": "2026"}
+  ],
+  "p": 0.02
+ },
+ "0xfba1944e3a766b128d79d1c344e6b87bbbcd422a9eebe8a2111d4cf97262f238": {
+  "base_rate": {
+   "reference_class": "Conversion of 'talks expected next month' announcements in this war into an actual in-person round within ~5 weeks: mixed record - 2025 Istanbul and three 2026 rounds did convene after similar announcements, but the Feb-Oct 2026 gap shows 8-month stalls despite continuous 'imminent talks' rhetoric",
+   "value": 0.45,
+   "source": "2025-2026 RU-UA negotiation convening record (AP/Washington Post)"
+  },
+  "evidence": [
+   "2026-10-24: Putin says Moscow is ready to resume US-mediated talks with Kyiv in NOVEMBER - squarely inside this market's window (deadline Nov 30) - but no date, venue, or Ukrainian confirmation yet (AP).",
+   "2026-10-23/24: Active US shuttle (Witkoff; Melania Trump channel); Kyiv signals openness to a freeze-then-talk sequence, so both sides are nominally willing to sit down (CNBC, Washington Post).",
+   "Qualifying bar: the meeting must substantively address ceasefire/peace/territory - a fourth Trump-brokered round like Geneva (Feb 2026) would clearly qualify, including indirect proximity formats via authorized mediators.",
+   "Caution: last qualifying round was ~8 months ago; Trump-Zelensky relations at a reported low; Russia conditions substance on maximalist demands, and preparatory delays routinely push announced rounds past target dates."
+  ],
+  "strongest_opposing_case": "Putin said 'November', which can mean Nov 30 or slip to December with zero penalty for Moscow; eight months have passed since Geneva despite identical rhetoric, pre-round agenda fights (ceasefire-first vs. settlement-first) are unresolved, and a five-week deadline leaves no slack for the usual slippage.",
+  "reasoning_summary": "Base rate ~0.45 for converting an announced intent into a convened round within 5 weeks in this war. Adjust up for an unusually specific leader-level commitment (Putin naming November), intense concurrent US mediation, and broad qualifying formats (indirect proximity talks count); adjust down for zero scheduled date, sequencing deadlock, and the hard Nov 30 cutoff that a early-December round would miss. Final: 0.45.",
+  "key_sources": [
+   {"title": "Ukraine and Russia eye new peace talks, but steep obstacles remain (AP)", "url": "https://www.mprnews.org/story/2026/10/24/ukraine-and-russia-eye-new-peace-talks-but-steep-obstacles-remain", "date": "2026-10-24"},
+   {"title": "Ukraine and Russia eye new peace talks - and Melania Trump's mission (Washington Post)", "url": "https://www.washingtonpost.com/world/2026/10/24/russia-ukraine-war-putin-zelenskyy-trump-witkoff/7e0bc22c-cf8d-11f1-ac04-9f58578a68b4_story.html", "date": "2026-10-24"},
+   {"title": "Russia and Ukraine trade fresh strikes despite renewed push for U.S.-brokered peace talks (CNBC)", "url": "https://www.cnbc.com/2026/10/23/russia-ukraine-strikes-peace-talks.html", "date": "2026-10-23"}
+  ],
+  "p": 0.45
+ }
+}

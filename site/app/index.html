@@ -1,0 +1,940 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Psephos</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: five views (home / ask / explore / record / changed) behind one top nav; ledger aesthetic, calmer hierarchy. */
+:root{
+  --bg:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+  --grid:#e1e0d9; --baseline:#c3c2b7; --ring:rgba(11,11,11,.10);
+  --accent:#2a78d6; --accent-ink:#1c5cab;
+  --good:#0ca30c; --good-text:#006300; --warning:#fab219; --serious:#ec835a; --critical:#d03b3b;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#6250d6;
+  --sans:"Libre Franklin",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0d0d0d; --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --baseline:#383835; --ring:rgba(255,255,255,.10);
+    --accent:#3987e5; --accent-ink:#86b6ef;
+    --good:#0ca30c; --good-text:#0ca30c; --warning:#fab219; --serious:#ec835a; --critical:#d03b3b;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#9085e9;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0d0d0d; --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781;
+  --grid:#2c2c2a; --baseline:#383835; --ring:rgba(255,255,255,.10);
+  --accent:#3987e5; --accent-ink:#86b6ef;
+  --good:#0ca30c; --good-text:#0ca30c; --warning:#fab219; --serious:#ec835a; --critical:#d03b3b;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#9085e9;
+  color-scheme:dark;
+}
+body{background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.55;
+  padding-left:max(16px,env(safe-area-inset-left,0px)); padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:0;}
+.wrap{max-width:860px; margin:0 auto; padding-block:22px 64px;}
+/* nav */
+nav{display:flex; flex-wrap:wrap; align-items:center; gap:4px 18px; border-bottom:2px solid var(--ink); padding-bottom:12px;}
+.brand{font-size:24px; font-weight:800; letter-spacing:-.02em; margin-right:auto; cursor:pointer;}
+.brand .ps{color:var(--accent);}
+.navlink{font:inherit; font-size:14px; font-weight:500; color:var(--ink2); background:none; border:none; cursor:pointer; padding:6px 2px; border-bottom:2px solid transparent; margin-bottom:-14px;}
+.navlink[aria-current="true"]{color:var(--ink); font-weight:600; border-bottom-color:var(--accent);}
+.navlink:focus-visible{outline:2px solid var(--accent); outline-offset:1px;}
+/* hero */
+.hero{margin:30px 0 8px;}
+.hero h1{margin:0 0 10px; font-size:30px; font-weight:800; letter-spacing:-.015em; text-wrap:balance;}
+.hero p{margin:0; font-size:16px; color:var(--ink2); max-width:62ch;}
+.statstrip{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:10px; margin:22px 0;}
+.stat{background:var(--surface); border:1px solid var(--ring); border-radius:8px; padding:14px 16px;}
+.stat .v{font-size:28px; font-weight:800; line-height:1.1;}
+.stat .v small{font-size:14px; font-weight:600; color:var(--ink2);}
+.stat .k{font-size:12.5px; color:var(--ink2); margin-top:4px;}
+h2.sec{font-size:13px; letter-spacing:.09em; text-transform:uppercase; color:var(--muted); border-bottom:1px solid var(--grid); padding-bottom:7px; margin:34px 0 14px; font-weight:600;}
+/* how it works */
+.steps{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px;}
+.step{background:var(--surface); border:1px solid var(--ring); border-radius:8px; padding:14px 16px; font-size:13.5px; color:var(--ink2);}
+.step b{display:block; color:var(--ink); font-size:14.5px; margin-bottom:5px;}
+.step .n{font-family:var(--mono); color:var(--accent); font-weight:600; margin-right:6px;}
+/* cards */
+.cards{display:grid; gap:10px;}
+.card{background:var(--surface); border:1px solid var(--ring); border-radius:8px; padding:14px 16px; cursor:pointer;}
+.card:hover{border-color:var(--accent);}
+.card:focus-visible{outline:2px solid var(--accent); outline-offset:1px;}
+.cardtop{display:flex; flex-wrap:wrap; gap:6px 12px; align-items:center;}
+.card h3{margin:0; font-size:16px; font-weight:600; flex:1 1 200px; min-width:0;}
+.card .q{font-size:14px; color:var(--ink); margin:6px 0 2px;}
+.card .sub{font-size:13px; color:var(--ink2);}
+.badge{font-family:var(--mono); font-size:10.5px; font-weight:600; letter-spacing:.04em; padding:3px 9px; border-radius:4px; white-space:nowrap;}
+.b-live{background:var(--accent); color:#fff;}
+.b-retro{background:none; border:1px solid var(--baseline); color:var(--ink2);}
+.b-resolved{background:none; border:1px solid var(--good); color:var(--good-text);}
+.b-nodata{background:none; border:1px dashed var(--baseline); color:var(--muted);}
+.vchip{font-family:var(--mono); font-size:11px; font-weight:600; padding:2px 8px; border-radius:4px; white-space:nowrap;}
+.v-callyes,.v-callno{background:var(--accent); color:#fff;}
+.v-watch{background:none; border:1px solid var(--baseline); color:var(--ink2);}
+.v-flag{background:none; border:1.5px solid var(--serious); color:var(--serious);}
+.v-ok{background:var(--good); color:#fff;}
+.v-bad{background:var(--critical); color:#fff;}
+.v-nopoll{background:none; border:1px dashed var(--baseline); color:var(--muted);}
+/* legend bar */
+.legendbar{background:var(--surface); border:1px solid var(--ring); border-radius:8px; padding:10px 14px; font-size:12.5px; color:var(--ink2); display:flex; flex-wrap:wrap; gap:6px 20px; margin:14px 0;}
+.legendbar span{display:inline-flex; align-items:center; gap:7px;}
+/* search */
+.searchrow{display:flex; gap:10px; margin:18px 0 10px; flex-wrap:wrap;}
+#q{flex:1 1 260px; min-width:0; font:inherit; font-size:16px; padding:11px 14px; border:1.5px solid var(--baseline);
+  border-radius:8px; background:var(--surface); color:var(--ink);}
+#q:focus{outline:2px solid var(--accent); outline-offset:1px; border-color:var(--accent);}
+.chips{display:flex; gap:6px; flex-wrap:wrap; align-items:center;}
+.chip{font:inherit; font-size:13px; padding:7px 12px; border-radius:999px; border:1px solid var(--baseline);
+  background:none; color:var(--ink2); cursor:pointer;}
+.chip[aria-pressed="true"]{background:var(--ink); color:var(--bg); border-color:var(--ink); font-weight:600;}
+.chip:focus-visible{outline:2px solid var(--accent); outline-offset:1px;}
+.hint{font-size:13px; color:var(--muted); margin:2px 0 14px;}
+.hint button{font:inherit; font-size:13px; color:var(--accent-ink); background:none; border:none; cursor:pointer; text-decoration:underline; padding:0 2px;}
+/* detail */
+.back{font:inherit; font-size:14px; color:var(--accent-ink); background:none; border:none; cursor:pointer; padding:6px 0; text-decoration:underline;}
+.dhead{display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 14px; margin:4px 0 2px;}
+.dhead h2{margin:0; font-size:24px; font-weight:800; letter-spacing:-.01em;}
+.bottomline{font-size:15px; margin:8px 0 2px;}
+.meta{font-family:var(--mono); font-size:11.5px; color:var(--muted); margin:6px 0 16px; word-break:break-all;}
+section.block{margin:24px 0;}
+section.block>h4{margin:0 0 10px; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); border-bottom:1px solid var(--grid); padding-bottom:6px; font-weight:600;}
+details.fold{border:1px solid var(--ring); border-radius:8px; background:var(--surface); padding:10px 14px; margin:12px 0;}
+details.fold summary{cursor:pointer; font-size:13.5px; font-weight:600; color:var(--ink2);}
+details.fold summary:focus-visible{outline:2px solid var(--accent); outline-offset:1px;}
+.bloc{display:grid; grid-template-columns:110px 1fr; gap:4px 14px; align-items:center; margin:12px 0;}
+.bloc .bn{font-weight:600; font-size:14px; display:flex; align-items:center; gap:7px; min-width:0;}
+.swatch{width:10px; height:10px; border-radius:3px; flex:none;}
+.bloc .nums{grid-column:2; font-family:var(--mono); font-size:12px; color:var(--ink2);}
+.track{position:relative; height:22px; background:var(--surface); border:1px solid var(--grid); border-radius:4px; min-width:0;}
+.range{position:absolute; top:4px; bottom:4px; border-radius:4px; opacity:.45;}
+.medtick{position:absolute; top:2px; bottom:2px; width:3px; border-radius:2px;}
+.actual{position:absolute; top:50%; width:11px; height:11px; transform:translate(-50%,-50%) rotate(45deg); background:var(--ink); border:1.5px solid var(--bg);}
+.majline{position:absolute; top:-3px; bottom:-3px; width:0; border-left:2px dashed var(--baseline);}
+.majlab{position:absolute; top:-18px; transform:translateX(-50%); font-family:var(--mono); font-size:10px; color:var(--muted); white-space:nowrap;}
+.legend{display:flex; flex-wrap:wrap; gap:4px 18px; font-size:12px; color:var(--ink2); margin-top:10px;}
+.legend span{display:inline-flex; align-items:center; gap:6px;}
+.lg-actual{width:9px;height:9px;transform:rotate(45deg);background:var(--ink);display:inline-block;}
+.lg-med{width:3px;height:12px;border-radius:2px;background:var(--ink2);display:inline-block;}
+.lg-maj{width:12px;height:0;border-top:2px dashed var(--baseline);display:inline-block;}
+table.gate{width:100%; border-collapse:collapse; font-size:13px;}
+table.gate th{font-size:11px; letter-spacing:.05em; text-transform:uppercase; color:var(--muted); font-weight:500; text-align:left; padding:6px 8px; border-bottom:1px solid var(--grid);}
+table.gate td{padding:7px 8px; border-bottom:1px solid var(--grid); vertical-align:top;}
+table.gate td.num{font-family:var(--mono); font-variant-numeric:tabular-nums; font-size:12px; white-space:nowrap;}
+.gatewrap{overflow-x:auto;}
+ul.plain{margin:0; padding-left:18px; font-size:13.5px; color:var(--ink2);}
+ul.plain li{margin:7px 0;}
+ul.plain b{color:var(--ink);}
+/* calendar */
+.calhead{display:flex; align-items:center; gap:10px; margin:18px 0 10px; flex-wrap:wrap;}
+.callabel{font-size:18px; font-weight:800; min-width:170px; text-align:center;}
+.calnav{font:inherit; font-size:14px; padding:7px 13px; border-radius:8px; border:1px solid var(--baseline); background:var(--surface); color:var(--ink); cursor:pointer;}
+.calnav:hover{border-color:var(--accent);}
+.calnav:focus-visible{outline:2px solid var(--accent); outline-offset:1px;}
+.caltoday{margin-left:auto; color:var(--accent-ink);}
+.calbanner{background:var(--surface); border:1px solid var(--ring); border-left:3px solid var(--accent); border-radius:0 8px 8px 0; padding:9px 14px; margin:8px 0; font-size:13.5px; color:var(--ink2); cursor:pointer;}
+.calbanner:hover{border-color:var(--accent);}
+.calbanner b{color:var(--ink);}
+.calgridwrap{border:1px solid var(--ring); border-radius:10px; background:var(--surface); padding:10px; margin:12px 0;}
+.calgrid{display:grid; grid-template-columns:repeat(7,1fr); gap:4px;}
+.calweekdays div{font-family:var(--mono); font-size:10px; letter-spacing:.05em; color:var(--muted); text-align:center; padding:4px 0 8px;}
+.daycell{min-height:72px; border:1px solid var(--grid); border-radius:6px; padding:4px 5px; font-size:11px; position:relative; min-width:0;}
+.daycell.out{opacity:.35; border-style:dashed;}
+.daycell.today{border-color:var(--accent); border-width:2px;}
+.daycell .dn{font-family:var(--mono); font-size:10px; color:var(--muted);}
+.daycell.today .dn{color:var(--accent-ink); font-weight:700;}
+.evchip{display:block; width:100%; text-align:left; font:inherit; font-size:10px; line-height:1.25; margin-top:3px; padding:2px 5px; border-radius:4px; background:var(--accent); color:#fff; border:none; cursor:pointer; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.evchip.small{background:none; border:1px solid var(--baseline); color:var(--ink2);}
+.evchip:focus-visible{outline:2px solid var(--accent); outline-offset:1px;}
+.evmore{font-size:9.5px; color:var(--muted); margin-top:2px;}
+.evchip.c-sport{background:var(--s3);} .evchip.c-movie{background:var(--s5);} .evchip.c-india{background:var(--s4);} .evchip.c-auto{background:var(--s2);} .evchip.c-space{background:var(--s6);}
+@media (max-width:560px){ .daycell{min-height:52px; padding:3px 3px;} .evchip{font-size:0; padding:0; height:7px; border-radius:3px;} .evchip.small{height:5px;} }
+/* ask */
+.askrow{display:flex; gap:10px; margin:18px 0 8px; flex-wrap:wrap; align-items:flex-start;}
+#askq{flex:1 1 300px; min-width:0; font:inherit; font-size:16px; padding:11px 14px; border:1.5px solid var(--baseline); border-radius:8px; background:var(--surface); color:var(--ink); resize:vertical;}
+#askq:focus{outline:2px solid var(--accent); outline-offset:1px; border-color:var(--accent);}
+.askbtns{display:flex; gap:8px;}
+.askgo{font:inherit; font-size:15px; font-weight:600; padding:11px 22px; border-radius:8px; border:none; background:var(--accent); color:#fff; cursor:pointer;}
+.askgo:disabled{opacity:.5; cursor:default;}
+.askgo:focus-visible,.askstopb:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+.askstopb{font:inherit; font-size:15px; padding:11px 16px; border-radius:8px; border:1px solid var(--baseline); background:none; color:var(--ink2); cursor:pointer;}
+.answer{background:var(--surface); border:1px solid var(--ring); border-radius:10px; padding:18px 20px; margin:14px 0;}
+.answer .ptop{display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px;}
+.answer .pnum{font-size:42px; font-weight:800; line-height:1; font-variant-numeric:tabular-nums;}
+.answer .plab{font-size:13.5px; color:var(--ink2); max-width:40ch;}
+.pbar{height:10px; border-radius:6px; background:var(--grid); position:relative; margin:14px 0 4px; overflow:hidden;}
+.pbar>div{position:absolute; top:0; bottom:0; left:0; background:var(--accent); border-radius:6px;}
+.pscale{display:flex; justify-content:space-between; font-family:var(--mono); font-size:10px; color:var(--muted); margin-bottom:8px;}
+.answer h5{margin:16px 0 6px; font-size:11px; letter-spacing:.07em; text-transform:uppercase; color:var(--muted); font-weight:600;}
+.answer ul{margin:0; padding-left:18px; font-size:13.5px; color:var(--ink2);}
+.answer li{margin:5px 0;}
+.answer .resline{font-size:13px; color:var(--ink2); border-left:3px solid var(--baseline); padding:4px 10px; margin:8px 0;}
+.thinking{font-size:14px; color:var(--ink2); padding:16px 0;}
+.thinking .dots::after{content:""; animation:dots 1.5s steps(4,end) infinite;}
+@keyframes dots{0%{content:""}25%{content:"."}50%{content:".."}75%{content:"..."}}
+@media (prefers-reduced-motion: reduce){.thinking .dots::after{content:"...";animation:none;}}
+.empty{background:var(--surface); border:1px solid var(--ring); border-radius:8px; padding:20px; font-size:14.5px; color:var(--ink2);}
+.empty h3{margin:0 0 8px; color:var(--ink); font-size:17px;}
+.prose{font-size:14.5px; color:var(--ink2); max-width:68ch;}
+.prose b{color:var(--ink);}
+/* changelog */
+.chgdate{font-family:var(--mono); font-size:12px; font-weight:600; color:var(--muted); letter-spacing:.06em; border-bottom:1px solid var(--grid); padding-bottom:6px; margin:26px 0 10px;}
+.chgentry{background:var(--surface); border:1px solid var(--ring); border-radius:8px; padding:12px 16px; margin:8px 0;}
+.chgentry b.t{font-size:14.5px;}
+.chgentry ul{margin:6px 0 0; padding-left:18px; font-size:13.5px; color:var(--ink2);}
+.chgentry li{margin:4px 0;}
+.chgkind{font-family:var(--mono); font-size:10px; font-weight:600; letter-spacing:.05em; padding:2px 7px; border-radius:4px; margin-left:8px; white-space:nowrap; vertical-align:2px;}
+.k-run{background:none; border:1px solid var(--baseline); color:var(--ink2);}
+.k-ledger{background:none; border:1px solid var(--accent); color:var(--accent-ink);}
+/* ask ledger */
+.askrowcard{cursor:default;}
+.askrowcard h3{font-weight:500; font-size:14.5px;}
+footer{margin-top:44px; border-top:1px solid var(--grid); padding-top:14px; font-size:12.5px; color:var(--muted); line-height:1.6;}
+@media (max-width:560px){ .bloc{grid-template-columns:1fr;} .bloc .nums{grid-column:1;} .hero h1{font-size:24px;} }
+@media (prefers-reduced-motion: no-preference){ .card{transition:border-color .15s;} }
+</style>
+<div class="wrap">
+<nav>
+  <div class="brand" id="brand">Psephos<span class="ps">.</span></div>
+  <button class="navlink" data-view="home" aria-current="true">Home</button>
+  <button class="navlink" data-view="cal" aria-current="false">Calendar</button>
+  <button class="navlink" data-view="ask" aria-current="false">Ask</button>
+  <button class="navlink" data-view="all" aria-current="false">All forecasts</button>
+  <button class="navlink" data-view="record" aria-current="false">Track record</button>
+  <button class="navlink" data-view="changed" aria-current="false">What changed</button>
+</nav>
+
+<!-- ============ HOME ============ -->
+<div id="view-home">
+  <div class="hero">
+    <h1>Forecasts that tell you when they can be trusted.</h1>
+    <p>Psephos forecasts elections and world events using several independent methods at once &mdash; statistical models, polls, markets, and research. When they all agree beyond 95%, it certifies a <b>CALL</b>. When they don't, it says so honestly: the question is open, and here is what would settle it. Every forecast is hash-stamped before the event and scored after &mdash; misses included.</p>
+  </div>
+  <div class="statstrip" id="homestats"></div>
+  <h2 class="sec">Live forecasts</h2>
+  <div class="cards" id="homelive"></div>
+  <h2 class="sec">How it works</h2>
+  <div class="steps">
+    <div class="step"><b><span class="n">1</span>Independent methods</b>Each question is answered by instruments that can't fail the same way: structural models that read no news, poll averages corrected for measured pollster bias, betting markets, and a research pass. Their errors are measured, not assumed.</div>
+    <div class="step"><b><span class="n">2</span>The gate</b>A CALL is issued only when the instruments independently clear 95%. Otherwise the verdict is WATCH &mdash; genuinely open &mdash; with tripwires naming exactly what would change it. Safety rules (like a new party with no electoral history) can suppress calls entirely.</div>
+    <div class="step"><b><span class="n">3</span>A provable record</b>Every forecast is SHA-256 hashed the moment it's made and anchored into the Bitcoin blockchain via OpenTimestamps, then scored once the event resolves. The track record cannot be quietly edited &mdash; by anyone, including us.</div>
+  </div>
+  <h2 class="sec">Recently resolved &mdash; including the misses</h2>
+  <div class="cards" id="homeresolved"></div>
+  <p class="hint" style="margin-top:10px">Looking for something specific? <button data-goto="all">Browse all forecasts</button> &mdash; 60+ elections and events, searchable. Or <button data-goto="ask">ask your own question</button> and get an instant estimate.</p>
+</div>
+
+<!-- ============ CALENDAR ============ -->
+<div id="view-cal" hidden>
+  <div class="hero"><h1>The moments that matter.</h1>
+  <p>Every date here is a moment the engine has skin in: a match it has pre-registered, an election it has forecast, a resolution that will score it. Pick an event to see its prediction.</p></div>
+  <div class="calhead">
+    <button class="calnav" id="calprev" aria-label="Previous month">&larr;</button>
+    <div class="callabel" id="callabel"></div>
+    <button class="calnav" id="calnext" aria-label="Next month">&rarr;</button>
+    <button class="calnav caltoday" id="caltoday">Today</button>
+  </div>
+  <div id="calbanners"></div>
+  <div class="calgridwrap">
+    <div class="calgrid calweekdays" id="calwd"></div>
+    <div class="calgrid" id="calgrid"></div>
+  </div>
+  <h2 class="sec">Coming up</h2>
+  <div class="cards" id="calagenda"></div>
+</div>
+
+<!-- ============ ASK ============ -->
+<div id="view-ask" hidden>
+  <div class="hero"><h1>Ask about any future event.</h1>
+  <p>Type a question about something that hasn't happened yet. Claude will research it the way this engine's protocol demands: base rate first, strongest case against, honest about what it can't know. You get an <b>instant estimate</b> &mdash; one instrument's view, clearly labeled. It is never a certified CALL: those require multiple independent methods agreeing at 95%, and no single answer can earn that.</p></div>
+  <div class="askrow">
+    <textarea id="askq" rows="2" placeholder="e.g. Will the gold price close higher on 31 Oct than it did today?" aria-label="Your question"></textarea>
+    <div class="askbtns"><button id="askbtn" class="askgo">Ask</button><button id="askstop" class="askstopb" hidden>Stop</button></div>
+  </div>
+  <p class="hint">Try: <button data-askt="Will the gold price close higher on 31 October 2026 than on 23 October 2026?">Gold up by Oct 31?</button> &middot; <button data-askt="Will India win the ICC Cricket World Cup 2027?">India wins CWC 2027?</button> &middot; <button data-askt="Will Bitcoin trade above $150,000 at any point before 31 December 2026?">Bitcoin above $150k in 2026?</button> &middot; <button data-askt="Will the next James Bond actor be announced before July 2027?">Next Bond announced by Jul 2027?</button></p>
+  <div id="askout"></div>
+  <p class="hint" id="asknote" style="margin-top:14px">Instant estimates run on your own Claude account (you'll be asked to allow it once). They reason from general knowledge and base rates &mdash; they cannot fetch live prices or today's news, and they will tell you what they're missing. Research, not financial advice.</p>
+  <h2 class="sec">The public Ask ledger &mdash; this instrument scores itself</h2>
+  <p class="prose">Any estimate can be saved to a shared, anonymous ledger &mdash; question, probability, date; no name. The weekly autopilot run checks every saved estimate past its resolution date against public sources and scores it. Hits and misses both stay on the page. No other answer box keeps its own report card.</p>
+  <div id="askcal"></div>
+  <div id="asklist" class="cards" aria-live="polite" style="margin-top:14px"></div>
+</div>
+
+<!-- ============ EXPLORE ============ -->
+<div id="view-all" hidden>
+  <div class="searchrow">
+    <input id="q" type="search" placeholder="Search &mdash; a state, a year, an event" aria-label="Search forecasts">
+    <div class="chips" role="group" aria-label="Filter by type">
+      <button class="chip" data-f="all" aria-pressed="true">All</button>
+      <button class="chip" data-f="live" aria-pressed="false">Live</button>
+      <button class="chip" data-f="world" aria-pressed="false">World events</button>
+      <button class="chip" data-f="matches" aria-pressed="false">Matches</button>
+      <button class="chip" data-f="resolved-forward" aria-pressed="false">Resolved</button>
+      <button class="chip" data-f="retrodiction" aria-pressed="false">Backtests</button>
+    </div>
+  </div>
+  <p class="hint">Try: <button data-try="UP 2027">UP 2027</button> &middot; <button data-try="US midterms">US midterms</button> &middot; <button data-try="Premier League">Premier League</button> &middot; <button data-try="Cricket World Cup">Cricket World Cup</button> &middot; <button data-try="Punjab">Punjab</button> &middot; <button data-try="Bihar">Bihar</button></p>
+  <div class="legendbar"><span><span class="vchip v-callyes">CALL</span> certified &mdash; all instruments &ge;95%</span><span><span class="vchip v-watch">WATCH</span> genuinely open</span><span><span class="vchip v-flag">WATCH-FLAG</span> safety rule suppresses calls</span><span><span class="vchip v-ok">&#10003;</span>/<span class="vchip v-bad">&#10007;</span> resolved right / wrong</span></div>
+  <div id="list" class="cards" aria-live="polite"></div>
+</div>
+
+<!-- ============ TRACK RECORD ============ -->
+<div id="view-record" hidden>
+  <div class="hero"><h1>The record, in full.</h1>
+  <p>A forecaster's only real credential is a scored, tamper-proof history. Everything below is computed from the pre-registration ledgers &mdash; every probability ever issued, scored at resolution, wrong calls displayed in red on their own pages.</p></div>
+  <div class="statstrip" id="recstats"></div>
+  <div id="recdetail"></div>
+</div>
+
+<!-- ============ WHAT CHANGED ============ -->
+<div id="view-changed" hidden>
+  <div class="hero"><h1>What the engine did, week by week.</h1>
+  <p>Every autopilot run and every ledger event, newest first: polls admitted, forecasts registered and re-registered, verdicts that moved, resolutions scored. This page is rebuilt from the append-only ledgers and the run log &mdash; nothing here is written by hand, and nothing is ever edited after the fact.</p></div>
+  <div id="chglist"></div>
+</div>
+
+<!-- ============ DETAIL ============ -->
+<div id="detail" hidden></div>
+
+<footer>
+  <p>Psephos is probabilistic analysis for research, not advice. Election data: TCPD/Lok Dhaba, DataMeet, ECI via public mirrors; polls from pre-election frozen Wikipedia revisions; markets via public APIs. Ledgers anchored via OpenTimestamps. Trueinfo Labs &middot; data generated <span id="gen"></span>.</p>
+</footer>
+</div>
+<script>
+const SEATS={UP:[403,202],WB:[294,148],TN:[234,118],BR:[243,122],KA:[224,113],MH:[288,145],MP:[230,116],RJ:[200,101],GJ:[182,92],KL:[140,71],PB:[117,59],HR:[90,46],DL:[70,36],UK:[70,36],JH:[81,41],CG:[90,46],AS:[126,64],TG:[119,60],HP:[68,35],GA:[40,21],MN:[60,31]};
+const ALIAS={up:"UP","uttar pradesh":"UP",punjab:"PB",uttarakhand:"UK",uk:"UK",goa:"GA",manipur:"MN",gujarat:"GJ",himachal:"HP","himachal pradesh":"HP",bihar:"BR",bengal:"WB","west bengal":"WB",wb:"WB","tamil nadu":"TN",tamilnadu:"TN",tn:"TN",kerala:"KL",assam:"AS",karnataka:"KA",maharashtra:"MH","madhya pradesh":"MP",mp:"MP",rajasthan:"RJ",delhi:"DL",haryana:"HR",jharkhand:"JH",chhattisgarh:"CG",telangana:"TG",pb:"PB",br:"BR",ka:"KA",mh:"MH",rj:"RJ",dl:"DL",hr:"HR",jh:"JH",cg:"CG",tg:"TG",kl:"KL",as:"AS",gj:"GJ",hp:"HP",ga:"GA",mn:"MN"};
+const WORLD_ALIAS={us:"USMID2026",usa:"USMID2026",america:"USMID2026",american:"USMID2026",midterm:"USMID2026",midterms:"USMID2026",house:"USMID2026",senate:"USMID2026",congress:"USMID2026",governor:"USMID2026",governors:"USMID2026",gubernatorial:"USMID2026",epl:"EPL2027",premier:"EPL2027",football:"EPL2027",soccer:"EPL2027",league:"EPL2027",arsenal:"EPL2027",city:"EPL2027",liverpool:"EPL2027",cricket:"CWC2027",icc:"CWC2027",cwc:"CWC2027",odi:"CWC2027",cup:"CWC2027",worldcup:"CWC2027"};
+const QMAP={UP2027:"Who wins Uttar Pradesh?",PB2027:"Who wins Punjab?",UK2027:"Who wins Uttarakhand?",USMID2026:"Who wins the US midterms - the House, the Senate, and all 71 governor and Senate races?",EPL2027:"Who wins the Premier League?",CWC2027:"Who wins the Cricket World Cup?"};
+const RESOLVES={USMID2026:"Resolves 3 Nov 2026",EPL2027:"Resolves May 2027",CWC2027:"Resolves Nov 2027",UP2027:"Election expected Feb-Mar 2027",PB2027:"Election expected Feb 2027",UK2027:"Election expected Feb 2027"};
+const SC=["--s1","--s2","--s3","--s4","--s5","--s6"];
+const NAMEMAP={house_dem:"Democrats (House)",house_rep:"Republicans (House)",senate_dem:"Democrats (Senate)"};
+const pname=n=>NAMEMAP[n]||n;
+let DATA=null, filter="all", query="";
+
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const pct=p=>p==null?"&mdash;":(p*100).toFixed(p>=0.995||p<=0.005?1:0)+"%";
+
+function vchip(v,correct){
+  if(v==null) return "";
+  let cls="v-watch", label=v;
+  if(v.startsWith("CALL")){
+    if(correct===true){cls="v-ok";label=v+" &#10003;";}
+    else if(correct===false){cls="v-bad";label=v+" &#10007;";}
+    else cls="v-callyes";
+  } else if(v==="WATCH-FLAG") cls="v-flag";
+  else if(v==="WATCH-NOPOLL"||v==="WATCH-1INST") cls="v-nopoll";
+  return `<span class="vchip ${cls}">${esc(label)}</span>`;
+}
+function statusBadge(e){
+  return {live:'<span class="badge b-live">LIVE</span>',
+    "resolved-forward":'<span class="badge b-resolved">RESOLVED</span>',
+    retrodiction:'<span class="badge b-retro">BACKTEST</span>',
+    nodata:'<span class="badge b-nodata">AWAITING DATA</span>'}[e.status]||"";
+}
+function headline(e){
+  if(e.status==="nodata") return e.flags[0]||"Not forecastable yet.";
+  if(e.kind==="matches"){
+    if(e.mw_summary&&e.mw_summary.n)
+      return `Scored: favourites won ${e.mw_summary.fav_hits} of ${e.mw_summary.n}; accuracy (3-way Brier) ${e.mw_summary.brier3.toFixed(3)} where 0.667 = pure guessing`;
+    const pk=e.matches.map(m=>Math.max(m.pH??0,m.pD??0,m.pA??0));
+    const ncl=pk.filter(p=>p>=0.5).length, ncc=pk.filter(p=>p<0.45).length;
+    return `${e.matches.length} fixtures locked before kickoff &mdash; ${ncl} clear favourite${ncl===1?"":"s"}, ${ncc} too close to call. Tap for the picks.`;
+  }
+  const calls=e.questions.filter(q=>String(q.verdict||"").startsWith("CALL"));
+  const flags=e.questions.some(q=>q.verdict==="WATCH-FLAG");
+  if(e.status==="live"){
+    let s;
+    if(e.domain){
+      const cs=worldCombined(e);
+      const lead=cs[0], sec=cs[1];
+      const open=lead&&sec&&(lead.p-sec.p<0.2||cs.some(x=>x.gap>=0.25));
+      s=lead?`Best combined read: <b>${esc(pname(lead.name))}</b> ${pct(lead.p)}${sec?` vs ${esc(pname(sec.name))} ${pct(sec.p)}`:""}${open?" &mdash; genuinely open; the methods disagree (tap to see why)":""}`:"";
+    }else{
+      const lead=[...e.blocs].sort((a,b)=>(b.p_largest??0)-(a.p_largest??0))[0];
+      s=lead?`Leaning <b>${esc(lead.name)}</b> (${pct(lead.p_largest)} to finish largest) &mdash; not yet callable`:"";
+    }
+    if(calls.length) s+=` &middot; ${calls.length} certified CALL${calls.length>1?"s":""} open`;
+    if(flags) s+=` &middot; safety flag active`;
+    return s;
+  }
+  const ok=calls.filter(q=>q.correct===true).length, bad=calls.filter(q=>q.correct===false).length;
+  const win=[...e.blocs].sort((a,b)=>(b.actual??-1)-(a.actual??-1))[0];
+  let s=win&&win.actual!=null?`Result: <b>${esc(win.name)}</b> ${win.actual} seats`:"";
+  if(calls.length) s+=` &middot; calls ${ok}/${calls.length} right${bad?` <b style="color:var(--critical)">(${bad} wrong)</b>`:""}`;
+  else s+=" &middot; no calls issued, correctly &mdash; the instruments disagreed";
+  return s;
+}
+function card(e,withQ){
+  return `<div class="card" tabindex="0" role="button" data-id="${esc(e.id)}">
+     <div class="cardtop"><h3>${esc(e.title)}</h3>${e.domain?`<span class="badge b-retro">${esc(e.domain.toUpperCase())}</span>`:""}${statusBadge(e)}</div>
+     ${withQ&&QMAP[e.id]?`<div class="q">${esc(QMAP[e.id])}${RESOLVES[e.id]?` <span style="color:var(--muted)">&middot; ${esc(RESOLVES[e.id])}</span>`:""}</div>`:""}
+     <div class="sub">${headline(e)}</div></div>`;
+}
+
+/* ---------- views ---------- */
+function show(view){
+  for(const v of ["home","all","record","ask","changed","cal"]) $("#view-"+v).hidden=(v!==view);
+  if(view==="cal"&&DATA){ if(calY==null) calInit(); else renderCal(); }
+  $("#detail").hidden=true;
+  document.querySelectorAll(".navlink").forEach(n=>n.setAttribute("aria-current",n.dataset.view===view?"true":"false"));
+  if(view==="ask") initAskLedger();
+  window.scrollTo({top:0});
+}
+function renderChangelog(){
+  const log=DATA.changelog||[], el=$("#chglist");
+  if(!log.length){el.innerHTML='<div class="empty"><h3>Nothing logged yet</h3><p>Entries appear after the first autopilot run: polls admitted, registrations, verdict changes, resolutions.</p></div>';return;}
+  el.innerHTML=log.map(day=>
+    `<div class="chgdate">${esc(day.date)}</div>`+
+    day.entries.map(en=>`<div class="chgentry"><b class="t">${esc(en.title)}</b><span class="chgkind ${en.kind==="run"?"k-run":"k-ledger"}">${en.kind==="run"?"RUN LOG":"LEDGER"}</span>
+      ${en.items&&en.items.length?`<ul>${en.items.map(i=>`<li>${esc(i)}</li>`).join("")}</ul>`:""}</div>`).join("")
+  ).join("")+
+  '<p class="hint" style="margin-top:18px">RUN LOG entries are the autopilot\'s own dated reports (forecasts/autopilot_log.md). LEDGER entries are computed directly from the append-only, SHA-hashed pre-registration ledgers.</p>';
+}
+function renderHome(){
+  const t=DATA.track, pr=(t.lifetime_correct/t.lifetime_calls*100).toFixed(1);
+  const sc=DATA.scoring;
+  $("#homestats").innerHTML=`
+   <div class="stat"><div class="v">${t.lifetime_correct}/${t.lifetime_calls} <small>${pr}%</small></div><div class="k">certified calls that proved right, lifetime</div></div>
+   <div class="stat"><div class="v">${t.live_open_calls}</div><div class="k">calls currently open on the record, hash-stamped</div></div>
+   ${sc&&sc.overall_binary&&sc.overall_binary.n?`<div class="stat"><div class="v">${sc.overall_binary.n}</div><div class="k">probabilities scored at resolution &mdash; every one, not just the calls</div></div>`:""}`;
+  const live=DATA.elections.filter(e=>e.status==="live"&&e.kind!=="matches");
+  const order=["USMID2026","UP2027","PB2027","UK2027","EPL2027","CWC2027"];
+  live.sort((a,b)=>(order.indexOf(a.id)+99)-(order.indexOf(b.id)+99));
+  const mw=DATA.elections.find(e=>e.kind==="matches");
+  $("#homelive").innerHTML=live.map(e=>card(e,true)).join("")+(mw?card(mw,false):"");
+  const res=DATA.elections.filter(e=>e.status==="resolved-forward").sort((a,b)=>b.year-a.year).slice(0,4);
+  $("#homeresolved").innerHTML=res.map(e=>card(e,false)).join("");
+}
+function renderRecord(){
+  const t=DATA.track, sc=DATA.scoring, pr=(t.lifetime_correct/t.lifetime_calls*100).toFixed(1);
+  $("#recstats").innerHTML=`
+   <div class="stat"><div class="v">${t.lifetime_correct}/${t.lifetime_calls} <small>${pr}%</small></div><div class="k">certified calls correct (target &ge;95%)</div></div>
+   <div class="stat"><div class="v">${t.retrodiction_correct}/${t.retrodiction_calls}</div><div class="k">backtest calls, 46 past elections</div></div>
+   <div class="stat"><div class="v">${t.forward_correct}/${t.forward_calls}</div><div class="k">real forward calls, resolved</div></div>
+   <div class="stat"><div class="v">${t.live_open_calls}</div><div class="k">open calls awaiting resolution</div></div>`;
+  let h="";
+  if(sc&&sc.overall_binary&&sc.overall_binary.n){
+    const cal=(sc.calibration||[]).filter(r=>r.n>0);
+    const sk=sc.skill_model_vs_market;
+    h+=`<h2 class="sec">Accuracy, honestly measured</h2>
+    <p class="prose">A hit-rate alone can be gamed by only answering easy questions, so every probability the engine has ever issued &mdash; including the open "WATCH" ones &mdash; is scored at resolution with a <b>Brier score</b>: 0 is perfect, 0.25 is what always saying "50-50" gets you, 1 is confidently wrong. Overall: <b>${sc.overall_binary.brier.toFixed(3)}</b> across ${sc.overall_binary.n} resolved probabilities.</p>
+    <h2 class="sec">Calibration &mdash; when we say 70%, does it happen 70% of the time?</h2>
+    <div class="gatewrap"><table class="gate"><tr><th>When the engine claimed</th><th>How often</th><th>It actually happened</th></tr>
+    ${cal.map(r=>`<tr><td>${esc(r.bin)} likely</td><td class="num">${r.n} questions</td><td class="num">${(r.realized*100).toFixed(0)}% of the time</td></tr>`).join("")}
+    </table></div>
+    <p class="prose" style="margin-top:12px">${sk&&sk.n_questions?`On ${sk.n_questions} identical questions, our model's Brier was ${sk.brier_model} vs the betting market's ${sk.brier_market} &mdash; ${sk.edge>0?"model ahead":"market ahead"} so far.`:"Model-vs-market comparison: locked in and waiting; no world question with both instruments has resolved yet."}</p>`;
+  }
+  if(sc&&sc.correlation){
+    const c=sc.correlation;
+    h+=`<h2 class="sec">Why one method is never trusted alone</h2>
+    <p class="prose">Across ${c.n} resolved questions, our two main instruments erred on the <b>same side ${(c.same_sign_rate*100).toFixed(0)}% of the time</b> (independent methods would be near 50%), with an error correlation of ${c.error_corr}. Both missed badly together ${(c.joint_large_miss*100).toFixed(1)}% of the time &mdash; nearly double what independence would predict. This is the measured reason a CALL requires agreement between methods: <b>one instrument's "95% sure" is not actually 95%</b>. Forecasters built on a single method never publish this number.</p>`;
+  }
+  h+=`<h2 class="sec">Tamper-proofing</h2>
+  <p class="prose">Every forecast row carries a SHA-256 hash written before the event. Manifests of all ledger hashes are anchored into the <b>Bitcoin blockchain</b> via OpenTimestamps, so the claim "this forecast existed on this date" is verifiable by anyone, without trusting us. Wrong calls stay in the ledger forever &mdash; you can read them on the Tamil Nadu 2026 page right now.</p>`;
+  $("#recdetail").innerHTML=h;
+}
+
+/* ---------- explore ---------- */
+function searchRank(e,q){
+  if(!q) return 1;
+  const toks=q.toLowerCase().split(/\s+/).filter(Boolean);
+  const hay=(e.state+" "+e.title+" "+(e.domain||"")+(e.kind==="matches"?" matches fixtures matchweek epl":"")).toLowerCase();
+  let score=0;
+  for(const t of toks){
+    if(/^\d{4}$/.test(t)){ if(e.year===+t) score+=5; else if(e.domain&&Math.abs(e.year-+t)<=1) score+=2; else return 0; }
+    else{
+      const st=ALIAS[t]||null, wid=WORLD_ALIAS[t]||null;
+      if(st&&e.st===st) score+=5;
+      else if(wid&&e.id===wid) score+=5;
+      else if(hay.includes(t)) score+=4;
+      else if(["world","win","wins","winner","will","who","the","in","election","elections","india","indian","next","2026-27"].includes(t)) score+=0.2;
+      else if(toks.length===1&&t.length>=3&&hay.startsWith(t.slice(0,3))) score+=1;
+      else return 0;
+    }
+  }
+  return score;
+}
+function renderList(){
+  const q=query.trim();
+  const prio={live:0,"resolved-forward":1,retrodiction:2,nodata:3};
+  let rows=DATA.elections.filter(e=>filter==="world"?(!!e.domain&&e.kind!=="matches"):filter==="matches"?e.kind==="matches":(filter==="all"||e.status===filter))
+    .map(e=>[searchRank(e,q),e]).filter(([s])=>s>0)
+    .sort((a,b)=>b[0]-a[0]|| prio[a[1].status]-prio[b[1].status] || b[1].year-a[1].year)
+    .map(([,e])=>e);
+  const el=$("#list");
+  if(!rows.length){
+    const toks=q.toLowerCase().split(/\s+/).filter(Boolean);
+    const st=toks.map(t=>ALIAS[t]).find(Boolean);
+    const yr=toks.find(t=>/^\d{4}$/.test(t));
+    let near="";
+    if(st){ const sib=DATA.elections.filter(e=>e.st===st).sort((a,b)=>b.year-a.year);
+      if(sib.length) near=`<p>Nearest covered: ${sib.slice(0,4).map(e=>`<b>${esc(e.title)}</b>`).join(", ")}.</p>`;}
+    el.innerHTML=`<div class="empty"><h3>Not covered${yr?` for ${esc(yr)}`:""} &mdash; and the engine won't guess</h3>
+      <p>Psephos only answers where it has real data: historical baselines, a prior election, and usable polls or markets. Anything else would be an opinion wearing a probability.</p>${near}</div>`;
+    return;
+  }
+  el.innerHTML=rows.map(e=>card(e,e.status==="live")).join("");
+}
+
+/* ---------- detail ---------- */
+function blocBar(e,b,i,maxSeat,maj){
+  const col=`var(${SC[i%SC.length]})`;
+  const L=v=>Math.max(0,Math.min(100,v/maxSeat*100));
+  const hasSim=b.p5!=null;
+  let inner="";
+  if(maj!=null&&i===0) inner+=`<div class="majline" style="left:${L(maj)}%"><span class="majlab">majority ${maj}</span></div>`;
+  else if(maj!=null) inner+=`<div class="majline" style="left:${L(maj)}%"></div>`;
+  if(hasSim) inner+=`<div class="range" style="left:${L(b.p5)}%;width:${Math.max(1.2,L(b.p95)-L(b.p5))}%;background:${col}"></div>
+    <div class="medtick" style="left:${L(b.med)}%;background:${col}"></div>`;
+  if(b.actual!=null) inner+=`<div class="actual" style="left:${L(b.actual)}%" title="actual ${b.actual}"></div>`;
+  const nums=[
+    hasSim?`${b.p5}&ndash;${b.p95} seats (med ${b.med})`:null,
+    b.actual!=null?`actual <b>${b.actual}</b>`:null,
+    b.p_maj!=null?`P(majority) ${pct(b.p_maj)}`:null,
+    b.p_largest!=null?`P(largest) ${pct(b.p_largest)}`:null,
+    b.m2!=null?`model ${b.m2}%`:null, b.m3!=null?`polls ${b.m3}%`:null,
+  ].filter(Boolean).join(" &middot; ");
+  return `<div class="bloc">
+    <div class="bn"><span class="swatch" style="background:${col}"></span>${esc(b.name)}</div>
+    <div class="track" style="margin-top:${i===0&&maj!=null?"16px":"0"}">${inner}</div>
+    <div class="nums">${nums}</div></div>`;
+}
+function renderDetail(e){
+  lastDetail=e;
+  const [nseats,maj]=SEATS[e.st]||[null,null];
+  const maxSeat=nseats||Math.max(...e.blocs.map(b=>Math.max(b.p95||0,b.actual||0)))*1.15||100;
+  const anyResolved=e.questions.some(q=>q.outcome!=null);
+  let h=`<button class="back">&larr; Back</button>
+   <div class="dhead"><h2>${esc(e.title)}</h2>${e.domain?`<span class="badge b-retro">${esc(e.domain.toUpperCase())}</span>`:""}${statusBadge(e)}</div>
+   <div class="bottomline">${QMAP[e.id]?`<b>${esc(QMAP[e.id])}</b> `:""}${headline(e)}${RESOLVES[e.id]?` &middot; ${esc(RESOLVES[e.id])}`:""}</div>
+   <div class="meta">${e.freeze?`frozen ${esc(e.freeze)} &middot; `:""}${e.sha?`pre-registered sha256 ${esc(e.sha)}`:(e.status==="retrodiction"?"backtest: forecast re-created from only pre-election data, parameters fitted excluding this election":"")}</div>`;
+  const fold=(title,inner)=>`<details class="fold"><summary>${title}</summary>${inner}</details>`;
+  const resol=()=>e.resolution&&e.resolution.source?fold("Resolution criteria &mdash; written before the event, not after",
+    `<ul class="plain"><li><b>Source:</b> ${esc(e.resolution.source)}${e.resolution.resolve_by?` &middot; resolve by ${esc(e.resolution.resolve_by)}`:""}</li>${(e.resolution.rules||[]).map(r=>`<li>${esc(r)}</li>`).join("")}</ul>`):"";
+  const flagsFold=()=>e.flags&&e.flags.length?fold("Known weaknesses of this forecast (quality flags)",
+    `<ul class="plain">${e.flags.map(f=>`<li>${esc(f)}</li>`).join("")}</ul>`):"";
+  const tripsFold=()=>e.tripwires&&e.tripwires.length?fold("Tripwires &mdash; events that trigger an automatic re-forecast",
+    `<ul class="plain">${e.tripwires.map(t=>`<li><b>${esc(t.watch)}</b> &rarr; ${esc(t.effect)}</li>`).join("")}</ul>`):"";
+  if(e.status==="nodata"){
+    h+=`<div class="empty"><h3>No forecast yet &mdash; here's exactly why</h3><p>${esc(e.flags[0])}</p></div>`;
+  }else if(e.kind==="matches"){
+    const anyOut=e.matches.some(m=>m.outcome);
+    const picks=e.matches.map(m=>{
+      const best=Math.max(m.pH??0,m.pD??0,m.pA??0);
+      const who=best===m.pH?m.home:best===m.pA?m.away:"Draw";
+      return {m,best,who,clear:best>=0.5,close:best<0.45};
+    });
+    const nClear=picks.filter(p=>p.clear).length, nClose=picks.filter(p=>p.close).length;
+    h+=`<section class="block"><h4>The bottom line</h4>
+      <p class="prose" style="margin:0 0 6px">${nClear} fixture${nClear===1?"":"s"} with a clear favourite, ${picks.length-nClear-nClose} with a slight lean, and <b>${nClose} too close to call</b>. Remember what a probability means: a 55% favourite still loses almost half the time &mdash; upsets here are expected, priced, and scored.</p></section>`;
+    h+=`<section class="block"><h4>Fixture forecasts &mdash; locked before kickoff</h4>
+      <div class="gatewrap"><table class="gate">
+      <tr><th>Fixture</th><th>Date</th><th>Pick</th><th>Home win</th><th>Draw</th><th>Away win</th>${anyOut?"<th>Result</th><th>Score</th>":""}</tr>
+      ${picks.map(({m,best,who,close})=>{
+        const cell=(p,k,isBest)=>`<td class="num"${m.outcome===k?' style="font-weight:700;color:var(--good-text)"':isBest?' style="font-weight:700"':""}>${pct(p)}</td>`;
+        const bk=best===m.pH?"H":best===m.pA?"A":"D";
+        return `<tr><td>${esc(m.home)} v ${esc(m.away)}</td><td class="num">${esc(m.date)}</td>
+        <td>${close?'<span class="vchip v-watch">TOO CLOSE</span>':`<b>${esc(who)}</b> <span class="num" style="font-family:var(--mono);font-size:11px;color:var(--ink2)">${pct(best)}</span>`}</td>
+        ${cell(m.pH,"H",bk==="H")}${cell(m.pD,"D",bk==="D")}${cell(m.pA,"A",bk==="A")}${anyOut?`<td class="num">${esc(m.outcome??"&mdash;")}</td><td class="num">${m.brier==null?"&mdash;":m.brier.toFixed(3)}</td>`:""}</tr>`;}).join("")}
+      </table></div>
+      ${e.mw_summary&&e.mw_summary.n?`<div class="legend"><span>Matchweek Brier <b>&nbsp;${e.mw_summary.brier3.toFixed(3)}</b> (0 perfect, 0.667 = guessing)</span><span>favourites ${e.mw_summary.fav_hits}/${e.mw_summary.n}</span></div>`:""}</section>`;
+    h+=resol()+flagsFold();
+  }else if(e.domain){
+    const ents=e.blocs.filter(b=>b.p_market!=null||b.p_model!=null);
+    const cs=worldCombined(e);
+    if(cs.length){
+      const lead=cs[0], disagree=cs.some(x=>x.gap>=0.25);
+      h+=`<section class="block"><h4>The bottom line</h4>
+        ${cs.slice(0,4).map((c,i)=>{const col=`var(${SC[i%SC.length]})`;
+          return `<div class="bloc"><div class="bn"><span class="swatch" style="background:${col}"></span>${esc(pname(c.name))}</div>
+          <div class="track"><div class="range" style="left:0;width:${Math.max(1.2,c.p*100)}%;background:${col};opacity:.7"></div></div>
+          <div class="nums">combined ${pct(c.p)}${c.gap>=0.25?` &middot; <b>methods split by ${Math.round(c.gap*100)} points</b>`:""}</div></div>`;}).join("")}
+        <p class="hint" style="margin:10px 0 0">${disagree?
+          `<b>Why no clear answer:</b> the methods genuinely disagree, and that disagreement is information &mdash; the first quality flag below explains exactly what each method can and cannot see. When independent methods split this wide, anyone offering you certainty is guessing.`:
+          `The methods broadly agree; the combined number is the engine's best read.`}</p></section>`;
+    }
+    h+=`<section class="block"><h4>What each method says</h4>
+      ${ents.map((b,i)=>{const col=`var(${SC[i%SC.length]})`;
+        const bar=(v,op)=>v==null?'<div class="track" style="opacity:.35"></div>':`<div class="track"><div class="range" style="left:0;width:${Math.max(1.2,v*100)}%;background:${col};opacity:${op}"></div></div>`;
+        return `<div class="bloc"><div class="bn"><span class="swatch" style="background:${col}"></span>${esc(pname(b.name))}</div>
+          <div style="display:grid;gap:3px;min-width:0">${bar(b.p_market,.45)}${bar(b.p_model,.85)}</div>
+          <div class="nums">betting market ${pct(b.p_market)} &middot; our model ${pct(b.p_model)}</div></div>`;}).join("")}
+      <div class="legend"><span>&#9646; lighter = what betting markets imply</span><span>&#9646; darker = our structural model</span><span>When they disagree, that disagreement is the story.</span></div></section>`;
+    if(e.instruments) h+=fold("Where these numbers come from",`<ul class="plain"><li><b>Market:</b> ${esc(e.instruments.market_source||"")}</li><li><b>Model:</b> ${esc(e.instruments.model_note||"")}</li></ul>`);
+    h+=`<section class="block"><h4>Verdicts &mdash; a CALL needs every method above 95%</h4><div class="gatewrap"><table class="gate">
+      <tr><th>Question</th><th>Our model</th><th>Market</th><th>Verdict</th>${anyResolved?"<th>Outcome</th>":""}</tr>
+      ${e.questions.map(q=>`<tr><td>${esc(q.q)}</td><td class="num">${pct(q.p2)}</td><td class="num">${pct(q.p3)}</td>
+        <td>${vchip(q.verdict,q.correct)}</td>${anyResolved?`<td class="num">${esc(q.outcome??"&mdash;")}</td>`:""}</tr>`).join("")}
+      </table></div></section>`;
+    if(e.races&&e.races.length) h+=raceBoard(e);
+    h+=resol()+flagsFold()+tripsFold();
+  }else{
+    h+=`<section class="block"><h4>Seat projection &mdash; 10,000 simulated elections${nseats?`, ${nseats} seats`:""}</h4>
+      ${e.blocs.map((b,i)=>blocBar(e,b,i,maxSeat,maj)).join("")}
+      <div class="legend"><span><span class="lg-med"></span> most likely (median)</span><span>&#9646; 90% of simulations land in the bar</span>${anyResolved||e.status==="retrodiction"?'<span><span class="lg-actual"></span> what actually happened</span>':""}<span><span class="lg-maj"></span> majority mark</span></div></section>`;
+    h+=`<section class="block"><h4>Verdicts &mdash; a CALL needs every method above 95%</h4><div class="gatewrap"><table class="gate">
+      <tr><th>Question</th><th>Structural model</th><th>Corrected polls</th><th>Verdict</th>${anyResolved?"<th>Outcome</th>":""}</tr>
+      ${e.questions.map(q=>`<tr><td>${esc(q.q)}</td><td class="num">${pct(q.p2)}</td><td class="num">${pct(q.p3)}</td>
+        <td>${vchip(q.verdict,q.correct)}</td>${anyResolved?`<td class="num">${esc(q.outcome??"&mdash;")}</td>`:""}</tr>`).join("")}
+      </table></div></section>`;
+    if(e.nef&&e.nef.triggered) h+=`<section class="block"><h4>Safety flag active</h4><ul class="plain"><li><b>${esc(e.nef.entrant)}</b> &mdash; ${esc(e.nef.evidence)}</li></ul></section>`;
+    h+=resol()+flagsFold()+tripsFold();
+  }
+  const d=$("#detail"); d.innerHTML=h; d.hidden=false;
+  for(const v of ["home","all","record","ask","changed","cal"]) $("#view-"+v).hidden=true;
+  d.querySelector(".back").onclick=()=>{ show(lastView); if(lastView==="all") renderList(); };
+  window.scrollTo({top:0});
+}
+let lastView="home", lastDetail=null;
+
+/* ---------- events ---------- */
+document.addEventListener("click",ev=>{
+  const nl=ev.target.closest(".navlink"); if(nl){lastView=nl.dataset.view; show(nl.dataset.view); if(nl.dataset.view==="all") renderList(); return;}
+  if(ev.target.closest("#brand")){lastView="home"; show("home"); return;}
+  const go=ev.target.closest("[data-goto]"); if(go){lastView=go.dataset.goto; show(go.dataset.goto); if(go.dataset.goto==="all") renderList(); return;}
+  const at=ev.target.closest("[data-askt]"); if(at){$("#askq").value=at.dataset.askt; return;}
+  if(ev.target.closest("#calprev")){calM--; if(calM<0){calM=11;calY--;} renderCal(); return;}
+  if(ev.target.closest("#calnext")){calM++; if(calM>11){calM=0;calY++;} renderCal(); return;}
+  if(ev.target.closest("#caltoday")){calInit(); return;}
+  const rsb=ev.target.closest("[data-rsort]"); if(rsb&&lastDetail){
+    const k=rsb.dataset.rsort;
+    if(raceSort.key===k) raceSort.dir*=-1; else raceSort={key:k,dir:k==="p"?-1:1};
+    const y=window.scrollY; renderDetail(lastDetail); window.scrollTo({top:y}); return;}
+  const evc=ev.target.closest(".evchip,.calbanner"); if(evc){openMoment(evc); return;}
+  const c=ev.target.closest(".card"); if(c){ if(c.dataset.ask){openMoment(c);} else {const e=DATA.elections.find(x=>x.id===c.dataset.id); if(e) renderDetail(e);} return;}
+  const ch=ev.target.closest(".chip"); if(ch){filter=ch.dataset.f;
+    document.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===ch?"true":"false"));
+    renderList(); return;}
+  const tr=ev.target.closest("[data-try]"); if(tr){$("#q").value=tr.dataset.try; query=tr.dataset.try; renderList();}
+});
+document.addEventListener("keydown",ev=>{ if(ev.key==="Enter"&&ev.target.closest(".card")) ev.target.closest(".card").click(); });
+$("#q").addEventListener("input",ev=>{query=ev.target.value; renderList();});
+
+/* ---------- Calendar ---------- */
+const CAL_FIXED=[
+ /* ---- forecasted events (click = forecast page) ---- */
+ {date:"2026-11-03",id:"USMID2026",label:"US midterms: election day",cat:"election"},
+ {month:"2027-02",id:"UP2027",label:"Uttar Pradesh election window expected (Feb-Mar; dates TBD by EC)",cat:"election"},
+ {month:"2027-03",id:"UP2027",label:"Uttar Pradesh election window expected (Feb-Mar; dates TBD by EC)",cat:"election"},
+ {month:"2027-02",id:"PB2027",label:"Punjab election expected (dates TBD by EC)",cat:"election"},
+ {month:"2027-02",id:"UK2027",label:"Uttarakhand election expected (dates TBD by EC)",cat:"election"},
+ {month:"2027-03",id:"GA2027",label:"Goa election expected (engine awaiting data)",cat:"election"},
+ {month:"2027-03",id:"MN2027",label:"Manipur election expected (engine awaiting data)",cat:"election"},
+ {month:"2027-12",id:"GJ2027",label:"Gujarat election expected (engine awaiting data)",cat:"election"},
+ {month:"2027-12",id:"HP2027",label:"Himachal Pradesh election expected (engine awaiting data)",cat:"election"},
+ {month:"2027-05",id:"EPL2027",label:"Premier League final matchday: title resolves",cat:"sport"},
+ {month:"2027-10",id:"CWC2027",label:"Cricket World Cup begins (SA/Zimbabwe/Namibia)",cat:"sport"},
+ {month:"2027-11",id:"CWC2027",label:"Cricket World Cup final: forecast resolves",cat:"sport"},
+ /* ---- world elections (click = ask, question prefilled) ---- */
+ {date:"2027-01-16",ask:"Will the APC candidate win the Nigerian presidential election held on 16 January 2027?",label:"Nigeria: presidential + legislative elections",cat:"election"},
+ {date:"2027-04-18",ask:"Will the National Rally (RN) candidate top round 1 of the French presidential election on 18 April 2027?",label:"France: presidential election, round 1",cat:"election"},
+ {date:"2027-05-02",ask:"Will the National Rally (RN) candidate win the French presidency in the runoff on 2 May 2027?",label:"France: presidential runoff",cat:"election"},
+ {month:"2027-08",ask:"Will the incumbent-aligned candidate win Kenya's presidential election in August 2027?",label:"Kenya: general election expected (~10 Aug, date TBC)",cat:"election"},
+ /* ---- India moments ---- */
+ {date:"2027-02-01",ask:"Will Union Budget 2027-28 set a fiscal deficit target below 4.4% of GDP?",label:"India: Union Budget 2027-28",cat:"india"},
+ {date:"2027-03-01",ask:"Will the 2027 Census of India count a population above 1.45 billion?",label:"India: Census 2027 reference date",cat:"india"},
+ {month:"2027-01",ask:"Will any carmaker unveil a sub-Rs-15-lakh electric SUV at Bharat Mobility Global Expo 2027?",label:"Bharat Mobility Global Expo (Auto Expo): major car launches",cat:"auto"},
+ {month:"2027-03",ask:"Who will win IPL 2027?",label:"IPL 2027 season expected to begin",cat:"sport"},
+ {month:"2027-03",ask:"Will ISRO launch the first crewed Gaganyaan flight before 30 June 2027?",label:"Gaganyaan: first crewed flight targeted (Q1 2027)",cat:"space"},
+ /* ---- big releases (dates as announced; slates can move) ---- */
+ {date:"2027-04-07",ask:"Will S.S. Rajamouli's Varanasi gross over Rs 1,000 crore worldwide within 30 days of its 7 April 2027 release?",label:"Movie: Varanasi (Rajamouli x Mahesh Babu) worldwide release",cat:"movie"},
+ {date:"2027-07-17",ask:"Will Christopher Nolan's The Odyssey earn over $100 million worldwide on its opening weekend (17-19 July 2027)?",label:"Movie: The Odyssey (Nolan) releases",cat:"movie"},
+ {date:"2027-06-20",ask:"Will Spider-Man: Beyond the Spider-Verse keep its slated 20 June 2027 release date?",label:"Movie: Beyond the Spider-Verse (slated)",cat:"movie"},
+ {date:"2027-12-17",ask:"Will Avengers: Secret Wars keep its slated 17 December 2027 release date?",label:"Movie: Avengers Secret Wars (slated)",cat:"movie"},
+ {month:"2027-11",ask:"Will Ramayana Part 2 release in the Diwali 2027 window as planned?",label:"Movie: Ramayana Part 2 targeted for Diwali window",cat:"movie"}
+];
+const CAT_CLS={election:"",sport:"c-sport",movie:"c-movie",india:"c-india",auto:"c-auto",space:"c-space"};
+const CAT_LABEL={election:"ELECTION",sport:"SPORT",movie:"MOVIE",india:"INDIA",auto:"AUTO",space:"SPACE"};
+let calY,calM; /* month state */
+function calEvents(){
+  const evs=CAL_FIXED.filter(e=>e.date).map(e=>({...e}));
+  for(const e of DATA.elections){
+    if(e.kind==="matches"&&Array.isArray(e.matches))
+      for(const m of e.matches){
+        if(m.date&&/^\d{4}-\d{2}-\d{2}$/.test(m.date))
+          evs.push({date:m.date,id:e.id,label:`${m.home} v ${m.away}`,small:true});
+      }
+  }
+  return evs;
+}
+function fmtMonth(y,m){return new Date(y,m,1).toLocaleString("en",{month:"long",year:"numeric"});}
+function renderCal(){
+  const evs=calEvents();
+  const byDate={};
+  for(const e of evs){(byDate[e.date]=byDate[e.date]||[]).push(e);}
+  const mkey=`${calY}-${String(calM+1).padStart(2,"0")}`;
+  $("#callabel").textContent=fmtMonth(calY,calM);
+  $("#calwd").innerHTML=["MON","TUE","WED","THU","FRI","SAT","SUN"].map(d=>`<div>${d}</div>`).join("");
+  const banners=CAL_FIXED.filter(e=>e.month===mkey);
+  const seen=new Set();
+  $("#calbanners").innerHTML=banners.filter(b=>{const k=(b.id||b.ask)+b.label;if(seen.has(k))return false;seen.add(k);return true;})
+    .map(b=>`<div class="calbanner" role="button" tabindex="0" ${b.id?`data-id="${esc(b.id)}"`:`data-ask="${esc(b.ask)}"`}><b>This month:</b> ${esc(b.label)} &mdash; ${b.id?"view forecast":"ask Psephos"} &rarr;</div>`).join("");
+  const first=new Date(calY,calM,1);
+  const startOffset=(first.getDay()+6)%7; /* Monday-first */
+  const daysIn=new Date(calY,calM+1,0).getDate();
+  const today=new Date(); const todayKey=`${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,"0")}-${String(today.getDate()).padStart(2,"0")}`;
+  let cells="";
+  for(let i=0;i<startOffset;i++) cells+=`<div class="daycell out"></div>`;
+  for(let d=1;d<=daysIn;d++){
+    const key=`${mkey}-${String(d).padStart(2,"0")}`;
+    const dayEvs=byDate[key]||[];
+    const shown=dayEvs.slice(0,2);
+    cells+=`<div class="daycell${key===todayKey?" today":""}"><span class="dn">${d}</span>
+      ${shown.map(e=>`<button class="evchip${e.small?" small":" "+(CAT_CLS[e.cat]||"")}" ${e.id?`data-id="${esc(e.id)}"`:`data-ask="${esc(e.ask||"")}"`} title="${esc(e.label)}">${esc(e.label)}</button>`).join("")}
+      ${dayEvs.length>2?`<div class="evmore">+${dayEvs.length-2} more</div>`:""}</div>`;
+  }
+  $("#calgrid").innerHTML=cells;
+  /* agenda: next 8 upcoming dated events + month windows */
+  const up=evs.filter(e=>e.date>=todayKey).sort((a,b)=>a.date<b.date?-1:1).slice(0,8);
+  const monthUp=[...new Map(CAL_FIXED.filter(e=>e.month&&e.month>=mkeyOf(today)).map(e=>[(e.id||e.ask)+e.month,e])).values()].sort((a,b)=>a.month<b.month?-1:1).slice(0,10);
+  const agCard=(e,when)=>`<div class="card" tabindex="0" role="button" ${e.id?`data-id="${esc(e.id)}"`:`data-ask="${esc(e.ask||"")}"`}>
+     <div class="cardtop"><h3>${esc(e.label)}</h3>${e.cat?`<span class="badge b-retro">${esc(CAT_LABEL[e.cat]||"")}</span>`:""}<span class="badge b-retro">${esc(when)}</span></div>
+     <div class="sub">${e.small?"Pre-registered match forecast &mdash; tap for probabilities":e.id?"Tap to see the forecast":"Tap to ask Psephos &mdash; question ready to go"}</div></div>`;
+  $("#calagenda").innerHTML=
+    up.map(e=>agCard(e,fmtDay(e.date))).join("")+
+    monthUp.map(e=>agCard(e,fmtMonth(+e.month.slice(0,4),+e.month.slice(5,7)-1).toUpperCase())).join("")
+    ||'<div class="empty">Nothing scheduled ahead &mdash; new matchweeks appear here as they are pre-registered.</div>';
+}
+function mkeyOf(d){return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}`;}
+function fmtDay(iso){const d=new Date(iso+"T00:00:00");return d.toLocaleString("en",{day:"numeric",month:"short",year:"numeric"});}
+function calInit(){const n=new Date(); calY=n.getFullYear(); calM=n.getMonth(); renderCal();}
+function worldCombined(e){
+  return e.blocs.filter(b=>b.p_market!=null||b.p_model!=null)
+    .map(b=>({name:b.name,
+      p:(((b.p_market??b.p_model)+(b.p_model??b.p_market))/2),
+      gap:(b.p_market!=null&&b.p_model!=null)?Math.abs(b.p_market-b.p_model):0}))
+    .sort((a,b)=>b.p-a.p);
+}
+/* ---------- US midterms race board ---------- */
+let raceSort={key:"state",dir:1};
+function combinedP(r){return ((r.p_market??r.p_model)+(r.p_model??r.p_market))/2;}
+function raceLabel(r){
+  const office=r.office==="governor"?"Governor":(r.seat==="special"?"Senate special":"Senate");
+  const who=r.inc_running==="none"?`open (${r.inc_party}-held)`:
+    `${r.inc_party} incumbent${r.inc_running==="appointed"?" (appointed)":""}`;
+  return `${office} &middot; ${who}`;
+}
+function raceTable(title,rows){
+  const anyOut=rows.some(r=>r.outcome!=null);
+  const arrow=k=>raceSort.key===k?(raceSort.dir===1?" &#9650;":" &#9660;"):"";
+  const sorted=[...rows].sort((a,b)=>raceSort.key==="state"
+    ?raceSort.dir*a.state.localeCompare(b.state)
+    :raceSort.dir*(combinedP(a)-combinedP(b)));
+  return `<section class="block"><h4>${title}</h4><div class="gatewrap"><table class="gate">
+    <tr><th data-rsort="state" style="cursor:pointer" title="Sort by state">State${arrow("state")}</th>
+    <th>Race</th>
+    <th data-rsort="p" style="cursor:pointer" title="Sort by Democratic chance">Dem chance${arrow("p")}</th>
+    <th>Market</th><th>Model</th><th>Verdict</th>${anyOut?"<th>Outcome</th>":""}</tr>
+    ${sorted.map(r=>{
+      const c=combinedP(r), close=c>=0.45&&c<=0.55;
+      const split=r.disagreement!=null&&r.disagreement>=0.25;
+      return `<tr><td>${esc(r.state)}</td><td style="font-size:12.5px;color:var(--ink2)">${raceLabel(r)}</td>
+      <td class="num"><b>${pct(c)}</b>${close?' <span class="vchip v-watch">TOO CLOSE</span>':""}</td>
+      <td class="num">${pct(r.p_market)}</td>
+      <td class="num">${pct(r.p_model)}${split?`<br><span style="color:var(--serious);font-family:var(--mono);font-size:10px">split ${Math.round(r.disagreement*100)} pts</span>`:""}</td>
+      <td>${vchip(r.verdict,r.correct)}</td>
+      ${anyOut?`<td class="num">${r.outcome==null?"&mdash;":(r.outcome==="YES"?"Dem won":"Dem lost")}</td>`:""}</tr>`;
+    }).join("")}
+    </table></div></section>`;
+}
+function raceBoard(e){
+  const gov=e.races.filter(r=>r.office==="governor"), sen=e.races.filter(r=>r.office==="senate");
+  const nCalls=e.races.filter(r=>String(r.verdict).startsWith("CALL")).length;
+  const nWatch=e.races.length-nCalls;
+  const sc=e.senate_control, gw=e.governor_wins, hs=e.house_seats;
+  let h=`<section class="block"><h4>The race board &mdash; every 2026 governor race and Senate seat, pre-registered</h4>
+    <p class="prose" style="margin:0 0 6px">Each race is judged by the same dual gate as everything else here: the betting market and a candidate-blind structural model must <b>both</b> clear 95% before a CALL is certified. The gate calls the safe states (${nCalls} of ${e.races.length}) and leaves the genuine contests open (${nWatch} WATCH) &mdash; and where the two methods split wide, the split is printed, because that disagreement is the information. All ${e.races.length} races resolve on election night or at certification; every one will be scored.</p>
+    ${sc?`<p class="prose" style="margin:0 0 6px">Senate roll-up (one shared national swing + per-race noise, 100,000 simulations): <b>${pct(sc.p_dem_control)}</b> chance Democrats control the Senate &mdash; ${sc.held_not_up} seats held that are not up, median ${sc.med} (90% range ${sc.p5}&ndash;${sc.p95}), ${sc.seats_needed} needed. This simulation is the Senate question's structural instrument above.</p>`:""}
+    ${gw?`<p class="prose" style="margin:0">Governorships: Democrats win a median ${gw.med} of the ${gw.n_races} races up (90% range ${gw.p5}&ndash;${gw.p95}).</p>`:""}
+  </section>`;
+  h+=raceTable(`Governors &mdash; ${gov.length} races`,gov);
+  h+=raceTable(`Senate &mdash; ${sen.length} seats (33 regular + 2 specials)`,sen);
+  if(hs||e.house_bands){
+    h+=`<section class="block"><h4>House &mdash; chamber level, deliberately</h4>
+    <p class="prose" style="margin:0 0 8px">The engine does not build 435 district models. The House is forecast at chamber level (the verdicts table above)${hs?`, plus a seat-total distribution from the generic ballot through a stated seats-votes curve: median <b>${hs.med} Democratic seats</b> (90% range ${hs.p5}&ndash;${hs.p95}), P(Dem majority) ${pct(hs.p_dem_majority)} &mdash; a consistency check on the chamber probit, not a separate ledger row`:""}.</p>`;
+    if(e.house_bands&&e.house_bands.events&&e.house_bands.events.length){
+      h+=`<details class="fold"><summary>Polymarket state seat-band markets &mdash; recorded as context (${e.house_bands.events.length} states)</summary>
+      ${e.house_bands.events.map(ev=>`<div style="margin:8px 0"><b style="font-size:13px">${esc(ev.event_slug.replace(/how-many-house-seats-will-the-democrats-win-in-/,"").replace(/-/g," "))}</b>
+      <div class="nums" style="font-family:var(--mono);font-size:11.5px;color:var(--ink2)">${ev.bands.map(b=>`${esc(String(b.band).replace(/Will Democrats win |House seats? in .*$/g,"").trim())}: ${pct(b.p_yes)}`).join(" &middot; ")}</div></div>`).join("")}
+      <p class="hint">Recorded ${esc(e.house_bands.fetched||"")}; context only, never a gate instrument.</p></details>`;
+    }
+    h+=`</section>`;
+  }
+  h+=`<p class="meta">race rows frozen ${esc(e.races_freeze||"")} &middot; pre-registered sha256 ${esc(e.races_sha||"")}${e.races_market_source?` &middot; market: ${esc(e.races_market_source)}`:""}</p>`;
+  return h;
+}
+function openMoment(el){
+  if(el.dataset.id){const e=DATA.elections.find(x=>x.id===el.dataset.id); if(e) renderDetail(e);}
+  else if(el.dataset.ask){lastView="ask"; show("ask"); const q=$("#askq"); q.value=el.dataset.ask; q.focus(); $("#askout").innerHTML="";}
+}
+
+/* ---------- Ask (sample capability) ---------- */
+const ASK_PROTOCOL=`You are the instant-estimate instrument of Psephos, a forecasting engine with a strict protocol. Forecast the event in the QUESTION below. Follow the protocol exactly:
+1. Restate the question as a precisely resolvable claim with explicit resolution criteria and date. Give resolve_by as the ISO date (YYYY-MM-DD) when the claim first becomes objectively checkable, or null when no clear check date exists. If the question is vague, choose the most natural precise reading and state it. If it is not about a future checkable event, set refused=true with a short reason.
+2. Start from the BASE RATE: how often does this kind of thing happen, from reference classes, before considering any specifics. For short-horizon market-price direction questions the base rate is close to 50% (near a random walk) - say so plainly rather than inventing an edge.
+3. Weigh specific evidence you actually know, for and against. Then state the strongest case AGAINST your leaning.
+4. You cannot browse and your knowledge has a cutoff: list concretely what current information you lack and how much it matters. When evidence is thin, shrink toward the base rate. Avoid probabilities below 0.03 or above 0.97 unless the event is near-certain by definition.
+5. Never give trading, betting or investment recommendations; probabilities and reasoning only. Refuse questions about named private individuals' personal lives, deaths of specific people, or anything harmful.
+Reply with ONLY a JSON object, no other text:
+{"refused": false, "reason": null, "question": "<restated precise claim>", "resolution": "<how and when it resolves>", "resolve_by": "<YYYY-MM-DD or null>", "p": 0.55, "base_rate": "<one sentence>", "evidence_for": ["<short item>"], "evidence_against": ["<short item>"], "missing_info": ["<what you cannot know without live data>"], "confidence": "low|medium|high", "note": "<one honest sentence a careful reader should see>"}
+QUESTION: `;
+let askCtl=null;
+async function runAsk(){
+  const q=$("#askq").value.trim();
+  const out=$("#askout");
+  if(!q){out.innerHTML='<div class="empty">Type a question about a future event first.</div>';return;}
+  const sample=window.claude&&window.claude.use?await window.claude.use("sample"):null;
+  if(!sample){out.innerHTML='<div class="empty"><h3>Instant estimates need the Claude viewer</h3><p>Open this page on claude.ai (or in the Claude app) and the Ask feature lights up. The pre-registered forecasts elsewhere on this site work everywhere.</p></div>';return;}
+  askCtl=new AbortController();
+  $("#askbtn").disabled=true; $("#askstop").hidden=false;
+  out.innerHTML='<div class="thinking">Researching per protocol: base rate, evidence, the case against<span class="dots"></span> (10-60 seconds; you may be asked to allow Claude once)</div>';
+  try{
+    const r=await sample.json(ASK_PROTOCOL+q,{modelTier:"default",signal:askCtl.signal});
+    renderAnswer(r,q);
+  }catch(e){
+    const code=e&&e.code;
+    const msgs={not_granted:"You declined to allow Claude for this page - reload to be asked again.",
+      sampling_disabled:"Claude isn't available on this account.",
+      rate_limited:"Too many requests right now - please try again in a little while.",
+      refused:"Claude declined this question. Try rephrasing it as a checkable future event.",
+      invalid_json:"The answer came back malformed - press Ask to try again.",
+      cancelled:"Stopped.",
+      empty_completion:"No answer came back - try a simpler phrasing."};
+    out.innerHTML=`<div class="empty">${esc(msgs[code]||"Something went wrong - please try again in a moment.")}</div>`;
+  }finally{
+    $("#askbtn").disabled=false; $("#askstop").hidden=true; askCtl=null;
+  }
+}
+function renderAnswer(r,q){
+  const out=$("#askout");
+  if(!r||typeof r!=="object"){out.innerHTML='<div class="empty">Malformed answer - press Ask to try again.</div>';return;}
+  if(r.refused){out.innerHTML=`<div class="empty"><h3>Can't forecast that</h3><p>${esc(r.reason||"Not a checkable future event.")}</p></div>`;return;}
+  const p=Math.max(0,Math.min(1,Number(r.p)));
+  const li=a=>(Array.isArray(a)?a:[]).map(x=>`<li>${esc(x)}</li>`).join("")||"<li>&mdash;</li>";
+  lastAsk={q:String(r.question||q).slice(0,500), p:p,
+    resolve_by:(typeof r.resolve_by==="string"&&/^\d{4}-\d{2}-\d{2}$/.test(r.resolve_by))?r.resolve_by:null,
+    confidence:["low","medium","high"].includes(r.confidence)?r.confidence:"low", saved:false};
+  out.innerHTML=`<div class="answer">
+    <div class="ptop"><div class="pnum">${(p*100).toFixed(0)}%</div>
+      <div class="plab"><span class="vchip v-nopoll">INSTANT ESTIMATE</span>&nbsp; chance that: <b>${esc(r.question||q)}</b></div></div>
+    <div class="pbar"><div style="width:${(p*100).toFixed(1)}%"></div></div>
+    <div class="pscale"><span>0% - won't happen</span><span>50% - coin flip</span><span>100% - certain</span></div>
+    <div class="resline"><b>Resolves:</b> ${esc(r.resolution||"as stated")}</div>
+    <h5>Base rate (the starting point)</h5><ul><li>${esc(r.base_rate||"&mdash;")}</li></ul>
+    <h5>Evidence for</h5><ul>${li(r.evidence_for)}</ul>
+    <h5>Evidence against</h5><ul>${li(r.evidence_against)}</ul>
+    <h5>What this estimate can't know (no live data)</h5><ul>${li(r.missing_info)}</ul>
+    ${r.note?`<h5>Worth knowing</h5><ul><li>${esc(r.note)}</li></ul>`:""}
+    <p class="hint" style="margin:14px 0 0">Confidence: ${esc(r.confidence||"low")} &middot; single-instrument estimate &middot; a certified Psephos CALL requires multiple independent methods at 95%+, which no instant answer can provide &middot; research, not financial advice.</p>
+    <div id="asksave"></div>
+  </div>`;
+  updateSaveBtn();
+}
+
+/* ---------- public Ask ledger (db + user capabilities) ---------- */
+let askDb=null, askUser=null, askCanWrite=null, lastAsk=null, askRows=undefined, askInit=false;
+function initAskLedger(){
+  if(askInit) return; askInit=true;
+  (async()=>{
+    if(!(window.claude&&window.claude.use)){askRows=null; renderAskLedger(); return;}
+    try{
+      const [db,user]=await Promise.all([window.claude.use("db"),window.claude.use("user")]);
+      askDb=db; askUser=user;
+      if(user){ try{ askCanWrite=await user.can("data.write"); }catch(_){ askCanWrite=null; } }
+      if(!db){askRows=null; renderAskLedger(); updateSaveBtn(); return;}
+      db.collection("asks").orderBy("created","desc").limit(60).onSnapshot(
+        snap=>{ askRows=snap.docs.filter(x=>x.exists).map(x=>Object.assign({id:x.id},x.data())); renderAskLedger(); updateSaveBtn(); },
+        _=>{ askRows=null; renderAskLedger(); });
+      updateSaveBtn();
+    }catch(_){ askRows=null; renderAskLedger(); }
+  })();
+}
+function updateSaveBtn(){
+  const slot=$("#asksave"); if(!slot) return;
+  if(!lastAsk){slot.innerHTML=""; return;}
+  if(lastAsk.saved){slot.innerHTML='<p class="hint" style="margin:14px 0 0">Saved to the public Ask ledger below &mdash; anonymous, and scored by the weekly run once it resolves.</p>'; return;}
+  if(!askDb){slot.innerHTML='<p class="hint" style="margin:14px 0 0">Saving to the public Ask ledger needs a signed-in claude.ai viewer.</p>'; return;}
+  if(askCanWrite===false){slot.innerHTML='<p class="hint" style="margin:14px 0 0">Your viewing level can read the public Ask ledger but not add to it.</p>'; return;}
+  slot.innerHTML='<p style="margin:14px 0 0"><button class="askgo" id="asksavebtn" style="font-size:13.5px;padding:9px 16px">Save to the public Ask ledger</button> <span class="hint">anonymous &middot; scored after resolution &middot; misses stay visible</span></p>';
+}
+async function saveAsk(){
+  if(!askDb||!lastAsk||lastAsk.saved) return;
+  const btn=$("#asksavebtn"); if(btn) btn.disabled=true;
+  try{
+    await askDb.collection("asks").add({q:lastAsk.q, p:lastAsk.p, resolve_by:lastAsk.resolve_by,
+      confidence:lastAsk.confidence, created:new Date().toISOString().slice(0,10),
+      resolved:null, outcome:null, note:null, source:null});
+    lastAsk.saved=true; updateSaveBtn();
+  }catch(e){
+    if(btn) btn.disabled=false;
+    const slot=$("#asksave"), code=e&&e.code;
+    const msg=code==="invalid_argument"?"Your viewing level cannot write to the ledger.":
+      code==="quota_exceeded"?"The ledger is full; it needs pruning before new saves.":
+      "Save failed - try again in a moment.";
+    if(slot) slot.innerHTML=`<p class="hint" style="margin:14px 0 0">${esc(msg)}</p>`;
+  }
+}
+function renderAskLedger(){
+  const cal=$("#askcal"), list=$("#asklist");
+  if(askRows===undefined) return;
+  if(askRows===null||!askDb){
+    cal.innerHTML="";
+    list.innerHTML='<div class="empty"><h3>The ledger lives in this page\'s shared database</h3><p>Open the page signed in on claude.ai and the saved estimates &mdash; and, once any resolve, this instrument\'s own Brier score &mdash; appear here. Asking works either way.</p></div>';
+    return;
+  }
+  if(!askRows.length){
+    cal.innerHTML="";
+    list.innerHTML='<div class="empty"><h3>No saved estimates yet</h3><p>When a visitor asks a question and chooses to save the estimate, it lands here: question, probability, dates &mdash; no identity. Once a saved estimate passes its resolution date, the weekly autopilot run checks the outcome against public sources and scores it, and a calibration summary appears above this list. Right or wrong, nothing is removed.</p></div>';
+    return;
+  }
+  const clamp=v=>Math.max(0,Math.min(1,Number(v)||0));
+  const res=askRows.filter(r=>r.outcome===true||r.outcome===false);
+  if(res.length){
+    const briers=res.map(r=>{const d=clamp(r.p)-(r.outcome===true?1:0); return d*d;});
+    const mb=briers.reduce((a,b)=>a+b,0)/briers.length;
+    const claimed=res.reduce((a,r)=>a+clamp(r.p),0)/res.length;
+    const realized=res.filter(r=>r.outcome===true).length/res.length;
+    cal.innerHTML=`<div class="statstrip">
+      <div class="stat"><div class="v">${res.length}</div><div class="k">saved estimates resolved and scored</div></div>
+      <div class="stat"><div class="v">${mb.toFixed(3)}</div><div class="k">Brier score (0 perfect; 0.25 = always saying 50-50)</div></div>
+      <div class="stat"><div class="v">${(claimed*100).toFixed(0)}% <small>vs ${(realized*100).toFixed(0)}%</small></div><div class="k">average claimed probability vs how often it actually happened</div></div>
+    </div>`;
+  }else{
+    cal.innerHTML='<p class="hint">No saved estimate has resolved yet. Once one passes its resolution date and the weekly run scores it, a calibration summary appears here.</p>';
+  }
+  list.innerHTML=askRows.map(r=>{
+    const p=clamp(r.p);
+    let chip='<span class="vchip v-nopoll">OPEN</span>', score="";
+    if(r.outcome===true||r.outcome===false){
+      const right=(r.outcome===true)===(p>=0.5), b=(p-(r.outcome===true?1:0))**2;
+      chip=`<span class="vchip ${right?"v-ok":"v-bad"}">${r.outcome===true?"HAPPENED":"DID NOT HAPPEN"}</span>`;
+      score=` &middot; Brier ${b.toFixed(3)}`;
+    }else if(r.outcome==="unresolvable"){
+      chip='<span class="vchip v-watch">UNRESOLVABLE</span>';
+    }
+    return `<div class="card askrowcard" tabindex="-1">
+      <div class="cardtop"><h3>${esc(r.q)}</h3>${chip}</div>
+      <div class="sub"><b>${(p*100).toFixed(0)}%</b> &middot; confidence ${esc(r.confidence||"low")} &middot; saved ${esc(r.created||"?")}${r.resolve_by?` &middot; resolves ${esc(r.resolve_by)}`:""}${r.resolved?` &middot; checked ${esc(r.resolved)}`:""}${score}${r.note?`<br>${esc(r.note)}`:""}</div>
+    </div>`;
+  }).join("");
+}
+document.addEventListener("click",ev=>{ if(ev.target.closest("#askbtn")) runAsk(); if(ev.target.closest("#askstop")&&askCtl) askCtl.abort(); if(ev.target.closest("#asksavebtn")) saveAsk(); });
+$("#askq").addEventListener("keydown",ev=>{ if(ev.key==="Enter"&&!ev.shiftKey){ev.preventDefault(); runAsk();} });
+
+fetch("app_data.json").then(r=>r.json()).then(d=>{
+  DATA=d; $("#gen").textContent=d.generated;
+  renderHome(); renderRecord(); renderChangelog();
+  const tok=(location.hash||"").slice(1);
+  if(tok==="all"){lastView="all"; show("all"); renderList();}
+  else if(tok==="record"){lastView="record"; show("record");}
+  else if(tok==="changed"){lastView="changed"; show("changed");}
+  else if(tok==="ask"){lastView="ask"; show("ask");}
+  else if(tok==="cal"){lastView="cal"; show("cal");}
+  else if(tok){const e=d.elections.find(x=>x.id.toLowerCase()===tok.toLowerCase()); if(e){renderDetail(e);} }
+}).catch(()=>{ $("#homelive").innerHTML='<div class="empty"><h3>Data failed to load</h3><p>Reload the page; the dataset ships alongside it.</p></div>'; });
+</script>
+
+</body></html>

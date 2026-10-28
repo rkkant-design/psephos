@@ -1,0 +1,166 @@
+{
+ "forecast_id": "UK2027",
+ "freeze_date": "2026-10-23",
+ "new_entrant_flag": {},
+ "params": {
+  "alpha": 0.386,
+  "n_sim": 10000,
+  "poll_agencies_rated": false,
+  "seed": 42,
+  "sigma_c": 10.27,
+  "sigma_state_m2": 6.3,
+  "sigma_state_m3": 6.0,
+  "tau": 0.5
+ },
+ "quality_flags": [
+  "All three vote-share polls are unrated agencies and they disagree on the leader (Poll Mitra has INC ahead; TNN/Vote Vibe have BJP). Seat polls disagree even more (BJP 29-54 of 70).",
+  "No AAP/UKD vote-share lines in any poll; both are treated as background others.",
+  "M3 BSP line missing from all polls - BSP questions run effectively on M2 plus baseline."
+ ],
+ "questions": [
+  {
+   "p_gate": 0.8094,
+   "p_m2": 0.9274,
+   "p_m3": 0.8094,
+   "question": "BJP wins majority",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.826,
+   "p_m2": 0.9442,
+   "p_m3": 0.826,
+   "question": "BJP is largest",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.0457,
+   "p_m2": 0.0457,
+   "p_m3": 0.174,
+   "question": "INC wins majority",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.0558,
+   "p_m2": 0.0558,
+   "p_m3": 0.174,
+   "question": "INC is largest",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": null,
+   "p_m2": 0.0,
+   "p_m3": null,
+   "question": "BSP wins majority",
+   "verdict": "WATCH-NOPOLL"
+  },
+  {
+   "p_gate": null,
+   "p_m2": 0.0,
+   "p_m3": null,
+   "question": "BSP is largest",
+   "verdict": "WATCH-NOPOLL"
+  },
+  {
+   "p_gate": null,
+   "p_m2": 0.9649,
+   "p_m3": null,
+   "question": "BSP under 5 seats",
+   "verdict": "WATCH-NOPOLL"
+  },
+  {
+   "p_gate": 1.0,
+   "p_m2": 1.0,
+   "p_m3": 1.0,
+   "question": "Winner (largest) in {BJP, INC}",
+   "verdict": "CALL-YES"
+  }
+ ],
+ "resolution": {
+  "resolve_by": "2027-03-31",
+  "rules": [
+   "Bloc seat totals = sum of seats won by the member parties listed in `blocs` as composed at freeze; post-result defections, mergers and letters of support are ignored",
+   "If an alliance splits BEFORE polling, a re-run forecast (new ledger rows) supersedes; these rows still resolve against freeze-time bloc composition",
+   "'wins majority' = bloc seats >= 36 of 70 at first full declaration; countermanded/postponed seats count as not won unless they decide the question, in which case resolution waits for them",
+   "'is largest' = strictly more seats than every other modeled bloc (independents and unmodeled parties are not blocs); an exact tie resolves NO for all blocs",
+   "Seat-threshold questions resolve on the same official tally",
+   "If the election is not held by 2027-12-31, rows resolve VOID: logged and excluded from scoring, never silently dropped"
+  ],
+  "source": "Election Commission of India official results (results.eci.gov.in), party-wise seat tally at first full declaration of all 70 seats"
+ },
+ "run_at_utc": "2026-10-23T10:09:03+00:00",
+ "seats_m2": {
+  "BJP": {
+   "med": 53,
+   "p5": 33,
+   "p95": 65,
+   "p_largest": 0.9442,
+   "p_majority": 0.9274
+  },
+  "BSP": {
+   "med": 2,
+   "p5": 0,
+   "p95": 4,
+   "p_largest": 0.0,
+   "p_majority": 0.0
+  },
+  "INC": {
+   "med": 15,
+   "p5": 4,
+   "p95": 35,
+   "p_largest": 0.0558,
+   "p_majority": 0.0457
+  }
+ },
+ "seats_m3": {
+  "BJP": {
+   "med": 46,
+   "p5": 26,
+   "p95": 61,
+   "p_largest": 0.826,
+   "p_majority": 0.8094
+  },
+  "INC": {
+   "med": 24,
+   "p5": 9,
+   "p95": 44,
+   "p_largest": 0.174,
+   "p_majority": 0.174
+  }
+ },
+ "state_shares": {
+  "baseline": {
+   "BJP": 44.72,
+   "BSP": 4.87,
+   "INC": 38.24
+  },
+  "ge": {
+   "BJP": 57.5,
+   "BSP": 1.82,
+   "INC": 33.07
+  },
+  "m2_pred": {
+   "BJP": 49.65,
+   "BSP": 3.69,
+   "INC": 36.24
+  },
+  "m3_pred": {
+   "BJP": 42.95,
+   "INC": 36.13
+  }
+ },
+ "title": "Uttarakhand Assembly 2027",
+ "tripwires": [
+  {
+   "effect": "M3 upgrades to rated sigma",
+   "watch": "A rated agency publishes a vote-share poll"
+  },
+  {
+   "effect": "re-bloc and re-run",
+   "watch": "Any INC-led opposition alliance (SP/ASP/AAP tie-ups)"
+  },
+  {
+   "effect": "insider-flow signal; re-run",
+   "watch": "CM-change or major defection news"
+  }
+ ]
+}

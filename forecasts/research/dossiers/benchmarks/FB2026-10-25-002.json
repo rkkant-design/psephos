@@ -1,0 +1,861 @@
+{
+ "forecast_id": "FB2026-10-25-002",
+ "domain": "ForecastBench",
+ "freeze_date": "2026-10-25",
+ "resolve_date": null,
+ "researcher": "claude-fable-5 operator session, 2026-10-25 round-day sprint (authored + rule + family layers)",
+ "resolution_source": "per-question benchmark resolution criteria (see each question's benchmark block)",
+ "independence_attestation": "No betting odds, prediction-market prices or forecast-aggregator numbers were fetched or consulted for any question in this dossier; market-source questions' embedded freeze prices were deliberately ignored.",
+ "questions": [
+  {
+   "q": "Will a wild animal be infected with the New World screwworm in the contiguous US, before 2027?",
+   "benchmark": {
+    "source": "metaculus",
+    "id": "36478",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/36478.",
+   "base_rate_used": {
+    "reference_class": "months with first wild-animal detection after nearby livestock detections in prior outbreaks",
+    "value": 0.35,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "New World screwworm has spread north through Mexico with US detections in livestock in border states during 2026; a confirmed WILD animal detection in the contiguous US by USDA within 10 weeks is a live and rising possibility."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: Surveillance in wildlife is sparse and confirmation standards are strict; detections may stay confined to livestock/imports through year-end as containment lines hold.",
+   "reasoning_summary": "Base rate: months with first wild-animal detection after nearby livestock detections in prior outbreaks ~ 0.35. New World screwworm has spread north through Mexico with US detections in livestock in border states during 2026; a confirmed WILD animal detection in the contiguous US by USDA within 10 weeks is a live and rising possibility. Net of adjustments the final probability is 0.45.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.45
+  },
+  {
+   "q": "#3 - Will the Tiger Point Wastewater Treatment Facility expansion be finished before February 2027?",
+   "benchmark": {
+    "source": "metaculus",
+    "id": "38950",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/38950.",
+   "base_rate_used": {
+    "reference_class": "municipal utility projects finishing by first announced completion date",
+    "value": 0.3,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "Local wastewater expansion projects habitually slip; Tiger Point's expansion has a public timeline near this window but Florida utility projects average months of overrun, and the question needs completion before February 2027."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: If construction is in closeout now a certificate of completion could land on schedule; some county reports list the project as on track.",
+   "reasoning_summary": "Base rate: municipal utility projects finishing by first announced completion date ~ 0.3. Local wastewater expansion projects habitually slip; Tiger Point's expansion has a public timeline near this window but Florida utility projects average months of overrun, and the question needs completion before February 2027. Net of adjustments the final probability is 0.3.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.3
+  },
+  {
+   "q": "Will a Section 301 overcapacity determination result in new US tariffs or trade measures specifically targeting China before 2027?",
+   "benchmark": {
+    "source": "metaculus",
+    "id": "44883",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/44883.",
+   "base_rate_used": {
+    "reference_class": "301 investigations ending in new measures within statutory year",
+    "value": 0.6,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "The Section 301 overcapacity investigation opened in early 2026 and statutory timelines point to a determination with remedies around year-end; this administration has never declined to impose remedies in a China 301 action."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: Final determinations can slip past statutory targets and a year-end US-China de-escalation channel could pause new measures beyond Jan 1.",
+   "reasoning_summary": "Base rate: 301 investigations ending in new measures within statutory year ~ 0.6. The Section 301 overcapacity investigation opened in early 2026 and statutory timelines point to a determination with remedies around year-end; this administration has never declined to impose remedies in a China 301 action. Net of adjustments the final probability is 0.55.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.55
+  },
+  {
+   "q": "#7 - Will the Montrose and Florida Avenue septic-to-sewer project finish by the end of 2026?",
+   "benchmark": {
+    "source": "metaculus",
+    "id": "38955",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/38955.",
+   "base_rate_used": {
+    "reference_class": "septic-to-sewer conversions finishing within announced year",
+    "value": 0.3,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "The Montrose/Florida Avenue septic-to-sewer project needs completion by Dec 31 2026; municipal conversion projects of this type run late more often than not and mid-year reports showed ongoing construction."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: City communications may already list substantial completion; if punch-list work is all that remains, a December certificate is realistic.",
+   "reasoning_summary": "Base rate: septic-to-sewer conversions finishing within announced year ~ 0.3. The Montrose/Florida Avenue septic-to-sewer project needs completion by Dec 31 2026; municipal conversion projects of this type run late more often than not and mid-year reports showed ongoing construction. Net of adjustments the final probability is 0.25.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.25
+  },
+  {
+   "q": "Will the Euro appreciate against the Dollar during 2026?",
+   "benchmark": {
+    "source": "metaculus",
+    "id": "41526",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/41526.",
+   "base_rate_used": {
+    "reference_class": "years EUR appreciates vs USD, 1999-2025",
+    "value": 0.48,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "EUR/USD started 2026 near 1.035; war-driven dollar safe-haven flows and a hiking Fed argue dollar strength, but US inflation at 3.7% and European energy adjustment cut both ways; the year-end comparison is genuinely close."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: The Fed hiking into year-end while the ECB holds is a textbook dollar-positive divergence; Hormuz risk premia also typically buoy the dollar against the euro.",
+   "reasoning_summary": "Base rate: years EUR appreciates vs USD, 1999-2025 ~ 0.48. EUR/USD started 2026 near 1.035; war-driven dollar safe-haven flows and a hiking Fed argue dollar strength, but US inflation at 3.7% and European energy adjustment cut both ways; the year-end comparison is genuinely close. Net of adjustments the final probability is 0.45.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Market snapshot roundup, 24 Oct 2026 (S&P ~7,663; BTC ~$81k; WTI ~$102)",
+     "url": "https://seekingalpha.com/article/4957279-the-1-minute-market-report-october-24-2026",
+     "date": "2026-10-24"
+    }
+   ],
+   "p_raw": 0.45
+  },
+  {
+   "q": "Will South Sudan hold a national presidential election before January 1, 2027?",
+   "benchmark": {
+    "source": "metaculus",
+    "id": "45806",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/45806.",
+   "base_rate_used": {
+    "reference_class": "South Sudan election dates held as scheduled since 2015",
+    "value": 0.1,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "South Sudan's election has been postponed repeatedly (2024 to Dec 2026); even the current December date is widely doubted by observers given unmet preconditions, and any national voting day before Jan 1 is the bar."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: The December 2026 date remains officially scheduled and a minimal symbolic vote on at least one polling day could technically satisfy resolution.",
+   "reasoning_summary": "Base rate: South Sudan election dates held as scheduled since 2015 ~ 0.1. South Sudan's election has been postponed repeatedly (2024 to Dec 2026); even the current December date is widely doubted by observers given unmet preconditions, and any national voting day before Jan 1 is the bar. Net of adjustments the final probability is 0.12.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.12
+  },
+  {
+   "q": "#9 - Will the Bay Cliffs septic-to-sewer project be completed by the end of 2026?",
+   "benchmark": {
+    "source": "metaculus",
+    "id": "38957",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/38957.",
+   "base_rate_used": {
+    "reference_class": "septic-to-sewer conversions finishing within announced year",
+    "value": 0.3,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "Bay Cliffs septic-to-sewer completion by Dec 31 2026 faces the same municipal-overrun base rate; absent a documented substantial-completion notice, under-year-end completion is the minority outcome."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: If the city's Q3 report shows the project in final restoration phase, December completion becomes likelier than the generic base rate implies.",
+   "reasoning_summary": "Base rate: septic-to-sewer conversions finishing within announced year ~ 0.3. Bay Cliffs septic-to-sewer completion by Dec 31 2026 faces the same municipal-overrun base rate; absent a documented substantial-completion notice, under-year-end completion is the minority outcome. Net of adjustments the final probability is 0.25.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.25
+  },
+  {
+   "q": "Will a Russian-developed LLM reach the top 100 on LMSYS Chatbot Arena before 2027?",
+   "benchmark": {
+    "source": "metaculus",
+    "id": "40543",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/40543.",
+   "base_rate_used": {
+    "reference_class": "Russian models in arena top-100 since 2023",
+    "value": 0.05,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "No Russian-developed LLM has approached the LMSYS/Chatbot Arena top 100; Yandex and Sber models trail frontier labs by generations and sanctions constrain compute; 10 weeks leaves no realistic path."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: The threshold is top-100 not top-10, the board's long tail is shallow, and a GigaChat/YandexGPT refresh submitted for arena scoring could scrape in.",
+   "reasoning_summary": "Base rate: Russian models in arena top-100 since 2023 ~ 0.05. No Russian-developed LLM has approached the LMSYS/Chatbot Arena top 100; Yandex and Sber models trail frontier labs by generations and sanctions constrain compute; 10 weeks leaves no realistic path. Net of adjustments the final probability is 0.12.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.12
+  },
+  {
+   "q": "Will Vivek Ramaswamy win the 2026 Ohio gubernatorial election?",
+   "benchmark": {
+    "source": "metaculus",
+    "id": "41490",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/41490.",
+   "base_rate_used": {
+    "reference_class": "OH statewide races won by GOP in D+5-or-better national years",
+    "value": 0.65,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "Ohio leans R by ~6 and Ramaswamy consolidated the GOP primary with Trump's endorsement; but the national environment is D+9 and Dem Amy Acton polls competitively, making this a lean-R hold rather than safe."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: A D+9 national environment has flipped Ohio-type races before (2006); Acton's health-crisis profile resonates and Ramaswamy's negatives with moderates are real.",
+   "reasoning_summary": "Base rate: OH statewide races won by GOP in D+5-or-better national years ~ 0.65. Ohio leans R by ~6 and Ramaswamy consolidated the GOP primary with Trump's endorsement; but the national environment is D+9 and Dem Amy Acton polls competitively, making this a lean-R hold rather than safe. Net of adjustments the final probability is 0.6.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls",
+     "date": "2026-10-23"
+    }
+   ],
+   "p_raw": 0.6
+  },
+  {
+   "q": "Will Mary Peltola win the 2026 US Senate election in Alaska?",
+   "benchmark": {
+    "source": "metaculus",
+    "id": "41678",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/41678.",
+   "base_rate_used": {
+    "reference_class": "AK statewide federal upsets by Democrats since 2008",
+    "value": 0.25,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "Peltola winning the Alaska SENATE seat requires her to run and prevail under RCV against incumbent Sullivan; Alaska's lean-R fundamentals yield to strong personal brands, and D+9 helps, but incumbent senators rarely lose there."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: Peltola outperformed fundamentals in every House race and RCV rewards her crossover appeal; a D+9 year against a Trump-aligned incumbent is her best possible setup.",
+   "reasoning_summary": "Base rate: AK statewide federal upsets by Democrats since 2008 ~ 0.25. Peltola winning the Alaska SENATE seat requires her to run and prevail under RCV against incumbent Sullivan; Alaska's lean-R fundamentals yield to strong personal brands, and D+9 helps, but incumbent senators rarely lose there. Net of adjustments the final probability is 0.32.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls",
+     "date": "2026-10-23"
+    }
+   ],
+   "p_raw": 0.32
+  },
+  {
+   "q": "Will Karen Bass be reelected Mayor of Los Angeles in 2026?",
+   "benchmark": {
+    "source": "metaculus",
+    "id": "43941",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/43941.",
+   "base_rate_used": {
+    "reference_class": "LA mayoral incumbents reelected since 1973",
+    "value": 0.8,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "Bass is the incumbent in a heavily Democratic city; incumbents win LA mayoral races at high rates, though wildfire-response criticism created a real challenge field for the Nov 2026 contest."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: Post-fire approval damage plus a well-funded centrist challenger (Caruso-style) could replicate 2022's close race and incumbency has been weaker post-COVID.",
+   "reasoning_summary": "Base rate: LA mayoral incumbents reelected since 1973 ~ 0.8. Bass is the incumbent in a heavily Democratic city; incumbents win LA mayoral races at high rates, though wildfire-response criticism created a real challenge field for the Nov 2026 contest. Net of adjustments the final probability is 0.6.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls",
+     "date": "2026-10-23"
+    }
+   ],
+   "p_raw": 0.6
+  },
+  {
+   "q": "Will Professor Layton and the New World of Steam be released in 2026?",
+   "benchmark": {
+    "source": "metaculus",
+    "id": "43274",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/43274.",
+   "base_rate_used": {
+    "reference_class": "Level-5 titles shipping in their final announced year",
+    "value": 0.45,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "Professor Layton and the New World of Steam has slipped repeatedly but Level-5 reaffirmed a 2026 release with marketing active; the remaining window is the holiday season where it was slotted."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: Level-5's delay history is chronic (announced 2023), and a late slip to early 2027 for polish is exactly the studio's pattern.",
+   "reasoning_summary": "Base rate: Level-5 titles shipping in their final announced year ~ 0.45. Professor Layton and the New World of Steam has slipped repeatedly but Level-5 reaffirmed a 2026 release with marketing active; the remaining window is the holiday season where it was slotted. Net of adjustments the final probability is 0.45.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.45
+  },
+  {
+   "q": "Will FURA introduce another cultivated meat dish on its menu before July 2027?",
+   "benchmark": {
+    "source": "metaculus",
+    "id": "43281",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/43281.",
+   "base_rate_used": {
+    "reference_class": "restaurants expanding cultivated-meat menu items within a year of first",
+    "value": 0.4,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "FURA (Singapore) already serves one cultivated item and has signaled menu expansion; before July 2027 gives 8 months, and Singapore's regulatory environment permits additional cultivated products readily."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: Cultivated-meat supply economics remain terrible and restaurants have quietly dropped items; a second SKU needs supplier capacity that may not exist.",
+   "reasoning_summary": "Base rate: restaurants expanding cultivated-meat menu items within a year of first ~ 0.4. FURA (Singapore) already serves one cultivated item and has signaled menu expansion; before July 2027 gives 8 months, and Singapore's regulatory environment permits additional cultivated products readily. Net of adjustments the final probability is 0.45.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.45
+  },
+  {
+   "q": "Will Missouri's 2026 Amendment 3 pass, repealing the 2024 abortion-rights protections?",
+   "benchmark": {
+    "source": "metaculus",
+    "id": "43490",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/43490.",
+   "base_rate_used": {
+    "reference_class": "state abortion-rights reversals at ballot within 2 years of adoption",
+    "value": 0.2,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "Missouri's Amendment 3 repeal asks voters to reverse the 2024 pro-choice amendment (passed 52-48); referendums rarely reverse recent direct votes within two years, and a D+9 environment boosts No turnout."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: The 2026 ballot language couples the repeal with popular exceptions framing and midterm electorates in Missouri skew more conservative than presidential ones.",
+   "reasoning_summary": "Base rate: state abortion-rights reversals at ballot within 2 years of adoption ~ 0.2. Missouri's Amendment 3 repeal asks voters to reverse the 2024 pro-choice amendment (passed 52-48); referendums rarely reverse recent direct votes within two years, and a D+9 environment boosts No turnout. Net of adjustments the final probability is 0.3.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls",
+     "date": "2026-10-23"
+    }
+   ],
+   "p_raw": 0.3
+  },
+  {
+   "q": "Will PayPal\u2019s proposed bank receive FDIC approval before July 1, 2027?",
+   "benchmark": {
+    "source": "metaculus",
+    "id": "43839",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/43839.",
+   "base_rate_used": {
+    "reference_class": "ILC/fintech bank charters approved within 18 months of application",
+    "value": 0.25,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "FDIC approval for PayPal's ILC-style bank application before Jul 2027 depends on an agency that has approved very few such charters; political alignment helps fintech now, but the clock includes lengthy comment periods."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: The current FDIC leadership is openly charter-friendly and has processed fintech applications faster in 2026; PayPal's application is mature.",
+   "reasoning_summary": "Base rate: ILC/fintech bank charters approved within 18 months of application ~ 0.25. FDIC approval for PayPal's ILC-style bank application before Jul 2027 depends on an agency that has approved very few such charters; political alignment helps fintech now, but the clock includes lengthy comment periods. Net of adjustments the final probability is 0.3.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.3
+  },
+  {
+   "q": "Will an AI \"kill switch\" bill pass both houses of the U.S. Congress before September 2027?",
+   "benchmark": {
+    "source": "metaculus",
+    "id": "45461",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/45461.",
+   "base_rate_used": {
+    "reference_class": "federal AI regulatory bills passing both chambers since 2023",
+    "value": 0.03,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "An AI kill-switch bill passing BOTH chambers by Sep 2027 contradicts the current federal posture, which has favored preemption of state AI rules over new mandates; no such bill has committee momentum."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: A major AI-caused incident could flip the politics overnight, and kill-switch framing polls well across parties; 11 months is long in AI politics.",
+   "reasoning_summary": "Base rate: federal AI regulatory bills passing both chambers since 2023 ~ 0.03. An AI kill-switch bill passing BOTH chambers by Sep 2027 contradicts the current federal posture, which has favored preemption of state AI rules over new mandates; no such bill has committee momentum. Net of adjustments the final probability is 0.07.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.07
+  },
+  {
+   "q": "Will Massachusetts enact frontier AI safety legislation during the 194th General Court?",
+   "benchmark": {
+    "source": "metaculus",
+    "id": "45736",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/45736.",
+   "base_rate_used": {
+    "reference_class": "MA tech-regulation bills passing in final session weeks",
+    "value": 0.12,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "Massachusetts' frontier AI safety bills remain in committee; the 194th session ends Jan 5 2027 and most bills die at session close, with leadership prioritizing other items in the lame-duck window."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: Massachusetts has a history of last-night omnibus surprises and an RAISE-Act-style national template exists for quick adoption.",
+   "reasoning_summary": "Base rate: MA tech-regulation bills passing in final session weeks ~ 0.12. Massachusetts' frontier AI safety bills remain in committee; the 194th session ends Jan 5 2027 and most bills die at session close, with leadership prioritizing other items in the lame-duck window. Net of adjustments the final probability is 0.15.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.15
+  },
+  {
+   "q": "Will Democrats win the U.S. Senate in 2026? [Yes: Democratic Party]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "CONTROLS-2026-D",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/controls/x/controls-2026.",
+   "base_rate_used": {
+    "reference_class": "midterm Senate control flips to out-party in D+8-or-better environments",
+    "value": 0.5,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "Senate control for Dems needs roughly +4 net; the D+9.1 generic-ballot environment makes NC/ME/OH genuinely winnable and no Dem-held seat looks lost, but the map still demands near-sweep execution of the competitive set."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: The 2026 Class-2 map gives Republicans structural insulation: even strong national environments (2018 D+8.6) saw Dems LOSE Senate seats on a bad map.",
+   "reasoning_summary": "Base rate: midterm Senate control flips to out-party in D+8-or-better environments ~ 0.5. Senate control for Dems needs roughly +4 net; the D+9.1 generic-ballot environment makes NC/ME/OH genuinely winnable and no Dem-held seat looks lost, but the map still demands near-sweep execution of the competitive set. Net of adjustments the final probability is 0.6.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls",
+     "date": "2026-10-23"
+    }
+   ],
+   "p_raw": 0.6
+  },
+  {
+   "q": "Will New York City\u2019s median asking rent for December 2026 be above $4,000? [Yes: Above $4,000]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "KXNYCASKRENT-27JAN31-T4000",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxnycaskrent/x/kxnycaskrent-27jan31.",
+   "base_rate_used": {
+    "reference_class": "December StreetEasy medians vs year-peak since 2020",
+    "value": 0.4,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "StreetEasy's NYC median asking rent ran in the high-$3,000s in 2026 with slowing but positive growth; December readings dip seasonally, so crossing $4,000 in the December print specifically is slightly against the seasonal grain."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: If the November print already sits at or above $4,000, seasonal dips of 1-2% would not pull December below the line.",
+   "reasoning_summary": "Base rate: December StreetEasy medians vs year-peak since 2020 ~ 0.4. StreetEasy's NYC median asking rent ran in the high-$3,000s in 2026 with slowing but positive growth; December readings dip seasonally, so crossing $4,000 in the December print specifically is slightly against the seasonal grain. Net of adjustments the final probability is 0.4.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.4
+  },
+  {
+   "q": "Will Republican win the House race for NJ-02? [Yes: Jeff Van Drew]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "KXHOUSERACE-NJ02-26-R",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxhouserace/x/kxhouserace-nj02-26.",
+   "base_rate_used": {
+    "reference_class": "R incumbents in R+5 seats surviving D+8 waves (2006/2018)",
+    "value": 0.72,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "NJ-02 is Van Drew's R+5-ish district and he has held it comfortably since switching parties; a D+9 national wave puts it on the outer edge of competitive but incumbency plus district lean keep him favored."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: Van Drew's margin compresses badly in wave years and NJ suburban shifts in 2025 state races ran hard against the GOP; D+9 is exactly the tide that catches such seats.",
+   "reasoning_summary": "Base rate: R incumbents in R+5 seats surviving D+8 waves (2006/2018) ~ 0.72. NJ-02 is Van Drew's R+5-ish district and he has held it comfortably since switching parties; a D+9 national wave puts it on the outer edge of competitive but incumbency plus district lean keep him favored. Net of adjustments the final probability is 0.68.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls",
+     "date": "2026-10-23"
+    }
+   ],
+   "p_raw": 0.68
+  },
+  {
+   "q": "Will the Democratic party win the Attorney General race in Michigan? [Yes: Eli Savit]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "KXATTYGENMI-26-D",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxattygenmi/x/kxattygenmi-26.",
+   "base_rate_used": {
+    "reference_class": "MI Dem statewide down-ballot wins in D+ environments",
+    "value": 0.7,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "Michigan AG race with Dem nominee Savit in an open seat: MI leans slightly D, Dems have held the AG office since 2019, and the D+9 environment makes a down-ballot statewide hold the clear base case."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: Down-ballot statewide races in MI have run closer than federal ones and an well-known R prosecutor nominee could localize the race away from the national tide.",
+   "reasoning_summary": "Base rate: MI Dem statewide down-ballot wins in D+ environments ~ 0.7. Michigan AG race with Dem nominee Savit in an open seat: MI leans slightly D, Dems have held the AG office since 2019, and the D+9 environment makes a down-ballot statewide hold the clear base case. Net of adjustments the final probability is 0.72.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls",
+     "date": "2026-10-23"
+    }
+   ],
+   "p_raw": 0.72
+  },
+  {
+   "q": "Will there be at least 60 wide film releases in Q4 2026? [Yes: At least 60]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "KXSLATECOUNT-26Q4-L60",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxslatecount/x/kxslatecount-26q4.",
+   "base_rate_used": {
+    "reference_class": "Q4 wide releases 2022-2025 range",
+    "value": 0.35,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "Q4 wide-release counts have run in the mid-50s post-COVID (Box Office Mojo domestic schedule); reaching at least 60 requires a slate buildout that 2026's release calendar only partially shows."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: Studios have been re-dating into Q4 2026 to chase the Avengers-adjacent audience surge and November additions could push the count over 60.",
+   "reasoning_summary": "Base rate: Q4 wide releases 2022-2025 range ~ 0.35. Q4 wide-release counts have run in the mid-50s post-COVID (Box Office Mojo domestic schedule); reaching at least 60 requires a slate buildout that 2026's release calendar only partially shows. Net of adjustments the final probability is 0.4.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.4
+  },
+  {
+   "q": "Will Peter Strzok be charged with a any crime before Jan 1, 2027? [Yes: Peter Strzok]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "KXFEDERALCHARGE-27JAN01-PSTR",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxfederalcharge/x/kxfederalcharge-27jan01.",
+   "base_rate_used": {
+    "reference_class": "threatened charges against named ex-officials materializing within a year",
+    "value": 0.25,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "Charging Strzok specifically requires a grand-jury action that has been teased by administration allies for a year without materializing; statutes of limitation and DOJ internal resistance are real obstacles."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: The 2026 DOJ has brought charges against other former officials and pre-midterm or lame-duck-period indictments of FBI figures fit its established pattern.",
+   "reasoning_summary": "Base rate: threatened charges against named ex-officials materializing within a year ~ 0.25. Charging Strzok specifically requires a grand-jury action that has been teased by administration allies for a year without materializing; statutes of limitation and DOJ internal resistance are real obstacles. Net of adjustments the final probability is 0.3.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.3
+  },
+  {
+   "q": "Will Republican win the House race for WA-3? [Yes: John Braun]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "HOUSEWA3-26-R",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/housewa3/x/housewa3-26.",
+   "base_rate_used": {
+    "reference_class": "R flips of D-held R+lean seats in D+8 waves",
+    "value": 0.2,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "WA-03's Gluesenkamp Perez has twice beaten R challengers in an R+5 seat; in a D+9 year her crossover brand plus incumbency make an R flip (Braun) the clear underdog case."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: The district's fundamentals remain R+5 and a disciplined mainstream R nominee (unlike Kent) could reassemble the natural coalition even against the national tide.",
+   "reasoning_summary": "Base rate: R flips of D-held R+lean seats in D+8 waves ~ 0.2. WA-03's Gluesenkamp Perez has twice beaten R challengers in an R+5 seat; in a D+9 year her crossover brand plus incumbency make an R flip (Braun) the clear underdog case. Net of adjustments the final probability is 0.25.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls",
+     "date": "2026-10-23"
+    }
+   ],
+   "p_raw": 0.25
+  },
+  {
+   "q": "How many billionaires will New York City lose this year? [Yes: At least 8]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "KXNYCBILLIONAIRES-26-115",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxnycbillionaires/x/kxnycbillionaires-26.",
+   "base_rate_used": {
+    "reference_class": "year-over-year NYC billionaire count declines of 8+ since 2015",
+    "value": 0.25,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "Forbes' NYC billionaire count fluctuates with markets; dropping below 115 (losing 8+) requires a wealth drawdown that the near-ATH equity market contradicts, though crypto losses and relocations (post-mayoral-election flight narratives) cut the other way."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: A Q4 market break plus high-profile Florida relocations after NYC's 2025 political shift could drive the count below the line in the year-end tally.",
+   "reasoning_summary": "Base rate: year-over-year NYC billionaire count declines of 8+ since 2015 ~ 0.25. Forbes' NYC billionaire count fluctuates with markets; dropping below 115 (losing 8+) requires a wealth drawdown that the near-ATH equity market contradicts, though crypto losses and relocations (post-mayoral-election flight narratives) cut the other way. Net of adjustments the final probability is 0.3.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.3
+  }
+ ]
+}

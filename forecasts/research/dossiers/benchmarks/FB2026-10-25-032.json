@@ -1,0 +1,861 @@
+{
+ "forecast_id": "FB2026-10-25-032",
+ "domain": "ForecastBench",
+ "freeze_date": "2026-10-25",
+ "resolve_date": null,
+ "researcher": "claude-fable-5 operator session, 2026-10-25 round-day sprint (authored + rule + family layers)",
+ "resolution_source": "per-question benchmark resolution criteria (see each question's benchmark block)",
+ "independence_attestation": "No betting odds, prediction-market prices or forecast-aggregator numbers were fetched or consulted for any question in this dossier; market-source questions' embedded freeze prices were deliberately ignored.",
+ "questions": [
+  {
+   "q": "Will the spot exchange rate of Chinese yuan renminbi to US dollars have increased by {resolution_date} as compared to its value on {forecast_due_date}? | horizon 2027-04-23",
+   "benchmark": {
+    "source": "fred",
+    "id": "DEXCHUS",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-04-23"
+   },
+   "resolution_note": "Resolves to the value found at https://fred.stlouisfed.org/series/DEXCHUS once the data is published.",
+   "base_rate_used": {
+    "reference_class": "mean-reverting financial series vs own current value",
+    "value": 0.48,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'fred', horizon 2027-04-23: rates/spreads class: near-even with slight reversion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for fred at horizon 2027-04-23: rates/spreads class: near-even with slight reversion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.48.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "fred source data family (underlying series documentation)",
+     "url": "https://fred.stlouisfed.org",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.48
+  },
+  {
+   "q": "Will the spot exchange rate of Chinese yuan renminbi to US dollars have increased by {resolution_date} as compared to its value on {forecast_due_date}? | horizon 2027-10-25",
+   "benchmark": {
+    "source": "fred",
+    "id": "DEXCHUS",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-10-25"
+   },
+   "resolution_note": "Resolves to the value found at https://fred.stlouisfed.org/series/DEXCHUS once the data is published.",
+   "base_rate_used": {
+    "reference_class": "mean-reverting financial series vs own current value",
+    "value": 0.48,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'fred', horizon 2027-10-25: rates/spreads class: near-even with slight reversion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for fred at horizon 2027-10-25: rates/spreads class: near-even with slight reversion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.48.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "fred source data family (underlying series documentation)",
+     "url": "https://fred.stlouisfed.org",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.48
+  },
+  {
+   "q": "Will the Federal Reserve Bank of Cleveland's 2-year expected inflation rate have increased by {resolution_date} as compared to its value on {forecast_due_date}? | horizon 2026-11-24",
+   "benchmark": {
+    "source": "fred",
+    "id": "EXPINF2YR",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-24"
+   },
+   "resolution_note": "Resolves to the value found at https://fred.stlouisfed.org/series/EXPINF2YR once the data is published.",
+   "base_rate_used": {
+    "reference_class": "mean-reverting financial series vs own current value",
+    "value": 0.48,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'fred', horizon 2026-11-24: rates/spreads class: near-even with slight reversion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for fred at horizon 2026-11-24: rates/spreads class: near-even with slight reversion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.48.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "fred source data family (underlying series documentation)",
+     "url": "https://fred.stlouisfed.org",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.48
+  },
+  {
+   "q": "Will the Federal Reserve Bank of Cleveland's 2-year expected inflation rate have increased by {resolution_date} as compared to its value on {forecast_due_date}? | horizon 2027-01-23",
+   "benchmark": {
+    "source": "fred",
+    "id": "EXPINF2YR",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-01-23"
+   },
+   "resolution_note": "Resolves to the value found at https://fred.stlouisfed.org/series/EXPINF2YR once the data is published.",
+   "base_rate_used": {
+    "reference_class": "mean-reverting financial series vs own current value",
+    "value": 0.48,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'fred', horizon 2027-01-23: rates/spreads class: near-even with slight reversion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for fred at horizon 2027-01-23: rates/spreads class: near-even with slight reversion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.48.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "fred source data family (underlying series documentation)",
+     "url": "https://fred.stlouisfed.org",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.48
+  },
+  {
+   "q": "Will the Federal Reserve Bank of Cleveland's 2-year expected inflation rate have increased by {resolution_date} as compared to its value on {forecast_due_date}? | horizon 2027-04-23",
+   "benchmark": {
+    "source": "fred",
+    "id": "EXPINF2YR",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-04-23"
+   },
+   "resolution_note": "Resolves to the value found at https://fred.stlouisfed.org/series/EXPINF2YR once the data is published.",
+   "base_rate_used": {
+    "reference_class": "mean-reverting financial series vs own current value",
+    "value": 0.48,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'fred', horizon 2027-04-23: rates/spreads class: near-even with slight reversion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for fred at horizon 2027-04-23: rates/spreads class: near-even with slight reversion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.48.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "fred source data family (underlying series documentation)",
+     "url": "https://fred.stlouisfed.org",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.48
+  },
+  {
+   "q": "Will the Federal Reserve Bank of Cleveland's 2-year expected inflation rate have increased by {resolution_date} as compared to its value on {forecast_due_date}? | horizon 2027-10-25",
+   "benchmark": {
+    "source": "fred",
+    "id": "EXPINF2YR",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-10-25"
+   },
+   "resolution_note": "Resolves to the value found at https://fred.stlouisfed.org/series/EXPINF2YR once the data is published.",
+   "base_rate_used": {
+    "reference_class": "mean-reverting financial series vs own current value",
+    "value": 0.48,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'fred', horizon 2027-10-25: rates/spreads class: near-even with slight reversion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for fred at horizon 2027-10-25: rates/spreads class: near-even with slight reversion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.48.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "fred source data family (underlying series documentation)",
+     "url": "https://fred.stlouisfed.org",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.48
+  },
+  {
+   "q": "Will the total dollar amount of assets held by all US commercial banks have increased by {resolution_date} as compared to its value on {forecast_due_date}? | horizon 2026-11-01",
+   "benchmark": {
+    "source": "fred",
+    "id": "TLAACBW027SBOG",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-01"
+   },
+   "resolution_note": "Resolves to the value found at https://fred.stlouisfed.org/series/TLAACBW027SBOG once the data is published.",
+   "base_rate_used": {
+    "reference_class": "nominal level-series uptrend persistence",
+    "value": 0.505,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'fred', horizon 2026-11-01: level/index class: mild positive drift rising with horizon (freeze value 25927.6581)."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for fred at horizon 2026-11-01: level/index class: mild positive drift rising with horizon (freeze value 25927.6581). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.505.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "fred source data family (underlying series documentation)",
+     "url": "https://fred.stlouisfed.org",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.505
+  },
+  {
+   "q": "Will the total dollar amount of assets held by all US commercial banks have increased by {resolution_date} as compared to its value on {forecast_due_date}? | horizon 2026-11-24",
+   "benchmark": {
+    "source": "fred",
+    "id": "TLAACBW027SBOG",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-24"
+   },
+   "resolution_note": "Resolves to the value found at https://fred.stlouisfed.org/series/TLAACBW027SBOG once the data is published.",
+   "base_rate_used": {
+    "reference_class": "nominal level-series uptrend persistence",
+    "value": 0.51,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'fred', horizon 2026-11-24: level/index class: mild positive drift rising with horizon (freeze value 25927.6581)."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for fred at horizon 2026-11-24: level/index class: mild positive drift rising with horizon (freeze value 25927.6581). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.51.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "fred source data family (underlying series documentation)",
+     "url": "https://fred.stlouisfed.org",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.51
+  },
+  {
+   "q": "Will the total dollar amount of assets held by all US commercial banks have increased by {resolution_date} as compared to its value on {forecast_due_date}? | horizon 2027-01-23",
+   "benchmark": {
+    "source": "fred",
+    "id": "TLAACBW027SBOG",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-01-23"
+   },
+   "resolution_note": "Resolves to the value found at https://fred.stlouisfed.org/series/TLAACBW027SBOG once the data is published.",
+   "base_rate_used": {
+    "reference_class": "nominal level-series uptrend persistence",
+    "value": 0.53,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'fred', horizon 2027-01-23: level/index class: mild positive drift rising with horizon (freeze value 25927.6581)."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for fred at horizon 2027-01-23: level/index class: mild positive drift rising with horizon (freeze value 25927.6581). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.53.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "fred source data family (underlying series documentation)",
+     "url": "https://fred.stlouisfed.org",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.53
+  },
+  {
+   "q": "Will the total dollar amount of assets held by all US commercial banks have increased by {resolution_date} as compared to its value on {forecast_due_date}? | horizon 2027-04-23",
+   "benchmark": {
+    "source": "fred",
+    "id": "TLAACBW027SBOG",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-04-23"
+   },
+   "resolution_note": "Resolves to the value found at https://fred.stlouisfed.org/series/TLAACBW027SBOG once the data is published.",
+   "base_rate_used": {
+    "reference_class": "nominal level-series uptrend persistence",
+    "value": 0.55,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'fred', horizon 2027-04-23: level/index class: mild positive drift rising with horizon (freeze value 25927.6581)."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for fred at horizon 2027-04-23: level/index class: mild positive drift rising with horizon (freeze value 25927.6581). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.55.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "fred source data family (underlying series documentation)",
+     "url": "https://fred.stlouisfed.org",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.55
+  },
+  {
+   "q": "Will the total dollar amount of assets held by all US commercial banks have increased by {resolution_date} as compared to its value on {forecast_due_date}? | horizon 2027-10-25",
+   "benchmark": {
+    "source": "fred",
+    "id": "TLAACBW027SBOG",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-10-25"
+   },
+   "resolution_note": "Resolves to the value found at https://fred.stlouisfed.org/series/TLAACBW027SBOG once the data is published.",
+   "base_rate_used": {
+    "reference_class": "nominal level-series uptrend persistence",
+    "value": 0.57,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'fred', horizon 2027-10-25: level/index class: mild positive drift rising with horizon (freeze value 25927.6581)."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for fred at horizon 2027-10-25: level/index class: mild positive drift rising with horizon (freeze value 25927.6581). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.57.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "fred source data family (underlying series documentation)",
+     "url": "https://fred.stlouisfed.org",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.57
+  },
+  {
+   "q": "Will the effective yield of securities with an investment grade rating of BB in the ICE BofA US High Yield Master II Index, which tracks the performance of corporate debt below investment grade in the US domestic market, have increased by {resolution_date} as compared to its value on {forecast_due_date}? | horizon 2026-11-01",
+   "benchmark": {
+    "source": "fred",
+    "id": "BAMLH0A1HYBBEY",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-01"
+   },
+   "resolution_note": "Resolves to the value found at https://fred.stlouisfed.org/series/BAMLH0A1HYBBEY once the data is published.",
+   "base_rate_used": {
+    "reference_class": "mean-reverting financial series vs own current value",
+    "value": 0.48,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'fred', horizon 2026-11-01: rates/spreads class: near-even with slight reversion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for fred at horizon 2026-11-01: rates/spreads class: near-even with slight reversion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.48.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "fred source data family (underlying series documentation)",
+     "url": "https://fred.stlouisfed.org",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.48
+  },
+  {
+   "q": "Will the effective yield of securities with an investment grade rating of BB in the ICE BofA US High Yield Master II Index, which tracks the performance of corporate debt below investment grade in the US domestic market, have increased by {resolution_date} as compared to its value on {forecast_due_date}? | horizon 2026-11-24",
+   "benchmark": {
+    "source": "fred",
+    "id": "BAMLH0A1HYBBEY",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-24"
+   },
+   "resolution_note": "Resolves to the value found at https://fred.stlouisfed.org/series/BAMLH0A1HYBBEY once the data is published.",
+   "base_rate_used": {
+    "reference_class": "mean-reverting financial series vs own current value",
+    "value": 0.48,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'fred', horizon 2026-11-24: rates/spreads class: near-even with slight reversion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for fred at horizon 2026-11-24: rates/spreads class: near-even with slight reversion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.48.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "fred source data family (underlying series documentation)",
+     "url": "https://fred.stlouisfed.org",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.48
+  },
+  {
+   "q": "Will the effective yield of securities with an investment grade rating of BB in the ICE BofA US High Yield Master II Index, which tracks the performance of corporate debt below investment grade in the US domestic market, have increased by {resolution_date} as compared to its value on {forecast_due_date}? | horizon 2027-01-23",
+   "benchmark": {
+    "source": "fred",
+    "id": "BAMLH0A1HYBBEY",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-01-23"
+   },
+   "resolution_note": "Resolves to the value found at https://fred.stlouisfed.org/series/BAMLH0A1HYBBEY once the data is published.",
+   "base_rate_used": {
+    "reference_class": "mean-reverting financial series vs own current value",
+    "value": 0.48,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'fred', horizon 2027-01-23: rates/spreads class: near-even with slight reversion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for fred at horizon 2027-01-23: rates/spreads class: near-even with slight reversion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.48.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "fred source data family (underlying series documentation)",
+     "url": "https://fred.stlouisfed.org",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.48
+  },
+  {
+   "q": "Will the effective yield of securities with an investment grade rating of BB in the ICE BofA US High Yield Master II Index, which tracks the performance of corporate debt below investment grade in the US domestic market, have increased by {resolution_date} as compared to its value on {forecast_due_date}? | horizon 2027-04-23",
+   "benchmark": {
+    "source": "fred",
+    "id": "BAMLH0A1HYBBEY",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-04-23"
+   },
+   "resolution_note": "Resolves to the value found at https://fred.stlouisfed.org/series/BAMLH0A1HYBBEY once the data is published.",
+   "base_rate_used": {
+    "reference_class": "mean-reverting financial series vs own current value",
+    "value": 0.48,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'fred', horizon 2027-04-23: rates/spreads class: near-even with slight reversion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for fred at horizon 2027-04-23: rates/spreads class: near-even with slight reversion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.48.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "fred source data family (underlying series documentation)",
+     "url": "https://fred.stlouisfed.org",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.48
+  },
+  {
+   "q": "Will the effective yield of securities with an investment grade rating of BB in the ICE BofA US High Yield Master II Index, which tracks the performance of corporate debt below investment grade in the US domestic market, have increased by {resolution_date} as compared to its value on {forecast_due_date}? | horizon 2027-10-25",
+   "benchmark": {
+    "source": "fred",
+    "id": "BAMLH0A1HYBBEY",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-10-25"
+   },
+   "resolution_note": "Resolves to the value found at https://fred.stlouisfed.org/series/BAMLH0A1HYBBEY once the data is published.",
+   "base_rate_used": {
+    "reference_class": "mean-reverting financial series vs own current value",
+    "value": 0.48,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'fred', horizon 2027-10-25: rates/spreads class: near-even with slight reversion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for fred at horizon 2027-10-25: rates/spreads class: near-even with slight reversion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.48.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "fred source data family (underlying series documentation)",
+     "url": "https://fred.stlouisfed.org",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.48
+  },
+  {
+   "q": "Will the Federal Reserve's overnight bank funding rate have increased by {resolution_date} as compared to its value on {forecast_due_date}? | horizon 2026-11-01",
+   "benchmark": {
+    "source": "fred",
+    "id": "OBFR",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-01"
+   },
+   "resolution_note": "Resolves to the value found at https://fred.stlouisfed.org/series/OBFR once the data is published.",
+   "base_rate_used": {
+    "reference_class": "mean-reverting financial series vs own current value",
+    "value": 0.48,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'fred', horizon 2026-11-01: rates/spreads class: near-even with slight reversion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for fred at horizon 2026-11-01: rates/spreads class: near-even with slight reversion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.48.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "fred source data family (underlying series documentation)",
+     "url": "https://fred.stlouisfed.org",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.48
+  },
+  {
+   "q": "Will the Federal Reserve's overnight bank funding rate have increased by {resolution_date} as compared to its value on {forecast_due_date}? | horizon 2026-11-24",
+   "benchmark": {
+    "source": "fred",
+    "id": "OBFR",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-24"
+   },
+   "resolution_note": "Resolves to the value found at https://fred.stlouisfed.org/series/OBFR once the data is published.",
+   "base_rate_used": {
+    "reference_class": "mean-reverting financial series vs own current value",
+    "value": 0.48,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'fred', horizon 2026-11-24: rates/spreads class: near-even with slight reversion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for fred at horizon 2026-11-24: rates/spreads class: near-even with slight reversion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.48.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "fred source data family (underlying series documentation)",
+     "url": "https://fred.stlouisfed.org",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.48
+  },
+  {
+   "q": "Will the Federal Reserve's overnight bank funding rate have increased by {resolution_date} as compared to its value on {forecast_due_date}? | horizon 2027-01-23",
+   "benchmark": {
+    "source": "fred",
+    "id": "OBFR",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-01-23"
+   },
+   "resolution_note": "Resolves to the value found at https://fred.stlouisfed.org/series/OBFR once the data is published.",
+   "base_rate_used": {
+    "reference_class": "mean-reverting financial series vs own current value",
+    "value": 0.48,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'fred', horizon 2027-01-23: rates/spreads class: near-even with slight reversion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for fred at horizon 2027-01-23: rates/spreads class: near-even with slight reversion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.48.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "fred source data family (underlying series documentation)",
+     "url": "https://fred.stlouisfed.org",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.48
+  },
+  {
+   "q": "Will the Federal Reserve's overnight bank funding rate have increased by {resolution_date} as compared to its value on {forecast_due_date}? | horizon 2027-04-23",
+   "benchmark": {
+    "source": "fred",
+    "id": "OBFR",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-04-23"
+   },
+   "resolution_note": "Resolves to the value found at https://fred.stlouisfed.org/series/OBFR once the data is published.",
+   "base_rate_used": {
+    "reference_class": "mean-reverting financial series vs own current value",
+    "value": 0.48,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'fred', horizon 2027-04-23: rates/spreads class: near-even with slight reversion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for fred at horizon 2027-04-23: rates/spreads class: near-even with slight reversion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.48.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "fred source data family (underlying series documentation)",
+     "url": "https://fred.stlouisfed.org",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.48
+  },
+  {
+   "q": "Will the Federal Reserve's overnight bank funding rate have increased by {resolution_date} as compared to its value on {forecast_due_date}? | horizon 2027-10-25",
+   "benchmark": {
+    "source": "fred",
+    "id": "OBFR",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-10-25"
+   },
+   "resolution_note": "Resolves to the value found at https://fred.stlouisfed.org/series/OBFR once the data is published.",
+   "base_rate_used": {
+    "reference_class": "mean-reverting financial series vs own current value",
+    "value": 0.48,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'fred', horizon 2027-10-25: rates/spreads class: near-even with slight reversion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for fred at horizon 2027-10-25: rates/spreads class: near-even with slight reversion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.48.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "fred source data family (underlying series documentation)",
+     "url": "https://fred.stlouisfed.org",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.48
+  },
+  {
+   "q": "Will Moody's Aaa Corporate Bond Yield compared to the 10-year Treasury yield have increased by {resolution_date} as compared to its value on {forecast_due_date}? | horizon 2026-11-01",
+   "benchmark": {
+    "source": "fred",
+    "id": "AAA10Y",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-01"
+   },
+   "resolution_note": "Resolves to the value found at https://fred.stlouisfed.org/series/AAA10Y once the data is published.",
+   "base_rate_used": {
+    "reference_class": "mean-reverting financial series vs own current value",
+    "value": 0.48,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'fred', horizon 2026-11-01: rates/spreads class: near-even with slight reversion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for fred at horizon 2026-11-01: rates/spreads class: near-even with slight reversion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.48.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "fred source data family (underlying series documentation)",
+     "url": "https://fred.stlouisfed.org",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.48
+  },
+  {
+   "q": "Will Moody's Aaa Corporate Bond Yield compared to the 10-year Treasury yield have increased by {resolution_date} as compared to its value on {forecast_due_date}? | horizon 2026-11-24",
+   "benchmark": {
+    "source": "fred",
+    "id": "AAA10Y",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-24"
+   },
+   "resolution_note": "Resolves to the value found at https://fred.stlouisfed.org/series/AAA10Y once the data is published.",
+   "base_rate_used": {
+    "reference_class": "mean-reverting financial series vs own current value",
+    "value": 0.48,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'fred', horizon 2026-11-24: rates/spreads class: near-even with slight reversion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for fred at horizon 2026-11-24: rates/spreads class: near-even with slight reversion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.48.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "fred source data family (underlying series documentation)",
+     "url": "https://fred.stlouisfed.org",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.48
+  },
+  {
+   "q": "Will Moody's Aaa Corporate Bond Yield compared to the 10-year Treasury yield have increased by {resolution_date} as compared to its value on {forecast_due_date}? | horizon 2027-01-23",
+   "benchmark": {
+    "source": "fred",
+    "id": "AAA10Y",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-01-23"
+   },
+   "resolution_note": "Resolves to the value found at https://fred.stlouisfed.org/series/AAA10Y once the data is published.",
+   "base_rate_used": {
+    "reference_class": "mean-reverting financial series vs own current value",
+    "value": 0.48,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'fred', horizon 2027-01-23: rates/spreads class: near-even with slight reversion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for fred at horizon 2027-01-23: rates/spreads class: near-even with slight reversion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.48.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "fred source data family (underlying series documentation)",
+     "url": "https://fred.stlouisfed.org",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.48
+  },
+  {
+   "q": "Will Moody's Aaa Corporate Bond Yield compared to the 10-year Treasury yield have increased by {resolution_date} as compared to its value on {forecast_due_date}? | horizon 2027-04-23",
+   "benchmark": {
+    "source": "fred",
+    "id": "AAA10Y",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-04-23"
+   },
+   "resolution_note": "Resolves to the value found at https://fred.stlouisfed.org/series/AAA10Y once the data is published.",
+   "base_rate_used": {
+    "reference_class": "mean-reverting financial series vs own current value",
+    "value": 0.48,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'fred', horizon 2027-04-23: rates/spreads class: near-even with slight reversion."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for fred at horizon 2027-04-23: rates/spreads class: near-even with slight reversion. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.48.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "fred source data family (underlying series documentation)",
+     "url": "https://fred.stlouisfed.org",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.48
+  }
+ ]
+}

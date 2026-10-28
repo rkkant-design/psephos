@@ -1,0 +1,222 @@
+{
+ "forecast_id": "PB2027",
+ "freeze_date": "2026-10-23",
+ "new_entrant_flag": {
+  "entrant": "Akali Dal (Waris Punjab De) - Amritpal Singh",
+  "evidence": "polling 8.5-14% (SCORE 8.5, People's Pulse 14) with zero presence in PB2022 baseline and GE2024; satisfies the N=46 rule 'serious contender invisible to both baseline AE and prior GE'. TN2026/TVK precedent: all CALLs suppressed to WATCH-FLAG.",
+  "triggered": true
+ },
+ "params": {
+  "alpha": 0.467,
+  "n_sim": 10000,
+  "poll_agencies_rated": false,
+  "seed": 42,
+  "sigma_c": 12.31,
+  "sigma_state_m2": 6.3,
+  "sigma_state_m3": 6.0,
+  "tau": 0.5
+ },
+ "quality_flags": [
+  "NEW-ENTRANT FLAG ACTIVE: Waris Punjab De (Amritpal Singh) polls 8.5-14% with no electoral baseline - the exact TVK/TN2026 pattern. All would-be CALLs are suppressed to WATCH-FLAG per the validated N=46 rule.",
+  "All final-window polls are unrated agencies; two partisan-affiliated polls (Desh Ka Verdict/INC, Aapka Opinion/AAP) excluded - seat-only projections, no vote shares.",
+  "Poll spread is extreme: AAP 27-38, SAD 6-19 across agencies in the same window.",
+  "WPD is not a simulatable bloc (zero baseline): its 8-14% will come asymmetrically from AAP's and SAD's Panthic vote, which the uniform-swing Monte Carlo cannot represent."
+ ],
+ "questions": [
+  {
+   "p_gate": 0.4831,
+   "p_m2": 0.5913,
+   "p_m3": 0.4831,
+   "question": "AAP wins majority",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.7502,
+   "p_m2": 0.8765,
+   "p_m3": 0.7502,
+   "question": "AAP is largest",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.029,
+   "p_m2": 0.029,
+   "p_m3": 0.1054,
+   "question": "INC wins majority",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.109,
+   "p_m2": 0.109,
+   "p_m3": 0.2468,
+   "question": "INC is largest",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.0,
+   "p_m2": 0.0003,
+   "p_m3": 0.0,
+   "question": "SAD wins majority",
+   "verdict": "WATCH-FLAG"
+  },
+  {
+   "p_gate": 0.0017,
+   "p_m2": 0.0121,
+   "p_m3": 0.0017,
+   "question": "SAD is largest",
+   "verdict": "WATCH-FLAG"
+  },
+  {
+   "p_gate": 0.0,
+   "p_m2": 0.0,
+   "p_m3": 0.0,
+   "question": "BJP wins majority",
+   "verdict": "WATCH-FLAG"
+  },
+  {
+   "p_gate": 0.0013,
+   "p_m2": 0.0024,
+   "p_m3": 0.0013,
+   "question": "BJP is largest",
+   "verdict": "WATCH-FLAG"
+  },
+  {
+   "p_gate": 0.7796,
+   "p_m2": 0.7796,
+   "p_m3": 0.8069,
+   "question": "BJP under 15 seats",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.7311,
+   "p_m2": 0.7311,
+   "p_m3": 0.906,
+   "question": "SAD under 20 seats",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.9855,
+   "p_m2": 0.9855,
+   "p_m3": 0.997,
+   "question": "Winner (largest) in {AAP, INC}",
+   "verdict": "WATCH-FLAG"
+  }
+ ],
+ "resolution": {
+  "resolve_by": "2027-03-31",
+  "rules": [
+   "Bloc seat totals = sum of seats won by the member parties listed in `blocs` as composed at freeze; post-result defections, mergers and letters of support are ignored",
+   "If an alliance splits BEFORE polling, a re-run forecast (new ledger rows) supersedes; these rows still resolve against freeze-time bloc composition",
+   "'wins majority' = bloc seats >= 59 of 117 at first full declaration; countermanded/postponed seats count as not won unless they decide the question, in which case resolution waits for them",
+   "'is largest' = strictly more seats than every other modeled bloc (independents and unmodeled parties are not blocs); an exact tie resolves NO for all blocs",
+   "Seat-threshold questions resolve on the same official tally",
+   "If the election is not held by 2027-12-31, rows resolve VOID: logged and excluded from scoring, never silently dropped"
+  ],
+  "source": "Election Commission of India official results (results.eci.gov.in), party-wise seat tally at first full declaration of all 117 seats"
+ },
+ "run_at_utc": "2026-10-23T09:18:27+00:00",
+ "seats_m2": {
+  "AAP": {
+   "med": 62,
+   "p5": 36,
+   "p95": 85,
+   "p_largest": 0.8765,
+   "p_majority": 0.5913
+  },
+  "BJP": {
+   "med": 9,
+   "p5": 2,
+   "p95": 23,
+   "p_largest": 0.0024,
+   "p_majority": 0.0
+  },
+  "INC": {
+   "med": 28,
+   "p5": 11,
+   "p95": 54,
+   "p_largest": 0.109,
+   "p_majority": 0.029
+  },
+  "SAD": {
+   "med": 13,
+   "p5": 3,
+   "p95": 32,
+   "p_largest": 0.0121,
+   "p_majority": 0.0003
+  }
+ },
+ "seats_m3": {
+  "AAP": {
+   "med": 58,
+   "p5": 33,
+   "p95": 81,
+   "p_largest": 0.7502,
+   "p_majority": 0.4831
+  },
+  "BJP": {
+   "med": 9,
+   "p5": 2,
+   "p95": 22,
+   "p_largest": 0.0013,
+   "p_majority": 0.0
+  },
+  "INC": {
+   "med": 39,
+   "p5": 18,
+   "p95": 65,
+   "p_largest": 0.2468,
+   "p_majority": 0.1054
+  },
+  "SAD": {
+   "med": 9,
+   "p5": 2,
+   "p95": 23,
+   "p_largest": 0.0017,
+   "p_majority": 0.0
+  }
+ },
+ "state_shares": {
+  "baseline": {
+   "AAP": 42.31,
+   "BJP": 6.65,
+   "INC": 23.14,
+   "SAD": 18.52
+  },
+  "ge": {
+   "AAP": 26.16,
+   "BJP": 18.65,
+   "INC": 26.44,
+   "SAD": 13.48
+  },
+  "m2_pred": {
+   "AAP": 34.77,
+   "BJP": 12.25,
+   "INC": 24.68,
+   "SAD": 16.17
+  },
+  "m3_pred": {
+   "AAP": 34.0,
+   "BJP": 12.5,
+   "INC": 28.75,
+   "SAD": 12.38
+  }
+ },
+ "title": "Punjab Assembly 2027",
+ "tripwires": [
+  {
+   "effect": "fracture would invalidate all two-way simulations; fade would lift the flag and make the gate decidable",
+   "watch": "WPD trajectory in later polls (toward 20%+ = TN2026 fracture pattern; fade below 5% = flag review)"
+  },
+  {
+   "effect": "re-bloc and re-run with tau transfers",
+   "watch": "Any SAD-BSP or SAD-WPD alliance formation"
+  },
+  {
+   "effect": "M3 upgrades to rated sigma",
+   "watch": "A rated agency (CVoter/CSDS/Axis) publishes a vote-share poll"
+  },
+  {
+   "effect": "insider-flow signal; sustained one-way flow triggers re-run",
+   "watch": "Ticket-season defection flows, net direction"
+  }
+ ]
+}

@@ -1,0 +1,569 @@
+[
+ {
+  "id": "41678",
+  "source": "metaculus",
+  "question": "Will Mary Peltola win the 2026 US Senate election in Alaska?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/41678.",
+  "market_resolution_criteria": "This question will resolve as **Yes** if Mary Peltola wins the 2026 United States Senate election in Alaska per certified results by state election officials.",
+  "background": "The [2026 Alaska United States Senate election](https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Alaska) is scheduled to take place on November 3, 2026, to elect one of Alaska's two US senators. There will be a single, nonpartisan primary held on August 18, 2026, from which the top four candidates will advance to the general election, which will be conducted via ranked-choice voting.\n\nDemocrat [Mary Peltola](https://en.wikipedia.org/wiki/Mary_Peltola) made news when she won the [2022 special election](https://en.wikipedia.org/wiki/2022_Alaska%27s_at-large_congressional_district_special_election) to represent Alaska's at-large congressional district, becoming the first Democrat to win statewide office in the traditionally red state since 2008. Peltola retained her seat in the [2022](https://en.wikipedia.org/wiki/2022_United_States_House_of_Representatives_election_in_Al",
+  "close": "2026-11-03T15:00:00+00:00"
+ },
+ {
+  "id": "43490",
+  "source": "metaculus",
+  "question": "Will Missouri's 2026 Amendment 3 pass, repealing the 2024 abortion-rights protections?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/43490.",
+  "market_resolution_criteria": "This question will resolve as **Yes** if Missouri's Amendment 3 (HJR 73, 2025) passes in the November 3, 2026 vote, according to the official certified results.",
+  "background": "On November 5, 2024, Missouri voters approved [Amendment 3](https://en.wikipedia.org/wiki/2024_Missouri_Amendment_3) (the \"Right to Reproductive Freedom Initiative\") by roughly 52% to 48%, adding Article I, Section 36 to the state constitution and establishing a fundamental right to reproductive freedom, including abortion through fetal viability. Missouri was the first state to roll back a pre-Dobbs near-total abortion ban via citizen initiative.\r\n\r\nIn May 2025, the Missouri General Assembly [passed House Joint Resolution 73](https://www.plannedparenthoodaction.org/planned-parenthood-great-plains-votes/press-releases/anti-abortion-lawmakers-in-the-missouri-house-approve-measure-to-overturn-the-will-of-the-voters-and-ban-abortion), referring a new constitutional amendment to the November 3, 2026 ballot. If approved, the 2026 Amendment 3 would:\r\n\r\n* Repeal Article I, Section 36 (the 2024 ",
+  "close": "2026-11-03T01:00:00+00:00"
+ },
+ {
+  "id": "CONTROLS-2026-D",
+  "source": "kalshi",
+  "question": "Will Democrats win the U.S. Senate in 2026? [Yes: Democratic Party]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/controls/x/controls-2026.",
+  "market_resolution_criteria": "If the Democratic Party has won control of the U.S. Senate in 2026, then the market resolves to Yes. This market may be determined early based on a consensus of media calls projecting control of the U.S. Senate. See full rules for details. Otherwise, victory will be determined by the party identification of the President pro tempore of the Senate on February 1, 2027. Outcome verified from Library of Congress (https://www.congress.gov/).",
+  "background": "N/A",
+  "close": "2027-02-01T15:00:00+00:00"
+ },
+ {
+  "id": "KXHOUSERACE-NJ02-26-R",
+  "source": "kalshi",
+  "question": "Will Republican win the House race for NJ-02? [Yes: Jeff Van Drew]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxhouserace/x/kxhouserace-nj02-26.",
+  "market_resolution_criteria": "If the House member sworn in for NJ-02 for the term beginning in 2027 is a member of the Republican Party, then the market resolves to Yes. This market is eligible for accelerated determination after a consensus of media organizations project the winner. See full rules for details. Outcome verified from Library of Congress (https://www.congress.gov/).",
+  "background": "N/A",
+  "close": "2027-01-03T17:00:00+00:00"
+ },
+ {
+  "id": "KXATTYGENMI-26-D",
+  "source": "kalshi",
+  "question": "Will the Democratic party win the Attorney General race in Michigan? [Yes: Eli Savit]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxattygenmi/x/kxattygenmi-26.",
+  "market_resolution_criteria": "If a representative of the Democratic party is sworn in as the Attorney General of Michigan for the term beginning in 2027, then the market resolves to Yes. This market is eligible for accelerated determination after a consensus of media organizations project the winner. See full rules for details. Outcome verified from Michigan Department of State (https://www.michigan.gov/sos).",
+  "background": "N/A",
+  "close": "2027-01-01T15:00:00+00:00"
+ },
+ {
+  "id": "HOUSEWA3-26-R",
+  "source": "kalshi",
+  "question": "Will Republican win the House race for WA-3? [Yes: John Braun]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/housewa3/x/housewa3-26.",
+  "market_resolution_criteria": "If the House member sworn in for WA-03 for the term beginning in 2027 is a member of the Republican party, then the market resolves to Yes. This market is eligible for accelerated determination after a consensus of media organizations project the winner. See full rules for details. Outcome verified from Library of Congress (https://www.congress.gov/).",
+  "background": "N/A",
+  "close": "2027-01-03T15:00:00+00:00"
+ },
+ {
+  "id": "GOVPARTYKS-27-R",
+  "source": "kalshi",
+  "question": "Will the Republican party win the governorship in Kansas [Yes: Ty Masterson]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/govpartyks/x/govpartyks-27.",
+  "market_resolution_criteria": "If a representative of the Republican party is inaugurated as the governor of Kansas pursuant to the 2026 election, then the market resolves to Yes. This market is eligible for accelerated determination after a consensus of media organizations project the winner. See full rules for details. Outcome verified from Kansas Secretary of State (https://sos.ks.gov).",
+  "background": "N/A",
+  "close": "2027-01-14T15:00:00+00:00"
+ },
+ {
+  "id": "GOVPARTYOR-26-D",
+  "source": "kalshi",
+  "question": "Will the Democratic party win the governorship in Oregon [Yes: Tina Kotek]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/govpartyor/x/govpartyor-26.",
+  "market_resolution_criteria": "If a representative of the Democratic party is inaugurated as the governor of Oregon pursuant to the 2026 election, then the market resolves to Yes. This market is eligible for accelerated determination after a consensus of media organizations project the winner. See full rules for details. Outcome verified from Oregon Secretary of State (https://sos.oregon.gov).",
+  "background": "N/A",
+  "close": "2027-01-09T15:00:00+00:00"
+ },
+ {
+  "id": "GOVPARTYGA-26-R",
+  "source": "kalshi",
+  "question": "Will the Republican party win the governorship in Georgia [Yes: Rick Jackson]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/govpartyga/x/govpartyga-26.",
+  "market_resolution_criteria": "If a representative of the Republican party is inaugurated as the governor of Georgia pursuant to the 2026 election, then the market resolves to Yes. This market is eligible for accelerated determination after a consensus of media organizations project the winner. See full rules for details. Outcome verified from Georgia Secretary of State (https://sos.ga.gov).",
+  "background": "N/A",
+  "close": "2027-01-14T15:00:00+00:00"
+ },
+ {
+  "id": "GOVPARTYWI-26-D",
+  "source": "kalshi",
+  "question": "Will the Democratic party win the governorship in Wisconsin [Yes: David Crowley]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/govpartywi/x/govpartywi-26.",
+  "market_resolution_criteria": "If a representative of the Democratic party is inaugurated as the governor of Wisconsin pursuant to the 2026 election, then the market resolves to Yes. This market is eligible for accelerated determination after a consensus of media organizations project the winner. See full rules for details. Outcome verified from Wisconsin Elections Commission (https://elections.wi.gov).",
+  "background": "N/A",
+  "close": "2027-01-07T15:00:00+00:00"
+ },
+ {
+  "id": "KXATTYGENIA-26-R",
+  "source": "kalshi",
+  "question": "Will the Republican party win the Attorney General race in Iowa? [Yes: Brenna Bird]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxattygenia/x/kxattygenia-26.",
+  "market_resolution_criteria": "If a representative of the Republican party is sworn in as the Attorney General of Iowa for the term beginning in 2027, then the market resolves to Yes. Outcome verified from Iowa Secretary of State (https://sos.iowa.gov).",
+  "background": "N/A",
+  "close": "2027-01-03T15:00:00+00:00"
+ },
+ {
+  "id": "KXHOUSETX35-26-R",
+  "source": "kalshi",
+  "question": "Will Republican win the House race for TX-35? [Yes: Carlos De La Cruz]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxhousetx35/x/kxhousetx35-26.",
+  "market_resolution_criteria": "If the House member sworn in for TX-35 for the term beginning in 2027 is a member of the Republican Party, then the market resolves to Yes. This market is eligible for accelerated determination after a consensus of media organizations project the winner. See full rules for details. Outcome verified from Library of Congress (https://www.congress.gov/).",
+  "background": "N/A",
+  "close": "2027-01-03T15:00:00+00:00"
+ },
+ {
+  "id": "HOUSEIA3-26-D",
+  "source": "kalshi",
+  "question": "Will Democratic win the House race for IA-3? [Yes: Sarah Trone Garriott]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/houseia3/x/houseia3-26.",
+  "market_resolution_criteria": "If the House member sworn in for IA-03 for the term beginning in 2027 is a member of the Democratic party, then the market resolves to Yes. This market is eligible for accelerated determination after a consensus of media organizations project the winner. See full rules for details. Outcome verified from Library of Congress (https://www.congress.gov/).",
+  "background": "N/A",
+  "close": "2027-01-03T15:00:00+00:00"
+ },
+ {
+  "id": "KXHOUSERACE-MN01-26-R",
+  "source": "kalshi",
+  "question": "Will Republican win the House race for MN-01? [Yes: Brad Finstad]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxhouserace/x/kxhouserace-mn01-26.",
+  "market_resolution_criteria": "If the House member sworn in for MN-01 for the term beginning in 2027 is a member of the Republican Party, then the market resolves to Yes. This market is eligible for accelerated determination after a consensus of media organizations project the winner. See full rules for details. Outcome verified from Library of Congress (https://www.congress.gov/).",
+  "background": "N/A",
+  "close": "2027-01-03T17:00:00+00:00"
+ },
+ {
+  "id": "KXHOUSERACE-OH07-26-R",
+  "source": "kalshi",
+  "question": "Will Republican win the House race for OH-07? [Yes: Max Miller]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxhouserace/x/kxhouserace-oh07-26.",
+  "market_resolution_criteria": "If the House member sworn in for OH-07 for the term beginning in 2027 is a member of the Republican Party, then the market resolves to Yes. This market is eligible for accelerated determination after a consensus of media organizations project the winner. See full rules for details. Outcome verified from Library of Congress (https://www.congress.gov/).",
+  "background": "N/A",
+  "close": "2027-01-03T17:00:00+00:00"
+ },
+ {
+  "id": "SENATEAK-26-R",
+  "source": "kalshi",
+  "question": "Will Republicans win the Senate race in Alaska? [Yes: Republican party]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/senateak/x/senateak-26.",
+  "market_resolution_criteria": "If a representative of the Republican party is sworn in as a Senator of Alaska for the term beginning in 2027, then the market resolves to Yes. This market is eligible for accelerated determination after a consensus of media organizations project the winner. See full rules for details. Outcome verified from United States Congress (https://www.congress.gov/).",
+  "background": "N/A",
+  "close": "2027-01-03T15:00:00+00:00"
+ },
+ {
+  "id": "KXHOUSERACE-TX23-26-R",
+  "source": "kalshi",
+  "question": "Will Republican win the House race for TX-23? [Yes: Brandon Herrera]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxhouserace/x/kxhouserace-tx23-26.",
+  "market_resolution_criteria": "If the House member sworn in for TX-23 for the term beginning in 2027 is a member of the Republican Party, then the market resolves to Yes. This market is eligible for accelerated determination after a consensus of media organizations project the winner. See full rules for details. Outcome verified from Library of Congress (https://www.congress.gov/).",
+  "background": "N/A",
+  "close": "2027-01-03T17:00:00+00:00"
+ },
+ {
+  "id": "HOUSEPA1-26-R",
+  "source": "kalshi",
+  "question": "Will Republican win the House race for PA-1? [Yes: Brian Fitzpatrick]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/housepa1/x/housepa1-26.",
+  "market_resolution_criteria": "If the House member sworn in for PA-01 for the term beginning in 2027 is a member of the Republican Party, then the market resolves to Yes. This market is eligible for accelerated determination after a consensus of media organizations project the winner. See full rules for details. Outcome verified from Library of Congress (https://www.congress.gov/).",
+  "background": "N/A",
+  "close": "2027-01-03T15:00:00+00:00"
+ },
+ {
+  "id": "HOUSEOH9-26-R",
+  "source": "kalshi",
+  "question": "Will Republican win the House race for OH-9? [Yes: Derek Merrin]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/houseoh9/x/houseoh9-26.",
+  "market_resolution_criteria": "If the House member sworn in for OH-09 for the term beginning in 2027 is a member of the Republican Party, then the market resolves to Yes. This market is eligible for accelerated determination after a consensus of media organizations project the winner. See full rules for details. Outcome verified from Library of Congress (https://www.congress.gov/).",
+  "background": "N/A",
+  "close": "2027-01-03T15:00:00+00:00"
+ },
+ {
+  "id": "HOUSEWI1-26-D",
+  "source": "kalshi",
+  "question": "Will Democratic win the House race for WI-1? [Yes: Mitchell Berman]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/housewi1/x/housewi1-26.",
+  "market_resolution_criteria": "If the House member sworn in for WI-01 for the term beginning in 2027 is a member of the Democratic Party, then the market resolves to Yes. This market is eligible for accelerated determination after a consensus of media organizations project the winner. See full rules for details. Outcome verified from Library of Congress (https://www.congress.gov/).",
+  "background": "N/A",
+  "close": "2027-01-03T15:00:00+00:00"
+ },
+ {
+  "id": "KXMIDTERMHAPPEN-2026-T50",
+  "source": "kalshi",
+  "question": "Will at least 50 states conduct 2026 U.S. House midterms on time?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxmidtermhappen/x/kxmidtermhappen-2026.",
+  "market_resolution_criteria": "If the regularly scheduled biennial federal general election for the U.S. House of Representatives is conducted on time in all 50 U.S. states on the federally prescribed Election Day for 2026, then the market resolves to Yes. An election is \"conducted on time\" in a state if, on the federally prescribed Election Day for 2026, election officials in that state lawfully accept ballots cast by voters in such election in each of the state's U.S. House of Representatives congressional districts, such that votes cast on that date in each such district are eligible to be counted toward determining the winner of the election in that district. Lawful means of accepting ballots include in person at polling places, by mail, by absentee voting, by provisional ballot, or by other lawful means accepted on that date.\n\nLocalized disruptions within a congressional district do not disqualify that district from being \"conducted on time\" so long as ballots are lawfully accepted somewhere within the district on the federally prescribed Election Day for 2026. These include, without limitation:\nIndividual polling places opening late or closing early\nIndividual voting machines malfunctioning\nLocalized power, weather, or connectivity outages\n\nHowever, if on the federally prescribed Election Day for 2026 no ballots are lawfully accepted anywhere within one or more of a state's congressional districts, the state is not \"conducted on time\" regardless of whether ballots are accepted in other congressional districts within that state.\n\nAn election that is postponed to, rescheduled to, conducted on, or otherwise held on a date other than the federally prescribed Election Day for 2026 in a state does not qualify as \"conducted on time\" in that state, regardless of the reason for the change of date and regardless of whether such change is lawful. This includes, without limitation, any change effected by federal legislation, executive order, presidential proclamation, federal agency directive, state law or proclamation, court order, or any other instrument. Ballots cast before the federally prescribed Election Day for 2026 through early voting do not, by themselves, satisfy this criterion in a state unless ballots are also lawfully accepted on the federally prescribed Election Day for 2026 in that state.\n\nSpecial elections to fill vacancies, primary elections, and elections to non-voting delegate seats (including those representing the District of Columbia and U.S. territories) are not, by themselves, the \"regularly scheduled biennial federal general election\" referenced herein. The validity, fairness, certification status, or subsequent judicial treatment of any such election does not affect whether the election was \"conducted on time\" for purposes of this Contract; the test is whether election officials in the relevant state lawfully accepted ballots in the election on the federally prescribed Election Day for 2026.\n\nClarification (10/06/26): To clarify, a district will not fail the \u201cconducted on time\u201d requirement solely because, under state law in effect at Issuance, an unopposed U.S. House candidate is omitted from the ballot and deemed elected. This does not apply to a contest cancelled, postponed, or removed from the ballot pursuant to a law or order adopted after Issuance. Outcome verified from The Washington Post (https://www.washingtonpost.com/); CBS News (https://cbsnews.org); Fox News (https://www.foxnews.com/); the Federal Election Commission (https://www.fec.gov/); the New York Times (https://www.nytimes.com); Bloomberg News (https://www.bloomberg.com/news); The Wall Street Journal (https://www.wsj.com/); the Associated Press (https://apnews.com/); NBC News (https://www.nbcnews.com/); Reuters (https://www.reuters.com/); BBC News (https://www.bbc.com/); CNN (https://www.cnn.com); ABC News (https://abcnews.go.com/).",
+  "background": "N/A",
+  "close": "2026-11-03T15:00:00+00:00"
+ },
+ {
+  "id": "KXCAELECTION-2607-MVAN",
+  "source": "kalshi",
+  "question": "Who will win the 2026 CA-07 House election? [Yes: Mai Vang]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxcaelection/x/kxcaelection-2607.",
+  "market_resolution_criteria": "If Mai Vang wins the 2026 CA-07 House election, then the market resolves to Yes. This market is eligible for accelerated determination after a consensus of media organizations project the winner. See full rules for details. Outcome verified from the California Secretary of State (https://www.sos.ca.gov).",
+  "background": "N/A",
+  "close": "2026-11-03T15:00:00+00:00"
+ },
+ {
+  "id": "KXMIDTERMMOV-GASEND-P10",
+  "source": "kalshi",
+  "question": "Will the margin of victory for Democrats in the U.S. Senate election in Georgia be at least 10 percentage points? [Yes: Ossoff, 10+ pts]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxmidtermmov/x/kxmidtermmov-gasend.",
+  "market_resolution_criteria": "If the Democratic Party wins the first round of the 2026 U.S. Senate election in Georgia by 10 percentage points or more, then the market resolves to Yes. The margin of victory shall be calculated as follows based on the margin type.\n\nFor percentage points: the vote percentage received by the Democratic Party minus the vote percentage received by the candidate/party/option that finishes immediately behind the Democratic Party if the Democratic Party wins, or the candidate/party that finishes first if the Democratic Party loses.\n\nEach margin range is inclusive of its lower bound and exclusive of its upper bound. No rounding shall be applied to the calculated margin. For example, for consecutive ranges of 5-6% and 6-7%, a margin of 5.99999% resolves within the 5-6% range, while a margin of exactly 6% resolves within the 6-7% range. If the Democratic Party runs under multiple parties or is listed multiple times, votes attributable to the same underlying natural the Democratic Party will be summed.\n\nIf the Democratic Party wins the election, the margin will be positive. If the Democratic Party loses the election, the margin will be negative. If the Democratic Party ties for first place, the margin shall be 0. For uncontested races where the Democratic Party is the only candidate, the margin shall be 100 percentage points or the total number of votes cast (for raw votes). Outcome verified from official election authority responsible for certifying results in  (https://www.nass.org/can-I-vote).",
+  "background": "N/A",
+  "close": "2026-11-03T15:00:00+00:00"
+ },
+ {
+  "id": "KXMIDTERMMOV-WIGOVD-P4",
+  "source": "kalshi",
+  "question": "Will the margin of victory for Democrats in the governor election in Wisconsin be at least 4 percentage points? [Yes: Crowley, 4+ pts]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxmidtermmov/x/kxmidtermmov-wigovd.",
+  "market_resolution_criteria": "If the Democratic Party wins the 2026 gubernatorial election in Wisconsin by 4 percentage points or more, then the market resolves to Yes. The margin of victory shall be calculated as follows based on the margin type.\n\nFor percentage points: the vote percentage received by the Democratic Party minus the vote percentage received by the candidate/party/option that finishes immediately behind the Democratic Party if the Democratic Party wins, or the candidate/party that finishes first if the Democratic Party loses.\n\nEach margin range is inclusive of its lower bound and exclusive of its upper bound. No rounding shall be applied to the calculated margin. For example, for consecutive ranges of 5-6% and 6-7%, a margin of 5.99999% resolves within the 5-6% range, while a margin of exactly 6% resolves within the 6-7% range. If the Democratic Party runs under multiple parties or is listed multiple times, votes attributable to the same underlying natural the Democratic Party will be summed.\n\nIf the Democratic Party wins the election, the margin will be positive. If the Democratic Party loses the election, the margin will be negative. If the Democratic Party ties for first place, the margin shall be 0. For uncontested races where the Democratic Party is the only candidate, the margin shall be 100 percentage points or the total number of votes cast (for raw votes). Outcome verified from official election authority responsible for certifying results in  (https://www.nass.org/can-I-vote).",
+  "background": "N/A",
+  "close": "2026-11-03T15:00:00+00:00"
+ },
+ {
+  "id": "KXMIDTERMMOV-SCSENR-P9",
+  "source": "kalshi",
+  "question": "Will the margin of victory for Republicans in the U.S. Senate election in South Carolina be at least 9 percentage points? [Yes: Graham, 9+ pts]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxmidtermmov/x/kxmidtermmov-scsenr.",
+  "market_resolution_criteria": "If the Republican Party wins the 2026 U.S. Senate election in South Carolina by 9 percentage points or more, then the market resolves to Yes. The margin of victory shall be calculated as follows based on the margin type.\n\nFor percentage points: the vote percentage received by the Republican Party minus the vote percentage received by the candidate/party/option that finishes immediately behind the Republican Party if the Republican Party wins, or the candidate/party that finishes first if the Republican Party loses.\n\nEach margin range is inclusive of its lower bound and exclusive of its upper bound. No rounding shall be applied to the calculated margin. For example, for consecutive ranges of 5-6% and 6-7%, a margin of 5.99999% resolves within the 5-6% range, while a margin of exactly 6% resolves within the 6-7% range. If the Republican Party runs under multiple parties or is listed multiple times, votes attributable to the same underlying natural the Republican Party will be summed.\n\nIf the Republican Party wins the election, the margin will be positive. If the Republican Party loses the election, the margin will be negative. If the Republican Party ties for first place, the margin shall be 0. For uncontested races where the Republican Party is the only candidate, the margin shall be 100 percentage points or the total number of votes cast (for raw votes). Outcome verified from official election authority responsible for certifying results in  (https://www.nass.org/can-I-vote).",
+  "background": "N/A",
+  "close": "2026-11-03T15:00:00+00:00"
+ },
+ {
+  "id": "KXLTGOVTX-26-DEM",
+  "source": "kalshi",
+  "question": "Will the Democratic party win the Lieutenant Governor race in Texas? [Yes: Vikki Goodwin]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxltgovtx/x/kxltgovtx-26.",
+  "market_resolution_criteria": "If a representative of the Democratic party is sworn in as the Lieutenant Governor of Texas for the term beginning in 2027, then the market resolves to Yes. This market is eligible for accelerated determination after a consensus of media organizations project the winner. See full rules for details. Outcome verified from the State of Texas (https://www.sos.state.tx.us/elections/historical/index.shtml).",
+  "background": "N/A",
+  "close": "2026-11-03T15:00:00+00:00"
+ },
+ {
+  "id": "KXDSENATESEATSH-27-E53",
+  "source": "kalshi",
+  "question": "Will the Democratic party hold exactly 53 Senate seats in the 120th Congress? [Yes: 53]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxdsenateseatsh/x/kxdsenateseatsh-27.",
+  "market_resolution_criteria": "If the Democratic party has exactly 53 Senate seats on Feb 1, 2027, then the market resolves to Yes. Outcome verified from United States Congress (https://www.congress.gov/).",
+  "background": "N/A",
+  "close": "2027-02-01T15:00:00+00:00"
+ },
+ {
+  "id": "KXLTGOVTX-26-GOP",
+  "source": "kalshi",
+  "question": "Will the Republican party win the Lieutenant Governor race in Texas? [Yes: Dan Patrick]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxltgovtx/x/kxltgovtx-26.",
+  "market_resolution_criteria": "If a representative of the Republican party is sworn in as the Lieutenant Governor of Texas for the term beginning in 2027, then the market resolves to Yes. This market is eligible for accelerated determination after a consensus of media organizations project the winner. See full rules for details. Outcome verified from the State of Texas (https://www.sos.state.tx.us/elections/historical/index.shtml).",
+  "background": "N/A",
+  "close": "2026-11-03T15:00:00+00:00"
+ },
+ {
+  "id": "KXGOVPARTYAK-26-D",
+  "source": "kalshi",
+  "question": "Will the Democratic party win the governorship in Alaska [Yes: Democratic party]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxgovpartyak/x/kxgovpartyak-26.",
+  "market_resolution_criteria": "If a representative of the Democratic party is inaugurated as the governor of Alaska pursuant to the 2026 election, then the market resolves to Yes. This market is eligible for accelerated determination after a consensus of media organizations project the winner. See full rules for details. Outcome verified from Alaska Division of Elections (https://www.elections.alaska.gov/).",
+  "background": "N/A",
+  "close": "2026-11-03T15:00:00+00:00"
+ },
+ {
+  "id": "KXMIDTERMMOV-OHSENR-P4",
+  "source": "kalshi",
+  "question": "Will the margin of victory for Republicans in the U.S. Senate election in Ohio be at least 4 percentage points? [Yes: Husted, 4+ pts]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxmidtermmov/x/kxmidtermmov-ohsenr.",
+  "market_resolution_criteria": "If the Republican Party wins the 2026 U.S. Senate election in Ohio by 4 percentage points or more, then the market resolves to Yes. The margin of victory shall be calculated as follows based on the margin type.\n\nFor percentage points: the vote percentage received by the Republican Party minus the vote percentage received by the candidate/party/option that finishes immediately behind the Republican Party if the Republican Party wins, or the candidate/party that finishes first if the Republican Party loses.\n\nEach margin range is inclusive of its lower bound and exclusive of its upper bound. No rounding shall be applied to the calculated margin. For example, for consecutive ranges of 5-6% and 6-7%, a margin of 5.99999% resolves within the 5-6% range, while a margin of exactly 6% resolves within the 6-7% range. If the Republican Party runs under multiple parties or is listed multiple times, votes attributable to the same underlying natural the Republican Party will be summed.\n\nIf the Republican Party wins the election, the margin will be positive. If the Republican Party loses the election, the margin will be negative. If the Republican Party ties for first place, the margin shall be 0. For uncontested races where the Republican Party is the only candidate, the margin shall be 100 percentage points or the total number of votes cast (for raw votes). Outcome verified from official election authority responsible for certifying results in  (https://www.nass.org/can-I-vote).",
+  "background": "N/A",
+  "close": "2026-11-03T15:00:00+00:00"
+ },
+ {
+  "id": "KXMIDTERMMOV-MNSEND-P5",
+  "source": "kalshi",
+  "question": "Will the margin of victory for Democrats in the U.S. Senate election in Minnesota be at least 5 percentage points? [Yes: Flanagan, 5+ pts]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxmidtermmov/x/kxmidtermmov-mnsend.",
+  "market_resolution_criteria": "If the Democratic Party wins the 2026 U.S. Senate election in Minnesota by 5 percentage points or more, then the market resolves to Yes. The margin of victory shall be calculated as follows based on the margin type.\n\nFor percentage points: the vote percentage received by the Democratic Party minus the vote percentage received by the candidate/party/option that finishes immediately behind the Democratic Party if the Democratic Party wins, or the candidate/party that finishes first if the Democratic Party loses.\n\nEach margin range is inclusive of its lower bound and exclusive of its upper bound. No rounding shall be applied to the calculated margin. For example, for consecutive ranges of 5-6% and 6-7%, a margin of 5.99999% resolves within the 5-6% range, while a margin of exactly 6% resolves within the 6-7% range. If the Democratic Party runs under multiple parties or is listed multiple times, votes attributable to the same underlying natural the Democratic Party will be summed.\n\nIf the Democratic Party wins the election, the margin will be positive. If the Democratic Party loses the election, the margin will be negative. If the Democratic Party ties for first place, the margin shall be 0. For uncontested races where the Democratic Party is the only candidate, the margin shall be 100 percentage points or the total number of votes cast (for raw votes). Outcome verified from official election authority responsible for certifying results in  (https://www.nass.org/can-I-vote).",
+  "background": "N/A",
+  "close": "2026-11-03T15:00:00+00:00"
+ },
+ {
+  "id": "KXMIDTERMMOV-NCSEND-P9",
+  "source": "kalshi",
+  "question": "Will the margin of victory for Democrats in the U.S. Senate election in North Carolina be at least 9 percentage points? [Yes: Cooper, 9+ pts]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxmidtermmov/x/kxmidtermmov-ncsend.",
+  "market_resolution_criteria": "If the Democratic Party wins the 2026 U.S. Senate election in North Carolina by 9 percentage points or more, then the market resolves to Yes. The margin of victory shall be calculated as follows based on the margin type.\n\nFor percentage points: the vote percentage received by the Democratic Party minus the vote percentage received by the candidate/party/option that finishes immediately behind the Democratic Party if the Democratic Party wins, or the candidate/party that finishes first if the Democratic Party loses.\n\nEach margin range is inclusive of its lower bound and exclusive of its upper bound. No rounding shall be applied to the calculated margin. For example, for consecutive ranges of 5-6% and 6-7%, a margin of 5.99999% resolves within the 5-6% range, while a margin of exactly 6% resolves within the 6-7% range. If the Democratic Party runs under multiple parties or is listed multiple times, votes attributable to the same underlying natural the Democratic Party will be summed.\n\nIf the Democratic Party wins the election, the margin will be positive. If the Democratic Party loses the election, the margin will be negative. If the Democratic Party ties for first place, the margin shall be 0. For uncontested races where the Democratic Party is the only candidate, the margin shall be 100 percentage points or the total number of votes cast (for raw votes). Outcome verified from official election authority responsible for certifying results in  (https://www.nass.org/can-I-vote).",
+  "background": "N/A",
+  "close": "2026-11-03T15:00:00+00:00"
+ },
+ {
+  "id": "KXMIDTERMMOV-MESEND-P1",
+  "source": "kalshi",
+  "question": "Will the margin of victory for Democrats in the U.S. Senate election in Maine be at least 1 percentage points? [Yes: Jackson, 1+ pts]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxmidtermmov/x/kxmidtermmov-mesend.",
+  "market_resolution_criteria": "If the Democratic Party wins the 2026 U.S. Senate election in Maine by 1 percentage points or more, then the market resolves to Yes. The margin of victory shall be calculated as follows based on the margin type.\n\nFor percentage points: the vote percentage received by the Democratic Party minus the vote percentage received by the candidate/party/option that finishes immediately behind the Democratic Party if the Democratic Party wins, or the candidate/party that finishes first if the Democratic Party loses.\n\nEach margin range is inclusive of its lower bound and exclusive of its upper bound. No rounding shall be applied to the calculated margin. For example, for consecutive ranges of 5-6% and 6-7%, a margin of 5.99999% resolves within the 5-6% range, while a margin of exactly 6% resolves within the 6-7% range. If the Democratic Party runs under multiple parties or is listed multiple times, votes attributable to the same underlying natural the Democratic Party will be summed.\n\nIf the Democratic Party wins the election, the margin will be positive. If the Democratic Party loses the election, the margin will be negative. If the Democratic Party ties for first place, the margin shall be 0. For uncontested races where the Democratic Party is the only candidate, the margin shall be 100 percentage points or the total number of votes cast (for raw votes). Outcome verified from official election authority responsible for certifying results in  (https://www.nass.org/can-I-vote).",
+  "background": "N/A",
+  "close": "2026-11-03T15:00:00+00:00"
+ },
+ {
+  "id": "KXMIDTERMMOV-MISEND-P5",
+  "source": "kalshi",
+  "question": "Will the margin of victory for Democrats in the U.S. Senate election in Michigan be at least 5 percentage points? [Yes: Sayed, 5+ pts]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxmidtermmov/x/kxmidtermmov-misend.",
+  "market_resolution_criteria": "If the Democratic Party wins the 2026 U.S. Senate election in Michigan by 5 percentage points or more, then the market resolves to Yes. The margin of victory shall be calculated as follows based on the margin type.\n\nFor percentage points: the vote percentage received by the Democratic Party minus the vote percentage received by the candidate/party/option that finishes immediately behind the Democratic Party if the Democratic Party wins, or the candidate/party that finishes first if the Democratic Party loses.\n\nEach margin range is inclusive of its lower bound and exclusive of its upper bound. No rounding shall be applied to the calculated margin. For example, for consecutive ranges of 5-6% and 6-7%, a margin of 5.99999% resolves within the 5-6% range, while a margin of exactly 6% resolves within the 6-7% range. If the Democratic Party runs under multiple parties or is listed multiple times, votes attributable to the same underlying natural the Democratic Party will be summed.\n\nIf the Democratic Party wins the election, the margin will be positive. If the Democratic Party loses the election, the margin will be negative. If the Democratic Party ties for first place, the margin shall be 0. For uncontested races where the Democratic Party is the only candidate, the margin shall be 100 percentage points or the total number of votes cast (for raw votes). Outcome verified from official election authority responsible for certifying results in  (https://www.nass.org/can-I-vote).",
+  "background": "N/A",
+  "close": "2026-11-03T15:00:00+00:00"
+ },
+ {
+  "id": "KXMISENATE-26-MROG",
+  "source": "kalshi",
+  "question": "Who will win the 2026 Michigan Senate race? [Yes: Mike Rogers]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxmisenate/x/kxmisenate-26.",
+  "market_resolution_criteria": "If Mike Rogers wins the 2026 Michigan Senate race, then the market resolves to Yes. The listed candidate must win the election as the nominee of the listed party. If the candidate fails to secure the nomination, this market resolves to No immediately. This market is eligible for accelerated determination after a consensus of media organizations project the winner. See full rules for details. Outcome verified from Michigan Secretary of State (https://www.michigan.gov/sos).",
+  "background": "N/A",
+  "close": "2026-11-03T15:00:00+00:00"
+ },
+ {
+  "id": "KXMIDTERMMOV-OHSEND-P4",
+  "source": "kalshi",
+  "question": "Will the margin of victory for Democrats in the U.S. Senate election in Ohio be at least 4 percentage points? [Yes: Brown, 4+ pts]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxmidtermmov/x/kxmidtermmov-ohsend.",
+  "market_resolution_criteria": "If the Democratic Party wins the 2026 U.S. Senate election in Ohio by 4 percentage points or more, then the market resolves to Yes. The margin of victory shall be calculated as follows based on the margin type.\n\nFor percentage points: the vote percentage received by the Democratic Party minus the vote percentage received by the candidate/party/option that finishes immediately behind the Democratic Party if the Democratic Party wins, or the candidate/party that finishes first if the Democratic Party loses.\n\nEach margin range is inclusive of its lower bound and exclusive of its upper bound. No rounding shall be applied to the calculated margin. For example, for consecutive ranges of 5-6% and 6-7%, a margin of 5.99999% resolves within the 5-6% range, while a margin of exactly 6% resolves within the 6-7% range. If the Democratic Party runs under multiple parties or is listed multiple times, votes attributable to the same underlying natural the Democratic Party will be summed.\n\nIf the Democratic Party wins the election, the margin will be positive. If the Democratic Party loses the election, the margin will be negative. If the Democratic Party ties for first place, the margin shall be 0. For uncontested races where the Democratic Party is the only candidate, the margin shall be 100 percentage points or the total number of votes cast (for raw votes). Outcome verified from official election authority responsible for certifying results in  (https://www.nass.org/can-I-vote).",
+  "background": "N/A",
+  "close": "2026-11-03T15:00:00+00:00"
+ },
+ {
+  "id": "KXGOVAK-26-JKRE",
+  "source": "kalshi",
+  "question": "Who will win the governorship in Alaska? [Yes: Jonathan Kreiss-Tomkins]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxgovak/x/kxgovak-26.",
+  "market_resolution_criteria": "If Jonathan Kreiss-Tomkins is elected the governor of Alaska pursuant to the election in 2026, then the market resolves to Yes. This market is eligible for accelerated determination after a consensus of media organizations project the winner. See full rules for details. Outcome verified from The New York Times (https://www.nytimes.com/); the Associated Press (https://apnews.com/); Reuters (https://www.reuters.com/); Axios (https://www.axios.com/); Politico (https://www.politico.com/); Semafor (https://www.semafor.com/); The Information (https://www.theinformation.com/); The Washington Post (https://www.washingtonpost.com/); The Wall Street Journal (https://www.wsj.com/); ABC (https://www.abc.net.au/); CBS (https://www.cbsnews.com/); CNN (https://www.cnn.com/); Fox News (https://www.foxnews.com/); MSNBC (https://www.msnbc.com/).",
+  "background": "N/A",
+  "close": "2026-12-03T15:00:00+00:00"
+ },
+ {
+  "id": "KXHOUSETURNOUT-26NOV03-120",
+  "source": "kalshi",
+  "question": "Will the total 2026 U.S. House turnout be between 120 and 124.99 million? [Yes: 120 to 124.99 million]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxhouseturnout/x/kxhouseturnout-26nov03.",
+  "market_resolution_criteria": "If the total vote count in the 2026 U.S. House of Representatives elections is between 120,000,000 and 124,999,999, inclusive of both endpoints, then the market resolves to Yes. The vote count refers to the officially certified results from the relevant election authority. Provisional, absentee, early, mail-in, or electronic ballots are included only if reflected in the official certification. In preferential or ranked-choice systems, the contract resolves based on the vote count identified as the official result by the certifying authority. If the election is held in multiple phases, the contract resolves on the certified aggregate total. If a runoff forms part of the certified result, it is encompassed. The contract resolves based on officially certified results regardless of ongoing appeals. Preliminary counts, exit polls, projections, or uncertified results do not qualify. If the election is postponed but held within one year of the originally scheduled date, the contract remains valid; if postponed beyond one year or canceled, all contracts resolve to No. Outcome verified from the Clerk of the House (https://history.house.gov/Institution/Election-Statistics/).",
+  "background": "N/A",
+  "close": "2027-03-31T14:00:00+00:00"
+ },
+ {
+  "id": "KXMIDTERMMOV-AZGOVD-P5",
+  "source": "kalshi",
+  "question": "Will the margin of victory for Democrats in the governor election in Arizona be at least 5 percentage points? [Yes: Hobbs, 5+ pts]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxmidtermmov/x/kxmidtermmov-azgovd.",
+  "market_resolution_criteria": "If the Democratic Party wins the 2026 gubernatorial election in Arizona by 5 percentage points or more, then the market resolves to Yes. The margin of victory shall be calculated as follows based on the margin type.\n\nFor percentage points: the vote percentage received by the Democratic Party minus the vote percentage received by the candidate/party/option that finishes immediately behind the Democratic Party if the Democratic Party wins, or the candidate/party that finishes first if the Democratic Party loses.\n\nEach margin range is inclusive of its lower bound and exclusive of its upper bound. No rounding shall be applied to the calculated margin. For example, for consecutive ranges of 5-6% and 6-7%, a margin of 5.99999% resolves within the 5-6% range, while a margin of exactly 6% resolves within the 6-7% range. If the Democratic Party runs under multiple parties or is listed multiple times, votes attributable to the same underlying natural the Democratic Party will be summed.\n\nIf the Democratic Party wins the election, the margin will be positive. If the Democratic Party loses the election, the margin will be negative. If the Democratic Party ties for first place, the margin shall be 0. For uncontested races where the Democratic Party is the only candidate, the margin shall be 100 percentage points or the total number of votes cast (for raw votes). Outcome verified from official election authority responsible for certifying results in  (https://www.nass.org/can-I-vote).",
+  "background": "N/A",
+  "close": "2026-11-03T15:00:00+00:00"
+ },
+ {
+  "id": "0xdbe2f7486676bc943c454498a40595ddf042e89bc7a9c204084d87d59abc8730",
+  "source": "polymarket",
+  "question": "Will the Democratic Party candidate win the 2026 ME-01 House election by 30%-35%?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-democratic-party-candidate-win-the-2026-me-01-house-election-by-30-35.",
+  "market_resolution_criteria": "The 2026 ME-01 House election is currently expected to be held on November 3, 2026.\n\nThis market will resolve according to the margin of victory between the top two candidates in the specified election.\n\nThe \"margin of victory\" is defined as the absolute difference between the percentages of valid votes received by the first-place and second-place candidates. Percentages of the valid votes received by each candidate will be determined by dividing the total number of valid votes each of the top two candidates receives by the sum of all valid votes cast in the election.\n\nFor purposes of this market, candidates nominated by the Democratic & Republican Parties will represent the options for \"Democrat\" and \"Republican,\" respectively. Independent candidates will not represent options for either party. The candidates may be named in the contract for the convenience of traders. In the event that any named candidate is replaced as the nominee of their respective party prior to election day, the name in the contract will be updated and the market will resolve based on the replacement nominee of the party.\n\nIf the reported value falls exactly between two brackets, then this market will resolve to the higher margin bracket.\n\nIf two or more candidates tie for the most valid votes in this election, and the tie is between two candidates listed, this market will resolve to the lowest margin bracket for the candidate whose ballot-listed last name comes first in alphabetical order. If the tie is between a listed candidate and an unlisted candidate, this market will resolve to the lowest margin bracket for the listed candidate. If the tie is between two or more unlisted candidates, this market will resolve to \"Other.\" If the listed candidate is represented in this market group as \"Republican\" or \"Democrat\" their ballot-listed last name will still be used for tiebreaking.\n\nThis market will resolve based on the official vote count once the count has been made official.\n\nIf the election results are not known definitively by June 30, 2027, 11:59 PM ET, this market will resolve to \"Other\".\n\nIf a recount is initiated before the vote total has been made official, the market will remain open until the recount is completed and the vote is made official.\n\nThe primary resolution source for this market will be the official results of the 2026 ME-01 House election as published by the state electoral authority responsible for certifying the results of the election; however, an overwhelming consensus of credible reporting may also be used.",
+  "background": "N/A",
+  "close": "2026-11-04T04:59:00+00:00"
+ },
+ {
+  "id": "0x7d75aa02bcb7c8247a18a5c1fd271944dd22dcb76ca96371b256a6b97f50627d",
+  "source": "polymarket",
+  "question": "Will the Republican Party candidate win the 2026 IL-12 House election by 35%-40%?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-republican-party-candidate-win-the-2026-il-12-house-election-by-35-40.",
+  "market_resolution_criteria": "The 2026 IL-12 House election is currently expected to be held on November 3, 2026.\n\nThis market will resolve according to the margin of victory between the top two candidates in the specified election.\n\nThe \"margin of victory\" is defined as the absolute difference between the percentages of valid votes received by the first-place and second-place candidates. Percentages of the valid votes received by each candidate will be determined by dividing the total number of valid votes each of the top two candidates receives by the sum of all valid votes cast in the election.\n\nFor purposes of this market, candidates nominated by the Democratic & Republican Parties will represent the options for \"Democrat\" and \"Republican,\" respectively. Independent candidates will not represent options for either party. The candidates may be named in the contract for the convenience of traders. In the event that any named candidate is replaced as the nominee of their respective party prior to election day, the name in the contract will be updated and the market will resolve based on the replacement nominee of the party.\n\nIf the reported value falls exactly between two brackets, then this market will resolve to the higher margin bracket.\n\nIf two or more candidates tie for the most valid votes in this election, and the tie is between two candidates listed, this market will resolve to the lowest margin bracket for the candidate whose ballot-listed last name comes first in alphabetical order. If the tie is between a listed candidate and an unlisted candidate, this market will resolve to the lowest margin bracket for the listed candidate. If the tie is between two or more unlisted candidates, this market will resolve to \"Other.\" If the listed candidate is represented in this market group as \"Republican\" or \"Democrat\" their ballot-listed last name will still be used for tiebreaking.\n\nThis market will resolve based on the official vote count once the count has been made official.\n\nIf the election results are not known definitively by June 30, 2027, 11:59 PM ET, this market will resolve to \"Other\".\n\nIf a recount is initiated before the vote total has been made official, the market will remain open until the recount is completed and the vote is made official.\n\nThe primary resolution source for this market will be the official results of the 2026 IL-12 House election as published by the state electoral authority responsible for certifying the results of the election; however, an overwhelming consensus of credible reporting may also be used.",
+  "background": "N/A",
+  "close": "2026-11-04T04:59:00+00:00"
+ },
+ {
+  "id": "0x66a41e567ff99f222ad315cea0e40bd6ab11989c75062abe1203084668658d23",
+  "source": "polymarket",
+  "question": "Will the Republican Party candidate win the 2026 TX-11 House election by 25%-30%?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-republican-party-candidate-win-the-2026-tx-11-house-election-by-25-30.",
+  "market_resolution_criteria": "The 2026 TX-11 House election is currently expected to be held on November 3, 2026.\n\nThis market will resolve according to the margin of victory between the top two candidates in the specified election.\n\nThe \"margin of victory\" is defined as the absolute difference between the percentages of valid votes received by the first-place and second-place candidates. Percentages of the valid votes received by each candidate will be determined by dividing the total number of valid votes each of the top two candidates receives by the sum of all valid votes cast in the election.\n\nFor purposes of this market, candidates nominated by the Democratic & Republican Parties will represent the options for \"Democrat\" and \"Republican,\" respectively. Independent candidates will not represent options for either party. The candidates may be named in the contract for the convenience of traders. In the event that any named candidate is replaced as the nominee of their respective party prior to election day, the name in the contract will be updated and the market will resolve based on the replacement nominee of the party.\n\nIf the reported value falls exactly between two brackets, then this market will resolve to the higher margin bracket.\n\nIf two or more candidates tie for the most valid votes in this election, and the tie is between two candidates listed, this market will resolve to the lowest margin bracket for the candidate whose ballot-listed last name comes first in alphabetical order. If the tie is between a listed candidate and an unlisted candidate, this market will resolve to the lowest margin bracket for the listed candidate. If the tie is between two or more unlisted candidates, this market will resolve to \"Other.\" If the listed candidate is represented in this market group as \"Republican\" or \"Democrat\" their ballot-listed last name will still be used for tiebreaking.\n\nThis market will resolve based on the official vote count once the count has been made official.\n\nIf the election results are not known definitively by June 30, 2027, 11:59 PM ET, this market will resolve to \"Other\".\n\nIf a recount is initiated before the vote total has been made official, the market will remain open until the recount is completed and the vote is made official.\n\nThe primary resolution source for this market will be the official results of the 2026 TX-11 House election as published by the state electoral authority responsible for certifying the results of the election; however, an overwhelming consensus of credible reporting may also be used.",
+  "background": "N/A",
+  "close": "2026-11-04T04:59:00+00:00"
+ },
+ {
+  "id": "0x8cb0cc447cbda5e851c335183c09d258d6604511abb7746f765f1d808e511c92",
+  "source": "polymarket",
+  "question": "Will total votes cast in the 2026 midterm election for Governor of Hawaii be between 370,000 and 400,000?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-total-votes-cast-in-the-2026-midterm-election-for-governor-of-hawaii-be-between-370000-and-400000.",
+  "market_resolution_criteria": "This market will resolve according to the total number of valid votes cast in the 2026 midterm election for Governor of Hawaii.\n\nIf the reported value falls exactly between two brackets, then this market will resolve to the higher range bracket.\n\nIf the results of the specified election are not definitively known by March 31, 2027, 11:59 PM ET, this market will resolve to the lowest range bracket.\n\nAll votes certified for candidates or non-candidate options in the specified election are included. Invalidated or blank votes are not included. In ranked-choice or preferential systems, the first-round vote total will be used.\n\nThe primary resolution source for this market will be the official results of the 2026 midterm election for Governor of Hawaii, as published by the state electoral authority responsible for certifying the results of the election; however, an overwhelming consensus of credible reporting may also be used.",
+  "background": "N/A",
+  "close": "2026-11-04T04:59:00+00:00"
+ },
+ {
+  "id": "0xf452f3f0b7f7e7754136de7174e0394eeea73aebe6ef27e8620b5657a2c8caa3",
+  "source": "polymarket",
+  "question": "Will the Democratic Party candidate win the 2026 NY-03 House election by 15%-20%?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-democratic-party-candidate-win-the-2026-ny-03-house-election-by-15-20.",
+  "market_resolution_criteria": "The 2026 NY-03 House election is currently expected to be held on November 3, 2026.\n\nThis market will resolve according to the margin of victory between the top two candidates in the specified election.\n\nThe \"margin of victory\" is defined as the absolute difference between the percentages of valid votes received by the first-place and second-place candidates. Percentages of the valid votes received by each candidate will be determined by dividing the total number of valid votes each of the top two candidates receives by the sum of all valid votes cast in the election.\n\nFor purposes of this market, candidates nominated by the Democratic & Republican Parties will represent the options for \"Democrat\" and \"Republican,\" respectively. Independent candidates will not represent options for either party. The candidates may be named in the contract for the convenience of traders. In the event that any named candidate is replaced as the nominee of their respective party prior to election day, the name in the contract will be updated and the market will resolve based on the replacement nominee of the party.\n\nIf the reported value falls exactly between two brackets, then this market will resolve to the higher margin bracket.\n\nIf two or more candidates tie for the most valid votes in this election, and the tie is between two candidates listed, this market will resolve to the lowest margin bracket for the candidate whose ballot-listed last name comes first in alphabetical order. If the tie is between a listed candidate and an unlisted candidate, this market will resolve to the lowest margin bracket for the listed candidate. If the tie is between two or more unlisted candidates, this market will resolve to \"Other.\" If the listed candidate is represented in this market group as \"Republican\" or \"Democrat\" their ballot-listed last name will still be used for tiebreaking.\n\nThis market will resolve based on the official vote count once the count has been made official.\n\nIf the election results are not known definitively by June 30, 2027, 11:59 PM ET, this market will resolve to \"Other\".\n\nIf a recount is initiated before the vote total has been made official, the market will remain open until the recount is completed and the vote is made official.\n\nThe primary resolution source for this market will be the official results of the 2026 NY-03 House election as published by the state electoral authority responsible for certifying the results of the election; however, an overwhelming consensus of credible reporting may also be used.",
+  "background": "N/A",
+  "close": "2026-11-04T04:59:00+00:00"
+ },
+ {
+  "id": "0x7ac70d3487c79700fbfbd16f0cb4f0e39be104985b285ed938ed3af4e10dcefb",
+  "source": "polymarket",
+  "question": "Will the Republican Party candidate win the 2026 South Carolina Senate election by 0%-5%?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-republican-party-candidate-win-the-2026-south-carolina-senate-election-by-0-5.",
+  "market_resolution_criteria": "The 2026 South Carolina Senate election is currently expected to be held on November 3, 2026.\n\nThis market will resolve according to the margin of victory between the top two candidates in the specified election.\n\nThe \"margin of victory\" is defined as the absolute difference between the percentages of valid votes received by the first-place and second-place candidates. Percentages of the valid votes received by each candidate will be determined by dividing the total number of valid votes each of the top two candidates receives by the sum of all valid votes cast in the election.\n\nFor purposes of this market, candidates nominated by the Democratic & Republican Parties will represent the options for \"Democrat\" and \"Republican,\" respectively. Independent candidates will not represent options for either party. The candidates may be named in the contract for the convenience of traders. In the event that any named candidate is replaced as the nominee of their respective party prior to election day, the name in the contract will be updated and the market will resolve based on the replacement nominee of the party.\n\nIf the reported value falls exactly between two brackets, then this market will resolve to the higher margin bracket.\n\nIf two or more candidates tie for the most valid votes in this election, and the tie is between two candidates listed, this market will resolve to the lowest margin bracket for the candidate whose ballot-listed last name comes first in alphabetical order. If the tie is between a listed candidate and an unlisted candidate, this market will resolve to the lowest margin bracket for the listed candidate. If the tie is between two or more unlisted candidates, this market will resolve to \"Other.\" If the listed candidate is represented in this market group as \"Republican\" or \"Democrat\" their ballot-listed last name will still be used for tiebreaking.\n\nThis market will resolve based on the official vote count once the count has been made official.\n\nIf the election results are not known definitively by June 30, 2027, 11:59 PM ET, this market will resolve to \"Other\".\n\nIf a recount is initiated before the vote total has been made official, the market will remain open until the recount is completed and the vote is made official.\n\nThe primary resolution source for this market will be the official results of the 2026 South Carolina Senate election as published by the state electoral authority responsible for certifying the results of the election; however, an overwhelming consensus of credible reporting may also be used.",
+  "background": "N/A",
+  "close": "2026-11-04T04:59:00+00:00"
+ },
+ {
+  "id": "0x6d8c35997c3e96446e161ed179f4cca1203601b3675fb88379656a66b82498ce",
+  "source": "polymarket",
+  "question": "Will the Republican Party candidate win the 2026 MI-07 House election by 0%-3%?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-republican-party-candidate-win-the-2026-mi-07-house-election-by-0-3.",
+  "market_resolution_criteria": "The 2026 MI-07 House election is currently expected to be held on November 3, 2026.\n\nThis market will resolve according to the margin of victory between the top two candidates in the specified election.\n\nThe \"margin of victory\" is defined as the absolute difference between the percentages of valid votes received by the first-place and second-place candidates. Percentages of the valid votes received by each candidate will be determined by dividing the total number of valid votes each of the top two candidates receives by the sum of all valid votes cast in the election.\n\nFor purposes of this market, candidates nominated by the Democratic & Republican Parties will represent the options for \"Democrat\" and \"Republican,\" respectively. Independent candidates will not represent options for either party. The candidates may be named in the contract for the convenience of traders. In the event that any named candidate is replaced as the nominee of their respective party prior to election day, the name in the contract will be updated and the market will resolve based on the replacement nominee of the party.\n\nIf the reported value falls exactly between two brackets, then this market will resolve to the higher margin bracket.\n\nIf two or more candidates tie for the most valid votes in this election, and the tie is between two candidates listed, this market will resolve to the lowest margin bracket for the candidate whose ballot-listed last name comes first in alphabetical order. If the tie is between a listed candidate and an unlisted candidate, this market will resolve to the lowest margin bracket for the listed candidate. If the tie is between two or more unlisted candidates, this market will resolve to \"Other.\" If the listed candidate is represented in this market group as \"Republican\" or \"Democrat\" their ballot-listed last name will still be used for tiebreaking.\n\nThis market will resolve based on the official vote count once the count has been made official.\n\nIf the election results are not known definitively by June 30, 2027, 11:59 PM ET, this market will resolve to \"Other\".\n\nIf a recount is initiated before the vote total has been made official, the market will remain open until the recount is completed and the vote is made official.\n\nThe primary resolution source for this market will be the official results of the 2026 MI-07 House election as published by the state electoral authority responsible for certifying the results of the election; however, an overwhelming consensus of credible reporting may also be used.",
+  "background": "N/A",
+  "close": "2026-11-04T04:59:00+00:00"
+ },
+ {
+  "id": "0x2420c9a4c59ba4becc7910e52c9f71c3a28c325007fa6900e33877a03dff7432",
+  "source": "polymarket",
+  "question": "Will the Democratic Party candidate win the 2026 PA-07 House election by 6%-9%?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-democratic-party-candidate-win-the-2026-pa-07-house-election-by-6-9.",
+  "market_resolution_criteria": "The 2026 PA-07 House election is currently expected to be held on November 3, 2026.\n\nThis market will resolve according to the margin of victory between the top two candidates in the specified election.\n\nThe \"margin of victory\" is defined as the absolute difference between the percentages of valid votes received by the first-place and second-place candidates. Percentages of the valid votes received by each candidate will be determined by dividing the total number of valid votes each of the top two candidates receives by the sum of all valid votes cast in the election.\n\nFor purposes of this market, candidates nominated by the Democratic & Republican Parties will represent the options for \"Democrat\" and \"Republican,\" respectively. Independent candidates will not represent options for either party. The candidates may be named in the contract for the convenience of traders. In the event that any named candidate is replaced as the nominee of their respective party prior to election day, the name in the contract will be updated and the market will resolve based on the replacement nominee of the party.\n\nIf the reported value falls exactly between two brackets, then this market will resolve to the higher margin bracket.\n\nIf two or more candidates tie for the most valid votes in this election, and the tie is between two candidates listed, this market will resolve to the lowest margin bracket for the candidate whose ballot-listed last name comes first in alphabetical order. If the tie is between a listed candidate and an unlisted candidate, this market will resolve to the lowest margin bracket for the listed candidate. If the tie is between two or more unlisted candidates, this market will resolve to \"Other.\" If the listed candidate is represented in this market group as \"Republican\" or \"Democrat\" their ballot-listed last name will still be used for tiebreaking.\n\nThis market will resolve based on the official vote count once the count has been made official.\n\nIf the election results are not known definitively by June 30, 2027, 11:59 PM ET, this market will resolve to \"Other\".\n\nIf a recount is initiated before the vote total has been made official, the market will remain open until the recount is completed and the vote is made official.\n\nThe primary resolution source for this market will be the official results of the 2026 PA-07 House election as published by the state electoral authority responsible for certifying the results of the election; however, an overwhelming consensus of credible reporting may also be used.",
+  "background": "N/A",
+  "close": "2026-11-04T04:59:00+00:00"
+ },
+ {
+  "id": "0x0465cd005a54781e052b679e2c42c7ae5b772490fdda54316f157bf537536456",
+  "source": "polymarket",
+  "question": "Will the Democrats win the Florida Senate race in 2026?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-democrats-win-the-florida-senate-race-in-2026.",
+  "market_resolution_criteria": "This market will resolve according to the winner of the 2026 Florida U.S. Senate special election currently scheduled for November 3, inclusive of any run-offs.\n\nA candidate shall be considered to represent a party in the event that he or she is the nominee of the party in question. Candidates other than the Democratic or Republican nominee (e.g., Greens, Libertarian, independent) may be added at a later date.\n\nCandidates who run as independents will not be encompassed by the \u201cDemocrat\u201d or \u201cRepublican\u201d options regardless of any affiliation they may have with the party.\n\nThe candidates may be named in the contract for the convenience of traders. In the event that any named candidate is replaced as the nominee of their respective party prior to election day, the name in the contract will be updated and the market will resolve based on the replacement nominee of the party.\n\nThe resolution source for this market is the Associated Press, Fox News, and NBC. This market will resolve once all three sources call the race for the same candidate. If all three sources haven\u2019t called the race in this state for the same candidate, this market will resolve based on the official certification.",
+  "background": "N/A",
+  "close": "2026-11-04T04:59:00+00:00"
+ },
+ {
+  "id": "0xd339058f6879b22b649e9119e50f981baa0bfad6bd168e0e69e79667d43e8927",
+  "source": "polymarket",
+  "question": "Will the Democratic Party win the FL-14 House seat?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-democratic-party-win-the-fl-14-house-seat.",
+  "market_resolution_criteria": "This market will resolve according to the party of the candidate who wins the FL-14 congressional district seat in the U.S. House of Representatives in the 2026 midterm elections. The midterm elections will take place on November 3, 2026.\n\n\u200bA candidate's party will be determined by their ballot-listed or otherwise identifiable affiliation with that party at the time all of the 2026 House elections are conclusively called by this market's resolution sources. A candidate without a ballot-listed affiliation to either the Democrat or Republican parties will be considered a member of one of these parties based on the party with which they most recently expressed their intent to caucus at the time all of the House elections are conclusively called by this market's resolution sources.\n\nThis market will resolve based on the result of the election as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve based solely on the official results as reported by the United States government, specifically the Federal Election Commission (https://www.fec.gov/).",
+  "background": "N/A",
+  "close": "2026-11-04T04:59:00+00:00"
+ },
+ {
+  "id": "0x3452bb28983bc33b37ddfd98da2138dfd89782faec65a2607ed5aa86a17c9199",
+  "source": "polymarket",
+  "question": "Will the Republican Party win the FL-27 House seat?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-republican-party-win-the-fl-27-house-seat.",
+  "market_resolution_criteria": "This market will resolve according to the party of the candidate who wins the FL-27 congressional district seat in the U.S. House of Representatives in the 2026 midterm elections. The midterm elections will take place on November 3, 2026.\n\n\u200bA candidate's party will be determined by their ballot-listed or otherwise identifiable affiliation with that party at the time all of the 2026 House elections are conclusively called by this market's resolution sources. A candidate without a ballot-listed affiliation to either the Democrat or Republican parties will be considered a member of one of these parties based on the party with which they most recently expressed their intent to caucus at the time all of the House elections are conclusively called by this market's resolution sources.\n\nThis market will resolve based on the result of the election as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve based solely on the official results as reported by the United States government, specifically the Federal Election Commission (https://www.fec.gov/).",
+  "background": "N/A",
+  "close": "2026-11-04T04:59:00+00:00"
+ },
+ {
+  "id": "0xaad0badfe7f20796f3359189cf9e2b33f81239b9d69768c22ed958c801e2677c",
+  "source": "polymarket",
+  "question": "Will total votes cast in the 2026 midterm election for Governor of Connecticut be between 1,200,000 and 1,300,000?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-total-votes-cast-in-the-2026-midterm-election-for-governor-of-connecticut-be-between-1200000-and-1300000.",
+  "market_resolution_criteria": "This market will resolve according to the total number of valid votes cast in the 2026 midterm election for Governor of Connecticut.\n\nIf the reported value falls exactly between two brackets, then this market will resolve to the higher range bracket.\n\nIf the results of the specified election are not definitively known by March 31, 2027, 11:59 PM ET, this market will resolve to the lowest range bracket.\n\nAll votes certified for candidates or non-candidate options in the specified election are included. Invalidated or blank votes are not included. In ranked-choice or preferential systems, the first-round vote total will be used.\n\nThe primary resolution source for this market will be the official results of the 2026 midterm election for Governor of Connecticut, as published by the state electoral authority responsible for certifying the results of the election; however, an overwhelming consensus of credible reporting may also be used.",
+  "background": "N/A",
+  "close": "2026-11-04T04:59:00+00:00"
+ },
+ {
+  "id": "0xa1a7c37fa0c1329657b1d35b449677b05dd453ac890c7158acfbb75a60274046",
+  "source": "polymarket",
+  "question": "Will Republicans win 2 Senate and Governor elections in states won by Kamala?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-republicans-win-2-senate-and-governor-elections-in-states-won-by-kamala-20260702152603472.",
+  "market_resolution_criteria": "The 2026 midterm elections are scheduled to be held on November 3, 2026.\n\nThis market will resolve according to the number of US Senate and Gubernatorial elections won by the Republican Party in the 2026 midterm elections in states that were won by Kamala Harris in the 2024 US Presidential Election.\n\nAll Gubernatorial elections, and all regular and special Senate elections that determine representation in the upcoming 120th Congress, that are scheduled to take place in November 2026 as of October 31, 2026 are included. Runoffs for qualifying elections will determine attribution of the relevant seat, even if they take place after November 2026. \n\nVacant offices for which no election or special election to fill the office is scheduled to take place in November 2026 as of October 31, 2026 will not be considered.\n\nSeats are attributed to the party under which the member or governor was elected. If a member-elect or governor changes party affiliation, or vacates their office, after election day, the seat is attributed to the party under which the person was elected. \n\nSenate members elected as independents who formally caucus with, or, for newly elected members, who announce their intent to caucus with, a party will be attributed to that party. If the caucus decisions of members of the Senate elected as independents cannot be determined on the date of the election, this market may remain open until the earlier of (i) an announcement from the relevant members of their intents to caucus, or (ii) January 4th, 11:59 PM ET of the following calendar year. If no such announcement is made by January 4th, 11:59 PM ET of the following calendar year, the member will not count towards the seat count of any party.\n\nThe resolution sources for this market will be official information from relevant state electoral authorities, the United States Congress, and a consensus of credible reporting.",
+  "background": "N/A",
+  "close": "2026-11-04T04:59:00+00:00"
+ },
+ {
+  "id": "0x5198ce44b32ad6a632a413041278ac51643381fbc418db75314a17d9295ee325",
+  "source": "polymarket",
+  "question": "Will the Democratic Party candidate win the 2026 New Mexico Senate election by 21% or more?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-democratic-party-candidate-win-the-2026-new-mexico-senate-election-by-21-or-more.",
+  "market_resolution_criteria": "The 2026 New Mexico Senate election is currently expected to be held on November 3, 2026.\n\nThis market will resolve according to the margin of victory between the top two candidates in the specified election.\n\nThe \"margin of victory\" is defined as the absolute difference between the percentages of valid votes received by the first-place and second-place candidates. Percentages of the valid votes received by each candidate will be determined by dividing the total number of valid votes each of the top two candidates receives by the sum of all valid votes cast in the election.\n\nFor purposes of this market, candidates nominated by the Democratic & Republican Parties will represent the options for \"Democrat\" and \"Republican,\" respectively. Independent candidates will not represent options for either party. The candidates may be named in the contract for the convenience of traders. In the event that any named candidate is replaced as the nominee of their respective party prior to election day, the name in the contract will be updated and the market will resolve based on the replacement nominee of the party.\n\nIf the reported value falls exactly between two brackets, then this market will resolve to the higher margin bracket.\n\nIf two or more candidates tie for the most valid votes in this election, and the tie is between two candidates listed, this market will resolve to the lowest margin bracket for the candidate whose ballot-listed last name comes first in alphabetical order. If the tie is between a listed candidate and an unlisted candidate, this market will resolve to the lowest margin bracket for the listed candidate. If the tie is between two or more unlisted candidates, this market will resolve to \"Other.\" If the listed candidate is represented in this market group as \"Republican\" or \"Democrat\" their ballot-listed last name will still be used for tiebreaking.\n\nThis market will resolve based on the official vote count once the count has been made official.\n\nIf the election results are not known definitively by June 30, 2027, 11:59 PM ET, this market will resolve to \"Other\".\n\nIf a recount is initiated before the vote total has been made official, the market will remain open until the recount is completed and the vote is made official.\n\nThe primary resolution source for this market will be the official results of the 2026 New Mexico Senate election as published by the state electoral authority responsible for certifying the results of the election; however, an overwhelming consensus of credible reporting may also be used.",
+  "background": "N/A",
+  "close": "2026-11-04T04:59:00+00:00"
+ },
+ {
+  "id": "0xb743353be80ee4d0ddcddb7551288f1745a7907f96a2f169a9932d5d70b9c0b6",
+  "source": "polymarket",
+  "question": "Will Doris Matsui win the CA-07 House seat?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-doris-matsui-win-the-ca-07-house-seat-20260706153655919.",
+  "market_resolution_criteria": "This market will resolve according to the individual who wins the CA-07 congressional district seat in the U.S. House of Representatives in the 2026 midterm elections. The midterm elections will take place on November 4, 2026.\n\nThis market will resolve based on the result of the election as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve based solely on the official results as reported by the United States government, specifically the Federal Election Commission (https://www.fec.gov/).",
+  "background": "N/A",
+  "close": "2026-11-04T04:59:00+00:00"
+ },
+ {
+  "id": "0x66bbf6d55e0296278858b3147689f3df9259374f158f9f028b608baa322a639c",
+  "source": "polymarket",
+  "question": "Will the Democrats win the Maine Senate race in 2026?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-democrats-win-the-maine-senate-race-in-2026.",
+  "market_resolution_criteria": "This market will resolve according to the winner of the 2026 midterm Maine U.S. Senate election, inclusive of any run-offs.\n\nA candidate shall be considered to represent a party in the event that he or she is the nominee of the party in question. Candidates other than the Democratic or Republican nominee (e.g., Greens, Libertarian, independent) may be added at a later date.\n\nCandidates who run as independents will not be encompassed by the \u201cDemocrat\u201d or \u201cRepublican\u201d options regardless of any affiliation they may have with the party.\n\nThe candidates may be named in the contract for the convenience of traders. In the event that any named candidate is replaced as the nominee of their respective party prior to election day, the name in the contract will be updated and the market will resolve based on the replacement nominee of the party.\n\nThe resolution source for this market is the Associated Press, Fox News, and NBC. This market will resolve once all three sources call the race for the same candidate. If all three sources haven\u2019t called the race in this state for the same candidate, this market will resolve based on the official certification.",
+  "background": "N/A",
+  "close": "2026-11-04T04:59:00+00:00"
+ },
+ {
+  "id": "0xf6ff4c55696ff8529e6e1021f4e4a17adaa305c4991d9001bcbf7a5fbdd326d3",
+  "source": "polymarket",
+  "question": "Will the Democratic Party win the VA-01 House seat?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-democratic-party-win-the-va-01-house-seat.",
+  "market_resolution_criteria": "This market will resolve according to the party of the candidate who wins the VA-01 congressional district seat in the U.S. House of Representatives in the 2026 midterm elections. The midterm elections will take place on November 3, 2026.\n\n\u200b\u200bA candidate's party will be determined by their ballot-listed or otherwise identifiable affiliation with that party at the time all of the 2026 House elections are conclusively called by this market's resolution sources. A candidate without a ballot-listed affiliation to either the Democrat or Republican parties will be considered a member of one of these parties based on the party with which they most recently expressed their intent to caucus at the time all of the House elections are conclusively called by this market's resolution sources.\n\nThis market will resolve based on the result of the election as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve based solely on the official results as reported by the United States government, specifically the Federal Election Commission (https://www.fec.gov/).",
+  "background": "N/A",
+  "close": "2026-11-04T04:59:00+00:00"
+ },
+ {
+  "id": "0x19d2ff72e389d190c183e6b114817301d29eba651d67d75a38ee201a05188fd9",
+  "source": "polymarket",
+  "question": "Will Mary Peltola win the Alaska Senate race in 2026?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-mary-peltola-win-the-alaska-senate-race-in-2026.",
+  "market_resolution_criteria": "This market will resolve according to the winner of the 2026 midterm Alaska U.S. Senate election, inclusive of any run-offs, currently scheduled for November 3, 2026.\n\nIf the results of the election are not confirmed by July 31, 2027, this market will resolve to \"Other\".\n\nThe resolution source for this market is the Associated Press, Fox News, and NBC. This market will resolve once all three sources call the race for the same candidate. If all three sources haven\u2019t called the race in this state for the same candidate, this market will resolve based on official certification.",
+  "background": "N/A",
+  "close": "2026-11-04T04:59:00+00:00"
+ },
+ {
+  "id": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+  "source": "polymarket",
+  "question": "Will the Democrats win the Michigan Senate race in 2026?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-democrats-win-the-michigan-senate-race-in-2026.",
+  "market_resolution_criteria": "This market will resolve according to the winner of the 2026 midterm Michigan U.S. Senate election, inclusive of any run-offs.\n\nA candidate shall be considered to represent a party in the event that he or she is the nominee of the party in question. Candidates other than the Democratic or Republican nominee (e.g., Greens, Libertarian, independent) may be added at a later date.\n\nCandidates who run as independents will not be encompassed by the \u201cDemocrat\u201d or \u201cRepublican\u201d options regardless of any affiliation they may have with the party.\n\nThe candidates may be named in the contract for the convenience of traders. In the event that any named candidate is replaced as the nominee of their respective party prior to election day, the name in the contract will be updated and the market will resolve based on the replacement nominee of the party.\n\nThe resolution source for this market is the Associated Press, Fox News, and NBC. This market will resolve once all three sources call the race for the same candidate. If all three sources haven\u2019t called the race in this state for the same candidate, this market will resolve based on the official certification.",
+  "background": "N/A",
+  "close": "2026-11-04T04:59:00+00:00"
+ },
+ {
+  "id": "0xf8864cc923193924f175991ede770984839c7fd8e57386e6cbd9aa32eb62f6d6",
+  "source": "polymarket",
+  "question": "Will the Democratic Party win the CA-48 House seat?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-democratic-party-win-the-ca-48-house-seat.",
+  "market_resolution_criteria": "This market will resolve according to the party of the candidate who wins the CA-48 congressional district seat in the U.S. House of Representatives in the 2026 midterm elections. The midterm elections will take place on November 3, 2026.\n\n\u200bA candidate's party will be determined by their ballot-listed or otherwise identifiable affiliation with that party at the time all of the 2026 House elections are conclusively called by this market's resolution sources. A candidate without a ballot-listed affiliation to either the Democrat or Republican parties will be considered a member of one of these parties based on the party with which they most recently expressed their intent to caucus at the time all of the House elections are conclusively called by this market's resolution sources.\n\nThis market will resolve based on the result of the election as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve based solely on the official results as reported by the United States government, specifically the Federal Election Commission (https://www.fec.gov/).",
+  "background": "N/A",
+  "close": "2026-11-04T04:59:00+00:00"
+ },
+ {
+  "id": "0x909e3566fa0384f39020837073fe6e9fac5fe340b49998f284737c04fddd3212",
+  "source": "polymarket",
+  "question": "Will the Republican Party win the AK-AL House seat?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-republican-party-win-the-ak-al-house-seat.",
+  "market_resolution_criteria": "This market will resolve according to the party of the candidate who wins the AK-AL congressional district seat in the U.S. House of Representatives in the 2026 midterm elections. The midterm elections will take place on November 3, 2026.\n\n\u200bA candidate's party will be determined by their ballot-listed or otherwise identifiable affiliation with that party at the time all of the 2026 House elections are conclusively called by this market's resolution sources. A candidate without a ballot-listed affiliation to either the Democrat or Republican parties will be considered a member of one of these parties based on the party with which they most recently expressed their intent to caucus at the time all of the House elections are conclusively called by this market's resolution sources, except if that candidate is a listed option. Candidates who are listed options will not be considered to represent any party for purposes of this market, regardless of any subsequent caucus decision.\n\nThis market will resolve based on the result of the election as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve based solely on the official results as reported by the United States government, specifically the Federal Election Commission (https://www.fec.gov/).",
+  "background": "N/A",
+  "close": "2026-11-04T04:59:00+00:00"
+ },
+ {
+  "id": "0xd7e7300ecc03a88948a89186d7f06b1000750a7f4a0778e40566d50af9ef3147",
+  "source": "polymarket",
+  "question": "Will the Democratic Party win the NY-03 House seat?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-the-democratic-party-win-the-ny-03-house-seat.",
+  "market_resolution_criteria": "This market will resolve according to the party of the candidate who wins the NY-03 congressional district seat in the U.S. House of Representatives in the 2026 midterm elections. The midterm elections will take place on November 3, 2026.\n\n\u200b\u200bA candidate's party will be determined by their ballot-listed or otherwise identifiable affiliation with that party at the time all of the 2026 House elections are conclusively called by this market's resolution sources. A candidate without a ballot-listed affiliation to either the Democrat or Republican parties will be considered a member of one of these parties based on the party with which they most recently expressed their intent to caucus at the time all of the House elections are conclusively called by this market's resolution sources.\n\nThis market will resolve based on the result of the election as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve based solely on the official results as reported by the United States government, specifically the Federal Election Commission (https://www.fec.gov/).",
+  "background": "N/A",
+  "close": "2026-11-04T04:59:00+00:00"
+ },
+ {
+  "id": "0x5f5cf92636c3644a6221fba15d00e8aab9d539c17a0d25d8ae8d15220cbd2cb9",
+  "source": "polymarket",
+  "question": "Blue tsunami in 2026?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/blue-tsunami-in-2026.",
+  "market_resolution_criteria": "This market will resolve to \u201cYes\u201d if both of the following conditions are met as a result of the 2026 midterm elections:\n\n- Democrats have a seat count of 235 or more in the House\n- Democrats have a seat count of 51 or more in the Senate\n\nOtherwise, this market will resolve to \u201cNo\u201d.\n\nThe Senate seat count includes all regular and special Senate elections that determine representation in the upcoming 120th Congress and are scheduled to take place in November 2026 as of October 31, 2026. Vacant Senate seats for which no election or special election to fill the seat is scheduled to take place in November 2026 as of October 31, 2026 will be treated as held by the party affiliation of the most recent member to hold that seat. The House seat count includes all House elections in the 2026 United States midterm election that elect voting members and determine representation in the upcoming 120th Congress. Where a Senate or House seat is decided by a runoff, the runoff result will determine attribution of that seat, even if it takes place after November 2026.\n\nFor seats contested in the specified election, seats are attributed to the party under which the member was elected. If a member-elect changes party affiliation, or vacates their seat, between election day and the formal organization of Congress, the seat is attributed to the party under which the member was elected. \n\nFor seats not contested in the specified election, seats are attributed to the party that holds the seat as of the date of the election. If a current sitting member of the U.S. Senate who is not up for election changes party affiliation or vacates their seat after the date of the election, the seat is attributed to the party under which the member was affiliated at the time of the election.\n\nSenate and House members elected as independents who formally caucus with, or, for newly elected members, who announce their intent to caucus with a party are included in that party\u2019s count. If the caucus decisions of members of the Senate or House elected as independents cannot be determined on the date of the election, this market may remain open until the earlier of (i) an announcement from the relevant members of their intents to caucus, or (ii) January 4th, 11:59 PM ET of the following calendar year. If no such announcement is made by January 4th, 11:59 PM ET of the following calendar year, the member will not count towards the seat count of any party.\n\nThe resolution sources for this market will be official information from relevant state electoral authorities, the United States Congress, and a consensus of credible reporting",
+  "background": "N/A",
+  "close": "2027-01-05T04:59:00+00:00"
+ },
+ {
+  "id": "0xed4fd09a24f20a3afc1d722ace811fffff3cffd9a56a3fbffc47f4d3d47a88ed",
+  "source": "polymarket",
+  "question": "Blue wave in 2026?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/blue-wave-in-2026.",
+  "market_resolution_criteria": "This market will resolve to \u201cYes\u201d if both of the following conditions are met as a result of the 2026 midterm elections:\n\n- Democrats have a seat count of 218 or more in the House\n- Democrats have a seat count of 49 or more in the Senate\n\nOtherwise, this market will resolve to \u201cNo\u201d.\n\nThe Senate seat count includes all regular and special Senate elections that determine representation in the upcoming 120th Congress and are scheduled to take place in November 2026 as of October 31, 2026. Vacant Senate seats for which no election or special election to fill the seat is scheduled to take place in November 2026 as of October 31, 2026 will be treated as held by the party affiliation of the most recent member to hold that seat. The House seat count includes all House elections in the 2026 United States midterm election that elect voting members and determine representation in the upcoming 120th Congress. Where a Senate or House seat is decided by a runoff, the runoff result will determine attribution of that seat, even if it takes place after November 2026.\n\nFor seats contested in the specified election, seats are attributed to the party under which the member was elected. If a member-elect changes party affiliation, or vacates their seat, between election day and the formal organization of Congress, the seat is attributed to the party under which the member was elected. \n\nFor seats not contested in the specified election, seats are attributed to the party that holds the seat as of the date of the election. If a current sitting member of the U.S. Senate who is not up for election changes party affiliation or vacates their seat after the date of the election, the seat is attributed to the party under which the member was affiliated at the time of the election.\n\nSenate and House members elected as independents who formally caucus with, or, for newly elected members, who announce their intent to caucus with a party are included in that party\u2019s count. If the caucus decisions of members of the Senate or House elected as independents cannot be determined on the date of the election, this market may remain open until the earlier of (i) an announcement from the relevant members of their intents to caucus, or (ii) January 4th, 11:59 PM ET of the following calendar year. If no such announcement is made by January 4th, 11:59 PM ET of the following calendar year, the member will not count towards the seat count of any party.\n\nThe resolution sources for this market will be official information from relevant state electoral authorities, the United States Congress, and a consensus of credible reporting.",
+  "background": "N/A",
+  "close": "2027-01-05T04:59:00+00:00"
+ }
+]

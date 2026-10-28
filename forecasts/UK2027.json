@@ -1,0 +1,55 @@
+{
+  "forecast_id": "UK2027",
+  "title": "Uttarakhand Assembly 2027",
+  "state": "UK",
+  "expected_date": "2027-02",
+  "freeze_date": "2026-10-23",
+  "majority": 36,
+  "n_seats": 70,
+  "baseline_ae": "UK2022",
+  "ge_election": "GEUK2024",
+  "blocs": {
+    "BJP": {"ae_base": {"BJP": "1"}, "ge": {"BJP": "1"}, "note": "incumbent since 2017; UK has never re-elected a government before 2022's BJP repeat"},
+    "INC": {"ae_base": {"INC": "1"}, "ge": {"INC": "1"}, "note": "alone"},
+    "BSP": {"ae_base": {"BSP": "1"}, "ge": {"BSP": "1"}, "note": "alone; Haridwar belt presence"}
+  },
+  "polls": [
+    {"agency": "Times Now Navbharat", "date": "2026-09-13", "BJP": 42.06, "INC": 33.39, "rated": false},
+    {"agency": "Vote Vibe", "date": "2026-08-25", "BJP": 40.9, "INC": 36.7, "rated": false},
+    {"agency": "Poll Mitra", "date": "2026-07-25", "BJP": 41.75, "INC": 43.75, "rated": false}
+  ],
+  "poll_window_days": 90,
+  "poll_corrections": {
+    "auto": true,
+    "rule": "class-level corrections from measured UK poll errors (2014-22 cycles): bjp_led +1.38, rival -1.82 after n/(n+2) shrinkage; see data/processed/pollster_corrections.csv"
+  },
+  "sigma_state_m2": 6.3,
+  "sigma_state_m3_rated": 4.0,
+  "sigma_state_m3_unrated": 6.0,
+  "resolution": {
+    "source": "Election Commission of India official results (results.eci.gov.in), party-wise seat tally at first full declaration of all 70 seats",
+    "resolve_by": "2027-03-31",
+    "rules": [
+      "Bloc seat totals = sum of seats won by the member parties listed in `blocs` as composed at freeze; post-result defections, mergers and letters of support are ignored",
+      "If an alliance splits BEFORE polling, a re-run forecast (new ledger rows) supersedes; these rows still resolve against freeze-time bloc composition",
+      "'wins majority' = bloc seats >= 36 of 70 at first full declaration; countermanded/postponed seats count as not won unless they decide the question, in which case resolution waits for them",
+      "'is largest' = strictly more seats than every other modeled bloc (independents and unmodeled parties are not blocs); an exact tie resolves NO for all blocs",
+      "Seat-threshold questions resolve on the same official tally",
+      "If the election is not held by 2027-12-31, rows resolve VOID: logged and excluded from scoring, never silently dropped"
+    ]
+  },
+  "sub_questions": [
+    {"q": "BSP under 5 seats", "bloc": "BSP", "op": "<", "threshold": 5},
+    {"q": "Winner (largest) in {BJP, INC}", "bloc": "__top2__", "op": "in", "threshold": ["BJP", "INC"]}
+  ],
+  "quality_flags": [
+    "All three vote-share polls are unrated agencies and they disagree on the leader (Poll Mitra has INC ahead; TNN/Vote Vibe have BJP). Seat polls disagree even more (BJP 29-54 of 70).",
+    "No AAP/UKD vote-share lines in any poll; both are treated as background others.",
+    "M3 BSP line missing from all polls - BSP questions run effectively on M2 plus baseline."
+  ],
+  "tripwires": [
+    {"watch": "A rated agency publishes a vote-share poll", "effect": "M3 upgrades to rated sigma"},
+    {"watch": "Any INC-led opposition alliance (SP/ASP/AAP tie-ups)", "effect": "re-bloc and re-run"},
+    {"watch": "CM-change or major defection news", "effect": "insider-flow signal; re-run"}
+  ]
+}

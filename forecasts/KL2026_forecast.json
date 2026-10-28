@@ -1,0 +1,154 @@
+{
+ "forecast_id": "KL2026",
+ "freeze_date": "2026-03-16",
+ "params": {
+  "alpha": 0.311,
+  "n_sim": 10000,
+  "poll_agencies_rated": false,
+  "seed": 42,
+  "sigma_c": 13.76,
+  "sigma_state_m2": 6.3,
+  "sigma_state_m3": 6.0,
+  "tau": 0.5
+ },
+ "quality_flags": [
+  "ONE pre-freeze poll only (IANS-Matrize 15 Mar, unrated, n=12,015; midpoints of 42-43/41-42/12-13 ranges). M3 rests on a single unrated poll at sigma 6.0.",
+  "Freeze set to 2026-03-16 (T-24d, just after the EC schedule announcement of 15 Mar) instead of strict T-28d (2026-03-12): the 12 Mar frozen revision has EMPTY poll tables and the only published pre-campaign poll is dated 15 Mar. Decision made before seeing any result. At strict T-28 this forecast would be poll-less.",
+  "Poll record read from the last pre-election frozen revision (2026-04-08) because the 16 Mar revision's tables were still empty; only the poll PUBLISHED on/before freeze was admitted. Post-freeze polls (incl. rated CVoter 31 Mar) were visible in that revision but excluded.",
+  "History note: Kerala has alternated LDF/UDF every election since 1982 except 2021; LDF seeks a third consecutive term."
+ ],
+ "questions": [
+  {
+   "p_gate": 0.3579,
+   "p_m2": 0.3579,
+   "p_m3": 0.5678,
+   "question": "LDF wins majority",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.4796,
+   "p_m2": 0.4796,
+   "p_m3": 0.6582,
+   "question": "LDF is largest",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.2697,
+   "p_m2": 0.4075,
+   "p_m3": 0.2697,
+   "question": "UDF wins majority",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.3418,
+   "p_m2": 0.5201,
+   "p_m3": 0.3418,
+   "question": "UDF is largest",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.0,
+   "p_m2": 0.0,
+   "p_m3": 0.0,
+   "question": "NDA wins majority",
+   "verdict": "CALL-NO"
+  },
+  {
+   "p_gate": 0.0,
+   "p_m2": 0.0003,
+   "p_m3": 0.0,
+   "question": "NDA is largest",
+   "verdict": "CALL-NO"
+  },
+  {
+   "p_gate": 0.9997,
+   "p_m2": 0.9997,
+   "p_m3": 1.0,
+   "question": "Winner (largest) in {LDF, UDF}",
+   "verdict": "CALL-YES"
+  },
+  {
+   "p_gate": 0.5739,
+   "p_m2": 0.5739,
+   "p_m3": 0.8092,
+   "question": "NDA under 10 seats",
+   "verdict": "WATCH"
+  }
+ ],
+ "run_at_utc": "2026-10-16T14:45:38+00:00",
+ "seats_m2": {
+  "LDF": {
+   "med": 64,
+   "p5": 35,
+   "p95": 91,
+   "p_largest": 0.4796,
+   "p_majority": 0.3579
+  },
+  "NDA": {
+   "med": 8,
+   "p5": 2,
+   "p95": 22,
+   "p_largest": 0.0003,
+   "p_majority": 0.0
+  },
+  "UDF": {
+   "med": 66,
+   "p5": 40,
+   "p95": 96,
+   "p_largest": 0.5201,
+   "p_majority": 0.4075
+  }
+ },
+ "seats_m3": {
+  "LDF": {
+   "med": 74,
+   "p5": 45,
+   "p95": 98,
+   "p_largest": 0.6582,
+   "p_majority": 0.5678
+  },
+  "NDA": {
+   "med": 5,
+   "p5": 1,
+   "p95": 15,
+   "p_largest": 0.0,
+   "p_majority": 0.0
+  },
+  "UDF": {
+   "med": 60,
+   "p5": 36,
+   "p95": 88,
+   "p_largest": 0.3418,
+   "p_majority": 0.2697
+  }
+ },
+ "state_shares": {
+  "baseline": {
+   "LDF": 38.93,
+   "NDA": 12.89,
+   "UDF": 38.04
+  },
+  "ge": {
+   "LDF": 33.63,
+   "NDA": 19.72,
+   "UDF": 45.5
+  },
+  "m2_pred": {
+   "LDF": 37.28,
+   "NDA": 15.02,
+   "UDF": 40.36
+  },
+  "m3_pred": {
+   "LDF": 42.5,
+   "NDA": 12.5,
+   "UDF": 41.5
+  }
+ },
+ "title": "Kerala Legislative Assembly 2026 (holdout)",
+ "tripwires": [
+  {
+   "effect": "M3 upgrades to rated sigma (CVoter did publish 31 Mar - post-freeze, excluded)",
+   "watch": "Rated CVoter/Axis pre-election poll"
+  }
+ ]
+}

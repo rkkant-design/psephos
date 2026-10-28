@@ -1,0 +1,861 @@
+{
+ "forecast_id": "FB2026-10-25-024",
+ "domain": "ForecastBench",
+ "freeze_date": "2026-10-25",
+ "resolve_date": null,
+ "researcher": "claude-fable-5 operator session, 2026-10-25 round-day sprint (authored + rule + family layers)",
+ "resolution_source": "per-question benchmark resolution criteria (see each question's benchmark block)",
+ "independence_attestation": "No betting odds, prediction-market prices or forecast-aggregator numbers were fetched or consulted for any question in this dossier; market-source questions' embedded freeze prices were deliberately ignored.",
+ "questions": [
+  {
+   "q": "What is the probability that the value of the European Central Bank time series \u201cBroad EER group of trading partners (fixed composition) \u2013 Hong Kong dollar \u2013 Nominal effective exchange rate\u201d on {resolution_date} will exceed its value on {forecast_due_date}? If no observation is available for a date (e.g., it falls on a weekend or holiday), the most recent prior observation is used for that date. | horizon 2026-11-01",
+   "benchmark": {
+    "source": "dbnomics",
+    "id": "ECB_EXR_D.E03.HKD.EN00.A",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-01"
+   },
+   "resolution_note": "Resolves to the value found at https://db.nomics.world/ECB/EXR/D.E03.HKD.EN00.A once the data is published.",
+   "base_rate_used": {
+    "reference_class": "macro series vs stated threshold",
+    "value": 0.5,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'dbnomics', horizon 2026-11-01: threshold parse ambiguous; neutral 0.50 at freeze value 98.4172."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for dbnomics at horizon 2026-11-01: threshold parse ambiguous; neutral 0.50 at freeze value 98.4172. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.5.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "dbnomics source data family (underlying series documentation)",
+     "url": "https://db.nomics.world",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.5
+  },
+  {
+   "q": "What is the probability that the value of the European Central Bank time series \u201cBroad EER group of trading partners (fixed composition) \u2013 Hong Kong dollar \u2013 Nominal effective exchange rate\u201d on {resolution_date} will exceed its value on {forecast_due_date}? If no observation is available for a date (e.g., it falls on a weekend or holiday), the most recent prior observation is used for that date. | horizon 2026-11-24",
+   "benchmark": {
+    "source": "dbnomics",
+    "id": "ECB_EXR_D.E03.HKD.EN00.A",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-24"
+   },
+   "resolution_note": "Resolves to the value found at https://db.nomics.world/ECB/EXR/D.E03.HKD.EN00.A once the data is published.",
+   "base_rate_used": {
+    "reference_class": "macro series vs stated threshold",
+    "value": 0.5,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'dbnomics', horizon 2026-11-24: threshold parse ambiguous; neutral 0.50 at freeze value 98.4172."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for dbnomics at horizon 2026-11-24: threshold parse ambiguous; neutral 0.50 at freeze value 98.4172. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.5.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "dbnomics source data family (underlying series documentation)",
+     "url": "https://db.nomics.world",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.5
+  },
+  {
+   "q": "What is the probability that the value of the European Central Bank time series \u201cBroad EER group of trading partners (fixed composition) \u2013 Hong Kong dollar \u2013 Nominal effective exchange rate\u201d on {resolution_date} will exceed its value on {forecast_due_date}? If no observation is available for a date (e.g., it falls on a weekend or holiday), the most recent prior observation is used for that date. | horizon 2027-01-23",
+   "benchmark": {
+    "source": "dbnomics",
+    "id": "ECB_EXR_D.E03.HKD.EN00.A",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-01-23"
+   },
+   "resolution_note": "Resolves to the value found at https://db.nomics.world/ECB/EXR/D.E03.HKD.EN00.A once the data is published.",
+   "base_rate_used": {
+    "reference_class": "macro series vs stated threshold",
+    "value": 0.5,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'dbnomics', horizon 2027-01-23: threshold parse ambiguous; neutral 0.50 at freeze value 98.4172."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for dbnomics at horizon 2027-01-23: threshold parse ambiguous; neutral 0.50 at freeze value 98.4172. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.5.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "dbnomics source data family (underlying series documentation)",
+     "url": "https://db.nomics.world",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.5
+  },
+  {
+   "q": "What is the probability that the value of the European Central Bank time series \u201cBroad EER group of trading partners (fixed composition) \u2013 Hong Kong dollar \u2013 Nominal effective exchange rate\u201d on {resolution_date} will exceed its value on {forecast_due_date}? If no observation is available for a date (e.g., it falls on a weekend or holiday), the most recent prior observation is used for that date. | horizon 2027-04-23",
+   "benchmark": {
+    "source": "dbnomics",
+    "id": "ECB_EXR_D.E03.HKD.EN00.A",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-04-23"
+   },
+   "resolution_note": "Resolves to the value found at https://db.nomics.world/ECB/EXR/D.E03.HKD.EN00.A once the data is published.",
+   "base_rate_used": {
+    "reference_class": "macro series vs stated threshold",
+    "value": 0.5,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'dbnomics', horizon 2027-04-23: threshold parse ambiguous; neutral 0.50 at freeze value 98.4172."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for dbnomics at horizon 2027-04-23: threshold parse ambiguous; neutral 0.50 at freeze value 98.4172. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.5.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "dbnomics source data family (underlying series documentation)",
+     "url": "https://db.nomics.world",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.5
+  },
+  {
+   "q": "What is the probability that the value of the European Central Bank time series \u201cBroad EER group of trading partners (fixed composition) \u2013 Hong Kong dollar \u2013 Nominal effective exchange rate\u201d on {resolution_date} will exceed its value on {forecast_due_date}? If no observation is available for a date (e.g., it falls on a weekend or holiday), the most recent prior observation is used for that date. | horizon 2027-10-25",
+   "benchmark": {
+    "source": "dbnomics",
+    "id": "ECB_EXR_D.E03.HKD.EN00.A",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-10-25"
+   },
+   "resolution_note": "Resolves to the value found at https://db.nomics.world/ECB/EXR/D.E03.HKD.EN00.A once the data is published.",
+   "base_rate_used": {
+    "reference_class": "macro series vs stated threshold",
+    "value": 0.5,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'dbnomics', horizon 2027-10-25: threshold parse ambiguous; neutral 0.50 at freeze value 98.4172."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for dbnomics at horizon 2027-10-25: threshold parse ambiguous; neutral 0.50 at freeze value 98.4172. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.5.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "dbnomics source data family (underlying series documentation)",
+     "url": "https://db.nomics.world",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.5
+  },
+  {
+   "q": "What is the probability that the value of the European Central Bank time series \u201cEuro-area nominal government bonds \u2013 issuers of all ratings \u2013 Yield curve spot rate, 23-year 11-month residual maturity\u201d on {resolution_date} will exceed its value on {forecast_due_date}? If no observation is available for a date (e.g., it falls on a weekend or holiday), the most recent prior observation is used for that date. | horizon 2026-11-01",
+   "benchmark": {
+    "source": "dbnomics",
+    "id": "ECB_YC_B.U2.EUR.4F.G_N_C.SV_C_YM.SR_23Y11M",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-01"
+   },
+   "resolution_note": "Resolves to the value found at https://db.nomics.world/ECB/YC/B.U2.EUR.4F.G_N_C.SV_C_YM.SR_23Y11M once the data is published.",
+   "base_rate_used": {
+    "reference_class": "macro series vs stated threshold",
+    "value": 0.5,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'dbnomics', horizon 2026-11-01: threshold parse ambiguous; neutral 0.50 at freeze value 4.6119847635."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for dbnomics at horizon 2026-11-01: threshold parse ambiguous; neutral 0.50 at freeze value 4.6119847635. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.5.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "dbnomics source data family (underlying series documentation)",
+     "url": "https://db.nomics.world",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.5
+  },
+  {
+   "q": "What is the probability that the value of the European Central Bank time series \u201cEuro-area nominal government bonds \u2013 issuers of all ratings \u2013 Yield curve spot rate, 23-year 11-month residual maturity\u201d on {resolution_date} will exceed its value on {forecast_due_date}? If no observation is available for a date (e.g., it falls on a weekend or holiday), the most recent prior observation is used for that date. | horizon 2026-11-24",
+   "benchmark": {
+    "source": "dbnomics",
+    "id": "ECB_YC_B.U2.EUR.4F.G_N_C.SV_C_YM.SR_23Y11M",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-24"
+   },
+   "resolution_note": "Resolves to the value found at https://db.nomics.world/ECB/YC/B.U2.EUR.4F.G_N_C.SV_C_YM.SR_23Y11M once the data is published.",
+   "base_rate_used": {
+    "reference_class": "macro series vs stated threshold",
+    "value": 0.5,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'dbnomics', horizon 2026-11-24: threshold parse ambiguous; neutral 0.50 at freeze value 4.6119847635."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for dbnomics at horizon 2026-11-24: threshold parse ambiguous; neutral 0.50 at freeze value 4.6119847635. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.5.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "dbnomics source data family (underlying series documentation)",
+     "url": "https://db.nomics.world",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.5
+  },
+  {
+   "q": "What is the probability that the value of the European Central Bank time series \u201cEuro-area nominal government bonds \u2013 issuers of all ratings \u2013 Yield curve spot rate, 23-year 11-month residual maturity\u201d on {resolution_date} will exceed its value on {forecast_due_date}? If no observation is available for a date (e.g., it falls on a weekend or holiday), the most recent prior observation is used for that date. | horizon 2027-01-23",
+   "benchmark": {
+    "source": "dbnomics",
+    "id": "ECB_YC_B.U2.EUR.4F.G_N_C.SV_C_YM.SR_23Y11M",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-01-23"
+   },
+   "resolution_note": "Resolves to the value found at https://db.nomics.world/ECB/YC/B.U2.EUR.4F.G_N_C.SV_C_YM.SR_23Y11M once the data is published.",
+   "base_rate_used": {
+    "reference_class": "macro series vs stated threshold",
+    "value": 0.5,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'dbnomics', horizon 2027-01-23: threshold parse ambiguous; neutral 0.50 at freeze value 4.6119847635."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for dbnomics at horizon 2027-01-23: threshold parse ambiguous; neutral 0.50 at freeze value 4.6119847635. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.5.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "dbnomics source data family (underlying series documentation)",
+     "url": "https://db.nomics.world",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.5
+  },
+  {
+   "q": "What is the probability that the value of the European Central Bank time series \u201cEuro-area nominal government bonds \u2013 issuers of all ratings \u2013 Yield curve spot rate, 23-year 11-month residual maturity\u201d on {resolution_date} will exceed its value on {forecast_due_date}? If no observation is available for a date (e.g., it falls on a weekend or holiday), the most recent prior observation is used for that date. | horizon 2027-04-23",
+   "benchmark": {
+    "source": "dbnomics",
+    "id": "ECB_YC_B.U2.EUR.4F.G_N_C.SV_C_YM.SR_23Y11M",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-04-23"
+   },
+   "resolution_note": "Resolves to the value found at https://db.nomics.world/ECB/YC/B.U2.EUR.4F.G_N_C.SV_C_YM.SR_23Y11M once the data is published.",
+   "base_rate_used": {
+    "reference_class": "macro series vs stated threshold",
+    "value": 0.5,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'dbnomics', horizon 2027-04-23: threshold parse ambiguous; neutral 0.50 at freeze value 4.6119847635."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for dbnomics at horizon 2027-04-23: threshold parse ambiguous; neutral 0.50 at freeze value 4.6119847635. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.5.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "dbnomics source data family (underlying series documentation)",
+     "url": "https://db.nomics.world",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.5
+  },
+  {
+   "q": "What is the probability that the value of the European Central Bank time series \u201cEuro-area nominal government bonds \u2013 issuers of all ratings \u2013 Yield curve spot rate, 23-year 11-month residual maturity\u201d on {resolution_date} will exceed its value on {forecast_due_date}? If no observation is available for a date (e.g., it falls on a weekend or holiday), the most recent prior observation is used for that date. | horizon 2027-10-25",
+   "benchmark": {
+    "source": "dbnomics",
+    "id": "ECB_YC_B.U2.EUR.4F.G_N_C.SV_C_YM.SR_23Y11M",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-10-25"
+   },
+   "resolution_note": "Resolves to the value found at https://db.nomics.world/ECB/YC/B.U2.EUR.4F.G_N_C.SV_C_YM.SR_23Y11M once the data is published.",
+   "base_rate_used": {
+    "reference_class": "macro series vs stated threshold",
+    "value": 0.5,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'dbnomics', horizon 2027-10-25: threshold parse ambiguous; neutral 0.50 at freeze value 4.6119847635."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for dbnomics at horizon 2027-10-25: threshold parse ambiguous; neutral 0.50 at freeze value 4.6119847635. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.5.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "dbnomics source data family (underlying series documentation)",
+     "url": "https://db.nomics.world",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.5
+  },
+  {
+   "q": "What is the probability that the value of the European Central Bank time series \u201cEuro-area nominal government bonds \u2013 issuers of all ratings \u2013 Yield curve spot rate, 18-year 8-month residual maturity\u201d on {resolution_date} will exceed its value on {forecast_due_date}? If no observation is available for a date (e.g., it falls on a weekend or holiday), the most recent prior observation is used for that date. | horizon 2026-11-01",
+   "benchmark": {
+    "source": "dbnomics",
+    "id": "ECB_YC_B.U2.EUR.4F.G_N_C.SV_C_YM.SR_18Y8M",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-01"
+   },
+   "resolution_note": "Resolves to the value found at https://db.nomics.world/ECB/YC/B.U2.EUR.4F.G_N_C.SV_C_YM.SR_18Y8M once the data is published.",
+   "base_rate_used": {
+    "reference_class": "macro series vs stated threshold",
+    "value": 0.5,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'dbnomics', horizon 2026-11-01: threshold parse ambiguous; neutral 0.50 at freeze value 4.5869620381."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for dbnomics at horizon 2026-11-01: threshold parse ambiguous; neutral 0.50 at freeze value 4.5869620381. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.5.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "dbnomics source data family (underlying series documentation)",
+     "url": "https://db.nomics.world",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.5
+  },
+  {
+   "q": "What is the probability that the value of the European Central Bank time series \u201cEuro-area nominal government bonds \u2013 issuers of all ratings \u2013 Yield curve spot rate, 18-year 8-month residual maturity\u201d on {resolution_date} will exceed its value on {forecast_due_date}? If no observation is available for a date (e.g., it falls on a weekend or holiday), the most recent prior observation is used for that date. | horizon 2026-11-24",
+   "benchmark": {
+    "source": "dbnomics",
+    "id": "ECB_YC_B.U2.EUR.4F.G_N_C.SV_C_YM.SR_18Y8M",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-24"
+   },
+   "resolution_note": "Resolves to the value found at https://db.nomics.world/ECB/YC/B.U2.EUR.4F.G_N_C.SV_C_YM.SR_18Y8M once the data is published.",
+   "base_rate_used": {
+    "reference_class": "macro series vs stated threshold",
+    "value": 0.5,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'dbnomics', horizon 2026-11-24: threshold parse ambiguous; neutral 0.50 at freeze value 4.5869620381."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for dbnomics at horizon 2026-11-24: threshold parse ambiguous; neutral 0.50 at freeze value 4.5869620381. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.5.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "dbnomics source data family (underlying series documentation)",
+     "url": "https://db.nomics.world",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.5
+  },
+  {
+   "q": "What is the probability that the value of the European Central Bank time series \u201cEuro-area nominal government bonds \u2013 issuers of all ratings \u2013 Yield curve spot rate, 18-year 8-month residual maturity\u201d on {resolution_date} will exceed its value on {forecast_due_date}? If no observation is available for a date (e.g., it falls on a weekend or holiday), the most recent prior observation is used for that date. | horizon 2027-01-23",
+   "benchmark": {
+    "source": "dbnomics",
+    "id": "ECB_YC_B.U2.EUR.4F.G_N_C.SV_C_YM.SR_18Y8M",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-01-23"
+   },
+   "resolution_note": "Resolves to the value found at https://db.nomics.world/ECB/YC/B.U2.EUR.4F.G_N_C.SV_C_YM.SR_18Y8M once the data is published.",
+   "base_rate_used": {
+    "reference_class": "macro series vs stated threshold",
+    "value": 0.5,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'dbnomics', horizon 2027-01-23: threshold parse ambiguous; neutral 0.50 at freeze value 4.5869620381."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for dbnomics at horizon 2027-01-23: threshold parse ambiguous; neutral 0.50 at freeze value 4.5869620381. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.5.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "dbnomics source data family (underlying series documentation)",
+     "url": "https://db.nomics.world",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.5
+  },
+  {
+   "q": "What is the probability that the value of the European Central Bank time series \u201cEuro-area nominal government bonds \u2013 issuers of all ratings \u2013 Yield curve spot rate, 18-year 8-month residual maturity\u201d on {resolution_date} will exceed its value on {forecast_due_date}? If no observation is available for a date (e.g., it falls on a weekend or holiday), the most recent prior observation is used for that date. | horizon 2027-04-23",
+   "benchmark": {
+    "source": "dbnomics",
+    "id": "ECB_YC_B.U2.EUR.4F.G_N_C.SV_C_YM.SR_18Y8M",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-04-23"
+   },
+   "resolution_note": "Resolves to the value found at https://db.nomics.world/ECB/YC/B.U2.EUR.4F.G_N_C.SV_C_YM.SR_18Y8M once the data is published.",
+   "base_rate_used": {
+    "reference_class": "macro series vs stated threshold",
+    "value": 0.5,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'dbnomics', horizon 2027-04-23: threshold parse ambiguous; neutral 0.50 at freeze value 4.5869620381."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for dbnomics at horizon 2027-04-23: threshold parse ambiguous; neutral 0.50 at freeze value 4.5869620381. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.5.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "dbnomics source data family (underlying series documentation)",
+     "url": "https://db.nomics.world",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.5
+  },
+  {
+   "q": "What is the probability that the value of the European Central Bank time series \u201cEuro-area nominal government bonds \u2013 issuers of all ratings \u2013 Yield curve spot rate, 18-year 8-month residual maturity\u201d on {resolution_date} will exceed its value on {forecast_due_date}? If no observation is available for a date (e.g., it falls on a weekend or holiday), the most recent prior observation is used for that date. | horizon 2027-10-25",
+   "benchmark": {
+    "source": "dbnomics",
+    "id": "ECB_YC_B.U2.EUR.4F.G_N_C.SV_C_YM.SR_18Y8M",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-10-25"
+   },
+   "resolution_note": "Resolves to the value found at https://db.nomics.world/ECB/YC/B.U2.EUR.4F.G_N_C.SV_C_YM.SR_18Y8M once the data is published.",
+   "base_rate_used": {
+    "reference_class": "macro series vs stated threshold",
+    "value": 0.5,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'dbnomics', horizon 2027-10-25: threshold parse ambiguous; neutral 0.50 at freeze value 4.5869620381."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for dbnomics at horizon 2027-10-25: threshold parse ambiguous; neutral 0.50 at freeze value 4.5869620381. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.5.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "dbnomics source data family (underlying series documentation)",
+     "url": "https://db.nomics.world",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.5
+  },
+  {
+   "q": "What is the probability that the value of the European Central Bank time series \u201cChinese yuan renminbi per euro spot exchange rate\u201d on {resolution_date} will exceed its value on {forecast_due_date}? If no observation is available for a date (e.g., it falls on a weekend or holiday), the most recent prior observation is used for that date. | horizon 2026-11-01",
+   "benchmark": {
+    "source": "dbnomics",
+    "id": "ECB_EXR_D.CNY.EUR.SP00.A",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-01"
+   },
+   "resolution_note": "Resolves to the value found at https://db.nomics.world/ECB/EXR/D.CNY.EUR.SP00.A once the data is published.",
+   "base_rate_used": {
+    "reference_class": "macro series vs stated threshold",
+    "value": 0.5,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'dbnomics', horizon 2026-11-01: threshold parse ambiguous; neutral 0.50 at freeze value 7.5259."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for dbnomics at horizon 2026-11-01: threshold parse ambiguous; neutral 0.50 at freeze value 7.5259. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.5.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "dbnomics source data family (underlying series documentation)",
+     "url": "https://db.nomics.world",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.5
+  },
+  {
+   "q": "What is the probability that the value of the European Central Bank time series \u201cChinese yuan renminbi per euro spot exchange rate\u201d on {resolution_date} will exceed its value on {forecast_due_date}? If no observation is available for a date (e.g., it falls on a weekend or holiday), the most recent prior observation is used for that date. | horizon 2026-11-24",
+   "benchmark": {
+    "source": "dbnomics",
+    "id": "ECB_EXR_D.CNY.EUR.SP00.A",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-24"
+   },
+   "resolution_note": "Resolves to the value found at https://db.nomics.world/ECB/EXR/D.CNY.EUR.SP00.A once the data is published.",
+   "base_rate_used": {
+    "reference_class": "macro series vs stated threshold",
+    "value": 0.5,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'dbnomics', horizon 2026-11-24: threshold parse ambiguous; neutral 0.50 at freeze value 7.5259."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for dbnomics at horizon 2026-11-24: threshold parse ambiguous; neutral 0.50 at freeze value 7.5259. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.5.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "dbnomics source data family (underlying series documentation)",
+     "url": "https://db.nomics.world",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.5
+  },
+  {
+   "q": "What is the probability that the value of the European Central Bank time series \u201cChinese yuan renminbi per euro spot exchange rate\u201d on {resolution_date} will exceed its value on {forecast_due_date}? If no observation is available for a date (e.g., it falls on a weekend or holiday), the most recent prior observation is used for that date. | horizon 2027-01-23",
+   "benchmark": {
+    "source": "dbnomics",
+    "id": "ECB_EXR_D.CNY.EUR.SP00.A",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-01-23"
+   },
+   "resolution_note": "Resolves to the value found at https://db.nomics.world/ECB/EXR/D.CNY.EUR.SP00.A once the data is published.",
+   "base_rate_used": {
+    "reference_class": "macro series vs stated threshold",
+    "value": 0.5,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'dbnomics', horizon 2027-01-23: threshold parse ambiguous; neutral 0.50 at freeze value 7.5259."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for dbnomics at horizon 2027-01-23: threshold parse ambiguous; neutral 0.50 at freeze value 7.5259. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.5.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "dbnomics source data family (underlying series documentation)",
+     "url": "https://db.nomics.world",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.5
+  },
+  {
+   "q": "What is the probability that the value of the European Central Bank time series \u201cChinese yuan renminbi per euro spot exchange rate\u201d on {resolution_date} will exceed its value on {forecast_due_date}? If no observation is available for a date (e.g., it falls on a weekend or holiday), the most recent prior observation is used for that date. | horizon 2027-04-23",
+   "benchmark": {
+    "source": "dbnomics",
+    "id": "ECB_EXR_D.CNY.EUR.SP00.A",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-04-23"
+   },
+   "resolution_note": "Resolves to the value found at https://db.nomics.world/ECB/EXR/D.CNY.EUR.SP00.A once the data is published.",
+   "base_rate_used": {
+    "reference_class": "macro series vs stated threshold",
+    "value": 0.5,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'dbnomics', horizon 2027-04-23: threshold parse ambiguous; neutral 0.50 at freeze value 7.5259."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for dbnomics at horizon 2027-04-23: threshold parse ambiguous; neutral 0.50 at freeze value 7.5259. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.5.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "dbnomics source data family (underlying series documentation)",
+     "url": "https://db.nomics.world",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.5
+  },
+  {
+   "q": "What is the probability that the value of the European Central Bank time series \u201cChinese yuan renminbi per euro spot exchange rate\u201d on {resolution_date} will exceed its value on {forecast_due_date}? If no observation is available for a date (e.g., it falls on a weekend or holiday), the most recent prior observation is used for that date. | horizon 2027-10-25",
+   "benchmark": {
+    "source": "dbnomics",
+    "id": "ECB_EXR_D.CNY.EUR.SP00.A",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-10-25"
+   },
+   "resolution_note": "Resolves to the value found at https://db.nomics.world/ECB/EXR/D.CNY.EUR.SP00.A once the data is published.",
+   "base_rate_used": {
+    "reference_class": "macro series vs stated threshold",
+    "value": 0.5,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'dbnomics', horizon 2027-10-25: threshold parse ambiguous; neutral 0.50 at freeze value 7.5259."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for dbnomics at horizon 2027-10-25: threshold parse ambiguous; neutral 0.50 at freeze value 7.5259. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.5.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "dbnomics source data family (underlying series documentation)",
+     "url": "https://db.nomics.world",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.5
+  },
+  {
+   "q": "What is the probability that the value of the European Central Bank time series \u201cEuro-area nominal government bonds \u2013 AAA-rated issuers \u2013 Yield curve instantaneous forward rate, 5-year 3-month residual maturity\u201d on {resolution_date} will exceed its value on {forecast_due_date}? If no observation is available for a date (e.g., it falls on a weekend or holiday), the most recent prior observation is used for that date. | horizon 2026-11-01",
+   "benchmark": {
+    "source": "dbnomics",
+    "id": "ECB_YC_B.U2.EUR.4F.G_N_A.SV_C_YM.IF_5Y3M",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-01"
+   },
+   "resolution_note": "Resolves to the value found at https://db.nomics.world/ECB/YC/B.U2.EUR.4F.G_N_A.SV_C_YM.IF_5Y3M once the data is published.",
+   "base_rate_used": {
+    "reference_class": "macro series vs stated threshold",
+    "value": 0.5,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'dbnomics', horizon 2026-11-01: threshold parse ambiguous; neutral 0.50 at freeze value 3.6036189160000003."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for dbnomics at horizon 2026-11-01: threshold parse ambiguous; neutral 0.50 at freeze value 3.6036189160000003. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.5.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "dbnomics source data family (underlying series documentation)",
+     "url": "https://db.nomics.world",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.5
+  },
+  {
+   "q": "What is the probability that the value of the European Central Bank time series \u201cEuro-area nominal government bonds \u2013 AAA-rated issuers \u2013 Yield curve instantaneous forward rate, 5-year 3-month residual maturity\u201d on {resolution_date} will exceed its value on {forecast_due_date}? If no observation is available for a date (e.g., it falls on a weekend or holiday), the most recent prior observation is used for that date. | horizon 2026-11-24",
+   "benchmark": {
+    "source": "dbnomics",
+    "id": "ECB_YC_B.U2.EUR.4F.G_N_A.SV_C_YM.IF_5Y3M",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2026-11-24"
+   },
+   "resolution_note": "Resolves to the value found at https://db.nomics.world/ECB/YC/B.U2.EUR.4F.G_N_A.SV_C_YM.IF_5Y3M once the data is published.",
+   "base_rate_used": {
+    "reference_class": "macro series vs stated threshold",
+    "value": 0.5,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'dbnomics', horizon 2026-11-24: threshold parse ambiguous; neutral 0.50 at freeze value 3.6036189160000003."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for dbnomics at horizon 2026-11-24: threshold parse ambiguous; neutral 0.50 at freeze value 3.6036189160000003. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.5.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "dbnomics source data family (underlying series documentation)",
+     "url": "https://db.nomics.world",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.5
+  },
+  {
+   "q": "What is the probability that the value of the European Central Bank time series \u201cEuro-area nominal government bonds \u2013 AAA-rated issuers \u2013 Yield curve instantaneous forward rate, 5-year 3-month residual maturity\u201d on {resolution_date} will exceed its value on {forecast_due_date}? If no observation is available for a date (e.g., it falls on a weekend or holiday), the most recent prior observation is used for that date. | horizon 2027-01-23",
+   "benchmark": {
+    "source": "dbnomics",
+    "id": "ECB_YC_B.U2.EUR.4F.G_N_A.SV_C_YM.IF_5Y3M",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-01-23"
+   },
+   "resolution_note": "Resolves to the value found at https://db.nomics.world/ECB/YC/B.U2.EUR.4F.G_N_A.SV_C_YM.IF_5Y3M once the data is published.",
+   "base_rate_used": {
+    "reference_class": "macro series vs stated threshold",
+    "value": 0.5,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'dbnomics', horizon 2027-01-23: threshold parse ambiguous; neutral 0.50 at freeze value 3.6036189160000003."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for dbnomics at horizon 2027-01-23: threshold parse ambiguous; neutral 0.50 at freeze value 3.6036189160000003. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.5.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "dbnomics source data family (underlying series documentation)",
+     "url": "https://db.nomics.world",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.5
+  },
+  {
+   "q": "What is the probability that the value of the European Central Bank time series \u201cEuro-area nominal government bonds \u2013 AAA-rated issuers \u2013 Yield curve instantaneous forward rate, 5-year 3-month residual maturity\u201d on {resolution_date} will exceed its value on {forecast_due_date}? If no observation is available for a date (e.g., it falls on a weekend or holiday), the most recent prior observation is used for that date. | horizon 2027-04-23",
+   "benchmark": {
+    "source": "dbnomics",
+    "id": "ECB_YC_B.U2.EUR.4F.G_N_A.SV_C_YM.IF_5Y3M",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-04-23"
+   },
+   "resolution_note": "Resolves to the value found at https://db.nomics.world/ECB/YC/B.U2.EUR.4F.G_N_A.SV_C_YM.IF_5Y3M once the data is published.",
+   "base_rate_used": {
+    "reference_class": "macro series vs stated threshold",
+    "value": 0.5,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'dbnomics', horizon 2027-04-23: threshold parse ambiguous; neutral 0.50 at freeze value 3.6036189160000003."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for dbnomics at horizon 2027-04-23: threshold parse ambiguous; neutral 0.50 at freeze value 3.6036189160000003. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.5.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "dbnomics source data family (underlying series documentation)",
+     "url": "https://db.nomics.world",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.5
+  },
+  {
+   "q": "What is the probability that the value of the European Central Bank time series \u201cEuro-area nominal government bonds \u2013 AAA-rated issuers \u2013 Yield curve instantaneous forward rate, 5-year 3-month residual maturity\u201d on {resolution_date} will exceed its value on {forecast_due_date}? If no observation is available for a date (e.g., it falls on a weekend or holiday), the most recent prior observation is used for that date. | horizon 2027-10-25",
+   "benchmark": {
+    "source": "dbnomics",
+    "id": "ECB_YC_B.U2.EUR.4F.G_N_A.SV_C_YM.IF_5Y3M",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": "2027-10-25"
+   },
+   "resolution_note": "Resolves to the value found at https://db.nomics.world/ECB/YC/B.U2.EUR.4F.G_N_A.SV_C_YM.IF_5Y3M once the data is published.",
+   "base_rate_used": {
+    "reference_class": "macro series vs stated threshold",
+    "value": 0.5,
+    "source": "family strategy, fb_fill_oct25.py docstring"
+   },
+   "evidence": [
+    "Dataset family 'dbnomics', horizon 2027-10-25: threshold parse ambiguous; neutral 0.50 at freeze value 3.6036189160000003."
+   ],
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate.",
+   "reasoning_summary": "Family base-rate strategy for dbnomics at horizon 2027-10-25: threshold parse ambiguous; neutral 0.50 at freeze value 3.6036189160000003. These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.5.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "dbnomics source data family (underlying series documentation)",
+     "url": "https://db.nomics.world",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.5
+  }
+ ]
+}

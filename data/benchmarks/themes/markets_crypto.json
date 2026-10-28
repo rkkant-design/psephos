@@ -1,0 +1,173 @@
+[
+ {
+  "id": "40767",
+  "source": "metaculus",
+  "question": "Will Magnificent Seven shares crash before 2027?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/40767.",
+  "market_resolution_criteria": "This question will resolve as Yes if, before January 1, 2027, shares of at least four of the Magnificent Seven stocks (Apple, Microsoft, Alphabet, Amazon, Nvidia, Meta Platforms, and Tesla) close more than 50% below their all-time high close price.\n\nThe question shall be resolved by using the daily closing share prices (as adjusted for any stock splits) available from [Yahoo Finance](https://finance.yahoo.com) under the 'Historical Data' tab or, at the discretion of Metaculus admins, any other credible source of share price data. It will not use intra-day data.",
+  "background": "US mega-cap stocks Apple, Microsoft, Alphabet (parent of Google), Amazon, Nvidia, Meta Platforms (Facebook), and Tesla are collectively known as [the Magnificent Seven](https://en.wikipedia.org/wiki/Magnificent_Seven_\\(stocks\\)). Their strong performance over recent years has driven equity-market concentration [to multi-decade highs](https://www.columbiathreadneedle.com/en/gb/institutional/insights/the-rise-of-the-magnificent-7-concentration-risk-versus-earnings-power/). Investment commenters have been worried for some time that the market, especially AI stocks, [may be re-running the dotcom bubble](https://www.ft.com/content/f8cd239e-287c-4e3c-bfae-8c4acec7ac34). The S\\&P's cyclically adjusted P/E ratio [is approaching the dotcom peak](https://www.ft.com/content/ae4d7961-cf59-4369-8e64-8a9c9da956d1), primarily driven by AI companies.",
+  "close": "2026-12-31T12:00:00+00:00"
+ },
+ {
+  "id": "40289",
+  "source": "metaculus",
+  "question": "Will the US stock market crash by more than 10% in any 5-day trading period before 2027?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/40289.",
+  "market_resolution_criteria": "This question resolves as Yes if, before January 1, 2027, the S\\&P 500 has a decline of more than 10% in any rolling 5 trading day period based on Close prices before January 1, 2027. This question will resolve based on [Yahoo Finance](https://finance.yahoo.com/quote/%5EGSPC/history/?frequency=1d) data.&#x20;",
+  "background": "The [Sentinel](https://sentinel-team.org/) forecasting team has [estimated](https://blog.sentinel-team.org/p/california-ai-bill-passed-trump-tries) a 19% chance of a stock market crash by the end of 2026, which it defines as a >10% reduction in the S\\&P 500 in any week before 2027. According to Sentinel:&#x20;\n\n> The [University of Michigan\u2019s ](https://www.sca.isr.umich.edu/)[**Consumer Sentiment Index**](https://www.sca.isr.umich.edu/) is near historic lows. The labor market has been [weakening](https://www.reuters.com/world/us/fed-vice-chair-jefferson-says-us-job-market-weakening-could-face-stress-2025-09-30/). Meanwhile, the [**S\\&P 500**](https://www.cnbc.com/quotes/.SPX) **chases all-time highs**, powered by AI investments, even as bond markets are [signaling](https://www.marketwatch.com/story/stocks-and-bonds-are-sending-very-different-messages-about-recession-risks-fcd4d248) [risk",
+  "close": "2026-12-31T16:00:00+00:00"
+ },
+ {
+  "id": "41130",
+  "source": "metaculus",
+  "question": "Will the S&P 500 close above 7,500 at the end of 2026?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/41130.",
+  "market_resolution_criteria": "This question will resolve as **Yes** if the value of the [S\\&P 500](https://www.spglobal.com/spdji/en/indices/equity/sp-500/#overview) index is greater than 7,500 at the close of regular trading on the final trading day of 2026.",
+  "background": "Each year over the 24-year period through 2024, an average of 64% of active fund managers  [underperformed](https://www.spglobal.com/spdji/en/documents/spiva/spiva-us-year-end-2024.pdf) the S\\&P 500 index. Over the most recent 5 year period as of June 30, 2025, 87% of large cap funds [underperformed. ](https://www.spglobal.com/spdji/en/research-insights/spiva/)&#x20;\n\n[Introduced](https://www.spglobal.com/spdji/en/documents/education/spdji-where-it-all-began.pdf) in 1957, the S\\&P 500 is a simple market cap-weighted [passive](https://www.bogleheads.org/wiki/Passive_management) index of approximately 500 stocks (see list of companies [here](https://en.wikipedia.org/wiki/List_of_S%26P_500_companies)). The largest exchange-traded fund allowing individual investors to capture the annual returns of the S\\&P 500 is the [Vanguard 500 ETF](https://investor.vanguard.com/investment-products/etfs/p",
+  "close": "2027-01-01T00:00:00+00:00"
+ },
+ {
+  "id": "41526",
+  "source": "metaculus",
+  "question": "Will the Euro appreciate against the Dollar during 2026?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://www.metaculus.com/questions/41526.",
+  "market_resolution_criteria": "This question will resolve as Yes if the closing value of the exchange rate from the Euro (EUR) to Dollar (USD) on the last trading day of 2026 is higher than 1.1747 as reported by [Yahoo Finance](https://finance.yahoo.com/quote/EURUSD%3DX/).&#x20;",
+  "background": "After an initial low period following the victory of Donald Trump where the EUR/USD rate [fell as low as 1.0267](https://www.ft.com/content/e572d9c2-547a-4736-b482-78e2a29450fb), the euro surged against the dollar and almost reached 1.20 dollars per euro.&#x20;\n\nIn September 2025, the Financial Times [reported](https://www.ft.com/content/5b179bb6-684a-48d1-abac-a25aacb12a49) that banks were predicting the euro would continue its gains in the coming time and finally cross 1.20. As of January 2026, that has not happened, with the exchange rate remaining in the 1.15 - 1.18 range.\n\nIn general, economic uncertainty or low interest rates drives investors away from a currency. Thus, economic growth, central bank activities and government policy will likely impact the exchange rate. While opinions differ, the current consensus [appears to be negative](https://www.reuters.com/business/dire-year-d",
+  "close": "2027-01-01T00:00:00+00:00"
+ },
+ {
+  "id": "KXNYCBILLIONAIRES-26-115",
+  "source": "kalshi",
+  "question": "How many billionaires will New York City lose this year? [Yes: At least 8]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxnycbillionaires/x/kxnycbillionaires-26.",
+  "market_resolution_criteria": "If New York City has less than 115 billionaires in 2026, then the market resolves to Yes. Outcome verified from Forbes Media LLC (https://kalshi.com/).",
+  "background": "N/A",
+  "close": "2026-12-31T15:00:00+00:00"
+ },
+ {
+  "id": "KXMUSKNW-26DEC31-T800",
+  "source": "kalshi",
+  "question": "Will Elon Musk's net worth for December 31, 2026 be above $800 billion? [Yes: Above $800 billion]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxmusknw/x/kxmusknw-26dec31.",
+  "market_resolution_criteria": "If Forbes reports that Elon Musk's net worth on December 31, 2026 at 5:00 PM ET is above $800 billion, then the market resolves to Yes. This market will be determined by the net worth value displayed for Elon Musk on the Forbes Real-Time Billionaires page at 5:00 PM ET on December 31, 2026.\n\nThe relevant value is the dollar-denominated net worth shown by Forbes at that time, regardless of any later updates, corrections, or revisions. Outcome verified from Forbes (https://www.forbes.com/real-time-billionaires/#45c1a6b23d78).",
+  "background": "N/A",
+  "close": "2026-12-31T21:59:00+00:00"
+ },
+ {
+  "id": "KXWTI-26NOV03-T80.99",
+  "source": "kalshi",
+  "question": "Will the WTI front-month settle oil price  be >80.99 on Nov 3, 2026? [Yes: $81 or above]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxwti/x/kxwti-26nov03.",
+  "market_resolution_criteria": "If the front-month settle price for a barrel of West Texas Intermediate oil on November 03, 2026 is above $80.99, then the market resolves to Yes. Outcome verified from ICE (https://www.theice.com/products/213/WTI-Crude-Futures).",
+  "background": "N/A",
+  "close": "2026-11-03T15:00:00+00:00"
+ },
+ {
+  "id": "KXWTI-26NOV03-T72.99",
+  "source": "kalshi",
+  "question": "Will the WTI front-month settle oil price  be >72.99 on Nov 3, 2026? [Yes: $73 or above]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxwti/x/kxwti-26nov03.",
+  "market_resolution_criteria": "If the front-month settle price for a barrel of West Texas Intermediate oil on November 03, 2026 is above $72.99, then the market resolves to Yes. Outcome verified from ICE (https://www.theice.com/products/213/WTI-Crude-Futures).",
+  "background": "N/A",
+  "close": "2026-11-03T15:00:00+00:00"
+ },
+ {
+  "id": "KXWTI-26NOV03-T107.99",
+  "source": "kalshi",
+  "question": "Will the WTI front-month settle oil price  be >107.99 on Nov 3, 2026? [Yes: $108 or above]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxwti/x/kxwti-26nov03.",
+  "market_resolution_criteria": "If the front-month settle price for a barrel of West Texas Intermediate oil on November 03, 2026 is above $107.99, then the market resolves to Yes. Outcome verified from ICE (https://www.theice.com/products/213/WTI-Crude-Futures).",
+  "background": "N/A",
+  "close": "2026-11-03T15:00:00+00:00"
+ },
+ {
+  "id": "KXWTI-26NOV03-T108.99",
+  "source": "kalshi",
+  "question": "Will the WTI front-month settle oil price  be >108.99 on Nov 3, 2026? [Yes: $109 or above]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxwti/x/kxwti-26nov03.",
+  "market_resolution_criteria": "If the front-month settle price for a barrel of West Texas Intermediate oil on November 03, 2026 is above $108.99, then the market resolves to Yes. Outcome verified from ICE (https://www.theice.com/products/213/WTI-Crude-Futures).",
+  "background": "N/A",
+  "close": "2026-11-03T15:00:00+00:00"
+ },
+ {
+  "id": "KXNDKOIL-27FEB26-T421.101",
+  "source": "kalshi",
+  "question": "Will North Dakota\u2019s field production of crude oil for 2026 be above 421.101 million barrels? [Yes: Above 421.101 million barrels]",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxndkoil/x/kxndkoil-27feb26.",
+  "market_resolution_criteria": "If EIA reports that North Dakota\u2019s field production of crude oil for calendar year 2026 is above \n\n421.101 million barrels, then the market resolves to Yes. The Underlying is EIA\u2019s North Dakota Field Production of Crude Oil annual total for 2026. EIA reports the statistic in thousand barrels, so the fixed threshold is 421,101 thousand barrels. The threshold will not change if EIA subsequently revises its 2025 value. Outcome verified from U.S. Energy Information Administration (https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?f=A&n=PET&s=MCRFPND1).",
+  "background": "N/A",
+  "close": "2027-02-26T14:59:00+00:00"
+ },
+ {
+  "id": "0x9775cd557a3cdba4f0478070afa399c0805761dd9aa0e7ce4435a71fed32621c",
+  "source": "polymarket",
+  "question": "Will Ethereum reach $4,000 by December 31, 2026?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-ethereum-reach-4000-by-december-31-2026.",
+  "market_resolution_criteria": "This market will immediately resolve to \u201cYes\u201d if any Binance 1-minute candle for Ethereum (ETH/USDT) between November 24, 2025, 14:00 and December 31, 2026, 23:59 in the ET timezone has a final \u201cHigh\u201d price equal to or greater than the price specified in the title. Otherwise, this market will resolve to \u201cNo.\u201d\n\nThe resolution source for this market is Binance, specifically the ETH/USDT \u201cHigh\u201d prices available at:\nhttps://www.binance.com/en/trade/ETH_USDT with the chart set to \u201c1m\u201d (one-minute candles) on the top bar.\n\nPlease note that the outcome of this market depends solely on the price data from the Binance ETH/USDT trading pair. Prices from other exchanges, different trading pairs, or spot markets will not be considered for the resolution of this market.",
+  "background": "N/A",
+  "close": "2027-01-01T05:00:00+00:00"
+ },
+ {
+  "id": "0x23969ec06514ad241fda435742187a08c1b2b2d0b5080f0c0751c9dc0f2d886b",
+  "source": "polymarket",
+  "question": "Puffpaw FDV above $100M one day after launch?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/puffpaw-fdv-above-100m-one-day-after-launch.",
+  "market_resolution_criteria": "This market will resolve to \"Yes\" if the Fully Diluted Valuation of Puffpaw's governance token is greater than the value specified in the title 1 day after launch. Otherwise, the market will resolve to \"No.\"\n\nThe token must be actively, publicly transferable and tradable to be considered a launch.\n\nThe FDV will be determined using the total token supply multiplied by the token price.\n\n\"1 day after launch\" is defined as 4:00 PM ET on the calendar day following launch. The resolution source for this market is the most liquid price source available. If Puffpaw (https://www.puffpaw.xyz/) doesn't launch a token by December 31, 2026, 11:59 PM ET, this market will resolve to \"No\".",
+  "background": "N/A",
+  "close": "2027-01-01T05:00:00+00:00"
+ },
+ {
+  "id": "0x88c449eb01e281238d1de7d112faaeb1cb8c74f8f9c3b24cb21b126e4b4f68ba",
+  "source": "polymarket",
+  "question": "Will USD be between 3.0M and 3.5M Iranian rials on December 31?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-usd-be-between-3pt0m-and-3pt5m-iranian-rials-on-december-31.",
+  "market_resolution_criteria": "This market will resolve according to the finalized USD exchange rate on Bonbast for December 31, 2026.\n\nIf the recorded data falls exactly between two brackets, this market will resolve to the higher bracket.\n\nThis market will resolve according to the finalized free-market USD exchange rate for the specified date as displayed on Bonbast (https://www.bonbast.com/graph/usd), which publishes prices in Iranian toman, where 1 Iranian toman equals 10 Iranian rials (IRR).\n\nA daily figure will be considered finalized once the following day\u2019s figure is released.\n\nResolution will occur once the specified exchange rate data point is finalized. If the relevant data is not finalized by the end of the 7th calendar day after the specified date (ET), this market will resolve according to the latest data available at that time. Revisions made after the relevant figure has been finalized will not be considered.\n\nIf Iran redenominates the rial, or Bonbast changes the unit in which it displays the USD exchange rate, before the relevant figure has been finalized, the displayed figure will be converted into current Iranian rials at the official conversion ratio between the new unit and the current rial (for example, 1 new rial equals 10,000 current rials), and the converted figure will be used for resolution.\n\nThe resolution source for this market will be Bonbast (https://www.bonbast.com/graph/usd). If the resolution source becomes permanently unavailable, another resolution source will be chosen.",
+  "background": "N/A",
+  "close": "2026-12-31T23:59:00+00:00"
+ },
+ {
+  "id": "0xacec7e5b90ccb1ac4c950e3aff18156d6ce1bb7b0c87c001a281279412dca784",
+  "source": "polymarket",
+  "question": "Will Bitcoin reach $95,000 by December 31, 2026?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-bitcoin-reach-95000-by-december-31-2026-from-june-8.",
+  "market_resolution_criteria": "This market will resolve to \"Yes\" if any Binance 1 minute candle for Bitcoin (BTC/USDT) between the creation of this market through 11:59 PM ET on the last day of the year specified in the title has a final \"High\" price equal to or greater than the price specified in the title. Otherwise, this market will resolve to \"No\u201d. Price action before this market's creation will not be considered.\n\nThe resolution source for this market is Binance, specifically the BTC/USDT \"High\" prices available at https://www.binance.com/en/trade/BTC_USDT, with the chart settings on \"1m\" for one-minute candles selected on the top bar.\n\nPlease note that the outcome of this market depends solely on the price data from the Binance BTC/USDT trading pair. Prices from other exchanges, different trading pairs, or spot markets will not be considered for the resolution of this market.",
+  "background": "N/A",
+  "close": "2027-01-01T05:00:00+00:00"
+ },
+ {
+  "id": "0x820729aadc283c1acec9aa0fab994d0aae15dd372c29df515134cd0548650d13",
+  "source": "polymarket",
+  "question": "Will none of these coins hit a $1B FDV?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-none-of-these-coins-hit-a-1b-fdv.",
+  "market_resolution_criteria": "This market will resolve to \"Yes\" if none of the coins listed below reaches a fully diluted valuation equal to or greater than $1,000,000,000 at any point between the creation of this market and December 25, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nFully diluted valuation refers to the figure published by each coin's resolution source, shown as \"Fully Diluted Valuation\" on CoinGecko and as \"FDV\" on CoinMarketCap. Circulating supply market cap will not be used.\n\nThe coins in this event, and their resolution sources, are:\n\n- Cash Cat (CASHCAT), Robinhood Chain 0x020bfc650a365f8bb26819deaabf3e21291018b4, CoinGecko, https://www.coingecko.com/en/coins/cash-cat\n- Artificial Inu (AI), Robinhood Chain 0x2E8c31162b855A2ffa90F6F8634643Ad6F111e18, CoinMarketCap, https://coinmarketcap.com/currencies/artificial-inu-ai/\n- The Black Bull (ANSEM), Solana 9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump, CoinGecko, https://www.coingecko.com/en/coins/the-black-bull\n- NetNet (NET), Robinhood Chain 0xca9c78dd337a67f6e0077f65f5e9218719d30edf, CoinGecko, https://www.coingecko.com/en/coins/netnet\n\nA coin reaches the threshold at the first moment its fully diluted valuation, as displayed on its resolution source, is equal to or greater than $1,000,000,000. A momentary crossing by any coin qualifies and will cause this market to resolve to \"No\", provided it is verifiable from the resolution source or from a consensus of credible reporting.\n\nEach coin is judged solely against the source listed for it. Differences in methodology between CoinGecko and CoinMarketCap will not be adjusted for.\n\nThe primary resolution source for this market will be the source listed above for each coin; however, a consensus of credible reporting may also be used. If a resolution source becomes permanently unavailable or stops publishing data for a coin, that coin will resolve based on other credible and publicly verifiable sources.",
+  "background": "N/A",
+  "close": "2026-12-26T04:59:00+00:00"
+ },
+ {
+  "id": "0x45514e0fcd922a740e67ab064a9042d3e964006712f9540947808ae82067ed23",
+  "source": "polymarket",
+  "question": "Extended FDV above $150M one day after launch?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/extended-fdv-above-150m-one-day-after-launch-452.",
+  "market_resolution_criteria": "This market will resolve to \"Yes\" if the Fully Diluted Valuation of Extended's token is greater than the value specified in the title 1 day after launch. Otherwise, the market will resolve to \"No.\"\n\nThe token must be actively, publicly transferable and tradable to be considered a launch.\n\nThe FDV will be determined using the total token supply multiplied by the token price.\n\n\"1 day after launch\" is defined as 4:00 PM ET on the calendar day following launch. The resolution source for this market is the most liquid price source available. If Extended (https://x.com/extendedapp) doesn't launch a token by December 31, 2026, 11:59 PM ET, this market will resolve to \"No\".",
+  "background": "N/A",
+  "close": "2027-01-01T05:00:00+00:00"
+ },
+ {
+  "id": "0x590733a087d9e14aa053182b38573b22ae45cd257bb11119de537ad5ce44f088",
+  "source": "polymarket",
+  "question": "Will a new country buy Bitcoin by December 31, 2026?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-a-new-country-buy-bitcoin-by-december-31-2026-135.",
+  "market_resolution_criteria": "This market will resolve to \"Yes\" if the government of any sovereign UN member state announces between November 13, 3:00 PM ET and December 31, 2026, 11:59 PM ET that they bought Bitcoin for the first time. Otherwise, this market will resolve to \"No\".\n\nThis announcement can pertain to a first purchase of Bitcoin outside of the timeframe of this market (e.g. if a country announces it made its first purchase of Bitcoin prior to this market's timeframe, but the announcement is made within the timeframe, this market will resolve to \"Yes\").\n\nA qualifying purchase requires a relevant country take direct custody over the Bitcoin they purchase. Buying into investment vehicles, ETFs, etc., which do not constitute a direct purchase of Bitcoin, will not qualify.\n\nThe primary resolution source will be official announcements from the governments of any purchasing UN member state, however a consensus of credible reporting will also be used.",
+  "background": "N/A",
+  "close": "2027-01-01T04:59:00+00:00"
+ },
+ {
+  "id": "0x352b48203f4838cf28f6065ac9d55798c411664723749f3166f0abe3bf64efa4",
+  "source": "polymarket",
+  "question": "Will Crude Oil reach a new all-time high by March 31, 2027?",
+  "resolution_criteria": "Resolves to the outcome of the question found at https://polymarket.com/market/will-crude-oil-reach-a-new-all-time-high-by-march-31-2027.",
+  "market_resolution_criteria": "This market will resolve to \"Yes\" if, on any trading day after market creation, the official daily high price published by the CME Group for the Active Month (front month) of CME Crude Oil (CL) futures is greater than $147.27 by the final trading day on or before the specified date. Otherwise, this market will resolve to \"No\".\n\nFor CME Crude Oil (CL) futures contracts, the active month is the nearest of the contract months listed. The active month becomes a non-active month effective two business days prior to the spot month expiration. For example, if the spot month expires on a Friday the next listed contract will be considered the Active Month on the Wednesday prior to the spot month expiration.\n\nThis market will resolve as soon as a high price greater than the listed value is published, or once finalized data for the final trading day of the specified time period is published and a high price greater than $147.27 has not been achieved.\n\nThe resolution source for this market is the CME Group website (https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.quotes.html) \u2014 specifically, the daily \"High\" prices for the Active Month of Crude Oil (CL) futures. If finalized data for the final trading day of the specified time period has not been published on the CME Group website within 14 calendar days (ET) of the end of that period, this market will resolve based on the data published through all CME Group channels up to that point.",
+  "background": "N/A",
+  "close": "2027-04-01T03:59:00+00:00"
+ }
+]

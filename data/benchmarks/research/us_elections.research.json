@@ -1,0 +1,701 @@
+{
+ "41678": {
+  "base_rate": {"reference_class": "Toss-up/Tilt-rated Senate races: favored-side conversion ~0.50-0.60; Sabato Leans D converts ~0.72 for the Democrat", "value": 0.6, "source": "Historical conversion of Cook/Sabato Senate ratings (Cook Toss Up, Sabato Leans D as of 2026-10-06)"},
+  "evidence": ["2026-10-06: Sabato's Crystal Ball moved Alaska Senate from Toss-up to Leans Democratic", "2026-10-20: Cook Political Report still rates Alaska (Sullivan) a Toss Up", "2026-10-22: RealClearPolling average shows Peltola +1.2 over Sen. Dan Sullivan; NYT/Siena likely-voter poll had Peltola +7 (50-43)", "2026-10-25: Alaska uses a top-four ranked-choice general, which historically helped Peltola consolidate non-GOP votes in 2022"],
+  "strongest_opposing_case": "Alaska is a Trump+13 state where polls have repeatedly understated Republicans (Sullivan won 2020 by 13 after polls showed a near-tie); a normal AK-sized polling miss erases Peltola's 1-7 point lead entirely.",
+  "reasoning_summary": "Base: split of Cook Toss Up (0.50) and Sabato Leans D (0.72) -> 0.61. Up slightly for consistent poll leads (+1 to +7) and RCV mechanics that favor Peltola; down for Alaska's history of pro-GOP poll error. Net ~0.60 that Peltola wins per certified results.",
+  "key_sources": [
+   {"title": "Sabato's Crystal Ball: Alaska Senate to Leans Democratic", "url": "https://centerforpolitics.org/crystalball/four-rating-changes-headlined-by-alaska-senate-moving-to-leans-democratic/", "date": "2026-10-06"},
+   {"title": "Cook Political Report 2026 Senate race ratings", "url": "https://www.cookpolitical.com/ratings/senate-race-ratings", "date": "2026-10-20"},
+   {"title": "Wikipedia: 2026 United States Senate election in Alaska", "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Alaska", "date": "2026-10-24"}
+  ],
+  "p": 0.60
+ },
+ "43490": {
+  "base_rate": {"reference_class": "Post-Dobbs statewide abortion-restriction ballot measures (KS, KY, MT, OH 2022-23): restriction side 0 for 7", "value": 0.25, "source": "Historical record of post-2022 abortion referenda; MO 2024 Amendment 3 passed 51.6-48.4 protecting rights"},
+  "evidence": ["2024-11-05: Missouri voters approved abortion-rights Amendment 3 by 51.6% to 48.4%", "2026-10-14: Beacon/KCTV coverage notes voter confusion because a Yes in 2026 repeals what a Yes meant in 2024, plus bundled ban on gender-transition care for minors", "2026-10-16: No October public poll found; a March 2026 poll found the minors gender-care ban is the measure's strongest selling point", "2026-10-23: National environment is Democratic-leaning (generic ballot ~D+8), which typically hurts abortion-restriction measures"],
+  "strongest_opposing_case": "Midterm Missouri electorates are redder than 2024's, the 2024 margin was only 3.2 points, and bundling a popular minors' gender-care ban with ballot language written by the legislature could flip just 2 points of the vote.",
+  "reasoning_summary": "Base 0.25 from the post-Dobbs 0-for-7 record for restriction measures and the 2024 MO result. Adjust up for the narrow 2024 margin, legislature-written ballot language and the bundled trans-care ban (+); adjust down for the strongly Democratic 2026 environment (-). Final ~0.30 that Amendment 3 passes.",
+  "key_sources": [
+   {"title": "Ballotpedia: Missouri Amendment 3 (2026)", "url": "https://ballotpedia.org/Missouri_Amendment_3,_Prohibit_Abortion_and_Gender_Transition_Procedures_for_Minors_Amendment_(2026)", "date": "2026-10-20"},
+   {"title": "KCTV: Missouri Amendment 3 would repeal abortion rights voters approved in 2024", "url": "https://www.kctv5.com/2026/10/16/missouri-amendment-3-would-repeal-abortion-rights-voters-approved-2024/", "date": "2026-10-16"},
+   {"title": "Wikipedia: 2026 Missouri Amendment 3", "url": "https://en.wikipedia.org/wiki/2026_Missouri_Amendment_3", "date": "2026-10-24"}
+  ],
+  "p": 0.30
+ },
+ "CONTROLS-2026-D": {
+  "base_rate": {"reference_class": "Party needing net +4 Senate seats in a midterm with 7 toss-ups and one Likely-D flip available; president's party historically loses ground", "value": 0.35, "source": "Cook Senate ratings structure (2026-10-20) plus historical midterm seat-change distribution"},
+  "evidence": ["2026-10-20: Cook rates 7 Senate toss-ups (AK, IA, KS, ME, MI, OH, TX) with NC moved to Likely D - six possible Dem pickups", "2026-10-20: Cook moved Minnesota toward the GOP (Flanagan vs Tafoya), adding a Dem hold risk alongside Michigan", "2026-10-23: Generic ballot averages D+7 to D+9; toss-ups historically break with the wave party", "2026-10-25: Dems need net +4 (47 incl. 2 independents -> 51) since VP Vance breaks ties for the GOP"],
+  "strongest_opposing_case": "Even in a D+8 national environment the map is brutal: Dems must hold MI, MN, GA, NH AND win NC plus three of six red-state toss-ups (AK, IA, KS, OH, TX, ME), all states Trump carried except ME/MN; one normal-sized poll miss leaves them at 49-50.",
+  "reasoning_summary": "Base 0.35 for needing net +4 on a red-tilted map. Up for the D+8 environment, NC at Likely D, and six credible pickup targets (+); down for hold risk in MI/MN and pro-GOP poll error history in OH/IA/KS/TX (-). Final 0.43 that Democrats control the Senate (Feb 1, 2027 pro tempore test).",
+  "key_sources": [
+   {"title": "Washington Post: Three Senate races shift toward Democrats in Cook ratings", "url": "https://www.washingtonpost.com/politics/2026/10/06/three-senate-races-shift-toward-democrats-cook-ratings/", "date": "2026-10-06"},
+   {"title": "Washington Post: U.S. Senate race in Minnesota moves toward GOP in new Cook rating", "url": "https://www.washingtonpost.com/politics/2026/10/20/us-senate-race-minnesota-moves-toward-gop-new-cook-rating/", "date": "2026-10-20"},
+   {"title": "CNN: The 10 Senate seats most likely to flip in 2026", "url": "https://www.cnn.com/2026/10/05/politics/10-senate-seats-most-likely-to-flip-2026", "date": "2026-10-05"}
+  ],
+  "p": 0.43
+ },
+ "KXHOUSERACE-NJ02-26-R": {
+  "base_rate": {"reference_class": "Solid/Safe-rated House seats: favored party wins ~0.97", "value": 0.97, "source": "Historical conversion of Cook Solid ratings; NJ-02 rated Solid R (Cook 2026-10-23), Solid R (IE), Likely R (Sabato)"},
+  "evidence": ["2026-10-23: Cook rates NJ-02 Solid Republican; Inside Elections Solid R (10-15); Sabato Likely R (10-20)", "2024-11-05: Van Drew won NJ-02 by about 18 points in 2024; the South Jersey district has trended Republican since 2020", "2026-10-23: Even after Cook shifted 19 races toward Democrats, NJ-02 stayed off the competitive list"],
+  "strongest_opposing_case": "A D+8-or-better national wave plus New Jersey's strong 2025 Democratic statewide performance could put even an 18-point Trump-trending seat in play if Van Drew underperforms among independents.",
+  "reasoning_summary": "Base 0.97 from Solid-R conversion. Small downward adjustment because Sabato has it only Likely R and the national environment is D+8, which compresses GOP margins everywhere. Final 0.92 that the sworn-in NJ-02 member is a Republican.",
+  "key_sources": [
+   {"title": "Wikipedia: 2026 United States House of Representatives election ratings", "url": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_election_ratings", "date": "2026-10-23"},
+   {"title": "Cook Political Report 2026 House race ratings", "url": "https://www.cookpolitical.com/ratings/house-race-ratings", "date": "2026-10-23"}
+  ],
+  "p": 0.92
+ },
+ "KXATTYGENMI-26-D": {
+  "base_rate": {"reference_class": "Open-seat statewide down-ballot races in a Lean-D state during an anti-presidential-party midterm: out-party (Dem) wins ~0.65", "value": 0.65, "source": "Michigan statewide down-ballot history (D sweep 2018, 2022) plus midterm penalty for the GOP"},
+  "evidence": ["2026-09-09: WDIV/Detroit News (Glengariff) poll: Savit 36.3, Lloyd 35.0, ~29% undecided", "2026-09-21: Cygnal/Beacon poll: Savit 39, Lloyd 37, 24% undecided", "2026-10-23: Generic ballot ~D+8; MI Senate (El-Sayed) and MI Gov both polling with Dem leads, implying straight-ticket help down-ballot"],
+  "strongest_opposing_case": "Both public polls show a statistical tie with huge undecideds, Savit is a progressive Ann Arbor prosecutor who may underperform in Macomb-type counties, and Republicans won the MI AG office as recently as 2010 and 2014 midterms.",
+  "reasoning_summary": "Base 0.65 from Michigan's Dem lean in Dem-favorable midterms. Up for the D+8 national environment and Dem leads at the top of the Michigan ticket (+); down for tied AG-specific polling with ~25-29% undecided (-). Final 0.70 that a Democrat (Savit) is sworn in as Michigan AG.",
+  "key_sources": [
+   {"title": "Detroit News: Lloyd, Savit in tight race to be Michigan attorney general, poll shows", "url": "https://www.detroitnews.com/story/news/politics/2026/09/09/michigan-attorney-general-race-poll-eli-savit-doug-lloyd/91653241007/", "date": "2026-09-09"},
+   {"title": "CBS Detroit: Gilchrist leads for SOS; attorney general race tied", "url": "https://www.cbsnews.com/detroit/news/secretary-of-state-attorney-general-michigan-election-poll/", "date": "2026-09-22"},
+   {"title": "Wikipedia: 2026 Michigan Attorney General election", "url": "https://en.wikipedia.org/wiki/2026_Michigan_Attorney_General_election", "date": "2026-10-24"}
+  ],
+  "p": 0.70
+ },
+ "HOUSEWA3-26-R": {
+  "base_rate": {"reference_class": "Lean-D-rated House races: Democrat wins ~0.72, so challenger-party (R) ~0.28", "value": 0.28, "source": "Cook Lean D (2026-10-09 shift from Toss Up), Sabato Lean D (10-20), Inside Elections Tossup (10-15)"},
+  "evidence": ["2026-10-09: Cook moved WA-03 from Toss Up to Lean Democratic as part of a pro-Dem ratings wave", "2026-10-20: Sabato rates WA-03 Lean D; Inside Elections kept it Tossup on 10-15", "2024-11-05: Gluesenkamp Perez won this Trump-carried district twice (2022, 2024) as an incumbent with crossover appeal; 2026's D+8 environment helps her further"],
+  "strongest_opposing_case": "WA-03 is a Trump-won district where Gluesenkamp Perez has never won by more than ~4 points, John Braun is a credible sitting state Senate leader, and Inside Elections still calls the race a pure toss-up.",
+  "reasoning_summary": "Base 0.28 for the Republican from Lean-D conversion (two of three raters Lean D, one Tossup). Slight extra discount for the D+8 national environment favoring the incumbent Democrat, offset by district Trump lean. Final 0.28 that Braun/the Republican wins WA-03.",
+  "key_sources": [
+   {"title": "Wikipedia: 2026 US House election ratings (Cook/IE/Sabato table)", "url": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_election_ratings", "date": "2026-10-23"},
+   {"title": "The Hill: Cook Political Report shifts 19 House seats in Democrats' favor", "url": "https://thehill.com/homenews/campaign/6167727-cook-political-report-democrats-19-house-seats/", "date": "2026-10-23"}
+  ],
+  "p": 0.28
+ },
+ "GOVPARTYKS-27-R": {
+  "base_rate": {"reference_class": "Lean-R-rated open governor races: Republican wins ~0.72", "value": 0.72, "source": "Lean-R rating conversion; Kansas gov rated Lean R (DDHQ 10-23; GOP ~69%); open seat, Gov. Kelly term-limited"},
+  "evidence": ["2026-10-23: Decision Desk HQ rates Kansas governor Lean R", "2026-08-04: Nominees set - Ty Masterson (R, state Senate president) vs Cindy Holscher (D, state senator); no quality public general-election poll found as of 2026-10-25", "2026-10-06: Cook moved the Kansas SENATE race to Toss Up, evidence the state is unusually competitive this cycle", "Reference: Kansas elected Democrat Laura Kelly governor in the 2018 and 2022 midterms despite its R+10 federal lean"],
+  "strongest_opposing_case": "Kansas has elected a Democratic governor in four of the last seven gubernatorial elections, the D+8 national wave is strong enough that Cook made the Kansas Senate race a Toss Up, and Masterson is a hard-right legislator of the type Kelly beat twice.",
+  "reasoning_summary": "Base 0.72 from Lean R. Down for the D+8 environment, Kansas's record of electing Dem governors in midterms, and the Senate race moving to Toss Up (-); up slightly for no incumbent Dem on the ballot and the state's underlying R lean (+). Final 0.62 that Masterson/the Republican is inaugurated.",
+  "key_sources": [
+   {"title": "Wikipedia: 2026 Kansas gubernatorial election", "url": "https://en.wikipedia.org/wiki/2026_Kansas_gubernatorial_election", "date": "2026-10-24"},
+   {"title": "Washington Post: Three Senate races shift toward Democrats in Cook ratings (KS Senate to Toss Up)", "url": "https://www.washingtonpost.com/politics/2026/10/06/three-senate-races-shift-toward-democrats-cook-ratings/", "date": "2026-10-06"}
+  ],
+  "p": 0.62
+ },
+ "GOVPARTYOR-26-D": {
+  "base_rate": {"reference_class": "Leans-D-rated incumbent governor races: Democrat wins ~0.72", "value": 0.72, "source": "Sabato moved Oregon from Likely D to Leans D on 2026-10-06; Oregon has not elected a GOP governor since 1982"},
+  "evidence": ["2026-10-06: Sabato's Crystal Ball downgraded Oregon from Likely to Leans Democratic, signaling a real race for Gov. Tina Kotek", "2022-11-08: Kotek won her first term by only 3.4 points in a three-way race", "2026-10-23: National environment D+8 strongly favors Democratic incumbents in blue states; no public poll showing Kotek trailing was found"],
+  "strongest_opposing_case": "Sabato downgraded the race for a reason: Kotek's approval has been weak, she won by just 3.4 in 2022, and a strong independent or well-funded Republican in an affordability-focused year could replicate the near-miss of 2022 or 2016 OR races.",
+  "reasoning_summary": "Base 0.72 from Leans D. Up for Oregon's 44-year streak of Democratic governors, incumbency, and the D+8 midterm environment against a Republican president (+); modest down-weight for Kotek's personal weakness that drove the downgrade (-). Final 0.75 that Kotek/the Democrat is inaugurated.",
+  "key_sources": [
+   {"title": "Sabato's Crystal Ball 2026 rating changes", "url": "https://centerforpolitics.org/crystalball/2026-rating-changes/", "date": "2026-10-22"},
+   {"title": "270toWin: 2026 Governor election forecast maps (Sabato OR shift noted)", "url": "https://www.270towin.com/2026-governor-election-predictions/", "date": "2026-10-24"}
+  ],
+  "p": 0.75
+ },
+ "GOVPARTYGA-26-R": {
+  "base_rate": {"reference_class": "Toss-up-rated open governor races: either party ~0.50", "value": 0.5, "source": "Cook and Sabato both rate Georgia governor a Toss-up (2026-10-22); open seat, Kemp term-limited"},
+  "evidence": ["2026-10-22: Sabato keeps Georgia one of only two gubernatorial Toss-ups (with Nevada)", "2026-10: AJC poll: Rick Jackson (R) 46, Keisha Lance Bottoms (D) 45; InsiderAdvantage: Jackson 49, Lance Bottoms 47", "2024-11-05: Georgia voted Trump +2; its governor races have gone GOP since 2002, but Dems won both 2026-cycle Senate ratings upgrades (Ossoff to Likely D)"],
+  "strongest_opposing_case": "A D+8 national environment in a state Ossoff is simultaneously carrying by ~8 points implies major Democratic coattails; Lance Bottoms needs only a fraction of Ossoff's margin, and GA's growing, diverse electorate swings hard in Dem waves.",
+  "reasoning_summary": "Base 0.50 from Toss-up. Up slightly for Jackson's consistent small poll leads (+1/+2), Georgia's 24-year GOP hold on the governorship, and historical pro-GOP poll error in GA runoffs/generals (+); down for Ossoff-driven Dem turnout (-). Final 0.52 that Jackson/the Republican is inaugurated.",
+  "key_sources": [
+   {"title": "Sabato's Crystal Ball: The Governors - Ohio to Leans Democratic among other changes", "url": "https://centerforpolitics.org/crystalball/the-governors-ohio-to-leans-democratic-among-other-changes-as-dems-eye-gubernatorial-majority/", "date": "2026-10-22"},
+   {"title": "Fox News: 2026 Governor election results/candidates page (GA: Jackson vs Lance Bottoms)", "url": "https://www.foxnews.com/elections/2026/midterm-results/governor", "date": "2026-10-24"}
+  ],
+  "p": 0.52
+ },
+ "GOVPARTYWI-26-D": {
+  "base_rate": {"reference_class": "Lean-D-rated open governor races: Democrat wins ~0.72", "value": 0.72, "source": "DDHQ Lean D (10-23); Marquette and RCP polling averages show Crowley +3 to +3.5"},
+  "evidence": ["2026-09-30: Marquette Law School poll (LV): Crowley 49, Tiffany 46", "2026-10-20: RealClearPolling average: Crowley 47.5, Tiffany 44.0 (D +3.5, 4 polls)", "2026-10-23: Generic ballot D+8; Wisconsin governor races in midterms against a GOP president went Dem in 2018 (Evers) and 2022 (Evers +3.4)"],
+  "strongest_opposing_case": "Wisconsin polling understated Republicans badly in 2016, 2020 and 2024 presidential cycles; a repeat 3-4 point miss flips Tiffany ahead, and Crowley (a Milwaukee County executive) must win statewide against a known northern-WI congressman.",
+  "reasoning_summary": "Base 0.72 from Lean D. Small downward adjustment for Wisconsin's chronic pro-GOP poll error and Crowley's modest 3-point lead; small upward for the D+8 midterm environment and Evers' proof Democrats win WI midterms. Final 0.68 that Crowley/the Democrat is inaugurated.",
+  "key_sources": [
+   {"title": "Marquette Law Poll: Crowley 49%, Tiffany 46% among likely voters", "url": "https://today.marquette.edu/2026/09/marquette-law-poll-finds-that-wisconsin-governors-race-remains-tight-crowley-49-tiffany-46-among-likely-voters/", "date": "2026-09-30"},
+   {"title": "MultiState: Wisconsin Governor Race 2026 - Crowley vs. Tiffany", "url": "https://www.multistate.us/elections/governor-race/wisconsin-2026", "date": "2026-10-22"}
+  ],
+  "p": 0.68
+ },
+ "KXATTYGENIA-26-R": {
+  "base_rate": {"reference_class": "Incumbent state AG re-election in a state of the incumbent's party lean: incumbent wins ~0.85; shaded for adverse national environment", "value": 0.85, "source": "Incumbent statewide re-election base rates; Iowa R+6 lean; Bird won 2022 by 1.4 then consolidated"},
+  "evidence": ["2026-10-24: No public general-election poll of Bird vs Nathan Willems (D) found - consistent with an uncompetitive race receiving no rating attention", "2022-11-08: Bird unseated 10-term Dem AG Tom Miller 50.7-49.3 in a good GOP year", "2026-09-03: Sabato moved the IOWA GOVERNOR race to Leans Democratic and Cook made Iowa's Senate seat a Toss Up - evidence Iowa's environment is unusually Dem-friendly this cycle"],
+  "strongest_opposing_case": "Bird won by only 1.4 points in a strong GOP year; with Iowa's governor race now rated Leans D and its Senate seat a Toss Up, a D+8 wave electorate could sweep out a Trump-aligned AG who endorsed him early and litigated controversial cases.",
+  "reasoning_summary": "Base 0.85 for an incumbent AG in an R-lean state. Down meaningfully because Iowa's top-of-ticket races have moved sharply Dem (gov Leans D, Senate Toss Up) and Bird's 2022 margin was tiny (-); up for incumbency, fundraising and no public polling showing danger (+). Final 0.75 that Bird/the Republican is sworn in.",
+  "key_sources": [
+   {"title": "Wikipedia: 2026 Iowa Attorney General election", "url": "https://en.wikipedia.org/wiki/2026_Iowa_Attorney_General_election", "date": "2026-10-24"},
+   {"title": "Wikipedia: 2022 Iowa Attorney General election (Bird 50.7-49.3)", "url": "https://en.wikipedia.org/wiki/2022_Iowa_Attorney_General_election", "date": "2026-10-24"}
+  ],
+  "p": 0.75
+ },
+ "KXHOUSETX35-26-R": {
+  "base_rate": {"reference_class": "Toss-up-rated House races: ~0.50 each side", "value": 0.5, "source": "Cook moved TX-35 Lean R -> Toss Up on 2026-10-23; Sabato Tossup; Inside Elections Lean R (flip)"},
+  "evidence": ["2026-10-23: Cook moved open TX-35 from Lean Republican to Toss Up (one of two such open-seat moves with KY-06)", "2025-12: Texas's mid-decade map (upheld via SCOTUS stay) redrew TX-35 as a Republican-leaning seat; incumbent Greg Casar shifted to TX-37", "2026-10-15: Inside Elections still rates it Lean R (flip), the most GOP-friendly of the three ratings"],
+  "strongest_opposing_case": "The district was drawn specifically to elect a Republican under 2024 turnout patterns; if the D+8 polling overstates the wave even modestly, the new seat's built-in GOP margin (Trump ~+10 under new lines) reasserts itself.",
+  "reasoning_summary": "Base 0.50 from the Toss Up ratings (Cook, Sabato), nudged up for Inside Elections' Lean R and the seat's GOP-drawn lines (+), nudged down for the open seat and a D+8 wave eroding gerrymandered margins (-). Final 0.52 that the Republican (De La Cruz) is sworn in for TX-35.",
+  "key_sources": [
+   {"title": "Wikipedia: 2026 US House election ratings (TX-35 row)", "url": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_election_ratings", "date": "2026-10-23"},
+   {"title": "Wikipedia: 2026 US House elections in Texas (mid-decade redistricting)", "url": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Texas", "date": "2026-10-24"}
+  ],
+  "p": 0.52
+ },
+ "HOUSEIA3-26-D": {
+  "base_rate": {"reference_class": "Lean-D/Tilt-D-rated House challenges: Democrat wins ~0.70", "value": 0.7, "source": "Cook Lean D flip (10-23), Inside Elections Tilt D flip (10-15), Sabato Lean D flip (10-20) - unanimous Dem edge over incumbent Zach Nunn"},
+  "evidence": ["2026-10-09: Cook moved IA-03 from Toss Up to Lean Democratic", "2026-10-15: Inside Elections moved IA-01 and IA-03 from Toss-up to Tilt Democratic", "2026-10-23: Iowa's whole ticket has shifted blue - Senate seat Toss Up, governor Leans D - amplifying Sarah Trone Garriott's top-of-ticket help"],
+  "strongest_opposing_case": "Nunn is a two-term incumbent who has twice won close races in a Trump+4 district; Iowa polls understated Republicans by 4-7 points in 2018-2022, and a normal Iowa-sized miss makes the unanimous Lean D ratings wrong.",
+  "reasoning_summary": "Base 0.70 from the unanimous Lean/Tilt D flip ratings. Small offsetting adjustments: up for the D+8 environment and Iowa's statewide blue shift, down for Nunn's incumbency and Iowa's pro-GOP poll error history. Final 0.70 that Trone Garriott/the Democrat is sworn in for IA-03.",
+  "key_sources": [
+   {"title": "Wikipedia: 2026 US House election ratings (IA-03 row)", "url": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_election_ratings", "date": "2026-10-23"},
+   {"title": "Axios: Cook Political Report tilts 18 House races toward Democrats", "url": "https://www.axios.com/2026/10/09/cook-report-18-house-races-move-democrats", "date": "2026-10-09"}
+  ],
+  "p": 0.70
+ },
+ "KXHOUSERACE-MN01-26-R": {
+  "base_rate": {"reference_class": "Lean-R-rated House races with incumbent: Republican wins ~0.72", "value": 0.72, "source": "Cook Lean R (10-23), Sabato Lean R (10-20), Inside Elections Likely R (10-15) for Brad Finstad in MN-01"},
+  "evidence": ["2026-10-23: Cook rates MN-01 Lean R; Inside Elections the more confident Likely R", "2024-11-05: Finstad won MN-01 (Trump +8 district) by ~15 points in 2024", "2026-10-20: Minnesota's Senate race tightening toward the GOP suggests no unusually hostile state environment for Finstad"],
+  "strongest_opposing_case": "Southern Minnesota swung hard to Democrats in the 2018 wave (Finstad's predecessor seat was Dem-held), and a D+8 national environment plus Sabato listing MN-01 among watch-list toss-ups could compress a 15-point margin to nothing.",
+  "reasoning_summary": "Base 0.72 from Lean R (two raters), pulled up slightly by Inside Elections' Likely R and Finstad's double-digit 2024 margin, pulled down slightly by the D+8 wave. Final 0.72 that Finstad/the Republican is sworn in for MN-01.",
+  "key_sources": [
+   {"title": "Wikipedia: 2026 US House election ratings (MN-01 row)", "url": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_election_ratings", "date": "2026-10-23"},
+   {"title": "Cook Political Report 2026 House race ratings", "url": "https://www.cookpolitical.com/ratings/house-race-ratings", "date": "2026-10-23"}
+  ],
+  "p": 0.72
+ },
+ "KXHOUSERACE-OH07-26-R": {
+  "base_rate": {"reference_class": "Toss-up-rated House races with GOP incumbent in Dem wave year: Republican ~0.47", "value": 0.47, "source": "Unanimous Toss Up: Cook (10-23), Inside Elections (10-15), Sabato (10-20) for Max Miller in OH-07"},
+  "evidence": ["2026-10-23: All three major raters have OH-07 as a pure Toss Up", "2025-10: Ohio's unanimous compromise congressional remap altered several districts; OH-07 remains Trump-leaning but competitive", "2026-10-23: Generic ballot D+8 and Ohio's governor race moving to Lean D indicate an unusually Dem-friendly Ohio environment"],
+  "strongest_opposing_case": "OH-07 is still a Trump-carried district, Ohio polls have understated Republicans by 5+ points in three straight cycles, and Miller has a large incumbent fundraising edge over his Democratic challenger.",
+  "reasoning_summary": "Base 0.47 (Toss Up with incumbent, shaded 3 points toward the wave party). Up for Ohio's chronic pro-GOP poll error (+), down for the D+8 environment and Dem strength at the top of the Ohio ticket (-). Final 0.47 that Miller/the Republican is sworn in for OH-07.",
+  "key_sources": [
+   {"title": "Wikipedia: 2026 US House election ratings (OH-07 row)", "url": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_election_ratings", "date": "2026-10-23"},
+   {"title": "Wikipedia: 2026 US House elections in Ohio (new map)", "url": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Ohio", "date": "2026-10-24"}
+  ],
+  "p": 0.47
+ },
+ "SENATEAK-26-R": {
+  "base_rate": {"reference_class": "Complement of Toss-up/Leans-D Alaska Senate race (see id 41678)", "value": 0.4, "source": "Cook Toss Up (10-20) / Sabato Leans D (10-06); Sullivan is the GOP incumbent"},
+  "evidence": ["2026-10-22: RealClearPolling average Peltola +1.2; NYT/Siena had Peltola +7", "2026-10-06: Sabato moved the race to Leans Democratic", "2026-10-25: Ranked-choice voting historically consolidates the non-GOP vote behind Peltola (2022 House wins)"],
+  "strongest_opposing_case": "Alaska's deep-red fundamentals and its record of polls understating Republicans (Sullivan 2020 won by 13 vs near-tied polls) mean a small systematic miss re-elects Sullivan comfortably despite Peltola's narrow average lead.",
+  "reasoning_summary": "This is the complement of the Peltola-win question: P(Peltola) ~0.60 from the Toss Up/Leans D blend, poll leads and RCV mechanics, leaving ~0.38 for a Republican win after ~2% for any non-R, non-Peltola outcome. Final 0.38 that a Republican is sworn in for Alaska's seat.",
+  "key_sources": [
+   {"title": "Sabato's Crystal Ball: Alaska Senate to Leans Democratic", "url": "https://centerforpolitics.org/crystalball/four-rating-changes-headlined-by-alaska-senate-moving-to-leans-democratic/", "date": "2026-10-06"},
+   {"title": "RealClearPolling 2026 Senate latest polls", "url": "https://www.realclearpolling.com/latest-polls/senate", "date": "2026-10-24"}
+  ],
+  "p": 0.38
+ },
+ "KXHOUSERACE-TX23-26-R": {
+  "base_rate": {"reference_class": "Lean-R-rated House races: Republican wins ~0.72", "value": 0.72, "source": "Cook Lean R (10-23), Sabato Lean R (10-20), Inside Elections Likely R (10-15) for the open TX-23"},
+  "evidence": ["2026-04: Incumbent Tony Gonzales resigned, leaving TX-23 open; Brandon Herrera is the GOP standard-bearer", "2026-10-23: Ratings consensus Lean R to Likely R despite the open seat", "2024-11-05: TX-23 voted Trump by double digits; its heavily Hispanic border electorate shifted right in 2024 but is a Dem reversion target in 2026"],
+  "strongest_opposing_case": "Open seats are far easier to flip than incumbent-held ones, Herrera is a polarizing gun-content creator who nearly beat Gonzales from the right, and South Texas Hispanic voters are precisely the 2024 Trump converts most likely to snap back in a D+8 midterm.",
+  "reasoning_summary": "Base 0.72 from Lean R consensus. Down slightly for the open seat and a potentially weak, controversial nominee (-); up slightly for the district's double-digit Trump lean and Inside Elections' Likely R (+). Final 0.72 that the Republican is sworn in for TX-23 (party-based resolution).",
+  "key_sources": [
+   {"title": "Wikipedia: 2026 US House election ratings (TX-23 row)", "url": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_election_ratings", "date": "2026-10-23"},
+   {"title": "Wikipedia: 2026 US House elections in Texas (Gonzales resignation)", "url": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Texas", "date": "2026-10-24"}
+  ],
+  "p": 0.72
+ },
+ "HOUSEPA1-26-R": {
+  "base_rate": {"reference_class": "Lean-R-rated races with strong crossover incumbent: Republican wins ~0.72", "value": 0.72, "source": "Unanimous Lean R: Cook (10-23), Inside Elections (10-15), Sabato (10-20) for Brian Fitzpatrick in PA-01"},
+  "evidence": ["2026-10-23: All three raters have PA-01 at Lean R even after Cook's 19-race pro-Dem shift", "2024-11-05: Fitzpatrick won a Harris-carried district by ~10 points in 2024, among the House's best over-performers", "2026-10-23: D+8 generic ballot makes every Biden/Harris-district Republican vulnerable; PA-01 is a top DCCC target"],
+  "strongest_opposing_case": "Fitzpatrick sits in a district Harris carried; in a D+8 wave, ticket-splitting collapses (2018 wiped out several similar over-performers), and this is exactly the seat profile that falls when the national margin exceeds the incumbent's crossover cushion.",
+  "reasoning_summary": "Base 0.72 from unanimous Lean R. Fitzpatrick's proven 10-point crossover margin supports the rating (+), but the D+8 environment in a Harris-won seat is the classic wave-casualty profile (-). Net ~0.70 that Fitzpatrick/the Republican is sworn in for PA-01.",
+  "key_sources": [
+   {"title": "Wikipedia: 2026 US House election ratings (PA-01 row)", "url": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_election_ratings", "date": "2026-10-23"},
+   {"title": "Forbes: Cook moves 19 House races toward Democrats, predicts they'll win control", "url": "https://www.forbes.com/sites/saradorn/2026/10/23/republicans-chances-of-maintaining-house-majority-have-all-but-evaporated-cook-political-report-says/", "date": "2026-10-23"}
+  ],
+  "p": 0.70
+ },
+ "HOUSEOH9-26-R": {
+  "base_rate": {"reference_class": "Toss-up-rated races with long-serving Dem incumbent in redrawn R district: Republican ~0.45", "value": 0.45, "source": "Unanimous Toss Up (Cook 10-23, Sabato 10-20); Inside Elections Tilt R (09-10); district redrawn to Trump 55-44"},
+  "evidence": ["2025-10: Ohio's new map made OH-09 markedly more Republican (Trump 55-44 under new lines)", "2026-10-13: Cook/GS Strategy Group poll: Kaptur +5; 2026-10-19 Fox News/Beacon: Kaptur +2", "2026-10-23: Raters split - Cook and Sabato Toss Up, Inside Elections Tilt R; Merrin lost to Kaptur by 0.7 in 2024 under friendlier Dem lines"],
+  "strongest_opposing_case": "Merrin nearly beat Kaptur in 2024 on a bluer map; the new Trump+11 lines plus Ohio's repeated 5-point pro-GOP polling error should more than cancel Kaptur's small poll leads and incumbency.",
+  "reasoning_summary": "Base 0.45 (Toss Up, shaded to the incumbent). Down for Kaptur's +2/+5 October polls and the D+8 environment (-); up for the Trump+11 redraw and Ohio poll-error history (+). Final 0.38 that Merrin/the Republican is sworn in for OH-09.",
+  "key_sources": [
+   {"title": "Ballotpedia: Ohio's 9th Congressional District", "url": "https://ballotpedia.org/Ohio's_9th_Congressional_District", "date": "2026-10-24"},
+   {"title": "Wikipedia: 2026 US House elections in Ohio (new map details)", "url": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Ohio", "date": "2026-10-24"}
+  ],
+  "p": 0.38
+ },
+ "HOUSEWI1-26-D": {
+  "base_rate": {"reference_class": "Lean-R-rated races: Democrat (underdog) wins ~0.28", "value": 0.28, "source": "Cook Lean R (10-23), Sabato Lean R (moved from Likely R on 10-08), Inside Elections Likely R (10-15) for Bryan Steil's WI-01"},
+  "evidence": ["2026-10-08: Sabato moved WI-01 from Likely to Leans Republican, reflecting the Dem environment", "2024-11-05: Steil won WI-01 by ~8.5 points in 2024; the district is Trump+3-4", "2026-10-23: D+8 generic ballot and Crowley's statewide lead give Democrat Mitchell Berman top-of-ticket help"],
+  "strongest_opposing_case": "If the national environment holds at D+8 and Wisconsin Democrats sweep statewide, a Trump+3 district with a first-time-tested incumbent margin is exactly the kind of seat that flips late and un-polled, as several did in 2018.",
+  "reasoning_summary": "Base 0.28 from Lean R (two raters; one Likely R pulls down, the recent Likely->Lean downgrade direction pulls up). Steil's 8-point 2024 cushion and incumbency largely offset wave risk. Final 0.28 that Berman/the Democrat is sworn in for WI-01.",
+  "key_sources": [
+   {"title": "Wikipedia: 2026 US House election ratings (WI-01 row)", "url": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_election_ratings", "date": "2026-10-23"},
+   {"title": "270toWin: Sabato's Crystal Ball 2026 House ratings", "url": "https://www.270towin.com/2026-house-election/table/crystal-ball-2026-house-forecast/", "date": "2026-10-20"}
+  ],
+  "p": 0.28
+ },
+ "KXMIDTERMHAPPEN-2026-T50": {
+  "base_rate": {"reference_class": "US federal general elections held on schedule in all states: every regular House election since 1788 has occurred on time", "value": 0.97, "source": "Historical base rate; no state has ever skipped a regularly scheduled federal general election statewide-by-district"},
+  "evidence": ["2026-10-06: The market issuer clarified that unopposed-candidate ballot omissions under pre-existing law (e.g., Florida's deemed-elected statute) do NOT fail the on-time test", "2026-10-25: No credible reporting of any state planning to postpone or cancel its November 3 House elections was found in October 2026 searches", "Reference: Even during the Civil War (1862), WWII (1942) and COVID (2020), all states conducted federal general elections on the prescribed day"],
+  "strongest_opposing_case": "The strict criterion fails if even ONE district in ONE state accepts no ballots on Nov 3 - a hurricane-scale disaster, a court order, or an unprecedented federal emergency action in a single state would resolve No despite 49 states voting normally.",
+  "reasoning_summary": "Base 0.97 from the unbroken historical record of on-time federal generals. Down slightly for the strict any-one-district failure condition, late-October disaster tail risk, and elevated political volatility (-); the 10/06 clarification removed the main known technical risk (+). Final 0.95.",
+  "key_sources": [
+   {"title": "Federal Election Commission: election dates and administration", "url": "https://www.fec.gov/", "date": "2026-10-24"},
+   {"title": "Wikipedia: 2026 United States House of Representatives elections", "url": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections", "date": "2026-10-24"}
+  ],
+  "p": 0.95
+ },
+ "KXCAELECTION-2607-MVAN": {
+  "base_rate": {"reference_class": "Same-party House challengers vs long-serving incumbents in CA top-two generals: challenger wins ~0.30", "value": 0.3, "source": "History of CA Dem-on-Dem generals (incumbents usually win, but upsets happen, e.g., 2024 Oakland-area races)"},
+  "evidence": ["2026-06-02: Mai Vang finished FIRST in the top-two primary (31.2% to Matsui's 29.1%) in a heavily fragmented field", "2026-10-21: No public general-election poll exists; models give Matsui roughly 60-62%", "2026-10-15: Matsui, 82, has a 3-5x fundraising edge ($3.2-5.2M vs ~$1.1-1.6M) but faces an age-focused challenge in a year of generational-change sentiment"],
+  "strongest_opposing_case": "Vang beat Matsui outright in the primary, anti-incumbent and age-related sentiment is strong, and D-on-D races are decided by crossover Republicans who may prefer the fresh challenger over an 82-year-old institutional Democrat.",
+  "reasoning_summary": "Base 0.30 for same-party challengers. Up for Vang's first-place primary finish and the age contrast (+); down for Matsui's money, name ID, institutional endorsements and the tendency of primary protest votes to consolidate behind incumbents in November (-). Final 0.38 that Mai Vang wins CA-07.",
+  "key_sources": [
+   {"title": "CalMatters: A 'battle of the ages' in a California House race", "url": "https://calmatters.org/politics/2026/10/california-congress-7th-district-race/", "date": "2026-10-15"},
+   {"title": "Wikipedia: Mai Vang", "url": "https://en.wikipedia.org/wiki/Mai_Vang", "date": "2026-10-24"}
+  ],
+  "p": 0.38
+ },
+ "KXMIDTERMMOV-GASEND-P10": {
+  "base_rate": {"reference_class": "Senate races with ~8-point October poll leads: winner's final margin >=10 in roughly one-third of cases (margin SD ~4.5 pts)", "value": 0.33, "source": "Historical polling-error distribution (RCP-average miss on margin, midterm Senate races 2006-2022)"},
+  "evidence": ["2026-10-20: October Georgia polls average Ossoff +8 over Mike Collins (AJC/UGA +8; ActiVote 54-46)", "2026-09-23: Cook upgraded Georgia from Lean D to Likely D", "2024-11-05: Georgia statewide margins are usually tight (<5 pts in 2020-2024); double-digit statewide wins are rare in modern GA"],
+  "strongest_opposing_case": "No Georgia Senate race this decade has been decided by anything close to 10 points; GA polls modestly understate Republicans, and third-party leakage in GA's first round makes a 10-point two-party-plus gap even harder to reach.",
+  "reasoning_summary": "Poll-average margin +8; arithmetic: P(margin>=10) = 1 - Phi((10-8)/4.5) ~ 0.33. Shade down for Georgia's record of tight statewide races and slight pro-GOP poll error (effective mean ~+7 gives ~0.25). Final 0.25 that Ossoff wins the first round by >=10 points.",
+  "key_sources": [
+   {"title": "RealClearPolling 2026 Senate latest polls (GA average)", "url": "https://www.realclearpolling.com/latest-polls/senate", "date": "2026-10-24"},
+   {"title": "270toWin: Cook Political Report 2026 Senate (GA Lean D to Likely D, Sept 23)", "url": "https://www.270towin.com/2026-senate-election/cook-political-report-2026-senate", "date": "2026-10-20"}
+  ],
+  "p": 0.25
+ },
+ "KXMIDTERMMOV-WIGOVD-P4": {
+  "base_rate": {"reference_class": "Governor races with ~3.5-point poll leads: P(win by >=4) ~0.45 given margin SD ~4.5", "value": 0.45, "source": "Polling-error arithmetic on RCP average Crowley +3.5 (4 polls, mid-October)"},
+  "evidence": ["2026-10-20: RCP average Crowley 47.5, Tiffany 44.0 (+3.5)", "2026-09-30: Marquette LV poll Crowley +3 (49-46)", "2022-11-08: Evers won the comparable 2022 WI governor race by 3.4 points; WI statewide margins cluster inside 4 points"],
+  "strongest_opposing_case": "Wisconsin is the most reliably sub-4-margin state in America (presidential and 2022 governor all under 4), and WI polls have understated Republicans in three straight presidential cycles, so even a Crowley win likely lands under 4 points.",
+  "reasoning_summary": "Arithmetic: mean margin +3.5, SD 4.5 -> P(>=4) = 1 - Phi((4-3.5)/4.5) ~ 0.46. Shade down for Wisconsin's structural closeness and chronic pro-GOP poll error (effective mean ~+2.5 -> ~0.37). Final 0.40 that Crowley wins by 4+ points.",
+  "key_sources": [
+   {"title": "Marquette Law Poll: Crowley 49%, Tiffany 46%", "url": "https://today.marquette.edu/2026/09/marquette-law-poll-finds-that-wisconsin-governors-race-remains-tight-crowley-49-tiffany-46-among-likely-voters/", "date": "2026-09-30"},
+   {"title": "MultiState: Wisconsin Governor Race 2026", "url": "https://www.multistate.us/elections/governor-race/wisconsin-2026", "date": "2026-10-22"}
+  ],
+  "p": 0.40
+ },
+ "KXMIDTERMMOV-SCSENR-P9": {
+  "base_rate": {"reference_class": "Likely-R-rated Senate races in R+8 states: typical final margins 8-15; SC polls historically understate the GOP by ~5 (Graham 2020 polled +1, won +10)", "value": 0.45, "source": "SC polling-error history + Likely R rating (downgraded from Safe R on 2026-09-23)"},
+  "evidence": ["2026-09-23: Cook downgraded South Carolina from Safe R to Likely R", "2026-10-20: October SC polls average roughly R+3 (Trafalgar R+3) against Democrat Annie Andrews", "2020-11-03: Graham's 2020 race: final polls ~+1, actual margin +10.3 - the canonical SC poll miss"],
+  "strongest_opposing_case": "If the polls are even roughly right this time, an R+3 race cannot produce a 9-point win; the D+8 national wave is exactly the condition under which the usual SC pro-GOP poll error fails to appear.",
+  "reasoning_summary": "Polls say ~R+3, history says add ~3-5 for SC's pro-GOP error, giving effective mean ~+6, SD 5 -> P(>=9) = 1 - Phi((9-6)/5) ~ 0.27. The Likely R rating is consistent with a high-single-digit expected margin. Final 0.27 that the Republican wins South Carolina by >=9.",
+  "key_sources": [
+   {"title": "270toWin: Cook 2026 Senate rating changes (SC Safe R to Likely R)", "url": "https://www.270towin.com/2026-senate-election/cook-political-report-2026-senate", "date": "2026-10-20"},
+   {"title": "RealClearPolling 2026 Senate latest polls (SC)", "url": "https://www.realclearpolling.com/latest-polls/senate", "date": "2026-10-24"}
+  ],
+  "p": 0.27
+ },
+ "KXLTGOVTX-26-DEM": {
+  "base_rate": {"reference_class": "Democratic statewide candidates in Texas since 1994: 0 wins; best margins ~-5 in wave years (Beto 2018 Senate -2.6 is the best)", "value": 0.12, "source": "30-year Texas statewide election record; Patrick is a three-term incumbent"},
+  "evidence": ["2026-07: Texas Pulse poll: Goodwin 48, Patrick 46; UT/Texas Politics Project: Goodwin +3 - rare Dem leads", "2026-10-17: ActiVote poll: Patrick 53.8, Goodwin 46.2; TSU poll had Patrick +7", "2026-10-22: Patrick holds ~$24M to Goodwin's ~$0.6M; 56% of voters don't know Goodwin"],
+  "strongest_opposing_case": "Multiple independent 2026 polls actually showed Goodwin ahead, Patrick is among the least popular Texas statewide officials, and a D+8 wave with Cook moving the Texas Senate race to Toss Up makes 2026 the most Dem-friendly Texas year since 2018.",
+  "reasoning_summary": "Base 0.12 from the unbroken 30-year GOP statewide streak. Up for mixed polling (some Goodwin leads) and the D+8 environment that made the TX Senate race a Toss Up (+); down for Patrick's incumbency, 37x money edge and Goodwin's anonymity (-). Final 0.15 that the Democrat is sworn in as TX Lt. Governor.",
+  "key_sources": [
+   {"title": "KUT: Austin Democrat Vikki Goodwin hopeful in race against Dan Patrick", "url": "https://www.kut.org/politics/2026-10-22/austin-democrat-vikki-goodwin-tx-lt-gov-dan-patrick", "date": "2026-10-22"},
+   {"title": "Fox 7 Austin: Dan Patrick behind in Texas Lt. Governor's race, new poll says", "url": "https://www.fox7austin.com/election/texas-dan-patrick-vikki-goodwin-lieutenant-governor-poll-july-2026", "date": "2026-07-28"},
+   {"title": "Wikipedia: 2026 Texas lieutenant gubernatorial election", "url": "https://en.wikipedia.org/wiki/2026_Texas_lieutenant_gubernatorial_election", "date": "2026-10-24"}
+  ],
+  "p": 0.15
+ },
+ "KXDSENATESEATSH-27-E53": {
+  "base_rate": {"reference_class": "Exact-seat-count outcomes requiring ~8-seat net gain on a 7-toss-up map: historically <5% even in wave years (2008 Dems netted 8 with far more targets)", "value": 0.03, "source": "Distribution of plausible 2026 Senate outcomes from Cook ratings structure"},
+  "evidence": ["2026-10-20: Democrats hold 45 party-labeled seats (+2 independents); 53 D-labeled seats requires net +8 D wins", "2026-10-20: Cook lists only 7 toss-ups plus NC Likely D - a maximum realistic sweep nets +7 to 52 D-labeled seats; the 8th requires upsetting a Likely R seat (SC or FL)", "2026-10-23: Even the most bullish Dem scenarios discussed (6 pickups) land at 51 party seats / 53 with independents"],
+  "strongest_opposing_case": "If congress.gov's Feb 1, 2027 count treats the two Democratic-caucusing independents as Democrats, exactly 53 needs only net +6 - a clean sweep of NC plus five toss-ups in a D+8 wave, which is maybe a 1-in-15 outcome, not 1-in-40.",
+  "reasoning_summary": "Base 0.03. Strict D-party reading needs +8 including a Likely-R upset (~0.01-0.02); a caucus-inclusive reading needs exactly +6 (~0.05). Weighting the strict label reading (congress.gov lists King/Sanders as Independent) more heavily gives ~0.03. Final 0.03 for exactly 53 Democratic Senate seats on Feb 1, 2027.",
+  "key_sources": [
+   {"title": "Cook Political Report 2026 Senate race ratings", "url": "https://www.cookpolitical.com/ratings/senate-race-ratings", "date": "2026-10-20"},
+   {"title": "CNN: The 10 Senate seats most likely to flip in 2026", "url": "https://www.cnn.com/2026/10/05/politics/10-senate-seats-most-likely-to-flip-2026", "date": "2026-10-05"}
+  ],
+  "p": 0.03
+ },
+ "KXLTGOVTX-26-GOP": {
+  "base_rate": {"reference_class": "Republican statewide candidates in Texas since 1994: 100% win rate; incumbent Lt. Gov. with massive money edge", "value": 0.88, "source": "30-year Texas statewide record + incumbency"},
+  "evidence": ["2026-10-17: ActiVote: Patrick 53.8-46.2; TSU: Patrick +7", "2026-07/10: Two polls (Texas Pulse, UT/TPP) showed Goodwin +2/+3, so the race is not entirely safe", "2026-10-22: Patrick's ~$24M vs ~$643K war chest and Goodwin's 56% name-ID gap"],
+  "strongest_opposing_case": "Several credible 2026 polls put Goodwin ahead, Patrick's favorability is chronically weak, and if Texas's Senate Toss Up materializes into a Dem statewide win the Lt. Gov. race could fall with it on a straight ticket.",
+  "reasoning_summary": "Complement of the Democratic question: P(D) ~0.15, minor-party/vacancy residual ~0.01, leaving ~0.84-0.85 for Patrick. Texas's unbroken GOP statewide streak, incumbency and money dominate mixed summer polling. Final 0.84 that the Republican is sworn in as TX Lt. Governor.",
+  "key_sources": [
+   {"title": "ActiVote: Patrick leads Goodwin in Texas Lt. Governor race", "url": "https://www.activote.net/polls/2026/tx-lt-governor/", "date": "2026-10-17"},
+   {"title": "Wikipedia: 2026 Texas lieutenant gubernatorial election", "url": "https://en.wikipedia.org/wiki/2026_Texas_lieutenant_gubernatorial_election", "date": "2026-10-24"}
+  ],
+  "p": 0.84
+ },
+ "KXGOVPARTYAK-26-D": {
+  "base_rate": {"reference_class": "Leans-D-rated governor races: Democrat wins ~0.72", "value": 0.72, "source": "Cook Lean D (flip) and Sabato Leans D (moved from Toss-up 2026-10-06) for Alaska's open governorship"},
+  "evidence": ["2026-10-20: Alaska Survey Research head-to-head: Kreiss-Tomkins 55, Wilson 45; Data for Progress: 53-47", "2026-10-20: First-preference polling: Kreiss-Tomkins ~45-50% vs fragmented GOP field (Wilson 26, Bronson 13, Taylor 9)", "2026-10-06: Sabato moved AK governor from Toss-up to Leans Democratic; Dunleavy is term-limited"],
+  "strongest_opposing_case": "Alaska hasn't elected a Democratic governor since 1994 (Knowles); if GOP second preferences consolidate behind one finalist under RCV, the state's deep-red fundamentals can overcome a fragmented-field first-round lead.",
+  "reasoning_summary": "Base 0.72 from Leans D ratings. Up for Kreiss-Tomkins's ~+8-10 RCV head-to-heads and ~50% first preferences (+); down for Alaska's red fundamentals and RCV consolidation risk (-). Final 0.72 that a Democrat is inaugurated as Alaska governor.",
+  "key_sources": [
+   {"title": "270toWin: 2026 Alaska governor polls", "url": "https://www.270towin.com/2026-governor-polls/alaska", "date": "2026-10-24"},
+   {"title": "Wikipedia: 2026 Alaska gubernatorial election", "url": "https://en.wikipedia.org/wiki/2026_Alaska_gubernatorial_election", "date": "2026-10-24"}
+  ],
+  "p": 0.72
+ },
+ "KXMIDTERMMOV-OHSENR-P4": {
+  "base_rate": {"reference_class": "Senate races where the candidate trails the poll average by ~3: P(win by >=4) ~0.10-0.15 after error adjustment", "value": 0.12, "source": "Polling-error arithmetic on RCP average Brown +3.2 over Husted, with Ohio's pro-GOP error history"},
+  "evidence": ["2026-10-22: RCP average Brown +3.2; Marist had Brown +8; no October poll shows Husted ahead", "2022/2024: Ohio polls understated Republicans by ~5 points (Vance 2022, Moreno 2024) - the key reason Husted retains upset-range chances", "2026-10-20: Cook keeps Ohio a Toss Up despite Brown's leads"],
+  "strongest_opposing_case": "Ohio's last two Senate races saw polls miss 5+ points toward the GOP; applying the 2024 Moreno-sized error to Brown +3.2 yields Husted +2-3, putting a 4-point Husted win squarely in range.",
+  "reasoning_summary": "Poll mean Brown +3.2; partial Ohio error adjustment gives effective mean Brown +1.5, SD 4.5. P(Husted margin >= 4) = Phi((-4-1.5)/4.5) ~ 0.11. Final 0.11 that Husted/the Republicans win Ohio by 4+ points.",
+  "key_sources": [
+   {"title": "RealClearPolling 2026 Senate latest polls (OH)", "url": "https://www.realclearpolling.com/latest-polls/senate", "date": "2026-10-24"},
+   {"title": "CNN: The 10 Senate seats most likely to flip in 2026", "url": "https://www.cnn.com/2026/10/05/politics/10-senate-seats-most-likely-to-flip-2026", "date": "2026-10-05"}
+  ],
+  "p": 0.11
+ },
+ "KXMIDTERMMOV-MNSEND-P5": {
+  "base_rate": {"reference_class": "Senate races with ~3-point poll leads: P(win by >=5) ~0.33 before error adjustment", "value": 0.33, "source": "Polling-error arithmetic on RCP average Flanagan +3.2 over Tafoya"},
+  "evidence": ["2026-10-23: RCP average Flanagan 46.5, Tafoya 43.3 (+3.2); FiftyPlusOne 10-23: Flanagan +3.8", "2026-10-20: Cook moved the Minnesota race TOWARD Republicans - a tightening signal", "2016/2020: Minnesota polls understated Republicans by 3-5 points in recent federal cycles"],
+  "strongest_opposing_case": "Minnesota is still a Harris+4 state that hasn't elected a GOP senator since 2002; if the D+8 national wave shows up, Flanagan's 3-point lead inflates well past 5 as undecideds break Democratic.",
+  "reasoning_summary": "Mean +3.2, SD 4.5 -> raw P(>=5) = 1 - Phi((5-3.2)/4.5) ~ 0.34. Shade down for the Cook tightening move and MN's pro-GOP poll error (effective mean ~+2.5 -> ~0.29). Final 0.30 that Flanagan wins Minnesota by 5+ points.",
+  "key_sources": [
+   {"title": "Washington Post: U.S. Senate race in Minnesota moves toward GOP in new Cook rating", "url": "https://www.washingtonpost.com/politics/2026/10/20/us-senate-race-minnesota-moves-toward-gop-new-cook-rating/", "date": "2026-10-20"},
+   {"title": "RealClearPolling: 2026 Minnesota Senate - Tafoya vs. Flanagan", "url": "https://www.realclearpolling.com/polls/senate/general/2026/minnesota/tafoya-vs-flanagan", "date": "2026-10-23"}
+  ],
+  "p": 0.30
+ },
+ "KXMIDTERMMOV-NCSEND-P9": {
+  "base_rate": {"reference_class": "Likely-D-rated Senate races with ~10-point poll leads: P(win by >=9) ~0.55 raw; NC's pro-GOP poll error history argues lower", "value": 0.5, "source": "Polling arithmetic on Cooper +10 average; Cook Likely D (2026-10-06)"},
+  "evidence": ["2026-10-15: Carolina Journal poll: Cooper 49.4, Whatley 39.1 (+10.3), down from +15.1 in September", "2026-10-18: RCP average Cooper +9.9", "2026-10-06: Cook upgraded NC from Lean D to Likely D", "2014-2022: NC federal polls repeatedly understated Republicans by 3-6 points (Tillis 2014, Budd 2022)"],
+  "strongest_opposing_case": "North Carolina has not produced a 9-point statewide federal win for a Democrat since 2008; NC polls chronically understate the GOP by 3-6 points, and the race just tightened 5 points in one month.",
+  "reasoning_summary": "Poll mean +10; apply partial NC pro-GOP error (-2.5) for effective mean +7.5, SD 4.5 -> P(>=9) = 1 - Phi((9-7.5)/4.5) ~ 0.37. Nudge up for Cooper's superior name ID and the D+8 environment. Final 0.40 that Cooper wins NC by 9+ points.",
+  "key_sources": [
+   {"title": "Carolina Journal: Cooper's lead over Whatley narrows to 10 points", "url": "https://www.carolinajournal.com/polls/october-2026-coopers-lead-over-whatley-narrows-to-10-points-in-nc-senate-race/", "date": "2026-10-15"},
+   {"title": "RealClearPolling: 2026 North Carolina Senate - Cooper vs. Whatley", "url": "https://www.realclearpolling.com/polls/senate/general/2026/north-carolina/cooper-vs-whatley", "date": "2026-10-24"}
+  ],
+  "p": 0.40
+ },
+ "KXMIDTERMMOV-MESEND-P1": {
+  "base_rate": {"reference_class": "Toss-up Senate races with sub-1-point poll leads: P(specific side wins by >=1) ~0.45", "value": 0.45, "source": "Polling arithmetic on RCP average Jackson +0.7; Cook Toss Up (2026-10-20)"},
+  "evidence": ["2026-10-22: RCP average Jackson +0.7 over Collins; UNH poll Jackson 51-47; Suffolk Jackson 49-47", "2020-11-03: Collins trailed every late 2020 poll and won by 8.6 - the largest modern Senate poll miss", "2026-10-20: Cook keeps Maine a Toss Up; Maine uses RCV, and Jackson benefits if Gold-party/left votes transfer"],
+  "strongest_opposing_case": "Susan Collins has outrun her polls in every re-election, most spectacularly by 9+ points in 2020; a fraction of that error makes Jackson's +0.7 average lead worthless and a Collins win likely.",
+  "reasoning_summary": "Mean margin Jackson +0.7-1.0, SD 4.5 -> raw P(Jackson by >=1) ~0.47. Shade down for the Collins-specific poll-miss history (-), partially offset by the D+8 environment and Collins's weakest-ever approval (+). Final 0.45 that Jackson wins Maine by 1+ points.",
+  "key_sources": [
+   {"title": "RealClearPolling 2026 Senate latest polls (ME)", "url": "https://www.realclearpolling.com/latest-polls/senate", "date": "2026-10-24"},
+   {"title": "CNN: The 10 Senate seats most likely to flip in 2026", "url": "https://www.cnn.com/2026/10/05/politics/10-senate-seats-most-likely-to-flip-2026", "date": "2026-10-05"}
+  ],
+  "p": 0.45
+ },
+ "KXMIDTERMMOV-MISEND-P5": {
+  "base_rate": {"reference_class": "Senate races with ~2-2.5-point poll leads: P(win by >=5) ~0.28 raw", "value": 0.28, "source": "Polling arithmetic on RCP average El-Sayed +1.9 / other averages +2.6 to +2.8"},
+  "evidence": ["2026-10-22: RCP average El-Sayed 47.9, Rogers 46.0 (+1.9); Marist 10-23: El-Sayed +2 (50-48)", "2024-11-05: Rogers lost the 2024 MI Senate race by only 0.3 points; Michigan polls understated the GOP in 2016/2020/2024", "2026-10-20: Cook keeps Michigan a Toss Up"],
+  "strongest_opposing_case": "El-Sayed is a progressive first-time statewide nominee against a near-miss 2024 candidate in a state with chronic pro-GOP poll error; even an El-Sayed win is far more likely to land in the 0-4 range than 5+.",
+  "reasoning_summary": "Mean +2.2 (blend of averages), partial MI error adjustment to +1.5, SD 4.5 -> P(>=5) = 1 - Phi((5-1.5)/4.5) ~ 0.22. The D+8 environment provides some upside skew. Final 0.23 that El-Sayed wins Michigan by 5+ points.",
+  "key_sources": [
+   {"title": "RealClearPolling: 2026 Michigan Senate - Rogers vs. El-Sayed", "url": "https://www.realclearpolling.com/polls/senate/general/2026/michigan/rogers-vs-el-sayed", "date": "2026-10-22"},
+   {"title": "Newsweek: GOP could flip Michigan Senate seat for first time in nearly 50 years", "url": "https://www.newsweek.com/mike-rogers-abdul-el-sayed-michigan-senate-seat-12557776", "date": "2026-10-15"}
+  ],
+  "p": 0.23
+ },
+ "KXMISENATE-26-MROG": {
+  "base_rate": {"reference_class": "Toss-up Senate races where the candidate trails the poll average by ~2: underdog wins ~0.35", "value": 0.35, "source": "Cook Toss Up (10-20); RCP average El-Sayed +1.9"},
+  "evidence": ["2026-10-22: RCP average has Rogers down 1.9; InsiderAdvantage 10-23 had it 47-46 (1 point)", "2024-11-05: Rogers lost Michigan's 2024 Senate race by just 0.3 and retains high name ID", "2026-10-23: Generic ballot D+8 is the main headwind; Michigan's poll error has favored Republicans three straight cycles"],
+  "strongest_opposing_case": "Michigan is an open Dem-held seat in a D+8 year with the Democrat leading every October average; midterm toss-ups break against the president's party, and Rogers already lost statewide in a better GOP year.",
+  "reasoning_summary": "Rogers is the GOP nominee (nomination condition satisfied). P(Dem win) ~0.67 from poll leads plus environment, minus MI poll-error offset; Rogers takes nearly all the remainder. Final 0.32 that Mike Rogers wins the Michigan Senate race.",
+  "key_sources": [
+   {"title": "RealClearPolling: 2026 Michigan Senate - Rogers vs. El-Sayed", "url": "https://www.realclearpolling.com/polls/senate/general/2026/michigan/rogers-vs-el-sayed", "date": "2026-10-22"},
+   {"title": "Wikipedia: 2026 United States Senate election in Michigan", "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Michigan", "date": "2026-10-24"}
+  ],
+  "p": 0.32
+ },
+ "KXMIDTERMMOV-OHSEND-P4": {
+  "base_rate": {"reference_class": "Senate races with ~3-point poll leads: P(win by >=4) ~0.43 raw; Ohio pro-GOP error argues much lower", "value": 0.35, "source": "Polling arithmetic on RCP average Brown +3.2"},
+  "evidence": ["2026-10-22: RCP average Brown +3.2; Marist Brown +8; no poll shows Husted leading", "2022/2024: Ohio Senate polls missed ~5 points toward the GOP in both cycles", "2026-10-20: Cook keeps the race a Toss Up despite Brown's consistent leads"],
+  "strongest_opposing_case": "Brown's own 2024 race illustrates the trap: he led most polls and lost by 3.6; applying any recent Ohio error profile to +3.2 leaves Brown at best narrowly winning, nowhere near a 4-point margin.",
+  "reasoning_summary": "Poll mean +3.2; apply partial Ohio pro-GOP adjustment to effective mean +1.5, SD 4.5 -> P(Brown margin >= 4) = 1 - Phi((4-1.5)/4.5) ~ 0.29. Final 0.28 that Brown/Democrats win Ohio by 4+ points.",
+  "key_sources": [
+   {"title": "RealClearPolling 2026 Senate latest polls (OH)", "url": "https://www.realclearpolling.com/latest-polls/senate", "date": "2026-10-24"},
+   {"title": "Cook Political Report 2026 Senate race ratings", "url": "https://www.cookpolitical.com/ratings/senate-race-ratings", "date": "2026-10-20"}
+  ],
+  "p": 0.28
+ },
+ "KXGOVAK-26-JKRE": {
+  "base_rate": {"reference_class": "Leans-D-rated races, discounted for candidate-specific RCV uncertainty", "value": 0.7, "source": "Cook Lean D flip / Sabato Leans D for AK governor; Kreiss-Tomkins is the Democratic standard-bearer"},
+  "evidence": ["2026-10-20: Head-to-head polls: Kreiss-Tomkins 55-45 over Wilson (Alaska Survey Research) and 53-47 (Data for Progress)", "2026-10-20: First preferences: Kreiss-Tomkins 45-50% vs Wilson 26, Bronson 13, Taylor 9 - a fragmented GOP field", "2026-10-06: Sabato moved the race from Toss-up to Leans Democratic"],
+  "strongest_opposing_case": "No Democrat has won the Alaska governorship since 1994; RCV can consolidate the combined ~48% GOP first-preference vote behind the surviving Republican, erasing Kreiss-Tomkins's apparent lead.",
+  "reasoning_summary": "Party-level P(D win) ~0.72 from Leans D plus strong RCV head-to-heads; subtract ~0.02 for the possibility a different Democrat-aligned candidate somehow prevails or certification oddities. Final 0.70 that Jonathan Kreiss-Tomkins is elected governor of Alaska.",
+  "key_sources": [
+   {"title": "270toWin: 2026 Alaska governor polls", "url": "https://www.270towin.com/2026-governor-polls/alaska", "date": "2026-10-24"},
+   {"title": "Wikipedia: 2026 Alaska gubernatorial election", "url": "https://en.wikipedia.org/wiki/2026_Alaska_gubernatorial_election", "date": "2026-10-24"}
+  ],
+  "p": 0.70
+ },
+ "KXHOUSETURNOUT-26NOV03-120": {
+  "base_rate": {"reference_class": "Midterm total House votes: 2018 ~114.5M (record 49.4% VEP), 2022 ~107.5M; eligible population growth ~4% since 2018", "value": 0.12, "source": "Clerk of the House election statistics for 2018/2022"},
+  "evidence": ["2019-02: Clerk of the House certified ~114.5M total House votes in 2018, the modern midterm record", "2023-02: 2022 total House votes ~107.5M", "2026-10-23: Engagement indicators (D+8 generic ballot, record special-election turnout) point to a 2018-style electorate; matching 2018's VEP rate with 2026 population gives ~118-120M", "Note: states like Florida omit unopposed House races from ballots, suppressing the counted total by several million"],
+  "strongest_opposing_case": "If 2026 matches or slightly exceeds 2018's record turnout rate on a larger population, 120-125M is the central outcome, not a tail - 49-50% VEP turnout times ~255M eligible voters lands right at 122M.",
+  "reasoning_summary": "Reference class: expected total ~113M (2018-level enthusiasm, population-adjusted, minus unopposed-race undercounts), SD ~6M. P(120M <= X <= 125M) = Phi((125-113)/6) - Phi((120-113)/6) ~ 0.98 - 0.88 = 0.10. Final 0.10 for the 120-124.99M band.",
+  "key_sources": [
+   {"title": "Clerk of the House: Election Statistics", "url": "https://history.house.gov/Institution/Election-Statistics/", "date": "2026-10-24"},
+   {"title": "Wikipedia: 2018 United States House of Representatives elections", "url": "https://en.wikipedia.org/wiki/2018_United_States_House_of_Representatives_elections", "date": "2026-10-24"}
+  ],
+  "p": 0.10
+ },
+ "KXMIDTERMMOV-AZGOVD-P5": {
+  "base_rate": {"reference_class": "Governor races with double-digit poll leads: P(win by >=5) ~0.80 after error adjustment", "value": 0.8, "source": "Polling arithmetic on RCP average Hobbs +11.4 over Biggs"},
+  "evidence": ["2026-10-14: RCP average Hobbs 49.4, Biggs 38.0 (+11.4, 5 polls); range Hobbs +6 to +17", "2026-10-14: Equis Research (the most conservative recent poll) still had Hobbs +7", "2022-11-08: Caution case - 2022 AZ polls overstated the Republican (Lake led polls, lost by 0.3), so AZ error direction is not reliably pro-GOP"],
+  "strongest_opposing_case": "Arizona remains an R+2 state where Hobbs won by only 0.3 in 2022; if the HighGround +17-type polls are outliers and the race reverts to Equis's +6 with normal error, a sub-5 margin is quite possible.",
+  "reasoning_summary": "Poll mean +11.4; conservative effective mean +9 (discounting outliers), SD 5 -> P(>=5) = 1 - Phi((5-9)/5) ~ 0.79. Biggs is a weak, Trump-aligned nominee in a D+8 year, supporting the high estimate. Final 0.75 that Hobbs wins Arizona by 5+ points.",
+  "key_sources": [
+   {"title": "azfamily: New Arizona poll shows Democrats leading in several key races", "url": "https://www.azfamily.com/2026/10/14/new-arizona-poll-shows-democrats-leading-several-key-races/", "date": "2026-10-14"},
+   {"title": "MultiState: Arizona Governor Race 2026 - Hobbs vs. Biggs", "url": "https://www.multistate.us/elections/governor-race/arizona-2026", "date": "2026-10-22"}
+  ],
+  "p": 0.75
+ },
+ "0xdbe2f7486676bc943c454498a40595ddf042e89bc7a9c204084d87d59abc8730": {
+  "base_rate": {"reference_class": "Safe-D House seat margins vs same rematch opponent: Pingree's margins 2018-2024 ranged ~+15 to +28 (2024: +22.3 over Russell)", "value": 0.2, "source": "ME-01 historical results (Wikipedia certified returns)"},
+  "evidence": ["2024-11-05: Pingree beat Ronald Russell 58.7-36.4 (+22.3) with an independent taking 4.9%", "2026-06-09: Russell won the 2026 GOP primary again - a rematch of 2024", "2026-10-23: Generic ballot D+8 (vs roughly even 2024) suggests Pingree's margin expands ~4-6 points toward the high 20s"],
+  "strongest_opposing_case": "The band needs 30-35 exactly: Pingree's margin was 22 in 2024 and has exceeded 30 only once recently (2022, +28 against a weaker field); even in a wave, rematch margins tend to be sticky, likely landing 24-29 and missing the band low.",
+  "reasoning_summary": "Expected 2026 margin: 2024's +22.3 plus ~4-5 wave points = ~+27, SD 5 (two-candidate-plus-independent structure). P(30 <= m < 35) = Phi((35-27)/5) - Phi((30-27)/5) = 0.945 - 0.726 ~ 0.22. Shade down slightly for the independent again splitting the anti-GOP vote. Final 0.18.",
+  "key_sources": [
+   {"title": "Wikipedia: 2024 US House elections in Maine", "url": "https://en.wikipedia.org/wiki/2024_United_States_House_of_Representatives_elections_in_Maine", "date": "2026-10-24"},
+   {"title": "Wikipedia: 2026 US House elections in Maine", "url": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Maine", "date": "2026-10-24"}
+  ],
+  "p": 0.18
+ },
+ "0x7d75aa02bcb7c8247a18a5c1fd271944dd22dcb76ca96371b256a6b97f50627d": {
+  "base_rate": {"reference_class": "Safe-R downstate-Illinois seat margins: Bost won IL-12 by ~48 (2024, 74.2-25.8) and ~52 (2022)", "value": 0.25, "source": "IL-12 historical results (Wikipedia certified returns)"},
+  "evidence": ["2024-11-05: Bost beat Brian Roberts 74.2-25.8 (+48.4)", "2026-10-25: No public polling or competitive rating exists for IL-12 - all raters treat it as Safe R", "2026-10-23: D+8 national environment (vs R+3ish 2024) historically shaves ~8-12 points off safe-seat margins via differential turnout"],
+  "strongest_opposing_case": "Uncontested-quality Democratic challengers produce stable blowouts: Bost's margin could stay in the mid-40s if the Dem nominee is again unfunded, overshooting the 35-40 band on the high side rather than falling into it.",
+  "reasoning_summary": "Expected margin: 48.4 (2024) minus ~8 wave-year compression = ~+40, SD 6 (no polling, unknown challenger quality). P(35 <= m < 40) = Phi(0) - Phi((35-40)/6) = 0.50 - 0.20 ~ 0.30; shade down for fat upper tail if the challenger is token. Final 0.25 for the 35-40 band.",
+  "key_sources": [
+   {"title": "Wikipedia: 2024 United States House of Representatives elections", "url": "https://en.wikipedia.org/wiki/2024_United_States_House_of_Representatives_elections", "date": "2026-10-24"},
+   {"title": "Ballotpedia: United States House elections, 2026", "url": "https://ballotpedia.org/United_States_House_of_Representatives_elections,_2026", "date": "2026-10-24"}
+  ],
+  "p": 0.25
+ },
+ "0x66a41e567ff99f222ad315cea0e40bd6ab11989c75062abe1203084668658d23": {
+  "base_rate": {"reference_class": "Deep-red Texas seat first contested after redistricting: last contested TX-11 margin was +62 (2020); mid-decade map shuffled district lines", "value": 0.12, "source": "TX-11 historical results; 2026 is its first contested race since 2020 and first under the new map"},
+  "evidence": ["2024-11-05: Pfluger was unopposed in 2024 (no Democrat filed)", "2026-04-28: 2026 Democrat Claire Reynolds had raised only $42K vs Pfluger's $2.65M", "2025-12: Texas's mid-decade map redistributed Dem voters across West Texas districts; TX-11's exact new lean is unpublished but remains deeply Republican", "2026-10-23: D+8 environment compresses red-seat margins ~8-12 points vs neutral"],
+  "strongest_opposing_case": "If the new map pushed Democratic voters into TX-11 to shore up neighboring GOP seats, and the D+8 wave bites, a 25-30 margin becomes the central case rather than a left tail - and there is zero polling to rule that out.",
+  "reasoning_summary": "Expected margin: ~+62 (2020 baseline) adjusted for a token but real challenger and wave-year compression -> central estimate ~+40, SD 8 (high uncertainty, new lines, no polls). P(25 <= m < 30) = Phi((30-40)/8) - Phi((25-40)/8) = 0.106 - 0.030 ~ 0.08; widen for map uncertainty. Final 0.12.",
+  "key_sources": [
+   {"title": "Wikipedia: 2026 US House elections in Texas", "url": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Texas", "date": "2026-10-24"},
+   {"title": "Ballotpedia: August Pfluger", "url": "https://ballotpedia.org/August_Pfluger", "date": "2026-10-24"}
+  ],
+  "p": 0.12
+ },
+ "0x8cb0cc447cbda5e851c335183c09d258d6604511abb7746f765f1d808e511c92": {
+  "base_rate": {"reference_class": "Hawaii governor-race total votes: 2018 ~385-398K, 2022 ~417K; secular turnout growth offset by non-competitive 2026 race", "value": 0.33, "source": "Hawaii Office of Elections certified results via Wikipedia (2018, 2022 gubernatorial)"},
+  "evidence": ["2022-11-08: HI governor total ~417K votes (Green 63.2%)", "2018-11-06: HI governor total ~385-398K votes", "2026-10-25: Gov. Josh Green seeks re-election without a marquee opponent; Hawaii has no competitive statewide federal race in 2026, so no turnout catalyst", "2026-10-23: Nationally elevated midterm engagement (D+8, 2018-style enthusiasm) pushes totals up everywhere, including blue states"],
+  "strongest_opposing_case": "2022 already exceeded 400K and national 2026 enthusiasm resembles record-setting 2018; if Hawaii follows the national engagement surge at all, the total lands above 400K and the 370-400K band misses high.",
+  "reasoning_summary": "Central estimate ~405K (2022's 417K, trimmed for a sleepy incumbent re-election, lifted for national enthusiasm), SD ~25K. P(370K <= X <= 400K) = Phi((400-405)/25) - Phi((370-405)/25) = 0.42 - 0.08 ~ 0.34. Final 0.32 for the 370,000-400,000 band.",
+  "key_sources": [
+   {"title": "Wikipedia: 2022 Hawaii gubernatorial election", "url": "https://en.wikipedia.org/wiki/2022_Hawaii_gubernatorial_election", "date": "2026-10-24"},
+   {"title": "Wikipedia: 2026 United States gubernatorial elections", "url": "https://en.wikipedia.org/wiki/2026_United_States_gubernatorial_elections", "date": "2026-10-24"}
+  ],
+  "p": 0.32
+ },
+ "0xf452f3f0b7f7e7754136de7174e0394eeea73aebe6ef27e8620b5657a2c8caa3": {
+  "base_rate": {"reference_class": "Likely-D House seats: expected margins ~8-14; NY-03 2024 margin ~+4-6 (Suozzi over LiPetri)", "value": 0.15, "source": "Cook Likely D (10-23), IE/Sabato Lean D; NY-03 historical margins"},
+  "evidence": ["2024-11-05: Suozzi held NY-03 by roughly 4-6 points in a Trump-won district", "2026-10-23: Cook rates NY-03 Likely D; Inside Elections and Sabato Lean D", "2026-10-23: D+8 environment (a ~10-point national swing from 2024) implies Suozzi's margin expands into the low-to-mid teens"],
+  "strongest_opposing_case": "A 15-20 point margin would be Suozzi's largest ever in this seat; Long Island has swung sharply Republican in local elections since 2021, and Lean-D raters clearly expect high single digits, below the band.",
+  "reasoning_summary": "Expected margin: 2024's ~+5 plus ~7-8 wave points = ~+12, SD 5. P(15 <= m < 20) = Phi((20-12)/5) - Phi((15-12)/5) = 0.945 - 0.726 ~ 0.22; shade down because the Likely/Lean D rating blend implies a center nearer +10. Final 0.14 for the 15-20 band.",
+  "key_sources": [
+   {"title": "Wikipedia: 2026 US House election ratings (NY-03 row)", "url": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_election_ratings", "date": "2026-10-23"},
+   {"title": "Wikipedia: 2024 United States House of Representatives elections", "url": "https://en.wikipedia.org/wiki/2024_United_States_House_of_Representatives_elections", "date": "2026-10-24"}
+  ],
+  "p": 0.14
+ },
+ "0x7ac70d3487c79700fbfbd16f0cb4f0e39be104985b285ed938ed3af4e10dcefb": {
+  "base_rate": {"reference_class": "Likely-R races polling ~R+3 with historic ~+5 pro-GOP state error: P(final margin in 0-5) ~0.30", "value": 0.3, "source": "Polling arithmetic on SC October polls (~R+3) with SC error history"},
+  "evidence": ["2026-10-20: October SC Senate polls average ~R+3 (Trafalgar R+3; aggregate GOP 48.0, Dem 45.3)", "2026-09-23: Cook downgraded SC from Safe R to Likely R - the closest SC Senate rating in decades", "2020-11-03: Graham 2020: polled ~+1, won +10.3 - SC's signature pro-GOP poll miss"],
+  "strongest_opposing_case": "SC polls understated Graham by 9 points in 2020; if that error repeats, the margin lands near +10-12, clearing the 0-5 band entirely, and the Likely R rating implicitly expects exactly that.",
+  "reasoning_summary": "Effective mean margin R+6 (polls +3 plus half the historic SC error), SD 5. P(0 <= m < 5) = Phi((5-6)/5) - Phi((0-6)/5) = 0.421 - 0.115 ~ 0.31. The D+8 environment raises the chance the polls are right this time. Final 0.31 for a Republican win by 0-5 points.",
+  "key_sources": [
+   {"title": "RealClearPolling 2026 Senate latest polls (SC)", "url": "https://www.realclearpolling.com/latest-polls/senate", "date": "2026-10-24"},
+   {"title": "270toWin: Cook 2026 Senate rating changes (SC to Likely R)", "url": "https://www.270towin.com/2026-senate-election/cook-political-report-2026-senate", "date": "2026-10-20"}
+  ],
+  "p": 0.31
+ },
+ "0x6d8c35997c3e96446e161ed179f4cca1203601b3675fb88379656a66b82498ce": {
+  "base_rate": {"reference_class": "Pure Toss-up House races: P(given side wins) ~0.47 for GOP in Dem year; P(margin 0-3 | win) ~0.45 in toss-ups", "value": 0.21, "source": "Unanimous Toss Up ratings for MI-07 (Cook 10-23, IE 10-15, Sabato 10-20) x conditional band probability"},
+  "evidence": ["2026-10-23: MI-07 (Tom Barrett, R) rated Toss Up by all three major raters", "2024-11-05: Barrett won the open MI-07 by 3.7 points; 2022's race here was decided by ~5", "2026-10-23: D+8 environment plus El-Sayed's statewide lead pressure Barrett's margin toward zero or negative"],
+  "strongest_opposing_case": "In a D+8 wave the modal outcome is Barrett losing outright, not winning narrowly; and if polls overstate Democrats as in 2024, Barrett could win by 4-6, overshooting the band - the 0-3 window threads a needle.",
+  "reasoning_summary": "P(Barrett wins) ~0.45 (Toss Up shaded for wave). Conditional on winning in a Dem year, his margin distribution is compressed: P(0-3 | win) ~0.45. Product = 0.20. Final 0.20 that the Republican wins MI-07 by 0-3 points.",
+  "key_sources": [
+   {"title": "Wikipedia: 2026 US House election ratings (MI-07 row)", "url": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_election_ratings", "date": "2026-10-23"},
+   {"title": "Cook Political Report 2026 House race ratings", "url": "https://www.cookpolitical.com/ratings/house-race-ratings", "date": "2026-10-23"}
+  ],
+  "p": 0.20
+ },
+ "0x2420c9a4c59ba4becc7910e52c9f71c3a28c325007fa6900e33877a03dff7432": {
+  "base_rate": {"reference_class": "Lean-D flip seats: expected Dem margin ~+4-6; P(margin in 6-9) ~0.2", "value": 0.2, "source": "PA-07 rated Lean D flip (Cook 10-09), Tilt D flip (IE 10-15), Lean D flip (Sabato 10-20)"},
+  "evidence": ["2026-10-09: Cook moved PA-07 from Toss Up to Lean Democratic - a projected flip of Ryan Mackenzie's seat", "2024-11-05: Mackenzie won PA-07 by ~1 point in 2024; the Lehigh Valley seat is a perennial sub-5 race", "2026-10-23: D+8 national environment implies a Dem margin centered in the mid single digits"],
+  "strongest_opposing_case": "PA-07 has been decided by under 5 points in four straight cycles; incumbency and the district's even partisan balance make a 6-9 point Dem blowout the tail, not the center, and IE's Tilt D implies ~2-3.",
+  "reasoning_summary": "Expected Dem margin +4.5 (Lean/Tilt D flip blend), SD 4.5. P(6 <= m < 9) = Phi((9-4.5)/4.5) - Phi((6-4.5)/4.5) = 0.841 - 0.631 ~ 0.21. Final 0.21 that the Democrat wins PA-07 by 6-9 points.",
+  "key_sources": [
+   {"title": "Wikipedia: 2026 US House election ratings (PA-07 row)", "url": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_election_ratings", "date": "2026-10-23"},
+   {"title": "Axios: Cook tilts 18 House races toward Democrats (PA-07 to Lean D)", "url": "https://www.axios.com/2026/10/09/cook-report-18-house-races-move-democrats", "date": "2026-10-09"}
+  ],
+  "p": 0.21
+ },
+ "0x0465cd005a54781e052b679e2c42c7ae5b772490fdda54316f157bf537536456": {
+  "base_rate": {"reference_class": "Likely-R-rated Senate races: underdog Democrat wins ~0.12", "value": 0.12, "source": "FL special rated Likely R (consensus moved to Lean/Likely R Oct 1); Moody leads all polls"},
+  "evidence": ["2026-10-20: Every October poll shows Moody ahead of Nixon: UNF +4, co/efficient +8, Univision/YouGov +9; aggregate ~R+6", "2026-10-01: Consensus raters moved Florida from Likely to Lean Republican - closer than usual but still GOP-favored", "2024-11-05: Florida has trended hard R (Trump +13 in 2024); no Democrat has won a FL Senate race since 2012"],
+  "strongest_opposing_case": "Moody is an appointed, never-elected-to-this-seat incumbent, special elections in 2025-26 showed double-digit Dem overperformance, and a true D+8 wave plus depressed GOP midterm turnout in FL could close a 6-point gap.",
+  "reasoning_summary": "Base 0.12 from Likely R. Up slightly because the race was downgraded toward Lean R, Nixon keeps it within mid single digits, and the wave environment adds variance (+). Florida's recent R lurch caps the upside (-). Final 0.15 that Democrats win the Florida Senate special.",
+  "key_sources": [
+   {"title": "RealClearPolling 2026 Senate latest polls (FL special)", "url": "https://www.realclearpolling.com/latest-polls/senate", "date": "2026-10-24"},
+   {"title": "270toWin: 2026 Senate election forecast maps", "url": "https://www.270towin.com/2026-senate-election-predictions/", "date": "2026-10-24"}
+  ],
+  "p": 0.15
+ },
+ "0xd339058f6879b22b649e9119e50f981baa0bfad6bd168e0e69e79667d43e8927": {
+  "base_rate": {"reference_class": "Toss-up-rated House seats with Dem incumbent on new GOP-drawn lines: ~0.50", "value": 0.5, "source": "FL-14 rated Toss Up by Cook (10-23), IE (10-15) and Sabato (10-20) after Florida's May 2026 mid-decade remap"},
+  "evidence": ["2026-05-04: DeSantis signed Florida's new congressional map, redrawing Kathy Castor's Tampa-based FL-14 to lean more Republican", "2026-10-23: All three raters have FL-14 as a pure Toss Up", "2026-10-23: D+8 national environment partially offsets the redraw; Castor is a long-tenured incumbent with full Tampa name ID"],
+  "strongest_opposing_case": "Fresh gerrymanders usually work in year one: the mapmakers drew FL-14 with 2024 turnout data showing a GOP edge, Florida's electorate has moved R faster than the nation, and Castor has never had to win a genuinely red seat.",
+  "reasoning_summary": "Base 0.50 from unanimous Toss Up. Incumbency and the D+8 wave push up; the purpose-built GOP redraw and Florida's rightward drift push down roughly equally. Final 0.50 that the Democratic Party wins the FL-14 seat.",
+  "key_sources": [
+   {"title": "Wikipedia: 2026 US House election ratings (FL-14 row)", "url": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_election_ratings", "date": "2026-10-23"},
+   {"title": "Wikipedia: 2026 United States House of Representatives elections (Florida remap)", "url": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections", "date": "2026-10-24"}
+  ],
+  "p": 0.50
+ },
+ "0x3452bb28983bc33b37ddfd98da2138dfd89782faec65a2607ed5aa86a17c9199": {
+  "base_rate": {"reference_class": "Lean-R-rated House seats: Republican wins ~0.72", "value": 0.72, "source": "FL-27 (Salazar) rated Lean R by Cook (10-23), IE (10-15) and Sabato (10-20)"},
+  "evidence": ["2026-10-23: Unanimous Lean R across the three major raters", "2024-11-05: Salazar won FL-27 by ~20 points in 2024 as Miami-Dade swung hard right", "2026-05-04: Florida's new map generally shored up GOP incumbents; the D+8 wave and possible Hispanic swing-back are the countervailing forces"],
+  "strongest_opposing_case": "Miami-Dade's 2024 GOP surge was Trump-specific; midterm specials show Hispanic voters snapping back toward Democrats, and FL-27 was a Dem-held seat as recently as 2020 - a D+8 wave could compress a 20-point margin fast.",
+  "reasoning_summary": "Base 0.72 from Lean R. Salazar's 20-point 2024 cushion and the friendly remap argue higher; the wave environment and Hispanic reversion risk argue lower - roughly offsetting. Final 0.72 that the Republican Party wins FL-27.",
+  "key_sources": [
+   {"title": "Wikipedia: 2026 US House election ratings (FL-27 row)", "url": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_election_ratings", "date": "2026-10-23"},
+   {"title": "Cook Political Report 2026 House race ratings", "url": "https://www.cookpolitical.com/ratings/house-race-ratings", "date": "2026-10-23"}
+  ],
+  "p": 0.72
+ },
+ "0xaad0badfe7f20796f3359189cf9e2b33f81239b9d69768c22ed958c801e2677c": {
+  "base_rate": {"reference_class": "Connecticut governor-race total votes: 2018 ~1.39M, 2022 ~1.28M; 2026 has a contested Lamont-Fazio race in a high-engagement year", "value": 0.32, "source": "CT Secretary of State certified results via Wikipedia (2018, 2022)"},
+  "evidence": ["2022-11-08: CT governor total ~1.28M votes (Lamont beat Stefanowski)", "2018-11-06: CT governor total ~1.39M in the last high-enthusiasm midterm", "2026-10-22: Lamont vs Fazio is competitive enough to be tracked (MultiState race page), and national engagement mirrors 2018 - both push turnout toward or above 1.3M"],
+  "strongest_opposing_case": "If 2026 engagement matches 2018 (the better analogue given the D+8 wave), CT lands near 1.35-1.40M and the 1.2-1.3M band misses high; population and registration growth since 2022 compound this.",
+  "reasoning_summary": "Central estimate ~1.33M (between 2022's 1.28M and 2018's 1.39M, weighted toward 2018-style engagement), SD ~70K. P(1.2M <= X <= 1.3M) = Phi((1.30-1.33)/0.07) - Phi((1.20-1.33)/0.07) = 0.33 - 0.03 ~ 0.30. Final 0.30 for the 1,200,000-1,300,000 band.",
+  "key_sources": [
+   {"title": "Wikipedia: 2022 Connecticut gubernatorial election", "url": "https://en.wikipedia.org/wiki/2022_Connecticut_gubernatorial_election", "date": "2026-10-24"},
+   {"title": "MultiState: Connecticut Governor Race 2026 - Lamont vs. Fazio", "url": "https://www.multistate.us/elections/governor-race/connecticut-2026", "date": "2026-10-22"}
+  ],
+  "p": 0.30
+ },
+ "0xa1a7c37fa0c1329657b1d35b449677b05dd453ac890c7158acfbb75a60274046": {
+  "base_rate": {"reference_class": "Popular GOP incumbents in blue states: VT gov (Scott) and NH gov (Ayotte) both rated Likely R - two near-locks in Harris-won states", "value": 0.85, "source": "Cook/Sabato Likely R ratings for VT and NH governor (October 2026)"},
+  "evidence": ["2026-10-22: NH governor (Ayotte): Likely R per Cook, Sabato, Pluribus; RCP average Ayotte +9 - NH was a Harris state", "2026-10-22: VT governor (Scott): Likely R (Cook moved Solid->Likely in October); Oct 2-4 State Navigate poll Scott +3 - VT was a Harris state", "2026-10-22: Additional GOP chances in Harris states: Maine Senate (Collins, Toss Up ~45-50% R) and Minnesota Senate (moved toward GOP, ~30-35% R)"],
+  "strongest_opposing_case": "Scott's lead has shrunk to 3 points (one September poll had him LOSING by 6) and a true D+8 tsunami could sweep out even popular blue-state Republicans, leaving only Ayotte and a failed Collins - just one qualifying win.",
+  "reasoning_summary": "Needs 2+ GOP wins among Harris-state Senate/Gov races. P(NH gov R) ~0.88, P(VT gov R) ~0.78, P(ME Sen R) ~0.48, P(MN Sen R) ~0.33, plus smaller chances elsewhere. P(fewer than 2) ~0.11 (requires VT or NH to fall AND all long shots to miss). Final 0.88.",
+  "key_sources": [
+   {"title": "MultiState: New Hampshire Governor Race 2026 - Ayotte vs. Warmington", "url": "https://www.multistate.us/elections/governor-race/new-hampshire-2026", "date": "2026-10-22"},
+   {"title": "VTDigger: New poll shows Gov. Phil Scott leading Amanda Janoo by 10 points", "url": "https://vtdigger.org/2026/09/28/new-poll-shows-gov-phil-scott-leading-amanda-janoo-by-10-points/", "date": "2026-09-28"},
+   {"title": "MultiState: Vermont Governor Race 2026 - Scott vs. Janoo", "url": "https://www.multistate.us/elections/governor-race/vermont-2026", "date": "2026-10-22"}
+  ],
+  "p": 0.88
+ },
+ "0x5198ce44b32ad6a632a413041278ac51643381fbc418db75314a17d9295ee325": {
+  "base_rate": {"reference_class": "Safe-D Senate races polling ~+16: P(final margin >=21) ~0.16", "value": 0.16, "source": "Polling arithmetic on NM average Lujan +16.3 over Larry Marker"},
+  "evidence": ["2026-10-20: Aggregated NM polling: Lujan +16.3 to +16.7 (3 polls), rated Safe D", "2020-11-03: Lujan won his first term by only 6.2; Heinrich won 2024 by ~10 - NM Dem margins rarely reach 20+", "2026-10-23: D+8 environment and a no-name, underfunded GOP opponent (oil-and-gas operator Marker) support an unusually large margin"],
+  "strongest_opposing_case": "No New Mexico Senate race since 2008 has been decided by 21+ points against any live Republican; Lujan's own 2020 margin was 6, and third-party leakage plus rural GOP floor voting make 21+ a genuine tail.",
+  "reasoning_summary": "Poll mean +16.3, SD 5 -> P(>=21) = 1 - Phi((21-16.3)/5) ~ 0.17. NM's history of single-digit-to-low-teens Senate margins argues the poll mean is near the ceiling. Final 0.16 that Lujan wins by 21 or more.",
+  "key_sources": [
+   {"title": "Wikipedia: 2026 United States Senate election in New Mexico", "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_New_Mexico", "date": "2026-10-24"},
+   {"title": "RealClearPolling 2026 Senate latest polls (NM)", "url": "https://www.realclearpolling.com/latest-polls/senate", "date": "2026-10-24"}
+  ],
+  "p": 0.16
+ },
+ "0xb743353be80ee4d0ddcddb7551288f1745a7907f96a2f169a9932d5d70b9c0b6": {
+  "base_rate": {"reference_class": "Long-serving incumbents in same-party top-two generals: incumbent wins ~0.70", "value": 0.7, "source": "California D-on-D general history; models give Matsui ~60-62%"},
+  "evidence": ["2026-06-02: Primary: Vang 31.2, Matsui 29.1 - the challenger finished first, a warning sign", "2026-10-21: No public general-election poll; quantitative models put Matsui around 60%", "2026-10-15: Matsui's fundraising advantage (~$3.2-5.2M vs ~$1.1-1.6M) and party-establishment endorsements favor the incumbent in a low-information D-on-D race"],
+  "strongest_opposing_case": "Matsui is 82 in a cycle dominated by generational-change anger, she already lost the first round to Vang, and crossover Republican voters in D-on-D races often break against the long-tenured establishment incumbent.",
+  "reasoning_summary": "Base 0.70 for incumbents in same-party generals, cut to ~0.60 for the primary loss, age salience and Vang's momentum; money and name ID keep Matsui favored. Residual ~0.02 for other outcomes. Final 0.60 that Doris Matsui wins CA-07.",
+  "key_sources": [
+   {"title": "CalMatters: A 'battle of the ages' in a California House race", "url": "https://calmatters.org/politics/2026/10/california-congress-7th-district-race/", "date": "2026-10-15"},
+   {"title": "Wikipedia: Mai Vang", "url": "https://en.wikipedia.org/wiki/Mai_Vang", "date": "2026-10-24"}
+  ],
+  "p": 0.60
+ },
+ "0x66bbf6d55e0296278858b3147689f3df9259374f158f9f028b608baa322a639c": {
+  "base_rate": {"reference_class": "Toss-up Senate races with incumbent slightly trailing: challenger party wins ~0.52", "value": 0.52, "source": "Cook Toss Up (10-20); RCP average Jackson +0.7 over Collins"},
+  "evidence": ["2026-10-22: RCP average Jackson +0.7; UNH 51-47 Jackson; Suffolk 49-47 Jackson - first sustained Collins deficit of her career", "2026-10-23: Generic ballot D+8; Maine voted Harris +7 in 2024", "2020-11-03: Collins outran final polls by ~9 points to win 2020 - the dominant cautionary datapoint"],
+  "strongest_opposing_case": "Every cycle analysts write Collins's obituary and every cycle she outruns her polls by high single digits; with RCV she also captures second preferences from moderate independents, as in 2020 when she won outright.",
+  "reasoning_summary": "Base 0.52 (toss-up, slight poll edge to Jackson). Up for the D+8 wave, Maine's blue lean and Collins's age/retirement-era weakness (+); down heavily for her documented 2020-style poll overperformance (-). Net ~0.52 that the Democrat (Troy Jackson) wins the Maine Senate race.",
+  "key_sources": [
+   {"title": "RealClearPolling 2026 Senate latest polls (ME)", "url": "https://www.realclearpolling.com/latest-polls/senate", "date": "2026-10-24"},
+   {"title": "CNN: The 10 Senate seats most likely to flip in 2026", "url": "https://www.cnn.com/2026/10/05/politics/10-senate-seats-most-likely-to-flip-2026", "date": "2026-10-05"}
+  ],
+  "p": 0.52
+ },
+ "0xf6ff4c55696ff8529e6e1021f4e4a17adaa305c4991d9001bcbf7a5fbdd326d3": {
+  "base_rate": {"reference_class": "Toss-up/Lean-R split-rated seats: Democrat wins ~0.42", "value": 0.42, "source": "VA-01: Cook Toss Up (10-23), Sabato Toss Up (10-20), Inside Elections Lean R (10-15)"},
+  "evidence": ["2026-10-23: Cook and Sabato both rate VA-01 (Rob Wittman) a pure Toss Up; IE holds at Lean R", "2025-11-04: Virginia's 2025 statewide elections were a Democratic blowout, with Spanberger's coalition carrying districts like VA-01's suburbs", "2026-10-23: Generic ballot D+8; Wittman won by ~10 in 2024 but the Richmond-exurb growth keeps shifting the seat left"],
+  "strongest_opposing_case": "Wittman is a 10-term incumbent who has never fallen below 55% until recently and still won by double digits in 2024; Inside Elections' Lean R reflects that a Trump+5 seat with an entrenched incumbent usually survives even strong waves.",
+  "reasoning_summary": "Blend: two Toss Ups (0.50 each) and one Lean R (0.28) -> ~0.43. Virginia's 2025 Dem surge and D+8 environment support the upper end; Wittman's incumbency the lower. Final 0.42 that the Democratic Party wins VA-01.",
+  "key_sources": [
+   {"title": "Wikipedia: 2026 US House election ratings (VA-01 row)", "url": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_election_ratings", "date": "2026-10-23"},
+   {"title": "Forbes: Cook moves 19 House races toward Democrats", "url": "https://www.forbes.com/sites/saradorn/2026/10/23/republicans-chances-of-maintaining-house-majority-have-all-but-evaporated-cook-political-report-says/", "date": "2026-10-23"}
+  ],
+  "p": 0.42
+ },
+ "0x19d2ff72e389d190c183e6b114817301d29eba651d67d75a38ee201a05188fd9": {
+  "base_rate": {"reference_class": "Toss-up/Leans-D Senate challenger with small poll lead (same event as id 41678)", "value": 0.6, "source": "Cook Toss Up (10-20) / Sabato Leans D (10-06); RCP Peltola +1.2; NYT/Siena Peltola +7"},
+  "evidence": ["2026-10-22: RCP average Peltola +1.2 over Sullivan; NYT/Siena LV poll Peltola +7", "2026-10-06: Sabato moved Alaska Senate to Leans Democratic", "2022-11-08: Peltola twice won statewide under RCV by consolidating Democratic, independent and moderate-GOP second preferences"],
+  "strongest_opposing_case": "Alaska polls understated the GOP by double digits in 2020; Sullivan is a two-term incumbent in a Trump+13 state, and AP/Fox/NBC may not even call a close RCV race before certification, adding resolution risk.",
+  "reasoning_summary": "Same underlying event as question id 41678 (Peltola wins Alaska Senate): base 0.61 from the Toss Up/Leans D blend, adjusted up for poll leads and RCV transfer advantage, down for Alaska's pro-GOP poll-error history. Final 0.60 that Peltola wins the Alaska Senate race.",
+  "key_sources": [
+   {"title": "Sabato's Crystal Ball: Alaska Senate to Leans Democratic", "url": "https://centerforpolitics.org/crystalball/four-rating-changes-headlined-by-alaska-senate-moving-to-leans-democratic/", "date": "2026-10-06"},
+   {"title": "Wikipedia: 2026 United States Senate election in Alaska", "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Alaska", "date": "2026-10-24"}
+  ],
+  "p": 0.60
+ },
+ "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4": {
+  "base_rate": {"reference_class": "Toss-up open-seat defenses by the non-presidential party in midterms: defender wins ~0.60", "value": 0.6, "source": "Cook Toss Up (10-20); Dem-held open seat (Peters retiring); midterm environment favors the out-party"},
+  "evidence": ["2026-10-22: RCP average El-Sayed +1.9; Marist 10-23 El-Sayed +2; every October average shows a Dem lead", "2026-10-23: Generic ballot D+8 - Michigan hasn't elected a GOP senator since 1994", "2024-11-05: The cautionary case: Rogers lost 2024 by only 0.3 and MI polls understate Republicans"],
+  "strongest_opposing_case": "El-Sayed is an unusually progressive nominee for a state Trump carried in 2024, Rogers nearly won last cycle, and Michigan's three-cycle pro-GOP poll error wipes out a 2-point lead exactly.",
+  "reasoning_summary": "Base 0.60 (toss-up defended by the out-party in a D+8 midterm). Up for consistent poll leads and Michigan's 32-year Dem Senate streak (+); down for candidate risk and MI poll error (-). Final 0.67 that Democrats win the Michigan Senate race.",
+  "key_sources": [
+   {"title": "RealClearPolling: 2026 Michigan Senate - Rogers vs. El-Sayed", "url": "https://www.realclearpolling.com/polls/senate/general/2026/michigan/rogers-vs-el-sayed", "date": "2026-10-22"},
+   {"title": "Newsweek: Rogers, El-Sayed clash in final Michigan Senate debate", "url": "https://www.newsweek.com/michigan-senate-debate-mike-rogers-abdul-el-sayed-12596649", "date": "2026-10-21"}
+  ],
+  "p": 0.67
+ },
+ "0xf8864cc923193924f175991ede770984839c7fd8e57386e6cbd9aa32eb62f6d6": {
+  "base_rate": {"reference_class": "Lean-D flip seats on new Dem-drawn lines: Democrat wins ~0.72", "value": 0.72, "source": "CA-48: Cook Lean D flip (10-23), IE Tilt D flip (10-15), Sabato Likely D flip (10-20) after Prop 50 redraw; Issa retiring"},
+  "evidence": ["2025-11-04: California voters approved Prop 50, redrawing CA-48 to favor Democrats; incumbent Darrell Issa is retiring rather than contest it", "2026-10-23: Ratings blend Lean D/Tilt D/Likely D - all three raters project a flip", "2026-10-23: D+8 national environment reinforces the new district lean"],
+  "strongest_opposing_case": "First-cycle gerrymanders can misfire: the new CA-48 still contains large inland-GOP populations, turnout models for brand-new lines are unreliable, and Tilt D (IE) implies only a 1-3 point edge.",
+  "reasoning_summary": "Base 0.72 from the Lean D flip consensus (Sabato's Likely D pulls up, IE's Tilt D pulls down). Open seat removes incumbency resistance; Prop 50 lines plus D+8 make the Dem the clear favorite. Final 0.70 that the Democratic Party wins CA-48.",
+  "key_sources": [
+   {"title": "Wikipedia: 2026 US House election ratings (CA-48 row)", "url": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_election_ratings", "date": "2026-10-23"},
+   {"title": "Wikipedia: 2026 United States House of Representatives elections (Prop 50)", "url": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections", "date": "2026-10-24"}
+  ],
+  "p": 0.70
+ },
+ "0x909e3566fa0384f39020837073fe6e9fac5fe340b49998f284737c04fddd3212": {
+  "base_rate": {"reference_class": "Lean-R/Likely-R-rated seats: Republican wins ~0.80", "value": 0.8, "source": "AK-AL (Nick Begich III): Cook Lean R (10-23), IE Likely R (10-15), Sabato Likely R (10-20)"},
+  "evidence": ["2026-10-23: Ratings blend Lean R (Cook) with two Likely Rs - Begich favored", "2026-10-25: Mary Peltola, the Democrat who held this seat 2022-24, is running for SENATE, not House, removing the strongest possible challenger", "2024-11-05: Begich beat Peltola in 2024; note the market excludes a listed-option candidate from party attribution, but Begich is a regular Republican"],
+  "strongest_opposing_case": "Alaska's RCV rewards crossover candidates, Democrats are surging statewide (Senate and governor both rated Leans D), and coat-tails from Peltola and Kreiss-Tomkins could carry an underrated AK-AL Democrat past Begich.",
+  "reasoning_summary": "Base 0.80 from the Lean/Likely R blend. Down a touch for Alaska's strongly Dem-trending 2026 statewide environment and RCV unpredictability (-); up for Begich's incumbency and no Peltola-caliber opponent (+). Final 0.78 that the Republican Party wins AK-AL.",
+  "key_sources": [
+   {"title": "Wikipedia: 2026 US House election ratings (AK-AL row)", "url": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_election_ratings", "date": "2026-10-23"},
+   {"title": "Wikipedia: 2026 United States Senate election in Alaska (Peltola running for Senate)", "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Alaska", "date": "2026-10-24"}
+  ],
+  "p": 0.78
+ },
+ "0xd7e7300ecc03a88948a89186d7f06b1000750a7f4a0778e40566d50af9ef3147": {
+  "base_rate": {"reference_class": "Likely-D/Lean-D-rated seats with incumbent: Democrat wins ~0.84", "value": 0.84, "source": "NY-03 (Suozzi): Cook Likely D (10-23), IE Lean D (10-15), Sabato Lean D (10-20)"},
+  "evidence": ["2026-10-23: Cook upgraded NY-03 to Likely D; the other raters hold Lean D", "2024-11-05: Suozzi held this Trump-won district by ~5 in a bad Dem year - he over-performs the partisan baseline", "2026-10-23: D+8 generic ballot adds roughly 7-8 points of cushion versus 2024"],
+  "strongest_opposing_case": "Long Island's local GOP machine has won nearly every county-level race since 2021, Trump carried NY-03 in 2024, and a Lean D rating from two of three raters implies a single-digit race a normal poll error could flip.",
+  "reasoning_summary": "Base 0.84 blending Likely D (0.88) and Lean D (0.72x2 -> pull to ~0.80), lifted by Suozzi's demonstrated crossover strength and the D+8 environment. Final 0.85 that the Democratic Party wins NY-03.",
+  "key_sources": [
+   {"title": "Wikipedia: 2026 US House election ratings (NY-03 row)", "url": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_election_ratings", "date": "2026-10-23"},
+   {"title": "The Hill: Cook shifts 19 House seats in Democrats' favor", "url": "https://thehill.com/homenews/campaign/6167727-cook-political-report-democrats-19-house-seats/", "date": "2026-10-23"}
+  ],
+  "p": 0.85
+ },
+ "0x5f5cf92636c3644a6221fba15d00e8aab9d539c17a0d25d8ae8d15220cbd2cb9": {
+  "base_rate": {"reference_class": "Joint event: House >=235 D seats (central forecasts 231-237) AND Senate >=51 D/D-caucus seats (= Dem control, ~0.43)", "value": 0.25, "source": "Decomposition using October 2026 seat forecasts and Senate control estimate"},
+  "evidence": ["2026-10-23: Central House forecasts: ~237 (DDHQ), 231 (Poliwave), ~235 (Newsweek generic-ballot translation) - P(>=235) ~0.42-0.45", "2026-10-20: Senate >=51 requires net +4 (all of: hold MI/MN/GA/NH, win NC, win 3 of 6 red toss-ups) - ~0.43", "2026-10-23: The two legs are strongly correlated: a night good enough for 235 House seats implies the Senate toss-ups break Democratic"],
+  "strongest_opposing_case": "Both legs sit right at their thresholds: a routine 3-point polling overstatement of Democrats (as in 2020) drops the House to ~220 and the Senate to 49-50, failing both conditions simultaneously.",
+  "reasoning_summary": "P(House >= 235) ~0.43 from seat-forecast distribution (mean ~233, SD ~10). P(Senate >= 51) ~0.43. Conditional on House >= 235, Senate control rises to ~0.60 via shared national swing -> joint ~0.43 x 0.60 = 0.26. Final 0.25 for the blue tsunami (235+ House and 51+ Senate).",
+  "key_sources": [
+   {"title": "Forbes: Cook predicts Democrats will win House control", "url": "https://www.forbes.com/sites/saradorn/2026/10/23/republicans-chances-of-maintaining-house-majority-have-all-but-evaporated-cook-political-report-says/", "date": "2026-10-23"},
+   {"title": "Newsweek: Democratic victory or polling miss - 3 possible midterms scenarios", "url": "https://newsweek.com/2026-midterm-polls-republicans-house-senate-12605345", "date": "2026-10-22"}
+  ],
+  "p": 0.25
+ },
+ "0xed4fd09a24f20a3afc1d722ace811fffff3cffd9a56a3fbffc47f4d3d47a88ed": {
+  "base_rate": {"reference_class": "Joint event: House >=218 D (forecasters' central case) AND Senate >=49 D-caucus (net +2)", "value": 0.72, "source": "Decomposition using October 2026 forecasts"},
+  "evidence": ["2026-10-23: Cook says GOP chances of holding the House have 'all but evaporated'; central forecasts 231-237 D seats -> P(>=218) ~0.82-0.85", "2026-10-20: Senate >=49 needs net +2: NC (Likely D) plus one of six toss-ups while holding MI/MN/GA/NH -> ~0.80", "2026-10-23: Generic ballot D+8 with Trump approval ~37-39% - a classic wave setup"],
+  "strongest_opposing_case": "A 2020-style polling miss (Dems overstated ~4) would cut the House to roughly 218-222 (coin-flip on the first condition) and could simultaneously cost MN or MI plus the needed toss-up, failing the Senate leg at 47-48.",
+  "reasoning_summary": "P(House >= 218) ~0.84; P(Senate >= 49) ~0.80; correlation means failures coincide: joint ~= min-leg x conditional ~0.84 x 0.85 = 0.71. Final 0.70 for the blue wave (218+ House and 49+ Senate).",
+  "key_sources": [
+   {"title": "Forbes: Cook predicts Democrats will win House control", "url": "https://www.forbes.com/sites/saradorn/2026/10/23/republicans-chances-of-maintaining-house-majority-have-all-but-evaporated-cook-political-report-says/", "date": "2026-10-23"},
+   {"title": "Washington Post: Three Senate races shift toward Democrats in Cook ratings", "url": "https://www.washingtonpost.com/politics/2026/10/06/three-senate-races-shift-toward-democrats-cook-ratings/", "date": "2026-10-06"}
+  ],
+  "p": 0.70
+ }
+}

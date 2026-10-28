@@ -1,0 +1,8503 @@
+{
+"generated": "2026-10-26",
+"track": {
+"retrodiction_calls": 28,
+"retrodiction_correct": 28,
+"forward_calls": 9,
+"forward_correct": 6,
+"lifetime_calls": 37,
+"lifetime_correct": 34,
+"live_open_calls": 35
+},
+"scoring": {
+"generated": "2026-10-26",
+"overall_binary": {
+"n": 61,
+"brier": 0.2718,
+"log": -1.3027
+},
+"india": {
+"n": 61,
+"brier": 0.2718,
+"log": -1.3027,
+"by_instrument": {
+"M2": {
+"n": 35,
+"brier": 0.2353,
+"log": -1.1965
+},
+"M3": {
+"n": 26,
+"brier": 0.3209,
+"log": -1.4457
+}
+}
+},
+"world": {
+"n": 0,
+"brier": null,
+"log": null,
+"by_instrument": {}
+},
+"us_races": {
+"n": 0,
+"brier": null,
+"log": null,
+"by_instrument": {},
+"note": "race-level US midterm rows (usmid_races_ledger.csv); dual instruments scored per race"
+},
+"skill_model_vs_market_us_races": {
+"n_questions": 0,
+"brier_model": null,
+"brier_market": null,
+"edge": null,
+"note": "no world question with both instruments has resolved yet"
+},
+"research": {
+"n": 0,
+"brier": null,
+"log": null,
+"note": "M_research (LLM research-forecaster) scored on calibrated p_research; same questions may also appear under india/world via their own instruments - each instrument answers for itself"
+},
+"matches": {
+"n": 10,
+"brier": 0.774,
+"log": -1.2516,
+"note": "three-way Brier, scale 0-2 (uniform ref 0.667); never pooled with binary"
+},
+"matches_skill_model_vs_market": {
+"n_matches": 0,
+"matchweeks": [],
+"note": "no resolved match carries market columns yet (v2 starts MW9)"
+},
+"calibration": [
+{
+"bin": "0-5%",
+"n": 14,
+"claimed": 0.0,
+"realized": 0.143
+},
+{
+"bin": "5-20%",
+"n": 9,
+"claimed": 0.172,
+"realized": 0.444
+},
+{
+"bin": "20-40%",
+"n": 25,
+"claimed": 0.272,
+"realized": 0.44
+},
+{
+"bin": "40-60%",
+"n": 17,
+"claimed": 0.487,
+"realized": 0.176
+},
+{
+"bin": "60-80%",
+"n": 9,
+"claimed": 0.73,
+"realized": 0.444
+},
+{
+"bin": "80-95%",
+"n": 4,
+"claimed": 0.81,
+"realized": 0.5
+},
+{
+"bin": "95-100%",
+"n": 13,
+"claimed": 0.999,
+"realized": 0.692
+}
+],
+"skill_model_vs_market": {
+"n_questions": 0,
+"brier_model": null,
+"brier_market": null,
+"edge": null,
+"note": "no world question with both instruments has resolved yet"
+},
+"notes": [
+"Every resolved pre-registered probability is scored - WATCH rows included. Hit-rate on CALLs alone is gameable by abstention; this table is not.",
+"Binary Brier: 0 perfect, 0.25 = always saying 50%, 1 = certain and wrong. Log scores use p clipped at 1e-4.",
+"Latest run per question is the scored row (re-runs supersede by timestamp, same rule as the ledger)."
+]
+},
+"changelog": [
+{
+"date": "2026-10-26",
+"entries": [
+{
+"title": "MW8 scored (partially), USMID + EPL2027 re-run",
+"items": [
+"Polls admitted: none. UP (newest Matrize 29-Sep), PB (SCORE 15-Oct), UK (TNN 13-Sep) \u2014 Wikipedia tables match configs exactly.",
+"Tripwires fired: none. Watched: UP SP-INC seat-sharing friction continues (INC 150 vs SP ~50, formal talks expected Nov); no UP defections since the 14-Oct trio (already in insider ledger); PB SAD-BJP talks remain sourced speculation, ...",
+"EPL: MW8 resolved 5/10 (Ipswich-Forest D, Villa 2-1 City H, Arsenal 2-0 Everton H, Coventry 0-1 Fulham A, Chelsea 0-2 Spurs A) \u2014 favourites 1/5, matchweek 3-way Brier 0.789 (uniform ref 0.667); an upset-heavy week, scored as made. Other 5 ...",
+"World: USMID2026 re-run (Senate Polymarket 0.675\u21920.645, a 3.0-pt move; House 0.915 and generic ballot D+9.1 (23-Oct) unchanged): all three chamber questions stay WATCH, sha a7ef9acc\u2026. Race board: all 65 liquid race markets refetched; ...",
+"Asks: 1 open row (gold, resolve_by 30-Oct) \u2014 none due. Republish: yes (artifact v16). Anchors: 3 earlier manifests upgraded to complete Bitcoin attestations; VERIFY OK (all hashes present); new manifest 20261026T053623 stamped (pending).",
+"Flagged for user, not acted on: (1) fixturedownload feed lags finished MW8 finals by 1+ day \u2014 if it persists, consider adding a secondary official results source to epl_resolve.py (user decision). (2) EPL market odds (20-Oct) predate MW8, ..."
+],
+"kind": "run"
+},
+{
+"title": "ForecastBench round 2026-10-25: MISSED leaderboard, record sealed",
+"items": [],
+"kind": "run"
+},
+{
+"title": "Re-registered Premier League Winner 2026-27",
+"items": [
+"5 probabilities re-hashed; no verdict changed"
+],
+"kind": "ledger"
+},
+{
+"title": "Re-registered US Midterm Elections 2026",
+"items": [
+"3 probabilities re-hashed; no verdict changed"
+],
+"kind": "ledger"
+},
+{
+"title": "Scored Premier League matchweek 8",
+"items": [
+"10 fixtures resolved: favourites 2/10, mean 3-way Brier 0.774 (0.667 = guessing)"
+],
+"kind": "ledger"
+}
+]
+},
+{
+"date": "2026-10-25",
+"entries": [
+{
+"title": "US midterms race-level board (user-directed session, not an autopilot run)",
+"items": [
+"Why: USMID2026 covered chamber control only, and the Senate question ran market-only. Election day 2026-11-03 is the engine's biggest single scoring event; this build pre-registers every race before it.",
+"Rosters, verified not assumed: (Wikipedia, fetched 2026-10-24): 36 state governor races (user brief said 34; the official count is 36 \u2014 18 D-held, 18 R-held) and 35 Senate seats (33 Class 2 + FL/OH specials; 22 R-held, 13 D-held up; 34 ...",
+"New dual-instrument race model: (scripts/usmid_races.py, all parameters stated priors in the docstring): M_market = de-vigged Polymarket per-race party-winner prices (scripts/usmid_fetch_markets.py, gamma-api anonymous, raw responses kept; ...",
+"Pre-registered: 71 races in new append-only ledger forecasts/world/usmid_races_ledger.csv, sha ffe4c93d..., freeze 2026-10-25 (markets fetched 2026-10-24): 16 CALL-YES, 11 CALL-NO, 41 WATCH, 3 WATCH-1INST. The gate called the safe states ...",
+"Senate question now dual-instrument: correlated MC roll-up (100k sims) gives P(Dem control) = 0.5465 (median 51 seats, 90% range 47-56) vs market 0.675 \u2014 pasted into USMID2026.json model.senate_model, chamber re-run (sha 81b3307f...): all ...",
+"Plumbing: anchor.py LEDGERS + score.py now cover the races ledger (us_races block + its own model-vs-market skill table \u2014 first big skill sample at resolution); anchor.py stamp run (manifest_20261025T050113, verify OK). App: USMID2026 ..."
+],
+"kind": "run"
+},
+{
+"title": "Re-registered US Midterm Elections 2026",
+"items": [
+"3 probabilities re-hashed; no verdict changed"
+],
+"kind": "ledger"
+},
+{
+"title": "Pre-registered US Midterms 2026 race board",
+"items": [
+"71 question probabilities hash-stamped (per-race dual gate: market + structural model); 27 certified CALLs issued"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-001",
+"items": [
+"25 questions, dossier hash-stamped (sha a949ea78...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-002",
+"items": [
+"25 questions, dossier hash-stamped (sha d1488a2b...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-003",
+"items": [
+"25 questions, dossier hash-stamped (sha 6581cf46...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-004",
+"items": [
+"25 questions, dossier hash-stamped (sha 46d3831c...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-005",
+"items": [
+"25 questions, dossier hash-stamped (sha 7f300a6a...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-006",
+"items": [
+"25 questions, dossier hash-stamped (sha fbc69bd9...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-007",
+"items": [
+"25 questions, dossier hash-stamped (sha 97702674...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-008",
+"items": [
+"25 questions, dossier hash-stamped (sha 17745709...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-009",
+"items": [
+"25 questions, dossier hash-stamped (sha be1f7378...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-010",
+"items": [
+"25 questions, dossier hash-stamped (sha 2ff51987...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-011",
+"items": [
+"25 questions, dossier hash-stamped (sha 625b7104...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-012",
+"items": [
+"25 questions, dossier hash-stamped (sha d7e7046d...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-013",
+"items": [
+"25 questions, dossier hash-stamped (sha abd8bfe9...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-014",
+"items": [
+"25 questions, dossier hash-stamped (sha 5b79335c...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-015",
+"items": [
+"25 questions, dossier hash-stamped (sha feb2bd6e...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-016",
+"items": [
+"25 questions, dossier hash-stamped (sha b6d25102...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-017",
+"items": [
+"25 questions, dossier hash-stamped (sha ccb1456c...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-018",
+"items": [
+"25 questions, dossier hash-stamped (sha 355332d6...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-019",
+"items": [
+"25 questions, dossier hash-stamped (sha 2c1b345f...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-020",
+"items": [
+"25 questions, dossier hash-stamped (sha 9d4728ab...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-021",
+"items": [
+"25 questions, dossier hash-stamped (sha a113511b...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-022",
+"items": [
+"25 questions, dossier hash-stamped (sha 1d4d8027...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-023",
+"items": [
+"25 questions, dossier hash-stamped (sha 650726ed...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-024",
+"items": [
+"25 questions, dossier hash-stamped (sha b72b7117...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-025",
+"items": [
+"25 questions, dossier hash-stamped (sha 31be07b7...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-026",
+"items": [
+"25 questions, dossier hash-stamped (sha 9e48e4ac...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-027",
+"items": [
+"25 questions, dossier hash-stamped (sha 57bc5b6e...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-028",
+"items": [
+"25 questions, dossier hash-stamped (sha b5c6bab0...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-029",
+"items": [
+"25 questions, dossier hash-stamped (sha d04d40ef...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-030",
+"items": [
+"25 questions, dossier hash-stamped (sha 6f757ac3...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-031",
+"items": [
+"25 questions, dossier hash-stamped (sha b1122cc8...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-032",
+"items": [
+"25 questions, dossier hash-stamped (sha aa8ddcb5...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-033",
+"items": [
+"25 questions, dossier hash-stamped (sha 10a19632...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-034",
+"items": [
+"25 questions, dossier hash-stamped (sha 702fcdac...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-035",
+"items": [
+"25 questions, dossier hash-stamped (sha 9a7792ea...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-036",
+"items": [
+"25 questions, dossier hash-stamped (sha 1cb88c50...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-037",
+"items": [
+"25 questions, dossier hash-stamped (sha 05fe72cd...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-038",
+"items": [
+"25 questions, dossier hash-stamped (sha ea2113eb...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-039",
+"items": [
+"25 questions, dossier hash-stamped (sha 25bdeb73...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-040",
+"items": [
+"25 questions, dossier hash-stamped (sha ca871731...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-041",
+"items": [
+"25 questions, dossier hash-stamped (sha e640d09d...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-042",
+"items": [
+"25 questions, dossier hash-stamped (sha f70bea55...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-043",
+"items": [
+"25 questions, dossier hash-stamped (sha ac0960d1...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-044",
+"items": [
+"25 questions, dossier hash-stamped (sha e22dffdc...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-045",
+"items": [
+"25 questions, dossier hash-stamped (sha 0c4eb2dd...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-046",
+"items": [
+"25 questions, dossier hash-stamped (sha 95e6ddf8...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-047",
+"items": [
+"25 questions, dossier hash-stamped (sha e4eb5897...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-048",
+"items": [
+"25 questions, dossier hash-stamped (sha 0971c5a4...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-049",
+"items": [
+"25 questions, dossier hash-stamped (sha d2e2540f...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-050",
+"items": [
+"25 questions, dossier hash-stamped (sha 5fd48b27...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-051",
+"items": [
+"25 questions, dossier hash-stamped (sha 130c6700...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-052",
+"items": [
+"25 questions, dossier hash-stamped (sha 2712efcf...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-053",
+"items": [
+"25 questions, dossier hash-stamped (sha 5c458eb4...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-054",
+"items": [
+"25 questions, dossier hash-stamped (sha 15e86f7a...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-055",
+"items": [
+"25 questions, dossier hash-stamped (sha 9dee1a76...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-056",
+"items": [
+"25 questions, dossier hash-stamped (sha 3860de99...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-057",
+"items": [
+"25 questions, dossier hash-stamped (sha b09184c0...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-058",
+"items": [
+"25 questions, dossier hash-stamped (sha 4ea53178...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-059",
+"items": [
+"25 questions, dossier hash-stamped (sha 0aabeeca...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced FB2026-10-25-060",
+"items": [
+"21 questions, dossier hash-stamped (sha 2123eae7...); written blind to market prices"
+],
+"kind": "ledger"
+}
+]
+},
+{
+"date": "2026-10-24",
+"entries": [
+{
+"title": "EPL match model v1 -> v2 (user-directed session, not an autopilot run)",
+"items": [
+"Why: the MW8 miss review (Villa 2-1 City after a 53% away pick; Ipswich 1-1 after a 53% home pick) surfaced three STRUCTURAL blind spots in v1 \u2014 it did not re-tune on those two results (single results never move parameters; calibration ...",
+"v2 changes: (scripts/epl_matches.py, prospective from MW9; model_version ledger column says which model made each",
+"Schema extension (append-only law kept): 10 trailing columns added to matches_ledger.csv (model_version, market_*, congestion_*); the 10 existing MW8 rows got trailing commas only \u2014 no cell edited, MW8 sha 30f52b28... intact, anchor hashes ...",
+"MW9 pre-registered with v2: (10 matches, freeze 2026-10-24, sha c7640d3c...): all kickoffs future at run time; market columns filled for 10/10 (overround 2.4-5.5%); congestion flags from the EFL Cup R4 midweek Oct 27-29 (UEFA calendar ...",
+"MW8 untouched: \u2014 resolves in Monday's autopilot run as pre-registered, scored under v1.",
+"AUTOPILOT.md: matchweek steps rewritten for v2 (context file -> pre-register -> re-score with skill table)."
+],
+"kind": "run"
+},
+{
+"title": "Pre-registered Premier League matchweek 9",
+"items": [
+"10 fixtures, probabilities locked before kickoff (sha c7640d3c...)"
+],
+"kind": "ledger"
+}
+]
+},
+{
+"date": "2026-10-23",
+"entries": [
+{
+"title": "no signals moved",
+"items": [
+"Polls admitted: none. Wikipedia vote-share tables match configs exactly \u2014 UP (4 polls, newest Matrize 29-Sep), PB (4, newest SCORE 15-Oct), UK (3, newest Times Now Navbharat 13-Sep).",
+"Tripwires fired: none.",
+"Flags: PB2027 new-entrant flag (WPD/Amritpal Singh) unchanged \u2014 active; latest datum 8.5% (SCORE, 15-Oct), no fade.",
+"Re-runs: none (no admission, no fire, no flag change). Republish: no.",
+"Flagged for user, not acted on: (1) SAD-BJP alliance talks \u2014 if confirmed, PB2027 needs a re-bloc (tau transfer) and re-run; watch closely. (2) WPD's ECI registration denial could force its candidates to run as Independents \u2014 the flag ..."
+],
+"kind": "run"
+},
+{
+"title": "engine upgrade (user-directed session, not an autopilot run)",
+"items": [
+"Scoring layer added: (scripts/score.py): Brier + log for EVERY resolved pre-registered probability (WATCH rows included), calibration table, model-vs-market skill table (locked in at n=0; first datum when USMID2026 resolves 2026-11-03). ...",
+"Fixture-level EPL model: (scripts/epl_matches.py + epl_resolve.py): shrunk-PPG (k=12) Poisson with stated priors (C=1.5 goals/PPG pt, home +0.35, \u03bc=2.75). Feed: fixturedownload.com epl-2026 (recomputed table cross-checked vs config MD7 ...",
+"Resolution criteria: added to all 6 live configs (resolution object: source, edge-case rules, resolve_by \u2014 EPL points-deduction rule, US Senate caucusing rule, CWC shared-trophy rule, India freeze-time-bloc rule). ...",
+"App: Brier tile + collapsible calibration panel + Matches chip/section + resolution-criteria blocks; republished (artifact v4). AUTOPILOT.md extended: EPL resolve \u2192 pre-register \u2192 re-score steps in the Monday run; resolution-criteria hard ..."
+],
+"kind": "run"
+},
+{
+"title": "Pre-registered Punjab Assembly 2027",
+"items": [
+"11 question probabilities hash-stamped (dual gate: model + corrected polls); all verdicts WATCH - gate not cleared"
+],
+"kind": "ledger"
+},
+{
+"title": "Pre-registered Uttarakhand Assembly 2027",
+"items": [
+"8 question probabilities hash-stamped (dual gate: model + corrected polls); 1 certified CALL issued"
+],
+"kind": "ledger"
+},
+{
+"title": "Re-registered Uttar Pradesh Assembly 2027",
+"items": [
+"10 probabilities re-hashed; no verdict changed"
+],
+"kind": "ledger"
+},
+{
+"title": "Pre-registered Cricket World Cup 2027",
+"items": [
+"3 question probabilities hash-stamped (market + model gate); 1 certified CALL issued"
+],
+"kind": "ledger"
+},
+{
+"title": "Pre-registered Premier League Winner 2026-27",
+"items": [
+"5 question probabilities hash-stamped (market + model gate); 2 certified CALLs issued"
+],
+"kind": "ledger"
+},
+{
+"title": "Pre-registered US Midterm Elections 2026",
+"items": [
+"3 question probabilities hash-stamped (market + model gate); all verdicts WATCH - gate not cleared"
+],
+"kind": "ledger"
+},
+{
+"title": "Pre-registered Premier League matchweek 8",
+"items": [
+"10 fixtures, probabilities locked before kickoff (sha 30f52b28...)"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced Cricket World Cup 2027",
+"items": [
+"3 questions, dossier hash-stamped (sha 25b8da7d...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced Premier League Winner 2026-27",
+"items": [
+"5 questions, dossier hash-stamped (sha 97f4ad68...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced Uttar Pradesh Assembly 2027",
+"items": [
+"1 question, dossier hash-stamped (sha 01fb5737...); written blind to market prices"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced US Midterm Elections 2026",
+"items": [
+"3 questions, dossier hash-stamped (sha 219c6a66...); written blind to market prices"
+],
+"kind": "ledger"
+}
+]
+},
+{
+"date": "2026-10-16",
+"entries": [
+{
+"title": "Pre-registered Assam Legislative Assembly 2026 (holdout)",
+"items": [
+"8 question probabilities hash-stamped (dual gate: model + corrected polls); 1 certified CALL issued; inputs frozen 2026-03-16"
+],
+"kind": "ledger"
+},
+{
+"title": "Scored Assam Legislative Assembly 2026 (holdout)",
+"items": [
+"8 probabilities scored at resolution; calls 1/1 right; result date 2026-05-04, forecast frozen 2026-03-16 from pre-election data only"
+],
+"kind": "ledger"
+},
+{
+"title": "Pre-registered Kerala Legislative Assembly 2026 (holdout)",
+"items": [
+"8 question probabilities hash-stamped (dual gate: model + corrected polls); 3 certified CALLs issued; inputs frozen 2026-03-16"
+],
+"kind": "ledger"
+},
+{
+"title": "Scored Kerala Legislative Assembly 2026 (holdout)",
+"items": [
+"8 probabilities scored at resolution; calls 3/3 right; result date 2026-05-04, forecast frozen 2026-03-16 from pre-election data only"
+],
+"kind": "ledger"
+},
+{
+"title": "Pre-registered Tamil Nadu Legislative Assembly 2026 (holdout)",
+"items": [
+"8 question probabilities hash-stamped (dual gate: model + corrected polls); 4 certified CALLs issued; inputs frozen 2026-03-26"
+],
+"kind": "ledger"
+},
+{
+"title": "Scored Tamil Nadu Legislative Assembly 2026 (holdout)",
+"items": [
+"8 probabilities scored at resolution; calls 1/4 right; result date 2026-05-04, forecast frozen 2026-03-26 from pre-election data only"
+],
+"kind": "ledger"
+},
+{
+"title": "Pre-registered Uttar Pradesh Assembly 2027",
+"items": [
+"10 question probabilities hash-stamped (dual gate: model + corrected polls); 4 certified CALLs issued"
+],
+"kind": "ledger"
+},
+{
+"title": "Pre-registered West Bengal Legislative Assembly 2026 (holdout)",
+"items": [
+"11 question probabilities hash-stamped (dual gate: model + corrected polls); 1 certified CALL issued; inputs frozen 2026-03-26"
+],
+"kind": "ledger"
+},
+{
+"title": "Scored West Bengal Legislative Assembly 2026 (holdout)",
+"items": [
+"11 probabilities scored at resolution; calls 1/1 right; result date 2026-05-04, forecast frozen 2026-03-26 from pre-election data only"
+],
+"kind": "ledger"
+}
+]
+}
+],
+"elections": [
+{
+"id": "CWC2027",
+"state": "Cricket World Cup 2027",
+"st": "",
+"year": 2027,
+"status": "live",
+"domain": "Cricket",
+"title": "Cricket World Cup 2027",
+"freeze": "2026-10-23",
+"blocs": [
+{
+"name": "India",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": 0.315,
+"p_model": 0.3988
+},
+{
+"name": "Australia",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": 0.205,
+"p_model": 0.0785
+},
+{
+"name": "New Zealand",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": null,
+"p_model": 0.1884
+},
+{
+"name": "South Africa",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": 0.14,
+"p_model": 0.1467
+},
+{
+"name": "England",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": 0.14,
+"p_model": 0.0255
+},
+{
+"name": "Pakistan",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": null,
+"p_model": 0.089
+},
+{
+"name": "Sri Lanka",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": null,
+"p_model": 0.0327
+},
+{
+"name": "Afghanistan",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": null,
+"p_model": 0.0289
+}
+],
+"questions": [
+{
+"q": "India win the World Cup",
+"p2": 0.4,
+"p3": 0.32,
+"verdict": "WATCH",
+"outcome": null,
+"correct": null
+},
+{
+"q": "Winner in {India, Australia, South Africa, England}",
+"p2": 0.65,
+"p3": 0.8,
+"verdict": "WATCH",
+"outcome": null,
+"correct": null
+},
+{
+"q": "Winner from current ICC top 8",
+"p2": 0.99,
+"p3": 0.8,
+"verdict": "CALL-YES",
+"outcome": null,
+"correct": null
+}
+],
+"flags": [
+"13 months to resolution - the engine's instruments are at their weakest this far out; expect WATCH on anything sharp.",
+"Instruments openly disagree on England: the market makes them 3rd favourite (7.0) while ICC ratings rank them 8th. That divergence is the product, not a bug.",
+"Bookmaker odds snapshot is undated; Manifold is thin (~1.8k traded). Market instrument is low-grade and treated as such.",
+"Model is championship-share by rating, not a tournament simulation - format (14 teams, SA/Zim/Namibia, Oct-Nov 2027) not yet modeled.",
+"Market instrument prices only 4 teams, so its probability for any wider set (e.g. 'top 8') is a FLOOR, not an estimate - the true market number is higher. Gate verdicts are unaffected (floor only makes the gate more conservative)."
+],
+"tripwires": [
+{
+"effect": "re-run with fresh market",
+"watch": "Major books publish dated outrights (closer to tournament)"
+},
+{
+"effect": "re-run",
+"watch": "ICC ratings shift 5+ points for any contender"
+},
+{
+"effect": "upgrade model to group-stage simulation",
+"watch": "Tournament draw/format announced"
+}
+],
+"resolution": {
+"resolve_by": "2027-12-31",
+"rules": [
+"Winner = team awarded the trophy per ICC official result, including a final decided by DLS or a super over",
+"Shared trophy (final abandoned with no reserve-day result): every 'X wins' question resolves YES for each co-champion; set-membership questions resolve YES if any co-champion is in the set",
+"'Winner from current ICC top 8' resolves against the eight teams named in the question's entity list at freeze (2026-10-22 ratings), not the ratings at tournament time",
+"Tournament cancelled or not completed with no trophy awarded = VOID, logged and excluded from scoring"
+],
+"source": "ICC official result of the Cricket World Cup 2027 final (icc-cricket.com), expected 2027-11"
+},
+"sha": "28ec5057d15456dbab488398ca2d7bf134965985d2e20aa51a089b060e5f6817",
+"instruments": {
+"market_source": "OLBG bookmaker outrights (undated, 2026) averaged with Manifold prediction market (~1.8k traded)",
+"model_note": "P(champion) proportional to exp(rating/tau), tau=8 rating points (stated prior, not fitted); hosts South Africa get +3 rating home bonus (stated prior)",
+"research_sha256": "25b8da7d3c753956024e1925799438363e1b35ca628b359740979d10012b8a46"
+},
+"resolve_date": "2027-11"
+},
+{
+"id": "GA2027",
+"state": "Goa",
+"st": "GA",
+"year": 2027,
+"status": "nodata",
+"title": "Goa Assembly 2027",
+"freeze": null,
+"blocs": [],
+"questions": [],
+"flags": [
+"Goa is outside the N=46 dataset (small-state exclusion). Needs baseline ingestion and a small-state sigma estimate."
+],
+"tripwires": [],
+"sha": null
+},
+{
+"id": "GJ2027",
+"state": "Gujarat",
+"st": "GJ",
+"year": 2027,
+"status": "nodata",
+"title": "Gujarat Assembly 2027",
+"freeze": null,
+"blocs": [],
+"questions": [],
+"flags": [
+"No constituency-level 2022 baseline in the dataset yet (only hand-entered official tallies). Ingest GJ2022 AC-level results to unlock."
+],
+"tripwires": [],
+"sha": null
+},
+{
+"id": "HP2027",
+"state": "Himachal Pradesh",
+"st": "HP",
+"year": 2027,
+"status": "nodata",
+"title": "Himachal Pradesh Assembly 2027",
+"freeze": null,
+"blocs": [],
+"questions": [],
+"flags": [
+"No constituency-level 2022 baseline in the dataset yet. Ingest HP2022 AC-level results to unlock."
+],
+"tripwires": [],
+"sha": null
+},
+{
+"id": "MN2027",
+"state": "Manipur",
+"st": "MN",
+"year": 2027,
+"status": "nodata",
+"title": "Manipur Assembly 2027",
+"freeze": null,
+"blocs": [],
+"questions": [],
+"flags": [
+"Manipur is outside the N=46 dataset. Needs baseline ingestion; 2022 baseline predates current political realignment."
+],
+"tripwires": [],
+"sha": null
+},
+{
+"id": "EPLMW08",
+"state": "Premier League",
+"st": "",
+"year": 2027,
+"status": "resolved-forward",
+"domain": "Football",
+"kind": "matches",
+"title": "Premier League 2026-27 \u00b7 Matchweek 8",
+"freeze": "2026-10-23",
+"blocs": [],
+"questions": [],
+"matches": [
+{
+"home": "Ipswich",
+"away": "Nott'm Forest",
+"date": "2026-10-23",
+"pH": 0.53,
+"pD": 0.24,
+"pA": 0.23,
+"outcome": "D",
+"brier": 0.912,
+"fav_hit": false
+},
+{
+"home": "Aston Villa",
+"away": "Man City",
+"date": "2026-10-24",
+"pH": 0.23,
+"pD": 0.24,
+"pA": 0.53,
+"outcome": "H",
+"brier": 0.935,
+"fav_hit": false
+},
+{
+"home": "Coventry",
+"away": "Fulham",
+"date": "2026-10-24",
+"pH": 0.47,
+"pD": 0.25,
+"pA": 0.28,
+"outcome": "A",
+"brier": 0.806,
+"fav_hit": false
+},
+{
+"home": "Arsenal",
+"away": "Everton",
+"date": "2026-10-24",
+"pH": 0.6,
+"pD": 0.22,
+"pA": 0.17,
+"outcome": "H",
+"brier": 0.235,
+"fav_hit": true
+},
+{
+"home": "Chelsea",
+"away": "Spurs",
+"date": "2026-10-24",
+"pH": 0.59,
+"pD": 0.23,
+"pA": 0.19,
+"outcome": "A",
+"brier": 1.056,
+"fav_hit": false
+},
+{
+"home": "Man Utd",
+"away": "Bournemouth",
+"date": "2026-10-25",
+"pH": 0.47,
+"pD": 0.25,
+"pA": 0.28,
+"outcome": "A",
+"brier": 0.806,
+"fav_hit": false
+},
+{
+"home": "Liverpool",
+"away": "Brighton",
+"date": "2026-10-25",
+"pH": 0.38,
+"pD": 0.26,
+"pA": 0.36,
+"outcome": "H",
+"brier": 0.582,
+"fav_hit": true
+},
+{
+"home": "Hull",
+"away": "Brentford",
+"date": "2026-10-25",
+"pH": 0.44,
+"pD": 0.25,
+"pA": 0.31,
+"outcome": "D",
+"brier": 0.845,
+"fav_hit": false
+},
+{
+"home": "Crystal Palace",
+"away": "Newcastle",
+"date": "2026-10-25",
+"pH": 0.44,
+"pD": 0.25,
+"pA": 0.31,
+"outcome": "A",
+"brier": 0.727,
+"fav_hit": false
+},
+{
+"home": "Sunderland",
+"away": "Leeds",
+"date": "2026-10-25",
+"pH": 0.34,
+"pD": 0.25,
+"pA": 0.4,
+"outcome": "D",
+"brier": 0.834,
+"fav_hit": false
+}
+],
+"mw_summary": {
+"n": 10,
+"brier3": 0.774,
+"fav_hits": 2
+},
+"flags": [
+"Single-instrument model forecasts (shrunk-PPG Poisson, stated priors): scored on Brier/log, never gate-CALLed.",
+"Three-way Brier scale 0-2; uniform guess scores 0.667."
+],
+"tripwires": [],
+"resolution": {
+"source": "fixturedownload.com epl-2026 feed final score; league result after 90min+stoppage; abandoned match resolves on the completed restaging; awarded/forfeited results count as the official score",
+"rules": []
+},
+"sha": "30f52b284879f092d1a1cd75c7278baeafc4abeb2c9ab0d482a6e57d16511c03"
+},
+{
+"id": "EPLMW09",
+"state": "Premier League",
+"st": "",
+"year": 2027,
+"status": "live",
+"domain": "Football",
+"kind": "matches",
+"title": "Premier League 2026-27 \u00b7 Matchweek 9",
+"freeze": "2026-10-24",
+"blocs": [],
+"questions": [],
+"matches": [
+{
+"home": "Chelsea",
+"away": "Man Utd",
+"date": "2026-10-31",
+"pH": 0.45,
+"pD": 0.25,
+"pA": 0.29,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Bournemouth",
+"away": "Leeds",
+"date": "2026-10-31",
+"pH": 0.44,
+"pD": 0.25,
+"pA": 0.31,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Brentford",
+"away": "Nott'm Forest",
+"date": "2026-10-31",
+"pH": 0.6,
+"pD": 0.22,
+"pA": 0.18,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Coventry",
+"away": "Sunderland",
+"date": "2026-10-31",
+"pH": 0.41,
+"pD": 0.25,
+"pA": 0.34,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Hull",
+"away": "Ipswich",
+"date": "2026-10-31",
+"pH": 0.46,
+"pD": 0.25,
+"pA": 0.29,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Man City",
+"away": "Brighton",
+"date": "2026-10-31",
+"pH": 0.69,
+"pD": 0.19,
+"pA": 0.11,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Spurs",
+"away": "Crystal Palace",
+"date": "2026-10-31",
+"pH": 0.41,
+"pD": 0.25,
+"pA": 0.33,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Aston Villa",
+"away": "Fulham",
+"date": "2026-10-31",
+"pH": 0.59,
+"pD": 0.23,
+"pA": 0.19,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Liverpool",
+"away": "Arsenal",
+"date": "2026-11-01",
+"pH": 0.22,
+"pD": 0.24,
+"pA": 0.55,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Newcastle",
+"away": "Everton",
+"date": "2026-11-02",
+"pH": 0.42,
+"pD": 0.25,
+"pA": 0.33,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+}
+],
+"mw_summary": null,
+"flags": [
+"Single-instrument model forecasts (shrunk-PPG Poisson, stated priors): scored on Brier/log, never gate-CALLed.",
+"Three-way Brier scale 0-2; uniform guess scores 0.667."
+],
+"tripwires": [],
+"resolution": {
+"source": "fixturedownload.com epl-2026 feed final score; league result after 90min+stoppage; abandoned match resolves on the completed restaging; awarded/forfeited results count as the official score",
+"rules": []
+},
+"sha": "c7640d3cd162c3565e4f03e2c74a52d174ffc50df713f59af6c0ac7807dcd7e5"
+},
+{
+"id": "EPL2027",
+"state": "Premier League Winner 2026-27",
+"st": "",
+"year": 2027,
+"status": "live",
+"domain": "Football",
+"title": "Premier League Winner 2026-27",
+"freeze": "2026-10-26",
+"blocs": [
+{
+"name": "Arsenal",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": 0.6103,
+"p_model": 0.4627
+},
+{
+"name": "Man City",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": 0.1868,
+"p_model": 0.4802
+},
+{
+"name": "Chelsea",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": 0.0849,
+"p_model": 0.0025
+},
+{
+"name": "Brighton",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": 0.0549,
+"p_model": 0.0362
+},
+{
+"name": "Liverpool",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": 0.0445,
+"p_model": 0.0162
+},
+{
+"name": "Aston Villa",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": null,
+"p_model": 0.0007
+},
+{
+"name": "Brentford",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": null,
+"p_model": 0.0004
+},
+{
+"name": "Everton",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": null,
+"p_model": 0.0003
+}
+],
+"questions": [
+{
+"q": "Winner in {Man City, Arsenal}",
+"p2": 0.94,
+"p3": 0.8,
+"verdict": "WATCH",
+"outcome": null,
+"correct": null
+},
+{
+"q": "Liverpool win the title",
+"p2": 0.02,
+"p3": 0.04,
+"verdict": "CALL-NO",
+"outcome": null,
+"correct": null
+},
+{
+"q": "Man City win the title",
+"p2": 0.48,
+"p3": 0.19,
+"verdict": "WATCH",
+"outcome": null,
+"correct": null
+},
+{
+"q": "Arsenal win the title",
+"p2": 0.46,
+"p3": 0.61,
+"verdict": "WATCH",
+"outcome": null,
+"correct": null
+},
+{
+"q": "Winner from current top 5",
+"p2": 1.0,
+"p3": 0.98,
+"verdict": "CALL-YES",
+"outcome": null,
+"correct": null
+}
+],
+"flags": [
+"THE DISAGREEMENT, DECODED (2026-10-23): the market favours Arsenal while our table model favours City - and it is not just stale odds. Polymarket prices a City POINTS DEDUCTION by June 2027 at 74.5% (charges verdict pending). Our model simulates the table as it stands and cannot see sanction risk; the market can. Until the verdict, the title race is genuinely open and this forecast stays WATCH.",
+"Market odds (2026-10-20) predate MW8, where City lost at Villa and Arsenal drew level on points (both 21 at MD8); the model sees the MD8 table the market has not priced. Timing gap noted 2026-10-26.",
+"Model simulates teams independently vs average opposition - no fixture list, no injuries, no schedule strength. It is a deliberate coarse instrument; 7 games of evidence get heavy regression to the mean.",
+"Reference point (not an instrument): Opta supercomputer after MD5 had Arsenal 43.7%, City 39.8%."
+],
+"tripwires": [
+{
+"effect": "re-run immediately; a points deduction reshapes the entire title race",
+"watch": "Man City charges verdict announced (deduction market at 74.5% on 2026-10-23)"
+},
+{
+"effect": "re-run with current market",
+"watch": "Fresh dated outright odds published"
+},
+{
+"effect": "re-run",
+"watch": "Title race gap changes by 6+ points"
+}
+],
+"resolution": {
+"resolve_by": "2027-06-15",
+"rules": [
+"Champion = club ranked 1st in the final OFFICIAL table, including any points deductions, awarded results or sanctions applied before the table is confirmed (points-deduction rule: the sanctioned table is the real table)",
+"'Winner from current top 5' resolves against the five clubs named in the question's entity list at freeze, not whoever is top-5 later",
+"If the season is curtailed, rows resolve on the league's official champion declaration (incl. a PPG-decided table); no champion declared = VOID, logged and excluded from scoring",
+"A title stripped retroactively AFTER first confirmation of the final table does not change resolution"
+],
+"source": "Final official 2026-27 Premier League table (premierleague.com/tables) after the last matchday (~2027-05)"
+},
+"sha": "7432664089859633a3611c4191b10f5a6428d3da51e3f71a816be94fced23e27",
+"instruments": {
+"market_source": "Bookmaker outright odds, TNT Sports comparison dated 2026-10-20 13:50 BST, best price across bet365/BetMGM/Ladbrokes/William Hill/Betfred - PREDATES MW8 (City lost to Villa 24-Oct); staleness flagged",
+"model_note": "strength = games-played-shrunk PPG (k=12 prior games to league mean 1.37), fixed draw rate 0.24, 31 remaining games simulated independently, title by points then GD noise",
+"research_sha256": "97f4ad6849a78680a162dbb9ff73bd885dbb0d158bc680bf228bd934189e6f30"
+},
+"resolve_date": "2027-05"
+},
+{
+"id": "PB2027",
+"state": "Punjab",
+"st": "PB",
+"year": 2027,
+"status": "live",
+"title": "Punjab Assembly 2027",
+"freeze": "2026-10-23",
+"blocs": [
+{
+"name": "AAP",
+"base": 42.31,
+"m2": 34.77,
+"m3": 34.0,
+"p5": 33,
+"med": 58,
+"p95": 81,
+"p_maj": 0.4831,
+"p_largest": 0.7502,
+"actual": null
+},
+{
+"name": "BJP",
+"base": 6.65,
+"m2": 12.25,
+"m3": 12.5,
+"p5": 2,
+"med": 9,
+"p95": 22,
+"p_maj": 0.0,
+"p_largest": 0.0013,
+"actual": null
+},
+{
+"name": "INC",
+"base": 23.14,
+"m2": 24.68,
+"m3": 28.75,
+"p5": 18,
+"med": 39,
+"p95": 65,
+"p_maj": 0.1054,
+"p_largest": 0.2468,
+"actual": null
+},
+{
+"name": "SAD",
+"base": 18.52,
+"m2": 16.17,
+"m3": 12.38,
+"p5": 2,
+"med": 9,
+"p95": 23,
+"p_maj": 0.0,
+"p_largest": 0.0017,
+"actual": null
+}
+],
+"questions": [
+{
+"q": "BJP is largest",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "WATCH-FLAG",
+"outcome": null,
+"correct": null
+},
+{
+"q": "Winner (largest) in {AAP, INC}",
+"p2": 0.99,
+"p3": 1.0,
+"verdict": "WATCH-FLAG",
+"outcome": null,
+"correct": null
+},
+{
+"q": "SAD under 20 seats",
+"p2": 0.73,
+"p3": 0.91,
+"verdict": "WATCH",
+"outcome": null,
+"correct": null
+},
+{
+"q": "BJP under 15 seats",
+"p2": 0.78,
+"p3": 0.81,
+"verdict": "WATCH",
+"outcome": null,
+"correct": null
+},
+{
+"q": "BJP wins majority",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "WATCH-FLAG",
+"outcome": null,
+"correct": null
+},
+{
+"q": "AAP is largest",
+"p2": 0.88,
+"p3": 0.75,
+"verdict": "WATCH",
+"outcome": null,
+"correct": null
+},
+{
+"q": "SAD wins majority",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "WATCH-FLAG",
+"outcome": null,
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.11,
+"p3": 0.25,
+"verdict": "WATCH",
+"outcome": null,
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.03,
+"p3": 0.11,
+"verdict": "WATCH",
+"outcome": null,
+"correct": null
+},
+{
+"q": "AAP wins majority",
+"p2": 0.59,
+"p3": 0.48,
+"verdict": "WATCH",
+"outcome": null,
+"correct": null
+},
+{
+"q": "SAD is largest",
+"p2": 0.01,
+"p3": 0.0,
+"verdict": "WATCH-FLAG",
+"outcome": null,
+"correct": null
+}
+],
+"flags": [
+"NEW-ENTRANT FLAG ACTIVE: Waris Punjab De (Amritpal Singh) polls 8.5-14% with no electoral baseline - the exact TVK/TN2026 pattern. All would-be CALLs are suppressed to WATCH-FLAG per the validated N=46 rule.",
+"All final-window polls are unrated agencies; two partisan-affiliated polls (Desh Ka Verdict/INC, Aapka Opinion/AAP) excluded - seat-only projections, no vote shares.",
+"Poll spread is extreme: AAP 27-38, SAD 6-19 across agencies in the same window.",
+"WPD is not a simulatable bloc (zero baseline): its 8-14% will come asymmetrically from AAP's and SAD's Panthic vote, which the uniform-swing Monte Carlo cannot represent."
+],
+"nef": {
+"entrant": "Akali Dal (Waris Punjab De) - Amritpal Singh",
+"evidence": "polling 8.5-14% (SCORE 8.5, People's Pulse 14) with zero presence in PB2022 baseline and GE2024; satisfies the N=46 rule 'serious contender invisible to both baseline AE and prior GE'. TN2026/TVK precedent: all CALLs suppressed to WATCH-FLAG.",
+"triggered": true
+},
+"tripwires": [
+{
+"effect": "fracture would invalidate all two-way simulations; fade would lift the flag and make the gate decidable",
+"watch": "WPD trajectory in later polls (toward 20%+ = TN2026 fracture pattern; fade below 5% = flag review)"
+},
+{
+"effect": "re-bloc and re-run with tau transfers",
+"watch": "Any SAD-BSP or SAD-WPD alliance formation"
+},
+{
+"effect": "M3 upgrades to rated sigma",
+"watch": "A rated agency (CVoter/CSDS/Axis) publishes a vote-share poll"
+},
+{
+"effect": "insider-flow signal; sustained one-way flow triggers re-run",
+"watch": "Ticket-season defection flows, net direction"
+}
+],
+"resolution": {
+"resolve_by": "2027-03-31",
+"rules": [
+"Bloc seat totals = sum of seats won by the member parties listed in `blocs` as composed at freeze; post-result defections, mergers and letters of support are ignored",
+"If an alliance splits BEFORE polling, a re-run forecast (new ledger rows) supersedes; these rows still resolve against freeze-time bloc composition",
+"'wins majority' = bloc seats >= 59 of 117 at first full declaration; countermanded/postponed seats count as not won unless they decide the question, in which case resolution waits for them",
+"'is largest' = strictly more seats than every other modeled bloc (independents and unmodeled parties are not blocs); an exact tie resolves NO for all blocs",
+"Seat-threshold questions resolve on the same official tally",
+"If the election is not held by 2027-12-31, rows resolve VOID: logged and excluded from scoring, never silently dropped"
+],
+"source": "Election Commission of India official results (results.eci.gov.in), party-wise seat tally at first full declaration of all 117 seats"
+},
+"sha": "b88aebe522fcb3f7573ca6b64965d7c69da5773d12eeb099f76d05af85ac2ee5"
+},
+{
+"id": "UP2027",
+"state": "Uttar Pradesh",
+"st": "UP",
+"year": 2027,
+"status": "live",
+"title": "Uttar Pradesh Assembly 2027",
+"freeze": "2026-10-16",
+"blocs": [
+{
+"name": "BSP",
+"base": 12.97,
+"m2": 11.35,
+"m3": 5.65,
+"p5": 0,
+"med": 2,
+"p95": 12,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": null
+},
+{
+"name": "INDIA",
+"base": 33.45,
+"m2": 38.03,
+"m3": 38.51,
+"p5": 94,
+"med": 187,
+"p95": 273,
+"p_maj": 0.3996,
+"p_largest": 0.411,
+"actual": null
+},
+{
+"name": "NDA",
+"base": 46.24,
+"m2": 45.21,
+"m3": 44.36,
+"p5": 127,
+"med": 212,
+"p95": 306,
+"p_maj": 0.575,
+"p_largest": 0.589,
+"actual": null
+}
+],
+"questions": [
+{
+"q": "Winner (largest) in {NDA, INDIA}",
+"p2": 1.0,
+"p3": 1.0,
+"verdict": "CALL-YES",
+"outcome": null,
+"correct": null
+},
+{
+"q": "INDIA at least 150 seats",
+"p2": 0.67,
+"p3": 0.73,
+"verdict": "WATCH",
+"outcome": null,
+"correct": null
+},
+{
+"q": "NDA at least 150 seats",
+"p2": 0.88,
+"p3": 0.87,
+"verdict": "WATCH",
+"outcome": null,
+"correct": null
+},
+{
+"q": "BSP under 25 seats",
+"p2": 0.96,
+"p3": 0.99,
+"verdict": "CALL-YES",
+"outcome": null,
+"correct": null
+},
+{
+"q": "BSP is largest",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": null,
+"correct": null
+},
+{
+"q": "NDA wins majority",
+"p2": 0.61,
+"p3": 0.57,
+"verdict": "WATCH",
+"outcome": null,
+"correct": null
+},
+{
+"q": "INDIA is largest",
+"p2": 0.36,
+"p3": 0.41,
+"verdict": "WATCH",
+"outcome": null,
+"correct": null
+},
+{
+"q": "INDIA wins majority",
+"p2": 0.34,
+"p3": 0.4,
+"verdict": "WATCH",
+"outcome": null,
+"correct": null
+},
+{
+"q": "NDA is largest",
+"p2": 0.64,
+"p3": 0.59,
+"verdict": "WATCH",
+"outcome": null,
+"correct": null
+},
+{
+"q": "BSP wins majority",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": null,
+"correct": null
+}
+],
+"flags": [
+"ALL four polls are from unrated agencies; none discloses methodology/sample/fieldwork dates (aitimeline.in audit, Sep 2026). M3 runs with inflated sigma and this forecast cannot upgrade to CALL on these polls alone.",
+"BSP polled range 0.8-11.0 pct across agencies - a 10-point spread on one party is a pollster-quality symptom, not information.",
+"INDIA bloc composition not final: SP-INC seat-sharing unresolved at freeze (INC demands ~150 seats, SP signals ~50)."
+],
+"nef": {},
+"tripwires": [
+{
+"effect": "INDIA loses tau x INC transfer (~1.2 pts) and opposition fragments further; NDA majority probability rises materially",
+"watch": "SP-INC seat-sharing collapses (INC exits or fights separately)"
+},
+{
+"effect": "M3 upgrades to rated sigma; gate becomes meaningfully decidable",
+"watch": "A rated agency (CVoter/CSDS-Lokniti/Axis) publishes a vote-share poll"
+},
+{
+"effect": "insider-flow signal; sustained one-way flow is grounds to re-run forecast",
+"watch": "Ticket-season defection flow (late 2026/early 2027), net direction weighted by defector quality"
+},
+{
+"effect": "changes Dalit-vote split assumptions; re-run with ASP as modeled entrant",
+"watch": "BSP-ASP(KR) dynamics: ASP contesting ~87 seats; any BSP-ASP tie-up or BSP revival sign"
+},
+{
+"effect": "freeze window formally ends; issue updated pre-registered forecast",
+"watch": "EC announces schedule / phase dates"
+}
+],
+"resolution": {
+"resolve_by": "2027-03-31",
+"rules": [
+"Bloc seat totals = sum of seats won by the member parties listed in `blocs` as composed at freeze; post-result defections, mergers and letters of support are ignored",
+"If an alliance splits BEFORE polling, a re-run forecast (new ledger rows) supersedes; these rows still resolve against freeze-time bloc composition",
+"'wins majority' = bloc seats >= 202 of 403 at first full declaration; countermanded/postponed seats count as not won unless they decide the question, in which case resolution waits for them",
+"'is largest' = strictly more seats than every other modeled bloc (independents and unmodeled parties are not blocs); an exact tie resolves NO for all blocs",
+"Seat-threshold questions (e.g. 'BSP under 25 seats') resolve on the same official tally",
+"If the election is not held by 2027-12-31, rows resolve VOID: logged and excluded from scoring, never silently dropped"
+],
+"source": "Election Commission of India official results (results.eci.gov.in), party-wise seat tally at first full declaration of all 403 seats"
+},
+"sha": "469c5e1394d7fc4cc3d4365a0abeefb1fa606b2e7a9269f104efc84f853b782b"
+},
+{
+"id": "UK2027",
+"state": "Uttarakhand",
+"st": "UK",
+"year": 2027,
+"status": "live",
+"title": "Uttarakhand Assembly 2027",
+"freeze": "2026-10-23",
+"blocs": [
+{
+"name": "BJP",
+"base": 44.72,
+"m2": 49.65,
+"m3": 42.95,
+"p5": 26,
+"med": 46,
+"p95": 61,
+"p_maj": 0.8094,
+"p_largest": 0.826,
+"actual": null
+},
+{
+"name": "BSP",
+"base": 4.87,
+"m2": 3.69,
+"m3": null,
+"p5": 0,
+"med": 2,
+"p95": 4,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": null
+},
+{
+"name": "INC",
+"base": 38.24,
+"m2": 36.24,
+"m3": 36.13,
+"p5": 9,
+"med": 24,
+"p95": 44,
+"p_maj": 0.174,
+"p_largest": 0.174,
+"actual": null
+}
+],
+"questions": [
+{
+"q": "BSP under 5 seats",
+"p2": 0.96,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": null,
+"correct": null
+},
+{
+"q": "BJP wins majority",
+"p2": 0.93,
+"p3": 0.81,
+"verdict": "WATCH",
+"outcome": null,
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.94,
+"p3": 0.83,
+"verdict": "WATCH",
+"outcome": null,
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.05,
+"p3": 0.17,
+"verdict": "WATCH",
+"outcome": null,
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.06,
+"p3": 0.17,
+"verdict": "WATCH",
+"outcome": null,
+"correct": null
+},
+{
+"q": "BSP wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": null,
+"correct": null
+},
+{
+"q": "BSP is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": null,
+"correct": null
+},
+{
+"q": "Winner (largest) in {BJP, INC}",
+"p2": 1.0,
+"p3": 1.0,
+"verdict": "CALL-YES",
+"outcome": null,
+"correct": null
+}
+],
+"flags": [
+"All three vote-share polls are unrated agencies and they disagree on the leader (Poll Mitra has INC ahead; TNN/Vote Vibe have BJP). Seat polls disagree even more (BJP 29-54 of 70).",
+"No AAP/UKD vote-share lines in any poll; both are treated as background others.",
+"M3 BSP line missing from all polls - BSP questions run effectively on M2 plus baseline."
+],
+"nef": {},
+"tripwires": [
+{
+"effect": "M3 upgrades to rated sigma",
+"watch": "A rated agency publishes a vote-share poll"
+},
+{
+"effect": "re-bloc and re-run",
+"watch": "Any INC-led opposition alliance (SP/ASP/AAP tie-ups)"
+},
+{
+"effect": "insider-flow signal; re-run",
+"watch": "CM-change or major defection news"
+}
+],
+"resolution": {
+"resolve_by": "2027-03-31",
+"rules": [
+"Bloc seat totals = sum of seats won by the member parties listed in `blocs` as composed at freeze; post-result defections, mergers and letters of support are ignored",
+"If an alliance splits BEFORE polling, a re-run forecast (new ledger rows) supersedes; these rows still resolve against freeze-time bloc composition",
+"'wins majority' = bloc seats >= 36 of 70 at first full declaration; countermanded/postponed seats count as not won unless they decide the question, in which case resolution waits for them",
+"'is largest' = strictly more seats than every other modeled bloc (independents and unmodeled parties are not blocs); an exact tie resolves NO for all blocs",
+"Seat-threshold questions resolve on the same official tally",
+"If the election is not held by 2027-12-31, rows resolve VOID: logged and excluded from scoring, never silently dropped"
+],
+"source": "Election Commission of India official results (results.eci.gov.in), party-wise seat tally at first full declaration of all 70 seats"
+},
+"sha": "65a214e65e05aec5d5fec8d87fc454075e113f049f91768c472534d285396359"
+},
+{
+"id": "AS2026",
+"state": "Assam",
+"st": "AS",
+"year": 2026,
+"status": "resolved-forward",
+"title": "Assam Legislative Assembly 2026 (holdout)",
+"freeze": "2026-03-16",
+"blocs": [
+{
+"name": "AIUDF",
+"base": 9.56,
+"m2": 6.17,
+"m3": null,
+"p5": 10,
+"med": 14,
+"p95": 19,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": null
+},
+{
+"name": "ASOM",
+"base": 33.25,
+"m2": 36.52,
+"m3": 38.6,
+"p5": 30,
+"med": 52,
+"p95": 77,
+"p_maj": 0.2227,
+"p_largest": 0.2227,
+"actual": null
+},
+{
+"name": "NDA",
+"base": 44.03,
+"m2": 45.28,
+"m3": 43.7,
+"p5": 49,
+"med": 74,
+"p95": 96,
+"p_maj": 0.7581,
+"p_largest": 0.7773,
+"actual": null
+}
+],
+"questions": [
+{
+"q": "AIUDF under 25 seats",
+"p2": 1.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "Winner (largest) in {NDA, ASOM}",
+"p2": 1.0,
+"p3": 1.0,
+"verdict": "CALL-YES",
+"outcome": "YES",
+"correct": true
+},
+{
+"q": "AIUDF is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "AIUDF wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "NDA wins majority",
+"p2": 0.65,
+"p3": 0.76,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "ASOM wins majority",
+"p2": 0.07,
+"p3": 0.22,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "NDA is largest",
+"p2": 0.82,
+"p3": 0.78,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "ASOM is largest",
+"p2": 0.18,
+"p3": 0.22,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [
+"Both pre-freeze polls are unrated agencies, published the day of the EC schedule announcement; M3 sigma 6.0.",
+"AIUDF has no poll column (lumped in Others) -> its questions are M3-blind (WATCH-NOPOLL) and the M3 seat sim excludes it, inflating NDA/ASOM M3 seat counts in AIUDF strongholds; min() gate partially protects.",
+"Freeze set to 2026-03-16 (T-24d, just after EC announcement) instead of strict T-28d (2026-03-12), same rationale as KL2026: the T-28 revision has empty poll tables. Decision made before seeing any result.",
+"Poll record read from the last pre-election frozen revision (2026-04-08); a 'Chanakya' row with no publication date was excluded (cannot verify pre-freeze).",
+"Opposition fragmentation (Raijor Dal and AIUDF outside ASOM, UPPL alone) is severe; baseline reblocking cannot capture local BTR seat deals"
+],
+"nef": {},
+"tripwires": [
+{
+"effect": "bloc structure changes; re-run",
+"watch": "ASOM-AIUDF or ASOM-Raijor Dal rapprochement before 9 Apr"
+}
+],
+"resolution": null,
+"sha": "fcc2a4cccb7d879c8eb29c3824f8898637e4bec25a0fd7a739492eb6237f63f0"
+},
+{
+"id": "KL2026",
+"state": "Kerala",
+"st": "KL",
+"year": 2026,
+"status": "resolved-forward",
+"title": "Kerala Legislative Assembly 2026 (holdout)",
+"freeze": "2026-03-16",
+"blocs": [
+{
+"name": "LDF",
+"base": 38.93,
+"m2": 37.28,
+"m3": 42.5,
+"p5": 45,
+"med": 74,
+"p95": 98,
+"p_maj": 0.5678,
+"p_largest": 0.6582,
+"actual": null
+},
+{
+"name": "NDA",
+"base": 12.89,
+"m2": 15.02,
+"m3": 12.5,
+"p5": 1,
+"med": 5,
+"p95": 15,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": null
+},
+{
+"name": "UDF",
+"base": 38.04,
+"m2": 40.36,
+"m3": 41.5,
+"p5": 36,
+"med": 60,
+"p95": 88,
+"p_maj": 0.2697,
+"p_largest": 0.3418,
+"actual": null
+}
+],
+"questions": [
+{
+"q": "LDF wins majority",
+"p2": 0.36,
+"p3": 0.57,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "LDF is largest",
+"p2": 0.48,
+"p3": 0.66,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "UDF wins majority",
+"p2": 0.41,
+"p3": 0.27,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "UDF is largest",
+"p2": 0.52,
+"p3": 0.34,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "NDA wins majority",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+},
+{
+"q": "NDA is largest",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+},
+{
+"q": "Winner (largest) in {LDF, UDF}",
+"p2": 1.0,
+"p3": 1.0,
+"verdict": "CALL-YES",
+"outcome": "YES",
+"correct": true
+},
+{
+"q": "NDA under 10 seats",
+"p2": 0.57,
+"p3": 0.81,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+}
+],
+"flags": [
+"ONE pre-freeze poll only (IANS-Matrize 15 Mar, unrated, n=12,015; midpoints of 42-43/41-42/12-13 ranges). M3 rests on a single unrated poll at sigma 6.0.",
+"Freeze set to 2026-03-16 (T-24d, just after the EC schedule announcement of 15 Mar) instead of strict T-28d (2026-03-12): the 12 Mar frozen revision has EMPTY poll tables and the only published pre-campaign poll is dated 15 Mar. Decision made before seeing any result. At strict T-28 this forecast would be poll-less.",
+"Poll record read from the last pre-election frozen revision (2026-04-08) because the 16 Mar revision's tables were still empty; only the poll PUBLISHED on/before freeze was admitted. Post-freeze polls (incl. rated CVoter 31 Mar) were visible in that revision but excluded.",
+"History note: Kerala has alternated LDF/UDF every election since 1982 except 2021; LDF seeks a third consecutive term."
+],
+"nef": {},
+"tripwires": [
+{
+"effect": "M3 upgrades to rated sigma (CVoter did publish 31 Mar - post-freeze, excluded)",
+"watch": "Rated CVoter/Axis pre-election poll"
+}
+],
+"resolution": null,
+"sha": "90764ecf26e7ebc4113b1ca31af7c2ecd71261fbb4a716f60f8751cc0c91a6b3"
+},
+{
+"id": "TN2026",
+"state": "Tamil Nadu",
+"st": "TN",
+"year": 2026,
+"status": "resolved-forward",
+"title": "Tamil Nadu Legislative Assembly 2026 (holdout)",
+"freeze": "2026-03-26",
+"blocs": [
+{
+"name": "NDA",
+"base": 41.5,
+"m2": 39.9,
+"m3": 40.67,
+"p5": 64,
+"med": 114,
+"p95": 164,
+"p_maj": 0.4497,
+"p_largest": 0.5103,
+"actual": null
+},
+{
+"name": "SPA",
+"base": 46.28,
+"m2": 47.48,
+"m3": 40.14,
+"p5": 62,
+"med": 112,
+"p95": 162,
+"p_maj": 0.4232,
+"p_largest": 0.4897,
+"actual": null
+},
+{
+"name": "TVK",
+"base": 0.0,
+"m2": 0.0,
+"m3": 13.07,
+"p5": 1,
+"med": 6,
+"p95": 24,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": null
+}
+],
+"questions": [
+{
+"q": "TVK is largest",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": "YES",
+"correct": false
+},
+{
+"q": "TVK under 40 seats",
+"p2": 1.0,
+"p3": 0.99,
+"verdict": "CALL-YES",
+"outcome": "NO",
+"correct": false
+},
+{
+"q": "Winner (largest) in {SPA, NDA}",
+"p2": 1.0,
+"p3": 1.0,
+"verdict": "CALL-YES",
+"outcome": "NO",
+"correct": false
+},
+{
+"q": "TVK wins majority",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+},
+{
+"q": "NDA is largest",
+"p2": 0.19,
+"p3": 0.51,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "NDA wins majority",
+"p2": 0.19,
+"p3": 0.45,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "SPA is largest",
+"p2": 0.81,
+"p3": 0.49,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "SPA wins majority",
+"p2": 0.79,
+"p3": 0.42,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [
+"ALL three pre-freeze polls are unrated agencies; Agni News Agency is an outlier/quality symptom (SPA 44.9 pct + '180+ seats' projection on a claimed n=101,643) but is kept mechanically - no cherry-picking at freeze.",
+"TVK (polling 10-15 pct) has zero AE/GE base: M2 cannot see it, and the vote it draws will shift both main blocs in ways the baseline-shift sim does not model. This election is a stress test of the engine's new-entrant blind spot.",
+"NTK (6.7 pct AE2021, 8.2 pct GE2024) contests all 234 alone but has no poll column (lumped in Others); not modeled as a bloc.",
+"Spellings: TMC(M) carries 0.95 at GE2024; AMMK below reporting threshold at GE2024 (contributes ~0)."
+],
+"nef": {},
+"tripwires": [
+{
+"effect": "bloc structure changes; re-run",
+"watch": "TVK alliance reversal (joins NDA or SPA)"
+},
+{
+"effect": "M3 upgrades to rated sigma",
+"watch": "A rated agency publishes vote shares before 23 Apr"
+}
+],
+"resolution": null,
+"sha": "f89b359c4d744747353f28b41204380740a84acb5408340c30c84aea30399725"
+},
+{
+"id": "USMID2026",
+"state": "US Midterm Elections 2026",
+"st": "",
+"year": 2026,
+"status": "live",
+"domain": "US elections",
+"title": "US Midterm Elections 2026",
+"freeze": "2026-10-26",
+"blocs": [
+{
+"name": "house_dem",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": 0.915,
+"p_model": null
+},
+{
+"name": "senate_dem",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": 0.645,
+"p_model": null
+},
+{
+"name": "house_rep",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": 0.085,
+"p_model": null
+}
+],
+"questions": [
+{
+"q": "Democrats win Senate majority",
+"p2": 0.55,
+"p3": 0.65,
+"verdict": "WATCH",
+"outcome": null,
+"correct": null
+},
+{
+"q": "Democrats win House majority",
+"p2": 0.97,
+"p3": 0.92,
+"verdict": "WATCH",
+"outcome": null,
+"correct": null
+},
+{
+"q": "Republicans keep House majority",
+"p2": 0.03,
+"p3": 0.09,
+"verdict": "WATCH",
+"outcome": null,
+"correct": null
+}
+],
+"flags": [
+"Resolves in 10 days - the fastest real-world test the world engine will get.",
+"Senate model is the race-level correlated Monte Carlo roll-up (USMIDRACES2026, scripts/usmid_races.py): 35 structural per-seat probits with one shared national error term. Candidate-blind by design.",
+"Model tipping-point (+2.5) is taken from published redistricting analyses, not fitted by us."
+],
+"tripwires": [
+{
+"effect": "re-run",
+"watch": "Generic-ballot average moves 3+ points before Nov 3"
+},
+{
+"effect": "re-run; dual gate may become decidable",
+"watch": "Polymarket House price crosses 0.95 either way"
+}
+],
+"resolution": {
+"resolve_by": "2027-01-03",
+"rules": [
+"House majority = party holding >= 218 of 435 seats per final certified results, NOT election-night leads; uncalled races resolve by their eventual certified winner",
+"Senate majority = party controlling the floor at seating, with independents counted toward the party they caucus with (caucusing rule); a 50-50 Senate resolves to the Vice President's party",
+"Rows resolve early, before 2027-01-03, if and when AP-called races put control beyond arithmetic dispute",
+"A seat vacant at seating (death/resignation after certification) counts for the party that won it",
+"Recounts and litigation: resolution waits for certified outcomes; no row resolves on a contested margin"
+],
+"source": "Official state certifications as aggregated by Associated Press race calls; control counted at the seating of the 120th Congress (2027-01-03)"
+},
+"sha": "a7ef9acc52c382120cc3cdea9cc55f61186d5fdac85d43f7b11fbf106945fb2c",
+"instruments": {
+"market_source": "Polymarket (gamma-api), fetched 2026-10-26 (which-party-will-win-the-house/senate-in-2026); senate_dem moved 0.675 -> 0.645 since 10-24",
+"model_note": "Silver Bulletin average D+9.1 (2026-10-23); prior D+8.9 (10-07); Pew D+8 (10-10), Reuters/Ipsos D+12 (10-20) consistent",
+"research_sha256": "219c6a66a8ea38432d1cc64cd36026d4517615c01297e8a13960b1b4f8fc715f"
+},
+"resolve_date": "2026-11-03",
+"races": [
+{
+"race_id": "GOV-ALABAMA",
+"state": "Alabama",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.0451,
+"p_model": 0.2167,
+"verdict": "WATCH",
+"disagreement": 0.1716,
+"inc_party": "R",
+"inc_running": "none",
+"note": "open, Ivey term-limited",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-MASSACHUSETT",
+"state": "Massachusetts",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.983,
+"p_model": 1.0,
+"verdict": "CALL-YES",
+"disagreement": 0.017,
+"inc_party": "D",
+"inc_running": "elected",
+"note": "Markey renominated",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-MAINE",
+"state": "Maine",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.645,
+"p_model": 0.9733,
+"verdict": "WATCH",
+"disagreement": 0.3283,
+"inc_party": "R",
+"inc_running": "elected",
+"note": "Collins vs Jackson (D); only R seat in Harris state",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-LOUISIANA",
+"state": "Louisiana",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.075,
+"p_model": 0.093,
+"verdict": "WATCH",
+"disagreement": 0.018,
+"inc_party": "R",
+"inc_running": "none",
+"note": "Cassidy lost renomination; Letlow (R) nominee",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-KENTUCKY",
+"state": "Kentucky",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.0284,
+"p_model": 0.0081,
+"verdict": "CALL-NO",
+"disagreement": 0.0203,
+"inc_party": "R",
+"inc_running": "none",
+"note": "open, McConnell retiring",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-KANSAS",
+"state": "Kansas",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.3869,
+"p_model": 0.1597,
+"verdict": "WATCH",
+"disagreement": 0.2272,
+"inc_party": "R",
+"inc_running": "elected",
+"note": "Marshall vs Hamilton (D); competitive",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-IOWA",
+"state": "Iowa",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.425,
+"p_model": 0.4199,
+"verdict": "WATCH",
+"disagreement": 0.0051,
+"inc_party": "R",
+"inc_running": "none",
+"note": "open, Ernst retiring; competitive",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-MICHIGAN",
+"state": "Michigan",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.705,
+"p_model": 0.9031,
+"verdict": "WATCH",
+"disagreement": 0.1981,
+"inc_party": "D",
+"inc_running": "none",
+"note": "open, Peters retiring; most competitive D-held",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-ILLINOIS",
+"state": "Illinois",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.9825,
+"p_model": 0.9979,
+"verdict": "CALL-YES",
+"disagreement": 0.0154,
+"inc_party": "D",
+"inc_running": "none",
+"note": "open, Durbin retiring",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-GEORGIA",
+"state": "Georgia",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.963,
+"p_model": 0.9476,
+"verdict": "WATCH",
+"disagreement": 0.0154,
+"inc_party": "D",
+"inc_running": "elected",
+"note": "Ossoff vs Collins (R)",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-FLORIDA-SP",
+"state": "Florida",
+"office": "senate",
+"seat": "special",
+"p_market": 0.085,
+"p_model": 0.3704,
+"verdict": "WATCH",
+"disagreement": 0.2854,
+"inc_party": "R",
+"inc_running": "appointed",
+"note": "Moody appointed to Rubio seat, running in special",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-DELAWARE",
+"state": "Delaware",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.9745,
+"p_model": 0.9999,
+"verdict": "CALL-YES",
+"disagreement": 0.0254,
+"inc_party": "D",
+"inc_running": "elected",
+"note": "Coons renominated",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-COLORADO",
+"state": "Colorado",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.99,
+"p_model": 0.9995,
+"verdict": "CALL-YES",
+"disagreement": 0.0095,
+"inc_party": "D",
+"inc_running": "elected",
+"note": "Hickenlooper renominated",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-ARKANSAS",
+"state": "Arkansas",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.049,
+"p_model": 0.0022,
+"verdict": "CALL-NO",
+"disagreement": 0.0468,
+"inc_party": "R",
+"inc_running": "elected",
+"note": "Cotton renominated",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-ALASKA",
+"state": "Alaska",
+"office": "senate",
+"seat": "class2",
+"p_market": null,
+"p_model": 0.2697,
+"verdict": "WATCH-1INST",
+"disagreement": null,
+"inc_party": "R",
+"inc_running": "elected",
+"note": "Sullivan vs Peltola (D); competitive",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-IDAHO",
+"state": "Idaho",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.0005,
+"p_model": 0.01,
+"verdict": "CALL-NO",
+"disagreement": 0.0095,
+"inc_party": "R",
+"inc_running": "elected",
+"note": "Risch; Dem nominee withdrew, independent main challenger",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-ALABAMA",
+"state": "Alabama",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.0125,
+"p_model": 0.0081,
+"verdict": "CALL-NO",
+"disagreement": 0.0044,
+"inc_party": "R",
+"inc_running": "none",
+"note": "open, Tuberville running for governor",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-MINNESOTA",
+"state": "Minnesota",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.8607,
+"p_model": 0.9779,
+"verdict": "WATCH",
+"disagreement": 0.1172,
+"inc_party": "D",
+"inc_running": "none",
+"note": "open, Smith retiring",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-MONTANA",
+"state": "Montana",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.0016,
+"p_model": 0.1457,
+"verdict": "WATCH",
+"disagreement": 0.1441,
+"inc_party": "R",
+"inc_running": "none",
+"note": "open, Daines retiring",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-VIRGINIA",
+"state": "Virginia",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.9825,
+"p_model": 0.9959,
+"verdict": "CALL-YES",
+"disagreement": 0.0134,
+"inc_party": "D",
+"inc_running": "elected",
+"note": "Warner; solid D",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-TEXAS",
+"state": "Texas",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.6313,
+"p_model": 0.3952,
+"verdict": "WATCH",
+"disagreement": 0.2361,
+"inc_party": "R",
+"inc_running": "none",
+"note": "Cornyn lost renomination; Paxton (R) vs Talarico (D)",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-TENNESSEE",
+"state": "Tennessee",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.0385,
+"p_model": 0.0032,
+"verdict": "CALL-NO",
+"disagreement": 0.0353,
+"inc_party": "R",
+"inc_running": "elected",
+"note": "Hagerty; solid R",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-SOUTHDAKOTA",
+"state": "South Dakota",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.0016,
+"p_model": 0.01,
+"verdict": "CALL-NO",
+"disagreement": 0.0084,
+"inc_party": "R",
+"inc_running": "elected",
+"note": "Rounds; Dem nominee withdrew, independent main challenger",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-SOUTHCAROLIN",
+"state": "South Carolina",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.204,
+"p_model": 0.1731,
+"verdict": "WATCH",
+"disagreement": 0.0309,
+"inc_party": "R",
+"inc_running": "appointed",
+"note": "Darline Graham (R) appointed after Lindsey Graham died 2026-07-11; running vs Andrews (D)",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-RHODEISLAND",
+"state": "Rhode Island",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.9845,
+"p_model": 0.9999,
+"verdict": "CALL-YES",
+"disagreement": 0.0154,
+"inc_party": "D",
+"inc_running": "elected",
+"note": "Reed; solid D",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-MISSISSIPPI",
+"state": "Mississippi",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.125,
+"p_model": 0.0314,
+"verdict": "WATCH",
+"disagreement": 0.0936,
+"inc_party": "R",
+"inc_running": "elected",
+"note": "Hyde-Smith; somewhat competitive",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-OREGON",
+"state": "Oregon",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.987,
+"p_model": 0.9999,
+"verdict": "CALL-YES",
+"disagreement": 0.0129,
+"inc_party": "D",
+"inc_running": "elected",
+"note": "Merkley renominated",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-OHIO-SP",
+"state": "Ohio",
+"office": "senate",
+"seat": "special",
+"p_market": 0.685,
+"p_model": 0.4645,
+"verdict": "WATCH",
+"disagreement": 0.2205,
+"inc_party": "R",
+"inc_running": "appointed",
+"note": "Husted appointed to Vance seat vs Brown (D)",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-NORTHCAROLIN",
+"state": "North Carolina",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.966,
+"p_model": 0.8578,
+"verdict": "WATCH",
+"disagreement": 0.1082,
+"inc_party": "R",
+"inc_running": "none",
+"note": "open, Tillis retiring; Cooper (D) favored",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-NEWMEXICO",
+"state": "New Mexico",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.9744,
+"p_model": 0.9962,
+"verdict": "CALL-YES",
+"disagreement": 0.0218,
+"inc_party": "D",
+"inc_running": "elected",
+"note": "Lujan renominated",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-NEWJERSEY",
+"state": "New Jersey",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.985,
+"p_model": 0.996,
+"verdict": "CALL-YES",
+"disagreement": 0.011,
+"inc_party": "D",
+"inc_running": "elected",
+"note": "Booker renominated",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-NEWHAMPSHIRE",
+"state": "New Hampshire",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.915,
+"p_model": 0.9667,
+"verdict": "WATCH",
+"disagreement": 0.0517,
+"inc_party": "D",
+"inc_running": "none",
+"note": "open, Shaheen retiring; competitive",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-NEBRASKA",
+"state": "Nebraska",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.0007,
+"p_model": 0.01,
+"verdict": "CALL-NO",
+"disagreement": 0.0093,
+"inc_party": "R",
+"inc_running": "elected",
+"note": "Ricketts vs Osborn (I); Dems endorsed Osborn, no Dem nominee",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-OKLAHOMA",
+"state": "Oklahoma",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.0186,
+"p_model": 0.0019,
+"verdict": "CALL-NO",
+"disagreement": 0.0167,
+"inc_party": "R",
+"inc_running": "none",
+"note": "open; interim appointee barred from running; Hern (R) vs Thomas (D)",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-WESTVIRGINIA",
+"state": "West Virginia",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.0175,
+"p_model": 0.0,
+"verdict": "CALL-NO",
+"disagreement": 0.0175,
+"inc_party": "R",
+"inc_running": "elected",
+"note": "Capito; solid R",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-WYOMING",
+"state": "Wyoming",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.0196,
+"p_model": 0.0495,
+"verdict": "CALL-NO",
+"disagreement": 0.0299,
+"inc_party": "R",
+"inc_running": "none",
+"note": "open, Gordon term-limited",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-VERMONT",
+"state": "Vermont",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.2477,
+"p_model": 0.988,
+"verdict": "WATCH",
+"disagreement": 0.7403,
+"inc_party": "R",
+"inc_running": "elected",
+"note": "Scott renominated; 2-year term",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-MAINE",
+"state": "Maine",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.9627,
+"p_model": 0.909,
+"verdict": "WATCH",
+"disagreement": 0.0537,
+"inc_party": "D",
+"inc_running": "none",
+"note": "open, Mills term-limited",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-KANSAS",
+"state": "Kansas",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.2576,
+"p_model": 0.5128,
+"verdict": "WATCH",
+"disagreement": 0.2552,
+"inc_party": "D",
+"inc_running": "none",
+"note": "open, Kelly term-limited",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-IOWA",
+"state": "Iowa",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.875,
+"p_model": 0.5778,
+"verdict": "WATCH",
+"disagreement": 0.2972,
+"inc_party": "R",
+"inc_running": "none",
+"note": "open, Reynolds retiring",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-ILLINOIS",
+"state": "Illinois",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.971,
+"p_model": 0.979,
+"verdict": "CALL-YES",
+"disagreement": 0.008,
+"inc_party": "D",
+"inc_running": "elected",
+"note": "Pritzker renominated",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-IDAHO",
+"state": "Idaho",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.0245,
+"p_model": 0.0553,
+"verdict": "WATCH",
+"disagreement": 0.0308,
+"inc_party": "R",
+"inc_running": "elected",
+"note": "Little renominated",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-HAWAII",
+"state": "Hawaii",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.9884,
+"p_model": 0.9968,
+"verdict": "CALL-YES",
+"disagreement": 0.0084,
+"inc_party": "D",
+"inc_running": "elected",
+"note": "Green renominated",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-MARYLAND",
+"state": "Maryland",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.977,
+"p_model": 0.9988,
+"verdict": "CALL-YES",
+"disagreement": 0.0218,
+"inc_party": "D",
+"inc_running": "elected",
+"note": "Moore renominated",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-GEORGIA",
+"state": "Georgia",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.615,
+"p_model": 0.7937,
+"verdict": "WATCH",
+"disagreement": 0.1787,
+"inc_party": "R",
+"inc_running": "none",
+"note": "open, Kemp term-limited",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-CONNECTICUT",
+"state": "Connecticut",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.968,
+"p_model": 0.9874,
+"verdict": "CALL-YES",
+"disagreement": 0.0194,
+"inc_party": "D",
+"inc_running": "elected",
+"note": "Lamont seeks third term",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-COLORADO",
+"state": "Colorado",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.9685,
+"p_model": 0.9414,
+"verdict": "WATCH",
+"disagreement": 0.0271,
+"inc_party": "D",
+"inc_running": "none",
+"note": "open, Polis term-limited",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-CALIFORNIA",
+"state": "California",
+"office": "governor",
+"seat": "regular",
+"p_market": null,
+"p_model": 0.9813,
+"verdict": "WATCH-1INST",
+"disagreement": null,
+"inc_party": "D",
+"inc_running": "none",
+"note": "open, Newsom term-limited",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-ARKANSAS",
+"state": "Arkansas",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.0296,
+"p_model": 0.1037,
+"verdict": "WATCH",
+"disagreement": 0.0741,
+"inc_party": "R",
+"inc_running": "elected",
+"note": "Sanders renominated",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-ARIZONA",
+"state": "Arizona",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.905,
+"p_model": 0.8653,
+"verdict": "WATCH",
+"disagreement": 0.0397,
+"inc_party": "D",
+"inc_running": "elected",
+"note": "Hobbs seeks re-election",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-ALASKA",
+"state": "Alaska",
+"office": "governor",
+"seat": "regular",
+"p_market": null,
+"p_model": 0.58,
+"verdict": "WATCH-1INST",
+"disagreement": null,
+"inc_party": "R",
+"inc_running": "none",
+"note": "open, Dunleavy term-limited; top-four primary",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-FLORIDA",
+"state": "Florida",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.1791,
+"p_model": 0.58,
+"verdict": "WATCH",
+"disagreement": 0.4009,
+"inc_party": "R",
+"inc_running": "none",
+"note": "open, DeSantis term-limited",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-WISCONSIN",
+"state": "Wisconsin",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.806,
+"p_model": 0.814,
+"verdict": "WATCH",
+"disagreement": 0.008,
+"inc_party": "D",
+"inc_running": "none",
+"note": "open, Evers retiring",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-MASSACHUSETT",
+"state": "Massachusetts",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.9625,
+"p_model": 0.9978,
+"verdict": "CALL-YES",
+"disagreement": 0.0353,
+"inc_party": "D",
+"inc_running": "elected",
+"note": "Healey renominated",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-MINNESOTA",
+"state": "Minnesota",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.956,
+"p_model": 0.8813,
+"verdict": "WATCH",
+"disagreement": 0.0747,
+"inc_party": "D",
+"inc_running": "none",
+"note": "open, Walz retiring",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-TEXAS",
+"state": "Texas",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.2941,
+"p_model": 0.3806,
+"verdict": "WATCH",
+"disagreement": 0.0865,
+"inc_party": "R",
+"inc_running": "elected",
+"note": "Abbott renominated",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-TENNESSEE",
+"state": "Tennessee",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.0447,
+"p_model": 0.2302,
+"verdict": "WATCH",
+"disagreement": 0.1855,
+"inc_party": "R",
+"inc_running": "none",
+"note": "open, Lee term-limited",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-SOUTHDAKOTA",
+"state": "South Dakota",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.0207,
+"p_model": 0.1973,
+"verdict": "WATCH",
+"disagreement": 0.1766,
+"inc_party": "R",
+"inc_running": "appointed",
+"note": "Rhoden succeeded Noem 2025, seeks full term",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-SOUTHCAROLIN",
+"state": "South Carolina",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.0663,
+"p_model": 0.4722,
+"verdict": "WATCH",
+"disagreement": 0.4059,
+"inc_party": "R",
+"inc_running": "none",
+"note": "open, McMaster term-limited",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-RHODEISLAND",
+"state": "Rhode Island",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.9876,
+"p_model": 0.9578,
+"verdict": "CALL-YES",
+"disagreement": 0.0298,
+"inc_party": "D",
+"inc_running": "none",
+"note": "McKee lost Dem renomination to Foulkes",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-PENNSYLVANIA",
+"state": "Pennsylvania",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.977,
+"p_model": 0.9065,
+"verdict": "WATCH",
+"disagreement": 0.0705,
+"inc_party": "D",
+"inc_running": "elected",
+"note": "Shapiro renominated",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-MICHIGAN",
+"state": "Michigan",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.9424,
+"p_model": 0.8064,
+"verdict": "WATCH",
+"disagreement": 0.136,
+"inc_party": "D",
+"inc_running": "none",
+"note": "open, Whitmer term-limited",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-OREGON",
+"state": "Oregon",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.8308,
+"p_model": 0.987,
+"verdict": "WATCH",
+"disagreement": 0.1562,
+"inc_party": "D",
+"inc_running": "elected",
+"note": "Kotek renominated",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-OHIO",
+"state": "Ohio",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.8209,
+"p_model": 0.6216,
+"verdict": "WATCH",
+"disagreement": 0.1993,
+"inc_party": "R",
+"inc_running": "none",
+"note": "open, DeWine term-limited",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-NEWYORK",
+"state": "New York",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.954,
+"p_model": 0.9834,
+"verdict": "CALL-YES",
+"disagreement": 0.0294,
+"inc_party": "D",
+"inc_running": "elected",
+"note": "Hochul renominated",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-NEWMEXICO",
+"state": "New Mexico",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.9505,
+"p_model": 0.9004,
+"verdict": "WATCH",
+"disagreement": 0.0501,
+"inc_party": "D",
+"inc_running": "none",
+"note": "open, Lujan Grisham term-limited",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-NEWHAMPSHIRE",
+"state": "New Hampshire",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.0505,
+"p_model": 0.7358,
+"verdict": "WATCH",
+"disagreement": 0.6853,
+"inc_party": "R",
+"inc_running": "elected",
+"note": "Ayotte renominated; 2-year term",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-NEVADA",
+"state": "Nevada",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.6734,
+"p_model": 0.6165,
+"verdict": "WATCH",
+"disagreement": 0.0569,
+"inc_party": "R",
+"inc_running": "elected",
+"note": "Lombardo renominated",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-NEBRASKA",
+"state": "Nebraska",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.135,
+"p_model": 0.2454,
+"verdict": "WATCH",
+"disagreement": 0.1104,
+"inc_party": "R",
+"inc_running": "elected",
+"note": "Pillen renominated",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "GOV-OKLAHOMA",
+"state": "Oklahoma",
+"office": "governor",
+"seat": "regular",
+"p_market": 0.0796,
+"p_model": 0.159,
+"verdict": "WATCH",
+"disagreement": 0.0794,
+"inc_party": "R",
+"inc_running": "none",
+"note": "open, Stitt term-limited",
+"outcome": null,
+"correct": null
+},
+{
+"race_id": "SEN-WYOMING",
+"state": "Wyoming",
+"office": "senate",
+"seat": "class2",
+"p_market": 0.013,
+"p_model": 0.0,
+"verdict": "CALL-NO",
+"disagreement": 0.013,
+"inc_party": "R",
+"inc_running": "none",
+"note": "open, Lummis retiring",
+"outcome": null,
+"correct": null
+}
+],
+"races_sha": "ffe4c93dc76b23cf9bbc8e2b383ba0b7de1d3e5858856703b825b8cb877ba7f6",
+"races_freeze": "2026-10-25",
+"senate_control": {
+"held_not_up": 34,
+"med": 51,
+"p5": 47,
+"p95": 56,
+"p_dem_control": 0.5465,
+"seats_needed": 51
+},
+"governor_wins": {
+"mean": 24.0,
+"med": 24,
+"n_races": 36,
+"p5": 19,
+"p95": 29
+},
+"house_seats": {
+"med": 247,
+"note": "seats-votes curve from the generic ballot; consistency check against the registered chamber probit, not a new ledger row",
+"p5": 218,
+"p95": 276,
+"p_dem_majority": 0.9534,
+"seat_noise": 8.0,
+"sigma_gb": 3.5,
+"spp": 4.5,
+"tipping": 2.5
+},
+"house_bands": {
+"fetched": "2026-10-24T16:52:44+00:00",
+"events": [
+{
+"bands": [
+{
+"band": "Will Democrats win fewer than 3 House seats in Minnesota in the 2026 midterm elections?",
+"p_yes": 0.01
+},
+{
+"band": "Will Democrats win exactly 3 House seats in Minnesota in the 2026 midterm elections?",
+"p_yes": 0.028
+},
+{
+"band": "Will Democrats win exactly 4 House seats in Minnesota in the 2026 midterm elections?",
+"p_yes": 0.67
+},
+{
+"band": "Will Democrats win exactly 5 House seats in Minnesota in the 2026 midterm elections?",
+"p_yes": 0.25
+},
+{
+"band": "Will Democrats win 6 or more House seats in Minnesota in the 2026 midterm elections?",
+"p_yes": 0.04
+}
+],
+"event_slug": "how-many-house-seats-will-the-democrats-win-in-minnesota",
+"liquidity": 92965.33
+},
+{
+"bands": [
+{
+"band": "Will Democrats win fewer than 5 House seats in Michigan in the 2026 midterm elections?",
+"p_yes": 0.003
+},
+{
+"band": "Will Democrats win exactly 5 House seats in Michigan in the 2026 midterm elections?",
+"p_yes": 0.0025
+},
+{
+"band": "Will Democrats win exactly 6 House seats in Michigan in the 2026 midterm elections?",
+"p_yes": 0.12
+},
+{
+"band": "Will Democrats win exactly 7 House seats in Michigan in the 2026 midterm elections?",
+"p_yes": 0.19
+},
+{
+"band": "Will Democrats win exactly 8 House seats in Michigan in the 2026 midterm elections?",
+"p_yes": 0.265
+},
+{
+"band": "Will Democrats win exactly 9 House seats in Michigan in the 2026 midterm elections?",
+"p_yes": 0.34
+},
+{
+"band": "Will Democrats win 10 or more House seats in Michigan in the 2026 midterm elections?",
+"p_yes": 0.066
+}
+],
+"event_slug": "how-many-house-seats-will-the-democrats-win-in-michigan",
+"liquidity": 112279.58
+},
+{
+"bands": [
+{
+"band": "Will Democrats win fewer than 43 House seats in California in the 2026 midterm elections?",
+"p_yes": 0.0025
+},
+{
+"band": "Will Democrats win exactly 43 House seats in California in the 2026 midterm elections?",
+"p_yes": 0.0025
+},
+{
+"band": "Will Democrats win exactly 44 House seats in California in the 2026 midterm elections?",
+"p_yes": 0.0355
+},
+{
+"band": "Will Democrats win exactly 45 House seats in California in the 2026 midterm elections?",
+"p_yes": 0.0225
+},
+{
+"band": "Will Democrats win exactly 46 House seats in California in the 2026 midterm elections?",
+"p_yes": 0.0405
+},
+{
+"band": "Will Democrats win exactly 47 House seats in California in the 2026 midterm elections?",
+"p_yes": 0.135
+},
+{
+"band": "Will Democrats win exactly 48 House seats in California in the 2026 midterm elections?",
+"p_yes": 0.785
+},
+{
+"band": "Will Democrats win 49 or more House seats in California in the 2026 midterm elections?",
+"p_yes": 0.0445
+}
+],
+"event_slug": "how-many-house-seats-will-the-democrats-win-in-california",
+"liquidity": 128269.67
+},
+{
+"bands": [
+{
+"band": "Will Democrats win fewer than 5 House seats in Virginia in the 2026 midterm elections?",
+"p_yes": 0.005
+},
+{
+"band": "Will Democrats win exactly 5 House seats in Virginia in the 2026 midterm elections?",
+"p_yes": 0.0065
+},
+{
+"band": "Will Democrats win exactly 6 House seats in Virginia in the 2026 midterm elections?",
+"p_yes": 0.115
+},
+{
+"band": "Will Democrats win exactly 7 House seats in Virginia in the 2026 midterm elections?",
+"p_yes": 0.26
+},
+{
+"band": "Will Democrats win exactly 8 House seats in Virginia in the 2026 midterm elections?",
+"p_yes": 0.36
+},
+{
+"band": "Will Democrats win 9 or more House seats in Virginia in the 2026 midterm elections?",
+"p_yes": 0.275
+}
+],
+"event_slug": "how-many-house-seats-will-the-democrats-win-in-virginia",
+"liquidity": 118523.5
+},
+{
+"bands": [
+{
+"band": "Will Democrats win exactly 0 House seats in Iowa in the 2026 midterm elections?",
+"p_yes": 0.087
+},
+{
+"band": "Will Democrats win exactly 1 House seat in Iowa in the 2026 midterm elections?",
+"p_yes": 0.071
+},
+{
+"band": "Will Democrats win exactly 2 House seats in Iowa in the 2026 midterm elections?",
+"p_yes": 0.29
+},
+{
+"band": "Will Democrats win exactly 3 House seats in Iowa in the 2026 midterm elections?",
+"p_yes": 0.565
+},
+{
+"band": "Will Democrats win exactly 4 House seats in Iowa in the 2026 midterm elections?",
+"p_yes": 0.0105
+}
+],
+"event_slug": "how-many-house-seats-will-the-democrats-win-in-iowa",
+"liquidity": 82246.15
+}
+]
+},
+"races_market_source": "Polymarket gamma-api public-search (anonymous), fetched 2026-10-24T16:56:29+00:00"
+},
+{
+"id": "WB2026",
+"state": "West Bengal",
+"st": "WB",
+"year": 2026,
+"status": "resolved-forward",
+"title": "West Bengal Legislative Assembly 2026 (holdout)",
+"freeze": "2026-03-26",
+"blocs": [
+{
+"name": "AITC",
+"base": 48.64,
+"m2": 47.05,
+"m3": 46.25,
+"p5": 110,
+"med": 180,
+"p95": 238,
+"p_maj": 0.7717,
+"p_largest": 0.7951,
+"actual": null
+},
+{
+"name": "BJP",
+"base": 38.85,
+"m2": 39.0,
+"m3": 38.91,
+"p5": 52,
+"med": 110,
+"p95": 180,
+"p_maj": 0.1915,
+"p_largest": 0.2049,
+"actual": null
+},
+{
+"name": "INC",
+"base": 2.97,
+"m2": 4.09,
+"m3": null,
+"p5": 0,
+"med": 2,
+"p95": 8,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": null
+},
+{
+"name": "LF",
+"base": 5.36,
+"m2": 5.6,
+"m3": null,
+"p5": 0,
+"med": 2,
+"p95": 11,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": null
+}
+],
+"questions": [
+{
+"q": "INC under 30 seats",
+"p2": 1.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "LF under 30 seats",
+"p2": 1.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "Winner (largest) in {AITC, BJP}",
+"p2": 1.0,
+"p3": 1.0,
+"verdict": "CALL-YES",
+"outcome": "YES",
+"correct": true
+},
+{
+"q": "INC is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BJP wins majority",
+"p2": 0.16,
+"p3": 0.19,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "LF wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.2,
+"p3": 0.2,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "AITC is largest",
+"p2": 0.8,
+"p3": 0.8,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "AITC wins majority",
+"p2": 0.76,
+"p3": 0.77,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "LF is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [
+"Both pre-freeze polls are unrated agencies (IANS-Matrize, VoteVibe CNN-News18); M3 runs at inflated sigma 6.0.",
+"LF+ and INC have NO separate poll numbers at freeze (Wikipedia table merges LF+/INC/Others into one 13-15% colspan cell) -> their questions are M3-blind (WATCH-NOPOLL) and the M3 seat sim excludes them, which mechanically inflates AITC/BJP M3 seat counts; the dual gate's min() partially protects.",
+"BJP-ISF seat sharing unresolved at freeze; ISF excluded from BJP bloc.",
+"Baseline AE (WB2021) covers 290 of 294 ACs in ae_long; seat sims run on 290.",
+"2021 WB polls underestimated AITC by 6.6 pts; correction +3.3 applied per ledger rule."
+],
+"nef": {},
+"tripwires": [
+{
+"effect": "BJP bloc gains ~1.4pt transfer-weighted; re-run",
+"watch": "BJP-ISF alliance finalized"
+},
+{
+"effect": "M3 upgrades to rated sigma",
+"watch": "A rated agency (CVoter/Axis/CSDS) publishes pre-election vote shares"
+}
+],
+"resolution": null,
+"sha": "016df22dfcc0743b4158661beabf8e6e372492733a986d415ecd7e4a2c65d95c"
+},
+{
+"id": "BR2025",
+"state": "Bihar",
+"st": "BR",
+"year": 2025,
+"status": "retrodiction",
+"title": "Bihar Assembly 2025",
+"blocs": [
+{
+"name": "NDA",
+"base": 45.9,
+"m2": 45.3,
+"m3": null,
+"p5": 87,
+"med": 125,
+"p95": 161,
+"p_maj": 0.57,
+"p_largest": 0.57,
+"actual": 198
+},
+{
+"name": "MGB",
+"base": 47.8,
+"m2": 43.7,
+"m3": null,
+"p5": 82,
+"med": 118,
+"p95": 156,
+"p_maj": 0.43,
+"p_largest": 0.43,
+"actual": 34
+}
+],
+"questions": [
+{
+"q": "NDA wins majority",
+"p2": 0.57,
+"p3": null,
+"verdict": "WATCH-FLAG",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "NDA is largest",
+"p2": 0.57,
+"p3": null,
+"verdict": "WATCH-FLAG",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "MGB wins majority",
+"p2": 0.43,
+"p3": null,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "MGB is largest",
+"p2": 0.43,
+"p3": null,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "DL2025",
+"state": "Delhi",
+"st": "DL",
+"year": 2025,
+"status": "retrodiction",
+"title": "Delhi Assembly 2025",
+"blocs": [
+{
+"name": "BJP",
+"base": 41.2,
+"m2": 47.1,
+"m3": null,
+"p5": 20,
+"med": 43,
+"p95": 59,
+"p_maj": 0.71,
+"p_largest": 0.74,
+"actual": 48
+},
+{
+"name": "AAP",
+"base": 57.4,
+"m2": 42.9,
+"m3": null,
+"p5": 11,
+"med": 27,
+"p95": 49,
+"p_maj": 0.26,
+"p_largest": 0.26,
+"actual": 22
+},
+{
+"name": "INC",
+"base": 0.0,
+"m2": 8.3,
+"m3": null,
+"p5": 0,
+"med": 0,
+"p95": 0,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 0
+}
+],
+"questions": [
+{
+"q": "BJP wins majority",
+"p2": 0.71,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.74,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "AAP wins majority",
+"p2": 0.26,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "AAP is largest",
+"p2": 0.26,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "HR2024",
+"state": "Haryana",
+"st": "HR",
+"year": 2024,
+"status": "retrodiction",
+"title": "Haryana Assembly 2024",
+"blocs": [
+{
+"name": "BJP",
+"base": 44.7,
+"m2": 45.6,
+"m3": null,
+"p5": 26,
+"med": 39,
+"p95": 55,
+"p_maj": 0.24,
+"p_largest": 0.5,
+"actual": 48
+},
+{
+"name": "INC",
+"base": 32.9,
+"m2": 39.6,
+"m3": null,
+"p5": 26,
+"med": 40,
+"p95": 52,
+"p_maj": 0.22,
+"p_largest": 0.5,
+"actual": 37
+},
+{
+"name": "INLD",
+"base": 1.3,
+"m2": 1.6,
+"m3": null,
+"p5": 0,
+"med": 2,
+"p95": 4,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 2
+},
+{
+"name": "JJP",
+"base": 11.4,
+"m2": 5.0,
+"m3": null,
+"p5": 5,
+"med": 9,
+"p95": 14,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 0
+}
+],
+"questions": [
+{
+"q": "BJP wins majority",
+"p2": 0.24,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.5,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.22,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.5,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INLD wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INLD is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "JJP wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "JJP is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "MH2024",
+"state": "Maharashtra",
+"st": "MH",
+"year": 2024,
+"status": "retrodiction",
+"title": "Maharashtra Assembly 2024",
+"blocs": [
+{
+"name": "MAHAYUTI",
+"base": 35.3,
+"m2": 35.0,
+"m3": null,
+"p5": 125,
+"med": 171,
+"p95": 213,
+"p_maj": 0.84,
+"p_largest": 0.85,
+"actual": 230
+},
+{
+"name": "MVA",
+"base": 25.0,
+"m2": 25.3,
+"m3": null,
+"p5": 75,
+"med": 117,
+"p95": 163,
+"p_maj": 0.15,
+"p_largest": 0.15,
+"actual": 36
+}
+],
+"questions": [
+{
+"q": "MAHAYUTI wins majority",
+"p2": 0.84,
+"p3": 0.75,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "MAHAYUTI is largest",
+"p2": 0.85,
+"p3": 0.86,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "MVA wins majority",
+"p2": 0.15,
+"p3": 0.16,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "MVA is largest",
+"p2": 0.15,
+"p3": 0.14,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "CG2023",
+"state": "Chhattisgarh",
+"st": "CG",
+"year": 2023,
+"status": "retrodiction",
+"title": "Chhattisgarh Assembly 2023",
+"blocs": [
+{
+"name": "BJP",
+"base": 33.6,
+"m2": 39.0,
+"m3": null,
+"p5": 14,
+"med": 36,
+"p95": 64,
+"p_maj": 0.27,
+"p_largest": 0.29,
+"actual": 54
+},
+{
+"name": "INC",
+"base": 43.9,
+"m2": 43.2,
+"m3": null,
+"p5": 26,
+"med": 54,
+"p95": 76,
+"p_maj": 0.71,
+"p_largest": 0.71,
+"actual": 35
+}
+],
+"questions": [
+{
+"q": "BJP wins majority",
+"p2": 0.27,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.29,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.71,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.71,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "KA2023",
+"state": "Karnataka",
+"st": "KA",
+"year": 2023,
+"status": "retrodiction",
+"title": "Karnataka Assembly 2023",
+"blocs": [
+{
+"name": "INC",
+"base": 38.1,
+"m2": 34.9,
+"m3": null,
+"p5": 26,
+"med": 58,
+"p95": 101,
+"p_maj": 0.03,
+"p_largest": 0.07,
+"actual": 135
+},
+{
+"name": "BJP",
+"base": 37.1,
+"m2": 44.9,
+"m3": null,
+"p5": 89,
+"med": 130,
+"p95": 162,
+"p_maj": 0.78,
+"p_largest": 0.93,
+"actual": 66
+},
+{
+"name": "JDS",
+"base": 17.9,
+"m2": 13.6,
+"m3": null,
+"p5": 18,
+"med": 33,
+"p95": 51,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 19
+}
+],
+"questions": [
+{
+"q": "INC wins majority",
+"p2": 0.02,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.07,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BJP wins majority",
+"p2": 0.78,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.93,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "JDS wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "JDS is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "MP2023",
+"state": "Madhya Pradesh",
+"st": "MP",
+"year": 2023,
+"status": "retrodiction",
+"title": "Madhya Pradesh Assembly 2023",
+"blocs": [
+{
+"name": "BJP",
+"base": 41.6,
+"m2": 46.8,
+"m3": null,
+"p5": 80,
+"med": 147,
+"p95": 199,
+"p_maj": 0.79,
+"p_largest": 0.8,
+"actual": 163
+},
+{
+"name": "INC",
+"base": 41.5,
+"m2": 39.4,
+"m3": null,
+"p5": 31,
+"med": 83,
+"p95": 150,
+"p_maj": 0.2,
+"p_largest": 0.2,
+"actual": 66
+}
+],
+"questions": [
+{
+"q": "BJP wins majority",
+"p2": 0.79,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.8,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.2,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.2,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "RJ2023",
+"state": "Rajasthan",
+"st": "RJ",
+"year": 2023,
+"status": "retrodiction",
+"title": "Rajasthan Assembly 2023",
+"blocs": [
+{
+"name": "BJP",
+"base": 39.3,
+"m2": 45.5,
+"m3": null,
+"p5": 70,
+"med": 122,
+"p95": 166,
+"p_maj": 0.78,
+"p_largest": 0.78,
+"actual": 115
+},
+{
+"name": "INC",
+"base": 39.8,
+"m2": 38.2,
+"m3": null,
+"p5": 32,
+"med": 76,
+"p95": 128,
+"p_maj": 0.21,
+"p_largest": 0.21,
+"actual": 69
+}
+],
+"questions": [
+{
+"q": "BJP wins majority",
+"p2": 0.78,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.78,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.22,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.22,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "TG2023",
+"state": "Telangana",
+"st": "TG",
+"year": 2023,
+"status": "retrodiction",
+"title": "Telangana Assembly 2023",
+"blocs": [
+{
+"name": "BRS",
+"base": 47.4,
+"m2": 43.8,
+"m3": null,
+"p5": 46,
+"med": 71,
+"p95": 91,
+"p_maj": 0.8,
+"p_largest": 0.93,
+"actual": 39
+},
+{
+"name": "INC",
+"base": 28.7,
+"m2": 29.4,
+"m3": null,
+"p5": 14,
+"med": 32,
+"p95": 54,
+"p_maj": 0.03,
+"p_largest": 0.07,
+"actual": 64
+},
+{
+"name": "BJP",
+"base": 7.1,
+"m2": 15.0,
+"m3": null,
+"p5": 2,
+"med": 8,
+"p95": 19,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 8
+},
+{
+"name": "AIMIM",
+"base": 2.7,
+"m2": 2.8,
+"m3": null,
+"p5": 4,
+"med": 7,
+"p95": 10,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 7
+}
+],
+"questions": [
+{
+"q": "BRS wins majority",
+"p2": 0.8,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BRS is largest",
+"p2": 0.93,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.03,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.07,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BJP wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "AIMIM wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "AIMIM is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "GJ2022",
+"state": "Gujarat",
+"st": "GJ",
+"year": 2022,
+"status": "retrodiction",
+"title": "Gujarat Assembly 2022",
+"blocs": [
+{
+"name": "BJP",
+"base": 50.0,
+"m2": 54.2,
+"m3": null,
+"p5": 84,
+"med": 131,
+"p95": 166,
+"p_maj": 0.92,
+"p_largest": 0.93,
+"actual": 156
+},
+{
+"name": "INC",
+"base": 42.2,
+"m2": 39.1,
+"m3": null,
+"p5": 16,
+"med": 51,
+"p95": 97,
+"p_maj": 0.07,
+"p_largest": 0.07,
+"actual": 17
+},
+{
+"name": "AAP",
+"base": 0.0,
+"m2": 0.0,
+"m3": null,
+"p5": 0,
+"med": 0,
+"p95": 1,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 5
+}
+],
+"questions": [
+{
+"q": "BJP wins majority",
+"p2": 0.92,
+"p3": null,
+"verdict": "WATCH-FLAG",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.92,
+"p3": null,
+"verdict": "WATCH-FLAG",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.07,
+"p3": null,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.08,
+"p3": null,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "AAP wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "AAP is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "PB2022",
+"state": "Punjab",
+"st": "PB",
+"year": 2022,
+"status": "retrodiction",
+"title": "Punjab Assembly 2022",
+"blocs": [
+{
+"name": "AAP",
+"base": 24.1,
+"m2": 13.6,
+"m3": null,
+"p5": 2,
+"med": 8,
+"p95": 20,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 92
+},
+{
+"name": "INC",
+"base": 38.8,
+"m2": 39.9,
+"m3": null,
+"p5": 42,
+"med": 69,
+"p95": 93,
+"p_maj": 0.76,
+"p_largest": 0.9,
+"actual": 18
+},
+{
+"name": "SADBSP",
+"base": 26.0,
+"m2": 28.2,
+"m3": null,
+"p5": 12,
+"med": 32,
+"p95": 57,
+"p_maj": 0.04,
+"p_largest": 0.1,
+"actual": 4
+},
+{
+"name": "BJPA",
+"base": 5.3,
+"m2": 8.1,
+"m3": null,
+"p5": 1,
+"med": 5,
+"p95": 12,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 2
+}
+],
+"questions": [
+{
+"q": "AAP wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "AAP is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.75,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.9,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "SADBSP wins majority",
+"p2": 0.04,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "SADBSP is largest",
+"p2": 0.1,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BJPA wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BJPA is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "UP2022",
+"state": "Uttar Pradesh",
+"st": "UP",
+"year": 2022,
+"status": "retrodiction",
+"title": "Uttar Pradesh Assembly 2022",
+"blocs": [
+{
+"name": "BJPA",
+"base": 41.0,
+"m2": 47.3,
+"m3": 40.9,
+"p5": 221,
+"med": 309,
+"p95": 362,
+"p_maj": 0.97,
+"p_largest": 0.99,
+"actual": 267
+},
+{
+"name": "SPA",
+"base": 23.5,
+"m2": 20.9,
+"m3": 33.6,
+"p5": 18,
+"med": 50,
+"p95": 112,
+"p_maj": 0.0,
+"p_largest": 0.01,
+"actual": 125
+},
+{
+"name": "BSP",
+"base": 22.4,
+"m2": 20.6,
+"m3": 13.4,
+"p5": 5,
+"med": 26,
+"p95": 78,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 1
+},
+{
+"name": "INC",
+"base": 6.3,
+"m2": 6.3,
+"m3": 7.3,
+"p5": 2,
+"med": 10,
+"p95": 29,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 2
+}
+],
+"questions": [
+{
+"q": "BJPA wins majority",
+"p2": 0.97,
+"p3": 0.69,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BJPA is largest",
+"p2": 0.99,
+"p3": 0.83,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "SPA wins majority",
+"p2": 0.0,
+"p3": 0.09,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "SPA is largest",
+"p2": 0.01,
+"p3": 0.17,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BSP wins majority",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+},
+{
+"q": "BSP is largest",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+},
+{
+"q": "INC wins majority",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+},
+{
+"q": "INC is largest",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "UK2022",
+"state": "Uttarakhand",
+"st": "UK",
+"year": 2022,
+"status": "retrodiction",
+"title": "Uttarakhand Assembly 2022",
+"blocs": [
+{
+"name": "BJP",
+"base": 47.0,
+"m2": 54.6,
+"m3": 40.6,
+"p5": 43,
+"med": 59,
+"p95": 68,
+"p_maj": 0.98,
+"p_largest": 0.98,
+"actual": 47
+},
+{
+"name": "INC",
+"base": 33.8,
+"m2": 32.7,
+"m3": 36.8,
+"p5": 2,
+"med": 10,
+"p95": 27,
+"p_maj": 0.02,
+"p_largest": 0.02,
+"actual": 19
+},
+{
+"name": "AAP",
+"base": 0.0,
+"m2": 0.0,
+"m3": 12.1,
+"p5": 0,
+"med": 0,
+"p95": 1,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 0
+}
+],
+"questions": [
+{
+"q": "BJP wins majority",
+"p2": 0.98,
+"p3": 0.63,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.98,
+"p3": 0.71,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.02,
+"p3": 0.25,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.02,
+"p3": 0.29,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "AAP wins majority",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+},
+{
+"q": "AAP is largest",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "AS2021",
+"state": "Assam",
+"st": "AS",
+"year": 2021,
+"status": "retrodiction",
+"title": "Assam Assembly 2021",
+"blocs": [
+{
+"name": "BJPA",
+"base": 38.1,
+"m2": 42.3,
+"m3": null,
+"p5": 46,
+"med": 72,
+"p95": 95,
+"p_maj": 0.72,
+"p_largest": 0.74,
+"actual": 69
+},
+{
+"name": "MAHAJOT",
+"base": 37.9,
+"m2": 38.8,
+"m3": null,
+"p5": 31,
+"med": 54,
+"p95": 80,
+"p_maj": 0.26,
+"p_largest": 0.26,
+"actual": 50
+}
+],
+"questions": [
+{
+"q": "BJPA wins majority",
+"p2": 0.72,
+"p3": 0.66,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BJPA is largest",
+"p2": 0.74,
+"p3": 0.75,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "MAHAJOT wins majority",
+"p2": 0.26,
+"p3": 0.27,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "MAHAJOT is largest",
+"p2": 0.26,
+"p3": 0.25,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "KL2021",
+"state": "Kerala",
+"st": "KL",
+"year": 2021,
+"status": "retrodiction",
+"title": "Kerala Assembly 2021",
+"blocs": [
+{
+"name": "LDF",
+"base": 34.8,
+"m2": 33.8,
+"m3": null,
+"p5": 36,
+"med": 61,
+"p95": 87,
+"p_maj": 0.27,
+"p_largest": 0.44,
+"actual": 84
+},
+{
+"name": "UDF",
+"base": 31.3,
+"m2": 35.7,
+"m3": null,
+"p5": 40,
+"med": 66,
+"p95": 92,
+"p_maj": 0.38,
+"p_largest": 0.56,
+"actual": 36
+},
+{
+"name": "NDA",
+"base": 10.6,
+"m2": 11.5,
+"m3": null,
+"p5": 4,
+"med": 11,
+"p95": 25,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 0
+}
+],
+"questions": [
+{
+"q": "LDF wins majority",
+"p2": 0.27,
+"p3": 0.69,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "LDF is largest",
+"p2": 0.44,
+"p3": 0.77,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "UDF wins majority",
+"p2": 0.38,
+"p3": 0.25,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "UDF is largest",
+"p2": 0.56,
+"p3": 0.22,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "NDA wins majority",
+"p2": 0.0,
+"p3": 0.01,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+},
+{
+"q": "NDA is largest",
+"p2": 0.0,
+"p3": 0.01,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "TN2021",
+"state": "Tamil Nadu",
+"st": "TN",
+"year": 2021,
+"status": "retrodiction",
+"title": "Tamil Nadu Assembly 2021",
+"blocs": [
+{
+"name": "DMKA",
+"base": 39.7,
+"m2": 44.7,
+"m3": null,
+"p5": 104,
+"med": 145,
+"p95": 182,
+"p_maj": 0.88,
+"p_largest": 0.89,
+"actual": 159
+},
+{
+"name": "ADMKA",
+"base": 45.5,
+"m2": 34.0,
+"m3": null,
+"p5": 50,
+"med": 87,
+"p95": 128,
+"p_maj": 0.1,
+"p_largest": 0.11,
+"actual": 75
+}
+],
+"questions": [
+{
+"q": "DMKA wins majority",
+"p2": 0.88,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "DMKA is largest",
+"p2": 0.89,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "ADMKA wins majority",
+"p2": 0.1,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "ADMKA is largest",
+"p2": 0.11,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "WB2021",
+"state": "West Bengal",
+"st": "WB",
+"year": 2021,
+"status": "retrodiction",
+"title": "West Bengal Assembly 2021",
+"blocs": [
+{
+"name": "AITC",
+"base": 45.6,
+"m2": 44.6,
+"m3": 42.0,
+"p5": 121,
+"med": 181,
+"p95": 230,
+"p_maj": 0.84,
+"p_largest": 0.96,
+"actual": 211
+},
+{
+"name": "BJP",
+"base": 10.3,
+"m2": 26.7,
+"m3": 37.9,
+"p5": 21,
+"med": 53,
+"p95": 103,
+"p_maj": 0.01,
+"p_largest": 0.02,
+"actual": 77
+},
+{
+"name": "SM",
+"base": 37.0,
+"m2": 24.0,
+"m3": 15.6,
+"p5": 23,
+"med": 55,
+"p95": 102,
+"p_maj": 0.0,
+"p_largest": 0.02,
+"actual": 0
+}
+],
+"questions": [
+{
+"q": "AITC wins majority",
+"p2": 0.84,
+"p3": 0.57,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "AITC is largest",
+"p2": 0.96,
+"p3": 0.8,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BJP wins majority",
+"p2": 0.01,
+"p3": 0.09,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.02,
+"p3": 0.2,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "SM wins majority",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+},
+{
+"q": "SM is largest",
+"p2": 0.02,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "BR2020",
+"state": "Bihar",
+"st": "BR",
+"year": 2020,
+"status": "retrodiction",
+"title": "Bihar Assembly 2020",
+"blocs": [
+{
+"name": "NDA",
+"base": 35.4,
+"m2": 36.2,
+"m3": null,
+"p5": 91,
+"med": 122,
+"p95": 152,
+"p_maj": 0.51,
+"p_largest": 0.82,
+"actual": 121
+},
+{
+"name": "MGB",
+"base": 27.8,
+"m2": 26.0,
+"m3": null,
+"p5": 62,
+"med": 91,
+"p95": 121,
+"p_maj": 0.04,
+"p_largest": 0.18,
+"actual": 110
+},
+{
+"name": "LJP",
+"base": 5.0,
+"m2": 7.4,
+"m3": null,
+"p5": 13,
+"med": 27,
+"p95": 47,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 1
+}
+],
+"questions": [
+{
+"q": "NDA wins majority",
+"p2": 0.5,
+"p3": 0.37,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "NDA is largest",
+"p2": 0.82,
+"p3": 0.74,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "MGB wins majority",
+"p2": 0.04,
+"p3": 0.06,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "MGB is largest",
+"p2": 0.18,
+"p3": 0.24,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "LJP wins majority",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+},
+{
+"q": "LJP is largest",
+"p2": 0.0,
+"p3": 0.01,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "DL2020",
+"state": "Delhi",
+"st": "DL",
+"year": 2020,
+"status": "retrodiction",
+"title": "Delhi Assembly 2020",
+"blocs": [
+{
+"name": "AAP",
+"base": 54.5,
+"m2": 35.6,
+"m3": 51.6,
+"p5": 5,
+"med": 19,
+"p95": 42,
+"p_maj": 0.11,
+"p_largest": 0.13,
+"actual": 62
+},
+{
+"name": "BJP",
+"base": 32.3,
+"m2": 45.1,
+"m3": null,
+"p5": 25,
+"med": 48,
+"p95": 63,
+"p_maj": 0.84,
+"p_largest": 0.86,
+"actual": 8
+},
+{
+"name": "INC",
+"base": 9.7,
+"m2": 16.4,
+"m3": 3.8,
+"p5": 0,
+"med": 2,
+"p95": 8,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 0
+}
+],
+"questions": [
+{
+"q": "AAP wins majority",
+"p2": 0.11,
+"p3": 0.98,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "AAP is largest",
+"p2": 0.13,
+"p3": 0.99,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BJP wins majority",
+"p2": 0.84,
+"p3": 0.01,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.86,
+"p3": 0.01,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+},
+{
+"q": "INC is largest",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "HR2019",
+"state": "Haryana",
+"st": "HR",
+"year": 2019,
+"status": "retrodiction",
+"title": "Haryana Assembly 2019",
+"blocs": [
+{
+"name": "BJP",
+"base": 33.3,
+"m2": 48.2,
+"m3": null,
+"p5": 50,
+"med": 68,
+"p95": 80,
+"p_maj": 0.97,
+"p_largest": 0.99,
+"actual": 40
+},
+{
+"name": "INC",
+"base": 20.7,
+"m2": 25.4,
+"m3": null,
+"p5": 6,
+"med": 17,
+"p95": 33,
+"p_maj": 0.01,
+"p_largest": 0.01,
+"actual": 31
+},
+{
+"name": "INLD",
+"base": 24.2,
+"m2": 10.9,
+"m3": null,
+"p5": 0,
+"med": 4,
+"p95": 13,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 1
+},
+{
+"name": "JJP",
+"base": 0.0,
+"m2": 0.0,
+"m3": null,
+"p5": 0,
+"med": 0,
+"p95": 2,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 10
+}
+],
+"questions": [
+{
+"q": "BJP wins majority",
+"p2": 0.97,
+"p3": null,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.99,
+"p3": null,
+"verdict": "WATCH-FLAG",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.01,
+"p3": null,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.01,
+"p3": null,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INLD wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INLD is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "JJP wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "JJP is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "JH2019",
+"state": "Jharkhand",
+"st": "JH",
+"year": 2019,
+"status": "retrodiction",
+"title": "Jharkhand Assembly 2019",
+"blocs": [
+{
+"name": "BJP",
+"base": 31.8,
+"m2": 41.0,
+"m3": null,
+"p5": 39,
+"med": 55,
+"p95": 68,
+"p_maj": 0.93,
+"p_largest": 0.95,
+"actual": 25
+},
+{
+"name": "JMMA",
+"base": 27.7,
+"m2": 24.5,
+"m3": null,
+"p5": 11,
+"med": 24,
+"p95": 40,
+"p_maj": 0.04,
+"p_largest": 0.05,
+"actual": 47
+},
+{
+"name": "AJSU",
+"base": 0.0,
+"m2": 0.0,
+"m3": null,
+"p5": 0,
+"med": 1,
+"p95": 6,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 2
+}
+],
+"questions": [
+{
+"q": "BJP wins majority",
+"p2": 0.93,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.95,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "JMMA wins majority",
+"p2": 0.04,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "JMMA is largest",
+"p2": 0.05,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "AJSU wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "AJSU is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "MH2019",
+"state": "Maharashtra",
+"st": "MH",
+"year": 2019,
+"status": "retrodiction",
+"title": "Maharashtra Assembly 2019",
+"blocs": [
+{
+"name": "BJPSHS",
+"base": 47.6,
+"m2": 49.9,
+"m3": null,
+"p5": 154,
+"med": 201,
+"p95": 238,
+"p_maj": 0.97,
+"p_largest": 0.97,
+"actual": 161
+},
+{
+"name": "INCNCP",
+"base": 35.5,
+"m2": 33.6,
+"m3": null,
+"p5": 50,
+"med": 87,
+"p95": 133,
+"p_maj": 0.03,
+"p_largest": 0.03,
+"actual": 98
+}
+],
+"questions": [
+{
+"q": "BJPSHS wins majority",
+"p2": 0.97,
+"p3": 0.63,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BJPSHS is largest",
+"p2": 0.97,
+"p3": 0.91,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "INCNCP wins majority",
+"p2": 0.03,
+"p3": 0.04,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+},
+{
+"q": "INCNCP is largest",
+"p2": 0.03,
+"p3": 0.09,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "CG2018",
+"state": "Chhattisgarh",
+"st": "CG",
+"year": 2018,
+"status": "retrodiction",
+"title": "Chhattisgarh Assembly 2018",
+"blocs": [
+{
+"name": "BJP",
+"base": 42.3,
+"m2": 46.5,
+"m3": null,
+"p5": 29,
+"med": 56,
+"p95": 78,
+"p_maj": 0.75,
+"p_largest": 0.78,
+"actual": 15
+},
+{
+"name": "INC",
+"base": 41.6,
+"m2": 40.2,
+"m3": null,
+"p5": 11,
+"med": 33,
+"p95": 60,
+"p_maj": 0.21,
+"p_largest": 0.22,
+"actual": 68
+},
+{
+"name": "JCCA",
+"base": 4.4,
+"m2": 3.3,
+"m3": null,
+"p5": 0,
+"med": 1,
+"p95": 3,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 2
+}
+],
+"questions": [
+{
+"q": "BJP wins majority",
+"p2": 0.75,
+"p3": 0.45,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.78,
+"p3": 0.64,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.21,
+"p3": 0.26,
+"verdict": "WATCH-FLAG",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.22,
+"p3": 0.36,
+"verdict": "WATCH-FLAG",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "JCCA wins majority",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "JCCA is largest",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "KA2018",
+"state": "Karnataka",
+"st": "KA",
+"year": 2018,
+"status": "retrodiction",
+"title": "Karnataka Assembly 2018",
+"blocs": [
+{
+"name": "INC",
+"base": 36.6,
+"m2": 38.0,
+"m3": 38.0,
+"p5": 54,
+"med": 99,
+"p95": 144,
+"p_maj": 0.32,
+"p_largest": 0.6,
+"actual": 71
+},
+{
+"name": "BJP",
+"base": 29.7,
+"m2": 33.8,
+"m3": null,
+"p5": 47,
+"med": 87,
+"p95": 128,
+"p_maj": 0.16,
+"p_largest": 0.4,
+"actual": 109
+},
+{
+"name": "JDS",
+"base": 20.2,
+"m2": 17.4,
+"m3": null,
+"p5": 17,
+"med": 36,
+"p95": 64,
+"p_maj": 0.0,
+"p_largest": 0.01,
+"actual": 39
+}
+],
+"questions": [
+{
+"q": "INC wins majority",
+"p2": 0.31,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.6,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BJP wins majority",
+"p2": 0.16,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.4,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "JDS wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "JDS is largest",
+"p2": 0.01,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "MP2018",
+"state": "Madhya Pradesh",
+"st": "MP",
+"year": 2018,
+"status": "retrodiction",
+"title": "Madhya Pradesh Assembly 2018",
+"blocs": [
+{
+"name": "BJP",
+"base": 45.7,
+"m2": 49.8,
+"m3": null,
+"p5": 100,
+"med": 164,
+"p95": 206,
+"p_maj": 0.91,
+"p_largest": 0.92,
+"actual": 109
+},
+{
+"name": "INC",
+"base": 37.1,
+"m2": 36.3,
+"m3": null,
+"p5": 19,
+"med": 60,
+"p95": 122,
+"p_maj": 0.07,
+"p_largest": 0.08,
+"actual": 114
+},
+{
+"name": "BSP",
+"base": 6.4,
+"m2": 5.3,
+"m3": null,
+"p5": 1,
+"med": 5,
+"p95": 16,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 2
+}
+],
+"questions": [
+{
+"q": "BJP wins majority",
+"p2": 0.91,
+"p3": 0.47,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.92,
+"p3": 0.56,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.07,
+"p3": 0.37,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.08,
+"p3": 0.44,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BSP wins majority",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+},
+{
+"q": "BSP is largest",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "RJ2018",
+"state": "Rajasthan",
+"st": "RJ",
+"year": 2018,
+"status": "retrodiction",
+"title": "Rajasthan Assembly 2018",
+"blocs": [
+{
+"name": "BJP",
+"base": 46.0,
+"m2": 49.5,
+"m3": null,
+"p5": 104,
+"med": 152,
+"p95": 182,
+"p_maj": 0.96,
+"p_largest": 0.97,
+"actual": 73
+},
+{
+"name": "INC",
+"base": 33.7,
+"m2": 32.6,
+"m3": null,
+"p5": 14,
+"med": 43,
+"p95": 89,
+"p_maj": 0.03,
+"p_largest": 0.03,
+"actual": 99
+},
+{
+"name": "BSP",
+"base": 3.4,
+"m2": 3.1,
+"m3": null,
+"p5": 1,
+"med": 4,
+"p95": 11,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 6
+}
+],
+"questions": [
+{
+"q": "BJP wins majority",
+"p2": 0.96,
+"p3": 0.16,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.97,
+"p3": 0.12,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.03,
+"p3": 0.78,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.03,
+"p3": 0.88,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BSP wins majority",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+},
+{
+"q": "BSP is largest",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "TG2018",
+"state": "Telangana",
+"st": "TG",
+"year": 2018,
+"status": "retrodiction",
+"title": "Telangana Assembly 2018",
+"blocs": [
+{
+"name": "BRS",
+"base": 34.3,
+"m2": 35.3,
+"m3": null,
+"p5": 34,
+"med": 57,
+"p95": 79,
+"p_maj": 0.43,
+"p_largest": 0.71,
+"actual": 88
+},
+{
+"name": "INCTDP",
+"base": 33.6,
+"m2": 32.2,
+"m3": null,
+"p5": 24,
+"med": 44,
+"p95": 66,
+"p_maj": 0.12,
+"p_largest": 0.29,
+"actual": 21
+},
+{
+"name": "BJP",
+"base": 7.1,
+"m2": 9.2,
+"m3": null,
+"p5": 4,
+"med": 9,
+"p95": 18,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 1
+},
+{
+"name": "AIMIM",
+"base": 3.8,
+"m2": 3.5,
+"m3": null,
+"p5": 5,
+"med": 7,
+"p95": 12,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 7
+}
+],
+"questions": [
+{
+"q": "BRS wins majority",
+"p2": 0.43,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BRS is largest",
+"p2": 0.71,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "INCTDP wins majority",
+"p2": 0.12,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INCTDP is largest",
+"p2": 0.29,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BJP wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "AIMIM wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "AIMIM is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "GJ2017",
+"state": "Gujarat",
+"st": "GJ",
+"year": 2017,
+"status": "retrodiction",
+"title": "Gujarat Assembly 2017",
+"blocs": [
+{
+"name": "BJP",
+"base": 47.9,
+"m2": 53.8,
+"m3": 47.2,
+"p5": 95,
+"med": 136,
+"p95": 165,
+"p_maj": 0.96,
+"p_largest": 0.96,
+"actual": 99
+},
+{
+"name": "INC",
+"base": 38.9,
+"m2": 36.3,
+"m3": 39.5,
+"p5": 17,
+"med": 46,
+"p95": 87,
+"p_maj": 0.04,
+"p_largest": 0.04,
+"actual": 77
+}
+],
+"questions": [
+{
+"q": "BJP wins majority",
+"p2": 0.96,
+"p3": 0.84,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.96,
+"p3": 0.85,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.04,
+"p3": 0.15,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.04,
+"p3": 0.15,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "HP2017",
+"state": "Himachal Pradesh",
+"st": "HP",
+"year": 2017,
+"status": "retrodiction",
+"title": "Himachal Pradesh Assembly 2017",
+"blocs": [
+{
+"name": "BJP",
+"base": 38.5,
+"m2": 45.5,
+"m3": null,
+"p5": 20,
+"med": 38,
+"p95": 54,
+"p_maj": 0.63,
+"p_largest": 0.67,
+"actual": 44
+},
+{
+"name": "INC",
+"base": 42.8,
+"m2": 42.0,
+"m3": null,
+"p5": 14,
+"med": 30,
+"p95": 48,
+"p_maj": 0.33,
+"p_largest": 0.33,
+"actual": 21
+}
+],
+"questions": [
+{
+"q": "BJP wins majority",
+"p2": 0.63,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.67,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.33,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.33,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "PB2017",
+"state": "Punjab",
+"st": "PB",
+"year": 2017,
+"status": "retrodiction",
+"title": "Punjab Assembly 2017",
+"blocs": [
+{
+"name": "INC",
+"base": 40.1,
+"m2": 38.0,
+"m3": null,
+"p5": 24,
+"med": 54,
+"p95": 85,
+"p_maj": 0.41,
+"p_largest": 0.43,
+"actual": 77
+},
+{
+"name": "SADBJP",
+"base": 41.9,
+"m2": 39.9,
+"m3": null,
+"p5": 29,
+"med": 61,
+"p95": 91,
+"p_maj": 0.55,
+"p_largest": 0.57,
+"actual": 18
+},
+{
+"name": "AAP",
+"base": 0.0,
+"m2": 7.3,
+"m3": null,
+"p5": 0,
+"med": 1,
+"p95": 7,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 20
+}
+],
+"questions": [
+{
+"q": "INC wins majority",
+"p2": 0.41,
+"p3": 0.19,
+"verdict": "WATCH-FLAG",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.43,
+"p3": 0.3,
+"verdict": "WATCH-FLAG",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "SADBJP wins majority",
+"p2": 0.55,
+"p3": 0.02,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "SADBJP is largest",
+"p2": 0.57,
+"p3": 0.03,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "AAP wins majority",
+"p2": 0.0,
+"p3": 0.44,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "AAP is largest",
+"p2": 0.0,
+"p3": 0.67,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "UP2017",
+"state": "Uttar Pradesh",
+"st": "UP",
+"year": 2017,
+"status": "retrodiction",
+"title": "Uttar Pradesh Assembly 2017",
+"blocs": [
+{
+"name": "BJPA",
+"base": 15.0,
+"m2": 23.4,
+"m3": null,
+"p5": 42,
+"med": 103,
+"p95": 192,
+"p_maj": 0.04,
+"p_largest": 0.12,
+"actual": 321
+},
+{
+"name": "SPINC",
+"base": 34.7,
+"m2": 32.2,
+"m3": null,
+"p5": 100,
+"med": 207,
+"p95": 300,
+"p_maj": 0.54,
+"p_largest": 0.78,
+"actual": 54
+},
+{
+"name": "BSP",
+"base": 25.9,
+"m2": 24.0,
+"m3": null,
+"p5": 22,
+"med": 81,
+"p95": 189,
+"p_maj": 0.04,
+"p_largest": 0.1,
+"actual": 19
+}
+],
+"questions": [
+{
+"q": "BJPA wins majority",
+"p2": 0.04,
+"p3": 0.25,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BJPA is largest",
+"p2": 0.12,
+"p3": 0.31,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "SPINC wins majority",
+"p2": 0.54,
+"p3": 0.54,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "SPINC is largest",
+"p2": 0.78,
+"p3": 0.67,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BSP wins majority",
+"p2": 0.04,
+"p3": 0.01,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+},
+{
+"q": "BSP is largest",
+"p2": 0.1,
+"p3": 0.02,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "UK2017",
+"state": "Uttarakhand",
+"st": "UK",
+"year": 2017,
+"status": "retrodiction",
+"title": "Uttarakhand Assembly 2017",
+"blocs": [
+{
+"name": "BJP",
+"base": 33.1,
+"m2": 40.0,
+"m3": null,
+"p5": 23,
+"med": 45,
+"p95": 61,
+"p_maj": 0.77,
+"p_largest": 0.79,
+"actual": 57
+},
+{
+"name": "INC",
+"base": 33.8,
+"m2": 34.0,
+"m3": null,
+"p5": 9,
+"med": 25,
+"p95": 47,
+"p_maj": 0.21,
+"p_largest": 0.21,
+"actual": 11
+}
+],
+"questions": [
+{
+"q": "BJP wins majority",
+"p2": 0.77,
+"p3": 0.37,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.79,
+"p3": 0.51,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.21,
+"p3": 0.36,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.21,
+"p3": 0.49,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "AS2016",
+"state": "Assam",
+"st": "AS",
+"year": 2016,
+"status": "retrodiction",
+"title": "Assam Assembly 2016",
+"blocs": [
+{
+"name": "BJPA",
+"base": 19.3,
+"m2": 28.2,
+"m3": null,
+"p5": 19,
+"med": 41,
+"p95": 68,
+"p_maj": 0.08,
+"p_largest": 0.22,
+"actual": 74
+},
+{
+"name": "INC",
+"base": 39.4,
+"m2": 35.0,
+"m3": null,
+"p5": 37,
+"med": 63,
+"p95": 88,
+"p_maj": 0.49,
+"p_largest": 0.77,
+"actual": 26
+},
+{
+"name": "AIUDF",
+"base": 12.6,
+"m2": 13.7,
+"m3": null,
+"p5": 10,
+"med": 20,
+"p95": 34,
+"p_maj": 0.0,
+"p_largest": 0.01,
+"actual": 13
+}
+],
+"questions": [
+{
+"q": "BJPA wins majority",
+"p2": 0.08,
+"p3": 0.47,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BJPA is largest",
+"p2": 0.22,
+"p3": 0.78,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.49,
+"p3": 0.12,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.77,
+"p3": 0.22,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "AIUDF wins majority",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+},
+{
+"q": "AIUDF is largest",
+"p2": 0.01,
+"p3": 0.01,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "KL2016",
+"state": "Kerala",
+"st": "KL",
+"year": 2016,
+"status": "retrodiction",
+"title": "Kerala Assembly 2016",
+"blocs": [
+{
+"name": "LDF",
+"base": 36.9,
+"m2": 34.3,
+"m3": null,
+"p5": 37,
+"med": 61,
+"p95": 89,
+"p_maj": 0.29,
+"p_largest": 0.41,
+"actual": 77
+},
+{
+"name": "UDF",
+"base": 34.3,
+"m2": 34.9,
+"m3": null,
+"p5": 41,
+"med": 69,
+"p95": 95,
+"p_maj": 0.46,
+"p_largest": 0.59,
+"actual": 40
+},
+{
+"name": "NDA",
+"base": 6.0,
+"m2": 7.6,
+"m3": null,
+"p5": 3,
+"med": 9,
+"p95": 18,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 1
+}
+],
+"questions": [
+{
+"q": "LDF wins majority",
+"p2": 0.29,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "LDF is largest",
+"p2": 0.41,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "UDF wins majority",
+"p2": 0.46,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "UDF is largest",
+"p2": 0.59,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "NDA wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "NDA is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "TN2016",
+"state": "Tamil Nadu",
+"st": "TN",
+"year": 2016,
+"status": "retrodiction",
+"title": "Tamil Nadu Assembly 2016",
+"blocs": [
+{
+"name": "ADMK",
+"base": 38.4,
+"m2": 41.2,
+"m3": 37.3,
+"p5": 118,
+"med": 153,
+"p95": 178,
+"p_maj": 0.95,
+"p_largest": 0.96,
+"actual": 134
+},
+{
+"name": "DMKA",
+"base": 27.1,
+"m2": 26.7,
+"m3": 35.0,
+"p5": 44,
+"med": 70,
+"p95": 108,
+"p_maj": 0.03,
+"p_largest": 0.04,
+"actual": 97
+},
+{
+"name": "BJP",
+"base": 2.2,
+"m2": 3.6,
+"m3": null,
+"p5": 1,
+"med": 9,
+"p95": 24,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 0
+}
+],
+"questions": [
+{
+"q": "ADMK wins majority",
+"p2": 0.95,
+"p3": 0.73,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "ADMK is largest",
+"p2": 0.96,
+"p3": 0.78,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "DMKA wins majority",
+"p2": 0.03,
+"p3": 0.19,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "DMKA is largest",
+"p2": 0.04,
+"p3": 0.22,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BJP wins majority",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+},
+{
+"q": "BJP is largest",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "WB2016",
+"state": "West Bengal",
+"st": "WB",
+"year": 2016,
+"status": "retrodiction",
+"title": "West Bengal Assembly 2016",
+"blocs": [
+{
+"name": "AITC",
+"base": 38.9,
+"m2": 39.5,
+"m3": null,
+"p5": 115,
+"med": 179,
+"p95": 214,
+"p_maj": 0.82,
+"p_largest": 0.85,
+"actual": 211
+},
+{
+"name": "LEFTINC",
+"base": 45.1,
+"m2": 39.4,
+"m3": null,
+"p5": 73,
+"med": 109,
+"p95": 172,
+"p_maj": 0.13,
+"p_largest": 0.15,
+"actual": 75
+},
+{
+"name": "BJP",
+"base": 4.1,
+"m2": 12.0,
+"m3": null,
+"p5": 1,
+"med": 5,
+"p95": 18,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 3
+}
+],
+"questions": [
+{
+"q": "AITC wins majority",
+"p2": 0.82,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "AITC is largest",
+"p2": 0.85,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "LEFTINC wins majority",
+"p2": 0.13,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "LEFTINC is largest",
+"p2": 0.15,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BJP wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "BR2015",
+"state": "Bihar",
+"st": "BR",
+"year": 2015,
+"status": "retrodiction",
+"title": "Bihar Assembly 2015",
+"blocs": [
+{
+"name": "NDA",
+"base": 20.5,
+"m2": 26.5,
+"m3": null,
+"p5": 75,
+"med": 102,
+"p95": 129,
+"p_maj": 0.11,
+"p_largest": 0.11,
+"actual": 54
+},
+{
+"name": "MGB",
+"base": 37.4,
+"m2": 36.4,
+"m3": null,
+"p5": 114,
+"med": 141,
+"p95": 168,
+"p_maj": 0.89,
+"p_largest": 0.89,
+"actual": 177
+}
+],
+"questions": [
+{
+"q": "NDA wins majority",
+"p2": 0.11,
+"p3": 0.53,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "NDA is largest",
+"p2": 0.11,
+"p3": 0.62,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "MGB wins majority",
+"p2": 0.89,
+"p3": 0.34,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "MGB is largest",
+"p2": 0.89,
+"p3": 0.38,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "DL2015",
+"state": "Delhi",
+"st": "DL",
+"year": 2015,
+"status": "retrodiction",
+"title": "Delhi Assembly 2015",
+"blocs": [
+{
+"name": "AAP",
+"base": 29.7,
+"m2": 30.8,
+"m3": 38.0,
+"p5": 8,
+"med": 23,
+"p95": 43,
+"p_maj": 0.14,
+"p_largest": 0.27,
+"actual": 67
+},
+{
+"name": "BJP",
+"base": 33.3,
+"m2": 37.7,
+"m3": 36.7,
+"p5": 17,
+"med": 37,
+"p95": 55,
+"p_maj": 0.55,
+"p_largest": 0.72,
+"actual": 3
+},
+{
+"name": "INC",
+"base": 24.7,
+"m2": 21.6,
+"m3": 9.5,
+"p5": 2,
+"med": 8,
+"p95": 20,
+"p_maj": 0.01,
+"p_largest": 0.01,
+"actual": 0
+}
+],
+"questions": [
+{
+"q": "AAP wins majority",
+"p2": 0.14,
+"p3": 0.54,
+"verdict": "WATCH-FLAG",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "AAP is largest",
+"p2": 0.27,
+"p3": 0.62,
+"verdict": "WATCH-FLAG",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BJP wins majority",
+"p2": 0.55,
+"p3": 0.32,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.72,
+"p3": 0.38,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.02,
+"p3": 0.0,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "HR2014",
+"state": "Haryana",
+"st": "HR",
+"year": 2014,
+"status": "retrodiction",
+"title": "Haryana Assembly 2014",
+"blocs": [
+{
+"name": "BJP",
+"base": 9.0,
+"m2": 21.6,
+"m3": null,
+"p5": 10,
+"med": 21,
+"p95": 35,
+"p_maj": 0.01,
+"p_largest": 0.14,
+"actual": 47
+},
+{
+"name": "INC",
+"base": 35.1,
+"m2": 29.2,
+"m3": null,
+"p5": 17,
+"med": 31,
+"p95": 47,
+"p_maj": 0.07,
+"p_largest": 0.54,
+"actual": 15
+},
+{
+"name": "INLD",
+"base": 25.8,
+"m2": 25.1,
+"m3": null,
+"p5": 15,
+"med": 28,
+"p95": 42,
+"p_maj": 0.03,
+"p_largest": 0.32,
+"actual": 19
+},
+{
+"name": "HJC",
+"base": 7.4,
+"m2": 6.8,
+"m3": null,
+"p5": 3,
+"med": 8,
+"p95": 17,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 2
+}
+],
+"questions": [
+{
+"q": "BJP wins majority",
+"p2": 0.01,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.14,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.07,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.54,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INLD wins majority",
+"p2": 0.03,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INLD is largest",
+"p2": 0.32,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "HJC wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "HJC is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "JH2014",
+"state": "Jharkhand",
+"st": "JH",
+"year": 2014,
+"status": "retrodiction",
+"title": "Jharkhand Assembly 2014",
+"blocs": [
+{
+"name": "BJP",
+"base": 20.2,
+"m2": 29.6,
+"m3": null,
+"p5": 20,
+"med": 38,
+"p95": 55,
+"p_maj": 0.4,
+"p_largest": 0.87,
+"actual": 37
+},
+{
+"name": "JMM",
+"base": 15.2,
+"m2": 12.6,
+"m3": null,
+"p5": 3,
+"med": 12,
+"p95": 25,
+"p_maj": 0.0,
+"p_largest": 0.03,
+"actual": 19
+},
+{
+"name": "INCA",
+"base": 19.9,
+"m2": 17.5,
+"m3": null,
+"p5": 6,
+"med": 16,
+"p95": 31,
+"p_maj": 0.01,
+"p_largest": 0.09,
+"actual": 6
+},
+{
+"name": "JVM",
+"base": 9.0,
+"m2": 10.5,
+"m3": null,
+"p5": 6,
+"med": 13,
+"p95": 22,
+"p_maj": 0.0,
+"p_largest": 0.01,
+"actual": 8
+}
+],
+"questions": [
+{
+"q": "BJP wins majority",
+"p2": 0.4,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.87,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "JMM wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "JMM is largest",
+"p2": 0.03,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INCA wins majority",
+"p2": 0.01,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INCA is largest",
+"p2": 0.09,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "JVM wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "JVM is largest",
+"p2": 0.01,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "MH2014",
+"state": "Maharashtra",
+"st": "MH",
+"year": 2014,
+"status": "retrodiction",
+"title": "Maharashtra Assembly 2014",
+"blocs": [
+{
+"name": "BJP",
+"base": 14.0,
+"m2": 19.9,
+"m3": null,
+"p5": 43,
+"med": 71,
+"p95": 103,
+"p_maj": 0.0,
+"p_largest": 0.24,
+"actual": 122
+},
+{
+"name": "SHS",
+"base": 16.3,
+"m2": 17.9,
+"m3": null,
+"p5": 41,
+"med": 68,
+"p95": 100,
+"p_maj": 0.0,
+"p_largest": 0.2,
+"actual": 63
+},
+{
+"name": "INC",
+"base": 21.0,
+"m2": 19.9,
+"m3": null,
+"p5": 51,
+"med": 81,
+"p95": 114,
+"p_maj": 0.0,
+"p_largest": 0.46,
+"actual": 42
+},
+{
+"name": "NCP",
+"base": 16.4,
+"m2": 16.1,
+"m3": null,
+"p5": 41,
+"med": 64,
+"p95": 91,
+"p_maj": 0.0,
+"p_largest": 0.1,
+"actual": 41
+}
+],
+"questions": [
+{
+"q": "BJP wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.24,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "SHS wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "SHS is largest",
+"p2": 0.2,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.46,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "NCP wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "NCP is largest",
+"p2": 0.1,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "CG2013",
+"state": "Chhattisgarh",
+"st": "CG",
+"year": 2013,
+"status": "retrodiction",
+"title": "Chhattisgarh Assembly 2013",
+"blocs": [
+{
+"name": "BJP",
+"base": 40.3,
+"m2": 41.7,
+"m3": null,
+"p5": 29,
+"med": 51,
+"p95": 71,
+"p_maj": 0.68,
+"p_largest": 0.72,
+"actual": 49
+},
+{
+"name": "INC",
+"base": 38.6,
+"m2": 38.2,
+"m3": null,
+"p5": 18,
+"med": 37,
+"p95": 59,
+"p_maj": 0.24,
+"p_largest": 0.28,
+"actual": 39
+},
+{
+"name": "BSP",
+"base": 6.1,
+"m2": 5.6,
+"m3": null,
+"p5": 0,
+"med": 2,
+"p95": 5,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 1
+}
+],
+"questions": [
+{
+"q": "BJP wins majority",
+"p2": 0.68,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.72,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.24,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.28,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BSP wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BSP is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "DL2013",
+"state": "Delhi",
+"st": "DL",
+"year": 2013,
+"status": "retrodiction",
+"title": "Delhi Assembly 2013",
+"blocs": [
+{
+"name": "BJP",
+"base": 36.3,
+"m2": 36.1,
+"m3": 30.9,
+"p5": 12,
+"med": 22,
+"p95": 37,
+"p_maj": 0.07,
+"p_largest": 0.08,
+"actual": 31
+},
+{
+"name": "INC",
+"base": 40.3,
+"m2": 44.2,
+"m3": 26.2,
+"p5": 33,
+"med": 47,
+"p95": 58,
+"p_maj": 0.92,
+"p_largest": 0.92,
+"actual": 8
+},
+{
+"name": "AAP",
+"base": 0.0,
+"m2": 0.0,
+"m3": null,
+"p5": 0,
+"med": 0,
+"p95": 0,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 28
+}
+],
+"questions": [
+{
+"q": "BJP wins majority",
+"p2": 0.07,
+"p3": 0.72,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.08,
+"p3": 0.76,
+"verdict": "WATCH-FLAG",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.92,
+"p3": 0.23,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.92,
+"p3": 0.24,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "AAP wins majority",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "AAP is largest",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "KA2013",
+"state": "Karnataka",
+"st": "KA",
+"year": 2013,
+"status": "retrodiction",
+"title": "Karnataka Assembly 2013",
+"blocs": [
+{
+"name": "INC",
+"base": 34.8,
+"m2": 36.2,
+"m3": null,
+"p5": 52,
+"med": 86,
+"p95": 123,
+"p_maj": 0.11,
+"p_largest": 0.29,
+"actual": 122
+},
+{
+"name": "BJP",
+"base": 33.9,
+"m2": 37.8,
+"m3": null,
+"p5": 74,
+"med": 108,
+"p95": 141,
+"p_maj": 0.41,
+"p_largest": 0.71,
+"actual": 40
+},
+{
+"name": "JDS",
+"base": 19.0,
+"m2": 16.2,
+"m3": null,
+"p5": 15,
+"med": 29,
+"p95": 47,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 40
+}
+],
+"questions": [
+{
+"q": "INC wins majority",
+"p2": 0.11,
+"p3": null,
+"verdict": "WATCH-FLAG",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.29,
+"p3": null,
+"verdict": "WATCH-FLAG",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BJP wins majority",
+"p2": 0.41,
+"p3": null,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.71,
+"p3": null,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "JDS wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "JDS is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-FLAG",
+"outcome": "NO",
+"correct": null
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "MP2013",
+"state": "Madhya Pradesh",
+"st": "MP",
+"year": 2013,
+"status": "retrodiction",
+"title": "Madhya Pradesh Assembly 2013",
+"blocs": [
+{
+"name": "BJP",
+"base": 37.6,
+"m2": 38.9,
+"m3": null,
+"p5": 82,
+"med": 130,
+"p95": 173,
+"p_maj": 0.7,
+"p_largest": 0.79,
+"actual": 165
+},
+{
+"name": "INC",
+"base": 32.4,
+"m2": 34.0,
+"m3": null,
+"p5": 44,
+"med": 86,
+"p95": 135,
+"p_maj": 0.15,
+"p_largest": 0.21,
+"actual": 58
+},
+{
+"name": "BSP",
+"base": 9.0,
+"m2": 8.3,
+"m3": null,
+"p5": 4,
+"med": 13,
+"p95": 29,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 4
+}
+],
+"questions": [
+{
+"q": "BJP wins majority",
+"p2": 0.7,
+"p3": 0.87,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.79,
+"p3": 0.95,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.15,
+"p3": 0.07,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.21,
+"p3": 0.05,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BSP wins majority",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+},
+{
+"q": "BSP is largest",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+},
+{
+"id": "RJ2013",
+"state": "Rajasthan",
+"st": "RJ",
+"year": 2013,
+"status": "retrodiction",
+"title": "Rajasthan Assembly 2013",
+"blocs": [
+{
+"name": "BJP",
+"base": 34.3,
+"m2": 34.8,
+"m3": null,
+"p5": 47,
+"med": 81,
+"p95": 117,
+"p_maj": 0.17,
+"p_largest": 0.26,
+"actual": 163
+},
+{
+"name": "INC",
+"base": 36.8,
+"m2": 39.2,
+"m3": null,
+"p5": 71,
+"med": 108,
+"p95": 142,
+"p_maj": 0.63,
+"p_largest": 0.74,
+"actual": 21
+},
+{
+"name": "BSP",
+"base": 7.6,
+"m2": 6.6,
+"m3": null,
+"p5": 4,
+"med": 11,
+"p95": 22,
+"p_maj": 0.0,
+"p_largest": 0.0,
+"actual": 3
+}
+],
+"questions": [
+{
+"q": "BJP wins majority",
+"p2": 0.17,
+"p3": 0.66,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "BJP is largest",
+"p2": 0.26,
+"p3": 0.85,
+"verdict": "WATCH",
+"outcome": "YES",
+"correct": null
+},
+{
+"q": "INC wins majority",
+"p2": 0.63,
+"p3": 0.13,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "INC is largest",
+"p2": 0.74,
+"p3": 0.15,
+"verdict": "WATCH",
+"outcome": "NO",
+"correct": null
+},
+{
+"q": "BSP wins majority",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+},
+{
+"q": "BSP is largest",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO",
+"outcome": "NO",
+"correct": true
+}
+],
+"flags": [],
+"tripwires": [],
+"sha": null,
+"freeze": null
+}
+]
+}

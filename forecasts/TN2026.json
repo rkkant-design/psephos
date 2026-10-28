@@ -1,0 +1,57 @@
+{
+  "forecast_id": "TN2026",
+  "title": "Tamil Nadu Legislative Assembly 2026 (holdout)",
+  "state": "TN",
+  "expected_date": "2026-04-23 (counting 2026-05-04)",
+  "freeze_date": "2026-03-26",
+  "majority": 118,
+  "n_seats": 234,
+  "baseline_ae": "TN2021",
+  "ge_election": "GETN2024",
+  "blocs": {
+    "SPA": {
+      "ae_base": {"DMK": "1", "INC": "1", "VCK": "1", "CPM": "1", "CPI": "1", "IUML": "1", "DMDK": "t"},
+      "ge": {"DMK": "1", "INC": "1", "VCK": "1", "CPM": "1", "CPI": "1", "IUML": "1", "MDMK": "1", "DMDK": "t"},
+      "note": "DMK-led Secular Progressive Alliance: 2021 partners all stayed (weight 1 vs AE2021); DMDK joined 19 Feb 2026 from the 2021 AMMK front (tau); MNM supports but does not contest (24 Mar 2026). MDMK contested AE2021 on DMK symbol (no separate AE share) but separately at GE2024"
+    },
+    "NDA": {
+      "ae_base": {"ADMK": "1", "PMK": "1", "BJP": "1", "AMMK": "t"},
+      "ge": {"ADMK": "1", "BJP": "1", "PMK": "1", "TMC(M)": "1", "AMMK": "1"},
+      "note": "AIADMK+BJP reunited 11 Apr 2025 (contested GE2024 in two separate fronts - ge sums both); PMK formally joined 7 Jan 2026, AMMK 21 Jan 2026 (AMMK contested AE2021 separately -> tau; was in BJP front at GE2024 -> 1). Seat deal finalized 23 Mar 2026"
+    },
+    "TVK": {
+      "ae_base": {},
+      "ge": {},
+      "note": "Tamilaga Vettri Kazhagam (Vijay), first election, refused NDA on 18 Mar 2026; zero electoral base -> M2 structurally ~0, only M3 (polls) sees it. Known engine limitation for new entrants"
+    }
+  },
+  "polls": [
+    {"agency": "IANS-Matrize", "date": "2026-03-15", "SPA": 37.5, "NDA": 39.5, "TVK": 14.5, "rated": false},
+    {"agency": "News18-Vote Vibe", "date": "2026-03-23", "SPA": 40.0, "NDA": 38.0, "TVK": 15.0, "rated": false},
+    {"agency": "Agni News Agency", "date": "2026-03-23", "SPA": 44.9, "NDA": 38.5, "TVK": 9.7, "rated": false}
+  ],
+  "poll_window_days": 90,
+  "poll_corrections": {
+    "SPA": -0.66,
+    "NDA": 2.0,
+    "TVK": 0.0,
+    "rule": "0.5 x mean of TN ledger errors (actual - final-window polled): DMK bloc +0.29 (2016), -2.93 (2021) -> -0.66; ADMK bloc +4.00 (2016, only pct obs) -> +2.0; TVK new -> 0"
+  },
+  "sigma_state_m2": 6.3,
+  "sigma_state_m3_rated": 4.0,
+  "sigma_state_m3_unrated": 6.0,
+  "sub_questions": [
+    {"q": "Winner (largest) in {SPA, NDA}", "bloc": "__top2__", "op": "in", "threshold": ["SPA", "NDA"]},
+    {"q": "TVK under 40 seats", "bloc": "TVK", "op": "<", "threshold": 40}
+  ],
+  "quality_flags": [
+    "ALL three pre-freeze polls are unrated agencies; Agni News Agency is an outlier/quality symptom (SPA 44.9 pct + '180+ seats' projection on a claimed n=101,643) but is kept mechanically - no cherry-picking at freeze.",
+    "TVK (polling 10-15 pct) has zero AE/GE base: M2 cannot see it, and the vote it draws will shift both main blocs in ways the baseline-shift sim does not model. This election is a stress test of the engine's new-entrant blind spot.",
+    "NTK (6.7 pct AE2021, 8.2 pct GE2024) contests all 234 alone but has no poll column (lumped in Others); not modeled as a bloc.",
+    "Spellings: TMC(M) carries 0.95 at GE2024; AMMK below reporting threshold at GE2024 (contributes ~0)."
+  ],
+  "tripwires": [
+    {"watch": "TVK alliance reversal (joins NDA or SPA)", "effect": "bloc structure changes; re-run"},
+    {"watch": "A rated agency publishes vote shares before 23 Apr", "effect": "M3 upgrades to rated sigma"}
+  ]
+}

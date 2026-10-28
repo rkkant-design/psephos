@@ -1,0 +1,117 @@
+{
+ "domain": "Football",
+ "entity_probs": {
+  "market": {
+   "Arsenal": 0.6103,
+   "Brighton": 0.0549,
+   "Chelsea": 0.0849,
+   "Liverpool": 0.0445,
+   "Man City": 0.1868
+  },
+  "model": {
+   "Arsenal": 0.4627,
+   "Aston Villa": 0.0007,
+   "Bournemouth": 0.0001,
+   "Brentford": 0.0004,
+   "Brighton": 0.0362,
+   "Chelsea": 0.0025,
+   "Coventry": 0.0,
+   "Crystal Palace": 0.0,
+   "Everton": 0.0003,
+   "Fulham": 0.0,
+   "Hull City": 0.0001,
+   "Ipswich": 0.0002,
+   "Leeds": 0.0002,
+   "Liverpool": 0.0162,
+   "Man City": 0.4802,
+   "Man United": 0.0,
+   "Newcastle": 0.0002,
+   "Nottm Forest": 0.0,
+   "Sunderland": 0.0,
+   "Tottenham": 0.0
+  }
+ },
+ "forecast_id": "EPL2027",
+ "freeze_date": "2026-10-26",
+ "gate_rule": "2-of-3: CALL when >=2 instruments clear 0.95 the same way and none contradicts by >0.20 the other way; p_gate = median",
+ "instruments": {
+  "market_source": "Bookmaker outright odds, TNT Sports comparison dated 2026-10-20 13:50 BST, best price across bet365/BetMGM/Ladbrokes/William Hill/Betfred - PREDATES MW8 (City lost to Villa 24-Oct); staleness flagged",
+  "model_note": "strength = games-played-shrunk PPG (k=12 prior games to league mean 1.37), fixed draw rate 0.24, 31 remaining games simulated independently, title by points then GD noise",
+  "research_sha256": "97f4ad6849a78680a162dbb9ff73bd885dbb0d158bc680bf228bd934189e6f30"
+ },
+ "quality_flags": [
+  "THE DISAGREEMENT, DECODED (2026-10-23): the market favours Arsenal while our table model favours City - and it is not just stale odds. Polymarket prices a City POINTS DEDUCTION by June 2027 at 74.5% (charges verdict pending). Our model simulates the table as it stands and cannot see sanction risk; the market can. Until the verdict, the title race is genuinely open and this forecast stays WATCH.",
+  "Market odds (2026-10-20) predate MW8, where City lost at Villa and Arsenal drew level on points (both 21 at MD8); the model sees the MD8 table the market has not priced. Timing gap noted 2026-10-26.",
+  "Model simulates teams independently vs average opposition - no fixture list, no injuries, no schedule strength. It is a deliberate coarse instrument; 7 games of evidence get heavy regression to the mean.",
+  "Reference point (not an instrument): Opta supercomputer after MD5 had Arsenal 43.7%, City 39.8%."
+ ],
+ "questions": [
+  {
+   "p_gate": 0.48,
+   "p_market": 0.1868,
+   "p_model": 0.4802,
+   "p_research": 0.48,
+   "q": "Man City win the title",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.4627,
+   "p_market": 0.6103,
+   "p_model": 0.4627,
+   "p_research": 0.3,
+   "q": "Arsenal win the title",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.797,
+   "p_market": 0.797,
+   "p_model": 0.9429,
+   "p_research": 0.78,
+   "q": "Winner in {Man City, Arsenal}",
+   "verdict": "WATCH"
+  },
+  {
+   "p_gate": 0.0445,
+   "p_market": 0.0445,
+   "p_model": 0.0162,
+   "p_research": 0.05,
+   "q": "Liverpool win the title",
+   "verdict": "CALL-NO"
+  },
+  {
+   "p_gate": 0.9813,
+   "p_market": 0.9813,
+   "p_model": 0.9978,
+   "p_research": 0.92,
+   "q": "Winner from current top 5",
+   "verdict": "CALL-YES"
+  }
+ ],
+ "resolution": {
+  "resolve_by": "2027-06-15",
+  "rules": [
+   "Champion = club ranked 1st in the final OFFICIAL table, including any points deductions, awarded results or sanctions applied before the table is confirmed (points-deduction rule: the sanctioned table is the real table)",
+   "'Winner from current top 5' resolves against the five clubs named in the question's entity list at freeze, not whoever is top-5 later",
+   "If the season is curtailed, rows resolve on the league's official champion declaration (incl. a PPG-decided table); no champion declared = VOID, logged and excluded from scoring",
+   "A title stripped retroactively AFTER first confirmation of the final table does not change resolution"
+  ],
+  "source": "Final official 2026-27 Premier League table (premierleague.com/tables) after the last matchday (~2027-05)"
+ },
+ "resolve_date": "2027-05",
+ "run_at_utc": "2026-10-26T05:27:56+00:00",
+ "title": "Premier League Winner 2026-27",
+ "tripwires": [
+  {
+   "effect": "re-run immediately; a points deduction reshapes the entire title race",
+   "watch": "Man City charges verdict announced (deduction market at 74.5% on 2026-10-23)"
+  },
+  {
+   "effect": "re-run with current market",
+   "watch": "Fresh dated outright odds published"
+  },
+  {
+   "effect": "re-run",
+   "watch": "Title race gap changes by 6+ points"
+  }
+ ]
+}

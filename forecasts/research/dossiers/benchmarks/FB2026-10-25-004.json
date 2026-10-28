@@ -1,0 +1,861 @@
+{
+ "forecast_id": "FB2026-10-25-004",
+ "domain": "ForecastBench",
+ "freeze_date": "2026-10-25",
+ "resolve_date": null,
+ "researcher": "claude-fable-5 operator session, 2026-10-25 round-day sprint (authored + rule + family layers)",
+ "resolution_source": "per-question benchmark resolution criteria (see each question's benchmark block)",
+ "independence_attestation": "No betting odds, prediction-market prices or forecast-aggregator numbers were fetched or consulted for any question in this dossier; market-source questions' embedded freeze prices were deliberately ignored.",
+ "questions": [
+  {
+   "q": "Will Republicans win the Senate race in Alaska? [Yes: Republican party]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "SENATEAK-26-R",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/senateak/x/senateak-26.",
+   "base_rate_used": {
+    "reference_class": "AK R Senate incumbents reelected since 2010",
+    "value": 0.75,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "Alaska's Senate seat (Sullivan) leans R and incumbent senators in AK have not lost since 2008; RCV plus D+9 makes it competitive but the fundamentals hold."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: Sullivan's Trump alignment underperforms Alaska's independent streak and a Peltola candidacy would make this the sleeper flip of the cycle.",
+   "reasoning_summary": "Base rate: AK R Senate incumbents reelected since 2010 ~ 0.75. Alaska's Senate seat (Sullivan) leans R and incumbent senators in AK have not lost since 2008; RCV plus D+9 makes it competitive but the fundamentals hold. Net of adjustments the final probability is 0.68.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls",
+     "date": "2026-10-23"
+    }
+   ],
+   "p_raw": 0.68
+  },
+  {
+   "q": "Will Elon Musk's net worth for December 31, 2026 be above $800 billion? [Yes: Above $800 billion]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "KXMUSKNW-26DEC31-T800",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxmusknw/x/kxmusknw-26dec31.",
+   "base_rate_used": {
+    "reference_class": "individuals gaining >$300B in a year",
+    "value": 0.03,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "Musk's Forbes net worth ran $400-500B in 2025; crossing $800B by Dec 31 needs a Tesla/xAI/SpaceX revaluation of historic scale within weeks, against a tape where BTC has crashed and AI valuations face pressure."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: A SpaceX tender at $1T+ plus a Tesla robotaxi re-rating in a melt-up could gap his wealth; his single-year swings have exceeded $200B before.",
+   "reasoning_summary": "Base rate: individuals gaining >$300B in a year ~ 0.03. Musk's Forbes net worth ran $400-500B in 2025; crossing $800B by Dec 31 needs a Tesla/xAI/SpaceX revaluation of historic scale within weeks, against a tape where BTC has crashed and AI valuations face pressure. Net of adjustments the final probability is 0.12.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Market snapshot roundup, 24 Oct 2026 (S&P ~7,663; BTC ~$81k; WTI ~$102)",
+     "url": "https://seekingalpha.com/article/4957279-the-1-minute-market-report-october-24-2026",
+     "date": "2026-10-24"
+    }
+   ],
+   "p_raw": 0.12
+  },
+  {
+   "q": "Will Republican win the House race for TX-23? [Yes: Brandon Herrera]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "KXHOUSERACE-TX23-26-R",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxhouserace/x/kxhouserace-tx23-26.",
+   "base_rate_used": {
+    "reference_class": "controversial R nominees holding R+5 seats in D waves",
+    "value": 0.55,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "TX-23 is R+5 but nominee Brandon Herrera (who primaried Gonzales) carries general-election risk; a controversial nominee in a D+9 year turns a safe-ish seat into a genuine contest."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: The district's border-security electorate fits Herrera's profile and Texas Dems have under-delivered in every recent cycle despite favorable environments.",
+   "reasoning_summary": "Base rate: controversial R nominees holding R+5 seats in D waves ~ 0.55. TX-23 is R+5 but nominee Brandon Herrera (who primaried Gonzales) carries general-election risk; a controversial nominee in a D+9 year turns a safe-ish seat into a genuine contest. Net of adjustments the final probability is 0.55.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls",
+     "date": "2026-10-23"
+    }
+   ],
+   "p_raw": 0.55
+  },
+  {
+   "q": "Will Republican win the House race for PA-1? [Yes: Brian Fitzpatrick]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "HOUSEPA1-26-R",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/housepa1/x/housepa1-26.",
+   "base_rate_used": {
+    "reference_class": "Fitzpatrick-style crossover incumbents surviving D+8",
+    "value": 0.6,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "Fitzpatrick has survived every wave as the GOP's best crossover incumbent in a D+2 seat; D+9 is his hardest test yet but his union-moderate brand has beaten the environment repeatedly."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: Even Fitzpatrick-class incumbents lost in 2006-scale waves and PA suburbs are ground zero for the current Dem surge.",
+   "reasoning_summary": "Base rate: Fitzpatrick-style crossover incumbents surviving D+8 ~ 0.6. Fitzpatrick has survived every wave as the GOP's best crossover incumbent in a D+2 seat; D+9 is his hardest test yet but his union-moderate brand has beaten the environment repeatedly. Net of adjustments the final probability is 0.62.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls",
+     "date": "2026-10-23"
+    }
+   ],
+   "p_raw": 0.62
+  },
+  {
+   "q": "Will Republican win the House race for OH-9? [Yes: Derek Merrin]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "HOUSEOH9-26-R",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/houseoh9/x/houseoh9-26.",
+   "base_rate_used": {
+    "reference_class": "Kaptur wins in R+ years vs D+ years",
+    "value": 0.35,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "OH-09: Kaptur (D) defends an R+3 seat she has held through hostile maps; the R nominee Merrin lost narrowly in 2024 but D+9 should widen Kaptur's path despite the district lean."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: Kaptur's age and the district's drift make this the GOP's best Ohio target; Merrin's near-miss infrastructure persists.",
+   "reasoning_summary": "Base rate: Kaptur wins in R+ years vs D+ years ~ 0.35. OH-09: Kaptur (D) defends an R+3 seat she has held through hostile maps; the R nominee Merrin lost narrowly in 2024 but D+9 should widen Kaptur's path despite the district lean. Net of adjustments the final probability is 0.35.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls",
+     "date": "2026-10-23"
+    }
+   ],
+   "p_raw": 0.35
+  },
+  {
+   "q": "Will Sydney Sweeney and Scooter Braun be engaged in 2026? [Yes: Before 2027]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "KXENGAGEMENTSWEENEYBRUAN-26",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxengagementsweeneybruan/x/kxengagementsweeneybruan-26.",
+   "base_rate_used": {
+    "reference_class": "celebrity couples engaged within first year",
+    "value": 0.15,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "Celebrity engagement questions resolve on confirmed reports; the Sweeney-Braun relationship is recent and engagement within 10 weeks would be fast even by celebrity timelines."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: Tabloid-confirmed engagements often follow 6-12 month relationships and year-end holidays cluster proposals.",
+   "reasoning_summary": "Base rate: celebrity couples engaged within first year ~ 0.15. Celebrity engagement questions resolve on confirmed reports; the Sweeney-Braun relationship is recent and engagement within 10 weeks would be fast even by celebrity timelines. Net of adjustments the final probability is 0.12.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.12
+  },
+  {
+   "q": "Will Democratic win the House race for WI-1? [Yes: Mitchell Berman]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "HOUSEWI1-26-D",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/housewi1/x/housewi1-26.",
+   "base_rate_used": {
+    "reference_class": "R+4 seats flipping in D+8 waves",
+    "value": 0.45,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "WI-01 (Steil, R+4): a D+9 wave puts Steil's suburban-Milwaukee seat in play for Berman; it flipped partisan lean in recent state races but Steil has held comfortably."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: Steil's margins have beaten fundamentals every cycle and WI-01 remains R+4 on paper; wave narrowing usually leaves such seats just short.",
+   "reasoning_summary": "Base rate: R+4 seats flipping in D+8 waves ~ 0.45. WI-01 (Steil, R+4): a D+9 wave puts Steil's suburban-Milwaukee seat in play for Berman; it flipped partisan lean in recent state races but Steil has held comfortably. Net of adjustments the final probability is 0.42.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls",
+     "date": "2026-10-23"
+    }
+   ],
+   "p_raw": 0.42
+  },
+  {
+   "q": "Will the WTI front-month settle oil price  be >80.99 on Nov 3, 2026? [Yes: $81 or above]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "KXWTI-26NOV03-T80.99",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxwti/x/kxwti-26nov03.",
+   "base_rate_used": {
+    "reference_class": "6-day 20% WTI declines historically",
+    "value": 0.95,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "WTI trades ~$101-103 amid the Hormuz disruption; settling above $80.99 on Nov 3 would survive even a 20% crash in six trading days, which requires an immediate peace breakthrough."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: The White House's pre-midterm restraint plus Iran's ceasefire proposal could produce exactly such a breakthrough headline before Nov 3.",
+   "reasoning_summary": "Base rate: 6-day 20% WTI declines historically ~ 0.95. WTI trades ~$101-103 amid the Hormuz disruption; settling above $80.99 on Nov 3 would survive even a 20% crash in six trading days, which requires an immediate peace breakthrough. Net of adjustments the final probability is 0.92.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Iran war status: blockade, Hormuz closure, ceasefire proposals",
+     "url": "https://www.pbs.org/newshour/world/iran-and-u-s-reach-an-initial-deal-to-extend-the-ceasefire-and-open-the-strait-of-hormuz-but-challenges-remain",
+     "date": "2026-10-20"
+    }
+   ],
+   "p_raw": 0.92
+  },
+  {
+   "q": "Will the WTI front-month settle oil price  be >72.99 on Nov 3, 2026? [Yes: $73 or above]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "KXWTI-26NOV03-T72.99",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxwti/x/kxwti-26nov03.",
+   "base_rate_used": {
+    "reference_class": "6-day 28% WTI declines historically",
+    "value": 0.98,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "A fall below $73 by Nov 3 from ~$102 is a ~28% six-day collapse with essentially no historical precedent outside Apr 2020; even full peace would not clear war-risk premium that fast."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: Oil has produced unprecedented moves in this war already and a coordinated SPR+peace shock is the one scenario that could gap prices.",
+   "reasoning_summary": "Base rate: 6-day 28% WTI declines historically ~ 0.98. A fall below $73 by Nov 3 from ~$102 is a ~28% six-day collapse with essentially no historical precedent outside Apr 2020; even full peace would not clear war-risk premium that fast. Net of adjustments the final probability is 0.96.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Iran war status: blockade, Hormuz closure, ceasefire proposals",
+     "url": "https://www.pbs.org/newshour/world/iran-and-u-s-reach-an-initial-deal-to-extend-the-ceasefire-and-open-the-strait-of-hormuz-but-challenges-remain",
+     "date": "2026-10-20"
+    }
+   ],
+   "p_raw": 0.96
+  },
+  {
+   "q": "Will at least 50 states conduct 2026 U.S. House midterms on time?",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "KXMIDTERMHAPPEN-2026-T50",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxmidtermhappen/x/kxmidtermhappen-2026.",
+   "base_rate_used": {
+    "reference_class": "federal elections held on time since 1944",
+    "value": 0.99,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "All 50 states conducting House midterms on the scheduled date is the overwhelming default; no state has missed a federal election date in the modern era, war or not."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: Active wartime cyber threats against election infrastructure create a nonzero tail of a court-ordered localized postponement.",
+   "reasoning_summary": "Base rate: federal elections held on time since 1944 ~ 0.99. All 50 states conducting House midterms on the scheduled date is the overwhelming default; no state has missed a federal election date in the modern era, war or not. Net of adjustments the final probability is 0.97.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls",
+     "date": "2026-10-23"
+    }
+   ],
+   "p_raw": 0.97
+  },
+  {
+   "q": "Who will win the 2026 CA-07 House election? [Yes: Mai Vang]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "KXCAELECTION-2607-MVAN",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxcaelection/x/kxcaelection-2607.",
+   "base_rate_used": {
+    "reference_class": "challengers beating CA safe-seat incumbents",
+    "value": 0.05,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "CA-07 is Matsui's safe-D Sacramento seat; Mai Vang winning requires Matsui's retirement or a same-party upset neither of which is indicated."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: If Matsui (b.1944) retired late, Vang as a Sacramento councilmember would be a credible successor in the all-party primary system.",
+   "reasoning_summary": "Base rate: challengers beating CA safe-seat incumbents ~ 0.05. CA-07 is Matsui's safe-D Sacramento seat; Mai Vang winning requires Matsui's retirement or a same-party upset neither of which is indicated. Net of adjustments the final probability is 0.08.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls",
+     "date": "2026-10-23"
+    }
+   ],
+   "p_raw": 0.08
+  },
+  {
+   "q": "Will the margin of victory for Democrats in the U.S. Senate election in Georgia be at least 10 percentage points? [Yes: Ossoff, 10+ pts]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "KXMIDTERMMOV-GASEND-P10",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxmidtermmov/x/kxmidtermmov-gasend.",
+   "base_rate_used": {
+    "reference_class": "GA federal races decided by 10+ since 2016",
+    "value": 0.1,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "Ossoff winning Georgia by 10+ requires a blowout in a state decided by <3 points in every recent federal race; D+9 lifts him to favorite but double-digit margins in GA have no modern precedent."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: 2026 GA polling has shown Ossoff clearing 50% against a weak nominee; wave years occasionally produce margin blowouts where the losing side's turnout collapses.",
+   "reasoning_summary": "Base rate: GA federal races decided by 10+ since 2016 ~ 0.1. Ossoff winning Georgia by 10+ requires a blowout in a state decided by <3 points in every recent federal race; D+9 lifts him to favorite but double-digit margins in GA have no modern precedent. Net of adjustments the final probability is 0.28.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls",
+     "date": "2026-10-23"
+    }
+   ],
+   "p_raw": 0.28
+  },
+  {
+   "q": "Will the margin of victory for Democrats in the governor election in Wisconsin be at least 4 percentage points? [Yes: Crowley, 4+ pts]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "KXMIDTERMMOV-WIGOVD-P4",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxmidtermmov/x/kxmidtermmov-wigovd.",
+   "base_rate_used": {
+    "reference_class": "WI statewide wins by 4+ since 2016",
+    "value": 0.3,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "A 4+ point Dem gubernatorial win in Wisconsin, the archetypal 1-point state: D+9 makes victory likely but Wisconsin margins compress toward 1-3 points structurally (Evers' best was 3.4)."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: Open-seat dynamics plus a R nominee dragged by the national party could produce the first 5+ point WI statewide margin since 2018's AG race.",
+   "reasoning_summary": "Base rate: WI statewide wins by 4+ since 2016 ~ 0.3. A 4+ point Dem gubernatorial win in Wisconsin, the archetypal 1-point state: D+9 makes victory likely but Wisconsin margins compress toward 1-3 points structurally (Evers' best was 3.4). Net of adjustments the final probability is 0.42.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls",
+     "date": "2026-10-23"
+    }
+   ],
+   "p_raw": 0.42
+  },
+  {
+   "q": "Will CPI rise more than 0.3% in October 2026? [Yes: Above 0.3%]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "KXCPI-26OCT-T0.3",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxcpi/x/kxcpi-26oct.",
+   "base_rate_used": {
+    "reference_class": "monthly CPI prints >0.3% during oil-shock quarters",
+    "value": 0.45,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "October MoM CPI above 0.3% (i.e. 0.4%+): with oil >$100 and tariff pass-through, monthly prints have been running 0.3-0.4; above 0.3 means a high-side print, roughly a coin flip minus."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: Gas price pass-through peaks with a lag and October's energy surge argues the high side; shelter has also re-accelerated.",
+   "reasoning_summary": "Base rate: monthly CPI prints >0.3% during oil-shock quarters ~ 0.45. October MoM CPI above 0.3% (i.e. 0.4%+): with oil >$100 and tariff pass-through, monthly prints have been running 0.3-0.4; above 0.3 means a high-side print, roughly a coin flip minus. Net of adjustments the final probability is 0.45.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Fed holds expected Oct 28; Sep hike to 3.75-4.00%; CPI 3.7% YoY Sep",
+     "url": "https://www.cnbc.com/2026/10/16/kevin-warsh-fed-october-rate-hike-interest-rates-markets.html",
+     "date": "2026-10-16"
+    }
+   ],
+   "p_raw": 0.45
+  },
+  {
+   "q": "Will the margin of victory for Republicans in the U.S. Senate election in South Carolina be at least 9 percentage points? [Yes: Graham, 9+ pts]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "KXMIDTERMMOV-SCSENR-P9",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxmidtermmov/x/kxmidtermmov-scsenr.",
+   "base_rate_used": {
+    "reference_class": "SC R Senate margins since 2014",
+    "value": 0.5,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "Graham (SC) winning by 9+: SC leans R+8 but Graham underruns the lean and D+9 compresses margins; 9+ is close to the over/under exactly."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: Graham's 2020 race closed to 10 in a R-friendlier year; D+9 suggests mid-single-digits this time, putting 9+ underwater.",
+   "reasoning_summary": "Base rate: SC R Senate margins since 2014 ~ 0.5. Graham (SC) winning by 9+: SC leans R+8 but Graham underruns the lean and D+9 compresses margins; 9+ is close to the over/under exactly. Net of adjustments the final probability is 0.52.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls",
+     "date": "2026-10-23"
+    }
+   ],
+   "p_raw": 0.52
+  },
+  {
+   "q": "Will the Democratic party win the Lieutenant Governor race in Texas? [Yes: Vikki Goodwin]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "KXLTGOVTX-26-DEM",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxltgovtx/x/kxltgovtx-26.",
+   "base_rate_used": {
+    "reference_class": "TX statewide D wins since 1994",
+    "value": 0.08,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "Texas LtGov: Patrick is a durable incumbent in a state Dems have not won statewide since 1994; D+9 narrows but Texas's statewide floor for Rs has held through every wave."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: Patrick's hard-right profile underperforms generic R and a D+9 year with Hispanic re-shift could end the streak exactly here.",
+   "reasoning_summary": "Base rate: TX statewide D wins since 1994 ~ 0.08. Texas LtGov: Patrick is a durable incumbent in a state Dems have not won statewide since 1994; D+9 narrows but Texas's statewide floor for Rs has held through every wave. Net of adjustments the final probability is 0.18.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls",
+     "date": "2026-10-23"
+    }
+   ],
+   "p_raw": 0.18
+  },
+  {
+   "q": "Will the Democratic Party hold more than 52 seats in the 120th Congress? [Yes: Above 52]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "KXDSENATESEATS-27-ABOVE52",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxdsenateseats/x/kxdsenateseats-27.",
+   "base_rate_used": {
+    "reference_class": "midterm Senate nets of +6 or more since 1980",
+    "value": 0.15,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "Dems above 52 seats means net +6: requires winning NC, ME, OH plus three of the long-shot set (IA/TX/AK/SC/FL); D+9 makes +4 plausible but +6 needs the tail of the distribution."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: Wave years break late and in one direction; 2008-scale environments delivered +8 and current polling has multiple long shots within 5.",
+   "reasoning_summary": "Base rate: midterm Senate nets of +6 or more since 1980 ~ 0.15. Dems above 52 seats means net +6: requires winning NC, ME, OH plus three of the long-shot set (IA/TX/AK/SC/FL); D+9 makes +4 plausible but +6 needs the tail of the distribution. Net of adjustments the final probability is 0.3.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls",
+     "date": "2026-10-23"
+    }
+   ],
+   "p_raw": 0.3
+  },
+  {
+   "q": "Will the Democratic party hold exactly 53 Senate seats in the 120th Congress? [Yes: 53]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "KXDSENATESEATSH-27-E53",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxdsenateseatsh/x/kxdsenateseatsh-27.",
+   "base_rate_used": {
+    "reference_class": "exact-seat-count hit rates one cycle out",
+    "value": 0.1,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "Exactly 53 Dem seats is one point of a distribution centered near 50-51; the modal outcomes cluster at 49-52 given the map."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: If the wave crests as polling suggests, 53 sits one competitive-race coin-flip from the center of mass.",
+   "reasoning_summary": "Base rate: exact-seat-count hit rates one cycle out ~ 0.1. Exactly 53 Dem seats is one point of a distribution centered near 50-51; the modal outcomes cluster at 49-52 given the map. Net of adjustments the final probability is 0.13.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls",
+     "date": "2026-10-23"
+    }
+   ],
+   "p_raw": 0.13
+  },
+  {
+   "q": "Will Illinois utility-scale net electricity generation from nuclear energy for 2026 be above 95.0 TWh? [Yes: Above 95.0 TWh]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "KXILNUCLEAR-27FEB28-T95.0",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxilnuclear/x/kxilnuclear-27feb28.",
+   "base_rate_used": {
+    "reference_class": "IL nuclear years above 95 TWh since 2015",
+    "value": 0.8,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "Illinois nuclear generation has run 96-100 TWh annually for a decade with high capacity factors; 2026 clearing 95.0 TWh fails only on major unplanned outages."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: Extended refueling schedules and one unplanned dual-unit outage in H2 could leave the total in the low 90s; margins are thinner than they look.",
+   "reasoning_summary": "Base rate: IL nuclear years above 95 TWh since 2015 ~ 0.8. Illinois nuclear generation has run 96-100 TWh annually for a decade with high capacity factors; 2026 clearing 95.0 TWh fails only on major unplanned outages. Net of adjustments the final probability is 0.7.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026",
+     "date": "2026-10-25"
+    }
+   ],
+   "p_raw": 0.7
+  },
+  {
+   "q": "Will CPI rise more than 0.1% in October 2026? [Yes: Above 0.1%]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "KXCPI-26OCT-T0.1",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxcpi/x/kxcpi-26oct.",
+   "base_rate_used": {
+    "reference_class": "months printing >0.1% in high-inflation regimes",
+    "value": 0.9,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "October MoM above 0.1% is nearly assured with 3.7% YoY inflation trending up and energy elevated; sub-0.2 prints have vanished in 2026."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: A sharp oil retreat during the survey window plus a used-car drop could produce one soft month; it happened in mid-2024.",
+   "reasoning_summary": "Base rate: months printing >0.1% in high-inflation regimes ~ 0.9. October MoM above 0.1% is nearly assured with 3.7% YoY inflation trending up and energy elevated; sub-0.2 prints have vanished in 2026. Net of adjustments the final probability is 0.88.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Fed holds expected Oct 28; Sep hike to 3.75-4.00%; CPI 3.7% YoY Sep",
+     "url": "https://www.cnbc.com/2026/10/16/kevin-warsh-fed-october-rate-hike-interest-rates-markets.html",
+     "date": "2026-10-16"
+    }
+   ],
+   "p_raw": 0.88
+  },
+  {
+   "q": "Will the Republican party win the Lieutenant Governor race in Texas? [Yes: Dan Patrick]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "KXLTGOVTX-26-GOP",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxltgovtx/x/kxltgovtx-26.",
+   "base_rate_used": {
+    "reference_class": "TX statewide R wins since 1994",
+    "value": 0.9,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "Complement of the TX LtGov Dem question less third-party residue; Patrick's hold is the strong base case."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: The same D+9 tail that gives Dems 18% applies; resignation-and-replacement scenarios add minor leakage.",
+   "reasoning_summary": "Base rate: TX statewide R wins since 1994 ~ 0.9. Complement of the TX LtGov Dem question less third-party residue; Patrick's hold is the strong base case. Net of adjustments the final probability is 0.8.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls",
+     "date": "2026-10-23"
+    }
+   ],
+   "p_raw": 0.8
+  },
+  {
+   "q": "Will the Democratic party win the governorship in Alaska [Yes: Democratic party]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "KXGOVPARTYAK-26-D",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxgovpartyak/x/kxgovpartyak-26.",
+   "base_rate_used": {
+    "reference_class": "AK D gubernatorial wins since 1998",
+    "value": 0.25,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "Alaska's open governor race under RCV: the R field is fractured and AK elects moderates unpredictably, but the state's R lean keeps a generic D win at around one-in-three even in D+9."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: RCV rewards the consolidated side and Alaska Dems/independents have won under exactly these conditions (2022 Peltola model).",
+   "reasoning_summary": "Base rate: AK D gubernatorial wins since 1998 ~ 0.25. Alaska's open governor race under RCV: the R field is fractured and AK elects moderates unpredictably, but the state's R lean keeps a generic D win at around one-in-three even in D+9. Net of adjustments the final probability is 0.35.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls",
+     "date": "2026-10-23"
+    }
+   ],
+   "p_raw": 0.35
+  },
+  {
+   "q": "Will the margin of victory for Republicans in the U.S. Senate election in Ohio be at least 4 percentage points? [Yes: Husted, 4+ pts]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "KXMIDTERMMOV-OHSENR-P4",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxmidtermmov/x/kxmidtermmov-ohsenr.",
+   "base_rate_used": {
+    "reference_class": "OH R federal margins of 4+ in D+ years",
+    "value": 0.15,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "Husted (R-OH) winning by 4+ against Sherrod Brown in a D+9 year: Brown's resilience plus the environment makes an R win itself the minority case, let alone by 4+."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: Ohio's R+6 drift beat Brown in 2024 and could again; if national Dems fade late, Husted by 4 matches the state's recent federal margins.",
+   "reasoning_summary": "Base rate: OH R federal margins of 4+ in D+ years ~ 0.15. Husted (R-OH) winning by 4+ against Sherrod Brown in a D+9 year: Brown's resilience plus the environment makes an R win itself the minority case, let alone by 4+. Net of adjustments the final probability is 0.15.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls",
+     "date": "2026-10-23"
+    }
+   ],
+   "p_raw": 0.15
+  },
+  {
+   "q": "Will the WTI front-month settle oil price  be >107.99 on Nov 3, 2026? [Yes: $108 or above]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "KXWTI-26NOV03-T107.99",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxwti/x/kxwti-26nov03.",
+   "base_rate_used": {
+    "reference_class": "6-day +6% WTI moves during war months",
+    "value": 0.3,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "WTI needs to RISE from ~$102 to settle above $107.99 on Nov 3; war headlines can do it but the pre-midterm de-escalation posture argues sideways-to-lower into the date."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: Any attack on Gulf infrastructure or a blockade incident in the next six sessions sends WTI through $108 instantly; realized vol supports a wide cone.",
+   "reasoning_summary": "Base rate: 6-day +6% WTI moves during war months ~ 0.3. WTI needs to RISE from ~$102 to settle above $107.99 on Nov 3; war headlines can do it but the pre-midterm de-escalation posture argues sideways-to-lower into the date. Net of adjustments the final probability is 0.24.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Iran war status: blockade, Hormuz closure, ceasefire proposals",
+     "url": "https://www.pbs.org/newshour/world/iran-and-u-s-reach-an-initial-deal-to-extend-the-ceasefire-and-open-the-strait-of-hormuz-but-challenges-remain",
+     "date": "2026-10-20"
+    }
+   ],
+   "p_raw": 0.24
+  },
+  {
+   "q": "Will the WTI front-month settle oil price  be >108.99 on Nov 3, 2026? [Yes: $109 or above]",
+   "benchmark": {
+    "source": "kalshi",
+    "id": "KXWTI-26NOV03-T108.99",
+    "question_set": "2026-10-25-llm.json",
+    "forecast_due_date": "2026-10-25",
+    "resolution_date": null
+   },
+   "resolution_note": "Resolves to the outcome of the question found at https://kalshi.com/markets/kxwti/x/kxwti-26nov03.",
+   "base_rate_used": {
+    "reference_class": "6-day +7% WTI moves during war months",
+    "value": 0.26,
+    "source": "operator reference-class estimate, m_research protocol step 2"
+   },
+   "evidence": [
+    "One dollar higher than the prior threshold; same six-session window from ~$102 requires a ~7% rally."
+   ],
+   "strongest_opposing_case": "Strongest case against this number: Identical escalation scenarios apply with slightly lower reach.",
+   "reasoning_summary": "Base rate: 6-day +7% WTI moves during war months ~ 0.26. One dollar higher than the prior threshold; same six-session window from ~$102 requires a ~7% rally. Net of adjustments the final probability is 0.2.",
+   "key_sources": [
+    {
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets",
+     "date": "2026-10-25"
+    },
+    {
+     "title": "Iran war status: blockade, Hormuz closure, ceasefire proposals",
+     "url": "https://www.pbs.org/newshour/world/iran-and-u-s-reach-an-initial-deal-to-extend-the-ceasefire-and-open-the-strait-of-hormuz-but-challenges-remain",
+     "date": "2026-10-20"
+    }
+   ],
+   "p_raw": 0.2
+  }
+ ]
+}

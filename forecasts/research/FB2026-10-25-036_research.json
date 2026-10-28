@@ -1,0 +1,867 @@
+{
+ "calibration": {
+  "a": 1.0,
+  "b": 0.0
+ },
+ "committed_at_utc": "2026-10-25T05:29:37+00:00",
+ "domain": "ForecastBench",
+ "dossier_sha256": "1cb88c5007a1f64b74a087558252633e1212b047e1ea0da8d3e83178b1929f96",
+ "forecast_id": "FB2026-10-25-036",
+ "freeze_date": "2026-10-25",
+ "independence_attestation": "No betting odds, prediction-market prices or forecast-aggregator numbers were fetched or consulted for any question in this dossier; market-source questions' embedded freeze prices were deliberately ignored.",
+ "questions": [
+  {
+   "base_rate_used": {
+    "reference_class": "online listed retail price strictly higher than a saved snapshot",
+    "source": "family strategy, fb_fill_oct25.py docstring",
+    "value": 0.34
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "amazon_minimum_product_price__b0000a1zn1-amazon-com-new",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": "2027-10-25",
+    "source": "serpapi"
+   },
+   "evidence": [
+    "Dataset family 'serpapi', horizon 2027-10-25: price-stickiness class curve by horizon (freeze price 69.95)."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "serpapi source data family (underlying series documentation)",
+     "url": "https://serpapi.com"
+    }
+   ],
+   "p_raw": 0.34,
+   "p_research": 0.34,
+   "q": "Will the listed price in USD for a new 'Cuisinart CPT-180P1 4-Slice Toaster Stainless Steel', sold by Amazon.com, be higher on {resolution_date} than on {forecast_due_date}? | horizon 2027-10-25",
+   "reasoning_summary": "Family base-rate strategy for serpapi at horizon 2027-10-25: price-stickiness class curve by horizon (freeze price 69.95). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.34.",
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "online listed retail price strictly higher than a saved snapshot",
+    "source": "family strategy, fb_fill_oct25.py docstring",
+    "value": 0.1
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "walmart_food_drink_price__10304322-store-5185-walmart-com",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": "2026-11-01",
+    "source": "serpapi"
+   },
+   "evidence": [
+    "Dataset family 'serpapi', horizon 2026-11-01: price-stickiness class curve by horizon (freeze price 2.22)."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "serpapi source data family (underlying series documentation)",
+     "url": "https://serpapi.com"
+    }
+   ],
+   "p_raw": 0.1,
+   "p_research": 0.1,
+   "q": "Will the listed price in USD of 'Dole Pineapple Slices in 100% Pineapple Juice 20 oz Can', sold by Walmart.com for Columbus Georgesville Rd Supercenter (store 5185), be higher on {resolution_date} than on {forecast_due_date}? | horizon 2026-11-01",
+   "reasoning_summary": "Family base-rate strategy for serpapi at horizon 2026-11-01: price-stickiness class curve by horizon (freeze price 2.22). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.1.",
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "online listed retail price strictly higher than a saved snapshot",
+    "source": "family strategy, fb_fill_oct25.py docstring",
+    "value": 0.12
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "walmart_food_drink_price__10304322-store-5185-walmart-com",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": "2026-11-24",
+    "source": "serpapi"
+   },
+   "evidence": [
+    "Dataset family 'serpapi', horizon 2026-11-24: price-stickiness class curve by horizon (freeze price 2.22)."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "serpapi source data family (underlying series documentation)",
+     "url": "https://serpapi.com"
+    }
+   ],
+   "p_raw": 0.12,
+   "p_research": 0.12,
+   "q": "Will the listed price in USD of 'Dole Pineapple Slices in 100% Pineapple Juice 20 oz Can', sold by Walmart.com for Columbus Georgesville Rd Supercenter (store 5185), be higher on {resolution_date} than on {forecast_due_date}? | horizon 2026-11-24",
+   "reasoning_summary": "Family base-rate strategy for serpapi at horizon 2026-11-24: price-stickiness class curve by horizon (freeze price 2.22). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.12.",
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "online listed retail price strictly higher than a saved snapshot",
+    "source": "family strategy, fb_fill_oct25.py docstring",
+    "value": 0.2
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "walmart_food_drink_price__10304322-store-5185-walmart-com",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": "2027-01-23",
+    "source": "serpapi"
+   },
+   "evidence": [
+    "Dataset family 'serpapi', horizon 2027-01-23: price-stickiness class curve by horizon (freeze price 2.22)."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "serpapi source data family (underlying series documentation)",
+     "url": "https://serpapi.com"
+    }
+   ],
+   "p_raw": 0.2,
+   "p_research": 0.2,
+   "q": "Will the listed price in USD of 'Dole Pineapple Slices in 100% Pineapple Juice 20 oz Can', sold by Walmart.com for Columbus Georgesville Rd Supercenter (store 5185), be higher on {resolution_date} than on {forecast_due_date}? | horizon 2027-01-23",
+   "reasoning_summary": "Family base-rate strategy for serpapi at horizon 2027-01-23: price-stickiness class curve by horizon (freeze price 2.22). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.2.",
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "online listed retail price strictly higher than a saved snapshot",
+    "source": "family strategy, fb_fill_oct25.py docstring",
+    "value": 0.27
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "walmart_food_drink_price__10304322-store-5185-walmart-com",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": "2027-04-23",
+    "source": "serpapi"
+   },
+   "evidence": [
+    "Dataset family 'serpapi', horizon 2027-04-23: price-stickiness class curve by horizon (freeze price 2.22)."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "serpapi source data family (underlying series documentation)",
+     "url": "https://serpapi.com"
+    }
+   ],
+   "p_raw": 0.27,
+   "p_research": 0.27,
+   "q": "Will the listed price in USD of 'Dole Pineapple Slices in 100% Pineapple Juice 20 oz Can', sold by Walmart.com for Columbus Georgesville Rd Supercenter (store 5185), be higher on {resolution_date} than on {forecast_due_date}? | horizon 2027-04-23",
+   "reasoning_summary": "Family base-rate strategy for serpapi at horizon 2027-04-23: price-stickiness class curve by horizon (freeze price 2.22). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.27.",
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "online listed retail price strictly higher than a saved snapshot",
+    "source": "family strategy, fb_fill_oct25.py docstring",
+    "value": 0.34
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "walmart_food_drink_price__10304322-store-5185-walmart-com",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": "2027-10-25",
+    "source": "serpapi"
+   },
+   "evidence": [
+    "Dataset family 'serpapi', horizon 2027-10-25: price-stickiness class curve by horizon (freeze price 2.22)."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "serpapi source data family (underlying series documentation)",
+     "url": "https://serpapi.com"
+    }
+   ],
+   "p_raw": 0.34,
+   "p_research": 0.34,
+   "q": "Will the listed price in USD of 'Dole Pineapple Slices in 100% Pineapple Juice 20 oz Can', sold by Walmart.com for Columbus Georgesville Rd Supercenter (store 5185), be higher on {resolution_date} than on {forecast_due_date}? | horizon 2027-10-25",
+   "reasoning_summary": "Family base-rate strategy for serpapi at horizon 2027-10-25: price-stickiness class curve by horizon (freeze price 2.22). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.34.",
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "online listed retail price strictly higher than a saved snapshot",
+    "source": "family strategy, fb_fill_oct25.py docstring",
+    "value": 0.1
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "amazon_minimum_product_price__b00klvy3tw-amazon-com-new",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": "2026-11-01",
+    "source": "serpapi"
+   },
+   "evidence": [
+    "Dataset family 'serpapi', horizon 2026-11-01: price-stickiness class curve by horizon (freeze price 74.95)."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "serpapi source data family (underlying series documentation)",
+     "url": "https://serpapi.com"
+    }
+   ],
+   "p_raw": 0.1,
+   "p_research": 0.1,
+   "q": "Will the listed price in USD for a new 'Hamilton Beach 25361MN Indoor Searing Grill with Viewing Window', sold by Amazon.com, be higher on {resolution_date} than on {forecast_due_date}? | horizon 2026-11-01",
+   "reasoning_summary": "Family base-rate strategy for serpapi at horizon 2026-11-01: price-stickiness class curve by horizon (freeze price 74.95). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.1.",
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "online listed retail price strictly higher than a saved snapshot",
+    "source": "family strategy, fb_fill_oct25.py docstring",
+    "value": 0.12
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "amazon_minimum_product_price__b00klvy3tw-amazon-com-new",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": "2026-11-24",
+    "source": "serpapi"
+   },
+   "evidence": [
+    "Dataset family 'serpapi', horizon 2026-11-24: price-stickiness class curve by horizon (freeze price 74.95)."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "serpapi source data family (underlying series documentation)",
+     "url": "https://serpapi.com"
+    }
+   ],
+   "p_raw": 0.12,
+   "p_research": 0.12,
+   "q": "Will the listed price in USD for a new 'Hamilton Beach 25361MN Indoor Searing Grill with Viewing Window', sold by Amazon.com, be higher on {resolution_date} than on {forecast_due_date}? | horizon 2026-11-24",
+   "reasoning_summary": "Family base-rate strategy for serpapi at horizon 2026-11-24: price-stickiness class curve by horizon (freeze price 74.95). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.12.",
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "online listed retail price strictly higher than a saved snapshot",
+    "source": "family strategy, fb_fill_oct25.py docstring",
+    "value": 0.2
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "amazon_minimum_product_price__b00klvy3tw-amazon-com-new",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": "2027-01-23",
+    "source": "serpapi"
+   },
+   "evidence": [
+    "Dataset family 'serpapi', horizon 2027-01-23: price-stickiness class curve by horizon (freeze price 74.95)."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "serpapi source data family (underlying series documentation)",
+     "url": "https://serpapi.com"
+    }
+   ],
+   "p_raw": 0.2,
+   "p_research": 0.2,
+   "q": "Will the listed price in USD for a new 'Hamilton Beach 25361MN Indoor Searing Grill with Viewing Window', sold by Amazon.com, be higher on {resolution_date} than on {forecast_due_date}? | horizon 2027-01-23",
+   "reasoning_summary": "Family base-rate strategy for serpapi at horizon 2027-01-23: price-stickiness class curve by horizon (freeze price 74.95). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.2.",
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "online listed retail price strictly higher than a saved snapshot",
+    "source": "family strategy, fb_fill_oct25.py docstring",
+    "value": 0.27
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "amazon_minimum_product_price__b00klvy3tw-amazon-com-new",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": "2027-04-23",
+    "source": "serpapi"
+   },
+   "evidence": [
+    "Dataset family 'serpapi', horizon 2027-04-23: price-stickiness class curve by horizon (freeze price 74.95)."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "serpapi source data family (underlying series documentation)",
+     "url": "https://serpapi.com"
+    }
+   ],
+   "p_raw": 0.27,
+   "p_research": 0.27,
+   "q": "Will the listed price in USD for a new 'Hamilton Beach 25361MN Indoor Searing Grill with Viewing Window', sold by Amazon.com, be higher on {resolution_date} than on {forecast_due_date}? | horizon 2027-04-23",
+   "reasoning_summary": "Family base-rate strategy for serpapi at horizon 2027-04-23: price-stickiness class curve by horizon (freeze price 74.95). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.27.",
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "online listed retail price strictly higher than a saved snapshot",
+    "source": "family strategy, fb_fill_oct25.py docstring",
+    "value": 0.34
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "amazon_minimum_product_price__b00klvy3tw-amazon-com-new",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": "2027-10-25",
+    "source": "serpapi"
+   },
+   "evidence": [
+    "Dataset family 'serpapi', horizon 2027-10-25: price-stickiness class curve by horizon (freeze price 74.95)."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "serpapi source data family (underlying series documentation)",
+     "url": "https://serpapi.com"
+    }
+   ],
+   "p_raw": 0.34,
+   "p_research": 0.34,
+   "q": "Will the listed price in USD for a new 'Hamilton Beach 25361MN Indoor Searing Grill with Viewing Window', sold by Amazon.com, be higher on {resolution_date} than on {forecast_due_date}? | horizon 2027-10-25",
+   "reasoning_summary": "Family base-rate strategy for serpapi at horizon 2027-10-25: price-stickiness class curve by horizon (freeze price 74.95). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.34.",
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "online listed retail price strictly higher than a saved snapshot",
+    "source": "family strategy, fb_fill_oct25.py docstring",
+    "value": 0.1
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "amazon_minimum_product_price__b005fyf3oy-amazon-com-new",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": "2026-11-01",
+    "source": "serpapi"
+   },
+   "evidence": [
+    "Dataset family 'serpapi', horizon 2026-11-01: price-stickiness class curve by horizon (freeze price 69.99)."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "serpapi source data family (underlying series documentation)",
+     "url": "https://serpapi.com"
+    }
+   ],
+   "p_raw": 0.1,
+   "p_research": 0.1,
+   "q": "Will the listed price in USD for a new 'Presto 07061 Electric Ceramic Griddle 22 Inch Black', sold by Amazon.com, be higher on {resolution_date} than on {forecast_due_date}? | horizon 2026-11-01",
+   "reasoning_summary": "Family base-rate strategy for serpapi at horizon 2026-11-01: price-stickiness class curve by horizon (freeze price 69.99). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.1.",
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "online listed retail price strictly higher than a saved snapshot",
+    "source": "family strategy, fb_fill_oct25.py docstring",
+    "value": 0.12
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "amazon_minimum_product_price__b005fyf3oy-amazon-com-new",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": "2026-11-24",
+    "source": "serpapi"
+   },
+   "evidence": [
+    "Dataset family 'serpapi', horizon 2026-11-24: price-stickiness class curve by horizon (freeze price 69.99)."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "serpapi source data family (underlying series documentation)",
+     "url": "https://serpapi.com"
+    }
+   ],
+   "p_raw": 0.12,
+   "p_research": 0.12,
+   "q": "Will the listed price in USD for a new 'Presto 07061 Electric Ceramic Griddle 22 Inch Black', sold by Amazon.com, be higher on {resolution_date} than on {forecast_due_date}? | horizon 2026-11-24",
+   "reasoning_summary": "Family base-rate strategy for serpapi at horizon 2026-11-24: price-stickiness class curve by horizon (freeze price 69.99). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.12.",
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "online listed retail price strictly higher than a saved snapshot",
+    "source": "family strategy, fb_fill_oct25.py docstring",
+    "value": 0.2
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "amazon_minimum_product_price__b005fyf3oy-amazon-com-new",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": "2027-01-23",
+    "source": "serpapi"
+   },
+   "evidence": [
+    "Dataset family 'serpapi', horizon 2027-01-23: price-stickiness class curve by horizon (freeze price 69.99)."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "serpapi source data family (underlying series documentation)",
+     "url": "https://serpapi.com"
+    }
+   ],
+   "p_raw": 0.2,
+   "p_research": 0.2,
+   "q": "Will the listed price in USD for a new 'Presto 07061 Electric Ceramic Griddle 22 Inch Black', sold by Amazon.com, be higher on {resolution_date} than on {forecast_due_date}? | horizon 2027-01-23",
+   "reasoning_summary": "Family base-rate strategy for serpapi at horizon 2027-01-23: price-stickiness class curve by horizon (freeze price 69.99). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.2.",
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "online listed retail price strictly higher than a saved snapshot",
+    "source": "family strategy, fb_fill_oct25.py docstring",
+    "value": 0.27
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "amazon_minimum_product_price__b005fyf3oy-amazon-com-new",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": "2027-04-23",
+    "source": "serpapi"
+   },
+   "evidence": [
+    "Dataset family 'serpapi', horizon 2027-04-23: price-stickiness class curve by horizon (freeze price 69.99)."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "serpapi source data family (underlying series documentation)",
+     "url": "https://serpapi.com"
+    }
+   ],
+   "p_raw": 0.27,
+   "p_research": 0.27,
+   "q": "Will the listed price in USD for a new 'Presto 07061 Electric Ceramic Griddle 22 Inch Black', sold by Amazon.com, be higher on {resolution_date} than on {forecast_due_date}? | horizon 2027-04-23",
+   "reasoning_summary": "Family base-rate strategy for serpapi at horizon 2027-04-23: price-stickiness class curve by horizon (freeze price 69.99). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.27.",
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "online listed retail price strictly higher than a saved snapshot",
+    "source": "family strategy, fb_fill_oct25.py docstring",
+    "value": 0.34
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "amazon_minimum_product_price__b005fyf3oy-amazon-com-new",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": "2027-10-25",
+    "source": "serpapi"
+   },
+   "evidence": [
+    "Dataset family 'serpapi', horizon 2027-10-25: price-stickiness class curve by horizon (freeze price 69.99)."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "serpapi source data family (underlying series documentation)",
+     "url": "https://serpapi.com"
+    }
+   ],
+   "p_raw": 0.34,
+   "p_research": 0.34,
+   "q": "Will the listed price in USD for a new 'Presto 07061 Electric Ceramic Griddle 22 Inch Black', sold by Amazon.com, be higher on {resolution_date} than on {forecast_due_date}? | horizon 2027-10-25",
+   "reasoning_summary": "Family base-rate strategy for serpapi at horizon 2027-10-25: price-stickiness class curve by horizon (freeze price 69.99). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.34.",
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "online listed retail price strictly higher than a saved snapshot",
+    "source": "family strategy, fb_fill_oct25.py docstring",
+    "value": 0.1
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "amazon_minimum_product_price__b00063rwwa-amazon-com-new",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": "2026-11-01",
+    "source": "serpapi"
+   },
+   "evidence": [
+    "Dataset family 'serpapi', horizon 2026-11-01: price-stickiness class curve by horizon (freeze price 35.95)."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "serpapi source data family (underlying series documentation)",
+     "url": "https://serpapi.com"
+    }
+   ],
+   "p_raw": 0.1,
+   "p_research": 0.1,
+   "q": "Will the listed price in USD for a new 'Lodge L8DSK3 Seasoned Cast Iron Deep Skillet 10.25 Inch 3 Quart', sold by Amazon.com, be higher on {resolution_date} than on {forecast_due_date}? | horizon 2026-11-01",
+   "reasoning_summary": "Family base-rate strategy for serpapi at horizon 2026-11-01: price-stickiness class curve by horizon (freeze price 35.95). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.1.",
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "online listed retail price strictly higher than a saved snapshot",
+    "source": "family strategy, fb_fill_oct25.py docstring",
+    "value": 0.12
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "amazon_minimum_product_price__b00063rwwa-amazon-com-new",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": "2026-11-24",
+    "source": "serpapi"
+   },
+   "evidence": [
+    "Dataset family 'serpapi', horizon 2026-11-24: price-stickiness class curve by horizon (freeze price 35.95)."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "serpapi source data family (underlying series documentation)",
+     "url": "https://serpapi.com"
+    }
+   ],
+   "p_raw": 0.12,
+   "p_research": 0.12,
+   "q": "Will the listed price in USD for a new 'Lodge L8DSK3 Seasoned Cast Iron Deep Skillet 10.25 Inch 3 Quart', sold by Amazon.com, be higher on {resolution_date} than on {forecast_due_date}? | horizon 2026-11-24",
+   "reasoning_summary": "Family base-rate strategy for serpapi at horizon 2026-11-24: price-stickiness class curve by horizon (freeze price 35.95). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.12.",
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "online listed retail price strictly higher than a saved snapshot",
+    "source": "family strategy, fb_fill_oct25.py docstring",
+    "value": 0.2
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "amazon_minimum_product_price__b00063rwwa-amazon-com-new",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": "2027-01-23",
+    "source": "serpapi"
+   },
+   "evidence": [
+    "Dataset family 'serpapi', horizon 2027-01-23: price-stickiness class curve by horizon (freeze price 35.95)."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "serpapi source data family (underlying series documentation)",
+     "url": "https://serpapi.com"
+    }
+   ],
+   "p_raw": 0.2,
+   "p_research": 0.2,
+   "q": "Will the listed price in USD for a new 'Lodge L8DSK3 Seasoned Cast Iron Deep Skillet 10.25 Inch 3 Quart', sold by Amazon.com, be higher on {resolution_date} than on {forecast_due_date}? | horizon 2027-01-23",
+   "reasoning_summary": "Family base-rate strategy for serpapi at horizon 2027-01-23: price-stickiness class curve by horizon (freeze price 35.95). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.2.",
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "online listed retail price strictly higher than a saved snapshot",
+    "source": "family strategy, fb_fill_oct25.py docstring",
+    "value": 0.27
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "amazon_minimum_product_price__b00063rwwa-amazon-com-new",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": "2027-04-23",
+    "source": "serpapi"
+   },
+   "evidence": [
+    "Dataset family 'serpapi', horizon 2027-04-23: price-stickiness class curve by horizon (freeze price 35.95)."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "serpapi source data family (underlying series documentation)",
+     "url": "https://serpapi.com"
+    }
+   ],
+   "p_raw": 0.27,
+   "p_research": 0.27,
+   "q": "Will the listed price in USD for a new 'Lodge L8DSK3 Seasoned Cast Iron Deep Skillet 10.25 Inch 3 Quart', sold by Amazon.com, be higher on {resolution_date} than on {forecast_due_date}? | horizon 2027-04-23",
+   "reasoning_summary": "Family base-rate strategy for serpapi at horizon 2027-04-23: price-stickiness class curve by horizon (freeze price 35.95). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.27.",
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "online listed retail price strictly higher than a saved snapshot",
+    "source": "family strategy, fb_fill_oct25.py docstring",
+    "value": 0.34
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "amazon_minimum_product_price__b00063rwwa-amazon-com-new",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": "2027-10-25",
+    "source": "serpapi"
+   },
+   "evidence": [
+    "Dataset family 'serpapi', horizon 2027-10-25: price-stickiness class curve by horizon (freeze price 35.95)."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "serpapi source data family (underlying series documentation)",
+     "url": "https://serpapi.com"
+    }
+   ],
+   "p_raw": 0.34,
+   "p_research": 0.34,
+   "q": "Will the listed price in USD for a new 'Lodge L8DSK3 Seasoned Cast Iron Deep Skillet 10.25 Inch 3 Quart', sold by Amazon.com, be higher on {resolution_date} than on {forecast_due_date}? | horizon 2027-10-25",
+   "reasoning_summary": "Family base-rate strategy for serpapi at horizon 2027-10-25: price-stickiness class curve by horizon (freeze price 35.95). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.34.",
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "online listed retail price strictly higher than a saved snapshot",
+    "source": "family strategy, fb_fill_oct25.py docstring",
+    "value": 0.1
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "amazon_minimum_product_price__b001kvztsg-amazon-com-new",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": "2026-11-01",
+    "source": "serpapi"
+   },
+   "evidence": [
+    "Dataset family 'serpapi', horizon 2026-11-01: price-stickiness class curve by horizon (freeze price 25.5)."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "serpapi source data family (underlying series documentation)",
+     "url": "https://serpapi.com"
+    }
+   ],
+   "p_raw": 0.1,
+   "p_research": 0.1,
+   "q": "Will the listed price in USD for a new 'Fiskars Power-Lever Extendable Hedge Shears 25-33 Inch', sold by Amazon.com, be higher on {resolution_date} than on {forecast_due_date}? | horizon 2026-11-01",
+   "reasoning_summary": "Family base-rate strategy for serpapi at horizon 2026-11-01: price-stickiness class curve by horizon (freeze price 25.5). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.1.",
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "online listed retail price strictly higher than a saved snapshot",
+    "source": "family strategy, fb_fill_oct25.py docstring",
+    "value": 0.12
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "amazon_minimum_product_price__b001kvztsg-amazon-com-new",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": "2026-11-24",
+    "source": "serpapi"
+   },
+   "evidence": [
+    "Dataset family 'serpapi', horizon 2026-11-24: price-stickiness class curve by horizon (freeze price 25.5)."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "serpapi source data family (underlying series documentation)",
+     "url": "https://serpapi.com"
+    }
+   ],
+   "p_raw": 0.12,
+   "p_research": 0.12,
+   "q": "Will the listed price in USD for a new 'Fiskars Power-Lever Extendable Hedge Shears 25-33 Inch', sold by Amazon.com, be higher on {resolution_date} than on {forecast_due_date}? | horizon 2026-11-24",
+   "reasoning_summary": "Family base-rate strategy for serpapi at horizon 2026-11-24: price-stickiness class curve by horizon (freeze price 25.5). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.12.",
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "online listed retail price strictly higher than a saved snapshot",
+    "source": "family strategy, fb_fill_oct25.py docstring",
+    "value": 0.2
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "amazon_minimum_product_price__b001kvztsg-amazon-com-new",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": "2027-01-23",
+    "source": "serpapi"
+   },
+   "evidence": [
+    "Dataset family 'serpapi', horizon 2027-01-23: price-stickiness class curve by horizon (freeze price 25.5)."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "serpapi source data family (underlying series documentation)",
+     "url": "https://serpapi.com"
+    }
+   ],
+   "p_raw": 0.2,
+   "p_research": 0.2,
+   "q": "Will the listed price in USD for a new 'Fiskars Power-Lever Extendable Hedge Shears 25-33 Inch', sold by Amazon.com, be higher on {resolution_date} than on {forecast_due_date}? | horizon 2027-01-23",
+   "reasoning_summary": "Family base-rate strategy for serpapi at horizon 2027-01-23: price-stickiness class curve by horizon (freeze price 25.5). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.2.",
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "online listed retail price strictly higher than a saved snapshot",
+    "source": "family strategy, fb_fill_oct25.py docstring",
+    "value": 0.27
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "amazon_minimum_product_price__b001kvztsg-amazon-com-new",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": "2027-04-23",
+    "source": "serpapi"
+   },
+   "evidence": [
+    "Dataset family 'serpapi', horizon 2027-04-23: price-stickiness class curve by horizon (freeze price 25.5)."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "serpapi source data family (underlying series documentation)",
+     "url": "https://serpapi.com"
+    }
+   ],
+   "p_raw": 0.27,
+   "p_research": 0.27,
+   "q": "Will the listed price in USD for a new 'Fiskars Power-Lever Extendable Hedge Shears 25-33 Inch', sold by Amazon.com, be higher on {resolution_date} than on {forecast_due_date}? | horizon 2027-04-23",
+   "reasoning_summary": "Family base-rate strategy for serpapi at horizon 2027-04-23: price-stickiness class curve by horizon (freeze price 25.5). These statistical fills are the protocol's base-rate-first rule applied programmatically from the question's own freeze value; final p=0.27.",
+   "strongest_opposing_case": "Strongest case against: the family rule ignores series-specific news and regime changes; any structural break since the freeze date (war shocks, policy moves, product relists) would move the true probability well away from this base rate."
+  }
+ ],
+ "researcher": "claude-fable-5 operator session, 2026-10-25 round-day sprint (authored + rule + family layers)",
+ "resolution_source": "per-question benchmark resolution criteria (see each question's benchmark block)",
+ "resolve_date": null
+}

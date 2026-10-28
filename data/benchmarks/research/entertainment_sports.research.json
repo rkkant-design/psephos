@@ -1,0 +1,500 @@
+{
+  "40969": {
+    "base_rate": {
+      "reference_class": "Novel-technology music acts reaching top 20 of the Hot 100 within ~14 months of first charting on any Billboard chart",
+      "value": 0.05,
+      "source": "Billboard chart history: AI acts (Breaking Rust, Xania Monet) have topped niche sales/airplay charts since Nov 2025 but none has entered the Hot 100 at any position"
+    },
+    "evidence": [
+      "Nov 2025: Breaking Rust's 'Walk My Walk' hit No. 1 on Country Digital Song Sales on only ~3,000 downloads — a low-volume chart, far from Hot 100 scale (Billboard)",
+      "Nov 2025: Xania Monet became first AI act to debut on a Billboard radio chart (No. 30 Adult R&B Airplay); also No. 3 Hot Gospel Songs",
+      "Oct 2026 search: no AI-created song has yet appeared anywhere on the Hot 100 in 2026; AI chart activity remains confined to genre digital-sales and niche airplay charts",
+      "Billboard's own analysis (2025-11) notes topping these niche charts 'doesn't mean it's very popular' — Hot 100 top 20 requires mass streaming + radio + sales"
+    ],
+    "strongest_opposing_case": "AI acts are accelerating fast — at least one new AI artist debuted on a Billboard chart in each of six consecutive weeks, and a viral TikTok moment plus holiday-season low chart turnover could vault a novelty AI song into the top 20 within the ~9 remaining chart weeks of 2026.",
+    "reasoning_summary": "Base rate near 0.05: no AI song has entered the Hot 100 at ANY position through late Oct 2026, and top 20 requires mainstream streaming/radio volume orders of magnitude above the ~3k-download niche-chart wins AI acts have managed. Only ~9 weekly charts remain before Jan 1 2027. Small upward allowance for viral-novelty tail risk. Final p=0.04.",
+    "key_sources": [
+      {"title": "AI Musician Breaking Rust Hits Number One on Billboard Chart", "url": "https://thelicensingletter.com/ai-musician-breaking-rust-hits-number-one-on-billboard-chart/", "date": "2025-11"},
+      {"title": "AI Music Artists Are Becoming More Popular on the Charts", "url": "https://www.billboard.com/pro/ai-music-artists-charts-popular/", "date": "2025-11"},
+      {"title": "How Many AI Artists Have Debuted on Billboard's Charts?", "url": "https://billboard.substack.com/p/how-many-ai-artists-have-debuted", "date": "2025-11"}
+    ],
+    "p": 0.04
+  },
+  "43274": {
+    "base_rate": {
+      "reference_class": "Video games still lacking a confirmed release date ~10 weeks before the end of their announced release year (Level-5 titles specifically have an extensive multi-delay history)",
+      "value": 0.2,
+      "source": "Industry pattern: games without a dated launch by late October rarely ship by Dec 31; this title has already slipped from 2023 teaser to 2025 to 2026"
+    },
+    "evidence": [
+      "2025-09-25: Level-5 announced at TGS 2025 that New World of Steam was delayed from 2025 into 2026 'to deliver the game in the best possible form'; no window given (Nintendo Life, Gematsu)",
+      "As of 2026-10-25 searches, no specific 2026 release date or launch announcement found; latest indexed coverage is still the Sep 2025 delay news",
+      "The game was originally announced in 2023 for 2025 — this is already its second announced-year slip; Level-5 has repeatedly delayed recent titles (e.g., Fantasy Life i, DECAPOLICE)"
+    ],
+    "strongest_opposing_case": "Level-5 publicly committed to 2026 as recently as TGS 2025 with a playable demo, suggesting late-stage development; a November Nintendo Direct date announcement followed by a December release (common for Japanese holiday titles) remains possible.",
+    "reasoning_summary": "Base rate ~0.2 for an undated game shipping within its announced year with ~10 weeks left. The TGS 2025 demo shows real progress, but no date, no preorders, and no marketing ramp as of late Oct 2026, plus Level-5's chronic delay record (this title already slipped twice), keep probability low. Final p=0.15.",
+    "key_sources": [
+      {"title": "Professor Layton and the New World of Steam has been delayed until 2026", "url": "https://www.nintendolife.com/news/2025/09/professor-layton-and-the-new-world-of-steam-has-been-delayed-until-2026", "date": "2025-09-25"},
+      {"title": "Professor Layton and the New World of Steam delayed to 2026", "url": "https://www.gematsu.com/2025/09/professor-layton-and-the-new-world-of-steam-delayed-to-2026", "date": "2025-09-25"}
+    ],
+    "p": 0.15
+  },
+  "KXSLATECOUNT-26Q4-L60": {
+    "base_rate": {
+      "reference_class": "Wide releases (600+ theaters, Box Office Mojo definition) in recent fourth quarters: Q4 2024 = 56, Q4 2025 = 69",
+      "value": 0.6,
+      "source": "Box Office Mojo quarterly wide-release tables for Q4 2024 and Q4 2025"
+    },
+    "evidence": [
+      "Q4 2025 had 69 wide releases; Q4 2024 had 56 (Box Office Mojo quarterly tables, checked 2026-10-25) — the 60 threshold was cleared in 2025 and narrowly missed in 2024",
+      "Q4 2026 slate is unusually loaded with wide tentpoles: Avengers: Doomsday (Dec 18), The Hunger Games: Sunrise on the Reaping (Nov 20), I Play Rocky wide expansion (Nov 20), Dune Part Three and Shrek 5 dated for Dec 2026, plus normal holiday counter-programming",
+      "2026 theatrical volume has been strong overall (record Spider-Man opening in July; The Odyssey's $124.5M July opening), indicating distributor confidence and a full release calendar"
+    ],
+    "strongest_opposing_case": "Q4 2024 shows the threshold can be missed (56); if studios pull smaller titles away from a quarter crowded by Doomsday, Dune 3 and Shrek 5, or if several borderline releases open under 600 theaters, the count could land in the mid-50s again.",
+    "reasoning_summary": "Base rate: last two Q4s straddle the line (56, 69), so unconditional p(>=60) is roughly 0.5-0.6. Adjust up for 2026's robust theatrical recovery and a packed, confirmed Q4 2026 tentpole slate that historically pulls in more counter-programming rather than less. Thin direct evidence on the running 2026 count, so stay moderate. Final p=0.68.",
+    "key_sources": [
+      {"title": "Box Office Mojo Q4 2025 wide releases", "url": "https://www.boxofficemojo.com/quarter/q4/2025/", "date": "2026-10-25"},
+      {"title": "Box Office Mojo Q4 2024 wide releases", "url": "https://www.boxofficemojo.com/quarter/q4/2024/", "date": "2026-10-25"}
+    ],
+    "p": 0.68
+  },
+  "KXOSCARNOMACTR-27-REN": {
+    "base_rate": {
+      "reference_class": "Lead actresses of Palme d'Or-winning films receiving Best Actress nominations, and actresses appearing in major pundits' October top-5/contender lists (5 slots from ~12-15 serious contenders)",
+      "value": 0.35,
+      "source": "Recent Palme winners: Anora (Madison nominated, won), Anatomy of a Fall (Hüller nominated), Titane/Triangle of Sadness (no lead-actress nom); pundit-list conversion ~1/3"
+    },
+    "evidence": [
+      "2026-05: Cristian Mungiu's 'Fjord', starring Renate Reinsve (with Sebastian Stan), won the Palme d'Or at Cannes 2026 (Wikipedia/Cannes coverage via Club Kid search, 2026-10-25)",
+      "2026-10: Variety's early 2027 Best Actress predictions include Reinsve among contenders; one pundit ranking placed her second in the category",
+      "2026-10: Julianne Moore (The Debut) is cited as the category leader in most pundit lists — Reinsve is a contender, not the frontrunner",
+      "Reinsve has prior Academy-adjacent cachet: Cannes Best Actress 2021 (The Worst Person in the World), a film that earned two Oscar nominations"
+    ],
+    "strongest_opposing_case": "Non-English-language performances convert to Best Actress nominations at a low rate; Fjord is a Romanian art film whose campaign may concentrate on International Feature, and a crowded field (Moore and several fall premieres yet to land) could squeeze Reinsve out as precursors solidify.",
+    "reasoning_summary": "Base rate ~0.35 for a Palme-winner lead who sits on October pundit lists but isn't frontrunner. Adjust up modestly: Palme d'Or halo (Hüller and Madison precedents), Reinsve's established critical brand, and consistent Variety placement. Adjust down for non-English-language friction and an unsettled field. Final p=0.42.",
+    "key_sources": [
+      {"title": "2027 Oscars Best Actress Predictions", "url": "https://variety.com/feature/2027-oscars-best-actress-predictions-1236834270/", "date": "2026-10"},
+      {"title": "Cannes 2026: Fjord wins Palme d'Or (via Club Kid/Fjord coverage)", "url": "https://en.wikipedia.org/wiki/Club_Kid_(film)", "date": "2026-05"}
+    ],
+    "p": 0.42
+  },
+  "KXNFLWINS-27LAR-3": {
+    "base_rate": {
+      "reference_class": "NFL teams with 2 wins through 6-7 games winning at least 1 of their remaining 11 games",
+      "value": 0.99,
+      "source": "Even historically bad teams (per-game win prob ~0.2) finish 0-for-11 less than 1% of the time; only the 2008 Lions and 2017 Browns have gone winless since 2000"
+    },
+    "evidence": [
+      "2026-10-25: Rams are 2-4 after Week 7 (ESPN/Fox Sports/NFL.com standings) — they need only 1 more win in their final 11 games",
+      "Rams' point differential is roughly even (-3: 135 scored vs 138 allowed, Yahoo Sports), indicating a competitive, not historically bad, team",
+      "Next game Week 8/9 vs Chargers (NFL.com schedule); 11 games remain including home dates and divisional matchups"
+    ],
+    "strongest_opposing_case": "A catastrophic quarterback injury plus a tank-for-the-draft scenario could produce a long losing streak, and a 2-win team by definition has underperformed; still, zero wins in 11 tries has essentially no modern precedent for a team with a near-even point differential.",
+    "reasoning_summary": "Rams already have 2 wins and a ~0.0 net point differential; winning >=1 of 11 remaining games has base rate ~0.99 even for bottom-five teams. No qualifying injury or tank evidence found. Capped slightly below certainty because the third win hasn't happened yet. Final p=0.97.",
+    "key_sources": [
+      {"title": "NFL Standings 2026 Regular Season", "url": "https://www.espn.com/nfl/standings/_/view/playoff", "date": "2026-10-25"},
+      {"title": "Los Angeles Rams Scores, Stats and Highlights", "url": "https://www.espn.com/nfl/team/_/name/lar/los-angeles-rams", "date": "2026-10-25"}
+    ],
+    "p": 0.97
+  },
+  "KXOSCARNOMACTO-27-SEB": {
+    "base_rate": {
+      "reference_class": "Lead actors in Palme d'Or winners earning Best Actor nominations (rare: no Palme lead-actor nom since 2012's Amour region) crossed with recent-nominee name recognition",
+      "value": 0.2,
+      "source": "Palme winners' male leads convert to Best Actor noms at well under 1-in-3 historically; 5 slots vs ~12-15 credible contenders"
+    },
+    "evidence": [
+      "2026-05: Sebastian Stan stars in Cristian Mungiu's 'Fjord', the 2026 Palme d'Or winner, opposite Renate Reinsve (confirmed 2026-10-25 search)",
+      "2026-10: Pundit coverage lists John Malkovich (Wild Horse Nine) as Best Actor leader and ties Tom Cruise to 'Digger'; October searches surfaced no prominent pundit top-5 placement for Stan",
+      "Stan is a recent Best Actor nominee (The Apprentice, 97th Oscars) and won the 2025 Golden Globe (A Different Man), so the Academy knows him; a Romanian-language Mungiu film is nonetheless an atypical nomination vehicle"
+    ],
+    "strongest_opposing_case": "Stan is a hot, recently nominated actor headlining the Palme d'Or winner — the exact profile that broke through for Sandra Hüller and Mikey Madison — and A24/Neon-style campaigns have recently converted Cannes heat into acting nominations at a rising rate.",
+    "reasoning_summary": "Base rate ~0.2: Palme-winner male leads rarely land Best Actor noms, and Stan was absent from the October pundit top tiers found, unlike Reinsve. Adjust up for his recent-nominee momentum and the film's Palme halo; down for a non-English-language performance competing against Malkovich, Cruise and unseen fall contenders. Final p=0.28.",
+    "key_sources": [
+      {"title": "Club Kid (film) / Cannes 2026 — Fjord Palme d'Or context", "url": "https://en.wikipedia.org/wiki/Club_Kid_(film)", "date": "2026-05"},
+      {"title": "An Extremely Early Analysis of the 2027 Oscar Race", "url": "https://huffmatt.substack.com/p/an-extremely-early-analysis-of-the", "date": "2026-08"},
+      {"title": "2027 Oscar Predictions: Do We Already Have Our Top Five?", "url": "https://www.awardsdaily.com/2026/08/07/2027-oscar-predictions-do-we-already-have-our-top-five/", "date": "2026-08-07"}
+    ],
+    "p": 0.28
+  },
+  "KXOSCARNOMPIC-27-DIG": {
+    "base_rate": {
+      "reference_class": "Films appearing on major pundits' October Best Picture contender lists but outside the consensus top ~5 (8-10 slots from ~20-25 October contenders)",
+      "value": 0.35,
+      "source": "Historical conversion of October second-tier pundit contenders to BP nominations is roughly one-third"
+    },
+    "evidence": [
+      "2026-10: 'Digger' is a Tom Cruise awards vehicle featured in October 2026 Best Actor contender coverage (Cruise tied to the film in awards-press roundups)",
+      "2026-08: AwardsDaily's 2027 Oscar prediction columns discuss a settling top five with The Odyssey on top; Digger appears in contender discussion but not as consensus frontrunner",
+      "Director pedigree: the film is an auteur prestige release (Cruise's long-gestating collaboration with an Oscar-winning director), the profile that typically yields a BP nomination when reviews cooperate; no RT consensus score was verified in searches"
+    ],
+    "strongest_opposing_case": "Without verified critical reception, Digger could follow the path of star-driven auteur projects like Bardo or Babylon that fizzled with critics and missed Best Picture despite enormous pre-release awards buzz and A-list campaigns.",
+    "reasoning_summary": "Base rate ~0.35 for an October-list contender below the top tier. Cruise's industry-wide goodwill (honorary Oscar momentum) and auteur pedigree argue up; unverified reviews and reliance on buzz rather than precursor wins argue down. Evidence is thin on actual reception, so stay near base rate. Final p=0.35.",
+    "key_sources": [
+      {"title": "2027 Oscar Predictions: Now the Real Race Begins, Or Not", "url": "https://www.awardsdaily.com/2026/08/28/2027-oscar-predictions-now-the-real-race-begins-or-not/", "date": "2026-08-28"},
+      {"title": "2027 Oscar Predictions in Every Category", "url": "https://www.indiewire.com/lists/2027-oscar-predictions-academy-awards/", "date": "2026-10"}
+    ],
+    "p": 0.35
+  },
+  "KXFOLLOWERCOUNTCLAV-27-500000": {
+    "base_rate": {
+      "reference_class": "Fast-growing streamer needing ~12-15% additional follower growth over ~10 weeks after growing ~150% in the prior 8 months",
+      "value": 0.7,
+      "source": "Extrapolation of documented 2026 growth trajectory: 101k (Jan) -> 180k (Feb) -> 300k (Apr) -> ~445k (Aug)"
+    },
+    "evidence": [
+      "2026-01: ~101,100 Kick followers (Know Your Meme snapshot)",
+      "2026-02-17: ~180k; crossed 300k in April 2026 (win.gg, 2026-08-10)",
+      "2026-08-10: 445.3k Kick followers (win.gg); independent trackers reported ~430-434k in late Aug/early Sep",
+      "2026-10 (first week): reported gain of ~6,000 followers in one week (~24k/month pace); Kick has heavily promoted his clips (Dexerto reported ~$700k of clip promotion in one month)"
+    ],
+    "strongest_opposing_case": "Growth already decelerated (Apr-Aug averaged ~36k/mo but trackers showed ~430-445k plateau into September), and the market resolves No if a ban/privating hides the count — clavicular is a controversy-prone 'looksmaxxing' streamer with a documented history of trouble that could trigger suspension.",
+    "reasoning_summary": "From ~445k in August plus ~6k/week October pace, the account projects to roughly 500-530k by Dec 31 — right around the threshold. Base trajectory says likely yes (~0.7); platform promotion supports continued growth, but visible deceleration, tracker disagreement (some show ~430k), and ban/privacy tail risk cap confidence. Final p=0.72.",
+    "key_sources": [
+      {"title": "How many Kick followers does clavicular have?", "url": "https://win.gg/how-many-kick-followers-clavicular-2027/", "date": "2026-08-10"},
+      {"title": "Clavicular says Kick spent nearly $700,000 promoting his clips in a single month", "url": "https://www.dexerto.com/kick/clavicular-says-kick-spent-nearly-700000-promoting-his-clips-in-a-single-month-3393030/", "date": "2026"},
+      {"title": "Clavicular - Know Your Meme", "url": "https://knowyourmeme.com/memes/people/clavicular", "date": "2026-01"}
+    ],
+    "p": 0.72
+  },
+  "KXOSCARNOMPIC-27-CLU": {
+    "base_rate": {
+      "reference_class": "Un Certain Regard premieres / debut-feature indie comedies earning Best Picture nominations (8-10 slots)",
+      "value": 0.05,
+      "source": "UCR titles almost never reach Best Picture; debut-director comedies without main-competition laurels convert at <5% historically"
+    },
+    "evidence": [
+      "2026-05-15: 'Club Kid' (Jordan Firstman's directorial debut) premiered in Un Certain Regard at Cannes 2026 — not main competition — with Camera d'Or and Queer Palm nominations but no confirmed wins (Wikipedia)",
+      "2026-05: Rave reviews at Cannes — AwardsWatch aggregated an A- 'raves across the board' reception",
+      "2026: A24 acquired it for a reported $17M after a bidding war; limited US theatrical release set for Nov 6, 2026",
+      "2026-08: The film shows up in AwardsDaily contender lists only as a fringe title; no October pundit placed it in a projected BP lineup in found coverage"
+    ],
+    "strongest_opposing_case": "A24 paid $17M and is a proven awards machine (Everything Everywhere, Anora); if Club Kid becomes the season's critical cause celebre with acting/screenplay precursor wins, a passion-vote #1-ballot film can sneak into a 10-wide Best Picture field.",
+    "reasoning_summary": "Base rate ~0.05 for a UCR debut comedy. Nudge up for genuine Cannes raves, an aggressive A24 acquisition, and a fall release positioned for awards; but absence from any found pundit BP projection and the sidebar-premiere pedigree keep it a long shot. Final p=0.08.",
+    "key_sources": [
+      {"title": "Club Kid (film)", "url": "https://en.wikipedia.org/wiki/Club_Kid_(film)", "date": "2026-05"},
+      {"title": "Club Kid Review: Jordan Firstman's Gay Peter Pan Party Boy Tale Gets Raves Across the Board [A-]", "url": "https://awardswatch.com/club-kid-review-jordan-firstmans-gay-peter-pan-party-boy-tale-gets-raves-across-the-board-a-cannes/", "date": "2026-05"}
+    ],
+    "p": 0.08
+  },
+  "KXENGAGEMENTSWEENEYBRUAN-26": {
+    "base_rate": {
+      "reference_class": "Celebrity couples with active tabloid engagement rumors and insider 'proposal within 6 months' sourcing being credibly reported engaged within ~2 months",
+      "value": 0.35,
+      "source": "Tabloid engagement-rumor cycles convert to confirmed/credibly-reported engagements within a given 2-month window well under half the time"
+    },
+    "evidence": [
+      "2026-09-17: Korean and US outlets report engagement rumors 'abuzz' around Sweeney and HYBE America's Scooter Braun (Khan/Sports coverage)",
+      "2026 (fall): In Touch Weekly reported an engagement, but Sports Illustrated noted neither party has confirmed and no ring has been seen publicly",
+      "2026: Page Six sources say Braun wants to marry her and 'may ask the big question within the next six months'; a conflicting National Enquirer report claimed a wedding isn't in the cards",
+      "Timeline: met June 2025 (Bezos wedding, Venice), dating since ~Sep 2025, Instagram-official April 2026 (Stagecoach), PDA at Euphoria premiere — a serious ~13-month relationship"
+    ],
+    "strongest_opposing_case": "The resolution needs a credible report of engagement before Dec 31, 2026, and as of late October no reputable outlet has confirmed one — the main sourcing is In Touch/Enquirer-grade, denials-by-silence persist, and 'within six months' insider timelines extend well into 2027.",
+    "reasoning_summary": "Base rate ~0.35 for rumor-stage couples getting a credible engagement report inside ~10 weeks. Adjust up: engagement already 'reported' by at least one outlet, relationship is serious and public, Braun reportedly intends to propose; Sweeney previously accepted a proposal (Davino), showing willingness. Adjust down: no confirmation, conflicting insider reports. Final p=0.45.",
+    "key_sources": [
+      {"title": "Are Sydney Sweeney & Scooter Braun Engaged? Relationship Update", "url": "https://hollywoodlife.com/feature/are-sydney-sweeney-scooter-braun-engaged-5564485/", "date": "2026-10"},
+      {"title": "Sydney Sweeney, engagement rumors with HYBE America's Scooter Braun 'abuzz'", "url": "https://sports.khan.co.kr/en/article/202609171941007", "date": "2026-09-17"}
+    ],
+    "p": 0.45
+  },
+  "KXGRAMBNA-69-SIE": {
+    "base_rate": {
+      "reference_class": "Pre-nomination Best New Artist favorites (per music-press consensus in October) going on to win BNA in February",
+      "value": 0.35,
+      "source": "Roughly 1-in-3 historical conversion: October favorites like Chappell Roan (won, 2025) vs Ice Spice/Jelly Roll-type favorites who lost to late surges"
+    },
+    "evidence": [
+      "2026-10-25: 69th Grammy nominations are NOT yet announced — reveal set for Nov 16, 2026; ceremony Feb 7, 2027",
+      "2026-09-29: Hits Daily Double reports Sienna Spiro's post-VMAs boost has raised Grammy 'expectation' for her as a BNA contender",
+      "2026-10: Billboard's 69th-Grammy general-field predictions call Spiro a probable Best New Artist nominee; her debut album 'Visitor' (July 3, 2026) and single 'Die on This Hill' anchor her case",
+      "Grammy Museum ran a dedicated 'Spotlight: Sienna Spiro' event — Recording Academy ecosystem visibility"
+    ],
+    "strongest_opposing_case": "Nominations aren't even out: BNA fields of 8 routinely produce upsets (Samara Joy over Anitta/Latto; esperanza spalding over Bieber), and a bigger commercial breakout in the field could out-poll a UK soul singer with one album cycle and limited US radio footprint.",
+    "reasoning_summary": "This asks for the WIN, pre-nominations. Base rate for the October consensus favorite winning BNA is ~0.35. Spiro has unusually broad pundit support (Billboard probable nominee, VMA momentum, Grammy Museum spotlight), so adjust slightly up, but a 8-nominee field and 3.5 months of campaign left keep large uncertainty. Final p=0.38.",
+    "key_sources": [
+      {"title": "Grammys 2027 Predictions: Who Could Score a Nomination in the Biggest Categories?", "url": "https://www.billboard.com/music/awards/grammy-predictions-2027-general-field-categories-1236295942/", "date": "2026-10"},
+      {"title": "SIENNA's Post-VMAs Boost Raises Grammy 'Expectation'", "url": "https://www.hitsdailydouble.com/news/streaming/sienna-vma-boost-raises-grammy-expectation-2026-09-29", "date": "2026-09-29"}
+    ],
+    "p": 0.38
+  },
+  "KXRT-HUN-70": {
+    "base_rate": {
+      "reference_class": "Hunger Games franchise Tomatometer scores: 84, 90, 65, 69, 78 — 3 of 5 above 70",
+      "value": 0.6,
+      "source": "Rotten Tomatoes franchise history (five prior films)"
+    },
+    "evidence": [
+      "2026-10-25: RT page shows 0 reviews yet; film releases wide Nov 20, 2026; market resolves Nov 23",
+      "Source novel (Suzanne Collins, 2025) was the best-reviewed Hunger Games book since the trilogy, and the prequel adapts the franchise's most beloved character (young Haymitch, Joseph Zada) with Kieran Culkin, fresh off an Oscar, as Caesar Flickerman",
+      "2026-10: Parade saw the first 20 minutes and called it strong — arena sequence 'chaotic and effective', Culkin's Caesar praised; trailer reactions praised cinematography and score with some pacing concerns (Art Threat)",
+      "Director Francis Lawrence returns (his entries: 90, 65, 69, 78) — the last film (Ballad, 78 per provided series) rebounded from the Mockingjay dip"
+    ],
+    "strongest_opposing_case": "Two of the five franchise films landed in the 60s, both directed by Francis Lawrence; prequel fatigue plus critics' skepticism of back-to-back cash-in prequels could easily produce another 65-70 score, resolving No.",
+    "reasoning_summary": "Franchise base rate P(>70)=0.6 (3/5). Adjust up for the acclaimed source novel, strong early-footage buzz, prestige casting (Culkin, Zada) and the recent series trend recovering into the high 70s. No actual reviews exist yet, so the adjustment is modest. Final p=0.70, kept monotone above the 75/80/85 strikes.",
+    "key_sources": [
+      {"title": "The Hunger Games: Sunrise on the Reaping - Rotten Tomatoes", "url": "https://www.rottentomatoes.com/m/the_hunger_games_sunrise_on_the_reaping", "date": "2026-10-25"},
+      {"title": "'Sunrise on the Reaping' First Footage Review", "url": "https://parade.com/movies/sunrise-on-the-reaping-first-footage-review", "date": "2026-10"}
+    ],
+    "p": 0.7
+  },
+  "KXRT-HUN-75": {
+    "base_rate": {
+      "reference_class": "Hunger Games franchise Tomatometer scores: 84, 90, 65, 69, 78 — 3 of 5 above 75",
+      "value": 0.6,
+      "source": "Rotten Tomatoes franchise history (five prior films)"
+    },
+    "evidence": [
+      "No reviews yet as of 2026-10-25 (RT page: 0 reviews); wide release Nov 20, 2026",
+      "Franchise distribution clusters either high-70s-to-90 or mid-60s; the previous prequel scored high-70s territory per the series record used here",
+      "Positive but non-critical early signals: acclaimed source novel, Parade first-footage praise, Culkin/Zada casting enthusiasm"
+    ],
+    "strongest_opposing_case": "Even the well-liked previous prequel sat only a few points above this strike; a handful of mixed trade reviews on a 150+ review base routinely drags YA tentpoles into the low 70s, which resolves No at the 75 line.",
+    "reasoning_summary": "Base rate 3/5 franchise films above 75, but two of those were the 2012-13 peak originals. Centering the expected score near 76-78 (prior film level plus modest buzz premium) with ~9-point spread gives roughly a coin flip tilted slightly positive. Final p=0.53, monotone within the strike family.",
+    "key_sources": [
+      {"title": "The Hunger Games: Sunrise on the Reaping - Rotten Tomatoes", "url": "https://www.rottentomatoes.com/m/the_hunger_games_sunrise_on_the_reaping", "date": "2026-10-25"},
+      {"title": "'Sunrise on the Reaping' First Footage Review", "url": "https://parade.com/movies/sunrise-on-the-reaping-first-footage-review", "date": "2026-10"}
+    ],
+    "p": 0.53
+  },
+  "KXRT-HUN-80": {
+    "base_rate": {
+      "reference_class": "Hunger Games franchise Tomatometer scores: 84, 90, 65, 69, 78 — 2 of 5 above 80",
+      "value": 0.4,
+      "source": "Rotten Tomatoes franchise history (five prior films)"
+    },
+    "evidence": [
+      "No reviews yet as of 2026-10-25; expected score center ~76-78 based on franchise trend plus positive pre-release signals",
+      "Only the two original Katniss-era films (84, 90) cleared 80; no Francis Lawrence prequel/sequel has except Catching Fire",
+      "Early-footage and trailer reception positive but with pacing/lore-dilution concerns noted by fans (Art Threat)"
+    ],
+    "strongest_opposing_case": "If the acclaimed novel translates faithfully and critics embrace Zada and Culkin, an 82-86 score like Catching Fire's territory is plausible — book reception for Sunrise on the Reaping exceeded Ballad's, which scored high-70s.",
+    "reasoning_summary": "Base rate 2/5 above 80, and the natural score center (~77) sits below this strike. Positive buzz raises the right tail somewhat but 80+ requires near-best-of-franchise reception. Final p=0.33, monotone between the 75 and 85 strikes.",
+    "key_sources": [
+      {"title": "The Hunger Games: Sunrise on the Reaping - Rotten Tomatoes", "url": "https://www.rottentomatoes.com/m/the_hunger_games_sunrise_on_the_reaping", "date": "2026-10-25"},
+      {"title": "Fans praise The Hunger Games: Sunrise On The Reaping trailer", "url": "https://artthreat.net/33594-fans-praise-the-hunger-games-sunrise-on-the-reaping-trailer/", "date": "2026"}
+    ],
+    "p": 0.33
+  },
+  "KXRT-HUN-85": {
+    "base_rate": {
+      "reference_class": "Hunger Games franchise Tomatometer scores: 84, 90, 65, 69, 78 — 1 of 5 above 85",
+      "value": 0.2,
+      "source": "Rotten Tomatoes franchise history (five prior films)"
+    },
+    "evidence": [
+      "Only Catching Fire (90) ever exceeded 85; the original's 84 would itself resolve No at this strike",
+      "No reviews exist yet (RT 0 reviews, 2026-10-25); score center projected mid-to-high 70s",
+      "Big-budget YA franchise films above 85 are rare in general — this requires a top-decile critical outcome"
+    ],
+    "strongest_opposing_case": "The source novel was the franchise's best-reviewed in 15 years, Francis Lawrence's footage is drawing 'as tragic as fans hoped' praise, and an Oscar-winner-led cast could deliver a Catching Fire-level 86-90 reception.",
+    "reasoning_summary": "Base rate 1/5 (0.2) and the projected score center (~77) sits ~9 points below the strike, so most of the probability comes from the upper tail of the review distribution. Positive buzz keeps the tail fatter than default but this remains an unlikely outcome. Final p=0.14, monotone below the 80 strike.",
+    "key_sources": [
+      {"title": "The Hunger Games: Sunrise on the Reaping - Rotten Tomatoes", "url": "https://www.rottentomatoes.com/m/the_hunger_games_sunrise_on_the_reaping", "date": "2026-10-25"},
+      {"title": "'Sunrise on the Reaping' First Footage Review", "url": "https://parade.com/movies/sunrise-on-the-reaping-first-footage-review", "date": "2026-10"}
+    ],
+    "p": 0.14
+  },
+  "KXRT-IPL-75": {
+    "base_rate": {
+      "reference_class": "Films already at 85% on 47 reviews holding above 75 after wide-release review expansion (typical drift from festival/limited score to final: -5 to +3 points)",
+      "value": 0.88,
+      "source": "RT score-drift pattern for fall limited-to-wide prestige releases; current live score 85% (2026-10-25)"
+    },
+    "evidence": [
+      "2026-10-25: I Play Rocky sits at 85% Tomatometer on 47 reviews (Rotten Tomatoes); Metacritic 63 on 20 reviews (70% positive)",
+      "Film premiered at TIFF 2026 with a People's Choice Award nomination; Deadline, CGMagazine (8.5/10) and Screen Rant reviews praise Anthony Ippolito's Stallone performance",
+      "Release: select theaters Nov 6, everywhere Nov 20 (Amazon MGM); market resolves Nov 23 — roughly 100+ more mainstream reviews will land before then",
+      "Some dissent exists: The Guardian said the film 'rarely has pathos in its corner'; MC 63 signals lukewarm depth behind the positive binary RT score"
+    ],
+    "strongest_opposing_case": "A 22-point RT/Metacritic gap (85 vs 63) is a classic sign of soft positivity; wide-release critics are harsher than festival audiences and a drop of 10+ points from the low-review-count score is common for crowd-pleaser biopics.",
+    "reasoning_summary": "Starting point 85% with 47 reviews means the score must fall 10 points to breach 75 — larger than typical expansion drift even for festival crowd-pleasers with mediocre Metacritic scores. Base rate of holding above 75 from 85 is ~0.88; the weak MC 63 shaves a little. Final p=0.87, monotone above 80/85 strikes.",
+    "key_sources": [
+      {"title": "I Play Rocky - Rotten Tomatoes", "url": "https://www.rottentomatoes.com/m/i_play_rocky", "date": "2026-10-25"},
+      {"title": "I Play Rocky Reviews - Metacritic", "url": "https://www.metacritic.com/movie/i-play-rocky/", "date": "2026-10-25"},
+      {"title": "'I Play Rocky' Review: Peter Farrelly Directs Making Of 'Rocky' Biopic", "url": "https://deadline.com/2026/09/i-play-rocky-review-peter-farrelly-biopic-tallones-classic-1237100498/", "date": "2026-09"}
+    ],
+    "p": 0.87
+  },
+  "KXRT-IPL-80": {
+    "base_rate": {
+      "reference_class": "Films at 85% on ~50 reviews finishing above 80 after mainstream review influx (needs drift better than -5)",
+      "value": 0.6,
+      "source": "RT drift distribution for limited-to-wide expansions; current score 85% (2026-10-25)"
+    },
+    "evidence": [
+      "Current 85% on 47 reviews gives only a 5-point cushion over this strike before the Nov 23 resolution",
+      "Metacritic 63 (70% positive of 20) implies many RT 'fresh' votes are mild recommendations — marginal future critics are coin flips",
+      "Festival crowd-pleaser profile (TIFF People's Choice nominee, underdog making-of story) tends to keep general-press critics on the positive side of the binary",
+      "Peter Farrelly precedent: Green Book also showed a crowd-pleaser pattern with RT (78) well above its Metacritic — his films retain 'fresh' majorities despite mixed depth"
+    ],
+    "strongest_opposing_case": "With MC at 63, the marginal wide-release reviewer is barely positive; if the next ~80 reviews come in around 70-75% fresh, the cumulative score lands at 79-81 and the strike fails on a knife's edge.",
+    "reasoning_summary": "Needs the score to stay above 80 from a 85/47-review start: roughly a -5 cushion. Typical expansion drift for this profile is -3 to -8, putting the outcome near even but tilted positive since early wide reviews (Deadline, Screen Rant) remain warm. Final p=0.58, monotone between the 75 and 85 strikes.",
+    "key_sources": [
+      {"title": "I Play Rocky - Rotten Tomatoes", "url": "https://www.rottentomatoes.com/m/i_play_rocky", "date": "2026-10-25"},
+      {"title": "I Play Rocky Reviews - Metacritic", "url": "https://www.metacritic.com/movie/i-play-rocky/", "date": "2026-10-25"}
+    ],
+    "p": 0.58
+  },
+  "KXRT-IPL-85": {
+    "base_rate": {
+      "reference_class": "Films at exactly 85% pre-wide finishing ABOVE 85 (86+) after the mainstream review wave — requires zero or positive drift",
+      "value": 0.25,
+      "source": "RT drift distribution: expansions from festival scores skew downward, especially with Metacritic 20+ points below the Tomatometer"
+    },
+    "evidence": [
+      "2026-10-25: score is exactly 85% — 'above 85' resolves No at the current level; the film must RISE against the typical downward expansion drift",
+      "Metacritic 63 indicates the marginal reviewer is ~70% likely fresh, below the ~86% rate needed to lift the cumulative score",
+      "Guardian and other mixed notices ('rarely has pathos in its corner') show mainstream dissent already arriving"
+    ],
+    "strongest_opposing_case": "Crowd-pleasing sports biopics often over-perform with mainstream US critics relative to festival/trade reviewers, and a late-breaking awards narrative around Ippolito could tip incoming reviews ~90% fresh, nudging the score to 86-88.",
+    "reasoning_summary": "The strike requires strictly above 85 while the live score is exactly 85 and the MC 63 suggests incoming reviews will average below the current fresh rate. Upward drift happens but is the minority case (~1 in 4) for this profile. Final p=0.2, monotone below the 80 strike.",
+    "key_sources": [
+      {"title": "I Play Rocky - Rotten Tomatoes", "url": "https://www.rottentomatoes.com/m/i_play_rocky", "date": "2026-10-25"},
+      {"title": "I Play Rocky Reviews - Metacritic", "url": "https://www.metacritic.com/movie/i-play-rocky/", "date": "2026-10-25"}
+    ],
+    "p": 0.2
+  },
+  "KXCRITICSPIC-27-ODY": {
+    "base_rate": {
+      "reference_class": "October consensus Best Picture frontrunners winning Critics Choice Best Picture that season (~45-55% historically; CCA strongly tracks the critical/industry juggernaut, e.g., Oppenheimer 2024)",
+      "value": 0.45,
+      "source": "Critics Choice Awards history: the season's dominant critical+commercial epic usually wins BP there even when Oscars diverge"
+    },
+    "evidence": [
+      "2026-07-19: The Odyssey opened to $124.5M domestic / $264.1M global — Nolan's biggest opening since The Dark Knight Rises and the largest live-action opening of 2026 at the time (AP/THR)",
+      "2026-07: 95% Rotten Tomatoes — the best critic score of Nolan's career — plus an A CinemaScore and 97% audience score",
+      "2026-08/10: Pundit columns (AwardsDaily, IndieWire) treat The Odyssey as the season's Best Picture frontrunner heading into fall",
+      "Precedent: Nolan's Oppenheimer won Critics Choice Best Picture (Jan 2024) with the same profile — epic auteur blockbuster with critical raves; CCA's large voting body favors exactly this profile",
+      "Ceremony is Jan 3, 2027; unseen/late competitors (Fjord, Wild Horse Nine, Digger, holiday releases) could still reshape the race"
+    ],
+    "strongest_opposing_case": "A July release must survive six months of fresh contenders; CCA voters have swung to late-breaking prestige hits before (CODA-era upsets), and Palme d'Or winner Fjord or a December juggernaut could claim frontrunner status by January, leaving The Odyssey as last summer's news.",
+    "reasoning_summary": "Base rate ~0.45 for the October consensus frontrunner at CCA. The Odyssey's combination of career-best Nolan reviews (95%), massive box office, and the Oppenheimer-at-CCA precedent supports the high end; the long gap to January and strong unseen fall slate argues mild caution. Final p=0.45.",
+    "key_sources": [
+      {"title": "Nolan's 'The Odyssey' Storms the Box Office with a $264.1 Million Global Debut", "url": "https://english.aawsat.com/entertainment/5297806", "date": "2026-07-19"},
+      {"title": "The Odyssey box office opening - The Hollywood Reporter", "url": "https://www.hollywoodreporter.com/movies/movie-news/the-odyssey-box-office-opening-christopher-nolan-1236651507/", "date": "2026-07"},
+      {"title": "2027 Oscar Predictions: Do We Already Have Our Top Five?", "url": "https://www.awardsdaily.com/2026/08/07/2027-oscar-predictions-do-we-already-have-our-top-five/", "date": "2026-08-07"}
+    ],
+    "p": 0.45
+  },
+  "KXGRAMMYNOMAOTY-69-DAN": {
+    "base_rate": {
+      "reference_class": "Year's best-selling, critically acclaimed, Billboard-200-#1 albums earning one of 8 Album of the Year nomination slots",
+      "value": 0.5,
+      "source": "Grammy AOTY history: the calendar year's top commercial album with critical acclaim is nominated roughly half the time (country crossovers recently favored: Cowboy Carter, Stapleton, Musgraves)"
+    },
+    "evidence": [
+      "'Dandelion' is Ella Langley's second album (Apr 10, 2026, Columbia): debuted #1 on the Billboard 200 with 169k units — within the 69th Grammy eligibility window",
+      "2026-10-10: certified Multi-Platinum — the FIRST 2026 release to reach that level; listed as 2026's best-selling album (~2.3M units) in a Sep 2026 ranking",
+      "Reception: 'met with acclaim from critics' (Wikipedia); top-10 in UK, Australia, Norway, NZ, Scotland; co-produced with Miranda Lambert",
+      "2026-10: Grammy-voter and pundit nomination chatter names Ella Langley among artists being discussed for the 69th Grammys general field; nominations announced Nov 16, 2026"
+    ],
+    "strongest_opposing_case": "Country-pop commercial smashes are routinely snubbed in AOTY (Morgan Wallen's record-breaking albums never nominated; Zach Bryan snubbed), and the Academy's big-field slots skew to auteurist pop/R&B; Langley is young, mainstream-country-coded, and lacks prior general-field history.",
+    "reasoning_summary": "Base rate ~0.5 for the year's best-selling acclaimed #1 album taking one of 8 slots. Up-adjust: genuine critical acclaim (unlike Wallen-style snub cases), Lambert's Academy-respected co-production, country's current Grammy momentum, and voter chatter naming Langley. Down-adjust: no prior Grammy general-field track record. Final p=0.52.",
+    "key_sources": [
+      {"title": "Dandelion (album) - Wikipedia", "url": "https://en.wikipedia.org/wiki/Dandelion_(album)", "date": "2026"},
+      {"title": "Ella Langley's 'Dandelion' Becomes 2026's First Multi-Platinum Album", "url": "https://ratingsgamemusic.com/2026/10/10/ella-langley-dandelion-first-2026-multi-platinum-album/", "date": "2026-10-10"},
+      {"title": "Grammys 2027 Predictions: general field", "url": "https://www.billboard.com/music/awards/grammy-predictions-2027-general-field-categories-1236295942/", "date": "2026-10"}
+    ],
+    "p": 0.52
+  },
+  "0x360909b1b607eca6207dc846804e16ed5e43dbeb4242b91ecc1352ed18cc95ef": {
+    "base_rate": {
+      "reference_class": "Second-strongest LCK seed winning Worlds in LCK-dominant eras (LCK teams won 2022-2025-era titles; a specific non-#1 LCK seed wins roughly 15-25% of the time)",
+      "value": 0.18,
+      "source": "Worlds history: Korean teams dominate finals, but the title usually goes to Gen.G/T1-class #1 seeds; LCK runner-up seeds win occasionally (e.g., T1 2024)"
+    },
+    "evidence": [
+      "2026-10-25: Worlds 2026 Swiss Stage is in progress (started Oct 23; event runs Oct 15-Nov 14). Hanwha is ALIVE: qualified as LCK #2 seed (playoff runner-up) and won its Round 1 Swiss match (1-0)",
+      "Round 1: LCK went a perfect 4-0 (Gen.G, HLE, Dplus KIA, T1 all won) while all four LPL teams lost — field strength tilts heavily Korean (esports.net, Liquipedia)",
+      "Context: HLE lost 0-2 to T1 at Esports World Cup July 2026 quarterfinals; pre-Worlds previews (Yardbarker) call Hanwha 'one of the favorites' but historically they have stumbled in Worlds knockouts (eliminated by Gen.G at Worlds 2025 QF)",
+      "No knockout bracket results exist yet — the tournament has 3+ weeks remaining"
+    ],
+    "strongest_opposing_case": "Hanwha is 1-0 in Swiss, fields a superteam core (Zeus, Viper, Delight) that won LCK rounds in 2025-26, and with the LPL collapsing 0-4 the path runs through fellow LCK teams they have beaten domestically — a deep run to the title is very live.",
+    "reasoning_summary": "Mid-tournament: HLE alive at 1-0 in Swiss. Base rate for a strong LCK #2 seed winning the whole event is ~0.18 given Gen.G/T1-class rivals remain. Up-adjust slightly for LPL's weak start concentrating win probability in four LCK teams (if LCK wins ~80%, HLE is roughly the #2-3 claim on that mass); down-adjust for HLE's repeated knockout underperformance vs Gen.G/T1. Final p=0.20.",
+    "key_sources": [
+      {"title": "Worlds 2026 Swiss Round 1 Results: LPL Goes 0-4", "url": "https://www.esports.net/news/gaming/worlds-2026-swiss-stage-round-1-results/", "date": "2026-10-24"},
+      {"title": "2026 World Championship Swiss Stage - Liquipedia", "url": "https://liquipedia.net/leagueoflegends/World_Championship/2026/Swiss_Stage", "date": "2026-10-25"},
+      {"title": "Worlds 2026 Hanwha Life Esports Preview", "url": "https://www.yardbarker.com/entertainment/articles/worlds_2026_hanwha_life_esports_preview_bringing_the_t1_magic/s1_17456_44343729", "date": "2026-10"}
+    ],
+    "p": 0.2
+  },
+  "0x76c1a69f2b0a7fcfa97b56ddbeaad1981a8cb3d8f24c1adce62ffa2d010ebbe0": {
+    "base_rate": {
+      "reference_class": "A film holding the ALL-TIME domestic 3-day opening record retaining the yearly crown against remaining releases; December openings have never exceeded ~$248M (Star Wars: TFA)",
+      "value": 0.9,
+      "source": "Box-office history: no December release has ever approached $360M in a 3-day opening; holiday openings spread demand across weeks"
+    },
+    "evidence": [
+      "2026-08-02: Spider-Man: Brand New Day opened to a final $360M domestic 3-day — the biggest opening weekend in history, beating Avengers: Endgame's $357.1M (Deadline, THR)",
+      "Opening day (incl. previews) was $168M, also an all-time record; domestic running total ~$958M (The Numbers)",
+      "The only conceivable 2026 challenger is Avengers: Doomsday (Dec 18, 2026); December's all-time opening record is Star Wars: The Force Awakens' $248M — $112M below the required figure",
+      "No other remaining 2026 release (Sunrise on the Reaping, Dune 3, Shrek 5) has a plausible $360M+ 3-day profile"
+    ],
+    "strongest_opposing_case": "Avengers: Doomsday reunites the original Avengers with RDJ as Doom — the most anticipated MCU event since Endgame — and Endgame itself shattered the prior record by $100M; an unprecedented December demand surge cannot be fully ruled out.",
+    "reasoning_summary": "Spider-Man already banked an all-time-record $360M. Resolution only fails if a later 2026 film beats it; the sole candidate opens in December, a corridor whose historical ceiling is $248M due to holiday-weekend demand spreading. Even an Endgame-scale phenomenon in December would struggle to clear $360M in 3 days. Final p=0.9.",
+    "key_sources": [
+      {"title": "Box Office: 'Spider-Man: Brand New Day' Beats 'Avengers: Endgame' All-Time Opening Record", "url": "https://deadline.com/2026/08/box-office-spider-man-brand-new-day-1237014268/", "date": "2026-08-03"},
+      {"title": "Spider-Man: Brand New Day Opening Beats Endgame for Box Office Record", "url": "https://www.hollywoodreporter.com/movies/movie-news/spider-man-brand-new-day-opening-record-endgame-box-office-1236662986/", "date": "2026-08"},
+      {"title": "Spider-Man: Brand New Day (2026) - The Numbers", "url": "https://www.the-numbers.com/movie/Spider-Man-Brand-New-Day-(2026)", "date": "2026-10"}
+    ],
+    "p": 0.9
+  },
+  "0x938e6a0a011f9534ffd2d86c65dde3aeb7c66ad06cee29ead70b832179c3b6de": {
+    "base_rate": {
+      "reference_class": "Reigning Spotify Wrapped global top artist repeating the following year (2020-2025: Bad Bunny repeated 2020-22, Swift repeated 2023-24; incumbent repeated 4 of the last 6 transitions)",
+      "value": 0.55,
+      "source": "Spotify Wrapped annual top-artist history"
+    },
+    "evidence": [
+      "2025-12: Bad Bunny was Spotify's 2025 global top artist with 20B+ streams, beating Taylor Swift — his 4th title, most all-time",
+      "2026-02-08: Headlined Super Bowl LX halftime (first mostly-Spanish set), drawing ~128-135M viewers; U.S. Spotify streams surged 470% (210% globally) immediately after, with 6 of the top 6 U.S. Spotify songs (Rolling Stone, CBS)",
+      "2026: Debí Tirar Más Fotos world stadium tour runs through 2026, sustaining catalog streaming all year",
+      "Main rival: Taylor Swift's 'The Life of a Showgirl' (Oct 2025) fuels her early-2026 streams, but no 2026 Swift album or tour was found in searches"
+    ],
+    "strongest_opposing_case": "His flagship album DtMF is two years old by late 2026 and Wrapped rewards fresh-release volume; a Taylor Swift album cycle carrying into 2026 (Showgirl, Oct 2025) or a surprise 2026 blockbuster release from Swift, Drake or a K-pop act could out-stream a touring-year Bad Bunny.",
+    "reasoning_summary": "Base rate ~0.55 for incumbents repeating. Up-adjust for an exceptional 2026: record Super Bowl halftime with a 470% US / 210% global stream surge in February, a year-long stadium tour, and the deepest global catalog on the platform; Swift's competing album is from Oct 2025 and ages through the year. Final p=0.65.",
+    "key_sources": [
+      {"title": "Bad Bunny's Spotify Streams Soar 470 Percent in U.S. Post-Super Bowl", "url": "https://www.rollingstone.com/music/music-latin/bad-bunnys-spotify-streams-super-bowl-surtge-1235513438/", "date": "2026-02"},
+      {"title": "Bad Bunny holds top 6 spots on U.S. Spotify chart after Super Bowl halftime show", "url": "https://www.cbsnews.com/news/bad-bunny-spotify-super-bowl-halftime-performance/", "date": "2026-02"}
+    ],
+    "p": 0.65
+  },
+  "0xd6118440343968bb7dba587482a24e77308f438df8f76077363249248e240ef5": {
+    "base_rate": {
+      "reference_class": "NFL teams at 2-4 and trailing the division leader by ~1.5 games after Week 7 winning their division",
+      "value": 0.1,
+      "source": "Historical playoff-odds tables: sub-.500 teams 1-2 games back at Week 7 win their division roughly 8-13% of the time (four-team race)"
+    },
+    "evidence": [
+      "2026-10-25: Saints are 2-4 (ESPN), sitting 2nd or 3rd in the NFC South depending on tiebreak source",
+      "Division leader: Carolina Panthers at 3-2/3-3 (Bryce Young's Week 6 'historic' win per ESPN); Atlanta also 2-4, Tampa Bay last at 1-5 — a weak division with no runaway leader",
+      "Saints' gap to first is only ~1.5 games with 11 to play, but they must leapfrog two or three teams, not one"
+    ],
+    "strongest_opposing_case": "The NFC South is the NFL's weakest division — the leader is barely above .500 and the 2022 Buccaneers won it at 8-9 — so a modest 7-8 win Saints finish with strong divisional-record tiebreakers could genuinely take it.",
+    "reasoning_summary": "Base rate ~0.1 for a 2-4 team 1-2 games back in a 4-team race. Slight up-adjust because the division is historically weak (leader ~3-2, nobody above .600) and the win total needed may be only 8; slight down-pressure because the Saints entered 2026 as a projected bottom-tier roster and trail multiple teams. Final p=0.1.",
+    "key_sources": [
+      {"title": "New Orleans Saints Scores, Stats and Highlights - ESPN", "url": "https://www.espn.com/nfl/team/_/name/no/new-orleans-saints", "date": "2026-10-25"},
+      {"title": "NFL Standings 2026 - Yahoo Sports", "url": "https://sports.yahoo.com/nfl/standings/", "date": "2026-10-25"}
+    ],
+    "p": 0.1
+  },
+  "KXNCAAFPAC12-26-FRES": {
+    "base_rate": {
+      "reference_class": "Teams at 1-2 in conference after ~7 games both reaching AND winning their conference championship game (rebuilt 8-team Pac-12)",
+      "value": 0.05,
+      "source": "Conference-title math: a 1-2 team must win out or get help just to reach the title game (~15-20%), then win it (~35-50%)"
+    },
+    "evidence": [
+      "2026-10-25: Fresno State is 4-3 overall, 1-2 in Pac-12 play (Wikipedia 2026 season page) after losses to Boise State (Oct 10) and at San Diego State 23-26 (Oct 17)",
+      "Season arc: opened 0-39 at USC, then won four straight incl. 26-6 at Washington State (Oct 3); next game Oct 31 vs Oregon State",
+      "An earlier snapshot had Fresno 4-1 and atop the Pac-12 before consecutive conference losses dropped them to mid-table; title game is Dec 5-6, 2026"
+    ],
+    "strongest_opposing_case": "The rebuilt Pac-12 is shallow — Boise State is the only clear power — and Fresno has four-plus conference games left; winning out (they beat WSU 26-6 on the road) could still deliver a top-2 finish and a one-game shot at the crown.",
+    "reasoning_summary": "Base rate ~0.05: at 1-2 in conference Fresno likely needs to win out plus get help to reach the title game, then win a probable rematch with unbeaten-in-conference Boise State who already beat them. Two October conference losses are strongly negative evidence against the preseason-contender narrative. Final p=0.05.",
+    "key_sources": [
+      {"title": "2026 Fresno State Bulldogs football team - Wikipedia", "url": "https://en.wikipedia.org/wiki/2026_Fresno_State_Bulldogs_football_team", "date": "2026-10"},
+      {"title": "Fresno State visits San Diego State in Pac-12 action", "url": "https://abc30.com/post/fresno-state-visits-san-diego-pac-12-action/19930234/", "date": "2026-10-17"}
+    ],
+    "p": 0.05
+  }
+}

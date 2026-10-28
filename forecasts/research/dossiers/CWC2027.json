@@ -1,0 +1,76 @@
+{
+  "forecast_id": "CWC2027",
+  "domain": "Cricket",
+  "freeze_date": "2026-10-23",
+  "resolve_date": "2027-11",
+  "researched_at_utc": "2026-10-23T12:50:00+00:00",
+  "researcher": "claude-fable-5, in-session research pass (M_research v1)",
+  "resolution_source": "ICC official result of the Cricket World Cup 2027 final (icc-cricket.com), expected 2027-11",
+  "independence_attestation": "No betting odds, prediction-market prices or forecast-aggregator numbers were fetched or consulted during this research pass. Honesty caveat: the engine's config files (which contain market blocks) were read earlier in this session for integration work; the numbers below were built base-rate-first from the cited research sources and no market figure is cited, used, or averaged in.",
+  "questions": [
+    {
+      "q": "India win the World Cup",
+      "base_rate_used": {
+        "reference_class": "Pre-tournament #1-ranked ODI side winning the World Cup: since rankings began, every winner from 1999 on started the event ranked top-2, and the #1 side has won roughly half of those editions; 13 months out the signal is weaker than at tournament start",
+        "value": 0.35,
+        "source": "ICC analysis: every World Cup since 1999 won by a side top-2 in the rankings at the start of the event"
+      },
+      "evidence": [
+        "India remain #1 in ICC ODI rankings after the May 2026 annual update, but the rating fell 119->118 and the lead over #2 New Zealand shrank from 8 to 5 points - the field is compressing",
+        "Tournament is in South Africa (+ Zimbabwe/Namibia), away conditions for India; 2023 showed host/condition familiarity is no guarantee (India lost the home final to Australia)",
+        "Squad transition risk is live: Kohli and Hardik Pandya were ruled out of the Afghanistan ODI series (injuries), and the 2027 side will be deep into a generational handover",
+        "A 14-team tournament with semifinals and a final imposes knockout variance: even a clearly best team historically converts at ~30-40%"
+      ],
+      "strongest_opposing_case": "India's rating lead is 5 points and shrinking, the tournament is in South African conditions where the hosts (#3, rising) and pace-heavy sides are advantaged, the core that reached the 2023 final will be 2-4 years older or gone, and knockout cricket resolves on 1-2 bad days. 13 months out, 'current #1' may not even be #1 at the start of the event.",
+      "reasoning_summary": "Base ~0.35 for the #1-ranked side, discounted for: 13-month horizon (ranking may change), away conditions, visible squad transition (Kohli/Pandya injuries, ageing core), and a compressing ratings table (lead down to 5 over NZ). No single competitor is clearly India's equal today, which caps the discount. Final: 0.28.",
+      "key_sources": [
+        {"title": "ICC: India retain top position in ODI rankings after annual update (119->118, lead cut to 5)", "url": "https://www.icc-cricket.com/media-releases/india-retain-top-position-in-men-s-odi-team-rankings-after-annual-update", "date": "2026-05-11"},
+        {"title": "ICC: Historic team rankings favour top-2 sides at World Cups (every winner since 1999 top-2 at start)", "url": "https://icc-cricket.com/tournaments/cricketworldcup/news/historic-team-rankings-favour-india-and-pakistan-at-world-cup", "date": "2023"},
+        {"title": "Dynamite News: ICC ODI rankings - India #1, South Africa overtakes Pakistan", "url": "https://www.dynamitenews.com/sports/icc-odi-rankings-india-retains-number-1-spot-south-africa-overtakes-pakistan", "date": "2026"}
+      ],
+      "p_raw": 0.28
+    },
+    {
+      "q": "Winner in {India, Australia, South Africa, England}",
+      "base_rate_used": {
+        "reference_class": "These four nations have won 9 of 13 World Cups (Australia 6, India 2, England 1) = 0.69 historically; the set also contains the current #1 (India), the host (#3 South Africa) and the most-decorated side (Australia)",
+        "value": 0.69,
+        "source": "Cricket World Cup winners list 1975-2023"
+      },
+      "evidence": [
+        "Current composition: India #1 (118), South Africa #3 (rising, overtook Pakistan) AND host, Australia top-4 (~109 at the annual update), England mid-table (~#8) and weakest member of the set",
+        "The notable EXCLUDED side is #2 New Zealand (113) - perennial semifinalists, which materially caps the set's probability",
+        "Host record is mixed: 2011/2015/2019 hosts won, 2023 host lost the final - supportive but not decisive for South Africa"
+      ],
+      "strongest_opposing_case": "New Zealand are ranked #2 and are excluded; Pakistan (#4-ish) is excluded; the set's historical 0.69 was built mostly in eras when the excluded teams were weak. England being in the set adds almost nothing today (~#8, declining ODI side). Summing honest member probabilities - India ~0.28, SA ~0.16 host-boosted, Australia ~0.14, England ~0.05 - gives ~0.63, below the raw base rate.",
+      "reasoning_summary": "Base 0.69 historical, cross-checked against summed member estimates (~0.63): India 0.28 + South Africa 0.16 (host, #3, rising) + Australia 0.14 (six titles, knockout pedigree) + England 0.05 (ranked ~8). The exclusion of #2 New Zealand is the binding constraint. Take the cross-check over the raw history. Final: 0.63.",
+      "key_sources": [
+        {"title": "Chase Your Sport: Cricket World Cup winners list 1975-2023", "url": "https://www.chaseyoursport.com/cricket/cricket-world-cup-winners-list-from-1975-to-2023/8187", "date": "2023"},
+        {"title": "ICC: India retain top position in ODI rankings (NZ second, Australia third)", "url": "https://www.icc-cricket.com/media-releases/india-retain-top-position-in-men-s-odi-team-rankings-after-annual-update", "date": "2026-05-11"},
+        {"title": "Dynamite News: South Africa overtakes Pakistan in ODI rankings", "url": "https://www.dynamitenews.com/sports/icc-odi-rankings-india-retains-number-1-spot-south-africa-overtakes-pakistan", "date": "2026"}
+      ],
+      "p_raw": 0.63
+    },
+    {
+      "q": "Winner from current ICC top 8",
+      "base_rate_used": {
+        "reference_class": "Every Cricket World Cup ever played (13/13) was won by a side that sat in the contemporary top tier (top 8 by rating or equivalent standing); no winner has ever come from outside it",
+        "value": 0.97,
+        "source": "Cricket World Cup winners list 1975-2023 vs contemporary rankings/standings"
+      },
+      "evidence": [
+        "The frozen top-8 set (2026-10-22 ratings: India, New Zealand, South Africa, Pakistan, Australia, Sri Lanka, Afghanistan, England) contains every side with any modern World Cup pedigree except West Indies (titles in 1975/1979, currently ~#10 and in long-term decline)",
+        "Excluded sides that could play: Bangladesh (~81), West Indies (~79), Zimbabwe (co-host, ~64), Ireland, Scotland, Netherlands, Namibia - none has ever reached a World Cup final",
+        "The set is frozen at 2026-10-22 ratings per the resolution rules, so a team rising INTO form but outside the frozen list (e.g. a resurgent West Indies) would still count as a miss"
+      ],
+      "strongest_opposing_case": "The frozen-list rule is the real risk, not cricket quality: 13 months of rating drift could put a currently-excluded side (West Indies, Bangladesh) into genuine contention while the question still scores them as outsiders. Co-host Zimbabwe gets home conditions. T20-era volatility has produced shock runs (Afghanistan 2023-24) - though a shock RUN is not a shock TITLE, and the excluded teams would need seven wins including knockouts.",
+      "reasoning_summary": "Base ~0.97: no World Cup winner has ever come from outside the contemporary top 8, across 13 editions. The frozen set includes all eight current heavyweights; the excluded pool's best member has never reached a final. Discount slightly for the 13-month frozen-list drift risk and co-host Zimbabwe's conditions. Final: 0.96.",
+      "key_sources": [
+        {"title": "Chase Your Sport: Cricket World Cup winners list 1975-2023", "url": "https://www.chaseyoursport.com/cricket/cricket-world-cup-winners-list-from-1975-to-2023/8187", "date": "2023"},
+        {"title": "ICC ODI team rankings 2026 (annual update)", "url": "https://www.icc-cricket.com/media-releases/india-retain-top-position-in-men-s-odi-team-rankings-after-annual-update", "date": "2026-05-11"},
+        {"title": "Wikipedia: Cricket World Cup records", "url": "https://en.wikipedia.org/wiki/Cricket_World_Cup_records", "date": "2026"}
+      ],
+      "p_raw": 0.96
+    }
+  ]
+}

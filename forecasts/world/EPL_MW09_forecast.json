@@ -1,0 +1,504 @@
+{
+ "congestion_basis": {
+  "fetched_utc": "2026-10-24T16:40:00+00:00",
+  "matches": [
+   {
+    "competition": "EFL Cup R4",
+    "date": "2026-10-27",
+    "note": "Fleetwood v Arsenal; Fleetwood not a PL side",
+    "teams": [
+     "Arsenal"
+    ]
+   },
+   {
+    "competition": "EFL Cup R4",
+    "date": "2026-10-28",
+    "teams": [
+     "Man City",
+     "Brighton"
+    ]
+   },
+   {
+    "competition": "EFL Cup R4",
+    "date": "2026-10-28",
+    "teams": [
+     "Bournemouth",
+     "Aston Villa"
+    ]
+   },
+   {
+    "competition": "EFL Cup R4",
+    "date": "2026-10-28",
+    "teams": [
+     "Fulham",
+     "Crystal Palace"
+    ]
+   },
+   {
+    "competition": "EFL Cup R4",
+    "date": "2026-10-28",
+    "teams": [
+     "Sunderland",
+     "Brentford"
+    ]
+   },
+   {
+    "competition": "EFL Cup R4",
+    "date": "2026-10-28",
+    "teams": [
+     "Liverpool",
+     "Chelsea"
+    ]
+   },
+   {
+    "competition": "EFL Cup R4",
+    "date": "2026-10-29",
+    "teams": [
+     "Everton",
+     "Newcastle"
+    ]
+   }
+  ],
+  "source": "oddschecker.com EFL Cup coupon (round-4 fixture list, fetched 2026-10-24); UEFA 2026-27 calendar cross-check: UCL MD3 was Oct 20-21, MD4 is Nov 3-4 (uefa.com league-phase fixture list), so no European midweek falls in the Oct 27-30 window"
+ },
+ "forecast_id": "EPL2627-MW09",
+ "freeze_date": "2026-10-24",
+ "market": {
+  "fetched_utc": "2026-10-24T16:38:00+00:00",
+  "odds_date": "2026-10-24",
+  "raw_odds": {
+   "EPL2627-M081": {
+    "away": "23/10",
+    "draw": "11/4",
+    "home": "6/5"
+   },
+   "EPL2627-M082": {
+    "away": "13/5",
+    "draw": "11/4",
+    "home": "21/20"
+   },
+   "EPL2627-M083": {
+    "away": "13/5",
+    "draw": "14/5",
+    "home": "21/20"
+   },
+   "EPL2627-M084": {
+    "away": "14/5",
+    "draw": "3/1",
+    "home": "11/13"
+   },
+   "EPL2627-M085": {
+    "away": "17/11",
+    "draw": "5/2",
+    "home": "9/5"
+   },
+   "EPL2627-M086": {
+    "away": "28/17",
+    "draw": "5/2",
+    "home": "13/8"
+   },
+   "EPL2627-M087": {
+    "away": "6/5",
+    "draw": "13/5",
+    "home": "11/5"
+   },
+   "EPL2627-M088": {
+    "away": "7/2",
+    "draw": "10/3",
+    "home": "7/10"
+   },
+   "EPL2627-M089": {
+    "away": "2/1",
+    "draw": "11/4",
+    "home": "5/4"
+   },
+   "EPL2627-M090": {
+    "away": "4/1",
+    "draw": "10/3",
+    "home": "11/17"
+   }
+  },
+  "source": "oddschecker.com PL coupon best-price 1X2",
+  "source_url": "https://www.oddschecker.com/football/leagues-cups/english/premier-league"
+ },
+ "matches": [
+  {
+   "away": "Man Utd",
+   "congestion_away": "no",
+   "congestion_home": "yes",
+   "congestion_note": "home: EFL Cup R4 2026-10-28 (3d before)",
+   "date_utc": "2026-10-31 12:30:00Z",
+   "home": "Chelsea",
+   "lambda_away": 1.2,
+   "lambda_home": 1.55,
+   "market_date": "2026-10-24",
+   "market_overround": 0.0548,
+   "market_pa": 0.2495,
+   "market_pd": 0.237,
+   "market_ph": 0.5135,
+   "market_source": "oddschecker.com PL coupon best-price 1X2",
+   "match_id": "EPL2627-M084",
+   "matchweek": 9,
+   "model_version": "v2",
+   "p_away": 0.2949,
+   "p_draw": 0.251,
+   "p_home": 0.4541
+  },
+  {
+   "away": "Leeds",
+   "congestion_away": "no",
+   "congestion_home": "yes",
+   "congestion_note": "home: EFL Cup R4 2026-10-28 (3d before)",
+   "date_utc": "2026-10-31 15:00:00Z",
+   "home": "Bournemouth",
+   "lambda_away": 1.233,
+   "lambda_home": 1.517,
+   "market_date": "2026-10-24",
+   "market_overround": 0.0242,
+   "market_pa": 0.2959,
+   "market_pd": 0.2604,
+   "market_ph": 0.4438,
+   "market_source": "oddschecker.com PL coupon best-price 1X2",
+   "match_id": "EPL2627-M081",
+   "matchweek": 9,
+   "model_version": "v2",
+   "p_away": 0.3091,
+   "p_draw": 0.2525,
+   "p_home": 0.4383
+  },
+  {
+   "away": "Nott'm Forest",
+   "congestion_away": "no",
+   "congestion_home": "yes",
+   "congestion_note": "home: EFL Cup R4 2026-10-28 (3d before)",
+   "date_utc": "2026-10-31 15:00:00Z",
+   "home": "Brentford",
+   "lambda_away": 0.891,
+   "lambda_home": 1.859,
+   "market_date": "2026-10-24",
+   "market_overround": 0.0287,
+   "market_pa": 0.27,
+   "market_pd": 0.2558,
+   "market_ph": 0.4742,
+   "market_source": "oddschecker.com PL coupon best-price 1X2",
+   "match_id": "EPL2627-M083",
+   "matchweek": 9,
+   "model_version": "v2",
+   "p_away": 0.1756,
+   "p_draw": 0.2226,
+   "p_home": 0.6018
+  },
+  {
+   "away": "Sunderland",
+   "congestion_away": "yes",
+   "congestion_home": "no",
+   "congestion_note": "away: EFL Cup R4 2026-10-28 (3d before)",
+   "date_utc": "2026-10-31 15:00:00Z",
+   "home": "Coventry",
+   "lambda_away": 1.297,
+   "lambda_home": 1.453,
+   "market_date": "2026-10-24",
+   "market_overround": 0.0357,
+   "market_pa": 0.3793,
+   "market_pd": 0.2759,
+   "market_ph": 0.3448,
+   "market_source": "oddschecker.com PL coupon best-price 1X2",
+   "match_id": "EPL2627-M085",
+   "matchweek": 9,
+   "model_version": "v2",
+   "p_away": 0.337,
+   "p_draw": 0.2546,
+   "p_home": 0.4084
+  },
+  {
+   "away": "Ipswich",
+   "congestion_away": "no",
+   "congestion_home": "no",
+   "congestion_note": "",
+   "date_utc": "2026-10-31 15:00:00Z",
+   "home": "Hull",
+   "lambda_away": 1.195,
+   "lambda_home": 1.555,
+   "market_date": "2026-10-24",
+   "market_overround": 0.0444,
+   "market_pa": 0.3617,
+   "market_pd": 0.2736,
+   "market_ph": 0.3647,
+   "market_source": "oddschecker.com PL coupon best-price 1X2",
+   "match_id": "EPL2627-M086",
+   "matchweek": 9,
+   "model_version": "v2",
+   "p_away": 0.2927,
+   "p_draw": 0.2507,
+   "p_home": 0.4566
+  },
+  {
+   "away": "Brighton",
+   "congestion_away": "yes",
+   "congestion_home": "yes",
+   "congestion_note": "home: EFL Cup R4 2026-10-28 (3d before); away: EFL Cup R4 2026-10-28 (3d before)",
+   "date_utc": "2026-10-31 15:00:00Z",
+   "home": "Man City",
+   "lambda_away": 0.691,
+   "lambda_home": 2.059,
+   "market_date": "2026-10-24",
+   "market_overround": 0.0412,
+   "market_pa": 0.2134,
+   "market_pd": 0.2216,
+   "market_ph": 0.5649,
+   "market_source": "oddschecker.com PL coupon best-price 1X2",
+   "match_id": "EPL2627-M088",
+   "matchweek": 9,
+   "model_version": "v2",
+   "p_away": 0.1138,
+   "p_draw": 0.1928,
+   "p_home": 0.6934
+  },
+  {
+   "away": "Crystal Palace",
+   "congestion_away": "yes",
+   "congestion_home": "no",
+   "congestion_note": "away: EFL Cup R4 2026-10-28 (3d before)",
+   "date_utc": "2026-10-31 17:30:00Z",
+   "home": "Spurs",
+   "lambda_away": 1.289,
+   "lambda_home": 1.461,
+   "market_date": "2026-10-24",
+   "market_overround": 0.0379,
+   "market_pa": 0.1927,
+   "market_pd": 0.2223,
+   "market_ph": 0.585,
+   "market_source": "oddschecker.com PL coupon best-price 1X2",
+   "match_id": "EPL2627-M090",
+   "matchweek": 9,
+   "model_version": "v2",
+   "p_away": 0.3337,
+   "p_draw": 0.2544,
+   "p_home": 0.4119
+  },
+  {
+   "away": "Fulham",
+   "congestion_away": "yes",
+   "congestion_home": "yes",
+   "congestion_note": "home: EFL Cup R4 2026-10-28 (3d before); away: EFL Cup R4 2026-10-28 (3d before)",
+   "date_utc": "2026-10-31 20:00:00Z",
+   "home": "Aston Villa",
+   "lambda_away": 0.92,
+   "lambda_home": 1.83,
+   "market_date": "2026-10-24",
+   "market_overround": 0.0322,
+   "market_pa": 0.2691,
+   "market_pd": 0.2583,
+   "market_ph": 0.4726,
+   "market_source": "oddschecker.com PL coupon best-price 1X2",
+   "match_id": "EPL2627-M082",
+   "matchweek": 9,
+   "model_version": "v2",
+   "p_away": 0.1856,
+   "p_draw": 0.2262,
+   "p_home": 0.5882
+  },
+  {
+   "away": "Arsenal",
+   "congestion_away": "no",
+   "congestion_home": "yes",
+   "congestion_note": "home: EFL Cup R4 2026-10-28 (4d before)",
+   "date_utc": "2026-11-01 16:30:00Z",
+   "home": "Liverpool",
+   "lambda_away": 1.748,
+   "lambda_home": 1.002,
+   "market_date": "2026-10-24",
+   "market_overround": 0.0448,
+   "market_pa": 0.435,
+   "market_pd": 0.2659,
+   "market_ph": 0.2991,
+   "market_source": "oddschecker.com PL coupon best-price 1X2",
+   "match_id": "EPL2627-M087",
+   "matchweek": 9,
+   "model_version": "v2",
+   "p_away": 0.5491,
+   "p_draw": 0.2355,
+   "p_home": 0.2154
+  },
+  {
+   "away": "Everton",
+   "congestion_away": "yes",
+   "congestion_home": "yes",
+   "congestion_note": "home: EFL Cup R4 2026-10-29 (4d before); away: EFL Cup R4 2026-10-29 (4d before)",
+   "date_utc": "2026-11-02 20:00:00Z",
+   "home": "Newcastle",
+   "lambda_away": 1.279,
+   "lambda_home": 1.471,
+   "market_date": "2026-10-24",
+   "market_overround": 0.0444,
+   "market_pa": 0.3191,
+   "market_pd": 0.2553,
+   "market_ph": 0.4255,
+   "market_source": "oddschecker.com PL coupon best-price 1X2",
+   "match_id": "EPL2627-M089",
+   "matchweek": 9,
+   "model_version": "v2",
+   "p_away": 0.3291,
+   "p_draw": 0.2541,
+   "p_home": 0.4168
+  }
+ ],
+ "matchweek": 9,
+ "model_version": "v2",
+ "priors": {
+  "c_goals_per_ppg": 1.5,
+  "home_adv_goals": 0.35,
+  "k": 12.0,
+  "league_ppg_fallback": 1.37,
+  "mu_total": 2.75,
+  "note": "v2: shrink to club's own prior (last season final PPG / promoted avg), independent Poisson, no Dixon-Coles draw correction; market column is benchmark instrument #2 (pick stays the model's); congestion recorded, not priced - measure first, model later",
+  "prior_source": "Wikipedia 2025-26 Premier League final table (fetched 2026-10-24); promoted sides 1.05 stated prior",
+  "promoted_prior": 1.05,
+  "team_priors_used": {
+   "Arsenal": 2.2368,
+   "Aston Villa": 1.7105,
+   "Bournemouth": 1.5,
+   "Brentford": 1.3947,
+   "Brighton": 1.3947,
+   "Chelsea": 1.3684,
+   "Coventry": 1.05,
+   "Crystal Palace": 1.1842,
+   "Everton": 1.2895,
+   "Fulham": 1.3684,
+   "Hull": 1.05,
+   "Ipswich": 1.05,
+   "Leeds": 1.2368,
+   "Liverpool": 1.5789,
+   "Man City": 2.0526,
+   "Man Utd": 1.8684,
+   "Newcastle": 1.2895,
+   "Nott'm Forest": 1.1579,
+   "Spurs": 1.0789,
+   "Sunderland": 1.4211
+  }
+ },
+ "resolution": "fixturedownload.com epl-2026 feed final score; league result after 90min+stoppage; abandoned match resolves on the completed restaging; awarded/forfeited results count as the official score",
+ "run_at_utc": "2026-10-24T16:39:47+00:00",
+ "table_basis": {
+  "Arsenal": {
+   "p": 7,
+   "ppg_shrunk": 2.3601,
+   "prior": 2.2368,
+   "pts": 18
+  },
+  "Aston Villa": {
+   "p": 7,
+   "ppg_shrunk": 1.5014,
+   "prior": 1.7105,
+   "pts": 8
+  },
+  "Bournemouth": {
+   "p": 7,
+   "ppg_shrunk": 1.2632,
+   "prior": 1.5,
+   "pts": 6
+  },
+  "Brentford": {
+   "p": 7,
+   "ppg_shrunk": 1.4072,
+   "prior": 1.3947,
+   "pts": 10
+  },
+  "Brighton": {
+   "p": 7,
+   "ppg_shrunk": 1.723,
+   "prior": 1.3947,
+   "pts": 16
+  },
+  "Chelsea": {
+   "p": 7,
+   "ppg_shrunk": 1.5485,
+   "prior": 1.3684,
+   "pts": 13
+  },
+  "Coventry": {
+   "p": 7,
+   "ppg_shrunk": 0.9789,
+   "prior": 1.05,
+   "pts": 6
+  },
+  "Crystal Palace": {
+   "p": 7,
+   "ppg_shrunk": 1.1163,
+   "prior": 1.1842,
+   "pts": 7
+  },
+  "Everton": {
+   "p": 7,
+   "ppg_shrunk": 1.3407,
+   "prior": 1.2895,
+   "pts": 10
+  },
+  "Fulham": {
+   "p": 7,
+   "ppg_shrunk": 1.1274,
+   "prior": 1.3684,
+   "pts": 5
+  },
+  "Hull": {
+   "p": 7,
+   "ppg_shrunk": 1.1368,
+   "prior": 1.05,
+   "pts": 9
+  },
+  "Ipswich": {
+   "p": 8,
+   "ppg_shrunk": 1.13,
+   "prior": 1.05,
+   "pts": 10
+  },
+  "Leeds": {
+   "p": 7,
+   "ppg_shrunk": 1.3075,
+   "prior": 1.2368,
+   "pts": 10
+  },
+  "Liverpool": {
+   "p": 7,
+   "ppg_shrunk": 1.6288,
+   "prior": 1.5789,
+   "pts": 12
+  },
+  "Man City": {
+   "p": 7,
+   "ppg_shrunk": 2.4017,
+   "prior": 2.0526,
+   "pts": 21
+  },
+  "Man Utd": {
+   "p": 7,
+   "ppg_shrunk": 1.5485,
+   "prior": 1.8684,
+   "pts": 7
+  },
+  "Newcastle": {
+   "p": 7,
+   "ppg_shrunk": 1.2355,
+   "prior": 1.2895,
+   "pts": 8
+  },
+  "Nott'm Forest": {
+   "p": 8,
+   "ppg_shrunk": 0.9947,
+   "prior": 1.1579,
+   "pts": 6
+  },
+  "Spurs": {
+   "p": 7,
+   "ppg_shrunk": 0.9972,
+   "prior": 1.0789,
+   "pts": 6
+  },
+  "Sunderland": {
+   "p": 7,
+   "ppg_shrunk": 1.108,
+   "prior": 1.4211,
+   "pts": 4
+  }
+ }
+}

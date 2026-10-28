@@ -1,0 +1,313 @@
+{
+ "KXWTI-26NOV03-T80.99": {
+  "base_rate": {"reference_class": "Probability WTI front-month falls >21.5% within 6 trading days from spot (needed to break $81 from $103.27)", "value": 0.98, "source": "Historical WTI daily settle data: 6-day declines >20% have occurred only in extreme one-off events (Apr 2020 negative-price episode, Mar 2020 OPEC+ breakdown); unconditional frequency <1% of windows"},
+  "evidence": [
+   "2026-10-23: WTI settled $103.27, up 3.8% on the day; Brent settled $116.72, highest since late April 2026 and up ~6% on the week",
+   "2026-10-23/24: rally driven by Houthi attacks on Saudi energy infrastructure and expectations the US could resume strikes on Iran",
+   "2026-10 (week ahead): analyst reference levels of ~$108 downside / $120 upside for Brent imply the floor is far above $81 WTI",
+   "2026 context: Feb-Mar 2026 Strait of Hormuz shipping halt already demonstrated an upside-skewed geopolitical regime for oil"
+  ],
+  "strongest_opposing_case": "An immediate, credible US-Iran de-escalation plus Saudi supply reassurance could trigger a violent geopolitical-premium unwind; oil has fallen 15-20% in days before when war premium collapsed (e.g. after June 2025 Israel-Iran ceasefire).",
+  "reasoning_summary": "Base rate: a >21.5% 6-day collapse in WTI is roughly a <1% event historically. Spot is $103.27 with escalating Middle East risk skewing the distribution upward, not downward. Even a full de-escalation unwind would likely land in the high $80s-$90s, still above $81. Capped at 0.97 for tail/settlement quirks.",
+  "key_sources": [
+   {"title": "US Rig Count Holds Steady as Oil Prices Surge", "url": "https://oilprice.com/Energy/Energy-General/US-Rig-Count-Holds-Steady-as-Oil-Prices-Surge.html", "date": "2026-10-24"},
+   {"title": "Oil Prices Today: WTI $103.27, Brent $116.93", "url": "https://www.onevalor.com/oil-gas-prices/", "date": "2026-10-24"},
+   {"title": "Weekly Crude Oil Price Recap Oct 17-23, 2026", "url": "https://crudeoilnow.com/news/weekly-recap.php", "date": "2026-10-23"}
+  ],
+  "p": 0.97
+ },
+ "KXWTI-26NOV03-T72.99": {
+  "base_rate": {"reference_class": "Probability WTI front-month falls >29.3% within 6 trading days from spot (needed to break $73 from $103.27)", "value": 0.99, "source": "Historical WTI settle series: no 6-day decline of ~30% outside April 2020; unconditional frequency effectively zero"},
+  "evidence": [
+   "2026-10-23: WTI settled $103.27; Brent $116.72, highest settlement since 29 April 2026",
+   "2026-10-23/24: prices rising on Houthi attacks on Saudi infrastructure and possible US strikes on Iran; supply-risk skew is to the upside",
+   "2026: even the post-conflict normalization after the Feb-Mar 2026 Hormuz crisis saw oil recover and hold at levels far above $73"
+  ],
+  "strongest_opposing_case": "Only a simultaneous peace deal, OPEC+ flood announcement and demand shock could produce a ~30% six-day collapse; nothing short of an April-2020-style dislocation has ever done this, but exchanges have seen one such event.",
+  "reasoning_summary": "Base rate: a 29% six-day crash has essentially never happened outside April 2020. With spot at $103.27 and an active escalation premium, downside to sub-$73 by Nov 3 is a pure tail. Capped at the schema maximum of 0.98.",
+  "key_sources": [
+   {"title": "Oil Prices Today: WTI $103.27, Brent $116.93", "url": "https://www.onevalor.com/oil-gas-prices/", "date": "2026-10-24"},
+   {"title": "Weekly Crude Oil Price Recap Oct 17-23, 2026", "url": "https://crudeoilnow.com/news/weekly-recap.php", "date": "2026-10-23"}
+  ],
+  "p": 0.98
+ },
+ "KXWTI-26NOV03-T107.99": {
+  "base_rate": {"reference_class": "Probability WTI gains >4.6% over 6 trading days (from $103.27 to >$107.99) in a high-volatility geopolitical regime", "value": 0.3, "source": "Distribution of 6-day WTI returns with daily vol ~2.5-3% (2026 crisis regime): 6-day sigma ~6-7%, so +4.6% is ~0.5-0.7 sigma above zero drift"},
+  "evidence": [
+   "2026-10-23: WTI settled $103.27 after a +3.8% day; it moved ~6% in one week, so a further +4.6% in 6 sessions is well within recent realized vol",
+   "2026-10-24: escalation drivers active - Houthi strikes on Saudi energy infrastructure, expectations of renewed US strikes on Iran in coming weeks",
+   "2026-10-24: week-ahead analyst framing put Brent reference levels at $108-$120; WTI >$108 implies Brent ~$121, only ~4% above Friday's Brent settle",
+   "Catalysts before Nov 3: Fed decision Wed Oct 28, US midterms, possible US military action - all fat-tail events in both directions"
+  ],
+  "strongest_opposing_case": "Momentum chasers often fade after a 6% weekly spike; if no actual US strike occurs before Nov 3 the war premium typically bleeds off within days, and $108 WTI has not printed at any point in 2026 including during the Hormuz shutdown.",
+  "reasoning_summary": "Base rate from the 6-day return distribution puts +4.6% at roughly 25-30% under zero drift. Active escalation adds positive drift, but the settle must hold above $108 on the specific day Nov 3 and WTI has not traded there all year, arguing the level is a genuine barrier. Net: modest bump above base rate to 0.32.",
+  "key_sources": [
+   {"title": "$120 Oil Is Almost Here, and Trump Has Few Good Options", "url": "https://oilprice.com/Energy/Energy-General/120-Oil-Is-Almost-Here-and-Trump-Has-Few-Good-Options.html", "date": "2026-10-24"},
+   {"title": "Brent Crude Oil Price: $116.72 Settle, Week Ahead", "url": "https://financefeeds.com/brent-crude-oil-price-116-72-saturday-week-ahead-houthi-saudi-fed-28-october-bull-120-bear-108/", "date": "2026-10-24"}
+  ],
+  "p": 0.32
+ },
+ "KXWTI-26NOV03-T108.99": {
+  "base_rate": {"reference_class": "Probability WTI gains >5.5% over 6 trading days (from $103.27 to >$108.99) in a high-volatility geopolitical regime", "value": 0.26, "source": "6-day return distribution with crisis-regime sigma ~6-7%: +5.5% is ~0.8 sigma above zero-drift mean"},
+  "evidence": [
+   "2026-10-23: WTI settled $103.27 (+3.8% day, ~+6% week); Brent $116.72, highest since April 2026",
+   "2026-10-24: escalation path (Houthi attacks on Saudi, potential US strikes on Iran) provides a plausible catalyst for a >$109 print by Nov 3",
+   "2026: WTI has not settled above ~$108 at any point this year, including during the Feb-Mar Hormuz shipping halt, so $109 requires a new 2026 high"
+  ],
+  "strongest_opposing_case": "Absent a fresh kinetic event in the next six sessions, the 6%-in-a-week premium typically decays; $109 would be a new 2026 high that even the Hormuz closure did not produce on a settle basis.",
+  "reasoning_summary": "Same distributional setup as the $108 strike, one dollar higher: +5.5% needed versus 6-day sigma ~6.5%. Escalation drift helps, but the settle must land above a level not reached all year. One strike up from the 0.32 assigned to >$107.99, so ~4 points lower: 0.28.",
+  "key_sources": [
+   {"title": "$120 Oil Is Almost Here, and Trump Has Few Good Options", "url": "https://oilprice.com/Energy/Energy-General/120-Oil-Is-Almost-Here-and-Trump-Has-Few-Good-Options.html", "date": "2026-10-24"},
+   {"title": "Brent Crude Oil Price: $116.72 Settle, Week Ahead", "url": "https://financefeeds.com/brent-crude-oil-price-116-72-saturday-week-ahead-houthi-saudi-fed-28-october-bull-120-bear-108/", "date": "2026-10-24"}
+  ],
+  "p": 0.28
+ },
+ "0x352b48203f4838cf28f6065ac9d55798c411664723749f3166f0abe3bf64efa4": {
+  "base_rate": {"reference_class": "Probability front-month CL futures daily high exceeds $147.27 (+43% from $103.27 spot) within ~5.2 months", "value": 0.06, "source": "WTI has exceeded $147.27 intraday exactly once ever (Jul 2008); 2022 Russia-invasion spike peaked ~$130.50 intraday; 5-month +43% moves occur only in extreme supply-shock episodes (~2-3 per 40 years)"},
+  "evidence": [
+   "2026-10-23: WTI $103.27, Brent $116.72 - Brent at its highest since June 2022 per Reuters-sourced reporting",
+   "2026-10-24: commentary titled '$120 Oil Is Almost Here' reflects live upside momentum from Houthi attacks on Saudi and possible US strikes on Iran",
+   "2026 Feb-Mar: an actual Strait of Hormuz shipping halt occurred and oil still did not approach $147; the all-time record survived a worst-case-style event",
+   "Window runs to Mar 31, 2027, spanning winter demand season and a possible direct US-Iran war"
+  ],
+  "strongest_opposing_case": "Oil is already at $103 with an active escalation ladder; a direct US-Iran war with a prolonged Hormuz closure plus Saudi infrastructure damage is exactly the scenario that could exceed 2008's record, and the window is five months long.",
+  "reasoning_summary": "Base rate for a +43% 5-month spike to an all-time record is a few percent. Adjust up materially: spot is unusually high, escalation is live, and the Hormuz precedent shows the market will price war scenarios. But the Feb-Mar 2026 Hormuz halt itself failed to come near $147, which caps the plausible spike size. Final 0.12.",
+  "key_sources": [
+   {"title": "$120 Oil Is Almost Here, and Trump Has Few Good Options", "url": "https://oilprice.com/Energy/Energy-General/120-Oil-Is-Almost-Here-and-Trump-Has-Few-Good-Options.html", "date": "2026-10-24"},
+   {"title": "Navigating Stock Market Sell-Offs in 2026 (documents Feb-Mar 2026 Hormuz halt and ~9% equity drawdown)", "url": "https://www.chase.com/personal/investments/learning-and-insights/article/navigating-stock-market-sell-offs-in-2026", "date": "2026"}
+  ],
+  "p": 0.12
+ },
+ "0x9775cd557a3cdba4f0478070afa399c0805761dd9aa0e7ce4435a71fed32621c": {
+  "base_rate": {"reference_class": "Probability ETH rallies ~+55-60% (from ~$2,500-2,700 to touch $4,000) within ~9.5 weeks in a down-trending market", "value": 0.07, "source": "ETH 10-week return distribution: +60% in 10 weeks occurs mainly in confirmed bull phases (~5-10% of all windows, rarer in drawdowns)"},
+  "evidence": [
+   "Already-resolved check: ETH fell below $4,000 in early Nov 2025 and never regained it; its 2026 local high was only ~$2,800, so no Binance 1-min high >= $4,000 has printed since the Nov 24, 2025 window open",
+   "2026-10-05: ETH traded near $2,725 (Fortune-syndicated price page), down roughly $1,655 year-over-year",
+   "2026-09/10: ETH is ~45-57% below its Aug 2025 ATH of $4,946; Standard Chartered cut its end-2026 target from $7,500 to $4,000 in June 2026",
+   "2026-10-24: BTC ~$80,400 and down ~28% YoY - the whole crypto complex is in a bear regime with momentum slowing"
+  ],
+  "strongest_opposing_case": "Crypto turns violently: ETH rallied >60% in under 10 weeks several times (Q1 2024, summer 2025), and a Fed easing surprise plus year-end squeeze from $2,700 could reach $4,000, which multiple banks still call a year-end target.",
+  "reasoning_summary": "Threshold not yet touched since market open (2026 high ~$2,800). Base rate for a +55-60% 9.5-week rally is ~5-10%, and conditions (bear regime, falling YoY, BTC stuck below $87k resistance) sit in the unfavorable part of that class. Slight haircut from the base rate midpoint: 0.05.",
+  "key_sources": [
+   {"title": "Will Ethereum Hit $4,000 Before the End of 2026?", "url": "https://247wallst.com/investing/cryptocurrency/2026/09/28/will-ethereum-hit-4000-before-the-end-of-2026/", "date": "2026-09-28"},
+   {"title": "Current price of Ethereum for Oct 5, 2026", "url": "https://alpha-maven.com/story/crypto/current-price-of-ethereum-for-oct-5-2026-fortune", "date": "2026-10-05"},
+   {"title": "Ethereum Forecast H2 2026: below ATH and Foundation in Crisis", "url": "https://naga.com/eu/news-and-analysis/articles/ethereum-price-prediction", "date": "2026"}
+  ],
+  "p": 0.05
+ },
+ "0xacec7e5b90ccb1ac4c950e3aff18156d6ce1bb7b0c87c001a281279412dca784": {
+  "base_rate": {"reference_class": "Probability BTC touches +18% (from ~$80,400 to $95,000 intraday) within ~9.5 weeks", "value": 0.25, "source": "BTC 10-week touch probability for +18% given ~45% annualized vol (10-week sigma ~19%): roughly 25-30% unconditional; lower in slowing-momentum regimes"},
+  "evidence": [
+   "Already-resolved check: market opened ~June 8, 2026 with BTC near its $58,524 late-June low; the subsequent summer rally peaked around $85-87k, so $95,000 has NOT been touched inside the market window",
+   "2026-10-24/25: BTC trades ~$80,400 (Coinbase ~$80,430, CoinDesk ~$80,380), down ~28% over the past year; it briefly broke above $84,000 recently",
+   "2026 path: ATH $126k (Oct 2025) -> $58.5k (late June 2026) -> +42-45% summer rebound -> stalled below ~$87k resistance; buying momentum slowed to +8% last month",
+   "2026-10: analyst year-end views: Standard Chartered $100k, Bitwise possibly >$100k, LO:TECH range $85-95k - $95k sits at the optimistic edge of consensus"
+  ],
+  "strongest_opposing_case": "BTC just gained 42-45% off the June low in under four months; one more leg of that rally plus a year-end risk squeeze reaches $95k easily, and only a single 1-minute Binance high is required, not a sustained level.",
+  "reasoning_summary": "Base rate for touching +18% in 9.5 weeks is ~25-30% at BTC vol. Adjust down for the regime: momentum fading, repeated rejection at $87k, YoY downtrend, macro stress (oil shock, tech selloff) - but touch-not-close mechanics and credible $100k year-end calls keep it from collapsing. Final 0.18.",
+  "key_sources": [
+   {"title": "Bitcoin price today, BTC to USD live price", "url": "https://www.coindesk.com/price/bitcoin", "date": "2026-10-24"},
+   {"title": "Can Bitcoin Reclaim $100,000 in 2026?", "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-reclaim-100-000-2026-122400854.html", "date": "2026-10"},
+   {"title": "When Will Bitcoin Reach $126,000 Again?", "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-reach-126-000-again-074301783.html", "date": "2026-10"}
+  ],
+  "p": 0.18
+ },
+ "0x590733a087d9e14aa053182b38573b22ae45cd257bb11119de537ad5ce44f088": {
+  "base_rate": {"reference_class": "Frequency of a UN member state announcing a FIRST direct-custody Bitcoin purchase in any given ~7-week window", "value": 0.07, "source": "Historical cadence: qualifying first-purchase announcements are roughly 1-2 per year globally (El Salvador 2021, CAR 2022, Czech National Bank test portfolio Nov 2025), i.e. ~5-10% per 7-week window"},
+  "evidence": [
+   "2025-11: Czech National Bank made its first BTC purchase via a $1M test portfolio - the most recent genuine first-purchase event; it said the holding will not be actively increased",
+   "2026: Pakistan announced creation of a government-led Strategic Bitcoin Reserve but has not disclosed any actual purchase quantities - an announcement of intent, not a qualifying purchase",
+   "2026-02-13: Brazil's Bill 4501/2024 (1M BTC over 5 years) was reintroduced in committee - still a proposal, not a purchase",
+   "2026-10: no credible report found of any new sovereign announcing a completed first direct BTC purchase; US reserve is from seized coins and is not a new country"
+  ],
+  "strongest_opposing_case": "Several governments (Pakistan, Brazil, various US-aligned states) have reserve frameworks teed up, and a single press release during the window resolves Yes - announcements can also retroactively cover earlier purchases, widening the qualifying set.",
+  "reasoning_summary": "Base rate of a first-purchase announcement in a ~7-week (mid-Nov to Dec 31) window is ~5-10%. Pipeline (Pakistan, Brazil) is real but has moved slowly all year, and the bear market reduces political urgency. Direct-custody requirement excludes ETF-style moves. Final 0.10, slightly above base for the live Pakistan pipeline.",
+  "key_sources": [
+   {"title": "Czech central bank buys bitcoin for first time as part of digital asset test portfolio", "url": "https://www.theblock.co/post/378748/czech-central-bank-bitcoin", "date": "2025-11"},
+   {"title": "Bitcoin Strategic Reserves: Which Nations Are Accumulating BTC and Why", "url": "https://www.spark.money/research/bitcoin-strategic-reserve-nation-states", "date": "2026"},
+   {"title": "Cryptocurrency Reserve by Country (2026)", "url": "https://www.bleap.finance/en-us/blog/cryptocurrency-reserve-by-country", "date": "2026"}
+  ],
+  "p": 0.10
+ },
+ "0x23969ec06514ad241fda435742187a08c1b2b2d0b5080f0c0751c9dc0f2d886b": {
+  "base_rate": {"reference_class": "P(token launches by deadline) x P(day-1 FDV > $100M | launch) for a small consumer-app token in a crypto bear market", "value": 0.12, "source": "New-token launch economics: mid-tier app tokens in 2026 bear conditions typically launch at $30-150M FDV; P(launch by Dec 31)~0.35, P(>$100M | launch)~0.3"},
+  "evidence": [
+   "2026-10: no Puffpaw token has launched; the project (Berachain-incubated vape-to-earn smart-vape app) has teased a governance token since 2024 without a TGE",
+   "2026: Berachain ecosystem momentum has faded significantly from its early-2025 peak, reducing likely launch valuation and launch urgency",
+   "2026-10-24: broad crypto bear market (BTC -28% YoY, total market cap ~$2.7T and falling) - day-1 FDVs for consumer-app tokens have compressed sharply in 2026",
+   "Evidence is thin: no reliable reporting on supply, launch date, or pricing was found; estimate leans on reference-class launch data"
+  ],
+  "strongest_opposing_case": "Puffpaw has patented hardware, Berachain incubation and a real device business; niche consumer tokens with hardware narratives have launched above $100M FDV even in weak markets, and a thin float plus airdrop hype can spike day-1 FDV.",
+  "reasoning_summary": "Two gates: launch by Dec 31, 2026 (~35% given two years of delay and only ~9 weeks left) and day-1 FDV >$100M (~30% in a bear market for a niche vape-to-earn app on a faded chain). Product gives 0.10-0.12; evidence is thin so stay near the reference-class answer: 0.10.",
+  "key_sources": [
+   {"title": "Puffpaw project overview (Berachain vape-to-earn)", "url": "https://coinlaunch.space/projects/puffpaw/", "date": "2026"},
+   {"title": "Puffpaw company profile (Gen2 NFT on Berachain, incubation)", "url": "https://www.cbinsights.com/company/puffpaw", "date": "2026"}
+  ],
+  "p": 0.10
+ },
+ "0x45514e0fcd922a740e67ab064a9042d3e964006712f9540947808ae82067ed23": {
+  "base_rate": {"reference_class": "P(TGE by Dec 31, 2026) x P(day-1 FDV > $150M | launch) for a high-volume perp DEX token", "value": 0.3, "source": "Perp DEX token launches 2024-2026 (Hyperliquid, Aster, Paradex class): day-1 FDVs routinely $500M-$5B+, so P(>$150M | launch)~0.8; P(launch in remaining window)~0.35-0.4"},
+  "evidence": [
+   "2025-08-12: Extended (ex-X10, built by former Revolut crypto-ops head Ruslan Fakhrutdinov) went live on Starknet mainnet with 50+ markets and up to 100x leverage; trade press compared its growth to Hyperliquid",
+   "2026: Extended runs a Season-1 points program (trading, referrals, LP) explicitly framed as the core metric for a potential post-TGE airdrop - a token is clearly planned but no TGE date announced as of Oct 2026",
+   "2024-2026 reference class: successful perp DEX tokens launched at FDVs far above $150M (Hyperliquid >$10B day 1); even mid-tier perp DEX launches cleared $150M",
+   "2026-10: bear market compresses launch valuations, and teams often delay TGEs in down markets - the main risk is no launch, not a sub-$150M launch"
+  ],
+  "strongest_opposing_case": "No TGE has been announced with ~9 weeks left in the window; points programs commonly run 12+ months before token launch, and teams avoid launching into bear markets, so the no-launch branch (resolves No) plausibly exceeds 60%.",
+  "reasoning_summary": "Conditional on launch, a credible Hyperliquid-comparable perp DEX clears $150M FDV with ~75-85% probability even in a bear tape. The binding constraint is launch timing: no announced TGE and ~9 weeks left gives P(launch)~0.35-0.4. 0.38 x 0.8 = ~0.30.",
+  "key_sources": [
+   {"title": "Ex-Revolut team's perp DEX Extended goes live on Starknet mainnet", "url": "https://www.theblock.co/post/366529/ex-revolut-team-perp-dex-extended-live-on-starknet", "date": "2025-08-12"},
+   {"title": "Extended DEX airdrop/points program tracker", "url": "https://airdropalert.com/airdrops/extended-dex/", "date": "2026"}
+  ],
+  "p": 0.30
+ },
+ "0x820729aadc283c1acec9aa0fab994d0aae15dd372c29df515134cd0548650d13": {
+  "base_rate": {"reference_class": "P(at least one of four micro-cap memecoins reaches $1B FDV within ~2 months) in a bear market", "value": 0.05, "source": "Memecoin history: of thousands launched, only a handful (TRUMP, FARTCOIN, WIF class) ever reached $1B FDV - well under 0.1% unconditionally; even among top-trending launch-platform coins, ~1-3% reach $1B"},
+  "evidence": [
+   "2026-10: the four coins (Cash Cat, Artificial Inu, NetNet on Robinhood Chain; The Black Bull/ANSEM on Solana) are early-stage memecoins far below $1B FDV; none registers in any credible top-coin market-cap reporting",
+   "2026-10-24: crypto bear market - BTC ~$80.4k (-28% YoY), total market cap ~$2.7T and down ~4.4% on the day; memecoin speculative flows are depressed versus 2024-25",
+   "2026: Robinhood Chain's launch gave its native memecoins attention, but a $1B FDV requires TRUMP-coin-level mania, which has not appeared in 2026's tape",
+   "Window ends Dec 25, 2026 - about 2 months for a >10-100x move in at least one of the four"
+  ],
+  "strongest_opposing_case": "Robinhood Chain puts memecoins in front of millions of retail brokerage users; a single viral moment (celebrity tweet, Robinhood promotion) has produced 50x memecoin moves in days before, and only one of four coins needs one momentary CoinGecko/CMC FDV print of $1B.",
+  "reasoning_summary": "Base rate: P(any one micro-cap memecoin hits $1B in 2 months) ~1%; four semi-correlated shots with Robinhood retail distribution lifts the union to maybe 4-7%. Bear-market conditions push toward the low end. P(none) = 1 - ~0.06 = ~0.94.",
+  "key_sources": [
+   {"title": "Crypto Prices overview (total market cap ~$2.7T)", "url": "https://www.blockchain.com/explorer/prices", "date": "2026-10-24"},
+   {"title": "Bitcoin (BTC) Price - down ~28% over past year", "url": "https://www.coinbase.com/price/bitcoin", "date": "2026-10-24"}
+  ],
+  "p": 0.94
+ },
+ "41130": {
+  "base_rate": {"reference_class": "P(S&P 500 2.2-month return > -1.65%) from historical monthly return distribution (index at 7,623.68 vs 7,500 threshold)", "value": 0.66, "source": "S&P 500 1950-2025: ~46-trading-day returns have mean ~+1.5%, sigma ~6.5%; P(return > -1.65%) ~0.66, with Nov-Dec seasonality historically favorable"},
+  "evidence": [
+   "2026-10-23: S&P 500 closed 7,623.68 (-0.52% day), ~1.65% above the 7,500 threshold; record high ~7,844 set the prior week before a ~3% reversal",
+   "2026-10-24: tech-led selloff deepening; failed breakout warned of a larger correction risk (technical view)",
+   "2026-10-13: breadth is poor - 84% of S&P components trade >=10% below their own highs even with the index near records",
+   "2026 YTD: index up ~11.9%; the Feb-Mar Hormuz-driven ~9% drawdown was recovered in ~11 sessions, showing strong dip-buying all year"
+  ],
+  "strongest_opposing_case": "The index is only 1.65% above the strike with an active oil shock ($103 WTI), possible US strikes on Iran, record-narrow breadth, and a tech selloff underway; a routine 5% November drawdown that fails to recover by Dec 31 resolves No.",
+  "reasoning_summary": "Base rate ~0.66 for ending above a level 1.65% below spot after ~46 trading days, helped by positive drift and Nov-Dec seasonality. Shade down for live macro stress (oil spike, Fed meeting, midterms, poor breadth) and the just-started 3% pullback. Final 0.60.",
+  "key_sources": [
+   {"title": "S&P 500, Nasdaq, Dow Forecast: Nasdaq Selloff Deepens", "url": "https://www.forex.com/en-us/news-and-analysis/sandp-500-nasdaq-dow-forecast-nasdaq-selloff-deepens-as-dow-rally-stalls-10-24-2026/", "date": "2026-10-24"},
+   {"title": "S&P 500 (^GSPC) - Yahoo Finance (close 7,623.68; 52wk high 7,844.52)", "url": "https://finance.yahoo.com/quote/%5EGSPC/", "date": "2026-10-23"},
+   {"title": "84% of S&P 500 Stocks Are Now in Correction Territory", "url": "https://www.fool.com/investing/2026/10/15/84-sp-500-stocks-in-correction-territory-history-says-foreshadow-disaster-wall-street/", "date": "2026-10-15"}
+  ],
+  "p": 0.60
+ },
+ "KXMUSKNW-26DEC31-T800": {
+  "base_rate": {"reference_class": "P(a billionaire's Forbes real-time net worth avoids a ~24% drawdown over ~2.2 months) given current ~$1.046T vs $800B threshold", "value": 0.9, "source": "Musk's Forbes net-worth series: 2-month drawdowns >24% occurred only in extreme Tesla crashes (late 2022, early 2025); roughly 2 episodes in ~6 years of monthly windows"},
+  "evidence": [
+   "2026-10-06: Forbes put Musk's fortune at ~$1.046 trillion (real-time estimate)",
+   "2026-09-19: Forbes 400 richest Americans listed Musk at $908B; March 2026 World's Billionaires list had him at $839B - first person ever above $800B",
+   "2026: wealth increasingly driven by SpaceX/xAI merger valuation and Tesla pay package; private-company marks (SpaceX ~$82B per 10% move) reprice slowly, damping downside speed",
+   "2026-10: cushion is ~$246B, i.e. Forbes value must fall ~23.5% by Dec 31 to resolve No"
+  ],
+  "strongest_opposing_case": "Musk's net worth is concentrated and volatile: Tesla fell >50% in two months in late 2022, a court or market event re-marking SpaceX/xAI or voiding the pay package could cut >$200B quickly, and the tech selloff is accelerating into year-end.",
+  "reasoning_summary": "Base rate: ~90% chance of avoiding a 24% two-month drawdown given his historical volatility. Adjust up slightly because a large share is now slow-marking private equity (SpaceX/xAI) rather than listed Tesla stock, and Forbes real-time only reprices privates on new rounds. Final 0.93.",
+  "key_sources": [
+   {"title": "Elon Musk becomes world's richest person ever, worth $839B (March 2026 list)", "url": "https://bolnews.com/world/elon-musk-becomes-worlds-richest-person-ever-worth-839b", "date": "2026-10-13"},
+   {"title": "Musk, Bezos among richest Americans on Forbes 400 list", "url": "https://www.wcax.com/2026/09/19/elon-musk-jeff-bezos-among-richest-americans-forbes-2026-list-heres-how-much-theyre-worth/", "date": "2026-09-19"},
+   {"title": "Musk net worth hits $852B on SpaceX-xAI merger; pay package could add more", "url": "https://finviz.com/news/299777/elon-musk-net-worth-hits-852-billion-thanks-to-spacex-xai-merger-tesla-pay-package-could-take-wealth-even-higher", "date": "2026"}
+  ],
+  "p": 0.93
+ },
+ "41526": {
+  "base_rate": {"reference_class": "P(EUR/USD gains >4.9% in ~2.2 months) from FX return distribution (1.1202 spot vs 1.1747 threshold)", "value": 0.05, "source": "EUR/USD ~46-trading-day return distribution: sigma ~2.5-3%, so +4.9% is ~1.7-1.9 sigma; historical frequency ~3-5%"},
+  "evidence": [
+   "2026-10-23/24: EUR/USD ~1.1197-1.1207 (ECB reference 1.1193 on Oct 23) - near the bottom of its 52-week range",
+   "2026 path: 52-week high 1.2042 (Jan 27, 2026), low 1.1157 (Oct 12, 2026) - the euro has trended down all year from the January peak and sits ~4.9% below the 1.1747 year-end-2025 close",
+   "2026-10: dollar supported by safe-haven flows from the Middle East escalation and oil shock (dollar typically strengthens in geopolitical stress)",
+   "One-month market-implied forward ~1.1255 - far short of the needed 1.1747"
+  ],
+  "strongest_opposing_case": "A dovish Fed shock on Oct 28, a Middle East de-escalation unwinding the dollar bid, or a US fiscal/political dislocation around the midterms could reverse the dollar quickly; EUR/USD gained more than 5% in two months as recently as early 2026.",
+  "reasoning_summary": "Base rate ~3-5% for a +4.9% EUR move in 2.2 months. The trend, carry, and safe-haven environment all currently favor the dollar, and the pair sits within 0.5% of its 52-week low - momentum points away from the threshold. Small bump for Fed-cut and de-escalation scenarios. Final 0.06.",
+  "key_sources": [
+   {"title": "Euro Dollar Exchange Rate (EUR USD) - Historical Chart (52wk range 1.1157-1.2042)", "url": "https://www.macrotrends.net/2548/euro-dollar-exchange-rate-historical-chart", "date": "2026-10-23"},
+   {"title": "ECB euro reference exchange rates", "url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html", "date": "2026-10-23"}
+  ],
+  "p": 0.06
+ },
+ "0x88c449eb01e281238d1de7d112faaeb1cb8c74f8f9c3b24cb21b126e4b4f68ba": {
+  "base_rate": {"reference_class": "P(free-market USD/IRR lands in a ~15%-wide band 10 weeks ahead) given rate ~2.72M and ~17%/month depreciation", "value": 0.3, "source": "Rial crisis-period monthly moves (2022-2026): distribution of 10-week-ahead levels around a fast-depreciating trend places roughly 25-35% mass in any single 15% band near the trend path"},
+  "evidence": [
+   "2026-10-22: Tehran free-market rate ~2,723,000 IRR/USD (272,300 toman), +17.5% over the past month; Sept 23 monthly low was 2,281,000",
+   "2026-10-20: a second free-market tracker showed ~265,000 toman (2.65M IRR), confirming the 2.6-2.75M zone",
+   "2026-07: Iranian inflation 87.9%; official rate 1.74M vs free market 2.69M (late Sept) - classic crisis dynamics",
+   "2026-10-24: expectations of renewed US strikes on Iran are the live driver; extrapolating +17%/month for 2.3 months gives ~3.9M (above band), while a cooling to ~7%/month lands ~3.2M (in band)"
+  ],
+  "strongest_opposing_case": "Rial crisis episodes are explosive: an actual US strike before December could blow the rate straight through 3.5M (resolving above the band), while a surprise negotiation/ceasefire has historically snapped the rate back 15-20% in weeks (landing below 3.0M).",
+  "reasoning_summary": "Band 3.0-3.5M requires +10% to +29% from 2.72M in ~10 weeks. The central path (ongoing depreciation at a decaying 8-12%/month) lands in-band, but both tails are fat: full escalation overshoots 3.5M, de-escalation stalls below 3.0M. Roughly 30% in-band, slightly shaded down for tail fatness: 0.28.",
+  "key_sources": [
+   {"title": "USD Price Today: 2,723,000 IRR (Tehran free market)", "url": "https://www.pashizi.com/en/currency/usd", "date": "2026-10-22"},
+   {"title": "USD (Free Market) Rate in Iran Today", "url": "https://iranmarketdata.ir/rates/usd-free-market", "date": "2026-10-04"},
+   {"title": "Iranian rial - inflation and exchange-rate data", "url": "https://en.wikipedia.org/wiki/Iranian_rial", "date": "2026-09-29"}
+  ],
+  "p": 0.28
+ },
+ "40767": {
+  "base_rate": {"reference_class": "P(at least 4 of 7 mega-caps close >50% below ATH within ~2.2 months, starting from near record index levels)", "value": 0.01, "source": "US equity history: even 1987 (one-day -22%) and 2008's worst two months did not take 4 of the top-7 market-cap stocks 50% below their ATH closes within two months of a record index high"},
+  "evidence": [
+   "2026-10-23: S&P 500 at 7,623.68, ~2.8% below its all-time high set the previous week - the Magnificent Seven collectively sit near, not far below, their highs (index cap-weight is dominated by them)",
+   "2026-10-15: 84% of S&P members are >=10% below their highs, yet the index is near records - precisely because mega-cap tech has NOT crashed",
+   "2026 YTD: worst index drawdown was ~9% (Feb-Mar Hormuz crisis), recovered in 11 sessions; no Mag-7 name is reported anywhere near -50% from ATH",
+   "For Yes: at least 4 of AAPL/MSFT/GOOGL/AMZN/NVDA/META/TSLA need >50% falls from ATH closes by Dec 31 - a >$15T wipeout in ~46 trading days"
+  ],
+  "strongest_opposing_case": "Concentration and AI-bubble valuations are at dot-com extremes and the CAPE is near its 2000 peak; if an AI capex disappointment hits during an oil shock, correlated mega-cap deratings of 50%+ have happened over longer windows (NVDA-class names fell >60% in 2022).",
+  "reasoning_summary": "Base rate for a 2-month, 4-of-7 >50% crash from near record highs is well under 1% - 2022's full-year bear only got Tesla/Meta/Nvidia there over 12 months. With ~46 trading days left and the index 2.8% off its ATH, even a 1987 repeat would not suffice. Floor-adjacent: 0.02.",
+  "key_sources": [
+   {"title": "S&P 500 Forecast: Nasdaq Selloff Deepens (index ~2.8% off record)", "url": "https://www.forex.com/en-us/news-and-analysis/sandp-500-nasdaq-dow-forecast-nasdaq-selloff-deepens-as-dow-rally-stalls-10-24-2026/", "date": "2026-10-24"},
+   {"title": "84% of S&P 500 Stocks in Correction Territory", "url": "https://www.fool.com/investing/2026/10/15/84-sp-500-stocks-in-correction-territory-history-says-foreshadow-disaster-wall-street/", "date": "2026-10-15"}
+  ],
+  "p": 0.02
+ },
+ "40289": {
+  "base_rate": {"reference_class": "Frequency of a >10% S&P 500 decline within a rolling 5-trading-day window, per ~2.2-month period", "value": 0.015, "source": "S&P history: 5-day >10% crashes clustered in 1929-32, Oct 1987, Oct-Nov 2008, Mar 2020, Apr 2025 - roughly 6-8 distinct episodes in ~100 years => ~1-2% per 2-month window unconditionally"},
+  "evidence": [
+   "2026 check: no qualifying event has occurred this year - the worst 2026 drawdown was ~9% spread over a MONTH (late Feb-late Mar Hormuz crisis), not 5 trading days, and it was recovered in ~11 sessions",
+   "2026-10-23: index at 7,623.68 after a ~3% reversal from the 7,844 record; ~46 trading days remain in the window",
+   "2026-10: stress indicators elevated - oil +6% on the week to $103 WTI on possible US strikes on Iran, Fed decision Oct 28, US midterms, 84% of index members already in correction",
+   "Historical conditioning: all 5-day >10% crashes occurred amid pre-existing drawdowns or exogenous shocks (war escalation and an oil spike are live candidates)"
+  ],
+  "strongest_opposing_case": "Conditions rhyme with crash precursors: record concentration, dot-com-level CAPE, an oil/war shock brewing, narrow breadth, and April 2025 proved a >10% 5-day crash can arrive from a policy headline in days - the unconditional base rate understates current hazard.",
+  "reasoning_summary": "Unconditional base rate ~1.5% per 2.2 months. Multiply up ~3-4x for live risk factors (oil shock + possible US-Iran strikes, extreme valuations, narrow breadth, momentum reversal) as such regimes historically concentrate crash probability. Even stressed, a 5-day -10% remains rare: final 0.06.",
+  "key_sources": [
+   {"title": "Navigating Stock Market Sell-Offs in 2026 (Feb-Mar 2026 ~9% drawdown, recovered in 11 sessions)", "url": "https://www.chase.com/personal/investments/learning-and-insights/article/navigating-stock-market-sell-offs-in-2026", "date": "2026"},
+   {"title": "Nasdaq Selloff Deepens as Dow Rally Stalls", "url": "https://www.forex.com/en-us/news-and-analysis/sandp-500-nasdaq-dow-forecast-nasdaq-selloff-deepens-as-dow-rally-stalls-10-24-2026/", "date": "2026-10-24"}
+  ],
+  "p": 0.06
+ },
+ "KXNYCBILLIONAIRES-26-115": {
+  "base_rate": {"reference_class": "Frequency of NYC losing >=8 net billionaires year-over-year on Forbes city counts", "value": 0.2, "source": "Forbes city-count history: NYC went ~110 (2024) to 123 (2025); net city drops of 8+ occur mainly in major bear-market years (2009, 2022-style), roughly 1 in 5 years"},
+  "evidence": [
+   "2025-04: Forbes 2025 city ranking: NYC #1 with 123 billionaires (threshold: Yes requires fewer than 115 in 2026, i.e. a net loss of 9+)",
+   "2026-04: Forbes 2026 World's Billionaires list set records - 3,428 billionaires globally (+400 YoY), $20.1T combined wealth - a strongly billionaire-additive year that mechanically favors city counts rising",
+   "2026: Mamdani-exodus narrative is loud (commentators predicting moves to FL/TX/TN) but no measured billionaire departures are documented; Fortune's analysis notes threatened exoduses over progressive mayors historically did not materialize",
+   "Caveat: a separate Forbes-cited figure of 111 NYC-primary-residence billionaires circulated in late 2025, showing count methodology varies and adds resolution uncertainty"
+  ],
+  "strongest_opposing_case": "If resolution uses a 'primary residence' methodology similar to the 111 figure cited in late 2025, the count may already sit below 115; Mamdani's first-year tax agenda gives the wealthy both motive and time to redomicile to Florida before any year-end snapshot.",
+  "reasoning_summary": "Base rate for an 8+ net city loss is ~20% and 2026 was a record billionaire-creation year (+400 globally, markets +12% YTD), which pushes counts up, not down. Offsetting: methodology ambiguity (111 vs 123 style counts) and a genuine politically-driven relocation narrative. Net: stay near base rate at 0.20.",
+  "key_sources": [
+   {"title": "Forbes 2026 List Shows Record 3,428 Billionaires Led by Elon Musk", "url": "https://ground.news/article/ccd7639b-1af9-497a-b912-3dcd3103ff6a", "date": "2026-04"},
+   {"title": "List of cities by number of billionaires (Forbes 2025: NYC 123)", "url": "https://en.wikipedia.org/wiki/List_of_cities_by_number_of_billionaires", "date": "2025"},
+   {"title": "Billionaires' reaction to Mamdani / exodus analysis", "url": "https://fortune.com/2025/11/06/zohran-mamdani-billionaires-now-offering-help-jamie-dimon-bill-ackman", "date": "2025-11-06"}
+  ],
+  "p": 0.20
+ },
+ "KXNDKOIL-27FEB26-T421.101": {
+  "base_rate": {"reference_class": "P(ND Sep-Dec average output >= ~1,176 kbpd given Jan-Aug 2026 actuals summing to ~277.6M bbl of the 421.101M threshold)", "value": 0.4, "source": "NDIC/EIA monthly series: Aug 2026 run-rate 1,161 kbpd rising ~3-5 kbpd/month, but ND Nov-Dec weather historically cuts output 2-5% in roughly half of years"},
+  "evidence": [
+   "2026-10-20: ND August production 1,161 kbpd (+3 vs July); 2026 monthlies: Jan 1,124.8 / Feb 1,133.6 / Mar 1,142.7 / Apr 1,141.4 / May 1,125.0 / Jun 1,152.8 / Jul 1,157 / Aug 1,161 kbpd",
+   "Arithmetic: Jan-Aug total ~277.6M bbl; remaining 122 days need ~143.5M bbl = ~1,176 kbpd average Sep-Dec, i.e. ~15 kbpd above the August rate sustained through winter",
+   "2026-08: state DMR said sustained drilling and robust crude prices should support output; the state's 1,150 kbpd revenue forecast has been exceeded in recent months",
+   "2026-10-23: WTI at $103 gives operators maximum incentive to complete wells into Q4, but ND November-December blizzards routinely knock 20-60 kbpd off monthly averages"
+  ],
+  "strongest_opposing_case": "Output is trending up ~4 kbpd/month into $100+ oil - Sep/Oct could print 1,170-1,185 kbpd, and a mild early winter (as in 2023) would carry the Sep-Dec average past 1,176 comfortably, resolving Yes.",
+  "reasoning_summary": "Threshold demands Sep-Dec average ~1,176 kbpd vs Aug's 1,161. Price incentive ($103 WTI) argues for continued growth; ND winter weather argues for Nov-Dec dips below trend in most years. Central path lands at ~418-421M bbl - essentially a coin flip shaded No by winter risk and EIA-vs-state data wobble: 0.42.",
+  "key_sources": [
+   {"title": "North Dakota oil production up 3,000 bpd in August to 1,161,000 bpd (Reuters via BOE Report)", "url": "https://boereport.com/2026/10/20/north-dakota-oil-production-up-3000-bpd-in-august-vs-july-to-1161000-bpd-state-regulator/", "date": "2026-10-20"},
+   {"title": "ND DMR Director's Cut (June 2026 monthly data)", "url": "https://www.dmr.nd.gov/dmr/sites/default/files/documents/Directors_Cut/2026/Directors_Cut_2026-08-20.pdf", "date": "2026-08-20"},
+   {"title": "ND oil production up 28,000 bpd in June to 1,153,000 bpd", "url": "https://boereport.com/2026/08/19/north-dakota-oil-production-up-28000-bpd-in-june-vs-may-to-1153000-bpd-state-regulator/", "date": "2026-08-19"}
+  ],
+  "p": 0.42
+ }
+}

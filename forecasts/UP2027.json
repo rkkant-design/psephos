@@ -1,0 +1,74 @@
+{
+  "forecast_id": "UP2027",
+  "title": "Uttar Pradesh Assembly 2027",
+  "state": "UP",
+  "expected_date": "2027-02/03",
+  "freeze_date": "2026-10-16",
+  "majority": 202,
+  "n_seats": 403,
+  "baseline_ae": "UP2022",
+  "ge_election": "GEUP2024",
+  "blocs": {
+    "NDA": {
+      "ae_base": {"BJP": "1", "ADS": "1", "NIRBAL INDIAN SHOSHIT HAMARA AAM DAL": "1", "RLD": "t", "SBSP": "t"},
+      "ge": {"BJP": "1", "ADS": "1", "RLD": "1", "SBSP": "1"},
+      "note": "RLD and SBSP switched from SP bloc (2022) to NDA; tau transfer applied on AE baseline, full weight at GE2024 where they already contested as NDA"
+    },
+    "INDIA": {
+      "ae_base": {"SP": "1", "INC": "t"},
+      "ge": {"SP": "1", "INC": "1"},
+      "note": "SP+INC allied at GE2024 (full weight); INC separate at AE2022 (tau transfer). Seat-sharing NOT yet agreed as of freeze"
+    },
+    "BSP": {
+      "ae_base": {"BSP": "1"},
+      "ge": {"BSP": "1"},
+      "note": "contesting alone, per public statements"
+    }
+  },
+  "polls": [
+    {"agency": "Matrize", "date": "2026-09-29", "NDA": 44.0, "INDIA": 38.0, "BSP": 0.8, "rated": false},
+    {"agency": "Spick Media", "date": "2026-09-13", "NDA": 42.13, "INDIA": 39.73, "BSP": 10.96, "rated": false},
+    {"agency": "Survey Sarva", "date": "2026-09-10", "NDA": 38.7, "INDIA": 40.8, "BSP": null, "rated": false},
+    {"agency": "Vote Vibe", "date": "2026-08-25", "NDA": 41.8, "INDIA": 38.7, "BSP": 5.2, "rated": false}
+  ],
+  "poll_window_days": 90,
+  "poll_corrections": {
+    "NDA": 2.7,
+    "INDIA": -0.8,
+    "BSP": 0.0,
+    "rule": "0.5 x mean of UP ledger errors (actual - final-window polled): NDA bloc +7.8 (2017), +2.9 (2022); SP bloc -6.0 (2017), +3.0 (2022); BSP +0.7, -0.5"
+  },
+  "sigma_state_m2": 6.3,
+  "sigma_state_m3_rated": 4.0,
+  "sigma_state_m3_unrated": 6.0,
+  "resolution": {
+    "source": "Election Commission of India official results (results.eci.gov.in), party-wise seat tally at first full declaration of all 403 seats",
+    "resolve_by": "2027-03-31",
+    "rules": [
+      "Bloc seat totals = sum of seats won by the member parties listed in `blocs` as composed at freeze; post-result defections, mergers and letters of support are ignored",
+      "If an alliance splits BEFORE polling, a re-run forecast (new ledger rows) supersedes; these rows still resolve against freeze-time bloc composition",
+      "'wins majority' = bloc seats >= 202 of 403 at first full declaration; countermanded/postponed seats count as not won unless they decide the question, in which case resolution waits for them",
+      "'is largest' = strictly more seats than every other modeled bloc (independents and unmodeled parties are not blocs); an exact tie resolves NO for all blocs",
+      "Seat-threshold questions (e.g. 'BSP under 25 seats') resolve on the same official tally",
+      "If the election is not held by 2027-12-31, rows resolve VOID: logged and excluded from scoring, never silently dropped"
+    ]
+  },
+  "sub_questions": [
+    {"q": "BSP under 25 seats", "bloc": "BSP", "op": "<", "threshold": 25},
+    {"q": "NDA at least 150 seats", "bloc": "NDA", "op": ">=", "threshold": 150},
+    {"q": "INDIA at least 150 seats", "bloc": "INDIA", "op": ">=", "threshold": 150},
+    {"q": "Winner (largest) in {NDA, INDIA}", "bloc": "__top2__", "op": "in", "threshold": ["NDA", "INDIA"]}
+  ],
+  "quality_flags": [
+    "ALL four polls are from unrated agencies; none discloses methodology/sample/fieldwork dates (aitimeline.in audit, Sep 2026). M3 runs with inflated sigma and this forecast cannot upgrade to CALL on these polls alone.",
+    "BSP polled range 0.8-11.0 pct across agencies - a 10-point spread on one party is a pollster-quality symptom, not information.",
+    "INDIA bloc composition not final: SP-INC seat-sharing unresolved at freeze (INC demands ~150 seats, SP signals ~50)."
+  ],
+  "tripwires": [
+    {"watch": "SP-INC seat-sharing collapses (INC exits or fights separately)", "effect": "INDIA loses tau x INC transfer (~1.2 pts) and opposition fragments further; NDA majority probability rises materially"},
+    {"watch": "A rated agency (CVoter/CSDS-Lokniti/Axis) publishes a vote-share poll", "effect": "M3 upgrades to rated sigma; gate becomes meaningfully decidable"},
+    {"watch": "Ticket-season defection flow (late 2026/early 2027), net direction weighted by defector quality", "effect": "insider-flow signal; sustained one-way flow is grounds to re-run forecast"},
+    {"watch": "BSP-ASP(KR) dynamics: ASP contesting ~87 seats; any BSP-ASP tie-up or BSP revival sign", "effect": "changes Dalit-vote split assumptions; re-run with ASP as modeled entrant"},
+    {"watch": "EC announces schedule / phase dates", "effect": "freeze window formally ends; issue updated pre-registered forecast"}
+  ]
+}

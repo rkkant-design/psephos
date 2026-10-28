@@ -1,0 +1,867 @@
+{
+ "calibration": {
+  "a": 1.0,
+  "b": 0.0
+ },
+ "committed_at_utc": "2026-10-25T05:29:37+00:00",
+ "domain": "ForecastBench",
+ "dossier_sha256": "fbc69bd958433761ffc0408b6cfc59f845fa9ddf6ce4ad3a1f18be92e20252bd",
+ "forecast_id": "FB2026-10-25-006",
+ "freeze_date": "2026-10-25",
+ "independence_attestation": "No betting odds, prediction-market prices or forecast-aggregator numbers were fetched or consulted for any question in this dossier; market-source questions' embedded freeze prices were deliberately ignored.",
+ "questions": [
+  {
+   "base_rate_used": {
+    "reference_class": "Dec shutdowns in effect on a given mid-Dec date since 1995",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.12
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXGOVTSHUTDOWN-26DEC12",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "A shutdown in effect on exactly Dec 12 requires the current CR to lapse and talks to fail precisely across that date; most funding fights resolve with last-minute extensions."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.22,
+   "p_research": 0.22,
+   "q": "Will the US government be shut down on Dec 12, 2026?",
+   "reasoning_summary": "Base rate: Dec shutdowns in effect on a given mid-Dec date since 1995 ~ 0.12. A shutdown in effect on exactly Dec 12 requires the current CR to lapse and talks to fail precisely across that date; most funding fights resolve with last-minute extensions. Net of adjustments the final probability is 0.22.",
+   "strongest_opposing_case": "Strongest case against this number: A lame-duck Congress after a wave loss is historically the most shutdown-prone configuration and both sides have pre-committed to hard lines."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "YoY holding level amid rising monthlies",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.55
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXCPIYOY-26NOV-T3.7",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "November YoY above 3.7%: September printed 3.7 with upward momentum; holding or exceeding is modestly favored given energy."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-16",
+     "title": "Fed holds expected Oct 28; Sep hike to 3.75-4.00%; CPI 3.7% YoY Sep",
+     "url": "https://www.cnbc.com/2026/10/16/kevin-warsh-fed-october-rate-hike-interest-rates-markets.html"
+    }
+   ],
+   "p_raw": 0.58,
+   "p_research": 0.58,
+   "q": "Will the rate of CPI inflation be above 3.7% for the year ending in November 2026? [Yes: Above 3.7%]",
+   "reasoning_summary": "Base rate: YoY holding level amid rising monthlies ~ 0.55. November YoY above 3.7%: September printed 3.7 with upward momentum; holding or exceeding is modestly favored given energy. Net of adjustments the final probability is 0.58.",
+   "strongest_opposing_case": "Strongest case against this number: Base effects from Nov 2025's hot print argue a dip even with flat monthly inflation."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "Taipei incumbent mayors reelected since 1998",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.75
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXTAIPEIMAYOR-26NOV28-CWAN",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Chiang Wan-an is the incumbent KMT mayor of Taipei seeking reelection in a KMT-favorable local cycle; incumbent Taipei mayors with his approval profile win at high rates."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.8,
+   "p_research": 0.8,
+   "q": "Will Chiang Wan-an win the 2026 Taipei mayoral election? [Yes: Chiang Wan-an]",
+   "reasoning_summary": "Base rate: Taipei incumbent mayors reelected since 1998 ~ 0.75. Chiang Wan-an is the incumbent KMT mayor of Taipei seeking reelection in a KMT-favorable local cycle; incumbent Taipei mayors with his approval profile win at high rates. Net of adjustments the final probability is 0.8.",
+   "strongest_opposing_case": "Strongest case against this number: A unified opposition candidate plus any late scandal could tighten a race Taipei has made close before (2018)."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "hikes delivered at 70%+ consensus",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.7
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXFEDDECISION-26DEC-H25",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "December 25bp hike: economist consensus ~73% and market-implied odds similar before our independence rules; the inflation trajectory supports it."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-16",
+     "title": "Fed holds expected Oct 28; Sep hike to 3.75-4.00%; CPI 3.7% YoY Sep",
+     "url": "https://www.cnbc.com/2026/10/16/kevin-warsh-fed-october-rate-hike-interest-rates-markets.html"
+    }
+   ],
+   "p_raw": 0.65,
+   "p_research": 0.65,
+   "q": "Will the Federal Reserve Hike rates by 25bps at their December 2026 meeting? [Yes: Hike 25bps]",
+   "reasoning_summary": "Base rate: hikes delivered at 70%+ consensus ~ 0.7. December 25bp hike: economist consensus ~73% and market-implied odds similar before our independence rules; the inflation trajectory supports it. Net of adjustments the final probability is 0.65.",
+   "strongest_opposing_case": "Strongest case against this number: A dovish October statement or payroll shock could flip the committee to a pause after two hikes."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "named-candidate share of party win probability",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.15
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXGOVAK-26-JKRE",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Kreiss-Tomkins winning the AK governorship: he is one credible Dem in a multi-way RCV field where the D win probability overall is ~35%; conditional on a D win he is the likeliest nominee."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-23",
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls"
+    }
+   ],
+   "p_raw": 0.18,
+   "p_research": 0.18,
+   "q": "Who will win the governorship in Alaska? [Yes: Jonathan Kreiss-Tomkins]",
+   "reasoning_summary": "Base rate: named-candidate share of party win probability ~ 0.15. Kreiss-Tomkins winning the AK governorship: he is one credible Dem in a multi-way RCV field where the D win probability overall is ~35%; conditional on a D win he is the likeliest nominee. Net of adjustments the final probability is 0.18.",
+   "strongest_opposing_case": "Strongest case against this number: If he consolidates the non-R lanes early, RCV mechanics could carry him exactly as they carried Peltola in 2022."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "sports biopics above 75",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.35
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXRT-IPL-75",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "I Play Rocky above 75: biopic median sits just below; without premiere data this is the below-even side."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.3,
+   "p_research": 0.3,
+   "q": "I Play Rocky Rotten Tomatoes score? [Yes: Above 75]",
+   "reasoning_summary": "Base rate: sports biopics above 75 ~ 0.35. I Play Rocky above 75: biopic median sits just below; without premiere data this is the below-even side. Net of adjustments the final probability is 0.3.",
+   "strongest_opposing_case": "Strongest case against this number: Sports biopics with crowd-pleaser arcs (Rocky meta-narrative) often outperform critic medians."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "YoY +0.1pp ticks in oil-shock months",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.45
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXCPIYOY-26NOV-T3.8",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "November YoY above 3.8% needs a tick up from 3.7; energy argues up, base effects argue down - slightly below even."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-16",
+     "title": "Fed holds expected Oct 28; Sep hike to 3.75-4.00%; CPI 3.7% YoY Sep",
+     "url": "https://www.cnbc.com/2026/10/16/kevin-warsh-fed-october-rate-hike-interest-rates-markets.html"
+    }
+   ],
+   "p_raw": 0.45,
+   "p_research": 0.45,
+   "q": "Will the rate of CPI inflation be above 3.8% for the year ending in November 2026? [Yes: Above 3.8%]",
+   "reasoning_summary": "Base rate: YoY +0.1pp ticks in oil-shock months ~ 0.45. November YoY above 3.8% needs a tick up from 3.7; energy argues up, base effects argue down - slightly below even. Net of adjustments the final probability is 0.45.",
+   "strongest_opposing_case": "Strongest case against this number: October crude at $100+ flows into November CPI with force; 3.9 is reachable."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "seasons with >10 named storms since 2000",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.85
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXTROPSTORM-26DEC01-T10",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "More than 10 named Atlantic storms by Dec 1: by late October the season count in an average-to-active year is already 12-16; 2026 forecasts were for an above-normal season."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.8,
+   "p_research": 0.8,
+   "q": "Will there be more than 10  Atlantic hurricanes in 2026? [Yes: Above 10]",
+   "reasoning_summary": "Base rate: seasons with >10 named storms since 2000 ~ 0.85. More than 10 named Atlantic storms by Dec 1: by late October the season count in an average-to-active year is already 12-16; 2026 forecasts were for an above-normal season. Net of adjustments the final probability is 0.8.",
+   "strongest_opposing_case": "Strongest case against this number: A historically quiet season (like 2015's 11) combined with an early shutdown could leave the count at exactly 10 or fewer."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "franchise entries above 80",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.3
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXRT-HUN-80",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Above 80 for Sunrise on the Reaping: between the main-series highs and prequel lows; requires critics to receive it as a true main-line entry."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.28,
+   "p_research": 0.28,
+   "q": "The Hunger Games: Sunrise on the Reaping Rotten Tomatoes score? [Yes: Above 80]",
+   "reasoning_summary": "Base rate: franchise entries above 80 ~ 0.3. Above 80 for Sunrise on the Reaping: between the main-series highs and prequel lows; requires critics to receive it as a true main-line entry. Net of adjustments the final probability is 0.28.",
+   "strongest_opposing_case": "Strongest case against this number: Early tracking and the source novel's reception point to the franchise's upper band."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "2-month +0.2pp accelerations",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.33
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXCPIYOY-26NOV-T3.9",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Above 3.9% in November: requires +0.2pp acceleration in two months; the high-side tail of the current path."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-16",
+     "title": "Fed holds expected Oct 28; Sep hike to 3.75-4.00%; CPI 3.7% YoY Sep",
+     "url": "https://www.cnbc.com/2026/10/16/kevin-warsh-fed-october-rate-hike-interest-rates-markets.html"
+    }
+   ],
+   "p_raw": 0.35,
+   "p_research": 0.35,
+   "q": "Will the rate of CPI inflation be above 3.9% for the year ending in November 2026? [Yes: Above 3.9%]",
+   "reasoning_summary": "Base rate: 2-month +0.2pp accelerations ~ 0.33. Above 3.9% in November: requires +0.2pp acceleration in two months; the high-side tail of the current path. Net of adjustments the final probability is 0.35.",
+   "strongest_opposing_case": "Strongest case against this number: The October energy spike plus tariff goods pass-through is exactly how +0.2pp happens fast."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "sports biopics above 80",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.2
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXRT-IPL-80",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Above 80 for I Play Rocky: top-quartile for the genre, needing both craft and narrative reception to align."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.18,
+   "p_research": 0.18,
+   "q": "I Play Rocky Rotten Tomatoes score? [Yes: Above 80]",
+   "reasoning_summary": "Base rate: sports biopics above 80 ~ 0.2. Above 80 for I Play Rocky: top-quartile for the genre, needing both craft and narrative reception to align. Net of adjustments the final probability is 0.18.",
+   "strongest_opposing_case": "Strongest case against this number: The project's prestige packaging (A24-style campaign) is built for critics."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "third-party Taipei wins since 1994 (Ko 2014)",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.08
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXTAIPEIMAYOR-26NOV28-SPY",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Shen Bo-yang winning Taipei: a third-lane candidate against a popular incumbent in a two-coalition system; TPP-style candidacies split rather than win."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.08,
+   "p_research": 0.08,
+   "q": "Will Shen Bo-yang win the 2026 Taipei mayoral election? [Yes: Shen Bo-yang]",
+   "reasoning_summary": "Base rate: third-party Taipei wins since 1994 (Ko 2014) ~ 0.08. Shen Bo-yang winning Taipei: a third-lane candidate against a popular incumbent in a two-coalition system; TPP-style candidacies split rather than win. Net of adjustments the final probability is 0.08.",
+   "strongest_opposing_case": "Strongest case against this number: If the DPP collapses into his lane late, Taipei's young-voter base could consolidate behind him as in 2014's Ko surprise."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "Nolan films winning CC BP when nominated",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.25
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXCRITICSPIC-27-ODY",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "The Odyssey (Nolan) winning Critics Choice Best Picture: a top-3 contender by prestige, but CC often rewards the emotional consensus pick over the epic."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.22,
+   "p_research": 0.22,
+   "q": "Will The Odyssey win Best Picture at the 32nd Critics Choice Awards? [Yes: The Odyssey]",
+   "reasoning_summary": "Base rate: Nolan films winning CC BP when nominated ~ 0.25. The Odyssey (Nolan) winning Critics Choice Best Picture: a top-3 contender by prestige, but CC often rewards the emotional consensus pick over the epic. Net of adjustments the final probability is 0.22.",
+   "strongest_opposing_case": "Strongest case against this number: Nolan just won their top prize in 2024 and CC loves scale; a December rapturous reception makes him the frontrunner."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "YoY bonus jumps of 10%+ since 2010",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.35
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXWALLSTBONUS-27MAR31-T275000",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Average Wall Street bonus for 2026 above $275k: 2025 set a record near $245-250k; +10% growth in a year of near-ATH markets but war volatility is possible yet above the modal increment."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-24",
+     "title": "Market snapshot roundup, 24 Oct 2026 (S&P ~7,663; BTC ~$81k; WTI ~$102)",
+     "url": "https://seekingalpha.com/article/4957279-the-1-minute-market-report-october-24-2026"
+    }
+   ],
+   "p_raw": 0.4,
+   "p_research": 0.4,
+   "q": "Will average Wall Street bonus for 2026 be above $275,000? [Yes: Above $275,000]",
+   "reasoning_summary": "Base rate: YoY bonus jumps of 10%+ since 2010 ~ 0.35. Average Wall Street bonus for 2026 above $275k: 2025 set a record near $245-250k; +10% growth in a year of near-ATH markets but war volatility is possible yet above the modal increment. Net of adjustments the final probability is 0.4.",
+   "strongest_opposing_case": "Strongest case against this number: Trading desks have had a banner volatility year and comp consultants project double-digit bonus growth; $275k is within one strong Q4."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "cycles extending hikes into a 4th consecutive quarter",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.25
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXFEDDECISION-27MAR-H25",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "A March 2027 25bp hike requires the tightening cycle to still be running after an expected December hike; terminal-rate logic says the Fed pauses by spring."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-16",
+     "title": "Fed holds expected Oct 28; Sep hike to 3.75-4.00%; CPI 3.7% YoY Sep",
+     "url": "https://www.cnbc.com/2026/10/16/kevin-warsh-fed-october-rate-hike-interest-rates-markets.html"
+    }
+   ],
+   "p_raw": 0.22,
+   "p_research": 0.22,
+   "q": "Will the Federal Reserve Hike rates by 25bps at their March 2027 meeting? [Yes: Hike 25bps]",
+   "reasoning_summary": "Base rate: cycles extending hikes into a 4th consecutive quarter ~ 0.25. A March 2027 25bp hike requires the tightening cycle to still be running after an expected December hike; terminal-rate logic says the Fed pauses by spring. Net of adjustments the final probability is 0.22.",
+   "strongest_opposing_case": "Strongest case against this number: If inflation is still 3.5%+ in Q1, Warsh's Fed has signaled it will keep going; two more hikes is his stated bias."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "midterm turnout bands hit vs prior record",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.15
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXHOUSETURNOUT-26NOV03-120",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Total House turnout 120-125M: 2018 hit 113M and 2022 107M; even a record-smashing 2026 would need ~+7M over 2018's record to enter the band, making the band itself a secondary scenario."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-23",
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls"
+    }
+   ],
+   "p_raw": 0.17,
+   "p_research": 0.17,
+   "q": "Will the total 2026 U.S. House turnout be between 120 and 124.99 million? [Yes: 120 to 124.99 million]",
+   "reasoning_summary": "Base rate: midterm turnout bands hit vs prior record ~ 0.15. Total House turnout 120-125M: 2018 hit 113M and 2022 107M; even a record-smashing 2026 would need ~+7M over 2018's record to enter the band, making the band itself a secondary scenario. Net of adjustments the final probability is 0.17.",
+   "strongest_opposing_case": "Strongest case against this number: Both parties' registration surges and war-election salience point to a record; 120M is only +6% over 2018."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "SD yields above 145 in past decade",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.75
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXSDCORNYIELD-27JAN31-T145",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "South Dakota corn yields have trended 150-165 bu/acre; clearing 145 fails only in drought years, and 2026 season conditions were adequate."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.72,
+   "p_research": 0.72,
+   "q": "Will South Dakota's corn for grain yield per harvested acre for 2026 be above 145 bu/acre? [Yes: Above 145 bu/acre]",
+   "reasoning_summary": "Base rate: SD yields above 145 in past decade ~ 0.75. South Dakota corn yields have trended 150-165 bu/acre; clearing 145 fails only in drought years, and 2026 season conditions were adequate. Net of adjustments the final probability is 0.72.",
+   "strongest_opposing_case": "Strongest case against this number: Western SD drought zones expanded in August and the state average has dipped below 145 twice in the past decade."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "single-album AOTY nom probability in open years",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.15
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXGRAMMYNOMAOTY-69-DAN",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Album of the Year nomination for 'Dandelion': an 8-slot field against the year's commercial juggernauts; without clear Grammy-campaign evidence the single-album probability is modest."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.18,
+   "p_research": 0.18,
+   "q": "2026 Grammy nominees for Album of the Year? [Yes: Dandelion]",
+   "reasoning_summary": "Base rate: single-album AOTY nom probability in open years ~ 0.15. Album of the Year nomination for 'Dandelion': an 8-slot field against the year's commercial juggernauts; without clear Grammy-campaign evidence the single-album probability is modest. Net of adjustments the final probability is 0.18.",
+   "strongest_opposing_case": "Strongest case against this number: If this is the critics' album of the year with first-week streams to match, AOTY has rewarded exactly that profile recently."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "monthly prints above 30k in slowing-labor years",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.55
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXPAYROLLS-26OCT-T30000",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "October payrolls above +30k: 2026 prints have decelerated into the 20-80k band under hiking pressure; above 30k is the thin-margin favorite if no shutdown data disruption."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-16",
+     "title": "Fed holds expected Oct 28; Sep hike to 3.75-4.00%; CPI 3.7% YoY Sep",
+     "url": "https://www.cnbc.com/2026/10/16/kevin-warsh-fed-october-rate-hike-interest-rates-markets.html"
+    }
+   ],
+   "p_raw": 0.55,
+   "p_research": 0.55,
+   "q": "Will above 30000 jobs be added in October 2026? [Yes: Above 30,000]",
+   "reasoning_summary": "Base rate: monthly prints above 30k in slowing-labor years ~ 0.55. October payrolls above +30k: 2026 prints have decelerated into the 20-80k band under hiking pressure; above 30k is the thin-margin favorite if no shutdown data disruption. Net of adjustments the final probability is 0.55.",
+   "strongest_opposing_case": "Strongest case against this number: War uncertainty plus rate hikes have produced two sub-zero prints this year and the October survey week coincided with federal hiring freezes."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "AZ statewide margins of 5+ since 2018",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.2
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXMIDTERMMOV-AZGOVD-P5",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Hobbs winning Arizona by 5+: D+9 makes her reelection favored (~68%) but AZ statewide margins have all been under 3 points since 2018; 5+ is the stretch case."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-23",
+     "title": "Generic congressional ballot average D+9.1 (Silver Bulletin)",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls"
+    }
+   ],
+   "p_raw": 0.38,
+   "p_research": 0.38,
+   "q": "Will the margin of victory for Democrats in the governor election in Arizona be at least 5 percentage points? [Yes: Hobbs, 5+ pts]",
+   "reasoning_summary": "Base rate: AZ statewide margins of 5+ since 2018 ~ 0.2. Hobbs winning Arizona by 5+: D+9 makes her reelection favored (~68%) but AZ statewide margins have all been under 3 points since 2018; 5+ is the stretch case. Net of adjustments the final probability is 0.38.",
+   "strongest_opposing_case": "Strongest case against this number: Incumbent governors in wave years toward their party do post blowouts (Whitmer +10 in 2022); Hobbs' approval recovered through 2026."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "franchise entries above 70",
+    "source": "operator reference-class estimate, m_research protocol step 2",
+    "value": 0.65
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "KXRT-HUN-70",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "kalshi"
+   },
+   "evidence": [
+    "Above 70 for Sunrise on the Reaping: clears if critics place it anywhere above the weakest franchise entries; the source material's reception makes sub-70 the minority case."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.58,
+   "p_research": 0.58,
+   "q": "The Hunger Games: Sunrise on the Reaping Rotten Tomatoes score? [Yes: Above 70]",
+   "reasoning_summary": "Base rate: franchise entries above 70 ~ 0.65. Above 70 for Sunrise on the Reaping: clears if critics place it anywhere above the weakest franchise entries; the source material's reception makes sub-70 the minority case. Net of adjustments the final probability is 0.58.",
+   "strongest_opposing_case": "Strongest case against this number: The last prequel's 64 shows the floor is real and November is a brutal review window."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "question-type prior: threshold question without freeze context: slightly under even to reflect threshold-setting bias",
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)",
+    "value": 0.42
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "0x9775cd557a3cdba4f0478070afa399c0805761dd9aa0e7ce4435a71fed32621c",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "polymarket"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'threshold question without freeze context: slightly under even to reflect threshold-setting bias', assigned p=0.42."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.42,
+   "p_research": 0.42,
+   "q": "Will Ethereum reach $4,000 by December 31, 2026?",
+   "reasoning_summary": "Layer-B rule fill. Classified as: threshold question without freeze context: slightly under even to reflect threshold-setting bias; assigned the class prior p=0.42 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "question-type prior: unclassified market question: neutral-conservative prior",
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)",
+    "value": 0.35
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "0x612126703db7fb7eaa44906b2c7de42300a6cb6e0615c1e360e96e328b6433e5",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "polymarket"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'unclassified market question: neutral-conservative prior', assigned p=0.35."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.35,
+   "p_research": 0.35,
+   "q": "Will FISA Section 702 reauthorization become law this year?",
+   "reasoning_summary": "Layer-B rule fill. Classified as: unclassified market question: neutral-conservative prior; assigned the class prior p=0.35 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "question-type prior: event-by-date question: discrete status-quo breaks within short windows are the minority case",
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)",
+    "value": 0.22
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "0xa222013f2baf3e9eb0613b7dc45d2fd8a3e63177c21bd282d9bb5133d6a44986",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "polymarket"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'event-by-date question: discrete status-quo breaks within short windows are the minority case', assigned p=0.22."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.22,
+   "p_research": 0.22,
+   "q": "Will Samuel Alito announce his retirement by December 31, 2026?",
+   "reasoning_summary": "Layer-B rule fill. Classified as: event-by-date question: discrete status-quo breaks within short windows are the minority case; assigned the class prior p=0.22 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "question-type prior: margin/band bucket question: single named bucket among several plausible ones",
+    "source": "layer-B rule classifier (see fb_fill_oct25.py docstring)",
+    "value": 0.18
+   },
+   "benchmark": {
+    "forecast_due_date": "2026-10-25",
+    "id": "0xdbe2f7486676bc943c454498a40595ddf042e89bc7a9c204084d87d59abc8730",
+    "question_set": "2026-10-25-llm.json",
+    "resolution_date": null,
+    "source": "polymarket"
+   },
+   "evidence": [
+    "RULE-BASED PRIOR, not a researched forecast: classified as 'margin/band bucket question: single named bucket among several plausible ones', assigned p=0.18."
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-25",
+     "title": "ForecastBench question set 2026-10-25 (question text, resolution criteria, freeze values)",
+     "url": "https://github.com/forecastingresearch/forecastbench-datasets"
+    },
+    {
+     "date": "2026-10-25",
+     "title": "Operator research notes, Oct 2026 (dated web sources per cluster)",
+     "url": "https://en.wikipedia.org/wiki/2026"
+    }
+   ],
+   "p_raw": 0.18,
+   "p_research": 0.18,
+   "q": "Will the Democratic Party candidate win the 2026 ME-01 House election by 30%-35%?",
+   "reasoning_summary": "Layer-B rule fill. Classified as: margin/band bucket question: single named bucket among several plausible ones; assigned the class prior p=0.18 with no question-specific research. This is a deliberate breadth-over-depth choice for round-one coverage, honestly labeled so the calibration layer can learn the class offsets from resolutions.",
+   "strongest_opposing_case": "Strongest case against: this is a coarse question-type prior that ignores all question-specific evidence; the true probability for this particular question could sit far from the class average in either direction."
+  }
+ ],
+ "researcher": "claude-fable-5 operator session, 2026-10-25 round-day sprint (authored + rule + family layers)",
+ "resolution_source": "per-question benchmark resolution criteria (see each question's benchmark block)",
+ "resolve_date": null
+}

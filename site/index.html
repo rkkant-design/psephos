@@ -1,0 +1,966 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prediction Engine — Multi-State Retrodiction (N=46)</title>
+<style>
+:root { --bg:#f6f7f9; --card:#ffffff; --ink:#1a1d23; --mut:#5b6472;
+  --acc:#1a7f4e; --warn:#9a6b00; --bad:#b3261e; --line:#e3e6eb; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg:#0f1115; --card:#171a21; --ink:#e8eaf0;
+    --mut:#9aa3b2; --acc:#4cc38a; --warn:#e5b567; --bad:#e06c75; --line:#262b36; } }
+:root[data-theme="dark"] { --bg:#0f1115; --card:#171a21; --ink:#e8eaf0;
+  --mut:#9aa3b2; --acc:#4cc38a; --warn:#e5b567; --bad:#e06c75; --line:#262b36; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--ink);
+  font:15px/1.55 "Segoe UI",system-ui,sans-serif; padding:16px; }
+.wrap { max-width:1000px; margin:0 auto; }
+h1 { font-size:1.5rem; margin:.4em 0 .1em; }
+h2 { font-size:1.1rem; margin:1.6em 0 .5em; color:var(--acc); }
+.sub { color:var(--mut); margin-bottom:1.2em; }
+.card { background:var(--card); border:1px solid var(--line);
+  border-radius:10px; padding:14px 18px; margin:12px 0; }
+.kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:12px; }
+.kpi b { display:block; font-size:1.7rem; }
+.kpi span { color:var(--mut); font-size:.85rem; }
+table.t { border-collapse:collapse; width:100%; font-size:.86rem; }
+.t th { text-align:left; color:var(--mut); font-weight:600;
+  border-bottom:1px solid var(--line); padding:5px 10px 5px 0; }
+.t td { padding:4px 10px 4px 0; border-bottom:1px solid var(--line); }
+.good { color:var(--acc); font-weight:600; }
+.scroll { max-height:420px; overflow:auto; }
+.note { color:var(--mut); font-size:.85rem; }
+a { color:var(--acc); }
+details summary { cursor:pointer; color:var(--acc); margin:.6em 0; }
+</style></head><body><div class="wrap">
+<h1>Prediction Engine — Multi-State Retrodiction</h1>
+<div class="sub">46 Indian state assembly elections, 2013–2025 · leave-one-out
+retrodiction through the confidence gate · built 2026-10-16</div>
+
+<div class="kpis">
+<div class="card kpi"><b class="good">0</b><span>wrong gate calls in 46 elections
+(strict dual gate ≥0.95)</span></div>
+<div class="card kpi"><b>28/28</b><span>negative CALLs correct (loo mode)</span></div>
+<div class="card kpi"><b>45/45</b><span>dual-agreement calls correct down to a
+0.80 threshold (sensitivity)</span></div>
+<div class="card kpi"><b>78.6%</b><span>what an M2-only gate would have scored
+on positive CALLs (12 wrong calls total)</span></div>
+</div>
+
+<h2>Gate ledger</h2>
+<div class="card"><table class="dataframe t">
+  <thead>
+    <tr style="text-align: left;">
+      <th>gate</th>
+      <th>mode</th>
+      <th>positive CALLs</th>
+      <th>negative CALLs</th>
+      <th>wrong calls</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>M2-only gate ≥0.95</td>
+      <td>loo</td>
+      <td>11/14 (79%)</td>
+      <td>82/91 (90%)</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>M2-only gate ≥0.95</td>
+      <td>past</td>
+      <td>11/17 (65%)</td>
+      <td>84/95 (88%)</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>Strict dual gate ≥0.95</td>
+      <td>loo</td>
+      <td>0/0</td>
+      <td>28/28 (100%)</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Strict dual gate ≥0.95</td>
+      <td>past</td>
+      <td>0/0</td>
+      <td>27/27 (100%)</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p class="note">Fixed mechanical question set: every bloc × {wins majority, is
+largest}. loo = parameters from all other elections; past = only earlier
+elections. Zero positive strict CALLs is the honest finding: measured instrument
+error (~6 pts of vote share) cannot certify a majority at 95% six weeks out.</p></div>
+
+<h2>Strict-gate negative CALLs (all correct)</h2>
+<div class="card scroll"><table class="dataframe t">
+  <thead>
+    <tr style="text-align: left;">
+      <th>election_id</th>
+      <th>bloc</th>
+      <th>question</th>
+      <th>p_m2</th>
+      <th>p_m3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MP2013</td>
+      <td>BSP</td>
+      <td>majority</td>
+      <td>0.0002</td>
+      <td>0.0002</td>
+    </tr>
+    <tr>
+      <td>MP2013</td>
+      <td>BSP</td>
+      <td>largest</td>
+      <td>0.0004</td>
+      <td>0.0002</td>
+    </tr>
+    <tr>
+      <td>RJ2013</td>
+      <td>BSP</td>
+      <td>majority</td>
+      <td>0.0001</td>
+      <td>0.0001</td>
+    </tr>
+    <tr>
+      <td>RJ2013</td>
+      <td>BSP</td>
+      <td>largest</td>
+      <td>0.0005</td>
+      <td>0.0001</td>
+    </tr>
+    <tr>
+      <td>AS2016</td>
+      <td>AIUDF</td>
+      <td>majority</td>
+      <td>0.0012</td>
+      <td>0.0012</td>
+    </tr>
+    <tr>
+      <td>AS2016</td>
+      <td>AIUDF</td>
+      <td>largest</td>
+      <td>0.0056</td>
+      <td>0.0075</td>
+    </tr>
+    <tr>
+      <td>TN2016</td>
+      <td>BJP</td>
+      <td>majority</td>
+      <td>0.0001</td>
+      <td>0.0001</td>
+    </tr>
+    <tr>
+      <td>TN2016</td>
+      <td>BJP</td>
+      <td>largest</td>
+      <td>0.0001</td>
+      <td>0.0001</td>
+    </tr>
+    <tr>
+      <td>UP2017</td>
+      <td>BSP</td>
+      <td>majority</td>
+      <td>0.0356</td>
+      <td>0.0142</td>
+    </tr>
+    <tr>
+      <td>MP2018</td>
+      <td>BSP</td>
+      <td>majority</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <td>MP2018</td>
+      <td>BSP</td>
+      <td>largest</td>
+      <td>0.0000</td>
+      <td>0.0001</td>
+    </tr>
+    <tr>
+      <td>RJ2018</td>
+      <td>BSP</td>
+      <td>majority</td>
+      <td>0.0003</td>
+      <td>0.0003</td>
+    </tr>
+    <tr>
+      <td>RJ2018</td>
+      <td>BSP</td>
+      <td>largest</td>
+      <td>0.0003</td>
+      <td>0.0004</td>
+    </tr>
+    <tr>
+      <td>MH2019</td>
+      <td>INCNCP</td>
+      <td>majority</td>
+      <td>0.0272</td>
+      <td>0.0405</td>
+    </tr>
+    <tr>
+      <td>DL2020</td>
+      <td>INC</td>
+      <td>majority</td>
+      <td>0.0007</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <td>DL2020</td>
+      <td>INC</td>
+      <td>largest</td>
+      <td>0.0013</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <td>BR2020</td>
+      <td>LJP</td>
+      <td>majority</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <td>BR2020</td>
+      <td>LJP</td>
+      <td>largest</td>
+      <td>0.0007</td>
+      <td>0.0146</td>
+    </tr>
+    <tr>
+      <td>KL2021</td>
+      <td>NDA</td>
+      <td>majority</td>
+      <td>0.0006</td>
+      <td>0.0074</td>
+    </tr>
+    <tr>
+      <td>KL2021</td>
+      <td>NDA</td>
+      <td>largest</td>
+      <td>0.0018</td>
+      <td>0.0051</td>
+    </tr>
+    <tr>
+      <td>WB2021</td>
+      <td>SM</td>
+      <td>majority</td>
+      <td>0.0043</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <td>WB2021</td>
+      <td>SM</td>
+      <td>largest</td>
+      <td>0.0201</td>
+      <td>0.0005</td>
+    </tr>
+    <tr>
+      <td>UP2022</td>
+      <td>BSP</td>
+      <td>majority</td>
+      <td>0.0013</td>
+      <td>0.0002</td>
+    </tr>
+    <tr>
+      <td>UP2022</td>
+      <td>BSP</td>
+      <td>largest</td>
+      <td>0.0026</td>
+      <td>0.0005</td>
+    </tr>
+    <tr>
+      <td>UP2022</td>
+      <td>INC</td>
+      <td>majority</td>
+      <td>0.0001</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <td>UP2022</td>
+      <td>INC</td>
+      <td>largest</td>
+      <td>0.0002</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <td>UK2022</td>
+      <td>AAP</td>
+      <td>majority</td>
+      <td>0.0000</td>
+      <td>0.0001</td>
+    </tr>
+    <tr>
+      <td>UK2022</td>
+      <td>AAP</td>
+      <td>largest</td>
+      <td>0.0000</td>
+      <td>0.0001</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<h2>Where M2 alone would have been wrong</h2>
+<div class="card"><table class="dataframe t">
+  <thead>
+    <tr style="text-align: left;">
+      <th>election_id</th>
+      <th>bloc</th>
+      <th>question</th>
+      <th>p_m2</th>
+      <th>p_m3</th>
+      <th>actual</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HR2014</td>
+      <td>BJP</td>
+      <td>majority</td>
+      <td>0.0055</td>
+      <td></td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>UP2017</td>
+      <td>BJPA</td>
+      <td>majority</td>
+      <td>0.0380</td>
+      <td>0.2515</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>RJ2018</td>
+      <td>BJP</td>
+      <td>majority</td>
+      <td>0.9626</td>
+      <td>0.1648</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>RJ2018</td>
+      <td>BJP</td>
+      <td>largest</td>
+      <td>0.9669</td>
+      <td>0.1213</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>RJ2018</td>
+      <td>INC</td>
+      <td>largest</td>
+      <td>0.0328</td>
+      <td>0.8783</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>JH2019</td>
+      <td>BJP</td>
+      <td>largest</td>
+      <td>0.9500</td>
+      <td></td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>JH2019</td>
+      <td>JMMA</td>
+      <td>majority</td>
+      <td>0.0426</td>
+      <td></td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>JH2019</td>
+      <td>JMMA</td>
+      <td>largest</td>
+      <td>0.0490</td>
+      <td></td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>PB2022</td>
+      <td>AAP</td>
+      <td>majority</td>
+      <td>0.0005</td>
+      <td></td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>PB2022</td>
+      <td>AAP</td>
+      <td>largest</td>
+      <td>0.0016</td>
+      <td></td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>KA2023</td>
+      <td>INC</td>
+      <td>majority</td>
+      <td>0.0248</td>
+      <td></td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>TG2023</td>
+      <td>INC</td>
+      <td>majority</td>
+      <td>0.0278</td>
+      <td></td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<p class="note">Every one of these is removed by requiring the second witness
+(polls, M3) — the dual-gate design doing its job.</p></div>
+
+<h2>Calibration (claimed probability vs realized frequency, M2, loo)</h2>
+<div class="card"><table class="dataframe t">
+  <thead>
+    <tr style="text-align: left;">
+      <th>claimed_bin_pct</th>
+      <th>n</th>
+      <th>mean_claimed</th>
+      <th>realized_freq</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0-5</td>
+      <td>91</td>
+      <td>0.009</td>
+      <td>0.099</td>
+    </tr>
+    <tr>
+      <td>5-20</td>
+      <td>27</td>
+      <td>0.115</td>
+      <td>0.333</td>
+    </tr>
+    <tr>
+      <td>20-40</td>
+      <td>30</td>
+      <td>0.263</td>
+      <td>0.300</td>
+    </tr>
+    <tr>
+      <td>40-60</td>
+      <td>15</td>
+      <td>0.494</td>
+      <td>0.267</td>
+    </tr>
+    <tr>
+      <td>60-80</td>
+      <td>26</td>
+      <td>0.738</td>
+      <td>0.654</td>
+    </tr>
+    <tr>
+      <td>80-95</td>
+      <td>19</td>
+      <td>0.877</td>
+      <td>0.579</td>
+    </tr>
+    <tr>
+      <td>95-100</td>
+      <td>14</td>
+      <td>0.968</td>
+      <td>0.786</td>
+    </tr>
+  </tbody>
+</table>
+<p class="note">M2 is overconfident in the tails (claimed 97% realizes 79%; its
+nominal 90% seat intervals cover 58%). Poll-based M3 is calibrated-to-conservative
+where it exists (23/46 elections).</p></div>
+
+<h2>Refitted parameters</h2>
+<div class="card"><h3>α — GE→AE blend weight (pooled by era)</h3><table class="dataframe t">
+  <thead>
+    <tr style="text-align: left;">
+      <th>era</th>
+      <th>n</th>
+      <th>pooled α</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>post2014</td>
+      <td>38</td>
+      <td>0.459</td>
+    </tr>
+    <tr>
+      <td>pre2014</td>
+      <td>28</td>
+      <td>0.337</td>
+    </tr>
+  </tbody>
+</table>
+<h3>τ — alliance transfer efficiency (measured, 11 alliances)</h3><table class="dataframe t">
+  <thead>
+    <tr style="text-align: left;">
+      <th>n_alliances</th>
+      <th>tau_median</th>
+      <th>tau_q25</th>
+      <th>tau_q75</th>
+      <th>pilot_prior</th>
+      <th>note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>11</td>
+      <td>0.5</td>
+      <td>0.38</td>
+      <td>0.74</td>
+      <td>0.75</td>
+      <td>partner_base_mean&gt;=2pt alliances only; tau=b_partner/b_anchor</td>
+    </tr>
+  </tbody>
+</table>
+<h3>σ — constituency swing dispersion by state</h3><table class="dataframe t">
+  <thead>
+    <tr style="text-align: left;">
+      <th>state</th>
+      <th>σ_c (bloc-level median)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>AS</td>
+      <td>13.23</td>
+    </tr>
+    <tr>
+      <td>BR</td>
+      <td>20.27</td>
+    </tr>
+    <tr>
+      <td>CG</td>
+      <td>9.84</td>
+    </tr>
+    <tr>
+      <td>DL</td>
+      <td>8.54</td>
+    </tr>
+    <tr>
+      <td>GJ</td>
+      <td>10.36</td>
+    </tr>
+    <tr>
+      <td>HR</td>
+      <td>18.70</td>
+    </tr>
+    <tr>
+      <td>JH</td>
+      <td>14.26</td>
+    </tr>
+    <tr>
+      <td>KA</td>
+      <td>13.35</td>
+    </tr>
+    <tr>
+      <td>KL</td>
+      <td>13.76</td>
+    </tr>
+    <tr>
+      <td>MH</td>
+      <td>16.49</td>
+    </tr>
+    <tr>
+      <td>MP</td>
+      <td>10.75</td>
+    </tr>
+    <tr>
+      <td>PB</td>
+      <td>12.31</td>
+    </tr>
+    <tr>
+      <td>RJ</td>
+      <td>12.61</td>
+    </tr>
+    <tr>
+      <td>TG</td>
+      <td>14.30</td>
+    </tr>
+    <tr>
+      <td>TN</td>
+      <td>14.97</td>
+    </tr>
+    <tr>
+      <td>UK</td>
+      <td>10.27</td>
+    </tr>
+    <tr>
+      <td>UP</td>
+      <td>10.64</td>
+    </tr>
+    <tr>
+      <td>WB</td>
+      <td>12.62</td>
+    </tr>
+    <tr>
+      <td>_NATIONAL_</td>
+      <td>12.61</td>
+    </tr>
+  </tbody>
+</table>
+<p class="note">Incumbent retained largest-bloc status in 22/46 elections (48%) —
+UP's rotation prior does not generalize; M1 must be state-specific.</p></div>
+
+<h2>All 46 elections</h2>
+<div class="card scroll"><table class="dataframe t">
+  <thead>
+    <tr style="text-align: left;">
+      <th>election</th>
+      <th>M2 forecast leader (med seats)</th>
+      <th>actual leader (seats)</th>
+      <th>M2 right?</th>
+      <th>strict gate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>KA2013</td>
+      <td>BJP (108)</td>
+      <td>INC (122)</td>
+      <td>✗</td>
+      <td>WATCH (flag)</td>
+    </tr>
+    <tr>
+      <td>MP2013</td>
+      <td>BJP (130)</td>
+      <td>BJP (165)</td>
+      <td>✓</td>
+      <td>CALL</td>
+    </tr>
+    <tr>
+      <td>RJ2013</td>
+      <td>INC (108)</td>
+      <td>BJP (163)</td>
+      <td>✗</td>
+      <td>CALL</td>
+    </tr>
+    <tr>
+      <td>CG2013</td>
+      <td>BJP (51)</td>
+      <td>BJP (49)</td>
+      <td>✓</td>
+      <td>WATCH (no polls)</td>
+    </tr>
+    <tr>
+      <td>DL2013</td>
+      <td>INC (47)</td>
+      <td>BJP (31)</td>
+      <td>✗</td>
+      <td>WATCH (flag)</td>
+    </tr>
+    <tr>
+      <td>MH2014</td>
+      <td>INC (81)</td>
+      <td>BJP (122)</td>
+      <td>✗</td>
+      <td>WATCH (no polls)</td>
+    </tr>
+    <tr>
+      <td>HR2014</td>
+      <td>INC (31)</td>
+      <td>BJP (47)</td>
+      <td>✗</td>
+      <td>WATCH (no polls)</td>
+    </tr>
+    <tr>
+      <td>JH2014</td>
+      <td>BJP (38)</td>
+      <td>BJP (37)</td>
+      <td>✓</td>
+      <td>WATCH (no polls)</td>
+    </tr>
+    <tr>
+      <td>DL2015</td>
+      <td>BJP (37)</td>
+      <td>AAP (67)</td>
+      <td>✗</td>
+      <td>WATCH (flag)</td>
+    </tr>
+    <tr>
+      <td>BR2015</td>
+      <td>MGB (141)</td>
+      <td>MGB (177)</td>
+      <td>✓</td>
+      <td>WATCH</td>
+    </tr>
+    <tr>
+      <td>AS2016</td>
+      <td>INC (63)</td>
+      <td>BJPA (74)</td>
+      <td>✗</td>
+      <td>CALL</td>
+    </tr>
+    <tr>
+      <td>KL2016</td>
+      <td>UDF (69)</td>
+      <td>LDF (77)</td>
+      <td>✗</td>
+      <td>WATCH (no polls)</td>
+    </tr>
+    <tr>
+      <td>TN2016</td>
+      <td>ADMK (153)</td>
+      <td>ADMK (134)</td>
+      <td>✓</td>
+      <td>CALL</td>
+    </tr>
+    <tr>
+      <td>WB2016</td>
+      <td>AITC (179)</td>
+      <td>AITC (211)</td>
+      <td>✓</td>
+      <td>WATCH (no polls)</td>
+    </tr>
+    <tr>
+      <td>UP2017</td>
+      <td>SPINC (207)</td>
+      <td>BJPA (321)</td>
+      <td>✗</td>
+      <td>CALL</td>
+    </tr>
+    <tr>
+      <td>PB2017</td>
+      <td>SADBJP (61)</td>
+      <td>INC (77)</td>
+      <td>✗</td>
+      <td>WATCH (flag)</td>
+    </tr>
+    <tr>
+      <td>UK2017</td>
+      <td>BJP (45)</td>
+      <td>BJP (57)</td>
+      <td>✓</td>
+      <td>WATCH</td>
+    </tr>
+    <tr>
+      <td>GJ2017</td>
+      <td>BJP (136)</td>
+      <td>BJP (99)</td>
+      <td>✓</td>
+      <td>WATCH</td>
+    </tr>
+    <tr>
+      <td>HP2017</td>
+      <td>BJP (38)</td>
+      <td>BJP (44)</td>
+      <td>✓</td>
+      <td>WATCH (no polls)</td>
+    </tr>
+    <tr>
+      <td>KA2018</td>
+      <td>INC (99)</td>
+      <td>BJP (109)</td>
+      <td>✗</td>
+      <td>WATCH (no polls)</td>
+    </tr>
+    <tr>
+      <td>MP2018</td>
+      <td>BJP (164)</td>
+      <td>INC (114)</td>
+      <td>✗</td>
+      <td>CALL</td>
+    </tr>
+    <tr>
+      <td>RJ2018</td>
+      <td>BJP (152)</td>
+      <td>INC (99)</td>
+      <td>✗</td>
+      <td>CALL</td>
+    </tr>
+    <tr>
+      <td>CG2018</td>
+      <td>BJP (56)</td>
+      <td>INC (68)</td>
+      <td>✗</td>
+      <td>WATCH (flag)</td>
+    </tr>
+    <tr>
+      <td>TG2018</td>
+      <td>BRS (57)</td>
+      <td>BRS (88)</td>
+      <td>✓</td>
+      <td>WATCH (no polls)</td>
+    </tr>
+    <tr>
+      <td>MH2019</td>
+      <td>BJPSHS (201)</td>
+      <td>BJPSHS (161)</td>
+      <td>✓</td>
+      <td>CALL</td>
+    </tr>
+    <tr>
+      <td>HR2019</td>
+      <td>BJP (68)</td>
+      <td>BJP (40)</td>
+      <td>✓</td>
+      <td>WATCH (flag)</td>
+    </tr>
+    <tr>
+      <td>JH2019</td>
+      <td>BJP (55)</td>
+      <td>JMMA (47)</td>
+      <td>✗</td>
+      <td>WATCH (no polls)</td>
+    </tr>
+    <tr>
+      <td>DL2020</td>
+      <td>BJP (48)</td>
+      <td>AAP (62)</td>
+      <td>✗</td>
+      <td>CALL</td>
+    </tr>
+    <tr>
+      <td>BR2020</td>
+      <td>NDA (122)</td>
+      <td>NDA (121)</td>
+      <td>✓</td>
+      <td>CALL</td>
+    </tr>
+    <tr>
+      <td>AS2021</td>
+      <td>BJPA (72)</td>
+      <td>BJPA (69)</td>
+      <td>✓</td>
+      <td>WATCH</td>
+    </tr>
+    <tr>
+      <td>KL2021</td>
+      <td>UDF (66)</td>
+      <td>LDF (84)</td>
+      <td>✗</td>
+      <td>CALL</td>
+    </tr>
+    <tr>
+      <td>TN2021</td>
+      <td>DMKA (145)</td>
+      <td>DMKA (159)</td>
+      <td>✓</td>
+      <td>WATCH (no polls)</td>
+    </tr>
+    <tr>
+      <td>WB2021</td>
+      <td>AITC (181)</td>
+      <td>AITC (211)</td>
+      <td>✓</td>
+      <td>CALL</td>
+    </tr>
+    <tr>
+      <td>UP2022</td>
+      <td>BJPA (309)</td>
+      <td>BJPA (267)</td>
+      <td>✓</td>
+      <td>CALL</td>
+    </tr>
+    <tr>
+      <td>PB2022</td>
+      <td>INC (69)</td>
+      <td>AAP (92)</td>
+      <td>✗</td>
+      <td>WATCH (no polls)</td>
+    </tr>
+    <tr>
+      <td>UK2022</td>
+      <td>BJP (59)</td>
+      <td>BJP (47)</td>
+      <td>✓</td>
+      <td>CALL</td>
+    </tr>
+    <tr>
+      <td>GJ2022</td>
+      <td>BJP (131)</td>
+      <td>BJP (156)</td>
+      <td>✓</td>
+      <td>WATCH (flag)</td>
+    </tr>
+    <tr>
+      <td>KA2023</td>
+      <td>BJP (130)</td>
+      <td>INC (135)</td>
+      <td>✗</td>
+      <td>WATCH (no polls)</td>
+    </tr>
+    <tr>
+      <td>MP2023</td>
+      <td>BJP (147)</td>
+      <td>BJP (163)</td>
+      <td>✓</td>
+      <td>WATCH (no polls)</td>
+    </tr>
+    <tr>
+      <td>RJ2023</td>
+      <td>BJP (122)</td>
+      <td>BJP (115)</td>
+      <td>✓</td>
+      <td>WATCH (no polls)</td>
+    </tr>
+    <tr>
+      <td>CG2023</td>
+      <td>INC (54)</td>
+      <td>BJP (54)</td>
+      <td>✗</td>
+      <td>WATCH (no polls)</td>
+    </tr>
+    <tr>
+      <td>TG2023</td>
+      <td>BRS (71)</td>
+      <td>INC (64)</td>
+      <td>✗</td>
+      <td>WATCH (no polls)</td>
+    </tr>
+    <tr>
+      <td>MH2024</td>
+      <td>MAHAYUTI (171)</td>
+      <td>MAHAYUTI (230)</td>
+      <td>✓</td>
+      <td>WATCH</td>
+    </tr>
+    <tr>
+      <td>HR2024</td>
+      <td>INC (40)</td>
+      <td>BJP (48)</td>
+      <td>✗</td>
+      <td>WATCH (no polls)</td>
+    </tr>
+    <tr>
+      <td>DL2025</td>
+      <td>BJP (43)</td>
+      <td>BJP (48)</td>
+      <td>✓</td>
+      <td>WATCH (no polls)</td>
+    </tr>
+    <tr>
+      <td>BR2025</td>
+      <td>NDA (125)</td>
+      <td>NDA (198)</td>
+      <td>✓</td>
+      <td>WATCH (flag)</td>
+    </tr>
+  </tbody>
+</table>
+<p class="note">M2 median-seat leader is right only 24/46 — the blend is an
+uncertainty machine, not a point forecaster; the gate's abstentions are the point.</p></div>
+
+<h2>Files</h2>
+<div class="card note">
+Full report: <a href="multistate_retrodiction.md">multistate_retrodiction.md</a> ·
+UP pilot: <a href="UP_retrodiction_pilot.md">UP_retrodiction_pilot.md</a><br>
+Data tables (CSV): <a href="data/precision_ledger.csv">precision_ledger</a> ·
+<a href="data/election_summaries.csv">election_summaries</a> ·
+<a href="data/calibration_table.csv">calibration</a> ·
+<a href="data/alpha_table.csv">alpha</a> ·
+<a href="data/tau_obs.csv">tau (per alliance)</a> ·
+<a href="data/sigma_table.csv">sigma</a> ·
+<a href="data/polls_blocs.csv">polls</a><br>
+Rebuild this page after a pipeline rerun: <code>python scripts/08_build_site.py</code>
+</div>
+</div></body></html>

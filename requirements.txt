@@ -1,0 +1,8 @@
+# Psephos prediction engine — Python 3.12
+pandas>=2.0
+numpy>=1.26
+# External anchoring of the pre-registration ledgers (Bitcoin via OpenTimestamps)
+opentimestamps-client>=0.7
+# Parsing malformed wikitables when curating polls
+html5lib>=1.1
+lxml>=5.0
