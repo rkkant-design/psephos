@@ -38,9 +38,9 @@ fade as evidence and lift it.
 ### 3b. Insider-flow sweep (per live India forecast)
 One targeted WebSearch per state for defections / ticket-demand / campaign-allocation
 news since the last run. Append qualifying events to forecasts/insider_events.csv using
-the weight rubric in scripts/insider_flow.py (sitting MLA/MP=5 … cadre=1; source URL
+the weight rubric in src/engine/insider_flow.py (sitting MLA/MP=5 … cadre=1; source URL
 required; only concrete, dated, named events — never rumors). Then run
-`python PredictionEngine/scripts/insider_flow.py score` (pre-registers the day's signal,
+`python PredictionEngine/src/engine/insider_flow.py score` (pre-registers the day's signal,
 append-only). The signal is REPORTED context, not a gate instrument, until the 2027
 cycle validates it; a label change (e.g. moderate→strong, or beneficiary flip) is
 log-worthy and counts as a tripwire-grade event for the re-run condition.
@@ -59,18 +59,18 @@ Re-run a forecast iff at least one of: new poll admitted; tripwire fired; flag s
 changed. A fired tripwire that changes bloc composition (alliance news) updates the
 config's `blocs` first, with a dated note citing the source.
 - Update `freeze_date` to today in the config.
-- Run: `python PredictionEngine/scripts/predict.py <ID>` — this APPENDS newly hashed rows
+- Run: `python PredictionEngine/src/engine/predict.py <ID>` — this APPENDS newly hashed rows
   to `forecasts/ledger.csv`. **Never edit or delete existing ledger rows. Ever.** A re-run
   supersedes by timestamp; history stays.
 
 ### 5. Resolution check
 If any live forecast's election has concluded (results declared): fetch official
 results-by-alliance, fill `resolved/outcome/correct` on that forecast's LATEST ledger rows
-(pattern: `scripts/12_resolve_2026.py`), and update the track record. This is the only
+(pattern: `src/scoring/12_resolve_2026.py`), and update the track record. This is the only
 permitted write to existing ledger rows, and only to the three resolution columns.
 
 ### 6. Republish (only if anything changed)
-- `python PredictionEngine/scripts/13_build_app_data.py`
+- `python PredictionEngine/src/webbuild/13_build_app_data.py`
 - Copy `site/app_data.json` over `site/app/app_data.json` (local dev copy).
 - Artifact tool: `read` url https://claude.ai/artifact/B266M8V6JHmkVdhqZTC3MA, then
   `publish` with that `url`, `file_path` PredictionEngine/site/app/index.html and
@@ -90,7 +90,7 @@ Fixture-level forecasts compound the scored record ~50x faster than elections.
 They are single-instrument model forecasts: **scored on Brier/log, never gate
 CALLs.** `forecasts/matches_ledger.csv` obeys the same append-only law.
 
-1. **Resolve the previous matchweek:** `python PredictionEngine/scripts/epl_resolve.py`
+1. **Resolve the previous matchweek:** `python PredictionEngine/src/scoring/epl_resolve.py`
    — refetches the fixture feed (fixturedownload.com epl-2026) and fills ONLY the
    three resolution columns on matches_ledger rows whose match now has a final
    score. If the feed is unreachable, log the failure and stop this section;
@@ -108,7 +108,7 @@ CALLs.** `forecasts/matches_ledger.csv` obeys the same append-only law.
      names: "Man City", "Nott'm Forest", "Spurs", ...).
    The template is `EPL_MW09_context.json`. A missing context file never blocks
    pre-registration (market/congestion columns stay empty, warning printed).
-3. **Pre-register the next matchweek:** `python PredictionEngine/scripts/epl_matches.py`
+3. **Pre-register the next matchweek:** `python PredictionEngine/src/engine/epl_matches.py`
    — defaults to the earliest round with unplayed fixtures; recomputes the table
    from played results, forecasts each fixture (model v2: shrunk PPG toward each
    club's OWN prior — last season's final PPG, promoted sides 1.05; blend formula
@@ -120,7 +120,7 @@ CALLs.** `forecasts/matches_ledger.csv` obeys the same append-only law.
    match whose kickoff is already past — do not override this, ever. **The
    published pick is always the model's**; the market column is benchmark
    instrument #2, scored side by side, never the pick source.
-4. **Re-score:** `python PredictionEngine/scripts/score.py` — recomputes
+4. **Re-score:** `python PredictionEngine/src/scoring/score.py` — recomputes
    Brier/log for every resolved probability (WATCH rows included), the
    calibration table, the model-vs-market skill table, and the per-matchweek
    match-skill table (model vs de-vigged market, 3-way Brier) into
@@ -141,10 +141,10 @@ Live world forecasts = `forecasts/world/<ID>.json` not resolved in `forecasts/wo
 - **Research refresh (FIRST, before touching any market price):** for configs with
   `"research": true`, if the re-run condition below will plausibly fire OR the existing
   research dossier is older than 30 days, run a fresh M_research pass: follow the protocol
-  from `python PredictionEngine/scripts/m_research.py brief <ID>` (base rate first, strongest
+  from `python PredictionEngine/src/engine/m_research.py brief <ID>` (base rate first, strongest
   opposing case, NEVER fetch betting odds / prediction-market prices / forecast aggregators),
   write the dossier to `forecasts/research/dossiers/<ID>.json`, then
-  `python PredictionEngine/scripts/m_research.py commit <dossier>` — this appends hashed rows
+  `python PredictionEngine/src/engine/m_research.py commit <dossier>` — this appends hashed rows
   to `forecasts/research_ledger.csv` (same append-only law). The ordering is a hard rule:
   research happens before the market-refresh step of the same run so the researcher has not
   seen current prices.
@@ -154,7 +154,7 @@ Live world forecasts = `forecasts/world/<ID>.json` not resolved in `forecasts/wo
   the date in `source`.
 - **Model refresh:** USMID — current generic-ballot average (Silver Bulletin et al.); EPL —
   current league table from Wikipedia "2026-27 Premier League"; CWC — ICC ODI ratings table.
-- Re-run `python PredictionEngine/scripts/world_predict.py <ID>` iff any instrument input
+- Re-run `python PredictionEngine/src/engine/world_predict.py <ID>` iff any instrument input
   changed materially (market move >= 3 pts on a question, table/ratings changed, new dated odds,
   new committed research dossier). Appends hashed rows to world_ledger.csv — same append-only law.
 - **Gate rules:** two instruments on a question = the original dual gate (both must clear 0.95;
@@ -169,9 +169,9 @@ Live world forecasts = `forecasts/world/<ID>.json` not resolved in `forecasts/wo
   Senate seat (35; 33 Class 2 + FL/OH specials) — same append-only law, anchored with the
   other ledgers. Refresh before Nov 3 iff the re-run condition fires (generic ballot moves
   3+ pts, or any registered race's market moves 10+ pts):
-  1. `python PredictionEngine/scripts/usmid_fetch_markets.py` (per-race Polymarket prices,
+  1. `python PredictionEngine/src/pipeline/usmid_fetch_markets.py` (per-race Polymarket prices,
      anonymous gamma-api; raw responses land in data/raw/polymarket_usmid2026/).
-  2. `python PredictionEngine/scripts/usmid_races.py` — re-registers all races (appends
+  2. `python PredictionEngine/src/engine/usmid_races.py` — re-registers all races (appends
      hashed rows; new rows supersede by timestamp) and prints the Senate-control Monte
      Carlo roll-up.
   3. Paste the printed P(Dem control) into USMID2026.json `model.senate_model` with a dated
@@ -250,11 +250,11 @@ FULL set: `{"sample": {}, "user": {}, "db": {"rules": [{"path": "asks",
 
 ## Anchoring (every run, last step before the log)
 
-- `python PredictionEngine/scripts/anchor.py upgrade` (finalizes pending Bitcoin
-  attestations on earlier manifests), then `python PredictionEngine/scripts/anchor.py verify`
+- `python PredictionEngine/src/scoring/anchor.py upgrade` (finalizes pending Bitcoin
+  attestations on earlier manifests), then `python PredictionEngine/src/scoring/anchor.py verify`
   (append-only audit: every anchored forecast hash must still exist — a FAILED verify is a
   red-alert line at the TOP of the log), then, if any ledger gained rows this run,
-  `python PredictionEngine/scripts/anchor.py stamp` (new manifest → OpenTimestamps).
+  `python PredictionEngine/src/scoring/anchor.py stamp` (new manifest → OpenTimestamps).
 - Manifests and .ots proofs in forecasts/anchors/ are evidence: never delete or rewrite them.
 
 ## Hard rules
