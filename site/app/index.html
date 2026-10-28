@@ -57,6 +57,11 @@ nav{display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 22px; border-bot
 .stat .v small{font-family:var(--sans); font-size:14px; font-weight:600; color:var(--accent-ink); letter-spacing:0;}
 .stat .k{font-size:12.5px; color:var(--ink2); margin-top:8px; line-height:1.45;}
 h2.sec{font-family:var(--sans); font-size:11.5px; letter-spacing:.13em; text-transform:uppercase; color:var(--muted); border-bottom:1px solid var(--grid); padding-bottom:9px; margin:42px 0 16px; font-weight:600;}
+.sechead{display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin:42px 0 16px; border-bottom:1px solid var(--grid); padding-bottom:9px;}
+.sechead .sec.plain{margin:0; border:none; padding:0;}
+.seeall{font:inherit; font-size:12.5px; font-weight:500; color:var(--accent-ink); background:none; border:none; cursor:pointer; white-space:nowrap;}
+.seeall:hover{text-decoration:underline; text-underline-offset:2px;}
+.seeall:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:2px;}
 /* how it works */
 .steps{display:grid; grid-template-columns:repeat(auto-fit,minmax(224px,1fr)); gap:14px;}
 .step{background:var(--surface); border:1px solid var(--ring); border-radius:10px; padding:17px 18px; font-size:14px; color:var(--ink2); line-height:1.55;}
@@ -219,20 +224,15 @@ footer{margin-top:52px; border-top:1px solid var(--baseline); padding-top:16px; 
 <div id="view-home">
   <div class="hero">
     <h1>Forecasts that tell you when they can be trusted.</h1>
-    <p>Psephos forecasts elections and world events using several independent methods at once &mdash; statistical models, polls, markets, and research. When they all agree beyond 95%, it certifies a <b>CALL</b>. When they don't, it says so honestly: the question is open, and here is what would settle it. Every forecast is hash-stamped before the event and scored after &mdash; misses included.</p>
+    <p>Several independent methods weigh each question. When they agree past 95%, Psephos makes a call; when they don't, it says the question is open. Every forecast is sealed before the event and scored after.</p>
   </div>
   <div class="statstrip" id="homestats"></div>
-  <h2 class="sec">Live forecasts</h2>
-  <div class="cards" id="homelive"></div>
-  <h2 class="sec">How it works</h2>
-  <div class="steps">
-    <div class="step"><b><span class="n">1</span>Independent methods</b>Each question is answered by instruments that can't fail the same way: structural models that read no news, poll averages corrected for measured pollster bias, betting markets, and a research pass. Their errors are measured, not assumed.</div>
-    <div class="step"><b><span class="n">2</span>The gate</b>A CALL is issued only when the instruments independently clear 95%. Otherwise the verdict is WATCH &mdash; genuinely open &mdash; with tripwires naming exactly what would change it. Safety rules (like a new party with no electoral history) can suppress calls entirely.</div>
-    <div class="step"><b><span class="n">3</span>A provable record</b>Every forecast is SHA-256 hashed the moment it's made and anchored into the Bitcoin blockchain via OpenTimestamps, then scored once the event resolves. The track record cannot be quietly edited &mdash; by anyone, including us.</div>
+  <div class="sechead">
+    <h2 class="sec plain">Live now</h2>
+    <button class="seeall" data-goto="all">All forecasts &rarr;</button>
   </div>
-  <h2 class="sec">Recently resolved &mdash; including the misses</h2>
-  <div class="cards" id="homeresolved"></div>
-  <p class="hint" style="margin-top:10px">Looking for something specific? <button data-goto="all">Browse all forecasts</button> &mdash; 60+ elections and events, searchable. Or <button data-goto="ask">ask your own question</button> and get an instant estimate.</p>
+  <div class="cards" id="homelive"></div>
+  <p class="hint" style="margin-top:18px">Or see the scored <button data-goto="record">track record</button>, browse the <button data-goto="cal">calendar</button>, or <button data-goto="ask">ask your own question</button>.</p>
 </div>
 
 <!-- ============ CALENDAR ============ -->
@@ -412,10 +412,7 @@ function renderHome(){
   const live=DATA.elections.filter(e=>e.status==="live"&&e.kind!=="matches");
   const order=["USMID2026","UP2027","PB2027","UK2027","EPL2027","CWC2027"];
   live.sort((a,b)=>(order.indexOf(a.id)+99)-(order.indexOf(b.id)+99));
-  const mw=DATA.elections.find(e=>e.kind==="matches");
-  $("#homelive").innerHTML=live.map(e=>card(e,true)).join("")+(mw?card(mw,false):"");
-  const res=DATA.elections.filter(e=>e.status==="resolved-forward").sort((a,b)=>b.year-a.year).slice(0,4);
-  $("#homeresolved").innerHTML=res.map(e=>card(e,false)).join("");
+  $("#homelive").innerHTML=live.slice(0,4).map(e=>card(e,true)).join("");
 }
 function renderRecord(){
   const t=DATA.track, sc=DATA.scoring, pr=(t.lifetime_correct/t.lifetime_calls*100).toFixed(1);
