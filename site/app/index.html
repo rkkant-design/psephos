@@ -508,6 +508,47 @@ function blocBar(e,b,i,maxSeat,maj){
     <div class="track" style="margin-top:${i===0&&maj!=null?"16px":"0"}">${inner}</div>
     <div class="nums">${nums}</div></div>`;
 }
+function resultBanner(e){
+  const hasRace=e.races&&e.races.some(r=>r.outcome!=null);
+  const qres=e.questions.filter(q=>q.outcome!=null);
+  if(!hasRace&&!qres.length) return "";
+  let big="",biglab="",lines=[];
+  if(hasRace){
+    const calls=e.races.filter(r=>String(r.verdict).startsWith("CALL")&&r.outcome!=null);
+    const hit=calls.filter(r=>r.correct).length;
+    const gov=calls.filter(r=>r.office==="governor"), sen=calls.filter(r=>r.office==="senate");
+    const govHit=gov.filter(r=>r.correct).length, senHit=sen.filter(r=>r.correct).length;
+    big=`${hit} / ${calls.length}`; biglab="certified calls correct";
+    const parts=[]; if(sen.length) parts.push(`${senHit}/${sen.length} Senate seats`); if(gov.length) parts.push(`${govHit}/${gov.length} governor races`);
+    const lead=hit===calls.length?`Every certified call landed`:`${hit} of ${calls.length} certified calls correct`;
+    lines.push(`<b>${lead}</b>${parts.length?` &mdash; ${parts.join(" and ")}, each one the dual gate was willing to call.`:"."}`);
+    const openGov=e.races.filter(r=>r.office==="governor"&&r.outcome==null).length;
+    const openSen=e.races.filter(r=>r.office==="senate"&&r.outcome==null).length;
+    if(openGov+openSen) lines.push(`The ${openGov+openSen} genuine contests the gate left open (WATCH) resolve as certification completes &mdash; each will be scored, win or lose.`);
+  }
+  for(const q of qres){
+    if(/^republicans keep house/i.test(q.q)) continue; /* mirror of the Dem House line */
+    const lean=((q.p2??q.p3)+(q.p3??q.p2))/2;
+    const match=(lean>0.5)===(q.outcome==="YES");
+    const isCall=q.verdict&&String(q.verdict).startsWith("CALL");
+    const tail=isCall?(q.correct?"called correctly":"called wrong")
+      :`logged <b>WATCH</b> (lean ${pct(lean)}, just under the 95% gate) &mdash; the lean was ${match?"right":"wrong"}`;
+    lines.push(`<b>${esc(q.q)}:</b> ${q.outcome==="YES"?"YES":"NO"} &mdash; ${tail}.`);
+  }
+  const pend=e.questions.filter(q=>q.outcome==null).map(q=>esc(q.q));
+  if(pend.length) lines.push(`<span style="color:var(--ink2)">Still open: ${pend.join("; ")} &mdash; not yet beyond dispute; resolves at certification, no row called on a contested margin.</span>`);
+  const box="background:var(--surface);border:1px solid var(--grid);border-left:4px solid var(--good);border-radius:12px;padding:16px 18px;margin:14px 0 2px";
+  return `<section style="${box}">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+      <span style="font-family:var(--mono);font-size:10px;letter-spacing:.14em;font-weight:700;color:#fff;background:var(--good);padding:3px 8px;border-radius:5px">RESULT</span>
+      <span style="font-family:var(--mono);font-size:11px;color:var(--ink2)">as of ${esc(e.resolve_date||"election night")}</span></div>
+    <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap">
+      ${big?`<div style="flex:0 0 auto;text-align:center;padding-right:18px;border-right:1px solid var(--grid)">
+        <div style="font-family:var(--serif,Newsreader,serif);font-size:44px;line-height:1;font-weight:600;color:var(--good-text)">${big}</div>
+        <div style="font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;color:var(--ink2);margin-top:6px;max-width:140px">${biglab}</div></div>`:""}
+      <ul style="margin:0;padding-left:18px;flex:1 1 280px;min-width:0;line-height:1.5;font-size:14px">${lines.map(l=>`<li style="margin:0 0 6px">${l}</li>`).join("")}</ul>
+    </div></section>`;
+}
 function renderDetail(e){
   lastDetail=e;
   const [nseats,maj]=SEATS[e.st]||[null,null];
@@ -517,6 +558,7 @@ function renderDetail(e){
    <div class="dhead"><h2>${esc(e.title)}</h2>${e.domain?`<span class="badge b-retro">${esc(e.domain.toUpperCase())}</span>`:""}${statusBadge(e)}</div>
    <div class="bottomline">${QMAP[e.id]?`<b>${esc(QMAP[e.id])}</b> `:""}${headline(e)}${RESOLVES[e.id]?` &middot; ${esc(RESOLVES[e.id])}`:""}</div>
    <div class="meta">${e.freeze?`frozen ${esc(e.freeze)} &middot; `:""}${e.sha?`pre-registered sha256 ${esc(e.sha)}`:(e.status==="retrodiction"?"backtest: forecast re-created from only pre-election data, parameters fitted excluding this election":"")}</div>`;
+  h+=resultBanner(e);
   const fold=(title,inner)=>`<details class="fold"><summary>${title}</summary>${inner}</details>`;
   const resol=()=>e.resolution&&e.resolution.source?fold("Resolution criteria &mdash; written before the event, not after",
     `<ul class="plain"><li><b>Source:</b> ${esc(e.resolution.source)}${e.resolution.resolve_by?` &middot; resolve by ${esc(e.resolution.resolve_by)}`:""}</li>${(e.resolution.rules||[]).map(r=>`<li>${esc(r)}</li>`).join("")}</ul>`):"";
