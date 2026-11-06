@@ -1,6 +1,6 @@
 {
  "source": "https://fixturedownload.com/feed/json/epl-2026",
- "fetched_utc": "2026-10-26T05:28:22+00:00",
+ "fetched_utc": "2026-11-02T12:17:42+00:00",
  "fixtures": [
   {
    "MatchNumber": 1,
@@ -910,9 +910,9 @@
    "HomeTeam": "Crystal Palace",
    "AwayTeam": "Newcastle",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 0,
+   "AwayTeamScore": 2,
+   "Winner": "Newcastle"
   },
   {
    "MatchNumber": 76,
@@ -922,9 +922,9 @@
    "HomeTeam": "Hull",
    "AwayTeam": "Brentford",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 1,
+   "AwayTeamScore": 1,
+   "Winner": "Draw"
   },
   {
    "MatchNumber": 78,
@@ -934,9 +934,9 @@
    "HomeTeam": "Liverpool",
    "AwayTeam": "Brighton",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 2,
+   "AwayTeamScore": 0,
+   "Winner": "Liverpool"
   },
   {
    "MatchNumber": 79,
@@ -946,9 +946,9 @@
    "HomeTeam": "Man Utd",
    "AwayTeam": "Bournemouth",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 0,
+   "AwayTeamScore": 3,
+   "Winner": "Bournemouth"
   },
   {
    "MatchNumber": 80,
@@ -958,9 +958,9 @@
    "HomeTeam": "Sunderland",
    "AwayTeam": "Leeds",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 0,
+   "AwayTeamScore": 0,
+   "Winner": "Draw"
   },
   {
    "MatchNumber": 84,
@@ -970,9 +970,9 @@
    "HomeTeam": "Chelsea",
    "AwayTeam": "Man Utd",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 2,
+   "AwayTeamScore": 0,
+   "Winner": "Chelsea"
   },
   {
    "MatchNumber": 81,
@@ -982,9 +982,9 @@
    "HomeTeam": "Bournemouth",
    "AwayTeam": "Leeds",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 2,
+   "AwayTeamScore": 0,
+   "Winner": "Bournemouth"
   },
   {
    "MatchNumber": 83,
@@ -994,9 +994,9 @@
    "HomeTeam": "Brentford",
    "AwayTeam": "Nott'm Forest",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 2,
+   "AwayTeamScore": 0,
+   "Winner": "Brentford"
   },
   {
    "MatchNumber": 85,
@@ -1006,9 +1006,9 @@
    "HomeTeam": "Coventry",
    "AwayTeam": "Sunderland",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 3,
+   "AwayTeamScore": 1,
+   "Winner": "Coventry"
   },
   {
    "MatchNumber": 86,
@@ -1018,9 +1018,9 @@
    "HomeTeam": "Hull",
    "AwayTeam": "Ipswich",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 2,
+   "AwayTeamScore": 2,
+   "Winner": "Draw"
   },
   {
    "MatchNumber": 88,
@@ -1030,9 +1030,9 @@
    "HomeTeam": "Man City",
    "AwayTeam": "Brighton",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 0,
+   "AwayTeamScore": 1,
+   "Winner": "Brighton"
   },
   {
    "MatchNumber": 90,
@@ -1042,9 +1042,9 @@
    "HomeTeam": "Spurs",
    "AwayTeam": "Crystal Palace",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 2,
+   "AwayTeamScore": 0,
+   "Winner": "Spurs"
   },
   {
    "MatchNumber": 82,
@@ -1054,9 +1054,9 @@
    "HomeTeam": "Aston Villa",
    "AwayTeam": "Fulham",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 1,
+   "AwayTeamScore": 1,
+   "Winner": "Draw"
   },
   {
    "MatchNumber": 87,
@@ -1066,9 +1066,9 @@
    "HomeTeam": "Liverpool",
    "AwayTeam": "Arsenal",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 0,
+   "AwayTeamScore": 1,
+   "Winner": "Arsenal"
   },
   {
    "MatchNumber": 89,

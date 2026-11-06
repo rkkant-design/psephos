@@ -2,40 +2,40 @@
  "domain": "Football",
  "entity_probs": {
   "market": {
-   "Arsenal": 0.6103,
-   "Brighton": 0.0549,
-   "Chelsea": 0.0849,
-   "Liverpool": 0.0445,
-   "Man City": 0.1868
+   "Arsenal": 0.7042,
+   "Brighton": 0.0657,
+   "Chelsea": 0.0429,
+   "Liverpool": 0.058,
+   "Man City": 0.1095
   },
   "model": {
-   "Arsenal": 0.4627,
-   "Aston Villa": 0.0007,
-   "Bournemouth": 0.0001,
-   "Brentford": 0.0004,
-   "Brighton": 0.0362,
-   "Chelsea": 0.0025,
+   "Arsenal": 0.6876,
+   "Aston Villa": 0.0005,
+   "Bournemouth": 0.0005,
+   "Brentford": 0.0018,
+   "Brighton": 0.0776,
+   "Chelsea": 0.0096,
    "Coventry": 0.0,
    "Crystal Palace": 0.0,
-   "Everton": 0.0003,
-   "Fulham": 0.0,
+   "Everton": 0.0,
+   "Fulham": 0.0001,
    "Hull City": 0.0001,
-   "Ipswich": 0.0002,
-   "Leeds": 0.0002,
-   "Liverpool": 0.0162,
-   "Man City": 0.4802,
+   "Ipswich": 0.0001,
+   "Leeds": 0.0,
+   "Liverpool": 0.0038,
+   "Man City": 0.2179,
    "Man United": 0.0,
    "Newcastle": 0.0002,
    "Nottm Forest": 0.0,
    "Sunderland": 0.0,
-   "Tottenham": 0.0
+   "Tottenham": 0.0002
   }
  },
  "forecast_id": "EPL2027",
- "freeze_date": "2026-10-26",
+ "freeze_date": "2026-11-02",
  "gate_rule": "2-of-3: CALL when >=2 instruments clear 0.95 the same way and none contradicts by >0.20 the other way; p_gate = median",
  "instruments": {
-  "market_source": "Bookmaker outright odds, TNT Sports comparison dated 2026-10-20 13:50 BST, best price across bet365/BetMGM/Ladbrokes/William Hill/Betfred - PREDATES MW8 (City lost to Villa 24-Oct); staleness flagged",
+  "market_source": "Bookmaker outright odds, oddschecker.com PL page best price, fetched 2026-11-02 ~06:20 UTC (built-in browser), dated after MD9 incl. Liverpool v Arsenal 1-Nov; fractional 2/5, 8/1, 14/1, 16/1, 22/1",
   "model_note": "strength = games-played-shrunk PPG (k=12 prior games to league mean 1.37), fixed draw rate 0.24, 31 remaining games simulated independently, title by points then GD noise",
   "research_sha256": "97f4ad6849a78680a162dbb9ff73bd885dbb0d158bc680bf228bd934189e6f30"
  },
@@ -47,41 +47,41 @@
  ],
  "questions": [
   {
-   "p_gate": 0.48,
-   "p_market": 0.1868,
-   "p_model": 0.4802,
+   "p_gate": 0.2179,
+   "p_market": 0.1095,
+   "p_model": 0.2179,
    "p_research": 0.48,
    "q": "Man City win the title",
    "verdict": "WATCH"
   },
   {
-   "p_gate": 0.4627,
-   "p_market": 0.6103,
-   "p_model": 0.4627,
+   "p_gate": 0.6876,
+   "p_market": 0.7042,
+   "p_model": 0.6876,
    "p_research": 0.3,
    "q": "Arsenal win the title",
    "verdict": "WATCH"
   },
   {
-   "p_gate": 0.797,
-   "p_market": 0.797,
-   "p_model": 0.9429,
+   "p_gate": 0.8137,
+   "p_market": 0.8137,
+   "p_model": 0.9055,
    "p_research": 0.78,
    "q": "Winner in {Man City, Arsenal}",
    "verdict": "WATCH"
   },
   {
-   "p_gate": 0.0445,
-   "p_market": 0.0445,
-   "p_model": 0.0162,
+   "p_gate": 0.05,
+   "p_market": 0.058,
+   "p_model": 0.0038,
    "p_research": 0.05,
    "q": "Liverpool win the title",
    "verdict": "CALL-NO"
   },
   {
-   "p_gate": 0.9813,
-   "p_market": 0.9813,
-   "p_model": 0.9978,
+   "p_gate": 0.9803,
+   "p_market": 0.9803,
+   "p_model": 0.9965,
    "p_research": 0.92,
    "q": "Winner from current top 5",
    "verdict": "CALL-YES"
@@ -98,7 +98,7 @@
   "source": "Final official 2026-27 Premier League table (premierleague.com/tables) after the last matchday (~2027-05)"
  },
  "resolve_date": "2027-05",
- "run_at_utc": "2026-10-26T05:27:56+00:00",
+ "run_at_utc": "2026-11-02T11:51:43+00:00",
  "title": "Premier League Winner 2026-27",
  "tripwires": [
   {

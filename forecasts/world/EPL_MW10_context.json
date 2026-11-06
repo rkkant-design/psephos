@@ -1,0 +1,38 @@
+{
+ "matchweek": 10,
+ "built_utc": "2026-11-02T06:30:00+00:00",
+ "market": {
+  "source": "oddschecker.com PL coupon best-price 1X2",
+  "source_url": "https://www.oddschecker.com/football/english/premier-league",
+  "fetched_utc": "2026-11-02T06:20:00+00:00",
+  "odds_date": "2026-11-02",
+  "odds_format": "fractional",
+  "note": "Best available price per outcome across the UK books oddschecker lists (fetched in the built-in browser; WebFetch is 403'd). Man Utd v Aston Villa (M098, 8 Nov 16:30) was not on the coupon at fetch time - market columns left empty for it, per protocol (never use undated/remembered odds).",
+  "odds": {
+   "EPL2627-M094": {"home": "8/11", "draw": "3/1", "away": "18/5"},
+   "EPL2627-M097": {"home": "8/5", "draw": "5/2", "away": "7/4"},
+   "EPL2627-M091": {"home": "1/6", "draw": "7/1", "away": "18/1"},
+   "EPL2627-M095": {"home": "6/5", "draw": "11/4", "away": "11/5"},
+   "EPL2627-M099": {"home": "15/4", "draw": "3/1", "away": "7/10"},
+   "EPL2627-M096": {"home": "29/10", "draw": "11/4", "away": "1/1"},
+   "EPL2627-M093": {"home": "4/1", "draw": "13/4", "away": "4/6"},
+   "EPL2627-M100": {"home": "27/10", "draw": "13/5", "away": "106/100"},
+   "EPL2627-M092": {"home": "19/20", "draw": "3/1", "away": "27/10"}
+  }
+ },
+ "midweek_matches": {
+  "source": "uefa.com 2026-27 league-phase fixture lists (UCL MD4 3-4 Nov, UEL MD4 4-5 Nov, UECL MD3 5 Nov), fetched 2026-11-02 in the built-in browser. No EFL Cup round in the window (R4 was 27-29 Oct). PL-to-PL matches (e.g. Newcastle v Everton, Mon 2 Nov) are not cup/European and are not listed, per the v2 basis definition.",
+  "fetched_utc": "2026-11-02T06:28:00+00:00",
+  "matches": [
+   {"date": "2026-11-03", "competition": "UCL MD4", "teams": ["Aston Villa"], "note": "Barcelona v Aston Villa"},
+   {"date": "2026-11-03", "competition": "UCL MD4", "teams": ["Man Utd"], "note": "Man Utd v Roma"},
+   {"date": "2026-11-04", "competition": "UCL MD4", "teams": ["Liverpool"], "note": "Fenerbahce v Liverpool"},
+   {"date": "2026-11-04", "competition": "UCL MD4", "teams": ["Man City"], "note": "Leipzig v Man City"},
+   {"date": "2026-11-04", "competition": "UCL MD4", "teams": ["Arsenal"], "note": "Slavia Praha v Arsenal"},
+   {"date": "2026-11-05", "competition": "UEL MD4", "teams": ["Bournemouth"], "note": "Sparta Praha v Bournemouth"},
+   {"date": "2026-11-05", "competition": "UEL MD4", "teams": ["Crystal Palace"], "note": "Crystal Palace v Hoffenheim"},
+   {"date": "2026-11-05", "competition": "UEL MD4", "teams": ["Sunderland"], "note": "Sunderland v GNK Dinamo"},
+   {"date": "2026-11-05", "competition": "UECL MD3", "teams": ["Brighton"], "note": "Getafe v Brighton"}
+  ]
+ }
+}

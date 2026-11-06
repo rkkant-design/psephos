@@ -1,20 +1,20 @@
 {
-"generated": "2026-10-28",
+"generated": "2026-11-06",
 "track": {
 "retrodiction_calls": 28,
 "retrodiction_correct": 28,
-"forward_calls": 9,
-"forward_correct": 6,
-"lifetime_calls": 37,
-"lifetime_correct": 34,
-"live_open_calls": 35
+"forward_calls": 35,
+"forward_correct": 32,
+"lifetime_calls": 63,
+"lifetime_correct": 60,
+"live_open_calls": 8
 },
 "scoring": {
-"generated": "2026-10-28",
+"generated": "2026-11-06",
 "overall_binary": {
-"n": 61,
-"brier": 0.2718,
-"log": -1.3027
+"n": 117,
+"brier": 0.1419,
+"log": -0.6855
 },
 "india": {
 "n": 61,
@@ -34,24 +34,46 @@
 }
 },
 "world": {
-"n": 0,
-"brier": null,
-"log": null,
-"by_instrument": {}
+"n": 4,
+"brier": 0.0022,
+"log": -0.0478,
+"by_instrument": {
+"market": {
+"n": 2,
+"brier": 0.003,
+"log": -0.0566
+},
+"model": {
+"n": 2,
+"brier": 0.0015,
+"log": -0.0389
+}
+}
 },
 "us_races": {
-"n": 0,
-"brier": null,
-"log": null,
-"by_instrument": {},
+"n": 52,
+"brier": 0.0002,
+"log": -0.0105,
+"by_instrument": {
+"market": {
+"n": 26,
+"brier": 0.0002,
+"log": -0.0126
+},
+"model": {
+"n": 26,
+"brier": 0.0002,
+"log": -0.0085
+}
+},
 "note": "race-level US midterm rows (usmid_races_ledger.csv); dual instruments scored per race"
 },
 "skill_model_vs_market_us_races": {
-"n_questions": 0,
-"brier_model": null,
-"brier_market": null,
-"edge": null,
-"note": "no world question with both instruments has resolved yet"
+"n_questions": 26,
+"brier_model": 0.0002,
+"brier_market": 0.0002,
+"edge": 0.0,
+"note": "edge > 0 means the structural model beats the market on identical questions"
 },
 "research": {
 "n": 0,
@@ -60,66 +82,84 @@
 "note": "M_research (LLM research-forecaster) scored on calibrated p_research; same questions may also appear under india/world via their own instruments - each instrument answers for itself"
 },
 "matches": {
-"n": 10,
-"brier": 0.774,
-"log": -1.2516,
+"n": 19,
+"brier": 0.705,
+"log": -1.1612,
 "note": "three-way Brier, scale 0-2 (uniform ref 0.667); never pooled with binary"
 },
 "matches_skill_model_vs_market": {
-"n_matches": 0,
-"matchweeks": [],
-"note": "no resolved match carries market columns yet (v2 starts MW9)"
+"n_matches": 9,
+"n_matchweeks": 1,
+"brier_model": 0.6284,
+"brier_market": 0.5829,
+"edge": -0.0454,
+"matchweeks": [
+{
+"matchweek": 9,
+"n": 9,
+"brier_model": 0.6284,
+"brier_market": 0.5829,
+"edge": -0.0454,
+"winner": "market"
+}
+],
+"note": "3-way Brier (0-2 scale) on identical matches; edge > 0 means the model beats the de-vigged market"
 },
 "calibration": [
 {
 "bin": "0-5%",
-"n": 14,
-"claimed": 0.0,
-"realized": 0.143
+"n": 37,
+"claimed": 0.008,
+"realized": 0.054
 },
 {
 "bin": "5-20%",
-"n": 9,
-"claimed": 0.172,
-"realized": 0.444
+"n": 14,
+"claimed": 0.162,
+"realized": 0.357
 },
 {
 "bin": "20-40%",
-"n": 25,
-"claimed": 0.272,
-"realized": 0.44
+"n": 39,
+"claimed": 0.27,
+"realized": 0.333
 },
 {
 "bin": "40-60%",
-"n": 17,
-"claimed": 0.487,
-"realized": 0.176
+"n": 24,
+"claimed": 0.483,
+"realized": 0.333
 },
 {
 "bin": "60-80%",
-"n": 9,
-"claimed": 0.73,
-"realized": 0.444
+"n": 11,
+"claimed": 0.715,
+"realized": 0.455
 },
 {
 "bin": "80-95%",
-"n": 4,
-"claimed": 0.81,
-"realized": 0.5
+"n": 5,
+"claimed": 0.837,
+"realized": 0.6
 },
 {
 "bin": "95-100%",
-"n": 13,
-"claimed": 0.999,
-"realized": 0.692
+"n": 44,
+"claimed": 0.992,
+"realized": 0.909
 }
 ],
 "skill_model_vs_market": {
-"n_questions": 0,
-"brier_model": null,
-"brier_market": null,
-"edge": null,
-"note": "no world question with both instruments has resolved yet"
+"n_questions": 2,
+"brier_model": 0.0015,
+"brier_market": 0.003,
+"edge": 0.0016,
+"note": "edge > 0 means the structural model beats the market on identical questions",
+"n_with_research": 2,
+"brier_research_common": 0.01,
+"brier_market_common": 0.003,
+"brier_model_common": 0.0015,
+"research_note": "common-subset Briers: all three instruments on identical resolved questions"
 },
 "notes": [
 "Every resolved pre-registered probability is scored - WATCH rows included. Hit-rate on CALLs alone is gameable by abstention; this table is not.",
@@ -128,6 +168,90 @@
 ]
 },
 "changelog": [
+{
+"date": "2026-11-06",
+"entries": [
+{
+"title": "Resolved US Midterm Elections 2026",
+"items": [
+"2 probabilities scored at resolution; no calls had been issued"
+],
+"kind": "ledger"
+},
+{
+"title": "Resolved US Midterms 2026 race board",
+"items": [
+"26 probabilities scored at resolution; calls 26/26 right"
+],
+"kind": "ledger"
+}
+]
+},
+{
+"date": "2026-11-02",
+"entries": [
+{
+"title": "weekly run: USMID eve-of-election refresh, MW9 scored, MW10 pre-registered",
+"items": [
+"Polls admitted: none. UP newest vote-share still Matrize 29-Sep; PB SCORE 15-Oct; UK: two new polls (Tehelka Digital 27-Sep, Inside Election 10-Sep) are SEAT-ONLY -> not admitted to M3. Tripwires fired: none. Watched, not fired: UP SP-INC ...",
+"EPL: MW9 resolved 8/10 \u2014 favourites 5/8; 3-way Brier model 0.669 vs market 0.596 (market ahead, first skill week). Liverpool v Arsenal (1-Nov) not yet in the fixturedownload feed and Newcastle v Everton plays tonight -> both pending (never ...",
+"World: USMID2026 \u2014 fresh M_research pass committed BEFORE the market refresh (sha fb3db615...; House 0.90 unchanged, Senate 0.40 -> 0.52 on final-week polls; old dossier archived as dossiers/USMID2026_2026-10-23.json). Markets: House 0.915 ...",
+"Asks: 1 due -> unresolvable (gold \"31 Oct 2026\" was a Saturday: no LBMA PM fix or COMEX settlement exists for that date). Republish: yes. Anchors: 5 earlier manifests upgraded to complete; VERIFY OK; manifest 20261102T120026 stamped ...",
+"Flagged for user, not acted on: (1) EPL2027 research refresh SKIPPED deliberately: the MW10 match-odds page (oddschecker PL coupon) also displays title outrights, so the researcher saw prices before research could run \u2014 the 10-day-old ..."
+],
+"kind": "run"
+},
+{
+"title": "MW9 addendum (user-directed, same day as the weekly run)",
+"items": [
+"EPL: Liverpool v Arsenal entered the fixturedownload feed after the morning run: 0-1 Arsenal, resolved via epl_resolve.py (model had Arsenal away 55% \u2014 favourite hit). MW9 now 9/10: favourites 6/9, 3-way Brier model 0.628 vs market 0.583 ..."
+],
+"kind": "run"
+},
+{
+"title": "Re-registered Premier League Winner 2026-27",
+"items": [
+"5 probabilities re-hashed; no verdict changed"
+],
+"kind": "ledger"
+},
+{
+"title": "Re-registered US Midterm Elections 2026",
+"items": [
+"3 probabilities re-hashed; no verdict changed"
+],
+"kind": "ledger"
+},
+{
+"title": "Verdict changed on US Midterms 2026 race board",
+"items": [
+"Democrats win the 2026 New Jersey Senate race: CALL-YES -> WATCH-1INST"
+],
+"kind": "ledger"
+},
+{
+"title": "Scored Premier League matchweek 9",
+"items": [
+"9 fixtures resolved: favourites 6/9, mean 3-way Brier 0.628 (0.667 = guessing)"
+],
+"kind": "ledger"
+},
+{
+"title": "Pre-registered Premier League matchweek 10",
+"items": [
+"10 fixtures, probabilities locked before kickoff (sha 2245aa24...)"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced US Midterm Elections 2026",
+"items": [
+"3 questions, dossier hash-stamped (sha fb3db615...); written blind to market prices"
+],
+"kind": "ledger"
+}
+]
+},
 {
 "date": "2026-10-26",
 "entries": [
@@ -1231,9 +1355,9 @@
 "pH": 0.45,
 "pD": 0.25,
 "pA": 0.29,
-"outcome": null,
-"brier": null,
-"fav_hit": null
+"outcome": "H",
+"brier": 0.448,
+"fav_hit": true
 },
 {
 "home": "Bournemouth",
@@ -1242,9 +1366,9 @@
 "pH": 0.44,
 "pD": 0.25,
 "pA": 0.31,
-"outcome": null,
-"brier": null,
-"fav_hit": null
+"outcome": "H",
+"brier": 0.475,
+"fav_hit": true
 },
 {
 "home": "Brentford",
@@ -1253,9 +1377,9 @@
 "pH": 0.6,
 "pD": 0.22,
 "pA": 0.18,
-"outcome": null,
-"brier": null,
-"fav_hit": null
+"outcome": "H",
+"brier": 0.239,
+"fav_hit": true
 },
 {
 "home": "Coventry",
@@ -1264,9 +1388,9 @@
 "pH": 0.41,
 "pD": 0.25,
 "pA": 0.34,
-"outcome": null,
-"brier": null,
-"fav_hit": null
+"outcome": "H",
+"brier": 0.528,
+"fav_hit": true
 },
 {
 "home": "Hull",
@@ -1275,9 +1399,9 @@
 "pH": 0.46,
 "pD": 0.25,
 "pA": 0.29,
-"outcome": null,
-"brier": null,
-"fav_hit": null
+"outcome": "D",
+"brier": 0.856,
+"fav_hit": false
 },
 {
 "home": "Man City",
@@ -1286,9 +1410,9 @@
 "pH": 0.69,
 "pD": 0.19,
 "pA": 0.11,
-"outcome": null,
-"brier": null,
-"fav_hit": null
+"outcome": "A",
+"brier": 1.303,
+"fav_hit": false
 },
 {
 "home": "Spurs",
@@ -1297,9 +1421,9 @@
 "pH": 0.41,
 "pD": 0.25,
 "pA": 0.33,
-"outcome": null,
-"brier": null,
-"fav_hit": null
+"outcome": "H",
+"brier": 0.522,
+"fav_hit": true
 },
 {
 "home": "Aston Villa",
@@ -1308,9 +1432,9 @@
 "pH": 0.59,
 "pD": 0.23,
 "pA": 0.19,
-"outcome": null,
-"brier": null,
-"fav_hit": null
+"outcome": "D",
+"brier": 0.979,
+"fav_hit": false
 },
 {
 "home": "Liverpool",
@@ -1319,9 +1443,9 @@
 "pH": 0.22,
 "pD": 0.24,
 "pA": 0.55,
-"outcome": null,
-"brier": null,
-"fav_hit": null
+"outcome": "A",
+"brier": 0.305,
+"fav_hit": true
 },
 {
 "home": "Newcastle",
@@ -1330,6 +1454,146 @@
 "pH": 0.42,
 "pD": 0.25,
 "pA": 0.33,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+}
+],
+"mw_summary": {
+"n": 9,
+"brier3": 0.628,
+"fav_hits": 6
+},
+"flags": [
+"Single-instrument model forecasts (shrunk-PPG Poisson, stated priors): scored on Brier/log, never gate-CALLed.",
+"Three-way Brier scale 0-2; uniform guess scores 0.667."
+],
+"tripwires": [],
+"resolution": {
+"source": "fixturedownload.com epl-2026 feed final score; league result after 90min+stoppage; abandoned match resolves on the completed restaging; awarded/forfeited results count as the official score",
+"rules": []
+},
+"sha": "c7640d3cd162c3565e4f03e2c74a52d174ffc50df713f59af6c0ac7807dcd7e5"
+},
+{
+"id": "EPLMW10",
+"state": "Premier League",
+"st": "",
+"year": 2027,
+"status": "live",
+"domain": "Football",
+"kind": "matches",
+"title": "Premier League 2026-27 \u00b7 Matchweek 10",
+"freeze": "2026-11-02",
+"blocs": [],
+"questions": [],
+"matches": [
+{
+"home": "Everton",
+"away": "Coventry",
+"date": "2026-11-06",
+"pH": 0.54,
+"pD": 0.24,
+"pA": 0.22,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Leeds",
+"away": "Spurs",
+"date": "2026-11-07",
+"pH": 0.47,
+"pD": 0.25,
+"pA": 0.28,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Arsenal",
+"away": "Hull",
+"date": "2026-11-07",
+"pH": 0.87,
+"pD": 0.11,
+"pA": 0.02,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Fulham",
+"away": "Newcastle",
+"date": "2026-11-07",
+"pH": 0.41,
+"pD": 0.25,
+"pA": 0.33,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Nott'm Forest",
+"away": "Man City",
+"date": "2026-11-07",
+"pH": 0.1,
+"pD": 0.18,
+"pA": 0.72,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Brighton",
+"away": "Brentford",
+"date": "2026-11-08",
+"pH": 0.54,
+"pD": 0.24,
+"pA": 0.22,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Crystal Palace",
+"away": "Liverpool",
+"date": "2026-11-08",
+"pH": 0.23,
+"pD": 0.24,
+"pA": 0.53,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Ipswich",
+"away": "Bournemouth",
+"date": "2026-11-08",
+"pH": 0.35,
+"pD": 0.26,
+"pA": 0.4,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Sunderland",
+"away": "Chelsea",
+"date": "2026-11-08",
+"pH": 0.29,
+"pD": 0.25,
+"pA": 0.46,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Man Utd",
+"away": "Aston Villa",
+"date": "2026-11-08",
+"pH": 0.4,
+"pD": 0.25,
+"pA": 0.34,
 "outcome": null,
 "brier": null,
 "fav_hit": null
@@ -1345,7 +1609,7 @@
 "source": "fixturedownload.com epl-2026 feed final score; league result after 90min+stoppage; abandoned match resolves on the completed restaging; awarded/forfeited results count as the official score",
 "rules": []
 },
-"sha": "c7640d3cd162c3565e4f03e2c74a52d174ffc50df713f59af6c0ac7807dcd7e5"
+"sha": "2245aa24e6a64f4d4f156f30a9a19db6bf5813fcabf982b177003008476833b4"
 },
 {
 "id": "EPL2027",
@@ -1355,7 +1619,7 @@
 "status": "live",
 "domain": "Football",
 "title": "Premier League Winner 2026-27",
-"freeze": "2026-10-26",
+"freeze": "2026-11-02",
 "blocs": [
 {
 "name": "Arsenal",
@@ -1368,8 +1632,8 @@
 "p_maj": null,
 "p_largest": null,
 "actual": null,
-"p_market": 0.6103,
-"p_model": 0.4627
+"p_market": 0.7042,
+"p_model": 0.6876
 },
 {
 "name": "Man City",
@@ -1382,22 +1646,8 @@
 "p_maj": null,
 "p_largest": null,
 "actual": null,
-"p_market": 0.1868,
-"p_model": 0.4802
-},
-{
-"name": "Chelsea",
-"base": null,
-"m2": null,
-"m3": null,
-"p5": null,
-"med": null,
-"p95": null,
-"p_maj": null,
-"p_largest": null,
-"actual": null,
-"p_market": 0.0849,
-"p_model": 0.0025
+"p_market": 0.1095,
+"p_model": 0.2179
 },
 {
 "name": "Brighton",
@@ -1410,8 +1660,8 @@
 "p_maj": null,
 "p_largest": null,
 "actual": null,
-"p_market": 0.0549,
-"p_model": 0.0362
+"p_market": 0.0657,
+"p_model": 0.0776
 },
 {
 "name": "Liverpool",
@@ -1424,11 +1674,11 @@
 "p_maj": null,
 "p_largest": null,
 "actual": null,
-"p_market": 0.0445,
-"p_model": 0.0162
+"p_market": 0.058,
+"p_model": 0.0038
 },
 {
-"name": "Aston Villa",
+"name": "Chelsea",
 "base": null,
 "m2": null,
 "m3": null,
@@ -1438,8 +1688,8 @@
 "p_maj": null,
 "p_largest": null,
 "actual": null,
-"p_market": null,
-"p_model": 0.0007
+"p_market": 0.0429,
+"p_model": 0.0096
 },
 {
 "name": "Brentford",
@@ -1453,10 +1703,10 @@
 "p_largest": null,
 "actual": null,
 "p_market": null,
-"p_model": 0.0004
+"p_model": 0.0018
 },
 {
-"name": "Everton",
+"name": "Bournemouth",
 "base": null,
 "m2": null,
 "m3": null,
@@ -1467,38 +1717,52 @@
 "p_largest": null,
 "actual": null,
 "p_market": null,
-"p_model": 0.0003
+"p_model": 0.0005
+},
+{
+"name": "Aston Villa",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": null,
+"p_model": 0.0005
 }
 ],
 "questions": [
 {
 "q": "Man City win the title",
-"p2": 0.48,
-"p3": 0.19,
+"p2": 0.22,
+"p3": 0.11,
 "verdict": "WATCH",
 "outcome": null,
 "correct": null
 },
 {
 "q": "Arsenal win the title",
-"p2": 0.46,
-"p3": 0.61,
+"p2": 0.69,
+"p3": 0.7,
 "verdict": "WATCH",
 "outcome": null,
 "correct": null
 },
 {
 "q": "Winner in {Man City, Arsenal}",
-"p2": 0.94,
-"p3": 0.8,
+"p2": 0.91,
+"p3": 0.81,
 "verdict": "WATCH",
 "outcome": null,
 "correct": null
 },
 {
 "q": "Liverpool win the title",
-"p2": 0.02,
-"p3": 0.04,
+"p2": 0.0,
+"p3": 0.06,
 "verdict": "CALL-NO",
 "outcome": null,
 "correct": null
@@ -1542,9 +1806,9 @@
 ],
 "source": "Final official 2026-27 Premier League table (premierleague.com/tables) after the last matchday (~2027-05)"
 },
-"sha": "7432664089859633a3611c4191b10f5a6428d3da51e3f71a816be94fced23e27",
+"sha": "8146c7a9e7aa7c0813edb853da367ad46082d7796bef798f36036c2db3a01787",
 "instruments": {
-"market_source": "Bookmaker outright odds, TNT Sports comparison dated 2026-10-20 13:50 BST, best price across bet365/BetMGM/Ladbrokes/William Hill/Betfred - PREDATES MW8 (City lost to Villa 24-Oct); staleness flagged",
+"market_source": "Bookmaker outright odds, oddschecker.com PL page best price, fetched 2026-11-02 ~06:20 UTC (built-in browser), dated after MD9 incl. Liverpool v Arsenal 1-Nov; fractional 2/5, 8/1, 14/1, 16/1, 22/1",
 "model_note": "strength = games-played-shrunk PPG (k=12 prior games to league mean 1.37), fixed draw rate 0.24, 31 remaining games simulated independently, title by points then GD noise",
 "research_sha256": "97f4ad6849a78680a162dbb9ff73bd885dbb0d158bc680bf228bd934189e6f30"
 },
@@ -2451,10 +2715,10 @@
 "state": "US Midterm Elections 2026",
 "st": "",
 "year": 2026,
-"status": "live",
+"status": "resolved-forward",
 "domain": "US elections",
 "title": "US Midterm Elections 2026",
-"freeze": "2026-10-26",
+"freeze": "2026-11-02",
 "blocs": [
 {
 "name": "house_dem",
@@ -2467,7 +2731,7 @@
 "p_maj": null,
 "p_largest": null,
 "actual": null,
-"p_market": 0.915,
+"p_market": 0.945,
 "p_model": null
 },
 {
@@ -2481,7 +2745,7 @@
 "p_maj": null,
 "p_largest": null,
 "actual": null,
-"p_market": 0.645,
+"p_market": 0.725,
 "p_model": null
 },
 {
@@ -2495,31 +2759,31 @@
 "p_maj": null,
 "p_largest": null,
 "actual": null,
-"p_market": 0.085,
+"p_market": 0.055,
 "p_model": null
 }
 ],
 "questions": [
 {
 "q": "Democrats win House majority",
-"p2": 0.97,
-"p3": 0.92,
+"p2": 0.96,
+"p3": 0.94,
 "verdict": "WATCH",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
 "q": "Republicans keep House majority",
-"p2": 0.03,
-"p3": 0.09,
+"p2": 0.04,
+"p3": 0.06,
 "verdict": "WATCH",
-"outcome": null,
+"outcome": "NO",
 "correct": null
 },
 {
 "q": "Democrats win Senate majority",
-"p2": 0.55,
-"p3": 0.65,
+"p2": 0.52,
+"p3": 0.72,
 "verdict": "WATCH",
 "outcome": null,
 "correct": null
@@ -2551,11 +2815,11 @@
 ],
 "source": "Official state certifications as aggregated by Associated Press race calls; control counted at the seating of the 120th Congress (2027-01-03)"
 },
-"sha": "a7ef9acc52c382120cc3cdea9cc55f61186d5fdac85d43f7b11fbf106945fb2c",
+"sha": "78a560112322f3b8f42e7f89ed38eaca3e2efcc7f6ad243cdf49787ce0b01955",
 "instruments": {
-"market_source": "Polymarket (gamma-api), fetched 2026-10-26 (which-party-will-win-the-house/senate-in-2026); senate_dem moved 0.675 -> 0.645 since 10-24",
-"model_note": "Silver Bulletin average D+9.1 (2026-10-23); prior D+8.9 (10-07); Pew D+8 (10-10), Reuters/Ipsos D+12 (10-20) consistent",
-"research_sha256": "219c6a66a8ea38432d1cc64cd36026d4517615c01297e8a13960b1b4f8fc715f"
+"market_source": "Polymarket (gamma-api events which-party-will-win-the-house/senate-in-2026), fetched 2026-11-02 ~07:30 UTC; house_dem 0.915 -> 0.945 (bid .94/ask .95), senate_dem 0.645 -> 0.725 (bid .72/ask .73) since 10-26",
+"model_note": "Silver Bulletin average D 51.2 / R 42.5 = D+8.7 as reported by Newsweek ~2026-11-01 (prior D+9.1 on 10-23); RCP 10/8-10/29 D+8.4, PollCheck (11-01) D+8.2 consistent",
+"research_sha256": "fb3db6150f40afea763d30b09e78f39e7c604c1d66b74f6831bc197fecb7d9f2"
 },
 "resolve_date": "2026-11-03",
 "races": [
@@ -2564,10 +2828,10 @@
 "state": "Alabama",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.0451,
-"p_model": 0.2167,
+"p_market": 0.0471,
+"p_model": 0.2058,
 "verdict": "WATCH",
-"disagreement": 0.1716,
+"disagreement": 0.1587,
 "inc_party": "R",
 "inc_running": "none",
 "note": "open, Ivey term-limited",
@@ -2580,7 +2844,7 @@
 "office": "governor",
 "seat": "regular",
 "p_market": null,
-"p_model": 0.58,
+"p_model": 0.5652,
 "verdict": "WATCH-1INST",
 "disagreement": null,
 "inc_party": "R",
@@ -2594,10 +2858,10 @@
 "state": "Arizona",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.905,
-"p_model": 0.8653,
+"p_market": 0.935,
+"p_model": 0.8569,
 "verdict": "WATCH",
-"disagreement": 0.0397,
+"disagreement": 0.0781,
 "inc_party": "D",
 "inc_running": "elected",
 "note": "Hobbs seeks re-election",
@@ -2609,10 +2873,10 @@
 "state": "Arkansas",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.0296,
-"p_model": 0.1037,
+"p_market": 0.0191,
+"p_model": 0.097,
 "verdict": "WATCH",
-"disagreement": 0.0741,
+"disagreement": 0.0779,
 "inc_party": "R",
 "inc_running": "elected",
 "note": "Sanders renominated",
@@ -2625,7 +2889,7 @@
 "office": "governor",
 "seat": "regular",
 "p_market": null,
-"p_model": 0.9813,
+"p_model": 0.9795,
 "verdict": "WATCH-1INST",
 "disagreement": null,
 "inc_party": "D",
@@ -2639,10 +2903,10 @@
 "state": "Colorado",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.9685,
-"p_model": 0.9414,
+"p_market": 0.975,
+"p_model": 0.9369,
 "verdict": "WATCH",
-"disagreement": 0.0271,
+"disagreement": 0.0381,
 "inc_party": "D",
 "inc_running": "none",
 "note": "open, Polis term-limited",
@@ -2654,25 +2918,25 @@
 "state": "Connecticut",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.968,
-"p_model": 0.9874,
+"p_market": 0.977,
+"p_model": 0.9861,
 "verdict": "CALL-YES",
-"disagreement": 0.0194,
+"disagreement": 0.0091,
 "inc_party": "D",
 "inc_running": "elected",
 "note": "Lamont seeks third term",
-"outcome": null,
-"correct": null
+"outcome": "YES",
+"correct": true
 },
 {
 "race_id": "GOV-FLORIDA",
 "state": "Florida",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.1791,
-"p_model": 0.58,
+"p_market": 0.4039,
+"p_model": 0.5652,
 "verdict": "WATCH",
-"disagreement": 0.4009,
+"disagreement": 0.1613,
 "inc_party": "R",
 "inc_running": "none",
 "note": "open, DeSantis term-limited",
@@ -2684,10 +2948,10 @@
 "state": "Georgia",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.615,
-"p_model": 0.7937,
+"p_market": 0.702,
+"p_model": 0.7828,
 "verdict": "WATCH",
-"disagreement": 0.1787,
+"disagreement": 0.0808,
 "inc_party": "R",
 "inc_running": "none",
 "note": "open, Kemp term-limited",
@@ -2699,25 +2963,25 @@
 "state": "Hawaii",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.9884,
-"p_model": 0.9968,
+"p_market": 0.989,
+"p_model": 0.9964,
 "verdict": "CALL-YES",
-"disagreement": 0.0084,
+"disagreement": 0.0074,
 "inc_party": "D",
 "inc_running": "elected",
 "note": "Green renominated",
-"outcome": null,
-"correct": null
+"outcome": "YES",
+"correct": true
 },
 {
 "race_id": "GOV-IDAHO",
 "state": "Idaho",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.0245,
-"p_model": 0.0553,
+"p_market": 0.0125,
+"p_model": 0.0512,
 "verdict": "WATCH",
-"disagreement": 0.0308,
+"disagreement": 0.0387,
 "inc_party": "R",
 "inc_running": "elected",
 "note": "Little renominated",
@@ -2729,25 +2993,25 @@
 "state": "Illinois",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.971,
-"p_model": 0.979,
+"p_market": 0.988,
+"p_model": 0.977,
 "verdict": "CALL-YES",
-"disagreement": 0.008,
+"disagreement": 0.011,
 "inc_party": "D",
 "inc_running": "elected",
 "note": "Pritzker renominated",
-"outcome": null,
-"correct": null
+"outcome": "YES",
+"correct": true
 },
 {
 "race_id": "GOV-IOWA",
 "state": "Iowa",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.875,
-"p_model": 0.5778,
+"p_market": 0.8693,
+"p_model": 0.563,
 "verdict": "WATCH",
-"disagreement": 0.2972,
+"disagreement": 0.3063,
 "inc_party": "R",
 "inc_running": "none",
 "note": "open, Reynolds retiring",
@@ -2759,10 +3023,10 @@
 "state": "Kansas",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.2576,
-"p_model": 0.5128,
+"p_market": 0.2944,
+"p_model": 0.4977,
 "verdict": "WATCH",
-"disagreement": 0.2552,
+"disagreement": 0.2033,
 "inc_party": "D",
 "inc_running": "none",
 "note": "open, Kelly term-limited",
@@ -2774,10 +3038,10 @@
 "state": "Maine",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.9627,
-"p_model": 0.909,
+"p_market": 0.9695,
+"p_model": 0.9027,
 "verdict": "WATCH",
-"disagreement": 0.0537,
+"disagreement": 0.0668,
 "inc_party": "D",
 "inc_running": "none",
 "note": "open, Mills term-limited",
@@ -2789,40 +3053,40 @@
 "state": "Maryland",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.977,
-"p_model": 0.9988,
+"p_market": 0.9955,
+"p_model": 0.9986,
 "verdict": "CALL-YES",
-"disagreement": 0.0218,
+"disagreement": 0.0031,
 "inc_party": "D",
 "inc_running": "elected",
 "note": "Moore renominated",
-"outcome": null,
-"correct": null
+"outcome": "YES",
+"correct": true
 },
 {
 "race_id": "GOV-MASSACHUSETT",
 "state": "Massachusetts",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.9625,
-"p_model": 0.9978,
+"p_market": 0.979,
+"p_model": 0.9975,
 "verdict": "CALL-YES",
-"disagreement": 0.0353,
+"disagreement": 0.0185,
 "inc_party": "D",
 "inc_running": "elected",
 "note": "Healey renominated",
-"outcome": null,
-"correct": null
+"outcome": "YES",
+"correct": true
 },
 {
 "race_id": "GOV-MICHIGAN",
 "state": "Michigan",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.9424,
-"p_model": 0.8064,
+"p_market": 0.951,
+"p_model": 0.7958,
 "verdict": "WATCH",
-"disagreement": 0.136,
+"disagreement": 0.1552,
 "inc_party": "D",
 "inc_running": "none",
 "note": "open, Whitmer term-limited",
@@ -2834,10 +3098,10 @@
 "state": "Minnesota",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.956,
-"p_model": 0.8813,
+"p_market": 0.9785,
+"p_model": 0.8737,
 "verdict": "WATCH",
-"disagreement": 0.0747,
+"disagreement": 0.1048,
 "inc_party": "D",
 "inc_running": "none",
 "note": "open, Walz retiring",
@@ -2849,10 +3113,10 @@
 "state": "Nebraska",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.135,
-"p_model": 0.2454,
+"p_market": 0.09,
+"p_model": 0.2337,
 "verdict": "WATCH",
-"disagreement": 0.1104,
+"disagreement": 0.1437,
 "inc_party": "R",
 "inc_running": "elected",
 "note": "Pillen renominated",
@@ -2864,10 +3128,10 @@
 "state": "Nevada",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.6734,
-"p_model": 0.6165,
+"p_market": 0.7772,
+"p_model": 0.602,
 "verdict": "WATCH",
-"disagreement": 0.0569,
+"disagreement": 0.1752,
 "inc_party": "R",
 "inc_running": "elected",
 "note": "Lombardo renominated",
@@ -2879,10 +3143,10 @@
 "state": "New Hampshire",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.0505,
-"p_model": 0.7358,
+"p_market": 0.1488,
+"p_model": 0.7233,
 "verdict": "WATCH",
-"disagreement": 0.6853,
+"disagreement": 0.5745,
 "inc_party": "R",
 "inc_running": "elected",
 "note": "Ayotte renominated; 2-year term",
@@ -2894,10 +3158,10 @@
 "state": "New Mexico",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.9505,
-"p_model": 0.9004,
+"p_market": 0.9574,
+"p_model": 0.8936,
 "verdict": "WATCH",
-"disagreement": 0.0501,
+"disagreement": 0.0638,
 "inc_party": "D",
 "inc_running": "none",
 "note": "open, Lujan Grisham term-limited",
@@ -2909,25 +3173,25 @@
 "state": "New York",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.954,
-"p_model": 0.9834,
+"p_market": 0.9705,
+"p_model": 0.9818,
 "verdict": "CALL-YES",
-"disagreement": 0.0294,
+"disagreement": 0.0113,
 "inc_party": "D",
 "inc_running": "elected",
 "note": "Hochul renominated",
-"outcome": null,
-"correct": null
+"outcome": "YES",
+"correct": true
 },
 {
 "race_id": "GOV-OHIO",
 "state": "Ohio",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.8209,
-"p_model": 0.6216,
+"p_market": 0.815,
+"p_model": 0.6071,
 "verdict": "WATCH",
-"disagreement": 0.1993,
+"disagreement": 0.2079,
 "inc_party": "R",
 "inc_running": "none",
 "note": "open, DeWine term-limited",
@@ -2940,9 +3204,9 @@
 "office": "governor",
 "seat": "regular",
 "p_market": 0.0796,
-"p_model": 0.159,
+"p_model": 0.15,
 "verdict": "WATCH",
-"disagreement": 0.0794,
+"disagreement": 0.0704,
 "inc_party": "R",
 "inc_running": "none",
 "note": "open, Stitt term-limited",
@@ -2954,10 +3218,10 @@
 "state": "Oregon",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.8308,
-"p_model": 0.987,
+"p_market": 0.8434,
+"p_model": 0.9857,
 "verdict": "WATCH",
-"disagreement": 0.1562,
+"disagreement": 0.1423,
 "inc_party": "D",
 "inc_running": "elected",
 "note": "Kotek renominated",
@@ -2969,10 +3233,10 @@
 "state": "Pennsylvania",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.977,
-"p_model": 0.9065,
+"p_market": 0.9825,
+"p_model": 0.9,
 "verdict": "WATCH",
-"disagreement": 0.0705,
+"disagreement": 0.0825,
 "inc_party": "D",
 "inc_running": "elected",
 "note": "Shapiro renominated",
@@ -2984,25 +3248,25 @@
 "state": "Rhode Island",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.9876,
-"p_model": 0.9578,
+"p_market": 0.9883,
+"p_model": 0.9543,
 "verdict": "CALL-YES",
-"disagreement": 0.0298,
+"disagreement": 0.034,
 "inc_party": "D",
 "inc_running": "none",
 "note": "McKee lost Dem renomination to Foulkes",
-"outcome": null,
-"correct": null
+"outcome": "YES",
+"correct": true
 },
 {
 "race_id": "GOV-SOUTHCAROLIN",
 "state": "South Carolina",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.0663,
-"p_model": 0.4722,
+"p_market": 0.0436,
+"p_model": 0.4572,
 "verdict": "WATCH",
-"disagreement": 0.4059,
+"disagreement": 0.4136,
 "inc_party": "R",
 "inc_running": "none",
 "note": "open, McMaster term-limited",
@@ -3014,10 +3278,10 @@
 "state": "South Dakota",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.0207,
-"p_model": 0.1973,
+"p_market": 0.0136,
+"p_model": 0.187,
 "verdict": "WATCH",
-"disagreement": 0.1766,
+"disagreement": 0.1734,
 "inc_party": "R",
 "inc_running": "appointed",
 "note": "Rhoden succeeded Noem 2025, seeks full term",
@@ -3029,10 +3293,10 @@
 "state": "Tennessee",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.0447,
-"p_model": 0.2302,
+"p_market": 0.0439,
+"p_model": 0.2189,
 "verdict": "WATCH",
-"disagreement": 0.1855,
+"disagreement": 0.175,
 "inc_party": "R",
 "inc_running": "none",
 "note": "open, Lee term-limited",
@@ -3044,10 +3308,10 @@
 "state": "Texas",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.2941,
-"p_model": 0.3806,
+"p_market": 0.3637,
+"p_model": 0.3663,
 "verdict": "WATCH",
-"disagreement": 0.0865,
+"disagreement": 0.0026,
 "inc_party": "R",
 "inc_running": "elected",
 "note": "Abbott renominated",
@@ -3059,10 +3323,10 @@
 "state": "Vermont",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.2477,
-"p_model": 0.988,
+"p_market": 0.3091,
+"p_model": 0.9867,
 "verdict": "WATCH",
-"disagreement": 0.7403,
+"disagreement": 0.6776,
 "inc_party": "R",
 "inc_running": "elected",
 "note": "Scott renominated; 2-year term",
@@ -3074,10 +3338,10 @@
 "state": "Wisconsin",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.806,
-"p_model": 0.814,
+"p_market": 0.845,
+"p_model": 0.8038,
 "verdict": "WATCH",
-"disagreement": 0.008,
+"disagreement": 0.0412,
 "inc_party": "D",
 "inc_running": "none",
 "note": "open, Evers retiring",
@@ -3089,30 +3353,30 @@
 "state": "Wyoming",
 "office": "governor",
 "seat": "regular",
-"p_market": 0.0196,
-"p_model": 0.0495,
+"p_market": 0.0035,
+"p_model": 0.0457,
 "verdict": "CALL-NO",
-"disagreement": 0.0299,
+"disagreement": 0.0422,
 "inc_party": "R",
 "inc_running": "none",
 "note": "open, Gordon term-limited",
-"outcome": null,
-"correct": null
+"outcome": "NO",
+"correct": true
 },
 {
 "race_id": "SEN-ALABAMA",
 "state": "Alabama",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.0125,
-"p_model": 0.0081,
+"p_market": 0.016,
+"p_model": 0.0069,
 "verdict": "CALL-NO",
-"disagreement": 0.0044,
+"disagreement": 0.0091,
 "inc_party": "R",
 "inc_running": "none",
 "note": "open, Tuberville running for governor",
-"outcome": null,
-"correct": null
+"outcome": "NO",
+"correct": true
 },
 {
 "race_id": "SEN-ALASKA",
@@ -3120,7 +3384,7 @@
 "office": "senate",
 "seat": "class2",
 "p_market": null,
-"p_model": 0.2697,
+"p_model": 0.2513,
 "verdict": "WATCH-1INST",
 "disagreement": null,
 "inc_party": "R",
@@ -3134,55 +3398,55 @@
 "state": "Arkansas",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.049,
-"p_model": 0.0022,
+"p_market": 0.0356,
+"p_model": 0.0019,
 "verdict": "CALL-NO",
-"disagreement": 0.0468,
+"disagreement": 0.0337,
 "inc_party": "R",
 "inc_running": "elected",
 "note": "Cotton renominated",
-"outcome": null,
-"correct": null
+"outcome": "NO",
+"correct": true
 },
 {
 "race_id": "SEN-COLORADO",
 "state": "Colorado",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.99,
-"p_model": 0.9995,
+"p_market": 0.9945,
+"p_model": 0.9994,
 "verdict": "CALL-YES",
-"disagreement": 0.0095,
+"disagreement": 0.0049,
 "inc_party": "D",
 "inc_running": "elected",
 "note": "Hickenlooper renominated",
-"outcome": null,
-"correct": null
+"outcome": "YES",
+"correct": true
 },
 {
 "race_id": "SEN-DELAWARE",
 "state": "Delaware",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.9745,
+"p_market": 0.9855,
 "p_model": 0.9999,
 "verdict": "CALL-YES",
-"disagreement": 0.0254,
+"disagreement": 0.0144,
 "inc_party": "D",
 "inc_running": "elected",
 "note": "Coons renominated",
-"outcome": null,
-"correct": null
+"outcome": "YES",
+"correct": true
 },
 {
 "race_id": "SEN-FLORIDA-SP",
 "state": "Florida",
 "office": "senate",
 "seat": "special",
-"p_market": 0.085,
-"p_model": 0.3704,
+"p_market": 0.125,
+"p_model": 0.3492,
 "verdict": "WATCH",
-"disagreement": 0.2854,
+"disagreement": 0.2242,
 "inc_party": "R",
 "inc_running": "appointed",
 "note": "Moody appointed to Rubio seat, running in special",
@@ -3194,10 +3458,10 @@
 "state": "Georgia",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.963,
-"p_model": 0.9476,
+"p_market": 0.9695,
+"p_model": 0.9413,
 "verdict": "WATCH",
-"disagreement": 0.0154,
+"disagreement": 0.0282,
 "inc_party": "D",
 "inc_running": "elected",
 "note": "Ossoff vs Collins (R)",
@@ -3216,33 +3480,33 @@
 "inc_party": "R",
 "inc_running": "elected",
 "note": "Risch; Dem nominee withdrew, independent main challenger",
-"outcome": null,
-"correct": null
+"outcome": "NO",
+"correct": true
 },
 {
 "race_id": "SEN-ILLINOIS",
 "state": "Illinois",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.9825,
-"p_model": 0.9979,
+"p_market": 0.9925,
+"p_model": 0.9975,
 "verdict": "CALL-YES",
-"disagreement": 0.0154,
+"disagreement": 0.005,
 "inc_party": "D",
 "inc_running": "none",
 "note": "open, Durbin retiring",
-"outcome": null,
-"correct": null
+"outcome": "YES",
+"correct": true
 },
 {
 "race_id": "SEN-IOWA",
 "state": "Iowa",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.425,
-"p_model": 0.4199,
+"p_market": 0.4755,
+"p_model": 0.3979,
 "verdict": "WATCH",
-"disagreement": 0.0051,
+"disagreement": 0.0776,
 "inc_party": "R",
 "inc_running": "none",
 "note": "open, Ernst retiring; competitive",
@@ -3254,10 +3518,10 @@
 "state": "Kansas",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.3869,
-"p_model": 0.1597,
+"p_market": 0.6089,
+"p_model": 0.1464,
 "verdict": "WATCH",
-"disagreement": 0.2272,
+"disagreement": 0.4625,
 "inc_party": "R",
 "inc_running": "elected",
 "note": "Marshall vs Hamilton (D); competitive",
@@ -3269,25 +3533,25 @@
 "state": "Kentucky",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.0284,
-"p_model": 0.0081,
+"p_market": 0.035,
+"p_model": 0.0069,
 "verdict": "CALL-NO",
-"disagreement": 0.0203,
+"disagreement": 0.0281,
 "inc_party": "R",
 "inc_running": "none",
 "note": "open, McConnell retiring",
-"outcome": null,
-"correct": null
+"outcome": "NO",
+"correct": true
 },
 {
 "race_id": "SEN-LOUISIANA",
 "state": "Louisiana",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.075,
-"p_model": 0.093,
+"p_market": 0.125,
+"p_model": 0.084,
 "verdict": "WATCH",
-"disagreement": 0.018,
+"disagreement": 0.041,
 "inc_party": "R",
 "inc_running": "none",
 "note": "Cassidy lost renomination; Letlow (R) nominee",
@@ -3299,10 +3563,10 @@
 "state": "Maine",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.645,
-"p_model": 0.9733,
+"p_market": 0.7286,
+"p_model": 0.9696,
 "verdict": "WATCH",
-"disagreement": 0.3283,
+"disagreement": 0.241,
 "inc_party": "R",
 "inc_running": "elected",
 "note": "Collins vs Jackson (D); only R seat in Harris state",
@@ -3314,25 +3578,25 @@
 "state": "Massachusetts",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.983,
+"p_market": 0.9935,
 "p_model": 1.0,
 "verdict": "CALL-YES",
-"disagreement": 0.017,
+"disagreement": 0.0065,
 "inc_party": "D",
 "inc_running": "elected",
 "note": "Markey renominated",
-"outcome": null,
-"correct": null
+"outcome": "YES",
+"correct": true
 },
 {
 "race_id": "SEN-MICHIGAN",
 "state": "Michigan",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.705,
-"p_model": 0.9031,
+"p_market": 0.797,
+"p_model": 0.8931,
 "verdict": "WATCH",
-"disagreement": 0.1981,
+"disagreement": 0.0961,
 "inc_party": "D",
 "inc_running": "none",
 "note": "open, Peters retiring; most competitive D-held",
@@ -3344,10 +3608,10 @@
 "state": "Minnesota",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.8607,
-"p_model": 0.9779,
+"p_market": 0.9356,
+"p_model": 0.9748,
 "verdict": "WATCH",
-"disagreement": 0.1172,
+"disagreement": 0.0392,
 "inc_party": "D",
 "inc_running": "none",
 "note": "open, Smith retiring",
@@ -3359,10 +3623,10 @@
 "state": "Mississippi",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.125,
-"p_model": 0.0314,
+"p_market": 0.135,
+"p_model": 0.0276,
 "verdict": "WATCH",
-"disagreement": 0.0936,
+"disagreement": 0.1074,
 "inc_party": "R",
 "inc_running": "elected",
 "note": "Hyde-Smith; somewhat competitive",
@@ -3375,9 +3639,9 @@
 "office": "senate",
 "seat": "class2",
 "p_market": 0.0016,
-"p_model": 0.1457,
+"p_model": 0.1332,
 "verdict": "WATCH",
-"disagreement": 0.1441,
+"disagreement": 0.1316,
 "inc_party": "R",
 "inc_running": "none",
 "note": "open, Daines retiring",
@@ -3396,18 +3660,18 @@
 "inc_party": "R",
 "inc_running": "elected",
 "note": "Ricketts vs Osborn (I); Dems endorsed Osborn, no Dem nominee",
-"outcome": null,
-"correct": null
+"outcome": "NO",
+"correct": true
 },
 {
 "race_id": "SEN-NEWHAMPSHIRE",
 "state": "New Hampshire",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.915,
-"p_model": 0.9667,
+"p_market": 0.945,
+"p_model": 0.9623,
 "verdict": "WATCH",
-"disagreement": 0.0517,
+"disagreement": 0.0173,
 "inc_party": "D",
 "inc_running": "none",
 "note": "open, Shaheen retiring; competitive",
@@ -3419,10 +3683,10 @@
 "state": "New Jersey",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.985,
-"p_model": 0.996,
-"verdict": "CALL-YES",
-"disagreement": 0.011,
+"p_market": null,
+"p_model": 0.9953,
+"verdict": "WATCH-1INST",
+"disagreement": null,
 "inc_party": "D",
 "inc_running": "elected",
 "note": "Booker renominated",
@@ -3434,25 +3698,25 @@
 "state": "New Mexico",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.9744,
-"p_model": 0.9962,
+"p_market": 0.995,
+"p_model": 0.9955,
 "verdict": "CALL-YES",
-"disagreement": 0.0218,
+"disagreement": 0.0005,
 "inc_party": "D",
 "inc_running": "elected",
 "note": "Lujan renominated",
-"outcome": null,
-"correct": null
+"outcome": "YES",
+"correct": true
 },
 {
 "race_id": "SEN-NORTHCAROLIN",
 "state": "North Carolina",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.966,
-"p_model": 0.8578,
+"p_market": 0.9795,
+"p_model": 0.8447,
 "verdict": "WATCH",
-"disagreement": 0.1082,
+"disagreement": 0.1348,
 "inc_party": "R",
 "inc_running": "none",
 "note": "open, Tillis retiring; Cooper (D) favored",
@@ -3464,10 +3728,10 @@
 "state": "Ohio",
 "office": "senate",
 "seat": "special",
-"p_market": 0.685,
-"p_model": 0.4645,
+"p_market": 0.725,
+"p_model": 0.4421,
 "verdict": "WATCH",
-"disagreement": 0.2205,
+"disagreement": 0.2829,
 "inc_party": "R",
 "inc_running": "appointed",
 "note": "Husted appointed to Vance seat vs Brown (D)",
@@ -3479,55 +3743,55 @@
 "state": "Oklahoma",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.0186,
-"p_model": 0.0019,
+"p_market": 0.0095,
+"p_model": 0.0016,
 "verdict": "CALL-NO",
-"disagreement": 0.0167,
+"disagreement": 0.0079,
 "inc_party": "R",
 "inc_running": "none",
 "note": "open; interim appointee barred from running; Hern (R) vs Thomas (D)",
-"outcome": null,
-"correct": null
+"outcome": "NO",
+"correct": true
 },
 {
 "race_id": "SEN-OREGON",
 "state": "Oregon",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.987,
+"p_market": 0.989,
 "p_model": 0.9999,
 "verdict": "CALL-YES",
-"disagreement": 0.0129,
+"disagreement": 0.0109,
 "inc_party": "D",
 "inc_running": "elected",
 "note": "Merkley renominated",
-"outcome": null,
-"correct": null
+"outcome": "YES",
+"correct": true
 },
 {
 "race_id": "SEN-RHODEISLAND",
 "state": "Rhode Island",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.9845,
-"p_model": 0.9999,
+"p_market": 0.9925,
+"p_model": 0.9998,
 "verdict": "CALL-YES",
-"disagreement": 0.0154,
+"disagreement": 0.0073,
 "inc_party": "D",
 "inc_running": "elected",
 "note": "Reed; solid D",
-"outcome": null,
-"correct": null
+"outcome": "YES",
+"correct": true
 },
 {
 "race_id": "SEN-SOUTHCAROLIN",
 "state": "South Carolina",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.204,
-"p_model": 0.1731,
+"p_market": 0.3119,
+"p_model": 0.159,
 "verdict": "WATCH",
-"disagreement": 0.0309,
+"disagreement": 0.1529,
 "inc_party": "R",
 "inc_running": "appointed",
 "note": "Darline Graham (R) appointed after Lindsey Graham died 2026-07-11; running vs Andrews (D)",
@@ -3539,40 +3803,40 @@
 "state": "South Dakota",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.0016,
+"p_market": 0.0005,
 "p_model": 0.01,
 "verdict": "CALL-NO",
-"disagreement": 0.0084,
+"disagreement": 0.0095,
 "inc_party": "R",
 "inc_running": "elected",
 "note": "Rounds; Dem nominee withdrew, independent main challenger",
-"outcome": null,
-"correct": null
+"outcome": "NO",
+"correct": true
 },
 {
 "race_id": "SEN-TENNESSEE",
 "state": "Tennessee",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.0385,
-"p_model": 0.0032,
+"p_market": 0.0185,
+"p_model": 0.0027,
 "verdict": "CALL-NO",
-"disagreement": 0.0353,
+"disagreement": 0.0158,
 "inc_party": "R",
 "inc_running": "elected",
 "note": "Hagerty; solid R",
-"outcome": null,
-"correct": null
+"outcome": "NO",
+"correct": true
 },
 {
 "race_id": "SEN-TEXAS",
 "state": "Texas",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.6313,
-"p_model": 0.3952,
+"p_market": 0.755,
+"p_model": 0.3736,
 "verdict": "WATCH",
-"disagreement": 0.2361,
+"disagreement": 0.3814,
 "inc_party": "R",
 "inc_running": "none",
 "note": "Cornyn lost renomination; Paxton (R) vs Talarico (D)",
@@ -3584,70 +3848,70 @@
 "state": "Virginia",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.9825,
-"p_model": 0.9959,
+"p_market": 0.992,
+"p_model": 0.9951,
 "verdict": "CALL-YES",
-"disagreement": 0.0134,
+"disagreement": 0.0031,
 "inc_party": "D",
 "inc_running": "elected",
 "note": "Warner; solid D",
-"outcome": null,
-"correct": null
+"outcome": "YES",
+"correct": true
 },
 {
 "race_id": "SEN-WESTVIRGINIA",
 "state": "West Virginia",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.0175,
+"p_market": 0.014,
 "p_model": 0.0,
 "verdict": "CALL-NO",
-"disagreement": 0.0175,
+"disagreement": 0.014,
 "inc_party": "R",
 "inc_running": "elected",
 "note": "Capito; solid R",
-"outcome": null,
-"correct": null
+"outcome": "NO",
+"correct": true
 },
 {
 "race_id": "SEN-WYOMING",
 "state": "Wyoming",
 "office": "senate",
 "seat": "class2",
-"p_market": 0.013,
+"p_market": 0.0115,
 "p_model": 0.0,
 "verdict": "CALL-NO",
-"disagreement": 0.013,
+"disagreement": 0.0115,
 "inc_party": "R",
 "inc_running": "none",
 "note": "open, Lummis retiring",
-"outcome": null,
-"correct": null
+"outcome": "NO",
+"correct": true
 }
 ],
-"races_sha": "ffe4c93dc76b23cf9bbc8e2b383ba0b7de1d3e5858856703b825b8cb877ba7f6",
-"races_freeze": "2026-10-25",
+"races_sha": "97d30b57e866e8b85a921413a7f243b9b602bbc39a98efaf76352b659e4cdbcd",
+"races_freeze": "2026-11-02",
 "senate_control": {
 "held_not_up": 34,
 "med": 51,
 "p5": 47,
 "p95": 56,
-"p_dem_control": 0.5465,
+"p_dem_control": 0.5174,
 "seats_needed": 51
 },
 "governor_wins": {
-"mean": 24.0,
+"mean": 23.72,
 "med": 24,
 "n_races": 36,
-"p5": 19,
+"p5": 18,
 "p95": 29
 },
 "house_seats": {
-"med": 247,
+"med": 246,
 "note": "seats-votes curve from the generic ballot; consistency check against the registered chamber probit, not a new ledger row",
-"p5": 218,
-"p95": 276,
-"p_dem_majority": 0.9534,
+"p5": 216,
+"p95": 275,
+"p_dem_majority": 0.9424,
 "seat_noise": 8.0,
 "sigma_gb": 3.5,
 "spp": 4.5,
@@ -3812,7 +4076,7 @@
 }
 ]
 },
-"races_market_source": "Polymarket gamma-api public-search (anonymous), fetched 2026-10-24T16:56:29+00:00"
+"races_market_source": "Polymarket gamma-api public-search (anonymous), fetched 2026-11-02T05:55:14+00:00"
 },
 {
 "id": "WB2026",

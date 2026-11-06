@@ -1,0 +1,120 @@
+{
+ "calibration": {
+  "a": 1.0,
+  "b": 0.0
+ },
+ "committed_at_utc": "2026-10-23T09:41:35+00:00",
+ "domain": "US elections",
+ "dossier_sha256": "219c6a66a8ea38432d1cc64cd36026d4517615c01297e8a13960b1b4f8fc715f",
+ "forecast_id": "USMID2026",
+ "freeze_date": "2026-10-23",
+ "independence_attestation": "No betting odds, prediction-market prices or forecast-aggregator numbers were fetched or consulted during this research pass. Honesty caveat: the engine's config files (which contain market blocks) were read earlier in this session for integration work; the numbers below were built base-rate-first from the cited research sources and no market figure is cited, used, or averaged in.",
+ "questions": [
+  {
+   "base_rate_used": {
+    "reference_class": "Postwar midterms where the out-party needed a single-digit net seat gain and led late generic-ballot polling by 5+ points (1954, 2006, 2018 are the cleanest analogs); the president's party has lost House seats in all but two postwar midterms",
+    "source": "Standard postwar midterm record; 2018 analog: D+8.6 generic ballot -> +40 seats",
+    "value": 0.85
+   },
+   "evidence": [
+    "Silver Bulletin generic-ballot average D+8.9 (2026-10-07), a cycle high; Pew D+8 (RV); CBS/YouGov D+9; one dissenting tracker (plusminus4) at D+5.2",
+    "Redistricting raised the bar: Axios (2026-06) estimates Dems must now outrun Harris 2024 by ~4.9 pts nationally (was 3.1); Cook (2026-07-29) says Dems need 57 of 77 competitive seats but retain a path in a poor environment for the party in power",
+    "Special elections: Multistate tracker has Dems running a median +10.4 pts over 2024 presidential baseline across 42 contested 2026 state-leg specials (+12.6 turnout-weighted); Downballot average +11 in 2026",
+    "Dems need only ~3 net seats on paper; the redistricting-adjusted effective threshold is roughly a D+3 to D+5 national margin"
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-07",
+     "title": "Silver Bulletin generic ballot average",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls"
+    },
+    {
+     "date": "2026-06-07",
+     "title": "Axios: How Republicans made the House harder for Democrats to win",
+     "url": "https://axios.com/2026/06/07/redistricting-gerrymander-house-republicans-democrats"
+    },
+    {
+     "date": "2026-10",
+     "title": "Multistate special-election swing tracker",
+     "url": "https://www.multistate.us/elections/special-swing"
+    },
+    {
+     "date": "2026-07-29",
+     "title": "Cook Political Report via Washington Examiner: 57 of 77 competitive seats",
+     "url": "https://www.washingtonexaminer.com/?p=4667675"
+    }
+   ],
+   "p_raw": 0.9,
+   "p_research": 0.9,
+   "q": "Democrats win House majority",
+   "reasoning_summary": "Base rate ~0.85 for an out-party needing single digits with a 5+ point late lead. Polled margin D+8-9 (central estimate) against a redistricting-raised threshold of ~D+3-5 leaves ~4 pts of cushion, about one sigma of generic-ballot-to-outcome error; special elections independently corroborate a strong Dem environment. Downweight slightly for the D+5 dissenting average, untested maps, and residual pro-R polling-miss risk in recent cycles. Land at 0.90.",
+   "strongest_opposing_case": "The averages disagree: if the true national margin is the dissenting D+5 rather than D+9, it sits barely above the ~D+5 upper-bound threshold Axios implies post-redistricting, and an ordinary 2020/2022-style polling miss toward Republicans (2-4 pts) makes the race a coin flip. Special-election overperformance historically moderates by November (2018 pattern), and new maps have no electoral history, so seat-level efficiency estimates carry extra variance."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "Complement of the class above: president's party holding the House against a 5+ point late generic-ballot deficit (postwar: rare)",
+    "source": "Same postwar midterm record, inverted",
+    "value": 0.15
+   },
+   "evidence": [
+    "Same evidence set as 'Democrats win House majority', inverted",
+    "Republicans' live path is the polling-error + redistricting-efficiency combination: a 3-4 pt pro-R miss on a true D+5 margin keeps the majority on the new maps"
+   ],
+   "key_sources": [
+    {
+     "date": "2026-10-07",
+     "title": "Silver Bulletin generic ballot average",
+     "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls"
+    },
+    {
+     "date": "2026-06-07",
+     "title": "Axios redistricting analysis",
+     "url": "https://axios.com/2026/06/07/redistricting-gerrymander-house-republicans-democrats"
+    }
+   ],
+   "p_raw": 0.1,
+   "p_research": 0.1,
+   "q": "Republicans keep House majority",
+   "reasoning_summary": "Scored as the near-complement of the Dem-majority question (resolution rules make exactly one of the two YES at seating, since vacancies count for the party that won them). 1 - 0.90 = 0.10.",
+   "strongest_opposing_case": "The strongest case FOR Republicans keeping the House is the same as the opposing case above: a D+5 true margin plus a 2022-style polling miss and favorable new maps. It is real but requires two things to break their way simultaneously."
+  },
+  {
+   "base_rate_used": {
+    "reference_class": "Postwar midterms in which the out-party gained 4+ Senate seats: roughly 6-7 of ~20 midterms (1958, 1986, 1994, 2006, 2014 among them), i.e. ~0.30 unconditionally; higher conditional on a confirmed wave environment, lower when the map requires flipping safe-partisan states",
+    "source": "Postwar Senate midterm seat-change record",
+    "value": 0.3
+   },
+   "evidence": [
+    "Arithmetic: 53-47 R; Dems need net +4 while holding Georgia (Ossoff), open Michigan, open New Hampshire and open Minnesota",
+    "Sabato (2026-06) moved North Carolina (open, Cooper vs Whatley) toward Dems; pure toss-ups listed: Alaska, Ohio, Maine, Michigan; Maine Dem nominee Platner after Mills withdrew",
+    "Path requires ME + NC plus two more from Alaska/Ohio/Iowa/Texas-tier states - all states Trump carried comfortably in 2024",
+    "Environment evidence (generic ballot D+8-9, specials +10-13) is the same wave signal that delivered exactly the needed sweep in the 2006 analog"
+   ],
+   "key_sources": [
+    {
+     "date": "2026-06-11",
+     "title": "Sabato's Crystal Ball ratings via States Newsroom: AK/OH/ME/MI toss-ups, NC toward Dems",
+     "url": "https://alaskabeacon.com/2026/06/11/repub/strong-candidates-in-alaska-ohio-seen-as-moving-us-senate-races-toward-dems/"
+    },
+    {
+     "date": "2026",
+     "title": "Washington Examiner: Democrats map out narrow Senate path",
+     "url": "https://www.washingtonexaminer.com/news/campaigns/4419146/democrats-senate-path-2026/"
+    },
+    {
+     "date": "2026-10",
+     "title": "Multistate special-election swing tracker (environment)",
+     "url": "https://www.multistate.us/elections/special-swing"
+    }
+   ],
+   "p_raw": 0.4,
+   "p_research": 0.4,
+   "q": "Democrats win Senate majority",
+   "reasoning_summary": "Base rate ~0.30 for a 4+ seat out-party midterm gain. Upgrade for the confirmed wave environment and unusually good recruitment (Cooper in NC, competitive AK/OH candidates); downgrade because the marginal two flips must come from solidly red states in the straight-ticket era, and because GA/MI are genuine toss-ups to hold. Those forces roughly offset to slightly above base: 0.40.",
+   "strongest_opposing_case": "In 2006 the Dems' six flips were purple states; here flips #3 and #4 must come from states with an 8-10 pt structural Republican lean, and split-ticket voting has collapsed since 2016 - no Senate candidate of the president's opposition has recently won a state their presidential ticket lost by double digits in a midterm. Holding all four Dem-held competitive seats (GA, MI, NH, MN) is itself not free. The wave can be fully real and still leave Dems at 50-51 R."
+  }
+ ],
+ "researcher": "claude-fable-5, in-session research pass (M_research v1)",
+ "resolution_source": "Official state certifications as aggregated by Associated Press race calls; control counted at the seating of the 120th Congress (2027-01-03)",
+ "resolve_date": "2026-11-03"
+}

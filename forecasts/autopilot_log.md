@@ -96,3 +96,29 @@ Append-only run reports from the `psephos-autopilot` scheduled task (protocol: A
   desktop app must be open at fire time. For Nov 8, either (a) keep the app open that
   morning, or (b) run the build manually on the due date. The harness + fill scripts
   (fb_fill_oct25.py pattern) are reusable; only the dated question set changes.
+
+## 2026-11-02 — weekly run: USMID eve-of-election refresh, MW9 scored, MW10 pre-registered
+
+**Polls admitted:** none. UP newest vote-share still Matrize 29-Sep; PB SCORE 15-Oct; UK: two new polls (Tehelka Digital 27-Sep, Inside Election 10-Sep) are SEAT-ONLY -> not admitted to M3. **Tripwires fired:** none. Watched, not fired: UP SP-INC seat-sharing still disputed (INC lists 170-200 seats vs SP ~60-70; SP's Ramashankar Rajbhar claims it is "finalised" — single-source, unconfirmed); BSP going solo, ASP independent (no BSP-ASP tie-up); PB no SAD-BJP/BSP/WPD alliance (latest BJP statements deny); UK quiet; no EC 2027 schedule. **Flags:** PB WPD flag unchanged (no new WPD datum). **Insider flow:** no new qualifying events; signal pre-registered — UP NDA strong (1.0), PB WPD moderate (0.714), labels unchanged. **Moments:** no new by-poll or EC schedule; calendar untouched. **India re-runs:** none.
+
+**EPL:** MW9 resolved 8/10 — favourites 5/8; 3-way Brier model 0.669 vs market 0.596 (market ahead, first skill week). Liverpool v Arsenal (1-Nov) not yet in the fixturedownload feed and Newcastle v Everton plays tonight -> both pending (never resolved from memory). MW10 pre-registered (v2, 10 matches, freeze 2026-11-02, sha `2245aa24...`); odds: oddschecker PL coupon best price, fetched 2026-11-02 via the built-in browser (WebFetch 403) — 9/10 fixtures (Man Utd v Villa not on the coupon -> market empty); congestion basis from uefa.com UCL MD4 / UEL MD4 / UECL MD3 lists (Arsenal, City, Liverpool, Palace, Bournemouth, Sunderland, Brighton flagged). Largest model-market gaps: Leeds 47% vs 37%; Forest-City away 72% vs 56%; Ipswich 35% vs 25%.
+
+**World:** USMID2026 — fresh M_research pass committed BEFORE the market refresh (sha `fb3db615...`; House 0.90 unchanged, Senate 0.40 -> 0.52 on final-week polls; old dossier archived as dossiers/USMID2026_2026-10-23.json). Markets: House 0.915 -> 0.945, Senate 0.645 -> 0.725; generic ballot D+9.1 -> D+8.7 (Silver via Newsweek; RCP D+8.4). Race board re-registered (5 races moved 10+ pts: KS-Sen 0.38->0.61, FL-Gov 0.18->0.40, ME-Sen, MI-Sen, TX-Sen; 8 races failed the first sweep to rate limiting and were re-fetched individually): sha `97d30b57...`, 15 CALL-YES / 11 CALL-NO / 41 WATCH / 4 WATCH-1INST; Senate roll-up 0.5465 -> 0.5174. Chamber re-run sha `78a56011...`: all three questions stay WATCH (House .945/.962/.90; Senate .725/.517/.52). EPL2027 re-run (MD9 table; dated outrights oddschecker 2026-11-02): model Arsenal 0.463 -> 0.688, City 0.480 -> 0.218; market Arsenal 0.704; verdicts unchanged (Liverpool CALL-NO, top-5 CALL-YES, rest WATCH), sha `8146c7a9...`. CWC2027: ratings drift under the 5-pt tripwire (Pakistan 104, SL 94, Zimbabwe 63; Ireland 53->44 on an internally inconsistent Wikipedia page, immaterial) — no re-run.
+
+**Asks:** 1 due -> unresolvable (gold "31 Oct 2026" was a Saturday: no LBMA PM fix or COMEX settlement exists for that date). **Republish:** yes. **Anchors:** 5 earlier manifests upgraded to complete; VERIFY OK; manifest 20261102T120026 stamped (pending).
+
+**Flagged for user, not acted on:** (1) EPL2027 research refresh SKIPPED deliberately: the MW10 match-odds page (oddschecker PL coupon) also displays title outrights, so the researcher saw prices before research could run — the 10-day-old dossier stands. Suggest fetching match odds from a fixture-only page, or running the EPL2027 research step before the EPL match section. (2) Ask-tab sample question "gold on 31 Oct" points at a weekend date; consider rewording to a business day. (3) gamma-api rate-limits the race sweep (~10 min, 8 silent misses); a retry pass inside usmid_fetch_markets.py would help (tooling change = user decision). (4) Election night: Nov 9 run resolves races per the AP-call procedure.
+
+## 2026-11-02 — MW9 addendum (user-directed, same day as the weekly run)
+
+**EPL:** Liverpool v Arsenal entered the fixturedownload feed after the morning run: 0-1 Arsenal, resolved via `epl_resolve.py` (model had Arsenal away 55% — favourite hit). MW9 now 9/10: favourites 6/9, 3-way Brier model 0.628 vs market 0.583 (market still ahead, week 1 of the skill table). Newcastle v Everton (tonight) stays pending — next run picks it up. Re-scored, rebuilt, republished (artifact v22). No other changes.
+
+## 2026-11-06 - US midterms resolved (the decided races)
+Democrats won the House (multiple outlets); Senate still contested/uncalled in sources
+(Michigan too close; conflicting reports) - LEFT PENDING per the "no contested-margin
+resolution" rule. Resolved the 26 certified race CALLs (all safe deep-blue/deep-red
+states, none among the 7 flipped Senate seats): 26/26 CORRECT (15 CALL-YES Dem-wins held,
+11 CALL-NO Dem-loses held). Every upset of the night (TX/KS/IA/OH/ME/NC/SC Senate flips,
+Michigan) landed in a WATCH row, never a CALL. Lifetime certified CALLs: 34/37 -> 60/63
+(95.2%). App republished v24; ledger re-anchored. Remaining WATCH races + Senate control
+resolve on certification.

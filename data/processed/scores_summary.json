@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-28",
+ "generated": "2026-11-06",
  "overall_binary": {
-  "n": 61,
-  "brier": 0.2718,
-  "log": -1.3027
+  "n": 117,
+  "brier": 0.1419,
+  "log": -0.6855
  },
  "india": {
   "n": 61,
@@ -23,24 +23,46 @@
   }
  },
  "world": {
-  "n": 0,
-  "brier": null,
-  "log": null,
-  "by_instrument": {}
+  "n": 4,
+  "brier": 0.0022,
+  "log": -0.0478,
+  "by_instrument": {
+   "market": {
+    "n": 2,
+    "brier": 0.003,
+    "log": -0.0566
+   },
+   "model": {
+    "n": 2,
+    "brier": 0.0015,
+    "log": -0.0389
+   }
+  }
  },
  "us_races": {
-  "n": 0,
-  "brier": null,
-  "log": null,
-  "by_instrument": {},
+  "n": 52,
+  "brier": 0.0002,
+  "log": -0.0105,
+  "by_instrument": {
+   "market": {
+    "n": 26,
+    "brier": 0.0002,
+    "log": -0.0126
+   },
+   "model": {
+    "n": 26,
+    "brier": 0.0002,
+    "log": -0.0085
+   }
+  },
   "note": "race-level US midterm rows (usmid_races_ledger.csv); dual instruments scored per race"
  },
  "skill_model_vs_market_us_races": {
-  "n_questions": 0,
-  "brier_model": null,
-  "brier_market": null,
-  "edge": null,
-  "note": "no world question with both instruments has resolved yet"
+  "n_questions": 26,
+  "brier_model": 0.0002,
+  "brier_market": 0.0002,
+  "edge": 0.0,
+  "note": "edge > 0 means the structural model beats the market on identical questions"
  },
  "research": {
   "n": 0,
@@ -49,66 +71,84 @@
   "note": "M_research (LLM research-forecaster) scored on calibrated p_research; same questions may also appear under india/world via their own instruments - each instrument answers for itself"
  },
  "matches": {
-  "n": 10,
-  "brier": 0.774,
-  "log": -1.2516,
+  "n": 19,
+  "brier": 0.705,
+  "log": -1.1612,
   "note": "three-way Brier, scale 0-2 (uniform ref 0.667); never pooled with binary"
  },
  "matches_skill_model_vs_market": {
-  "n_matches": 0,
-  "matchweeks": [],
-  "note": "no resolved match carries market columns yet (v2 starts MW9)"
+  "n_matches": 9,
+  "n_matchweeks": 1,
+  "brier_model": 0.6284,
+  "brier_market": 0.5829,
+  "edge": -0.0454,
+  "matchweeks": [
+   {
+    "matchweek": 9,
+    "n": 9,
+    "brier_model": 0.6284,
+    "brier_market": 0.5829,
+    "edge": -0.0454,
+    "winner": "market"
+   }
+  ],
+  "note": "3-way Brier (0-2 scale) on identical matches; edge > 0 means the model beats the de-vigged market"
  },
  "calibration": [
   {
    "bin": "0-5%",
-   "n": 14,
-   "claimed": 0.0,
-   "realized": 0.143
+   "n": 37,
+   "claimed": 0.008,
+   "realized": 0.054
   },
   {
    "bin": "5-20%",
-   "n": 9,
-   "claimed": 0.172,
-   "realized": 0.444
+   "n": 14,
+   "claimed": 0.162,
+   "realized": 0.357
   },
   {
    "bin": "20-40%",
-   "n": 25,
-   "claimed": 0.272,
-   "realized": 0.44
+   "n": 39,
+   "claimed": 0.27,
+   "realized": 0.333
   },
   {
    "bin": "40-60%",
-   "n": 17,
-   "claimed": 0.487,
-   "realized": 0.176
+   "n": 24,
+   "claimed": 0.483,
+   "realized": 0.333
   },
   {
    "bin": "60-80%",
-   "n": 9,
-   "claimed": 0.73,
-   "realized": 0.444
+   "n": 11,
+   "claimed": 0.715,
+   "realized": 0.455
   },
   {
    "bin": "80-95%",
-   "n": 4,
-   "claimed": 0.81,
-   "realized": 0.5
+   "n": 5,
+   "claimed": 0.837,
+   "realized": 0.6
   },
   {
    "bin": "95-100%",
-   "n": 13,
-   "claimed": 0.999,
-   "realized": 0.692
+   "n": 44,
+   "claimed": 0.992,
+   "realized": 0.909
   }
  ],
  "skill_model_vs_market": {
-  "n_questions": 0,
-  "brier_model": null,
-  "brier_market": null,
-  "edge": null,
-  "note": "no world question with both instruments has resolved yet"
+  "n_questions": 2,
+  "brier_model": 0.0015,
+  "brier_market": 0.003,
+  "edge": 0.0016,
+  "note": "edge > 0 means the structural model beats the market on identical questions",
+  "n_with_research": 2,
+  "brier_research_common": 0.01,
+  "brier_market_common": 0.003,
+  "brier_model_common": 0.0015,
+  "research_note": "common-subset Briers: all three instruments on identical resolved questions"
  },
  "notes": [
   "Every resolved pre-registered probability is scored - WATCH rows included. Hit-rate on CALLs alone is gameable by abstention; this table is not.",

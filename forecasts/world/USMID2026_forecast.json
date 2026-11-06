@@ -2,19 +2,19 @@
  "domain": "US elections",
  "entity_probs": {
   "market": {
-   "house_dem": 0.915,
-   "house_rep": 0.085,
-   "senate_dem": 0.645
+   "house_dem": 0.945,
+   "house_rep": 0.055,
+   "senate_dem": 0.725
   },
   "model": {}
  },
  "forecast_id": "USMID2026",
- "freeze_date": "2026-10-26",
+ "freeze_date": "2026-11-02",
  "gate_rule": "2-of-3: CALL when >=2 instruments clear 0.95 the same way and none contradicts by >0.20 the other way; p_gate = median",
  "instruments": {
-  "market_source": "Polymarket (gamma-api), fetched 2026-10-26 (which-party-will-win-the-house/senate-in-2026); senate_dem moved 0.675 -> 0.645 since 10-24",
-  "model_note": "Silver Bulletin average D+9.1 (2026-10-23); prior D+8.9 (10-07); Pew D+8 (10-10), Reuters/Ipsos D+12 (10-20) consistent",
-  "research_sha256": "219c6a66a8ea38432d1cc64cd36026d4517615c01297e8a13960b1b4f8fc715f"
+  "market_source": "Polymarket (gamma-api events which-party-will-win-the-house/senate-in-2026), fetched 2026-11-02 ~07:30 UTC; house_dem 0.915 -> 0.945 (bid .94/ask .95), senate_dem 0.645 -> 0.725 (bid .72/ask .73) since 10-26",
+  "model_note": "Silver Bulletin average D 51.2 / R 42.5 = D+8.7 as reported by Newsweek ~2026-11-01 (prior D+9.1 on 10-23); RCP 10/8-10/29 D+8.4, PollCheck (11-01) D+8.2 consistent",
+  "research_sha256": "fb3db6150f40afea763d30b09e78f39e7c604c1d66b74f6831bc197fecb7d9f2"
  },
  "quality_flags": [
   "Resolves in 10 days - the fastest real-world test the world engine will get.",
@@ -23,26 +23,26 @@
  ],
  "questions": [
   {
-   "p_gate": 0.915,
-   "p_market": 0.915,
-   "p_model": 0.9703,
+   "p_gate": 0.945,
+   "p_market": 0.945,
+   "p_model": 0.9618,
    "p_research": 0.9,
    "q": "Democrats win House majority",
    "verdict": "WATCH"
   },
   {
-   "p_gate": 0.085,
-   "p_market": 0.085,
-   "p_model": 0.0297,
+   "p_gate": 0.055,
+   "p_market": 0.055,
+   "p_model": 0.0382,
    "p_research": 0.1,
    "q": "Republicans keep House majority",
    "verdict": "WATCH"
   },
   {
-   "p_gate": 0.5465,
-   "p_market": 0.645,
-   "p_model": 0.5465,
-   "p_research": 0.4,
+   "p_gate": 0.52,
+   "p_market": 0.725,
+   "p_model": 0.5174,
+   "p_research": 0.52,
    "q": "Democrats win Senate majority",
    "verdict": "WATCH"
   }
@@ -59,7 +59,7 @@
   "source": "Official state certifications as aggregated by Associated Press race calls; control counted at the seating of the 120th Congress (2027-01-03)"
  },
  "resolve_date": "2026-11-03",
- "run_at_utc": "2026-10-26T05:27:55+00:00",
+ "run_at_utc": "2026-11-02T11:59:32+00:00",
  "title": "US Midterm Elections 2026",
  "tripwires": [
   {

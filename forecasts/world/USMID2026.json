@@ -2,24 +2,24 @@
   "forecast_id": "USMID2026",
   "title": "US Midterm Elections 2026",
   "domain": "US elections",
-  "freeze_date": "2026-10-26",
+  "freeze_date": "2026-11-02",
   "resolve_date": "2026-11-03",
   "adapter": "us_house",
   "research": true,
   "market": {
-    "source": "Polymarket (gamma-api), fetched 2026-10-26 (which-party-will-win-the-house/senate-in-2026); senate_dem moved 0.675 -> 0.645 since 10-24",
-    "house_dem": 0.915,
-    "senate_dem": 0.645
+    "source": "Polymarket (gamma-api events which-party-will-win-the-house/senate-in-2026), fetched 2026-11-02 ~07:30 UTC; house_dem 0.915 -> 0.945 (bid .94/ask .95), senate_dem 0.645 -> 0.725 (bid .72/ask .73) since 10-26",
+    "house_dem": 0.945,
+    "senate_dem": 0.725
   },
   "model": {
-    "generic_ballot_margin": 9.1,
-    "margin_source": "Silver Bulletin average D+9.1 (2026-10-23); prior D+8.9 (10-07); Pew D+8 (10-10), Reuters/Ipsos D+12 (10-20) consistent",
+    "generic_ballot_margin": 8.7,
+    "margin_source": "Silver Bulletin average D 51.2 / R 42.5 = D+8.7 as reported by Newsweek ~2026-11-01 (prior D+9.1 on 10-23); RCP 10/8-10/29 D+8.4, PollCheck (11-01) D+8.2 consistent",
     "tipping_point": 2.5,
     "tipping_note": "post-redistricting analyses: GOP can lose House popular vote by ~1 pt and keep control; Dems need roughly D+2-3",
     "sigma": 3.5,
     "sigma_note": "historical generic-ballot-to-outcome error plus 10 days of drift",
-    "senate_model": 0.5465,
-    "senate_note": "race-level correlated Monte Carlo roll-up, USMIDRACES2026 run 2026-10-24 (sha ffe4c93d...): 35 per-seat structural probits, one shared national error (sd 5), 100k sims; Dems need 51 with 34 held seats not up"
+    "senate_model": 0.5174,
+    "senate_note": "race-level correlated Monte Carlo roll-up, USMIDRACES2026 re-registered 2026-11-02 (sha 97d30b57...; generic ballot D+8.7, markets fetched 2026-11-02): 35 per-seat structural probits, one shared national error (sd 5), 100k sims; Dem seats p5/med/p95 47/51/56; prior run 2026-10-24 gave 0.5465"
   },
   "resolution": {
     "source": "Official state certifications as aggregated by Associated Press race calls; control counted at the seating of the 120th Congress (2027-01-03)",
@@ -33,9 +33,21 @@
     ]
   },
   "questions": [
-    {"q": "Democrats win House majority", "market": "house_dem", "model": "house_dem"},
-    {"q": "Republicans keep House majority", "market": "house_rep", "model": "house_rep"},
-    {"q": "Democrats win Senate majority", "market": "senate_dem", "model": "senate_dem"}
+    {
+      "q": "Democrats win House majority",
+      "market": "house_dem",
+      "model": "house_dem"
+    },
+    {
+      "q": "Republicans keep House majority",
+      "market": "house_rep",
+      "model": "house_rep"
+    },
+    {
+      "q": "Democrats win Senate majority",
+      "market": "senate_dem",
+      "model": "senate_dem"
+    }
   ],
   "quality_flags": [
     "Resolves in 10 days - the fastest real-world test the world engine will get.",
@@ -43,7 +55,13 @@
     "Model tipping-point (+2.5) is taken from published redistricting analyses, not fitted by us."
   ],
   "tripwires": [
-    {"watch": "Generic-ballot average moves 3+ points before Nov 3", "effect": "re-run"},
-    {"watch": "Polymarket House price crosses 0.95 either way", "effect": "re-run; dual gate may become decidable"}
+    {
+      "watch": "Generic-ballot average moves 3+ points before Nov 3",
+      "effect": "re-run"
+    },
+    {
+      "watch": "Polymarket House price crosses 0.95 either way",
+      "effect": "re-run; dual gate may become decidable"
+    }
   ]
 }
