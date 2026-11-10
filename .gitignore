@@ -27,3 +27,6 @@ scratchpad/
 
 # Keep: forecasts/ (pre-registration ledgers), data/processed/, reports/,
 #       docs/, site/, forecasts/anchors/ (OpenTimestamps proofs)
+
+# OpenTimestamps shim backups
+forecasts/anchors/*.ots.bak

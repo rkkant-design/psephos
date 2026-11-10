@@ -1,0 +1,69 @@
+{
+ "matchweek": 11,
+ "built_utc": "2026-11-10T05:36:11+00:00",
+ "market": {
+  "source": "oddschecker.com PL coupon best-price 1X2",
+  "source_url": "https://www.oddschecker.com/football/english/premier-league",
+  "fetched_utc": "2026-11-10T05:36:11+00:00",
+  "odds_date": "2026-11-10",
+  "odds_format": "fractional",
+  "note": "Best available price per outcome as shown on the oddschecker PL page (fetched in the built-in browser). Fetched 11 days before kickoff, during the Nov 9-17 international break - early prices; all 10 fixtures listed.",
+  "odds": {
+   "EPL2627-M108": {
+    "home": "10/21",
+    "draw": "4/1",
+    "away": "6/1"
+   },
+   "EPL2627-M104": {
+    "home": "10/11",
+    "draw": "11/4",
+    "away": "16/5"
+   },
+   "EPL2627-M102": {
+    "home": "3/4",
+    "draw": "29/10",
+    "away": "15/4"
+   },
+   "EPL2627-M101": {
+    "home": "21/20",
+    "draw": "13/5",
+    "away": "11/4"
+   },
+   "EPL2627-M105": {
+    "home": "11/8",
+    "draw": "13/5",
+    "away": "15/8"
+   },
+   "EPL2627-M110": {
+    "home": "11/20",
+    "draw": "7/2",
+    "away": "5/1"
+   },
+   "EPL2627-M109": {
+    "home": "9/2",
+    "draw": "16/5",
+    "away": "3/5"
+   },
+   "EPL2627-M106": {
+    "home": "21/4",
+    "draw": "17/5",
+    "away": "8/15"
+   },
+   "EPL2627-M107": {
+    "home": "8/11",
+    "draw": "16/5",
+    "away": "7/2"
+   },
+   "EPL2627-M103": {
+    "home": "21/20",
+    "draw": "27/10",
+    "away": "13/5"
+   }
+  }
+ },
+ "midweek_matches": {
+  "source": "No cup/European fixtures in the 4 days before MW11 (21-23 Nov): FIFA international window 9-17 Nov (premierleague.com/en/news/4689113); UCL MD5 24-25 Nov, UEL MD5 26 Nov (Wikipedia 2026-27 UEFA Champions League / Europa League schedule tables); EFL Cup QF week of 14 Dec (Wikipedia 2026-27 EFL Cup). All fetched 2026-11-10. International matches are not club cup/European fixtures and are not listed, per the v2 basis definition.",
+  "fetched_utc": "2026-11-10T05:36:11+00:00",
+  "matches": []
+ }
+}

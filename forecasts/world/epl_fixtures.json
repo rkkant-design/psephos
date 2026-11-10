@@ -1,6 +1,6 @@
 {
  "source": "https://fixturedownload.com/feed/json/epl-2026",
- "fetched_utc": "2026-11-02T12:17:42+00:00",
+ "fetched_utc": "2026-11-10T05:36:20+00:00",
  "fixtures": [
   {
    "MatchNumber": 1,
@@ -1078,9 +1078,9 @@
    "HomeTeam": "Newcastle",
    "AwayTeam": "Everton",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 0,
+   "AwayTeamScore": 1,
+   "Winner": "Everton"
   },
   {
    "MatchNumber": 94,
@@ -1090,9 +1090,9 @@
    "HomeTeam": "Everton",
    "AwayTeam": "Coventry",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 3,
+   "AwayTeamScore": 1,
+   "Winner": "Everton"
   },
   {
    "MatchNumber": 97,
@@ -1102,9 +1102,9 @@
    "HomeTeam": "Leeds",
    "AwayTeam": "Spurs",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 1,
+   "AwayTeamScore": 0,
+   "Winner": "Leeds"
   },
   {
    "MatchNumber": 91,
@@ -1114,9 +1114,9 @@
    "HomeTeam": "Arsenal",
    "AwayTeam": "Hull",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 1,
+   "AwayTeamScore": 0,
+   "Winner": "Arsenal"
   },
   {
    "MatchNumber": 95,
@@ -1126,9 +1126,9 @@
    "HomeTeam": "Fulham",
    "AwayTeam": "Newcastle",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 1,
+   "AwayTeamScore": 1,
+   "Winner": "Draw"
   },
   {
    "MatchNumber": 99,
@@ -1138,9 +1138,9 @@
    "HomeTeam": "Nott'm Forest",
    "AwayTeam": "Man City",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 3,
+   "AwayTeamScore": 1,
+   "Winner": "Nott'm Forest"
   },
   {
    "MatchNumber": 92,
@@ -1150,9 +1150,9 @@
    "HomeTeam": "Brighton",
    "AwayTeam": "Brentford",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 2,
+   "AwayTeamScore": 0,
+   "Winner": "Brighton"
   },
   {
    "MatchNumber": 93,
@@ -1162,9 +1162,9 @@
    "HomeTeam": "Crystal Palace",
    "AwayTeam": "Liverpool",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 1,
+   "AwayTeamScore": 3,
+   "Winner": "Liverpool"
   },
   {
    "MatchNumber": 96,
@@ -1174,9 +1174,9 @@
    "HomeTeam": "Ipswich",
    "AwayTeam": "Bournemouth",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 1,
+   "AwayTeamScore": 2,
+   "Winner": "Bournemouth"
   },
   {
    "MatchNumber": 100,
@@ -1186,9 +1186,9 @@
    "HomeTeam": "Sunderland",
    "AwayTeam": "Chelsea",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 1,
+   "AwayTeamScore": 0,
+   "Winner": "Sunderland"
   },
   {
    "MatchNumber": 98,
@@ -1198,9 +1198,9 @@
    "HomeTeam": "Man Utd",
    "AwayTeam": "Aston Villa",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 4,
+   "AwayTeamScore": 4,
+   "Winner": "Draw"
   },
   {
    "MatchNumber": 108,
@@ -1851,18 +1851,6 @@
    "Winner": ""
   },
   {
-   "MatchNumber": 159,
-   "RoundNumber": 16,
-   "DateUtc": "2026-12-19 15:00:00Z",
-   "Location": "The City Ground",
-   "HomeTeam": "Nott'm Forest",
-   "AwayTeam": "Everton",
-   "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
-  },
-  {
    "MatchNumber": 157,
    "RoundNumber": 16,
    "DateUtc": "2026-12-19 17:30:00Z",
@@ -1881,6 +1869,18 @@
    "Location": "American Express Stadium",
    "HomeTeam": "Brighton",
    "AwayTeam": "Ipswich",
+   "Group": null,
+   "HomeTeamScore": null,
+   "AwayTeamScore": null,
+   "Winner": ""
+  },
+  {
+   "MatchNumber": 159,
+   "RoundNumber": 16,
+   "DateUtc": "2026-12-20 14:00:00Z",
+   "Location": "The City Ground",
+   "HomeTeam": "Nott'm Forest",
+   "AwayTeam": "Everton",
    "Group": null,
    "HomeTeamScore": null,
    "AwayTeamScore": null,

@@ -1,9 +1,9 @@
 {
- "generated": "2026-11-06",
+ "generated": "2026-11-10",
  "overall_binary": {
-  "n": 117,
-  "brier": 0.1419,
-  "log": -0.6855
+  "n": 202,
+  "brier": 0.1255,
+  "log": -0.544
  },
  "india": {
   "n": 61,
@@ -23,72 +23,80 @@
   }
  },
  "world": {
-  "n": 4,
-  "brier": 0.0022,
-  "log": -0.0478,
+  "n": 6,
+  "brier": 0.0529,
+  "log": -0.1953,
   "by_instrument": {
    "market": {
-    "n": 2,
-    "brier": 0.003,
-    "log": -0.0566
+    "n": 3,
+    "brier": 0.0272,
+    "log": -0.1449
    },
    "model": {
-    "n": 2,
-    "brier": 0.0015,
-    "log": -0.0389
+    "n": 3,
+    "brier": 0.0786,
+    "log": -0.2456
    }
   }
  },
  "us_races": {
-  "n": 52,
-  "brier": 0.0002,
-  "log": -0.0105,
+  "n": 132,
+  "brier": 0.0621,
+  "log": -0.2151,
   "by_instrument": {
    "market": {
-    "n": 26,
-    "brier": 0.0002,
-    "log": -0.0126
+    "n": 65,
+    "brier": 0.0331,
+    "log": -0.1275
    },
    "model": {
-    "n": 26,
-    "brier": 0.0002,
-    "log": -0.0085
+    "n": 67,
+    "brier": 0.0902,
+    "log": -0.3001
    }
   },
   "note": "race-level US midterm rows (usmid_races_ledger.csv); dual instruments scored per race"
  },
  "skill_model_vs_market_us_races": {
-  "n_questions": 26,
-  "brier_model": 0.0002,
-  "brier_market": 0.0002,
-  "edge": 0.0,
+  "n_questions": 65,
+  "brier_model": 0.0929,
+  "brier_market": 0.0331,
+  "edge": -0.0598,
   "note": "edge > 0 means the structural model beats the market on identical questions"
  },
  "research": {
-  "n": 0,
-  "brier": null,
-  "log": null,
+  "n": 3,
+  "brier": 0.0835,
+  "log": -0.2882,
   "note": "M_research (LLM research-forecaster) scored on calibrated p_research; same questions may also appear under india/world via their own instruments - each instrument answers for itself"
  },
  "matches": {
-  "n": 19,
-  "brier": 0.705,
-  "log": -1.1612,
+  "n": 30,
+  "brier": 0.6624,
+  "log": -1.1057,
   "note": "three-way Brier, scale 0-2 (uniform ref 0.667); never pooled with binary"
  },
  "matches_skill_model_vs_market": {
-  "n_matches": 9,
-  "n_matchweeks": 1,
-  "brier_model": 0.6284,
-  "brier_market": 0.5829,
-  "edge": -0.0454,
+  "n_matches": 19,
+  "n_matchweeks": 2,
+  "brier_model": 0.5946,
+  "brier_market": 0.5589,
+  "edge": -0.0356,
   "matchweeks": [
    {
     "matchweek": 9,
+    "n": 10,
+    "brier_model": 0.6344,
+    "brier_market": 0.5956,
+    "edge": -0.0387,
+    "winner": "market"
+   },
+   {
+    "matchweek": 10,
     "n": 9,
-    "brier_model": 0.6284,
-    "brier_market": 0.5829,
-    "edge": -0.0454,
+    "brier_model": 0.5503,
+    "brier_market": 0.5182,
+    "edge": -0.0322,
     "winner": "market"
    }
   ],
@@ -97,57 +105,57 @@
  "calibration": [
   {
    "bin": "0-5%",
-   "n": 37,
-   "claimed": 0.008,
-   "realized": 0.054
+   "n": 45,
+   "claimed": 0.011,
+   "realized": 0.044
   },
   {
    "bin": "5-20%",
-   "n": 14,
-   "claimed": 0.162,
-   "realized": 0.357
+   "n": 31,
+   "claimed": 0.14,
+   "realized": 0.258
   },
   {
    "bin": "20-40%",
-   "n": 39,
-   "claimed": 0.27,
-   "realized": 0.333
+   "n": 68,
+   "claimed": 0.277,
+   "realized": 0.338
   },
   {
    "bin": "40-60%",
-   "n": 24,
+   "n": 40,
    "claimed": 0.483,
-   "realized": 0.333
+   "realized": 0.425
   },
   {
    "bin": "60-80%",
-   "n": 11,
-   "claimed": 0.715,
-   "realized": 0.455
+   "n": 25,
+   "claimed": 0.716,
+   "realized": 0.68
   },
   {
    "bin": "80-95%",
-   "n": 5,
-   "claimed": 0.837,
-   "realized": 0.6
+   "n": 24,
+   "claimed": 0.874,
+   "realized": 0.917
   },
   {
    "bin": "95-100%",
-   "n": 44,
-   "claimed": 0.992,
-   "realized": 0.909
+   "n": 59,
+   "claimed": 0.988,
+   "realized": 0.915
   }
  ],
  "skill_model_vs_market": {
-  "n_questions": 2,
-  "brier_model": 0.0015,
-  "brier_market": 0.003,
-  "edge": 0.0016,
+  "n_questions": 3,
+  "brier_model": 0.0786,
+  "brier_market": 0.0272,
+  "edge": -0.0514,
   "note": "edge > 0 means the structural model beats the market on identical questions",
-  "n_with_research": 2,
-  "brier_research_common": 0.01,
-  "brier_market_common": 0.003,
-  "brier_model_common": 0.0015,
+  "n_with_research": 3,
+  "brier_research_common": 0.0835,
+  "brier_market_common": 0.0272,
+  "brier_model_common": 0.0786,
   "research_note": "common-subset Briers: all three instruments on identical resolved questions"
  },
  "notes": [

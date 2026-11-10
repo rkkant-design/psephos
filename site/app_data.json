@@ -1,5 +1,5 @@
 {
-"generated": "2026-11-06",
+"generated": "2026-11-10",
 "track": {
 "retrodiction_calls": 28,
 "retrodiction_correct": 28,
@@ -10,11 +10,11 @@
 "live_open_calls": 8
 },
 "scoring": {
-"generated": "2026-11-06",
+"generated": "2026-11-10",
 "overall_binary": {
-"n": 117,
-"brier": 0.1419,
-"log": -0.6855
+"n": 202,
+"brier": 0.1255,
+"log": -0.544
 },
 "india": {
 "n": 61,
@@ -34,72 +34,80 @@
 }
 },
 "world": {
-"n": 4,
-"brier": 0.0022,
-"log": -0.0478,
+"n": 6,
+"brier": 0.0529,
+"log": -0.1953,
 "by_instrument": {
 "market": {
-"n": 2,
-"brier": 0.003,
-"log": -0.0566
+"n": 3,
+"brier": 0.0272,
+"log": -0.1449
 },
 "model": {
-"n": 2,
-"brier": 0.0015,
-"log": -0.0389
+"n": 3,
+"brier": 0.0786,
+"log": -0.2456
 }
 }
 },
 "us_races": {
-"n": 52,
-"brier": 0.0002,
-"log": -0.0105,
+"n": 132,
+"brier": 0.0621,
+"log": -0.2151,
 "by_instrument": {
 "market": {
-"n": 26,
-"brier": 0.0002,
-"log": -0.0126
+"n": 65,
+"brier": 0.0331,
+"log": -0.1275
 },
 "model": {
-"n": 26,
-"brier": 0.0002,
-"log": -0.0085
+"n": 67,
+"brier": 0.0902,
+"log": -0.3001
 }
 },
 "note": "race-level US midterm rows (usmid_races_ledger.csv); dual instruments scored per race"
 },
 "skill_model_vs_market_us_races": {
-"n_questions": 26,
-"brier_model": 0.0002,
-"brier_market": 0.0002,
-"edge": 0.0,
+"n_questions": 65,
+"brier_model": 0.0929,
+"brier_market": 0.0331,
+"edge": -0.0598,
 "note": "edge > 0 means the structural model beats the market on identical questions"
 },
 "research": {
-"n": 0,
-"brier": null,
-"log": null,
+"n": 3,
+"brier": 0.0835,
+"log": -0.2882,
 "note": "M_research (LLM research-forecaster) scored on calibrated p_research; same questions may also appear under india/world via their own instruments - each instrument answers for itself"
 },
 "matches": {
-"n": 19,
-"brier": 0.705,
-"log": -1.1612,
+"n": 30,
+"brier": 0.6624,
+"log": -1.1057,
 "note": "three-way Brier, scale 0-2 (uniform ref 0.667); never pooled with binary"
 },
 "matches_skill_model_vs_market": {
-"n_matches": 9,
-"n_matchweeks": 1,
-"brier_model": 0.6284,
-"brier_market": 0.5829,
-"edge": -0.0454,
+"n_matches": 19,
+"n_matchweeks": 2,
+"brier_model": 0.5946,
+"brier_market": 0.5589,
+"edge": -0.0356,
 "matchweeks": [
 {
 "matchweek": 9,
+"n": 10,
+"brier_model": 0.6344,
+"brier_market": 0.5956,
+"edge": -0.0387,
+"winner": "market"
+},
+{
+"matchweek": 10,
 "n": 9,
-"brier_model": 0.6284,
-"brier_market": 0.5829,
-"edge": -0.0454,
+"brier_model": 0.5503,
+"brier_market": 0.5182,
+"edge": -0.0322,
 "winner": "market"
 }
 ],
@@ -108,57 +116,57 @@
 "calibration": [
 {
 "bin": "0-5%",
-"n": 37,
-"claimed": 0.008,
-"realized": 0.054
+"n": 45,
+"claimed": 0.011,
+"realized": 0.044
 },
 {
 "bin": "5-20%",
-"n": 14,
-"claimed": 0.162,
-"realized": 0.357
+"n": 31,
+"claimed": 0.14,
+"realized": 0.258
 },
 {
 "bin": "20-40%",
-"n": 39,
-"claimed": 0.27,
-"realized": 0.333
+"n": 68,
+"claimed": 0.277,
+"realized": 0.338
 },
 {
 "bin": "40-60%",
-"n": 24,
+"n": 40,
 "claimed": 0.483,
-"realized": 0.333
+"realized": 0.425
 },
 {
 "bin": "60-80%",
-"n": 11,
-"claimed": 0.715,
-"realized": 0.455
+"n": 25,
+"claimed": 0.716,
+"realized": 0.68
 },
 {
 "bin": "80-95%",
-"n": 5,
-"claimed": 0.837,
-"realized": 0.6
+"n": 24,
+"claimed": 0.874,
+"realized": 0.917
 },
 {
 "bin": "95-100%",
-"n": 44,
-"claimed": 0.992,
-"realized": 0.909
+"n": 59,
+"claimed": 0.988,
+"realized": 0.915
 }
 ],
 "skill_model_vs_market": {
-"n_questions": 2,
-"brier_model": 0.0015,
-"brier_market": 0.003,
-"edge": 0.0016,
+"n_questions": 3,
+"brier_model": 0.0786,
+"brier_market": 0.0272,
+"edge": -0.0514,
 "note": "edge > 0 means the structural model beats the market on identical questions",
-"n_with_research": 2,
-"brier_research_common": 0.01,
-"brier_market_common": 0.003,
-"brier_model_common": 0.0015,
+"n_with_research": 3,
+"brier_research_common": 0.0835,
+"brier_market_common": 0.0272,
+"brier_model_common": 0.0786,
 "research_note": "common-subset Briers: all three instruments on identical resolved questions"
 },
 "notes": [
@@ -169,19 +177,84 @@
 },
 "changelog": [
 {
-"date": "2026-11-06",
+"date": "2026-11-10",
 "entries": [
 {
-"title": "Resolved US Midterm Elections 2026",
+"title": "weekly run: 41 more US races scored + Senate control, PB2027 re-run on insider-flow flip, MW10 scored, MW11 pre-registered",
 "items": [
-"2 probabilities scored at resolution; no calls had been issued"
+"Polls admitted: none. UP newest vote-share still Matrize 29-Sep; PB SCORE 15-Oct; UK Times Now Navbharat 13-Sep (UK Tehelka Digital 27-Sep is seat-only, already logged). Tripwires fired: one, via insider flow (below). Watched, not fired: ...",
+"Insider flow: 3 new PB events - on 2-Nov sitting AAP MLAs Chetan Singh Jouramajra (Samana), Harmeet Singh Pathanmajra (Sanaur) and Kunwar Vijay Pratap Singh (Amritsar North) joined BJP in Delhi (PTI via The Week/ThePrint, newsonair; weight ...",
+"EPL: MW9 last game (Newcastle 0-1 Everton) and all 10 MW10 games resolved from the feed - MW10 favourites 6/10; skill table (9 matches with odds) 3-way Brier model 0.550 vs market 0.518; two matchweeks in, market ahead both (cumulative ...",
+"US midterms (AP-call procedure): 41 of the 45 open race rows resolved (resolved = 2026-11-10): Democrats won 27 (15 of 26 governors incl. flips GA/IA/NV/OH/TX; 12 of 15 Senate incl. flips IA/KS/ME/NC/OH/SC/TX). All 41 were WATCH rows, so ...",
+"World: EPL2027 - fresh M_research pass committed before the title-market refresh by a separate research agent that saw no prices (sha f3ae9c90...; City 0.48 -> 0.10, Arsenal 0.30 -> 0.69; prior dossier archived as ...",
+"Asks: 0 due (1 row, already unresolvable). Republish: yes. Anchors: 7 earlier manifests complete; VERIFY OK; manifest 20261110T053933 stamped (pending).",
+"Flagged for user, not acted on: (1) The candidate-blind race model lost badly to the market (0.093 vs 0.033) - a model upgrade (candidate/incumbent-quality terms) is a user decision. (2) EPL2027 config still lists the 2-Nov entity set; ..."
+],
+"kind": "run"
+},
+{
+"title": "Re-registered Punjab Assembly 2027",
+"items": [
+"11 probabilities re-hashed; no verdict changed"
+],
+"kind": "ledger"
+},
+{
+"title": "Re-registered Premier League Winner 2026-27",
+"items": [
+"5 probabilities re-hashed; no verdict changed"
 ],
 "kind": "ledger"
 },
 {
 "title": "Resolved US Midterms 2026 race board",
 "items": [
-"26 probabilities scored at resolution; calls 26/26 right"
+"67 probabilities scored at resolution; calls 26/26 right"
+],
+"kind": "ledger"
+},
+{
+"title": "Scored Premier League matchweek 9",
+"items": [
+"1 fixtures resolved: favourites 0/1, mean 3-way Brier 0.688 (0.667 = guessing)"
+],
+"kind": "ledger"
+},
+{
+"title": "Scored Premier League matchweek 10",
+"items": [
+"10 fixtures resolved: favourites 6/10, mean 3-way Brier 0.579 (0.667 = guessing)"
+],
+"kind": "ledger"
+},
+{
+"title": "Pre-registered Premier League matchweek 11",
+"items": [
+"10 fixtures, probabilities locked before kickoff (sha dec19321...)"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced Premier League Winner 2026-27",
+"items": [
+"5 questions, dossier hash-stamped (sha f3ae9c90...); written blind to market prices"
+],
+"kind": "ledger"
+}
+]
+},
+{
+"date": "2026-11-06",
+"entries": [
+{
+"title": "US midterms resolved (the decided races)",
+"items": [],
+"kind": "run"
+},
+{
+"title": "Resolved US Midterm Elections 2026",
+"items": [
+"3 probabilities scored at resolution; no calls had been issued"
 ],
 "kind": "ledger"
 }
@@ -1340,7 +1413,7 @@
 "state": "Premier League",
 "st": "",
 "year": 2027,
-"status": "live",
+"status": "resolved-forward",
 "domain": "Football",
 "kind": "matches",
 "title": "Premier League 2026-27 \u00b7 Matchweek 9",
@@ -1454,14 +1527,14 @@
 "pH": 0.42,
 "pD": 0.25,
 "pA": 0.33,
-"outcome": null,
-"brier": null,
-"fav_hit": null
+"outcome": "A",
+"brier": 0.688,
+"fav_hit": false
 }
 ],
 "mw_summary": {
-"n": 9,
-"brier3": 0.628,
+"n": 10,
+"brier3": 0.634,
 "fav_hits": 6
 },
 "flags": [
@@ -1480,7 +1553,7 @@
 "state": "Premier League",
 "st": "",
 "year": 2027,
-"status": "live",
+"status": "resolved-forward",
 "domain": "Football",
 "kind": "matches",
 "title": "Premier League 2026-27 \u00b7 Matchweek 10",
@@ -1495,9 +1568,9 @@
 "pH": 0.54,
 "pD": 0.24,
 "pA": 0.22,
-"outcome": null,
-"brier": null,
-"fav_hit": null
+"outcome": "H",
+"brier": 0.315,
+"fav_hit": true
 },
 {
 "home": "Leeds",
@@ -1506,9 +1579,9 @@
 "pH": 0.47,
 "pD": 0.25,
 "pA": 0.28,
-"outcome": null,
-"brier": null,
-"fav_hit": null
+"outcome": "H",
+"brier": 0.423,
+"fav_hit": true
 },
 {
 "home": "Arsenal",
@@ -1517,9 +1590,9 @@
 "pH": 0.87,
 "pD": 0.11,
 "pA": 0.02,
-"outcome": null,
-"brier": null,
-"fav_hit": null
+"outcome": "H",
+"brier": 0.031,
+"fav_hit": true
 },
 {
 "home": "Fulham",
@@ -1528,9 +1601,9 @@
 "pH": 0.41,
 "pD": 0.25,
 "pA": 0.33,
-"outcome": null,
-"brier": null,
-"fav_hit": null
+"outcome": "D",
+"brier": 0.837,
+"fav_hit": false
 },
 {
 "home": "Nott'm Forest",
@@ -1539,9 +1612,9 @@
 "pH": 0.1,
 "pD": 0.18,
 "pA": 0.72,
-"outcome": null,
-"brier": null,
-"fav_hit": null
+"outcome": "H",
+"brier": 1.365,
+"fav_hit": false
 },
 {
 "home": "Brighton",
@@ -1550,9 +1623,9 @@
 "pH": 0.54,
 "pD": 0.24,
 "pA": 0.22,
-"outcome": null,
-"brier": null,
-"fav_hit": null
+"outcome": "H",
+"brier": 0.318,
+"fav_hit": true
 },
 {
 "home": "Crystal Palace",
@@ -1561,9 +1634,9 @@
 "pH": 0.23,
 "pD": 0.24,
 "pA": 0.53,
-"outcome": null,
-"brier": null,
-"fav_hit": null
+"outcome": "A",
+"brier": 0.327,
+"fav_hit": true
 },
 {
 "home": "Ipswich",
@@ -1572,9 +1645,9 @@
 "pH": 0.35,
 "pD": 0.26,
 "pA": 0.4,
-"outcome": null,
-"brier": null,
-"fav_hit": null
+"outcome": "A",
+"brier": 0.55,
+"fav_hit": true
 },
 {
 "home": "Sunderland",
@@ -1583,9 +1656,9 @@
 "pH": 0.29,
 "pD": 0.25,
 "pA": 0.46,
-"outcome": null,
-"brier": null,
-"fav_hit": null
+"outcome": "H",
+"brier": 0.787,
+"fav_hit": false
 },
 {
 "home": "Man Utd",
@@ -1594,6 +1667,146 @@
 "pH": 0.4,
 "pD": 0.25,
 "pA": 0.34,
+"outcome": "D",
+"brier": 0.835,
+"fav_hit": false
+}
+],
+"mw_summary": {
+"n": 10,
+"brier3": 0.579,
+"fav_hits": 6
+},
+"flags": [
+"Single-instrument model forecasts (shrunk-PPG Poisson, stated priors): scored on Brier/log, never gate-CALLed.",
+"Three-way Brier scale 0-2; uniform guess scores 0.667."
+],
+"tripwires": [],
+"resolution": {
+"source": "fixturedownload.com epl-2026 feed final score; league result after 90min+stoppage; abandoned match resolves on the completed restaging; awarded/forfeited results count as the official score",
+"rules": []
+},
+"sha": "2245aa24e6a64f4d4f156f30a9a19db6bf5813fcabf982b177003008476833b4"
+},
+{
+"id": "EPLMW11",
+"state": "Premier League",
+"st": "",
+"year": 2027,
+"status": "live",
+"domain": "Football",
+"kind": "matches",
+"title": "Premier League 2026-27 \u00b7 Matchweek 11",
+"freeze": "2026-11-10",
+"blocs": [],
+"questions": [],
+"matches": [
+{
+"home": "Man City",
+"away": "Fulham",
+"date": "2026-11-21",
+"pH": 0.76,
+"pD": 0.17,
+"pA": 0.08,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Bournemouth",
+"away": "Nott'm Forest",
+"date": "2026-11-21",
+"pH": 0.62,
+"pD": 0.22,
+"pA": 0.16,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Aston Villa",
+"away": "Sunderland",
+"date": "2026-11-21",
+"pH": 0.59,
+"pD": 0.23,
+"pA": 0.18,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Chelsea",
+"away": "Leeds",
+"date": "2026-11-21",
+"pH": 0.51,
+"pD": 0.24,
+"pA": 0.24,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Coventry",
+"away": "Crystal Palace",
+"date": "2026-11-21",
+"pH": 0.46,
+"pD": 0.25,
+"pA": 0.29,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Spurs",
+"away": "Ipswich",
+"date": "2026-11-21",
+"pH": 0.48,
+"pD": 0.25,
+"pA": 0.28,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Newcastle",
+"away": "Arsenal",
+"date": "2026-11-21",
+"pH": 0.1,
+"pD": 0.19,
+"pA": 0.71,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Hull",
+"away": "Brighton",
+"date": "2026-11-22",
+"pH": 0.23,
+"pD": 0.24,
+"pA": 0.53,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Liverpool",
+"away": "Man Utd",
+"date": "2026-11-22",
+"pH": 0.56,
+"pD": 0.23,
+"pA": 0.21,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Brentford",
+"away": "Everton",
+"date": "2026-11-23",
+"pH": 0.44,
+"pD": 0.25,
+"pA": 0.31,
 "outcome": null,
 "brier": null,
 "fav_hit": null
@@ -1609,7 +1822,7 @@
 "source": "fixturedownload.com epl-2026 feed final score; league result after 90min+stoppage; abandoned match resolves on the completed restaging; awarded/forfeited results count as the official score",
 "rules": []
 },
-"sha": "2245aa24e6a64f4d4f156f30a9a19db6bf5813fcabf982b177003008476833b4"
+"sha": "dec19321f36c70101be566107e19642259229d6714702cc075da7eefdb0585d7"
 },
 {
 "id": "EPL2027",
@@ -1619,7 +1832,7 @@
 "status": "live",
 "domain": "Football",
 "title": "Premier League Winner 2026-27",
-"freeze": "2026-11-02",
+"freeze": "2026-11-10",
 "blocs": [
 {
 "name": "Arsenal",
@@ -1632,22 +1845,8 @@
 "p_maj": null,
 "p_largest": null,
 "actual": null,
-"p_market": 0.7042,
-"p_model": 0.6876
-},
-{
-"name": "Man City",
-"base": null,
-"m2": null,
-"m3": null,
-"p5": null,
-"med": null,
-"p95": null,
-"p_maj": null,
-"p_largest": null,
-"actual": null,
-"p_market": 0.1095,
-"p_model": 0.2179
+"p_market": 0.7522,
+"p_model": 0.8271
 },
 {
 "name": "Brighton",
@@ -1660,8 +1859,22 @@
 "p_maj": null,
 "p_largest": null,
 "actual": null,
-"p_market": 0.0657,
-"p_model": 0.0776
+"p_market": 0.0806,
+"p_model": 0.1092
+},
+{
+"name": "Man City",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": 0.0645,
+"p_model": 0.0506
 },
 {
 "name": "Liverpool",
@@ -1674,8 +1887,8 @@
 "p_maj": null,
 "p_largest": null,
 "actual": null,
-"p_market": 0.058,
-"p_model": 0.0038
+"p_market": 0.0645,
+"p_model": 0.0075
 },
 {
 "name": "Chelsea",
@@ -1688,11 +1901,11 @@
 "p_maj": null,
 "p_largest": null,
 "actual": null,
-"p_market": 0.0429,
-"p_model": 0.0096
+"p_market": 0.019,
+"p_model": 0.0023
 },
 {
-"name": "Brentford",
+"name": "Everton",
 "base": null,
 "m2": null,
 "m3": null,
@@ -1703,7 +1916,7 @@
 "p_largest": null,
 "actual": null,
 "p_market": null,
-"p_model": 0.0018
+"p_model": 0.0019
 },
 {
 "name": "Bournemouth",
@@ -1717,7 +1930,7 @@
 "p_largest": null,
 "actual": null,
 "p_market": null,
-"p_model": 0.0005
+"p_model": 0.0011
 },
 {
 "name": "Aston Villa",
@@ -1731,37 +1944,37 @@
 "p_largest": null,
 "actual": null,
 "p_market": null,
-"p_model": 0.0005
+"p_model": 0.0002
 }
 ],
 "questions": [
 {
 "q": "Man City win the title",
-"p2": 0.22,
-"p3": 0.11,
+"p2": 0.05,
+"p3": 0.06,
 "verdict": "WATCH",
 "outcome": null,
 "correct": null
 },
 {
 "q": "Arsenal win the title",
-"p2": 0.69,
-"p3": 0.7,
+"p2": 0.83,
+"p3": 0.75,
 "verdict": "WATCH",
 "outcome": null,
 "correct": null
 },
 {
 "q": "Winner in {Man City, Arsenal}",
-"p2": 0.91,
-"p3": 0.81,
+"p2": 0.88,
+"p3": 0.82,
 "verdict": "WATCH",
 "outcome": null,
 "correct": null
 },
 {
 "q": "Liverpool win the title",
-"p2": 0.0,
+"p2": 0.01,
 "p3": 0.06,
 "verdict": "CALL-NO",
 "outcome": null,
@@ -1806,11 +2019,11 @@
 ],
 "source": "Final official 2026-27 Premier League table (premierleague.com/tables) after the last matchday (~2027-05)"
 },
-"sha": "8146c7a9e7aa7c0813edb853da367ad46082d7796bef798f36036c2db3a01787",
+"sha": "b9680da34942a0294bcb440cd0993efcf1a4ef0829a343ceed3d473b09ce779e",
 "instruments": {
-"market_source": "Bookmaker outright odds, oddschecker.com PL page best price, fetched 2026-11-02 ~06:20 UTC (built-in browser), dated after MD9 incl. Liverpool v Arsenal 1-Nov; fractional 2/5, 8/1, 14/1, 16/1, 22/1",
+"market_source": "Bookmaker outright odds, oddschecker.com PL page best price, fetched 2026-11-10 ~05:50 UTC (built-in browser), dated after MD10 (8 Nov); fractional Arsenal 2/7, Brighton 11/1, Liverpool 14/1, Man City 14/1, Chelsea 50/1",
 "model_note": "strength = games-played-shrunk PPG (k=12 prior games to league mean 1.37), fixed draw rate 0.24, 31 remaining games simulated independently, title by points then GD noise",
-"research_sha256": "97f4ad6849a78680a162dbb9ff73bd885dbb0d158bc680bf228bd934189e6f30"
+"research_sha256": "f3ae9c907ef632f7f8cde2b9c10b2cd3dca35e996e1fa03283944b9753eac30b"
 },
 "resolve_date": "2027-05"
 },
@@ -1821,54 +2034,54 @@
 "year": 2027,
 "status": "live",
 "title": "Punjab Assembly 2027",
-"freeze": "2026-10-23",
+"freeze": "2026-11-10",
 "blocs": [
 {
 "name": "AAP",
 "base": 42.31,
 "m2": 34.77,
-"m3": 34.0,
-"p5": 33,
-"med": 58,
-"p95": 81,
-"p_maj": 0.4831,
-"p_largest": 0.7502,
+"m3": 33.0,
+"p5": 31,
+"med": 55,
+"p95": 79,
+"p_maj": 0.4143,
+"p_largest": 0.7418,
 "actual": null
 },
 {
 "name": "BJP",
 "base": 6.65,
 "m2": 12.25,
-"m3": 12.5,
-"p5": 2,
-"med": 9,
-"p95": 22,
-"p_maj": 0.0,
-"p_largest": 0.0013,
+"m3": 14.0,
+"p5": 3,
+"med": 10,
+"p95": 25,
+"p_maj": 0.0001,
+"p_largest": 0.0025,
 "actual": null
 },
 {
 "name": "INC",
 "base": 23.14,
 "m2": 24.68,
-"m3": 28.75,
-"p5": 18,
-"med": 39,
-"p95": 65,
-"p_maj": 0.1054,
-"p_largest": 0.2468,
+"m3": 28.0,
+"p5": 17,
+"med": 37,
+"p95": 63,
+"p_maj": 0.0864,
+"p_largest": 0.2505,
 "actual": null
 },
 {
 "name": "SAD",
 "base": 18.52,
 "m2": 16.17,
-"m3": 12.38,
-"p5": 2,
-"med": 9,
-"p95": 23,
-"p_maj": 0.0,
-"p_largest": 0.0017,
+"m3": 14.5,
+"p5": 3,
+"med": 11,
+"p95": 28,
+"p_maj": 0.0001,
+"p_largest": 0.0052,
 "actual": null
 }
 ],
@@ -1876,7 +2089,7 @@
 {
 "q": "AAP wins majority",
 "p2": 0.59,
-"p3": 0.48,
+"p3": 0.41,
 "verdict": "WATCH",
 "outcome": null,
 "correct": null
@@ -1884,7 +2097,7 @@
 {
 "q": "AAP is largest",
 "p2": 0.88,
-"p3": 0.75,
+"p3": 0.74,
 "verdict": "WATCH",
 "outcome": null,
 "correct": null
@@ -1892,7 +2105,7 @@
 {
 "q": "INC wins majority",
 "p2": 0.03,
-"p3": 0.11,
+"p3": 0.09,
 "verdict": "WATCH",
 "outcome": null,
 "correct": null
@@ -1916,7 +2129,7 @@
 {
 "q": "SAD is largest",
 "p2": 0.01,
-"p3": 0.0,
+"p3": 0.01,
 "verdict": "WATCH-FLAG",
 "outcome": null,
 "correct": null
@@ -1940,7 +2153,7 @@
 {
 "q": "BJP under 15 seats",
 "p2": 0.78,
-"p3": 0.81,
+"p3": 0.72,
 "verdict": "WATCH",
 "outcome": null,
 "correct": null
@@ -1948,7 +2161,7 @@
 {
 "q": "SAD under 20 seats",
 "p2": 0.73,
-"p3": 0.91,
+"p3": 0.83,
 "verdict": "WATCH",
 "outcome": null,
 "correct": null
@@ -1956,7 +2169,7 @@
 {
 "q": "Winner (largest) in {AAP, INC}",
 "p2": 0.99,
-"p3": 1.0,
+"p3": 0.99,
 "verdict": "WATCH-FLAG",
 "outcome": null,
 "correct": null
@@ -2003,7 +2216,7 @@
 ],
 "source": "Election Commission of India official results (results.eci.gov.in), party-wise seat tally at first full declaration of all 117 seats"
 },
-"sha": "b88aebe522fcb3f7573ca6b64965d7c69da5773d12eeb099f76d05af85ac2ee5"
+"sha": "3c12f70c96ddf594ae6a2bc615e5ef05fd7b84acbc5f4d761f764463f7c3ef1c"
 },
 {
 "id": "UP2027",
@@ -2785,7 +2998,7 @@
 "p2": 0.52,
 "p3": 0.72,
 "verdict": "WATCH",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 }
 ],
@@ -2835,7 +3048,7 @@
 "inc_party": "R",
 "inc_running": "none",
 "note": "open, Ivey term-limited",
-"outcome": null,
+"outcome": "NO",
 "correct": null
 },
 {
@@ -2865,7 +3078,7 @@
 "inc_party": "D",
 "inc_running": "elected",
 "note": "Hobbs seeks re-election",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -2880,7 +3093,7 @@
 "inc_party": "R",
 "inc_running": "elected",
 "note": "Sanders renominated",
-"outcome": null,
+"outcome": "NO",
 "correct": null
 },
 {
@@ -2895,7 +3108,7 @@
 "inc_party": "D",
 "inc_running": "none",
 "note": "open, Newsom term-limited",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -2910,7 +3123,7 @@
 "inc_party": "D",
 "inc_running": "none",
 "note": "open, Polis term-limited",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -2940,7 +3153,7 @@
 "inc_party": "R",
 "inc_running": "none",
 "note": "open, DeSantis term-limited",
-"outcome": null,
+"outcome": "NO",
 "correct": null
 },
 {
@@ -2955,7 +3168,7 @@
 "inc_party": "R",
 "inc_running": "none",
 "note": "open, Kemp term-limited",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -2985,7 +3198,7 @@
 "inc_party": "R",
 "inc_running": "elected",
 "note": "Little renominated",
-"outcome": null,
+"outcome": "NO",
 "correct": null
 },
 {
@@ -3015,7 +3228,7 @@
 "inc_party": "R",
 "inc_running": "none",
 "note": "open, Reynolds retiring",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -3045,7 +3258,7 @@
 "inc_party": "D",
 "inc_running": "none",
 "note": "open, Mills term-limited",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -3090,7 +3303,7 @@
 "inc_party": "D",
 "inc_running": "none",
 "note": "open, Whitmer term-limited",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -3105,7 +3318,7 @@
 "inc_party": "D",
 "inc_running": "none",
 "note": "open, Walz retiring",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -3120,7 +3333,7 @@
 "inc_party": "R",
 "inc_running": "elected",
 "note": "Pillen renominated",
-"outcome": null,
+"outcome": "NO",
 "correct": null
 },
 {
@@ -3135,7 +3348,7 @@
 "inc_party": "R",
 "inc_running": "elected",
 "note": "Lombardo renominated",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -3150,7 +3363,7 @@
 "inc_party": "R",
 "inc_running": "elected",
 "note": "Ayotte renominated; 2-year term",
-"outcome": null,
+"outcome": "NO",
 "correct": null
 },
 {
@@ -3165,7 +3378,7 @@
 "inc_party": "D",
 "inc_running": "none",
 "note": "open, Lujan Grisham term-limited",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -3195,7 +3408,7 @@
 "inc_party": "R",
 "inc_running": "none",
 "note": "open, DeWine term-limited",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -3210,7 +3423,7 @@
 "inc_party": "R",
 "inc_running": "none",
 "note": "open, Stitt term-limited",
-"outcome": null,
+"outcome": "NO",
 "correct": null
 },
 {
@@ -3225,7 +3438,7 @@
 "inc_party": "D",
 "inc_running": "elected",
 "note": "Kotek renominated",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -3240,7 +3453,7 @@
 "inc_party": "D",
 "inc_running": "elected",
 "note": "Shapiro renominated",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -3270,7 +3483,7 @@
 "inc_party": "R",
 "inc_running": "none",
 "note": "open, McMaster term-limited",
-"outcome": null,
+"outcome": "NO",
 "correct": null
 },
 {
@@ -3285,7 +3498,7 @@
 "inc_party": "R",
 "inc_running": "appointed",
 "note": "Rhoden succeeded Noem 2025, seeks full term",
-"outcome": null,
+"outcome": "NO",
 "correct": null
 },
 {
@@ -3300,7 +3513,7 @@
 "inc_party": "R",
 "inc_running": "none",
 "note": "open, Lee term-limited",
-"outcome": null,
+"outcome": "NO",
 "correct": null
 },
 {
@@ -3315,7 +3528,7 @@
 "inc_party": "R",
 "inc_running": "elected",
 "note": "Abbott renominated",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -3330,7 +3543,7 @@
 "inc_party": "R",
 "inc_running": "elected",
 "note": "Scott renominated; 2-year term",
-"outcome": null,
+"outcome": "NO",
 "correct": null
 },
 {
@@ -3345,7 +3558,7 @@
 "inc_party": "D",
 "inc_running": "none",
 "note": "open, Evers retiring",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -3450,7 +3663,7 @@
 "inc_party": "R",
 "inc_running": "appointed",
 "note": "Moody appointed to Rubio seat, running in special",
-"outcome": null,
+"outcome": "NO",
 "correct": null
 },
 {
@@ -3465,7 +3678,7 @@
 "inc_party": "D",
 "inc_running": "elected",
 "note": "Ossoff vs Collins (R)",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -3510,7 +3723,7 @@
 "inc_party": "R",
 "inc_running": "none",
 "note": "open, Ernst retiring; competitive",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -3525,7 +3738,7 @@
 "inc_party": "R",
 "inc_running": "elected",
 "note": "Marshall vs Hamilton (D); competitive",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -3555,7 +3768,7 @@
 "inc_party": "R",
 "inc_running": "none",
 "note": "Cassidy lost renomination; Letlow (R) nominee",
-"outcome": null,
+"outcome": "NO",
 "correct": null
 },
 {
@@ -3570,7 +3783,7 @@
 "inc_party": "R",
 "inc_running": "elected",
 "note": "Collins vs Jackson (D); only R seat in Harris state",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -3600,7 +3813,7 @@
 "inc_party": "D",
 "inc_running": "none",
 "note": "open, Peters retiring; most competitive D-held",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -3615,7 +3828,7 @@
 "inc_party": "D",
 "inc_running": "none",
 "note": "open, Smith retiring",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -3645,7 +3858,7 @@
 "inc_party": "R",
 "inc_running": "none",
 "note": "open, Daines retiring",
-"outcome": null,
+"outcome": "NO",
 "correct": null
 },
 {
@@ -3675,7 +3888,7 @@
 "inc_party": "D",
 "inc_running": "none",
 "note": "open, Shaheen retiring; competitive",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -3690,7 +3903,7 @@
 "inc_party": "D",
 "inc_running": "elected",
 "note": "Booker renominated",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -3720,7 +3933,7 @@
 "inc_party": "R",
 "inc_running": "none",
 "note": "open, Tillis retiring; Cooper (D) favored",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -3735,7 +3948,7 @@
 "inc_party": "R",
 "inc_running": "appointed",
 "note": "Husted appointed to Vance seat vs Brown (D)",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -3795,7 +4008,7 @@
 "inc_party": "R",
 "inc_running": "appointed",
 "note": "Darline Graham (R) appointed after Lindsey Graham died 2026-07-11; running vs Andrews (D)",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -3840,7 +4053,7 @@
 "inc_party": "R",
 "inc_running": "none",
 "note": "Cornyn lost renomination; Paxton (R) vs Talarico (D)",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {

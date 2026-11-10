@@ -2,42 +2,42 @@
  "domain": "Football",
  "entity_probs": {
   "market": {
-   "Arsenal": 0.7042,
-   "Brighton": 0.0657,
-   "Chelsea": 0.0429,
-   "Liverpool": 0.058,
-   "Man City": 0.1095
+   "Arsenal": 0.7522,
+   "Brighton": 0.0806,
+   "Chelsea": 0.019,
+   "Liverpool": 0.0645,
+   "Man City": 0.0645
   },
   "model": {
-   "Arsenal": 0.6876,
-   "Aston Villa": 0.0005,
-   "Bournemouth": 0.0005,
-   "Brentford": 0.0018,
-   "Brighton": 0.0776,
-   "Chelsea": 0.0096,
+   "Arsenal": 0.8271,
+   "Aston Villa": 0.0002,
+   "Bournemouth": 0.0011,
+   "Brentford": 0.0001,
+   "Brighton": 0.1092,
+   "Chelsea": 0.0023,
    "Coventry": 0.0,
    "Crystal Palace": 0.0,
-   "Everton": 0.0,
-   "Fulham": 0.0001,
-   "Hull City": 0.0001,
-   "Ipswich": 0.0001,
+   "Everton": 0.0019,
+   "Fulham": 0.0,
+   "Hull City": 0.0,
+   "Ipswich": 0.0,
    "Leeds": 0.0,
-   "Liverpool": 0.0038,
-   "Man City": 0.2179,
+   "Liverpool": 0.0075,
+   "Man City": 0.0506,
    "Man United": 0.0,
-   "Newcastle": 0.0002,
+   "Newcastle": 0.0,
    "Nottm Forest": 0.0,
    "Sunderland": 0.0,
-   "Tottenham": 0.0002
+   "Tottenham": 0.0
   }
  },
  "forecast_id": "EPL2027",
- "freeze_date": "2026-11-02",
+ "freeze_date": "2026-11-10",
  "gate_rule": "2-of-3: CALL when >=2 instruments clear 0.95 the same way and none contradicts by >0.20 the other way; p_gate = median",
  "instruments": {
-  "market_source": "Bookmaker outright odds, oddschecker.com PL page best price, fetched 2026-11-02 ~06:20 UTC (built-in browser), dated after MD9 incl. Liverpool v Arsenal 1-Nov; fractional 2/5, 8/1, 14/1, 16/1, 22/1",
+  "market_source": "Bookmaker outright odds, oddschecker.com PL page best price, fetched 2026-11-10 ~05:50 UTC (built-in browser), dated after MD10 (8 Nov); fractional Arsenal 2/7, Brighton 11/1, Liverpool 14/1, Man City 14/1, Chelsea 50/1",
   "model_note": "strength = games-played-shrunk PPG (k=12 prior games to league mean 1.37), fixed draw rate 0.24, 31 remaining games simulated independently, title by points then GD noise",
-  "research_sha256": "97f4ad6849a78680a162dbb9ff73bd885dbb0d158bc680bf228bd934189e6f30"
+  "research_sha256": "f3ae9c907ef632f7f8cde2b9c10b2cd3dca35e996e1fa03283944b9753eac30b"
  },
  "quality_flags": [
   "THE DISAGREEMENT, DECODED (2026-10-23): the market favours Arsenal while our table model favours City - and it is not just stale odds. Polymarket prices a City POINTS DEDUCTION by June 2027 at 74.5% (charges verdict pending). Our model simulates the table as it stands and cannot see sanction risk; the market can. Until the verdict, the title race is genuinely open and this forecast stays WATCH.",
@@ -47,42 +47,42 @@
  ],
  "questions": [
   {
-   "p_gate": 0.2179,
-   "p_market": 0.1095,
-   "p_model": 0.2179,
-   "p_research": 0.48,
+   "p_gate": 0.0645,
+   "p_market": 0.0645,
+   "p_model": 0.0506,
+   "p_research": 0.1,
    "q": "Man City win the title",
    "verdict": "WATCH"
   },
   {
-   "p_gate": 0.6876,
-   "p_market": 0.7042,
-   "p_model": 0.6876,
-   "p_research": 0.3,
+   "p_gate": 0.7522,
+   "p_market": 0.7522,
+   "p_model": 0.8271,
+   "p_research": 0.69,
    "q": "Arsenal win the title",
    "verdict": "WATCH"
   },
   {
-   "p_gate": 0.8137,
-   "p_market": 0.8137,
-   "p_model": 0.9055,
-   "p_research": 0.78,
+   "p_gate": 0.8166,
+   "p_market": 0.8166,
+   "p_model": 0.8777,
+   "p_research": 0.79,
    "q": "Winner in {Man City, Arsenal}",
    "verdict": "WATCH"
   },
   {
-   "p_gate": 0.05,
-   "p_market": 0.058,
-   "p_model": 0.0038,
-   "p_research": 0.05,
+   "p_gate": 0.04,
+   "p_market": 0.0645,
+   "p_model": 0.0075,
+   "p_research": 0.04,
    "q": "Liverpool win the title",
    "verdict": "CALL-NO"
   },
   {
-   "p_gate": 0.9803,
-   "p_market": 0.9803,
-   "p_model": 0.9965,
-   "p_research": 0.92,
+   "p_gate": 0.9807,
+   "p_market": 0.9807,
+   "p_model": 0.9967,
+   "p_research": 0.97,
    "q": "Winner from current top 5",
    "verdict": "CALL-YES"
   }
@@ -98,7 +98,7 @@
   "source": "Final official 2026-27 Premier League table (premierleague.com/tables) after the last matchday (~2027-05)"
  },
  "resolve_date": "2027-05",
- "run_at_utc": "2026-11-02T11:51:43+00:00",
+ "run_at_utc": "2026-11-10T05:36:50+00:00",
  "title": "Premier League Winner 2026-27",
  "tripwires": [
   {
