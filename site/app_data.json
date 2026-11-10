@@ -3,11 +3,15 @@
 "track": {
 "retrodiction_calls": 28,
 "retrodiction_correct": 28,
-"forward_calls": 35,
-"forward_correct": 32,
+"live_calls": 26,
+"live_correct": 26,
+"blind_calls": 9,
+"blind_correct": 6,
 "lifetime_calls": 63,
 "lifetime_correct": 60,
-"live_open_calls": 8
+"live_open_calls": 8,
+"forward_calls": 35,
+"forward_correct": 32
 },
 "scoring": {
 "generated": "2026-11-10",
@@ -1863,20 +1867,6 @@
 "p_model": 0.1092
 },
 {
-"name": "Man City",
-"base": null,
-"m2": null,
-"m3": null,
-"p5": null,
-"med": null,
-"p95": null,
-"p_maj": null,
-"p_largest": null,
-"actual": null,
-"p_market": 0.0645,
-"p_model": 0.0506
-},
-{
 "name": "Liverpool",
 "base": null,
 "m2": null,
@@ -1889,6 +1879,20 @@
 "actual": null,
 "p_market": 0.0645,
 "p_model": 0.0075
+},
+{
+"name": "Man City",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": 0.0645,
+"p_model": 0.0506
 },
 {
 "name": "Chelsea",

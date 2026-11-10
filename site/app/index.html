@@ -403,10 +403,10 @@ function renderChangelog(){
   '<p class="hint" style="margin-top:18px">RUN LOG entries are the autopilot\'s own dated reports (forecasts/autopilot_log.md). LEDGER entries are computed directly from the append-only, SHA-hashed pre-registration ledgers.</p>';
 }
 function renderHome(){
-  const t=DATA.track, pr=(t.lifetime_correct/t.lifetime_calls*100).toFixed(1);
+  const t=DATA.track;
   const sc=DATA.scoring;
   $("#homestats").innerHTML=`
-   <div class="stat"><div class="v">${t.lifetime_correct}/${t.lifetime_calls} <small>${pr}%</small></div><div class="k">certified calls that proved right, lifetime</div></div>
+   <div class="stat"><div class="v">${t.live_correct}/${t.live_calls}</div><div class="k">calls made before the event that proved right</div></div>
    <div class="stat"><div class="v">${t.live_open_calls}</div><div class="k">calls currently open on the record, hash-stamped</div></div>
    ${sc&&sc.overall_binary&&sc.overall_binary.n?`<div class="stat"><div class="v">${sc.overall_binary.n}</div><div class="k">probabilities scored at resolution &mdash; every one, not just the calls</div></div>`:""}`;
   const live=DATA.elections.filter(e=>e.status==="live"&&e.kind!=="matches");
@@ -417,10 +417,11 @@ function renderHome(){
 function renderRecord(){
   const t=DATA.track, sc=DATA.scoring, pr=(t.lifetime_correct/t.lifetime_calls*100).toFixed(1);
   $("#recstats").innerHTML=`
-   <div class="stat"><div class="v">${t.lifetime_correct}/${t.lifetime_calls} <small>${pr}%</small></div><div class="k">certified calls correct (target &ge;95%)</div></div>
+   <div class="stat"><div class="v">${t.live_correct}/${t.live_calls}</div><div class="k">live calls, locked before the event</div></div>
+   <div class="stat"><div class="v">${t.blind_correct}/${t.blind_calls}</div><div class="k">blind-test calls, made after the vote from pre-election data</div></div>
    <div class="stat"><div class="v">${t.retrodiction_correct}/${t.retrodiction_calls}</div><div class="k">backtest calls, 46 past elections</div></div>
-   <div class="stat"><div class="v">${t.forward_correct}/${t.forward_calls}</div><div class="k">real forward calls, resolved</div></div>
-   <div class="stat"><div class="v">${t.live_open_calls}</div><div class="k">open calls awaiting resolution</div></div>`;
+   <div class="stat"><div class="v">${t.live_open_calls}</div><div class="k">open calls awaiting resolution</div></div>`+
+   `<p class="hint" style="grid-column:1/-1;margin:6px 0 0">All three kinds together: ${t.lifetime_correct}/${t.lifetime_calls} certified calls correct (${pr}%; target &ge;95%). Only the live calls were made before the result existed; a call counts as blind when it was hashed after its event, using frozen pre-event data, with results fetched only after hashing.</p>`;
   let h="";
   if(sc&&sc.overall_binary&&sc.overall_binary.n){
     const cal=(sc.calibration||[]).filter(r=>r.n>0);

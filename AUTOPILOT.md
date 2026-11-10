@@ -76,6 +76,11 @@ permitted write to existing ledger rows, and only to the three resolution column
   `publish` with that `url`, `file_path` PredictionEngine/site/app/index.html and
   `files` {"app_data.json": "PredictionEngine/site/app_data.json"}. Do not change the page
   HTML unless the run's own changes require it.
+- Commit and push `site/app/` (with the ledgers) to `main`: GitHub Pages republishes the public
+  copy at https://rkkant-design.github.io/psephos/ on any push that touches `site/app/**`.
+- Track-record wording: a resolved CALL is "live" only if it was hashed before its event
+  resolved; one hashed after (e.g. the 2026 holdout) is a "blind test" call. 13_build_app_data.py
+  splits them by `run_at_utc` vs `resolved`; never describe blind calls as live or forward.
 
 ### 7. Report (always, even on no-op)
 Append one dated block to `PredictionEngine/forecasts/autopilot_log.md`:

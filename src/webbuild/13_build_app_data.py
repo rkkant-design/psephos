@@ -245,32 +245,44 @@ def _score(df, vcol, ccol):
 n46_calls = pl[pl.gate_strict.astype(str).str.startswith("CALL")]
 n46_total = len(n46_calls)
 n46_ok = int(n46_calls.strict_correct.fillna(0).astype(float).sum())
-res_rows = fl[(fl.resolved.astype(str).str.len() > 0) & fl.verdict.astype(str).str.startswith("CALL")]
-fwd_total = len(res_rows)
-fwd_ok = int(res_rows.correct.astype(str).str.lower().eq("true").sum())
 track = {
     "retrodiction_calls": n46_total, "retrodiction_correct": n46_ok,
-    "forward_calls": fwd_total, "forward_correct": fwd_ok,
-    "lifetime_calls": n46_total + fwd_total, "lifetime_correct": n46_ok + fwd_ok,
-    "live_open_calls": int(len(fl[(fl.resolved.astype(str).str.len() == 0)
-                                  & fl.verdict.astype(str).str.startswith("CALL")])),
+    # Resolved pre-registered calls split by WHEN they were locked:
+    #   live  = hashed before the event resolved (a true forecast)
+    #   blind = hashed after the event, from frozen pre-event data only, results
+    #           fetched after hashing (e.g. the 2026 holdout run on 2026-10-16
+    #           for April 2026 elections). Never present blind calls as live.
+    "live_calls": 0, "live_correct": 0,
+    "blind_calls": 0, "blind_correct": 0,
+    "lifetime_calls": n46_total, "lifetime_correct": n46_ok,
+    "live_open_calls": 0,
 }
+
+def _add_resolved(df):
+    """Add a ledger's CALL rows to the track: open calls, then resolved calls
+    split into live vs blind by comparing run_at_utc with the resolved date."""
+    calls = df[df.verdict.astype(str).str.startswith("CALL")]
+    is_res = calls.resolved.astype(str).str.len() > 0
+    track["live_open_calls"] += int((~is_res).sum())
+    res = calls[is_res]
+    ran = res.run_at_utc.astype(str).str[:10]
+    blind = ran > res.resolved.astype(str).str[:10]
+    ok = res.correct.astype(str).str.lower().eq("true")
+    track["blind_calls"] += int(blind.sum())
+    track["blind_correct"] += int((ok & blind).sum())
+    track["live_calls"] += int((~blind).sum())
+    track["live_correct"] += int((ok & ~blind).sum())
+    track["lifetime_calls"] += int(len(res))
+    track["lifetime_correct"] += int(ok.sum())
+
+_add_resolved(fl)
 if wl_path.exists():
-    wl_open = wl[(wl.resolved.str.len() == 0) & wl.verdict.str.startswith("CALL")]
-    wl_res = wl[(wl.resolved.str.len() > 0) & wl.verdict.str.startswith("CALL")]
-    track["live_open_calls"] += int(len(wl_open))
-    track["forward_calls"] += int(len(wl_res))
-    track["forward_correct"] += int(wl_res.correct.str.lower().eq("true").sum())
-    track["lifetime_calls"] += int(len(wl_res))
-    track["lifetime_correct"] += int(wl_res.correct.str.lower().eq("true").sum())
+    _add_resolved(wl)
 if rl is not None:
-    rl_open = rl[(rl.resolved.str.len() == 0) & rl.verdict.str.startswith("CALL")]
-    rl_res = rl[(rl.resolved.str.len() > 0) & rl.verdict.str.startswith("CALL")]
-    track["live_open_calls"] += int(len(rl_open))
-    track["forward_calls"] += int(len(rl_res))
-    track["forward_correct"] += int(rl_res.correct.str.lower().eq("true").sum())
-    track["lifetime_calls"] += int(len(rl_res))
-    track["lifetime_correct"] += int(rl_res.correct.str.lower().eq("true").sum())
+    _add_resolved(rl)
+# Back-compat alias for any older reader: forward = live + blind.
+track["forward_calls"] = track["live_calls"] + track["blind_calls"]
+track["forward_correct"] = track["live_correct"] + track["blind_correct"]
 
 # ---------- scoring summary (scripts/score.py) ----------
 scoring = None
