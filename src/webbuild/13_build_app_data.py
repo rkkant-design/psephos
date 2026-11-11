@@ -296,22 +296,64 @@ if rl is not None:
 track["forward_calls"] = track["live_calls"] + track["blind_calls"]
 track["forward_correct"] = track["live_correct"] + track["blind_correct"]
 
-# Live-call provenance: how many DISTINCT events/forecasts the live calls cover,
-# and how far ahead they were locked - so "live 26/26" is never mistaken for a
-# broad cross-domain record when it is one forecast, one freeze, one night.
-_leads = [d for (_, _, _, d) in _live_prov if d is not None]
+# Live-call provenance. Lead time must be measured to the real-world EVENT (polls
+# close), NOT to the date we got round to scoring it - those differ (election night
+# 2026-11-03 vs AP-call scoring 2026-11-06). We also separate FIRST published from the
+# LATEST revision locked before the event, so "26/26 live" is read for what it is: one
+# forecast, one night, revised the day before the vote - not a broad cross-domain record.
 _forecasts = sorted({fid for (fid, _, _, _) in _live_prov})
-_freezes = sorted({f for (_, f, _, _) in _live_prov if f})
-_resolves = sorted({r for (_, _, r, _) in _live_prov if r})
+_resolves = sorted({r for (_, _, r, _) in _live_prov if r})  # SCORED dates (not the event)
+
+# Event date per forecast = its real-world resolution (polls close), from the forecast's
+# resolve_date. The race board resolves on the US midterm election; read it from USMID2026.
+_event_dates = {}
+_umid = WDIR / "USMID2026.json"
+if _umid.exists():
+    try:
+        _event_dates["USMIDRACES2026"] = str(json.loads(_umid.read_text(encoding="utf-8")).get("resolve_date", ""))[:10]
+    except Exception:
+        pass
+
+def _run_span(fid):
+    """(first_published, latest_revision) run dates from the RAW (un-deduped) ledger."""
+    for p in (FDIR / "ledger.csv", wl_path, rl_path):
+        if not Path(p).exists():
+            continue
+        try:
+            raw = pd.read_csv(p, dtype=str).fillna("")
+        except Exception:
+            continue
+        if "forecast_id" not in raw.columns:
+            continue
+        sub = raw[raw["forecast_id"] == fid]
+        if len(sub):
+            runs = sorted(x for x in sub["run_at_utc"].str[:10].unique() if x)
+            if runs:
+                return runs[0], runs[-1]
+    return None, None
+
+def _diff(a, b):
+    try:
+        return (date.fromisoformat(b) - date.fromisoformat(a)).days
+    except Exception:
+        return None
+
+_first_pub = sorted(filter(None, (_run_span(f)[0] for f in _forecasts)))
+_latest_rev = sorted(filter(None, (_run_span(f)[1] for f in _forecasts)))
+_events = sorted({_event_dates.get(f) for f in _forecasts if _event_dates.get(f)})
+first_published = _first_pub[0] if _first_pub else None
+latest_revision = _latest_rev[-1] if _latest_rev else None
+event_date = _events[0] if _events else None   # all live calls share one event here
 track["live_provenance"] = {
     "n": len(_live_prov),
     "distinct_forecasts": len(_forecasts),
     "forecast_ids": _forecasts,
-    "freeze_dates": _freezes,
-    "resolve_dates": _resolves,
-    "lead_days_min": min(_leads) if _leads else None,
-    "lead_days_median": int(sorted(_leads)[len(_leads) // 2]) if _leads else None,
-    "lead_days_max": max(_leads) if _leads else None,
+    "first_published": first_published,
+    "latest_revision": latest_revision,
+    "event_date": event_date,              # real event (polls close)
+    "scored_on": _resolves,                # when we resolved/scored it (later than the event)
+    "lead_days_first_to_event": _diff(first_published, event_date),
+    "lead_days_latest_to_event": _diff(latest_revision, event_date),
 }
 
 # ---------- scoring summary (scripts/score.py) ----------
@@ -330,13 +372,20 @@ if ss_path.exists():
             r = row.iloc[0]
             scoring["correlation"] = {
                 "n": int(r["n"]), "error_corr": round(float(r["error_corr"]), 3),
-                "same_sign_rate": round(float(r["same_sign_rate"]), 3),
-                "joint_large_miss": round(float(r["joint_large_miss"]), 4),
-                "independent_would_predict": round(float(r["independent_would_predict"]), 4),
+                "codir_miss": round(float(r["codir_miss"]), 4),
+                "codir_independent": round(float(r["codir_independent"]), 4),
+                "codir_ratio": round(float(r["codir_ratio"]), 2),
+                "formula": ("error_i = p_i - outcome (outcome 0/1); 'wrong winner' = p_i on the "
+                            "wrong side of 0.5. Co-miss = share where BOTH are wrong; baseline = "
+                            "P(M2 wrong) x P(M3 wrong) under independence. error_corr is the Pearson "
+                            "correlation of the signed residuals and carries a common-mode floor "
+                            "from sharing the realized outcome - the risk being measured."),
                 "by_cohort": [
                     {"source": str(x["source"]), "n": int(x["n"]),
                      "error_corr": round(float(x["error_corr"]), 3),
-                     "same_sign_rate": round(float(x["same_sign_rate"]), 3)}
+                     "codir_miss": round(float(x["codir_miss"]), 4),
+                     "codir_independent": round(float(x["codir_independent"]), 4),
+                     "codir_ratio": round(float(x["codir_ratio"]), 2)}
                     for _, x in ic.iterrows()],
             }
 

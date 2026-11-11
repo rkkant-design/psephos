@@ -178,5 +178,40 @@
   "Every resolved pre-registered probability is scored - WATCH rows included. Hit-rate on CALLs alone is gameable by abstention; this table is not.",
   "Binary Brier: 0 perfect, 0.25 = always saying 50%, 1 = certain and wrong. Log scores use p clipped at 1e-4.",
   "Latest run per question is the scored row (re-runs supersede by timestamp, same rule as the ledger)."
- ]
+ ],
+ "correlation": {
+  "n": 154,
+  "error_corr": 0.745,
+  "codir_miss": 0.1299,
+  "codir_independent": 0.0675,
+  "codir_ratio": 1.92,
+  "formula": "error_i = p_i - outcome (outcome in {0,1}); 'backed the wrong winner' = p_i on the wrong side of 0.5. Co-miss = P(both wrong), baseline = P(M2 wrong) x P(M3 wrong) under independence. error_corr is the Pearson correlation of the signed residuals (carries a common-mode floor from sharing the realized outcome - the very risk being measured).",
+  "note": "Measured on every resolved question where both instruments forecast. The directional co-miss has a matched independence baseline; we do not report a raw same-sign rate because for binary outcomes it is mechanical.",
+  "by_cohort": [
+   {
+    "source": "forward_resolved",
+    "n": 26,
+    "error_corr": 0.962,
+    "codir_miss": 0.3077,
+    "codir_independent": 0.1775,
+    "codir_ratio": 1.73
+   },
+   {
+    "source": "retrodiction_n46",
+    "n": 128,
+    "error_corr": 0.663,
+    "codir_miss": 0.0938,
+    "codir_independent": 0.0488,
+    "codir_ratio": 1.92
+   },
+   {
+    "source": "pooled",
+    "n": 154,
+    "error_corr": 0.745,
+    "codir_miss": 0.1299,
+    "codir_independent": 0.0675,
+    "codir_ratio": 1.92
+   }
+  ]
+ }
 }

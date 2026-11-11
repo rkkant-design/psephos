@@ -32,6 +32,8 @@ if len(pl):
     frames.append(pd.DataFrame({
         "source": "retrodiction_n46",
         "e2": pl.p_m2 - pl.actual, "e3": pl.p_m3 - pl.actual,
+        "p2": pl.p_m2.astype(float).values, "p3": pl.p_m3.astype(float).values,
+        "o": pl.actual.astype(float).values,
     }))
 
 fl = pd.read_csv(ROOT / "forecasts" / "ledger.csv")
@@ -45,23 +47,40 @@ if len(fr):
     frames.append(pd.DataFrame({
         "source": "forward_resolved",
         "e2": fr.p_m2.astype(float) - y, "e3": fr.p_m3.astype(float) - y,
+        "p2": fr.p_m2.astype(float).values, "p3": fr.p_m3.astype(float).values,
+        "o": y.values,
     }))
 
+# Outcomes here are binary (0/1). The sign of a signed residual e = p - outcome is
+# therefore MECHANICAL: for any binary outcome both instruments' residuals share its
+# side (both <= 0 when outcome=1, both >= 0 when outcome=0), so a raw "same-sign rate"
+# is ~1.0 by construction and has no 50% baseline. We do NOT report it. Instead we use
+# a directional co-miss with a MATCHED independence baseline:
+#   wrong_i   = instrument i put p_i on the wrong side of 0.5 (backed the wrong winner)
+#   co_miss   = P(wrong_2 AND wrong_3)                 -- both back the wrong side
+#   independent baseline = P(wrong_2) * P(wrong_3)     -- if their errors were independent
+# ratio > 1 means the instruments fail together more than chance. Pearson r of the signed
+# residuals is reported too, labelled as residual correlation (it carries a common-mode
+# floor from sharing the same realized outcome, which is exactly the risk being measured).
 all_df = pd.concat(frames, ignore_index=True)
+
+def _codir(g):
+    w2 = (g.p2 > 0.5) != (g.o == 1)   # instrument 2 backed the wrong winner
+    w3 = (g.p3 > 0.5) != (g.o == 1)
+    both = float((w2 & w3).mean())
+    indep = float(w2.mean() * w3.mean())
+    return float(w2.mean()), float(w3.mean()), both, indep
 
 rows = []
 for src, g in list(all_df.groupby("source")) + [("pooled", all_df)]:
     n = len(g)
-    r = float(np.corrcoef(g.e2, g.e3)[0, 1]) if n >= 3 else np.nan
-    same_sign = float(((g.e2 > 0) == (g.e3 > 0)).mean())
-    # joint large-miss rate: both instruments off by >0.5 the same way
-    joint_bad = float(((g.e2.abs() > 0.5) & (g.e3.abs() > 0.5)
-                       & ((g.e2 > 0) == (g.e3 > 0))).mean())
-    indep_pred = float((g.e2.abs() > 0.5).mean() * (g.e3.abs() > 0.5).mean())
+    r = float(np.corrcoef(g.e2, g.e3)[0, 1]) if n >= 3 else float("nan")
+    w2r, w3r, both, indep = _codir(g)
     rows.append({"source": src, "n": n, "error_corr": round(r, 3),
-                 "same_sign_rate": round(same_sign, 3),
-                 "joint_large_miss": round(joint_bad, 4),
-                 "independent_would_predict": round(indep_pred, 4)})
+                 "wrong_dir_m2": round(w2r, 4), "wrong_dir_m3": round(w3r, 4),
+                 "codir_miss": round(both, 4),
+                 "codir_independent": round(indep, 4),
+                 "codir_ratio": round(both / indep, 2) if indep else None})
 
 out = pd.DataFrame(rows)
 out.to_csv(PROC / "instrument_correlation.csv", index=False)
@@ -72,18 +91,26 @@ ssp = PROC / "scores_summary.json"
 if ssp.exists():
     ss = json.loads(ssp.read_text(encoding="utf-8"))
     ss["correlation"] = {
-        "n": pooled["n"], "error_corr": pooled["error_corr"],
-        "same_sign_rate": pooled["same_sign_rate"],
-        "joint_large_miss": pooled["joint_large_miss"],
-        "independent_would_predict": pooled["independent_would_predict"],
-        "note": ("Measured on every resolved question where both instruments "
-                 "forecast. This is why the gate requires BOTH: errors "
-                 "correlate, so one instrument's 95% is not 95%."),
+        "n": pooled["n"],
+        "error_corr": pooled["error_corr"],
+        "codir_miss": pooled["codir_miss"],
+        "codir_independent": pooled["codir_independent"],
+        "codir_ratio": pooled["codir_ratio"],
+        "formula": ("error_i = p_i - outcome (outcome in {0,1}); 'backed the wrong winner' = "
+                    "p_i on the wrong side of 0.5. Co-miss = P(both wrong), baseline = "
+                    "P(M2 wrong) x P(M3 wrong) under independence. error_corr is the Pearson "
+                    "correlation of the signed residuals (carries a common-mode floor from "
+                    "sharing the realized outcome - the very risk being measured)."),
+        "note": ("Measured on every resolved question where both instruments forecast. "
+                 "The directional co-miss has a matched independence baseline; we do not "
+                 "report a raw same-sign rate because for binary outcomes it is mechanical."),
+        "by_cohort": [{"source": r["source"], "n": r["n"], "error_corr": r["error_corr"],
+                       "codir_miss": r["codir_miss"], "codir_independent": r["codir_independent"],
+                       "codir_ratio": r["codir_ratio"]} for r in rows],
     }
     ssp.write_text(json.dumps(ss, indent=1), encoding="utf-8")
     print("\ncorrelation block added to scores_summary.json")
-print(f"\nInterpretation: error correlation {pooled['error_corr']}, same-sign "
-      f"{pooled['same_sign_rate']*100:.0f}% (independent would be ~50%). Joint "
-      f"large-miss rate {pooled['joint_large_miss']*100:.1f}% vs "
-      f"{pooled['independent_would_predict']*100:.1f}% if independent — the gap is the "
-      f"common-mode risk the dual gate prices in and a single instrument hides.")
+print(f"\nInterpretation: when one instrument backs the wrong winner the other does too "
+      f"{pooled['codir_miss']*100:.1f}% of the time vs {pooled['codir_independent']*100:.1f}% "
+      f"if independent ({pooled['codir_ratio']}x). Pearson residual correlation {pooled['error_corr']}. "
+      f"This common-mode risk is what the dual gate prices in and a single instrument hides.")

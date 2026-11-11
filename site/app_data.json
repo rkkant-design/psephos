@@ -18,15 +18,14 @@
 "forecast_ids": [
 "USMIDRACES2026"
 ],
-"freeze_dates": [
-"2026-11-02"
-],
-"resolve_dates": [
+"first_published": "2026-10-25",
+"latest_revision": "2026-11-02",
+"event_date": "2026-11-03",
+"scored_on": [
 "2026-11-06"
 ],
-"lead_days_min": 4,
-"lead_days_median": 4,
-"lead_days_max": 4
+"lead_days_first_to_event": 9,
+"lead_days_latest_to_event": 1
 }
 },
 "scoring": {
@@ -213,27 +212,34 @@
 "correlation": {
 "n": 154,
 "error_corr": 0.745,
-"same_sign_rate": 0.916,
-"joint_large_miss": 0.1299,
-"independent_would_predict": 0.0675,
+"codir_miss": 0.1299,
+"codir_independent": 0.0675,
+"codir_ratio": 1.92,
+"formula": "error_i = p_i - outcome (outcome 0/1); 'wrong winner' = p_i on the wrong side of 0.5. Co-miss = share where BOTH are wrong; baseline = P(M2 wrong) x P(M3 wrong) under independence. error_corr is the Pearson correlation of the signed residuals and carries a common-mode floor from sharing the realized outcome - the risk being measured.",
 "by_cohort": [
 {
 "source": "forward_resolved",
 "n": 26,
 "error_corr": 0.962,
-"same_sign_rate": 0.962
+"codir_miss": 0.3077,
+"codir_independent": 0.1775,
+"codir_ratio": 1.73
 },
 {
 "source": "retrodiction_n46",
 "n": 128,
 "error_corr": 0.663,
-"same_sign_rate": 0.906
+"codir_miss": 0.0938,
+"codir_independent": 0.0488,
+"codir_ratio": 1.92
 },
 {
 "source": "pooled",
 "n": 154,
 "error_corr": 0.745,
-"same_sign_rate": 0.916
+"codir_miss": 0.1299,
+"codir_independent": 0.0675,
+"codir_ratio": 1.92
 }
 ]
 }
