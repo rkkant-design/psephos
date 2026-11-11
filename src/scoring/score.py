@@ -255,6 +255,30 @@ def main():
     calib_pool = ([{"p": r["p"], "outcome": r["outcome"], "source": r["ledger"]}
                    for r in binary] + match_calib)
 
+    # --- cohort/composition metadata: lets the page reconcile 202 vs 292 and
+    #     label every view with its cohort, cutoff and treatment of revisions/voids ---
+    def _by_source(rows):
+        out = {}
+        for r in rows:
+            out[r["ledger"]] = out.get(r["ledger"], 0) + 1
+        return out
+
+    all_resolved_dates = [r["resolved_date"] for r in (binary + matches) if r.get("resolved_date")]
+    n_matches_resolved = len(matches)
+    calibration_meta = {
+        "binary_n": len(binary),
+        "binary_by_source": _by_source(binary),
+        "match_events": n_matches_resolved * 3,
+        "match_events_note": f"{n_matches_resolved} resolved football matches x 3 outcomes (H/D/A), binary events for calibration only",
+        "total": len(calib_pool),
+        "cutoff": max(all_resolved_dates) if all_resolved_dates else None,
+        "revisions": "latest run per (forecast_id, question) is scored; a re-run supersedes by timestamp (same rule as the ledger and the app)",
+        "voids": "VOID resolutions (e.g. a curtailed season with no official champion) are excluded and logged; WATCH rows ARE scored",
+        "note": ("overall_binary Brier is the 202-row binary cohort; the calibration table pools those 202 "
+                 "plus the 90 football match-outcome events, 292 in all - the football events never enter the "
+                 "binary Brier means (different scale), only the calibration audit"),
+    }
+
     def block(rows):
         if not rows:
             return {"n": 0, "brier": None, "log": None}
@@ -283,6 +307,7 @@ def main():
                     "note": "three-way Brier, scale 0-2 (uniform ref 0.667); never pooled with binary"},
         "matches_skill_model_vs_market": match_skill_table(matches, match_market),
         "calibration": calibration_table(calib_pool),
+        "calibration_meta": calibration_meta,
         "skill_model_vs_market": skill_table(FDIR / "world_ledger.csv",
                                              FDIR / "research_ledger.csv"),
         "notes": [

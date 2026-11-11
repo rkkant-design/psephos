@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-10",
+ "generated": "2026-11-11",
  "overall_binary": {
   "n": 202,
   "brier": 0.1255,
@@ -146,6 +146,22 @@
    "realized": 0.915
   }
  ],
+ "calibration_meta": {
+  "binary_n": 202,
+  "binary_by_source": {
+   "india": 61,
+   "world": 6,
+   "us_races": 132,
+   "research": 3
+  },
+  "match_events": 90,
+  "match_events_note": "30 resolved football matches x 3 outcomes (H/D/A), binary events for calibration only",
+  "total": 292,
+  "cutoff": "2026-11-10",
+  "revisions": "latest run per (forecast_id, question) is scored; a re-run supersedes by timestamp (same rule as the ledger and the app)",
+  "voids": "VOID resolutions (e.g. a curtailed season with no official champion) are excluded and logged; WATCH rows ARE scored",
+  "note": "overall_binary Brier is the 202-row binary cohort; the calibration table pools those 202 plus the 90 football match-outcome events, 292 in all - the football events never enter the binary Brier means (different scale), only the calibration audit"
+ },
  "skill_model_vs_market": {
   "n_questions": 3,
   "brier_model": 0.0786,
