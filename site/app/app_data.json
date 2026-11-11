@@ -2285,7 +2285,243 @@
 ],
 "source": "Election Commission of India official results (results.eci.gov.in), party-wise seat tally at first full declaration of all 117 seats"
 },
-"sha": "3c12f70c96ddf594ae6a2bc615e5ef05fd7b84acbc5f4d761f764463f7c3ef1c"
+"sha": "3c12f70c96ddf594ae6a2bc615e5ef05fd7b84acbc5f4d761f764463f7c3ef1c",
+"versions": [
+{
+"run_at": "2026-10-23",
+"freeze": "2026-10-23",
+"sha": "424d61a1ced3d6d973348f93300234cd6d6188ec5b6700667ea6ddaca657d0f4",
+"resolution_source": "",
+"questions": [
+{
+"q": "AAP wins majority",
+"p2": 0.5913,
+"p3": 0.4831,
+"verdict": "WATCH"
+},
+{
+"q": "AAP is largest",
+"p2": 0.8765,
+"p3": 0.7502,
+"verdict": "WATCH"
+},
+{
+"q": "INC wins majority",
+"p2": 0.029,
+"p3": 0.1054,
+"verdict": "WATCH"
+},
+{
+"q": "INC is largest",
+"p2": 0.109,
+"p3": 0.2468,
+"verdict": "WATCH"
+},
+{
+"q": "SAD wins majority",
+"p2": 0.0003,
+"p3": 0.0,
+"verdict": "WATCH-FLAG"
+},
+{
+"q": "SAD is largest",
+"p2": 0.0121,
+"p3": 0.0017,
+"verdict": "WATCH-FLAG"
+},
+{
+"q": "BJP wins majority",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "WATCH-FLAG"
+},
+{
+"q": "BJP is largest",
+"p2": 0.0024,
+"p3": 0.0013,
+"verdict": "WATCH-FLAG"
+},
+{
+"q": "BJP under 15 seats",
+"p2": 0.7796,
+"p3": 0.8069,
+"verdict": "WATCH"
+},
+{
+"q": "SAD under 20 seats",
+"p2": 0.7311,
+"p3": 0.906,
+"verdict": "WATCH"
+},
+{
+"q": "Winner (largest) in {AAP, INC}",
+"p2": 0.9855,
+"p3": 0.997,
+"verdict": "WATCH-FLAG"
+}
+]
+},
+{
+"run_at": "2026-10-23",
+"freeze": "2026-10-23",
+"sha": "b88aebe522fcb3f7573ca6b64965d7c69da5773d12eeb099f76d05af85ac2ee5",
+"resolution_source": "Election Commission of India official results (results.eci.gov.in), party-wise seat tally at first full declaration of all 117 seats",
+"questions": [
+{
+"q": "AAP wins majority",
+"p2": 0.5913,
+"p3": 0.4831,
+"verdict": "WATCH"
+},
+{
+"q": "AAP is largest",
+"p2": 0.8765,
+"p3": 0.7502,
+"verdict": "WATCH"
+},
+{
+"q": "INC wins majority",
+"p2": 0.029,
+"p3": 0.1054,
+"verdict": "WATCH"
+},
+{
+"q": "INC is largest",
+"p2": 0.109,
+"p3": 0.2468,
+"verdict": "WATCH"
+},
+{
+"q": "SAD wins majority",
+"p2": 0.0003,
+"p3": 0.0,
+"verdict": "WATCH-FLAG"
+},
+{
+"q": "SAD is largest",
+"p2": 0.0121,
+"p3": 0.0017,
+"verdict": "WATCH-FLAG"
+},
+{
+"q": "BJP wins majority",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "WATCH-FLAG"
+},
+{
+"q": "BJP is largest",
+"p2": 0.0024,
+"p3": 0.0013,
+"verdict": "WATCH-FLAG"
+},
+{
+"q": "BJP under 15 seats",
+"p2": 0.7796,
+"p3": 0.8069,
+"verdict": "WATCH"
+},
+{
+"q": "SAD under 20 seats",
+"p2": 0.7311,
+"p3": 0.906,
+"verdict": "WATCH"
+},
+{
+"q": "Winner (largest) in {AAP, INC}",
+"p2": 0.9855,
+"p3": 0.997,
+"verdict": "WATCH-FLAG"
+}
+]
+},
+{
+"run_at": "2026-11-10",
+"freeze": "2026-11-10",
+"sha": "3c12f70c96ddf594ae6a2bc615e5ef05fd7b84acbc5f4d761f764463f7c3ef1c",
+"resolution_source": "Election Commission of India official results (results.eci.gov.in), party-wise seat tally at first full declaration of all 117 seats",
+"questions": [
+{
+"q": "AAP wins majority",
+"p2": 0.5913,
+"p3": 0.4143,
+"verdict": "WATCH"
+},
+{
+"q": "AAP is largest",
+"p2": 0.8765,
+"p3": 0.7418,
+"verdict": "WATCH"
+},
+{
+"q": "INC wins majority",
+"p2": 0.029,
+"p3": 0.0864,
+"verdict": "WATCH"
+},
+{
+"q": "INC is largest",
+"p2": 0.109,
+"p3": 0.2505,
+"verdict": "WATCH"
+},
+{
+"q": "SAD wins majority",
+"p2": 0.0003,
+"p3": 0.0001,
+"verdict": "WATCH-FLAG"
+},
+{
+"q": "SAD is largest",
+"p2": 0.0121,
+"p3": 0.0052,
+"verdict": "WATCH-FLAG"
+},
+{
+"q": "BJP wins majority",
+"p2": 0.0,
+"p3": 0.0001,
+"verdict": "WATCH-FLAG"
+},
+{
+"q": "BJP is largest",
+"p2": 0.0024,
+"p3": 0.0025,
+"verdict": "WATCH-FLAG"
+},
+{
+"q": "BJP under 15 seats",
+"p2": 0.7796,
+"p3": 0.7215,
+"verdict": "WATCH"
+},
+{
+"q": "SAD under 20 seats",
+"p2": 0.7311,
+"p3": 0.8291,
+"verdict": "WATCH"
+},
+{
+"q": "Winner (largest) in {AAP, INC}",
+"p2": 0.9855,
+"p3": 0.9923,
+"verdict": "WATCH-FLAG"
+}
+]
+}
+],
+"verify": {
+"manifest": "manifest_20261110T053933.json",
+"anchored_utc": "2026-11-10T05:39:33+00:00",
+"proof": "manifest_20261110T053933.json.ots",
+"anchor_status": "pending",
+"authored": "2026-11-10",
+"first_published": "2026-10-23",
+"sha": "3c12f70c96ddf594ae6a2bc615e5ef05fd7b84acbc5f4d761f764463f7c3ef1c",
+"event_label": "Punjab poll, expected early 2027",
+"pre_event": true
+},
+"forecast_csv": "forecasts/PB2027.csv"
 },
 {
 "id": "UP2027",
@@ -2455,7 +2691,157 @@
 ],
 "source": "Election Commission of India official results (results.eci.gov.in), party-wise seat tally at first full declaration of all 403 seats"
 },
-"sha": "469c5e1394d7fc4cc3d4365a0abeefb1fa606b2e7a9269f104efc84f853b782b"
+"sha": "469c5e1394d7fc4cc3d4365a0abeefb1fa606b2e7a9269f104efc84f853b782b",
+"versions": [
+{
+"run_at": "2026-10-16",
+"freeze": "2026-10-16",
+"sha": "9768f1b2a9aee11bdae480b453c9c00bf37717f35471501417216aa14fe27672",
+"resolution_source": "",
+"questions": [
+{
+"q": "NDA wins majority",
+"p2": 0.612,
+"p3": 0.575,
+"verdict": "WATCH"
+},
+{
+"q": "NDA is largest",
+"p2": 0.6371,
+"p3": 0.589,
+"verdict": "WATCH"
+},
+{
+"q": "INDIA wins majority",
+"p2": 0.34,
+"p3": 0.3996,
+"verdict": "WATCH"
+},
+{
+"q": "INDIA is largest",
+"p2": 0.3629,
+"p3": 0.411,
+"verdict": "WATCH"
+},
+{
+"q": "BSP wins majority",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO"
+},
+{
+"q": "BSP is largest",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO"
+},
+{
+"q": "BSP under 25 seats",
+"p2": 0.9556,
+"p3": 0.9934,
+"verdict": "CALL-YES"
+},
+{
+"q": "NDA at least 150 seats",
+"p2": 0.8822,
+"p3": 0.8721,
+"verdict": "WATCH"
+},
+{
+"q": "INDIA at least 150 seats",
+"p2": 0.6668,
+"p3": 0.7346,
+"verdict": "WATCH"
+},
+{
+"q": "Winner (largest) in {NDA, INDIA}",
+"p2": 1.0,
+"p3": 1.0,
+"verdict": "CALL-YES"
+}
+]
+},
+{
+"run_at": "2026-10-23",
+"freeze": "2026-10-16",
+"sha": "469c5e1394d7fc4cc3d4365a0abeefb1fa606b2e7a9269f104efc84f853b782b",
+"resolution_source": "Election Commission of India official results (results.eci.gov.in), party-wise seat tally at first full declaration of all 403 seats",
+"questions": [
+{
+"q": "NDA wins majority",
+"p2": 0.612,
+"p3": 0.575,
+"verdict": "WATCH"
+},
+{
+"q": "NDA is largest",
+"p2": 0.6371,
+"p3": 0.589,
+"verdict": "WATCH"
+},
+{
+"q": "INDIA wins majority",
+"p2": 0.34,
+"p3": 0.3996,
+"verdict": "WATCH"
+},
+{
+"q": "INDIA is largest",
+"p2": 0.3629,
+"p3": 0.411,
+"verdict": "WATCH"
+},
+{
+"q": "BSP wins majority",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO"
+},
+{
+"q": "BSP is largest",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO"
+},
+{
+"q": "BSP under 25 seats",
+"p2": 0.9556,
+"p3": 0.9934,
+"verdict": "CALL-YES"
+},
+{
+"q": "NDA at least 150 seats",
+"p2": 0.8822,
+"p3": 0.8721,
+"verdict": "WATCH"
+},
+{
+"q": "INDIA at least 150 seats",
+"p2": 0.6668,
+"p3": 0.7346,
+"verdict": "WATCH"
+},
+{
+"q": "Winner (largest) in {NDA, INDIA}",
+"p2": 1.0,
+"p3": 1.0,
+"verdict": "CALL-YES"
+}
+]
+}
+],
+"verify": {
+"manifest": "manifest_20261023T100658.json",
+"anchored_utc": "2026-10-23T10:06:58+00:00",
+"proof": "manifest_20261023T100658.json.ots",
+"anchor_status": "confirmed",
+"authored": "2026-10-16",
+"first_published": "2026-10-16",
+"sha": "469c5e1394d7fc4cc3d4365a0abeefb1fa606b2e7a9269f104efc84f853b782b",
+"event_label": "Uttar Pradesh poll, expected Feb-Mar 2027",
+"pre_event": true
+},
+"forecast_csv": "forecasts/UP2027.csv"
 },
 {
 "id": "UK2027",
@@ -2601,7 +2987,189 @@
 ],
 "source": "Election Commission of India official results (results.eci.gov.in), party-wise seat tally at first full declaration of all 70 seats"
 },
-"sha": "65a214e65e05aec5d5fec8d87fc454075e113f049f91768c472534d285396359"
+"sha": "65a214e65e05aec5d5fec8d87fc454075e113f049f91768c472534d285396359",
+"versions": [
+{
+"run_at": "2026-10-23",
+"freeze": "2026-10-23",
+"sha": "6a3d1145ef1514f5e1cfca4472d6e80f5d255826a175671c2b0693f25c40bdd1",
+"resolution_source": "",
+"questions": [
+{
+"q": "BJP wins majority",
+"p2": 0.9274,
+"p3": 0.6924,
+"verdict": "WATCH"
+},
+{
+"q": "BJP is largest",
+"p2": 0.9442,
+"p3": 0.7227,
+"verdict": "WATCH"
+},
+{
+"q": "INC wins majority",
+"p2": 0.0457,
+"p3": 0.2773,
+"verdict": "WATCH"
+},
+{
+"q": "INC is largest",
+"p2": 0.0558,
+"p3": 0.2773,
+"verdict": "WATCH"
+},
+{
+"q": "BSP wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL"
+},
+{
+"q": "BSP is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL"
+},
+{
+"q": "BSP under 5 seats",
+"p2": 0.9649,
+"p3": null,
+"verdict": "WATCH-NOPOLL"
+},
+{
+"q": "Winner (largest) in {BJP, INC}",
+"p2": 1.0,
+"p3": 1.0,
+"verdict": "CALL-YES"
+}
+]
+},
+{
+"run_at": "2026-10-23",
+"freeze": "2026-10-23",
+"sha": "0dff80fc5576e317ecddcf9c373740f6bfb3ffe3aa0c628e028d7f13c2b2c800",
+"resolution_source": "Election Commission of India official results (results.eci.gov.in), party-wise seat tally at first full declaration of all 70 seats",
+"questions": [
+{
+"q": "BJP wins majority",
+"p2": 0.9274,
+"p3": 0.6924,
+"verdict": "WATCH"
+},
+{
+"q": "BJP is largest",
+"p2": 0.9442,
+"p3": 0.7227,
+"verdict": "WATCH"
+},
+{
+"q": "INC wins majority",
+"p2": 0.0457,
+"p3": 0.2773,
+"verdict": "WATCH"
+},
+{
+"q": "INC is largest",
+"p2": 0.0558,
+"p3": 0.2773,
+"verdict": "WATCH"
+},
+{
+"q": "BSP wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL"
+},
+{
+"q": "BSP is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL"
+},
+{
+"q": "BSP under 5 seats",
+"p2": 0.9649,
+"p3": null,
+"verdict": "WATCH-NOPOLL"
+},
+{
+"q": "Winner (largest) in {BJP, INC}",
+"p2": 1.0,
+"p3": 1.0,
+"verdict": "CALL-YES"
+}
+]
+},
+{
+"run_at": "2026-10-23",
+"freeze": "2026-10-23",
+"sha": "65a214e65e05aec5d5fec8d87fc454075e113f049f91768c472534d285396359",
+"resolution_source": "Election Commission of India official results (results.eci.gov.in), party-wise seat tally at first full declaration of all 70 seats",
+"questions": [
+{
+"q": "BJP wins majority",
+"p2": 0.9274,
+"p3": 0.8094,
+"verdict": "WATCH"
+},
+{
+"q": "BJP is largest",
+"p2": 0.9442,
+"p3": 0.826,
+"verdict": "WATCH"
+},
+{
+"q": "INC wins majority",
+"p2": 0.0457,
+"p3": 0.174,
+"verdict": "WATCH"
+},
+{
+"q": "INC is largest",
+"p2": 0.0558,
+"p3": 0.174,
+"verdict": "WATCH"
+},
+{
+"q": "BSP wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL"
+},
+{
+"q": "BSP is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL"
+},
+{
+"q": "BSP under 5 seats",
+"p2": 0.9649,
+"p3": null,
+"verdict": "WATCH-NOPOLL"
+},
+{
+"q": "Winner (largest) in {BJP, INC}",
+"p2": 1.0,
+"p3": 1.0,
+"verdict": "CALL-YES"
+}
+]
+}
+],
+"verify": {
+"manifest": "manifest_20261024T164204.json",
+"anchored_utc": "2026-10-24T16:42:04+00:00",
+"proof": "manifest_20261024T164204.json.ots",
+"anchor_status": "confirmed",
+"authored": "2026-10-23",
+"first_published": "2026-10-23",
+"sha": "65a214e65e05aec5d5fec8d87fc454075e113f049f91768c472534d285396359",
+"event_label": "Uttarakhand poll, expected 2027",
+"pre_event": true
+},
+"forecast_csv": "forecasts/UK2027.csv"
 },
 {
 "id": "AS2026",
@@ -2730,7 +3298,77 @@
 }
 ],
 "resolution": null,
-"sha": "fcc2a4cccb7d879c8eb29c3824f8898637e4bec25a0fd7a739492eb6237f63f0"
+"sha": "fcc2a4cccb7d879c8eb29c3824f8898637e4bec25a0fd7a739492eb6237f63f0",
+"versions": [
+{
+"run_at": "2026-10-16",
+"freeze": "2026-03-16",
+"sha": "fcc2a4cccb7d879c8eb29c3824f8898637e4bec25a0fd7a739492eb6237f63f0",
+"resolution_source": "",
+"questions": [
+{
+"q": "NDA wins majority",
+"p2": 0.6474,
+"p3": 0.7581,
+"verdict": "WATCH"
+},
+{
+"q": "NDA is largest",
+"p2": 0.8219,
+"p3": 0.7773,
+"verdict": "WATCH"
+},
+{
+"q": "ASOM wins majority",
+"p2": 0.0741,
+"p3": 0.2227,
+"verdict": "WATCH"
+},
+{
+"q": "ASOM is largest",
+"p2": 0.1781,
+"p3": 0.2227,
+"verdict": "WATCH"
+},
+{
+"q": "AIUDF wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL"
+},
+{
+"q": "AIUDF is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL"
+},
+{
+"q": "Winner (largest) in {NDA, ASOM}",
+"p2": 1.0,
+"p3": 1.0,
+"verdict": "CALL-YES"
+},
+{
+"q": "AIUDF under 25 seats",
+"p2": 0.9993,
+"p3": null,
+"verdict": "WATCH-NOPOLL"
+}
+]
+}
+],
+"verify": {
+"manifest": "manifest_20261023T100658.json",
+"anchored_utc": "2026-10-23T10:06:58+00:00",
+"proof": "manifest_20261023T100658.json.ots",
+"anchor_status": "confirmed",
+"authored": "2026-03-16",
+"first_published": "2026-03-16",
+"sha": "fcc2a4cccb7d879c8eb29c3824f8898637e4bec25a0fd7a739492eb6237f63f0",
+"event_label": "Assam Legislative Assembly 2026 (holdout)",
+"pre_event": null
+},
+"forecast_csv": "forecasts/AS2026.csv"
 },
 {
 "id": "KL2026",
@@ -2858,7 +3496,77 @@
 }
 ],
 "resolution": null,
-"sha": "90764ecf26e7ebc4113b1ca31af7c2ecd71261fbb4a716f60f8751cc0c91a6b3"
+"sha": "90764ecf26e7ebc4113b1ca31af7c2ecd71261fbb4a716f60f8751cc0c91a6b3",
+"versions": [
+{
+"run_at": "2026-10-16",
+"freeze": "2026-03-16",
+"sha": "90764ecf26e7ebc4113b1ca31af7c2ecd71261fbb4a716f60f8751cc0c91a6b3",
+"resolution_source": "",
+"questions": [
+{
+"q": "LDF wins majority",
+"p2": 0.3579,
+"p3": 0.5678,
+"verdict": "WATCH"
+},
+{
+"q": "LDF is largest",
+"p2": 0.4796,
+"p3": 0.6582,
+"verdict": "WATCH"
+},
+{
+"q": "UDF wins majority",
+"p2": 0.4075,
+"p3": 0.2697,
+"verdict": "WATCH"
+},
+{
+"q": "UDF is largest",
+"p2": 0.5201,
+"p3": 0.3418,
+"verdict": "WATCH"
+},
+{
+"q": "NDA wins majority",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO"
+},
+{
+"q": "NDA is largest",
+"p2": 0.0003,
+"p3": 0.0,
+"verdict": "CALL-NO"
+},
+{
+"q": "Winner (largest) in {LDF, UDF}",
+"p2": 0.9997,
+"p3": 1.0,
+"verdict": "CALL-YES"
+},
+{
+"q": "NDA under 10 seats",
+"p2": 0.5739,
+"p3": 0.8092,
+"verdict": "WATCH"
+}
+]
+}
+],
+"verify": {
+"manifest": "manifest_20261023T100658.json",
+"anchored_utc": "2026-10-23T10:06:58+00:00",
+"proof": "manifest_20261023T100658.json.ots",
+"anchor_status": "confirmed",
+"authored": "2026-03-16",
+"first_published": "2026-03-16",
+"sha": "90764ecf26e7ebc4113b1ca31af7c2ecd71261fbb4a716f60f8751cc0c91a6b3",
+"event_label": "Kerala Legislative Assembly 2026 (holdout)",
+"pre_event": null
+},
+"forecast_csv": "forecasts/KL2026.csv"
 },
 {
 "id": "TN2026",
@@ -2990,7 +3698,77 @@
 }
 ],
 "resolution": null,
-"sha": "f89b359c4d744747353f28b41204380740a84acb5408340c30c84aea30399725"
+"sha": "f89b359c4d744747353f28b41204380740a84acb5408340c30c84aea30399725",
+"versions": [
+{
+"run_at": "2026-10-16",
+"freeze": "2026-03-26",
+"sha": "f89b359c4d744747353f28b41204380740a84acb5408340c30c84aea30399725",
+"resolution_source": "",
+"questions": [
+{
+"q": "SPA wins majority",
+"p2": 0.7926,
+"p3": 0.4232,
+"verdict": "WATCH"
+},
+{
+"q": "SPA is largest",
+"p2": 0.8056,
+"p3": 0.4897,
+"verdict": "WATCH"
+},
+{
+"q": "NDA wins majority",
+"p2": 0.1879,
+"p3": 0.4497,
+"verdict": "WATCH"
+},
+{
+"q": "NDA is largest",
+"p2": 0.1944,
+"p3": 0.5103,
+"verdict": "WATCH"
+},
+{
+"q": "TVK wins majority",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO"
+},
+{
+"q": "TVK is largest",
+"p2": 0.0,
+"p3": 0.0,
+"verdict": "CALL-NO"
+},
+{
+"q": "Winner (largest) in {SPA, NDA}",
+"p2": 1.0,
+"p3": 1.0,
+"verdict": "CALL-YES"
+},
+{
+"q": "TVK under 40 seats",
+"p2": 0.9999,
+"p3": 0.9917,
+"verdict": "CALL-YES"
+}
+]
+}
+],
+"verify": {
+"manifest": "manifest_20261023T100658.json",
+"anchored_utc": "2026-10-23T10:06:58+00:00",
+"proof": "manifest_20261023T100658.json.ots",
+"anchor_status": "confirmed",
+"authored": "2026-03-26",
+"first_published": "2026-03-26",
+"sha": "f89b359c4d744747353f28b41204380740a84acb5408340c30c84aea30399725",
+"event_label": "Tamil Nadu Legislative Assembly 2026 (holdout)",
+"pre_event": null
+},
+"forecast_csv": "forecasts/TN2026.csv"
 },
 {
 "id": "USMID2026",
@@ -4527,7 +5305,95 @@
 }
 ],
 "resolution": null,
-"sha": "016df22dfcc0743b4158661beabf8e6e372492733a986d415ecd7e4a2c65d95c"
+"sha": "016df22dfcc0743b4158661beabf8e6e372492733a986d415ecd7e4a2c65d95c",
+"versions": [
+{
+"run_at": "2026-10-16",
+"freeze": "2026-03-26",
+"sha": "016df22dfcc0743b4158661beabf8e6e372492733a986d415ecd7e4a2c65d95c",
+"resolution_source": "",
+"questions": [
+{
+"q": "AITC wins majority",
+"p2": 0.7613,
+"p3": 0.7717,
+"verdict": "WATCH"
+},
+{
+"q": "AITC is largest",
+"p2": 0.8033,
+"p3": 0.7951,
+"verdict": "WATCH"
+},
+{
+"q": "BJP wins majority",
+"p2": 0.163,
+"p3": 0.1915,
+"verdict": "WATCH"
+},
+{
+"q": "BJP is largest",
+"p2": 0.1967,
+"p3": 0.2049,
+"verdict": "WATCH"
+},
+{
+"q": "LF wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL"
+},
+{
+"q": "LF is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL"
+},
+{
+"q": "INC wins majority",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL"
+},
+{
+"q": "INC is largest",
+"p2": 0.0,
+"p3": null,
+"verdict": "WATCH-NOPOLL"
+},
+{
+"q": "Winner (largest) in {AITC, BJP}",
+"p2": 1.0,
+"p3": 1.0,
+"verdict": "CALL-YES"
+},
+{
+"q": "LF under 30 seats",
+"p2": 0.9985,
+"p3": null,
+"verdict": "WATCH-NOPOLL"
+},
+{
+"q": "INC under 30 seats",
+"p2": 0.9993,
+"p3": null,
+"verdict": "WATCH-NOPOLL"
+}
+]
+}
+],
+"verify": {
+"manifest": "manifest_20261023T100658.json",
+"anchored_utc": "2026-10-23T10:06:58+00:00",
+"proof": "manifest_20261023T100658.json.ots",
+"anchor_status": "confirmed",
+"authored": "2026-03-26",
+"first_published": "2026-03-26",
+"sha": "016df22dfcc0743b4158661beabf8e6e372492733a986d415ecd7e4a2c65d95c",
+"event_label": "West Bengal Legislative Assembly 2026 (holdout)",
+"pre_event": null
+},
+"forecast_csv": "forecasts/WB2026.csv"
 },
 {
 "id": "BR2025",

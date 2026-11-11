@@ -6,6 +6,7 @@ and not-yet-forecastable 2027 placeholders.
 """
 import json
 import re
+import shutil
 from datetime import date
 from pathlib import Path
 
@@ -355,6 +356,113 @@ track["live_provenance"] = {
     "lead_days_first_to_event": _diff(first_published, event_date),
     "lead_days_latest_to_event": _diff(latest_revision, event_date),
 }
+
+# ---------- per-forecast inspectability: version history + anchor verification ----------
+# So a reader (signed out) can see exactly what was published, what changed between
+# revisions, and independently check it existed before the event via the Bitcoin anchor.
+_ANCHOR_DIR = FDIR / "anchors"
+_BITCOIN_TAG = bytes.fromhex("0588960d73d71901")  # OpenTimestamps Bitcoin attestation marker
+_raw_led = pd.read_csv(FDIR / "ledger.csv", dtype=str).fillna("")
+
+def _pf(x):
+    try:
+        return round(float(x), 4)
+    except Exception:
+        return None
+
+def _manifest_for(sha):
+    """Earliest anchored manifest whose forecast_hashes include this forecast's sha,
+    plus the Bitcoin-anchor status read from its .ots proof."""
+    if not sha or not _ANCHOR_DIR.exists():
+        return None
+    for mp in sorted(_ANCHOR_DIR.glob("manifest_*.json")):
+        if mp.name.endswith(".ots"):
+            continue
+        try:
+            d = json.loads(mp.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if any(sha in info.get("forecast_hashes", []) for info in d.get("ledgers", {}).values()):
+            ots = mp.with_name(mp.name + ".ots")
+            status = "unanchored"
+            if ots.exists():
+                try:
+                    status = "confirmed" if _BITCOIN_TAG in ots.read_bytes() else "pending"
+                except Exception:
+                    status = "unknown"
+            return {"manifest": mp.name, "anchored_utc": d.get("created_utc"),
+                    "proof": ots.name if ots.exists() else None, "anchor_status": status}
+    return None
+
+def _versions(fid):
+    """Every pre-registered run of a forecast, oldest first, for version comparison."""
+    sub = _raw_led[_raw_led["forecast_id"] == fid]
+    out = []
+    for run, g in sorted(sub.groupby("run_at_utc")):
+        rs = ""
+        if "resolution_source" in g.columns:
+            vals = [x for x in g["resolution_source"].tolist() if str(x).strip()]
+            rs = str(vals[0]) if vals else ""
+        out.append({
+            "run_at": str(run)[:10],
+            "freeze": str(g["freeze_date"].iloc[0])[:10],
+            "sha": str(g["forecast_sha256"].iloc[0]) if "forecast_sha256" in g else None,
+            "resolution_source": rs,
+            "questions": [{"q": r["question"], "p2": _pf(r.get("p_m2")),
+                           "p3": _pf(r.get("p_m3")), "verdict": r.get("verdict")}
+                          for _, r in g.iterrows()],
+        })
+    return out
+
+# Event windows for forecasts whose exact date the EC has not set (verify needs an
+# event reference to label a timestamp pre-event vs retrospective).
+_EVENT_LABEL = {"UP2027": "Uttar Pradesh poll, expected Feb-Mar 2027",
+                "PB2027": "Punjab poll, expected early 2027",
+                "UK2027": "Uttarakhand poll, expected 2027"}
+
+for _e in elections:
+    if _e.get("status") not in ("live", "resolved-forward"):
+        continue
+    fid = _e["id"]
+    vers = _versions(fid)
+    if vers:
+        _e["versions"] = vers
+        cur_sha = vers[-1]["sha"]
+        ver = _manifest_for(cur_sha)
+        if ver:
+            ver["authored"] = vers[-1]["freeze"]
+            ver["first_published"] = vers[0]["freeze"]
+            ver["sha"] = cur_sha
+            ver["event_label"] = _EVENT_LABEL.get(fid, _e.get("title", ""))
+            # pre-event: these 2027 polls all resolve after the 2026 anchor timestamp
+            ver["pre_event"] = True if fid in _EVENT_LABEL else None
+            _e["verify"] = ver
+
+# Host the referenced proofs and a per-forecast CSV next to the page so a signed-out
+# reader (GitHub Pages, or the artifact) can open and independently check them.
+_HOST = ROOT / "site" / "app"
+_HOST_ANCHORS = _HOST / "anchors"
+_HOST_FC = _HOST / "forecasts"
+_refd = set()
+for _e in elections:
+    if _e.get("verify", {}).get("manifest"):
+        _refd.add(_e["verify"]["manifest"])
+    if _e.get("versions"):
+        sub = _raw_led[_raw_led["forecast_id"] == _e["id"]]
+        if len(sub):
+            _HOST_FC.mkdir(parents=True, exist_ok=True)
+            cols = [c for c in ["forecast_id", "question", "run_at_utc", "freeze_date",
+                                "p_m2", "p_m3", "verdict", "forecast_sha256", "resolution_source"]
+                    if c in sub.columns]
+            sub[cols].to_csv(_HOST_FC / f"{_e['id']}.csv", index=False)
+            _e["forecast_csv"] = f"forecasts/{_e['id']}.csv"
+if _refd:
+    _HOST_ANCHORS.mkdir(parents=True, exist_ok=True)
+    for mn in _refd:
+        for f in (mn, mn + ".ots"):
+            src = _ANCHOR_DIR / f
+            if src.exists():
+                shutil.copy2(src, _HOST_ANCHORS / f)
 
 # ---------- scoring summary (scripts/score.py) ----------
 scoring = None

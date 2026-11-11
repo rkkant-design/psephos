@@ -315,7 +315,9 @@ footer{margin-top:52px; border-top:1px solid var(--baseline); padding-top:16px; 
 const SEATS={UP:[403,202],WB:[294,148],TN:[234,118],BR:[243,122],KA:[224,113],MH:[288,145],MP:[230,116],RJ:[200,101],GJ:[182,92],KL:[140,71],PB:[117,59],HR:[90,46],DL:[70,36],UK:[70,36],JH:[81,41],CG:[90,46],AS:[126,64],TG:[119,60],HP:[68,35],GA:[40,21],MN:[60,31]};
 const ALIAS={up:"UP","uttar pradesh":"UP",punjab:"PB",uttarakhand:"UK",uk:"UK",goa:"GA",manipur:"MN",gujarat:"GJ",himachal:"HP","himachal pradesh":"HP",bihar:"BR",bengal:"WB","west bengal":"WB",wb:"WB","tamil nadu":"TN",tamilnadu:"TN",tn:"TN",kerala:"KL",assam:"AS",karnataka:"KA",maharashtra:"MH","madhya pradesh":"MP",mp:"MP",rajasthan:"RJ",delhi:"DL",haryana:"HR",jharkhand:"JH",chhattisgarh:"CG",telangana:"TG",pb:"PB",br:"BR",ka:"KA",mh:"MH",rj:"RJ",dl:"DL",hr:"HR",jh:"JH",cg:"CG",tg:"TG",kl:"KL",as:"AS",gj:"GJ",hp:"HP",ga:"GA",mn:"MN"};
 const WORLD_ALIAS={us:"USMID2026",usa:"USMID2026",america:"USMID2026",american:"USMID2026",midterm:"USMID2026",midterms:"USMID2026",house:"USMID2026",senate:"USMID2026",congress:"USMID2026",governor:"USMID2026",governors:"USMID2026",gubernatorial:"USMID2026",epl:"EPL2027",premier:"EPL2027",football:"EPL2027",soccer:"EPL2027",league:"EPL2027",arsenal:"EPL2027",city:"EPL2027",liverpool:"EPL2027",cricket:"CWC2027",icc:"CWC2027",cwc:"CWC2027",odi:"CWC2027",cup:"CWC2027",worldcup:"CWC2027"};
-const QMAP={UP2027:"Who wins Uttar Pradesh?",PB2027:"Who wins Punjab?",UK2027:"Who wins Uttarakhand?",USMID2026:"Who wins the US midterms - the House, the Senate, and all 71 governor and Senate races?",EPL2027:"Who wins the Premier League?",CWC2027:"Who wins the Cricket World Cup?"};
+const QMAP={UP2027:"Will the NDA finish as the largest bloc in Uttar Pradesh?",PB2027:"Who wins Punjab?",UK2027:"Who wins Uttarakhand?",USMID2026:"Who wins the US midterms - the House, the Senate, and all 71 governor and Senate races?",EPL2027:"Who wins the Premier League?",CWC2027:"Who wins the Cricket World Cup?"};
+const FLAGSHIP={UP2027:{largest:"NDA is largest",majority:"NDA wins majority",bloc:"NDA"}};
+const PAGES_BASE="https://rkkant-design.github.io/psephos/";  /* public, signed-out mirror for proof files */
 const RESOLVES={USMID2026:"Resolves 3 Nov 2026",EPL2027:"Resolves May 2027",CWC2027:"Resolves Nov 2027",UP2027:"Election expected Feb-Mar 2027",PB2027:"Election expected Feb 2027",UK2027:"Election expected Feb 2027"};
 const SC=["--s1","--s2","--s3","--s4","--s5","--s6"];
 const NAMEMAP={house_dem:"Democrats (House)",house_rep:"Republicans (House)",senate_dem:"Democrats (Senate)"};
@@ -584,6 +586,23 @@ function renderDetail(e){
    <div class="bottomline">${QMAP[e.id]?`<b>${esc(QMAP[e.id])}</b> `:""}${headline(e)}${RESOLVES[e.id]?` &middot; ${esc(RESOLVES[e.id])}`:""}</div>
    <div class="meta">${e.freeze?`frozen ${esc(e.freeze)} &middot; `:""}${e.sha?`pre-registered sha256 ${esc(e.sha)}`:(e.status==="retrodiction"?"backtest: forecast re-created from only pre-election data, parameters fitted excluding this election":"")}</div>`;
   h+=resultBanner(e);
+  const _flag=FLAGSHIP[e.id];
+  if(_flag){
+    const ql=e.questions.find(q=>q.q===_flag.largest), qm=e.questions.find(q=>q.q===_flag.majority);
+    if(ql){
+      const cbox="background:var(--surface);border:1px solid var(--grid);border-left:4px solid var(--accent);border-radius:12px;padding:16px 18px;margin:14px 0 2px";
+      h+=`<section style="${cbox}">
+        <div style="font-family:var(--mono);font-size:10px;letter-spacing:.14em;font-weight:700;color:var(--accent);margin-bottom:8px">THE CLAIM, PRE-REGISTERED</div>
+        <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap">
+          <div style="flex:0 0 auto;text-align:center;padding-right:18px;border-right:1px solid var(--grid)">
+            <div style="font-family:var(--serif,Newsreader,serif);font-size:44px;line-height:1;font-weight:600;color:var(--accent-ink)">${pct(ql.p3)}</div>
+            <div style="font-family:var(--mono);font-size:10px;color:var(--ink2);margin-top:6px">corrected-polls estimate</div></div>
+          <div style="flex:1 1 260px;min-width:0">
+            <div style="font-size:16px;font-weight:600;margin-bottom:6px">${esc(QMAP[e.id]||ql.q)} ${vchip(ql.verdict,ql.correct)}</div>
+            <div class="nums" style="color:var(--ink2)">Two methods: structural model <b>${pct(ql.p2)}</b> &middot; corrected polls <b>${pct(ql.p3)}</b>. ${String(ql.verdict||"").startsWith("WATCH")?"They agree on direction but neither clears 95%, so this stays <b>WATCH</b> &mdash; a lead, not a lock.":""}</div>
+            ${qm?`<div class="nums" style="margin-top:6px">A <b>separate</b> question &mdash; ${esc(qm.q)} (an outright majority): <b>${pct(qm.p3)}</b>. A plurality is likelier than a majority; the two are scored apart.</div>`:""}</div></div></section>`;
+    }
+  }
   const fold=(title,inner)=>`<details class="fold"><summary>${title}</summary>${inner}</details>`;
   const resol=()=>e.resolution&&e.resolution.source?fold("Resolution criteria &mdash; written before the event, not after",
     `<ul class="plain"><li><b>Source:</b> ${esc(e.resolution.source)}${e.resolution.resolve_by?` &middot; resolve by ${esc(e.resolution.resolve_by)}`:""}</li>${(e.resolution.rules||[]).map(r=>`<li>${esc(r)}</li>`).join("")}</ul>`):"";
@@ -591,6 +610,36 @@ function renderDetail(e){
     `<ul class="plain">${e.flags.map(f=>`<li>${esc(f)}</li>`).join("")}</ul>`):"";
   const tripsFold=()=>e.tripwires&&e.tripwires.length?fold("Tripwires &mdash; events that trigger an automatic re-forecast",
     `<ul class="plain">${e.tripwires.map(t=>`<li><b>${esc(t.watch)}</b> &rarr; ${esc(t.effect)}</li>`).join("")}</ul>`):"";
+  const verifyFold=()=>{
+    if(!e.verify) return "";
+    const v=e.verify, conf=v.anchor_status==="confirmed";
+    const label=conf&&v.pre_event?"timestamp confirmed on Bitcoin, before the event"
+      :conf?"timestamp confirmed on Bitcoin"
+      :v.anchor_status==="pending"?"proof pending (calendar commitment, not yet in a Bitcoin block)":"anchor status unknown";
+    const csv=e.forecast_csv||("forecasts/"+e.id+".csv");
+    return fold(`Verify this forecast &mdash; ${label}`,
+      `<ul class="plain">
+        <li><b>What was published:</b> authored ${esc(v.authored||e.freeze||"")}${v.first_published&&v.first_published!==v.authored?` (first registered ${esc(v.first_published)})`:""}, SHA-256 <code style="font-size:11px;word-break:break-all">${esc(v.sha||"")}</code></li>
+        <li><b>Anchored:</b> ${esc((v.anchored_utc||"").slice(0,10))} into the Bitcoin blockchain via OpenTimestamps &mdash; ${conf?"<b>confirmed</b>":esc(v.anchor_status||"")}. ${v.pre_event?`That timestamp predates ${esc(v.event_label||"the event")}, so it is a <b>confirmed pre-event</b> record &mdash; not written after the fact.`:""}</li>
+        <li><b>Check it yourself, no account needed</b> (public mirror): open <a href="${PAGES_BASE}${esc(csv)}" target="_blank" rel="noopener">the forecast rows (CSV)</a>, the <a href="${PAGES_BASE}anchors/${esc(v.manifest)}" target="_blank" rel="noopener">hash manifest</a> that lists this SHA-256, and the <a href="${PAGES_BASE}anchors/${esc(v.proof)}" target="_blank" rel="noopener">OpenTimestamps proof (.ots)</a>. Drop the .ots file into opentimestamps.org to read back the Bitcoin block date for yourself.</li>
+        <li class="hint">The source trail and resolution rule (below) fix what the forecast meant; the anchor fixes when it existed. Both are needed to trust a number was not moved after the result.</li>
+      </ul>`);
+  };
+  const versionsFold=()=>{
+    if(!e.versions||e.versions.length<2) return "";
+    const fl=FLAGSHIP[e.id];
+    const last=e.versions[e.versions.length-1];
+    const keyQs=fl?[fl.largest,fl.majority].filter(Boolean):last.questions.slice(0,5).map(q=>q.q);
+    const probKey=v=>JSON.stringify(v.questions.map(q=>[q.q,q.p2,q.p3]).sort());
+    const probsSame=e.versions.every(v=>probKey(v)===probKey(e.versions[0]));
+    const resChanged=e.versions.some((v,i)=>i>0&&(v.resolution_source||"")!==(e.versions[i-1].resolution_source||""));
+    const row=qn=>`<tr><td>${esc(qn)}</td>${e.versions.map(v=>{const q=v.questions.find(x=>x.q===qn);return `<td class="num">${q?pct(q.p3):"&mdash;"}</td>`;}).join("")}</tr>`;
+    return fold(`Compare versions (${e.versions.length} registered)`,
+      `<p class="prose" style="margin:0 0 8px">Every re-registration is kept and separately hashed. ${probsSame?"Across versions the probabilities are <b>unchanged</b> &mdash; the forecast has held steady, which is itself on the record.":"The probabilities moved between versions; the table shows where."}${resChanged?" The later revision <b>pinned the exact resolution rule</b> (ECI official seat tally) without touching the numbers.":""}</p>
+      <div class="gatewrap"><table class="gate"><tr><th>Question (corrected-polls estimate)</th>${e.versions.map(v=>`<th>${esc(v.run_at)}</th>`).join("")}</tr>
+      ${keyQs.map(row).join("")}</table></div>
+      <p class="hint" style="margin-top:6px">Each column is a distinct hashed, Bitcoin-anchored record; the Verify panel checks the most recent.</p>`);
+  };
   if(e.status==="nodata"){
     h+=`<div class="empty"><h3>No forecast yet &mdash; here's exactly why</h3><p>${esc(e.flags[0])}</p></div>`;
   }else if(e.kind==="matches"){
@@ -643,7 +692,7 @@ function renderDetail(e){
         <td>${vchip(q.verdict,q.correct)}</td>${anyResolved?`<td class="num">${esc(q.outcome??"&mdash;")}</td>`:""}</tr>`).join("")}
       </table></div></section>`;
     if(e.races&&e.races.length) h+=raceBoard(e);
-    h+=resol()+flagsFold()+tripsFold();
+    h+=verifyFold()+versionsFold()+resol()+flagsFold()+tripsFold();
   }else{
     h+=`<section class="block"><h4>Seat projection &mdash; 10,000 simulated elections${nseats?`, ${nseats} seats`:""}</h4>
       ${e.blocs.map((b,i)=>blocBar(e,b,i,maxSeat,maj)).join("")}
@@ -654,7 +703,7 @@ function renderDetail(e){
         <td>${vchip(q.verdict,q.correct)}</td>${anyResolved?`<td class="num">${esc(q.outcome??"&mdash;")}</td>`:""}</tr>`).join("")}
       </table></div></section>`;
     if(e.nef&&e.nef.triggered) h+=`<section class="block"><h4>Safety flag active</h4><ul class="plain"><li><b>${esc(e.nef.entrant)}</b> &mdash; ${esc(e.nef.evidence)}</li></ul></section>`;
-    h+=resol()+flagsFold()+tripsFold();
+    h+=verifyFold()+versionsFold()+resol()+flagsFold()+tripsFold();
   }
   const d=$("#detail"); d.innerHTML=h; d.hidden=false;
   for(const v of ["home","all","record","ask","changed","cal"]) $("#view-"+v).hidden=true;
