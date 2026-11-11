@@ -578,13 +578,15 @@ function resultBanner(e){
 }
 function renderDetail(e){
   lastDetail=e;
+  const shareUrl=PAGES_BASE+"#"+e.id;
   const [nseats,maj]=SEATS[e.st]||[null,null];
   const maxSeat=nseats||Math.max(...e.blocs.map(b=>Math.max(b.p95||0,b.actual||0)))*1.15||100;
   const anyResolved=e.questions.some(q=>q.outcome!=null);
   let h=`<button class="back">&larr; Back</button>
    <div class="dhead"><h2>${esc(e.title)}</h2>${e.domain?`<span class="badge b-retro">${esc(e.domain.toUpperCase())}</span>`:""}${statusBadge(e)}</div>
    <div class="bottomline">${QMAP[e.id]?`<b>${esc(QMAP[e.id])}</b> `:""}${headline(e)}${RESOLVES[e.id]?` &middot; ${esc(RESOLVES[e.id])}`:""}</div>
-   <div class="meta">${e.freeze?`frozen ${esc(e.freeze)} &middot; `:""}${e.sha?`pre-registered sha256 ${esc(e.sha)}`:(e.status==="retrodiction"?"backtest: forecast re-created from only pre-election data, parameters fitted excluding this election":"")}</div>`;
+   <div class="meta">${e.freeze?`frozen ${esc(e.freeze)} &middot; `:""}${e.sha?`pre-registered sha256 ${esc(e.sha)}`:(e.status==="retrodiction"?"backtest: forecast re-created from only pre-election data, parameters fitted excluding this election":"")}</div>
+   <div class="meta" style="margin-top:3px">Direct link, public &amp; signed-out: <a href="${shareUrl}" target="_blank" rel="noopener" style="color:var(--accent)">${esc(shareUrl)}</a> <button class="copylink" data-url="${esc(shareUrl)}" style="font-family:var(--mono);font-size:11px;border:1px solid var(--grid);background:var(--surface);color:var(--ink2);border-radius:5px;padding:2px 7px;cursor:pointer;margin-left:4px">copy</button></div>`;
   h+=resultBanner(e);
   const _flag=FLAGSHIP[e.id];
   if(_flag){
@@ -707,7 +709,10 @@ function renderDetail(e){
   }
   const d=$("#detail"); d.innerHTML=h; d.hidden=false;
   for(const v of ["home","all","record","ask","changed","cal"]) $("#view-"+v).hidden=true;
-  d.querySelector(".back").onclick=()=>{ show(lastView); if(lastView==="all") renderList(); };
+  try{history.replaceState(null,"","#"+e.id);}catch(_){}
+  d.querySelector(".back").onclick=()=>{ try{history.replaceState(null,"",lastView&&lastView!=="home"?"#"+lastView:location.pathname+location.search);}catch(_){} show(lastView); if(lastView==="all") renderList(); };
+  const cb=d.querySelector(".copylink");
+  if(cb) cb.onclick=()=>{const u=cb.dataset.url; (navigator.clipboard&&navigator.clipboard.writeText?navigator.clipboard.writeText(u):Promise.reject()).then(()=>{cb.textContent="copied";setTimeout(()=>cb.textContent="copy",1400);}).catch(()=>{cb.textContent=u;});};
   window.scrollTo({top:0});
 }
 let lastView="home", lastDetail=null;
@@ -733,6 +738,7 @@ document.addEventListener("click",ev=>{
   const tr=ev.target.closest("[data-try]"); if(tr){$("#q").value=tr.dataset.try; query=tr.dataset.try; renderList();}
 });
 document.addEventListener("keydown",ev=>{ if(ev.key==="Enter"&&ev.target.closest(".card")) ev.target.closest(".card").click(); });
+window.addEventListener("hashchange",()=>{ if(!DATA) return; const tok=(location.hash||"").slice(1); if(!tok||["all","record","changed","ask","cal","home"].includes(tok)) return; const e=DATA.elections.find(x=>x.id.toLowerCase()===tok.toLowerCase()); if(e&&(!lastDetail||lastDetail.id!==e.id||$("#detail").hidden)) renderDetail(e); });
 $("#q").addEventListener("input",ev=>{query=ev.target.value; renderList();});
 
 /* ---------- Calendar ---------- */
