@@ -413,9 +413,9 @@ function renderHome(){
    <div class="stat"><div class="v">${t.live_open_calls}</div><div class="k">calls currently open on the record, hash-stamped</div></div>
    ${sc&&sc.overall_binary&&sc.overall_binary.n?`<div class="stat"><div class="v">${sc.overall_binary.n}</div><div class="k">probabilities scored at resolution &mdash; every one, not just the calls</div></div>`:""}`;
   const live=DATA.elections.filter(e=>e.status==="live"&&e.kind!=="matches");
-  const order=["USMID2026","UP2027","PB2027","UK2027","EPL2027","CWC2027","IPL2027"];
+  const order=["USMID2026","UP2027","PB2027","UK2027","EPL2027","IPL2027","CWC2027"];
   live.sort((a,b)=>(order.indexOf(a.id)+99)-(order.indexOf(b.id)+99));
-  $("#homelive").innerHTML=live.slice(0,4).map(e=>card(e,true)).join("");
+  $("#homelive").innerHTML=live.slice(0,6).map(e=>card(e,true)).join("");
 }
 function renderRecord(){
   const t=DATA.track, sc=DATA.scoring, pr=(t.lifetime_correct/t.lifetime_calls*100).toFixed(1);
