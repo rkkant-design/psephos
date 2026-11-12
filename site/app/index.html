@@ -927,11 +927,22 @@ const ASK_PROTOCOL=`You are the instant-estimate instrument of Psephos, a foreca
 Reply with ONLY a JSON object, no other text:
 {"refused": false, "reason": null, "question": "<restated precise claim>", "resolution": "<how and when it resolves>", "resolve_by": "<YYYY-MM-DD or null>", "p": 0.55, "base_rate": "<one sentence>", "evidence_for": ["<short item>"], "evidence_against": ["<short item>"], "missing_info": ["<what you cannot know without live data>"], "confidence": "low|medium|high", "note": "<one honest sentence a careful reader should see>"}
 QUESTION: `;
+/* Code-enforced guardrails for the public Ask (audit finding #6): the protocol
+   TELLS the model these rules; here we also ENFORCE them in code, so a stray or
+   jailbroken response can't slip past. */
+const ASK_CLAMP_LO=0.03, ASK_CLAMP_HI=0.97;  /* one instant pass is never shown as near-certain */
+/* High-precision backstop for the clearest category the protocol refuses -- the
+   death of / harm to a specific person. Errs toward refusing a borderline ask
+   (the page just invites a rephrase); the model's own refused flag handles the rest. */
+const ASK_DENY=/assassinat|commit(s|ting)? suicide|\b(will|would|could|when will) .{1,40}?\b(die|dies|be killed|be murdered)\b/i;
+function askRefuse(out,msg){out.innerHTML=`<div class="empty"><h3>Can't forecast that</h3><p>${esc(msg)}</p></div>`;}
+const ASK_HARM_MSG="Psephos doesn't forecast the death of, or harm to, a specific person. Try a public, checkable event.";
 let askCtl=null;
 async function runAsk(){
   const q=$("#askq").value.trim();
   const out=$("#askout");
   if(!q){out.innerHTML='<div class="empty">Type a question about a future event first.</div>';return;}
+  if(ASK_DENY.test(q)){askRefuse(out,ASK_HARM_MSG);return;}
   const sample=window.claude&&window.claude.use?await window.claude.use("sample"):null;
   if(!sample){out.innerHTML='<div class="empty"><h3>Instant estimates need the Claude viewer</h3><p>Open this page on claude.ai (or in the Claude app) and the Ask feature lights up. The pre-registered forecasts elsewhere on this site work everywhere.</p></div>';return;}
   askCtl=new AbortController();
@@ -957,8 +968,12 @@ async function runAsk(){
 function renderAnswer(r,q){
   const out=$("#askout");
   if(!r||typeof r!=="object"){out.innerHTML='<div class="empty">Malformed answer - press Ask to try again.</div>';return;}
-  if(r.refused){out.innerHTML=`<div class="empty"><h3>Can't forecast that</h3><p>${esc(r.reason||"Not a checkable future event.")}</p></div>`;return;}
-  const p=Math.max(0,Math.min(1,Number(r.p)));
+  if(r.refused){askRefuse(out,r.reason||"Not a checkable future event.");return;}
+  if(ASK_DENY.test(String(r.question||""))){askRefuse(out,ASK_HARM_MSG);return;}
+  const rawP=Number(r.p);
+  if(!isFinite(rawP)){out.innerHTML='<div class="empty">Malformed answer &mdash; press Ask to try again.</div>';return;}
+  const clamped=(rawP<ASK_CLAMP_LO||rawP>ASK_CLAMP_HI);
+  const p=Math.min(ASK_CLAMP_HI,Math.max(ASK_CLAMP_LO,rawP));
   const li=a=>(Array.isArray(a)?a:[]).map(x=>`<li>${esc(x)}</li>`).join("")||"<li>&mdash;</li>";
   lastAsk={q:String(r.question||q).slice(0,500), p:p,
     resolve_by:(typeof r.resolve_by==="string"&&/^\d{4}-\d{2}-\d{2}$/.test(r.resolve_by))?r.resolve_by:null,
@@ -974,6 +989,7 @@ function renderAnswer(r,q){
     <h5>Evidence against</h5><ul>${li(r.evidence_against)}</ul>
     <h5>What this estimate can't know (no live data)</h5><ul>${li(r.missing_info)}</ul>
     ${r.note?`<h5>Worth knowing</h5><ul><li>${esc(r.note)}</li></ul>`:""}
+    ${clamped?`<p class="hint" style="margin:12px 0 0">Shown bounded to ${ASK_CLAMP_LO*100}&ndash;${ASK_CLAMP_HI*100}% &mdash; a single instant estimate is never displayed as near-certain (the raw figure was ${(rawP*100).toFixed(0)}%).</p>`:""}
     <p class="hint" style="margin:14px 0 0">Confidence: ${esc(r.confidence||"low")} &middot; single-instrument estimate &middot; a certified Psephos CALL requires multiple independent methods at 95%+, which no instant answer can provide &middot; research, not financial advice.</p>
     <div id="asksave"></div>
   </div>`;

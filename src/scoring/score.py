@@ -69,14 +69,59 @@ def _clean(df):
     return df
 
 
+def _daydiff(d_to, d_from):
+    try:
+        return (date.fromisoformat(d_to[:10]) - date.fromisoformat(d_from[:10])).days
+    except Exception:
+        return None
+
+
+def _resolved_scored(df):
+    """Pick exactly one SCORED run per (forecast_id, question).
+
+    The honesty rule (audit finding #3): a forecast's track-record probability is
+    the one it was willing to stand on going INTO the event -- not a number it
+    revised after the result was known. Resolution is recorded on the latest row
+    (resolve.py / the autopilot fill the newest run), so we take the OUTCOME and
+    resolution date from the latest resolved row, but we score the probabilities
+    of the latest run that PREDATES that resolution date. A re-run timestamped on
+    or after the result can therefore never become the scored row.
+
+    Blind/backtest forecasts are hashed AFTER the event from frozen pre-event data,
+    so every one of their runs postdates resolution; for those (no pre-event run
+    exists) we score the latest run, exactly as before. The _cohort tag records
+    which case applied; _lead_days is the scored run's lead to the event (positive
+    for live, negative for blind)."""
+    df = _clean(df)
+    rows = []
+    for (fid, q), g in df.groupby(["forecast_id", "question"], sort=False):
+        res = g[(g.resolved.str.len() > 0) & g.outcome.isin(["YES", "NO"])]
+        if not len(res):
+            continue  # unresolved, or VOID/unresolvable -> not scored
+        rl = res.sort_values("run_at_utc").iloc[-1]
+        rdate = str(rl.resolved)[:10]
+        g2 = g.sort_values("run_at_utc").copy()
+        g2["_rd"] = g2.run_at_utc.astype(str).str[:10]
+        pre = g2[g2["_rd"] < rdate]
+        pick = (pre if len(pre) else g2).iloc[-1].copy()
+        pick["outcome"] = rl.outcome
+        pick["resolved"] = rdate
+        pick["_lead_days"] = _daydiff(rdate, str(pick.run_at_utc))
+        pick["_cohort"] = "live" if len(pre) else "blind"
+        rows.append(pick)
+    if not rows:
+        return df.iloc[0:0].assign(_lead_days=None, _cohort=None)
+    return pd.DataFrame(rows)
+
+
 def binary_rows(path, instruments, ledger_name):
-    """Yield one scored row per (resolved question, existing instrument)."""
+    """One scored row per (resolved question, existing instrument). The scored run
+    is the latest pre-resolution run (live) or the latest run (blind) -- never a
+    post-event re-run; see _resolved_scored."""
     if not path.exists():
         return []
-    df = _clean(_latest(pd.read_csv(path)))
-    df = df[(df.resolved.str.len() > 0) & df.outcome.isin(["YES", "NO"])]
     out = []
-    for _, r in df.iterrows():
+    for _, r in _resolved_scored(pd.read_csv(path)).iterrows():
         o = 1.0 if r.outcome == "YES" else 0.0
         for col, label in instruments:
             p = r.get(col)
@@ -91,7 +136,8 @@ def binary_rows(path, instruments, ledger_name):
                 "verdict": r.get("verdict", "INSTRUMENT"), "p": p, "outcome": int(o),
                 "brier": round((p - o) ** 2, 6),
                 "log_score": round(math.log(pc if o == 1 else 1 - pc), 4),
-                "resolved_date": r.resolved,
+                "resolved_date": r.resolved, "lead_days": r["_lead_days"],
+                "cohort": r["_cohort"],
             })
     return out
 
@@ -206,9 +252,8 @@ def skill_table(world_path, research_path=None):
              "edge": None, "note": "no world question with both instruments has resolved yet"}
     if not world_path.exists():
         return empty
-    df = _clean(_latest(pd.read_csv(world_path)))
-    df = df[(df.resolved.str.len() > 0) & df.outcome.isin(["YES", "NO"])
-            & df.p_model.notna() & df.p_market.notna()]
+    df = _resolved_scored(pd.read_csv(world_path))
+    df = df[df.p_model.notna() & df.p_market.notna()]
     if not len(df):
         return empty
     o = (df.outcome == "YES").astype(float)
@@ -218,9 +263,9 @@ def skill_table(world_path, research_path=None):
            "brier_market": round(bk, 4), "edge": round(bk - bm, 4),
            "note": "edge > 0 means the structural model beats the market on identical questions"}
     if research_path is not None and research_path.exists():
-        rl = (pd.read_csv(research_path).sort_values("run_at_utc")
-                .drop_duplicates(["forecast_id", "question"], keep="last")
-                .set_index(["forecast_id", "question"]).p_research)
+        rs = _resolved_scored(pd.read_csv(research_path))
+        rl = (rs.set_index(["forecast_id", "question"]).p_research
+              if len(rs) else pd.Series(dtype=float))
         joined = df.set_index(["forecast_id", "question"])
         common = joined.index.intersection(rl.index)
         if len(common):
@@ -249,7 +294,7 @@ def main():
     pd.DataFrame(all_rows, columns=[
         "ledger", "forecast_id", "question", "freeze_date", "run_at_utc",
         "instrument", "verdict", "p", "outcome", "brier", "log_score",
-        "resolved_date"]).to_csv(out_csv, index=False)
+        "resolved_date", "lead_days", "cohort"]).to_csv(out_csv, index=False)
 
     binary = india + world + races + research
     calib_pool = ([{"p": r["p"], "outcome": r["outcome"], "source": r["ledger"]}
@@ -272,8 +317,16 @@ def main():
         "match_events_note": f"{n_matches_resolved} resolved football matches x 3 outcomes (H/D/A), binary events for calibration only",
         "total": len(calib_pool),
         "cutoff": max(all_resolved_dates) if all_resolved_dates else None,
-        "revisions": "latest run per (forecast_id, question) is scored; a re-run supersedes by timestamp (same rule as the ledger and the app)",
+        "revisions": "the scored probability per question is the latest run that PREDATES its resolution (a live forecast's last pre-event lock); a re-run timestamped on or after the result is never scored. Blind/backtest runs all postdate resolution and score their latest run.",
         "voids": "VOID resolutions (e.g. a curtailed season with no official champion) are excluded and logged; WATCH rows ARE scored",
+        "scoring_policy": ("per question the OUTCOME comes from the latest resolved row, but the scored "
+                           "PROBABILITIES come from the latest run that predates the resolution date (a live "
+                           "forecast's last pre-event lock); a re-run timestamped on/after the result can never "
+                           "become the scored row. Blind/backtest runs all postdate resolution, so they score "
+                           "their latest run as before. scores.csv carries lead_days + cohort per row."),
+        "scored_binary_rows_by_cohort": {
+            "live": sum(1 for r in binary if r.get("cohort") == "live"),
+            "blind": sum(1 for r in binary if r.get("cohort") == "blind")},
         "note": ("overall_binary Brier is the 202-row binary cohort; the calibration table pools those 202 "
                  "plus the 90 football match-outcome events, 292 in all - the football events never enter the "
                  "binary Brier means (different scale), only the calibration audit"),

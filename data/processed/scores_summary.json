@@ -158,8 +158,13 @@
   "match_events_note": "30 resolved football matches x 3 outcomes (H/D/A), binary events for calibration only",
   "total": 292,
   "cutoff": "2026-11-10",
-  "revisions": "latest run per (forecast_id, question) is scored; a re-run supersedes by timestamp (same rule as the ledger and the app)",
+  "revisions": "the scored probability per question is the latest run that PREDATES its resolution (a live forecast's last pre-event lock); a re-run timestamped on or after the result is never scored. Blind/backtest runs all postdate resolution and score their latest run.",
   "voids": "VOID resolutions (e.g. a curtailed season with no official champion) are excluded and logged; WATCH rows ARE scored",
+  "scoring_policy": "per question the OUTCOME comes from the latest resolved row, but the scored PROBABILITIES come from the latest run that predates the resolution date (a live forecast's last pre-event lock); a re-run timestamped on/after the result can never become the scored row. Blind/backtest runs all postdate resolution, so they score their latest run as before. scores.csv carries lead_days + cohort per row.",
+  "scored_binary_rows_by_cohort": {
+   "live": 141,
+   "blind": 61
+  },
   "note": "overall_binary Brier is the 202-row binary cohort; the calibration table pools those 202 plus the 90 football match-outcome events, 292 in all - the football events never enter the binary Brier means (different scale), only the calibration audit"
  },
  "skill_model_vs_market": {
@@ -178,40 +183,5 @@
   "Every resolved pre-registered probability is scored - WATCH rows included. Hit-rate on CALLs alone is gameable by abstention; this table is not.",
   "Binary Brier: 0 perfect, 0.25 = always saying 50%, 1 = certain and wrong. Log scores use p clipped at 1e-4.",
   "Latest run per question is the scored row (re-runs supersede by timestamp, same rule as the ledger)."
- ],
- "correlation": {
-  "n": 154,
-  "error_corr": 0.745,
-  "codir_miss": 0.1299,
-  "codir_independent": 0.0675,
-  "codir_ratio": 1.92,
-  "formula": "error_i = p_i - outcome (outcome in {0,1}); 'backed the wrong winner' = p_i on the wrong side of 0.5. Co-miss = P(both wrong), baseline = P(M2 wrong) x P(M3 wrong) under independence. error_corr is the Pearson correlation of the signed residuals (carries a common-mode floor from sharing the realized outcome - the very risk being measured).",
-  "note": "Measured on every resolved question where both instruments forecast. The directional co-miss has a matched independence baseline; we do not report a raw same-sign rate because for binary outcomes it is mechanical.",
-  "by_cohort": [
-   {
-    "source": "forward_resolved",
-    "n": 26,
-    "error_corr": 0.962,
-    "codir_miss": 0.3077,
-    "codir_independent": 0.1775,
-    "codir_ratio": 1.73
-   },
-   {
-    "source": "retrodiction_n46",
-    "n": 128,
-    "error_corr": 0.663,
-    "codir_miss": 0.0938,
-    "codir_independent": 0.0488,
-    "codir_ratio": 1.92
-   },
-   {
-    "source": "pooled",
-    "n": 154,
-    "error_corr": 0.745,
-    "codir_miss": 0.1299,
-    "codir_independent": 0.0675,
-    "codir_ratio": 1.92
-   }
-  ]
- }
+ ]
 }
