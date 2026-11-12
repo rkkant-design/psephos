@@ -26,7 +26,11 @@
 "2026-11-06"
 ],
 "lead_days_first_to_event": 9,
-"lead_days_latest_to_event": 1
+"lead_days_latest_to_event": 1,
+"anchored_by": "2026-10-25",
+"anchor_confirmed": true,
+"lead_days_anchor_to_event": 9,
+"anchored_before_event": true
 }
 },
 "scoring": {

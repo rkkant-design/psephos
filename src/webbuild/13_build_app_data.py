@@ -394,6 +394,50 @@ def _manifest_for(sha):
                     "proof": ots.name if ots.exists() else None, "anchor_status": status}
     return None
 
+# finding #7: the freeze_date / first_published in live_provenance are SELF-ASSERTED
+# claims; the only independently provable "existed by" date is the earliest Bitcoin
+# anchor over a forecast's hashes. Augment live_provenance with that provable date
+# and the lead measured to it (a conservative, proof-backed lower bound).
+# a live forecast's hashes may live in any CALL-bearing ledger (India / world /
+# races), so gather shas per forecast_id across all three, not just ledger.csv
+_sha_by_fid = {}
+for _p in (FDIR / "ledger.csv", wl_path, rl_path):
+    if not Path(_p).exists():
+        continue
+    try:
+        _dd = pd.read_csv(_p, dtype=str).fillna("")
+    except Exception:
+        continue
+    if "forecast_id" not in _dd.columns or "forecast_sha256" not in _dd.columns:
+        continue
+    for _fid, _grp in _dd.groupby("forecast_id"):
+        _sha_by_fid.setdefault(_fid, set()).update(x for x in _grp["forecast_sha256"].unique() if x)
+
+def _earliest_anchor_date(fid):
+    best, statuses = None, []
+    for s in sorted(_sha_by_fid.get(fid, set())):
+        m = _manifest_for(s)
+        if m and m.get("anchored_utc"):
+            d = str(m["anchored_utc"])[:10]
+            statuses.append(m.get("anchor_status"))
+            best = d if best is None or d < best else best
+    return best, statuses
+
+_anchor_dates, _anchor_status_all = [], []
+for _f in _forecasts:
+    _d, _st = _earliest_anchor_date(_f)
+    if _d:
+        _anchor_dates.append(_d)
+        _anchor_status_all += _st
+# only claim a provable date when EVERY live forecast is anchored
+_anchored_by = max(_anchor_dates) if _anchor_dates and len(_anchor_dates) == len(_forecasts) else None
+track["live_provenance"].update({
+    "anchored_by": _anchored_by,
+    "anchor_confirmed": bool(_anchor_status_all) and all(s == "confirmed" for s in _anchor_status_all),
+    "lead_days_anchor_to_event": _diff(_anchored_by, event_date) if _anchored_by else None,
+    "anchored_before_event": (_anchored_by < event_date) if (_anchored_by and event_date) else None,
+})
+
 def _versions(fid):
     """Every pre-registered run of a forecast, oldest first, for version comparison."""
     sub = _raw_led[_raw_led["forecast_id"] == fid]

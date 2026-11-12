@@ -6,8 +6,11 @@ bloc'd exactly as the forecast configs define them.
 Fills resolved/outcome/correct in forecasts/ledger.csv (rows never deleted) and
 writes data/raw/holdout2026/actuals_2026.csv + a scoring summary to stdout.
 """
+import csv
+import io
 import json
 import re
+import sys
 from datetime import date
 from pathlib import Path
 
@@ -51,19 +54,68 @@ def outcome(fid, q):
     raise ValueError(f"unparsed question: {q}")
 
 
-led = pd.read_csv(FDIR / "ledger.csv")
-led = led.astype({"resolved": "object", "outcome": "object", "correct": "object"})
-for i, r in led.iterrows():
-    if r.forecast_id not in SEATS:
+def sanity_check_actuals():
+    """Catch transcription typos in the hand-entered actuals before they touch the
+    ledger (finding #4)."""
+    for fid in SEATS:
+        seats, maj, shares = SEATS[fid], MAJ[fid], SHARES[fid]
+        assert set(seats) == set(shares), f"{fid}: SEATS and SHARES list different blocs"
+        assert all(isinstance(v, int) and v >= 0 for v in seats.values()), f"{fid}: bad seat count"
+        assert maj > 0, f"{fid}: bad majority threshold"
+        tot = sum(shares.values())
+        assert 0 < tot <= 100.5, f"{fid}: vote shares sum to {tot} (out of range)"
+    cache = ROOT / "data" / "raw" / "holdout2026" / "wiki_current"
+    if not cache.exists():
+        print(f"WARNING: cached results source {cache} not found - the hand-entered "
+              f"actuals could not be cross-checked against the fetched source")
+
+
+# --- guarded, line-surgical resolution: fill ONLY resolved/outcome/correct on the
+#     holdout rows; every other line of ledger.csv stays byte-identical (no pandas
+#     round-trip of unrelated rows), and a row already resolved to a DIFFERENT
+#     outcome aborts rather than silently rewriting history. ---
+sanity_check_actuals()
+LED_PATH = FDIR / "ledger.csv"
+with open(LED_PATH, "r", encoding="utf-8", newline="") as f:
+    lines = f.read().splitlines(keepends=True)
+header = next(csv.reader([lines[0]]))
+ci = {c: header.index(c) for c in ("forecast_id", "question", "verdict",
+                                   "resolved", "outcome", "correct")}
+conflicts, changed = [], 0
+for i, line in enumerate(lines[1:], start=1):
+    if not line.strip():
         continue
-    out = outcome(r.forecast_id, r.question)
-    led.loc[i, "resolved"] = RESOLVED
-    led.loc[i, "outcome"] = out
-    if r.verdict == "CALL-YES":
-        led.loc[i, "correct"] = out == "YES"
-    elif r.verdict == "CALL-NO":
-        led.loc[i, "correct"] = out == "NO"
-led.to_csv(FDIR / "ledger.csv", index=False)
+    row = next(csv.reader([line.rstrip("\r\n")]))
+    fid = row[ci["forecast_id"]]
+    if fid not in SEATS:
+        continue
+    out = outcome(fid, row[ci["question"]])
+    v = row[ci["verdict"]]
+    corr = str(out == "YES") if v == "CALL-YES" else (str(out == "NO") if v == "CALL-NO" else "")
+    if row[ci["resolved"]].strip():  # already resolved
+        if row[ci["outcome"]].strip() != out:
+            conflicts.append((fid, row[ci["question"]], row[ci["outcome"]], out))
+        continue  # idempotent: leave an already-resolved row untouched
+    row[ci["resolved"]] = RESOLVED
+    row[ci["outcome"]] = out
+    row[ci["correct"]] = corr
+    end = line[len(line.rstrip("\r\n")):]
+    buf = io.StringIO()
+    csv.writer(buf, lineterminator="").writerow(row)
+    lines[i] = buf.getvalue() + end
+    changed += 1
+if conflicts:
+    print("ABORT: rows already resolved to a DIFFERENT outcome - refusing to rewrite history:")
+    for fid, q, old, new in conflicts:
+        print(f"  {fid} | {q} | ledger={old!r} computed={new!r}")
+    sys.exit(1)
+if changed:
+    with open(LED_PATH, "w", encoding="utf-8", newline="") as f:
+        f.write("".join(lines))
+    print(f"resolved {changed} holdout rows (line-surgical; only 3 columns touched).")
+else:
+    print("no newly resolvable holdout rows (all already resolved identically).")
+led = pd.read_csv(LED_PATH)
 
 # actuals audit file
 rows = []
