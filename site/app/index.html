@@ -466,7 +466,7 @@ function renderRecord(){
     <p class="hint" style="margin-top:8px"><b>Tamil Nadu 2026 is the worked example:</b> underestimating a new entrant (TVK) didn't miss one question &mdash; it pushed several linked questions in the same election the same way at once, which is what correlated error looks like in practice. That miss is why new entrants now trip a safety flag, and it stays on the TN 2026 page. <b>Still owed, and not yet claimed:</b> the live sample is ${t.live_provenance?t.live_provenance.n:26} calls from one event, locked ${t.live_provenance&&t.live_provenance.lead_days_latest_to_event!=null?t.live_provenance.lead_days_latest_to_event+"-day":"short"} before the vote &mdash; far too small to validate a 95% rule or to sweep alternative thresholds. That threshold test, on the larger backtest and blind cohorts, is the next thing to publish here.</p>`;
   }
   h+=`<h2 class="sec">Tamper-proofing</h2>
-  <p class="prose">Every forecast row carries a SHA-256 hash written before the event. Manifests of all ledger hashes are anchored into the <b>Bitcoin blockchain</b> via OpenTimestamps, so the claim "this forecast existed on this date" is verifiable by anyone, without trusting us. Wrong calls stay in the ledger forever &mdash; you can read them on the Tamil Nadu 2026 page right now.</p>`;
+  <p class="prose">Every forecast carries a fingerprint (a SHA-256 hash) written before the event, and that fingerprint is sealed into an independent public timestamp &mdash; so "this forecast existed on this date" is verifiable by anyone, without trusting us. The seal is anchored in the <b>Bitcoin blockchain</b> via OpenTimestamps, an open public-notary standard used purely as a tamper-proof clock: no cryptocurrency is bought or sold, and only the fingerprint is stored, never the data. Wrong calls stay in the ledger forever &mdash; you can read them on the Tamil Nadu 2026 page right now.</p>`;
   $("#recdetail").innerHTML=h;
 }
 
@@ -615,14 +615,15 @@ function renderDetail(e){
   const verifyFold=()=>{
     if(!e.verify) return "";
     const v=e.verify, conf=v.anchor_status==="confirmed";
-    const label=conf&&v.pre_event?"timestamp confirmed on Bitcoin, before the event"
-      :conf?"timestamp confirmed on Bitcoin"
-      :v.anchor_status==="pending"?"proof pending (calendar commitment, not yet in a Bitcoin block)":"anchor status unknown";
+    const label=conf&&v.pre_event?"timestamp confirmed, before the event"
+      :conf?"timestamp confirmed"
+      :v.anchor_status==="pending"?"proof pending (recorded, awaiting confirmation)":"anchor status unknown";
     const csv=e.forecast_csv||("forecasts/"+e.id+".csv");
     return fold(`Verify this forecast &mdash; ${label}`,
       `<ul class="plain">
         <li><b>What was published:</b> authored ${esc(v.authored||e.freeze||"")}${v.first_published&&v.first_published!==v.authored?` (first registered ${esc(v.first_published)})`:""}, SHA-256 <code style="font-size:11px;word-break:break-all">${esc(v.sha||"")}</code></li>
-        <li><b>Anchored:</b> ${esc((v.anchored_utc||"").slice(0,10))} into the Bitcoin blockchain via OpenTimestamps &mdash; ${conf?"<b>confirmed</b>":esc(v.anchor_status||"")}. ${v.pre_event?`That timestamp predates ${esc(v.event_label||"the event")}, so it is a <b>confirmed pre-event</b> record &mdash; not written after the fact.`:""}</li>
+        <li><b>Independently timestamped:</b> ${esc((v.anchored_utc||"").slice(0,10))}, ${conf?"<b>confirmed</b>":esc(v.anchor_status||"")} against a public record no single party controls. ${v.pre_event?`That timestamp predates ${esc(v.event_label||"the event")}, so it is a <b>confirmed pre-event</b> record &mdash; not written after the fact.`:""}</li>
+        <li class="hint">How the seal works: the forecast's fingerprint is anchored in the Bitcoin blockchain via <b>OpenTimestamps</b>, an open public-notary standard &mdash; used purely as a tamper-proof clock, <b>not as currency</b>. No crypto is bought, sold or held; only the one-way fingerprint is recorded, never the forecast data.</li>
         <li><b>Check it yourself, no account needed</b> (public mirror): open <a href="${PAGES_BASE}${esc(csv)}" target="_blank" rel="noopener">the forecast rows (CSV)</a>, the <a href="${PAGES_BASE}anchors/${esc(v.manifest)}" target="_blank" rel="noopener">hash manifest</a> that lists this SHA-256, and the <a href="${PAGES_BASE}anchors/${esc(v.proof)}" target="_blank" rel="noopener">OpenTimestamps proof (.ots)</a>. Drop the .ots file into opentimestamps.org to read back the Bitcoin block date for yourself.</li>
         <li class="hint">The source trail and resolution rule (below) fix what the forecast meant; the anchor fixes when it existed. Both are needed to trust a number was not moved after the result.</li>
       </ul>`);
@@ -640,7 +641,7 @@ function renderDetail(e){
       `<p class="prose" style="margin:0 0 8px">Every re-registration is kept and separately hashed. ${probsSame?"Across versions the probabilities are <b>unchanged</b> &mdash; the forecast has held steady, which is itself on the record.":"The probabilities moved between versions; the table shows where."}${resChanged?" The later revision <b>pinned the exact resolution rule</b> (ECI official seat tally) without touching the numbers.":""}</p>
       <div class="gatewrap"><table class="gate"><tr><th>Question (corrected-polls estimate)</th>${e.versions.map(v=>`<th>${esc(v.run_at)}</th>`).join("")}</tr>
       ${keyQs.map(row).join("")}</table></div>
-      <p class="hint" style="margin-top:6px">Each column is a distinct hashed, Bitcoin-anchored record; the Verify panel checks the most recent.</p>`);
+      <p class="hint" style="margin-top:6px">Each column is a distinct hashed, independently timestamped record; the Verify panel checks the most recent.</p>`);
   };
   if(e.status==="nodata"){
     h+=`<div class="empty"><h3>No forecast yet &mdash; here's exactly why</h3><p>${esc(e.flags[0])}</p></div>`;
