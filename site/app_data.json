@@ -1,5 +1,6 @@
 {
 "generated": "2026-11-12",
+"last_reviewed": "2026-11-10",
 "track": {
 "retrodiction_calls": 28,
 "retrodiction_correct": 28,
@@ -2151,20 +2152,6 @@
 "p_model": 0.1092
 },
 {
-"name": "Liverpool",
-"base": null,
-"m2": null,
-"m3": null,
-"p5": null,
-"med": null,
-"p95": null,
-"p_maj": null,
-"p_largest": null,
-"actual": null,
-"p_market": 0.0645,
-"p_model": 0.0075
-},
-{
 "name": "Man City",
 "base": null,
 "m2": null,
@@ -2177,6 +2164,20 @@
 "actual": null,
 "p_market": 0.0645,
 "p_model": 0.0506
+},
+{
+"name": "Liverpool",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": 0.0645,
+"p_model": 0.0075
 },
 {
 "name": "Chelsea",

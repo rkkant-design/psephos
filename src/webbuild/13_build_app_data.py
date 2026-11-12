@@ -624,7 +624,14 @@ changelog = [{"date": d,
               "entries": sorted(v, key=lambda e: 0 if e["kind"] == "run" else 1)}
              for d, v in sorted(_chg.items(), reverse=True)]
 
-out = {"generated": str(date.today()), "track": track, "scoring": scoring,
+# last_reviewed = the most recent full WEEKLY autopilot review (an autopilot-log run block).
+# Distinct from a forecast's freeze date (when it last CHANGED): it says the engine looked
+# at the whole slate on this date and, for a held forecast, chose not to move it.
+_run_dates = [d for d, v in _chg.items() if any(e["kind"] == "run" for e in v)]
+last_reviewed = max(_run_dates) if _run_dates else str(date.today())
+
+out = {"generated": str(date.today()), "last_reviewed": last_reviewed,
+       "track": track, "scoring": scoring,
        "changelog": changelog,
        "elections": sorted(elections, key=lambda e: (-e["year"], e["state"]))}
 OUT.write_text(json.dumps(out, indent=0), encoding="utf-8")
