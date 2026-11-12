@@ -51,7 +51,7 @@ def build_manifest():
         if not p.exists():
             continue
         df = pd.read_csv(p)
-        col = "forecast_sha256" if "forecast_sha256" in df.columns else None
+        col = next((c for c in ("forecast_sha256", "dossier_sha256") if c in df.columns), None)
         man["ledgers"][name] = {
             "file_sha256": sha256_file(p),
             "rows": int(len(df)),
@@ -92,7 +92,7 @@ def cmd_verify():
         p = FDIR / name
         if p.exists():
             df = pd.read_csv(p)
-            col = "forecast_sha256" if "forecast_sha256" in df.columns else None
+            col = next((c for c in ("forecast_sha256", "dossier_sha256") if c in df.columns), None)
             current[name] = set(df[col].dropna().unique()) if col else set()
     for mp in sorted(ADIR.glob("manifest_*.json")):
         man = json.loads(mp.read_text(encoding="utf-8"))

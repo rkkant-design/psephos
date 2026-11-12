@@ -64,10 +64,14 @@ config's `blocs` first, with a dated note citing the source.
   supersedes by timestamp; history stays.
 
 ### 5. Resolution check
-If any live forecast's election has concluded (results declared): fetch official
-results-by-alliance, fill `resolved/outcome/correct` on that forecast's LATEST ledger rows
-(pattern: `src/scoring/12_resolve_2026.py`), and update the track record. This is the only
-permitted write to existing ledger rows, and only to the three resolution columns.
+If any live forecast's election has concluded (results declared): fetch the official
+results-by-alliance from an authoritative dated source, then resolve each question with the
+guarded resolver — never by hand-editing the CSV:
+`python PredictionEngine/src/scoring/resolve.py set india --id <ID> --question "<EXACT TEXT>" --outcome YES|NO --source <url>`
+(`resolve.py list india --id <ID>` prints the exact question text of every open row). The
+resolver writes ONLY resolved/outcome/correct, computes `correct` from the row's verdict,
+refuses to overwrite an already-resolved row, and aborts if any other cell would change — so it
+is structurally incapable of touching a pre-registered probability. Then update the track record.
 
 ### 6. Republish (only if anything changed)
 - `python PredictionEngine/src/webbuild/13_build_app_data.py`
@@ -184,10 +188,13 @@ Live world forecasts = `forecasts/world/<ID>.json` not resolved in `forecasts/wo
      structural instrument. Model parameters (lean weights, incumbency, sigmas) are stated
      priors: never refit them in a run.
 - **Resolution:** when a world event concludes (USMID2026 resolves 2026-11-03 — the first!),
-  fetch the official outcome, fill resolved/outcome/correct on the LATEST rows only, and log it.
-  Any question resolved in ANY ledger that also has rows in forecasts/research_ledger.csv gets
-  the same three resolution columns filled on its LATEST research rows in the same step —
-  M_research is scored on everything it ever said, same as every other instrument.
+  fetch the official outcome and resolve each question with the guarded resolver:
+  `python PredictionEngine/src/scoring/resolve.py set world --id <ID> --question "<EXACT TEXT>" --outcome YES|NO --source <url>`
+  (`resolve.py list world` lists open rows). If the same question also has rows in
+  forecasts/research_ledger.csv, resolve it there too in the same step
+  (`resolve.py set research --id <ID> --question "<EXACT TEXT>" --outcome ... --source ...`) —
+  M_research is scored on everything it ever said. The resolver is the ONLY sanctioned write to
+  existing ledger rows; never hand-edit a CSV.
 - World changes also trigger step 6 (rebuild + republish) and go in the step-7 log.
 
 ## US midterms election-night / next-day resolution (2026-11-03+; the Nov 9 run)
@@ -199,10 +206,12 @@ Monday 2026-11-09 run and repeated on later runs until every row is resolved:
 1. **Source of truth: AP race calls** (apnews.com election results; cross-check one more
    outlet carrying AP calls). Never resolve a row from an election-night lead, an exit
    poll, or a candidate's claim.
-2. Per AP-called race: fill `resolved` (date of the AP call as fetched, YYYY-MM-DD),
-   `outcome` (YES iff the Democratic nominee won the seat — an independent winner is NO),
-   `correct` (for CALL rows) on that race's LATEST ledger rows only — the usual three
-   resolution columns, nothing else, ever.
+2. Per AP-called race, resolve with the guarded resolver (never hand-edit the CSV):
+   `python PredictionEngine/src/scoring/resolve.py set races --race-id <RACE_ID> --outcome YES|NO --source <AP url>`
+   — `outcome` is YES iff the Democratic nominee won the seat (an independent winner is NO); the
+   resolver fills `resolved`/`outcome`, computes `correct` for CALL rows, writes nothing else, and
+   refuses to overwrite a race already resolved to a different winner. `resolve.py list races`
+   shows the still-open races.
 3. **Uncalled races wait.** A race with no AP call (recount, runoff, litigation) stays
    open; log it as "uncalled, awaiting certification" and re-check on each later run.
    Georgia-style runoffs resolve on the runoff result. No row resolves on a contested
@@ -253,20 +262,29 @@ carries the stored declaration forward. If it must ever be restated, restate the
 FULL set: `{"sample": {}, "user": {}, "db": {"rules": [{"path": "asks",
 "read": "view", "write": "interact"}]}}` — a partial restatement revokes the rest.
 
-## Anchoring (every run, last step before the log)
+## Integrity audit + anchoring (every run, last step before the log)
 
+- `python PredictionEngine/src/scoring/verify_ledger.py` FIRST: re-derives every published
+  row's hash from its forecast payload and reconciles the row's p_* against it (deep integrity —
+  proves the number shown and scored is the number that was hashed). A FAILED verify_ledger means
+  a pre-registered value drifted from what was hashed: a red-alert line at the TOP of the log —
+  stop, surface it, do not republish until it is explained.
 - `python PredictionEngine/src/scoring/anchor.py upgrade` (finalizes pending Bitcoin
   attestations on earlier manifests), then `python PredictionEngine/src/scoring/anchor.py verify`
   (append-only audit: every anchored forecast hash must still exist — a FAILED verify is a
   red-alert line at the TOP of the log), then, if any ledger gained rows this run,
-  `python PredictionEngine/src/scoring/anchor.py stamp` (new manifest → OpenTimestamps).
+  `python PredictionEngine/src/scoring/anchor.py stamp` (new manifest → OpenTimestamps; now also
+  anchors the research ledger's dossier hashes).
 - Manifests and .ots proofs in forecasts/anchors/ are evidence: never delete or rewrite them.
 
 ## Hard rules
-- Ledger rows are append-only (except the three resolution columns in step 5,
-  in world resolution, in US-midterms race resolution, and in epl_resolve.py). This
-  covers all five ledgers: ledger.csv, world_ledger.csv, matches_ledger.csv,
-  research_ledger.csv, world/usmid_races_ledger.csv.
+- Ledger rows are append-only. The ONLY permitted write to an existing row is the three
+  resolution columns, and only via `src/scoring/resolve.py` (india/world/races/research) or
+  `src/scoring/epl_resolve.py` (matches) — both write only resolved/outcome/correct and abort if
+  anything else would change. Never hand-edit a ledger CSV. This covers all five ledgers:
+  ledger.csv, world_ledger.csv, matches_ledger.csv, research_ledger.csv,
+  world/usmid_races_ledger.csv. Every run ends by proving the record intact with
+  `src/scoring/verify_ledger.py`.
 - M_research independence: a research pass must never fetch or consult betting odds,
   prediction-market prices, or forecast aggregators (m_research.py rejects dossiers citing
   them). Research runs before the market-refresh step of the same run. Calibration
