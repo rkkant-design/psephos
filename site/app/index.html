@@ -225,6 +225,7 @@ footer{margin-top:52px; border-top:1px solid var(--baseline); padding-top:16px; 
   <div class="hero">
     <h1>Forecasts that tell you when they can be trusted.</h1>
     <p>Several independent methods weigh each question. When they agree past 95%, Psephos makes a call; when they don't, it says the question is open. Every forecast is sealed before the event and scored after.</p>
+    <p class="hint" id="homefresh" style="margin-top:10px"></p>
   </div>
   <div class="statstrip" id="homestats"></div>
   <div class="sechead">
@@ -416,6 +417,7 @@ function renderHome(){
   const order=["USMID2026","UP2027","PB2027","UK2027","EPL2027","IPL2027","CWC2027"];
   live.sort((a,b)=>(order.indexOf(a.id)+99)-(order.indexOf(b.id)+99));
   $("#homelive").innerHTML=live.slice(0,6).map(e=>card(e,true)).join("");
+  if(DATA.last_reviewed){const f=$("#homefresh"); if(f) f.innerHTML=`Every live forecast was last reviewed <b>${esc(DATA.last_reviewed)}</b> &mdash; the engine checks them weekly and moves a number only when the evidence does.`;}
 }
 function renderRecord(){
   const t=DATA.track, sc=DATA.scoring, pr=(t.lifetime_correct/t.lifetime_calls*100).toFixed(1);
