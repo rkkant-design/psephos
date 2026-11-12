@@ -30,3 +30,6 @@ scratchpad/
 
 # OpenTimestamps shim backups
 forecasts/anchors/*.ots.bak
+
+# generated PDFs
+docs/*.pdf

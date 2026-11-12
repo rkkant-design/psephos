@@ -55,6 +55,24 @@ ul.clean li{margin:7px 0;} ul.clean b{color:var(--ink);}
 .cta .ghost{border:1px solid var(--grid); color:var(--ink2);}
 footer{margin-top:52px; border-top:1px solid var(--grid); padding-top:14px; font-size:12px; color:var(--muted); line-height:1.6;}
 @media (max-width:560px){ h1{font-size:25px;} }
+@media print{
+  @page{ margin:11mm 11mm; }
+  body{ background:#fff; color:#0b0b0b; font-size:13px; }
+  .wrap{ max-width:none; padding-block:0; }
+  h1{ font-size:26px; margin-bottom:10px; }
+  .lede{ font-size:15px; }
+  h2{ margin:22px 0 10px; break-after:avoid; }
+  p{ font-size:13.5px; }
+  .statstrip{ margin-top:16px; gap:8px; }
+  .stat{ padding:11px 13px; } .stat .v{ font-size:22px; } .stat .e{ font-size:10.5px; margin-top:6px; padding-top:6px; }
+  .cardx{ padding:12px 14px; font-size:12.5px; }
+  ul.clean{ font-size:13.5px; } ul.clean li{ margin:5px 0; }
+  .pilot{ margin:14px 0; padding:14px 16px; }
+  footer{ margin-top:26px; }
+  .stat, .cardx, ul.clean li, .pilot, .cta, footer{ break-inside:avoid; }
+  .cta a{ border:1px solid #c9c7bf; color:#1c5cab; }
+  .cta .primary{ background:#2a78d6; color:#fff; }
+}
 </style>
 <div class="wrap">
 <header class="m">
