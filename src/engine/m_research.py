@@ -15,8 +15,15 @@ Usage:
   python m_research.py brief <FORECAST_ID>    print the research protocol and
                                               question list for a config
                                               (world or India)
-  python m_research.py commit <dossier.json>  validate -> calibrate -> hash
-                                              -> append research_ledger.csv
+  python m_research.py commit <dossier.json>  validate -> VERIFY CITATIONS RESOLVE
+                                              -> calibrate -> hash -> append
+                                              research_ledger.csv. Rejects a dossier
+                                              whose sources don't resolve (finding #5:
+                                              fabricated URLs). --skip-source-check
+                                              bypasses the fetch for an offline run
+                                              (recorded in the sidecar).
+  python m_research.py check <dossier.json>   validate + report which citations
+                                              resolve; writes nothing (read-only)
   python m_research.py batch <dir>            commit every *.json in <dir>
   python m_research.py tune                   fit calibration (a, b) on
                                               resolved research rows; PRINTS
@@ -52,6 +59,8 @@ import hashlib
 import json
 import math
 import sys
+import urllib.error
+import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -63,6 +72,9 @@ DOSSIERS = RDIR / "dossiers"
 LEDGER = ROOT / "forecasts" / "research_ledger.csv"
 CALIB = RDIR / "calibration.json"
 MIN_TUNE_N = 30
+SRC_UA = "psephos-source-check/1.0"
+MIN_REACHABLE = 2   # each research question must have >= this many citations that
+                    # resolve to a responding host; fabricated/dead URLs don't count
 
 # Betting markets, prediction markets and forecast aggregators. A research
 # source whose URL contains any of these is a validation failure: the
@@ -142,6 +154,65 @@ def load_calibration():
 def calibrate(p_raw, cal):
     p = min(max(float(p_raw), 1e-3), 1 - 1e-3)
     return _sigmoid(cal["a"] * _logit(p) + cal["b"])
+
+
+# ---------------- source grounding (finding #5: fabricated citations) ----------------
+
+def check_url(url, timeout=8):
+    """Classify a citation URL: ('ok'|'blocked'|'missing'|'unreachable', status).
+    reachable = ok/blocked (a real host responded); missing (404/410) and
+    unreachable (DNS/connection failure/timeout) are the fabricated-citation
+    signals. HEAD first, then GET (many servers block HEAD)."""
+    last = ("unreachable", None)
+    for method in ("HEAD", "GET"):
+        try:
+            req = urllib.request.Request(url, method=method, headers={"User-Agent": SRC_UA})
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return ("ok", getattr(r, "status", 200) or 200)
+        except urllib.error.HTTPError as e:
+            if e.code in (404, 410):
+                return ("missing", e.code)
+            last = ("blocked", e.code)  # 401/403/405/429/5xx: a real host answered
+            continue
+        except Exception:
+            last = ("unreachable", None)
+            continue
+    return last
+
+
+def check_sources(d):
+    """Fetch every key_source; a question is grounded iff >= MIN_REACHABLE of its
+    citations resolve to a responding host. Returns (report, all_ok)."""
+    report = {"forecast_id": d.get("forecast_id"),
+              "checked_at_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+              "min_reachable": MIN_REACHABLE, "questions": []}
+    all_ok, seen = True, {}
+    for q in d["questions"]:
+        srcs, reachable = [], 0
+        for s in q.get("key_sources", []):
+            url = str(s.get("url", ""))
+            if url not in seen:
+                seen[url] = check_url(url)
+            klass, status = seen[url]
+            if klass in ("ok", "blocked"):
+                reachable += 1
+            srcs.append({"url": url, "class": klass, "status": status})
+        grounded = reachable >= MIN_REACHABLE
+        all_ok = all_ok and grounded
+        report["questions"].append({"q": q.get("q"), "reachable": reachable,
+                                    "grounded": grounded, "sources": srcs})
+    return report, all_ok
+
+
+def _write_sources_sidecar(fid, report, skipped):
+    """Audit trail of the citation check, kept OUT of the hashed artifact so the
+    canonical dossier stays deterministic/reproducible."""
+    RDIR.mkdir(parents=True, exist_ok=True)
+    path = RDIR / f"{fid}_sources.json"
+    body = report or {"forecast_id": fid, "skipped": True,
+                      "checked_at_utc": datetime.now(timezone.utc).isoformat(timespec="seconds")}
+    path.write_text(json.dumps(body, indent=1), encoding="utf-8")
+    return path
 
 
 # ---------------- brief ----------------
@@ -225,7 +296,7 @@ def validate(d):
 
 # ---------------- commit ----------------
 
-def commit(dossier_path):
+def commit(dossier_path, skip_source_check=False):
     d = json.loads(Path(dossier_path).read_text(encoding="utf-8"))
     errors = validate(d)
     if errors:
@@ -233,6 +304,24 @@ def commit(dossier_path):
         for e in errors:
             print(f"  - {e}")
         sys.exit(1)
+    # finding #5: verify the citations actually resolve before trusting the dossier
+    if skip_source_check:
+        _write_sources_sidecar(d["forecast_id"], None, skipped=True)
+        print("WARNING: --skip-source-check -> citations NOT verified (recorded in sidecar)")
+    else:
+        report, ok = check_sources(d)
+        sp = _write_sources_sidecar(d["forecast_id"], report, skipped=False)
+        if not ok:
+            print(f"REJECTED {dossier_path}: ungrounded citations "
+                  f"(need >= {MIN_REACHABLE} reachable sources per question)")
+            for qr in report["questions"]:
+                if not qr["grounded"]:
+                    print(f"  - {qr['q']!r}: only {qr['reachable']} reachable")
+                    for s in qr["sources"]:
+                        tag = s["class"] + (f"/{s['status']}" if s["status"] else "")
+                        print(f"      [{tag}] {s['url']}")
+            print(f"  (report: {sp.relative_to(ROOT)}; --skip-source-check only for a known-offline run)")
+            sys.exit(1)
     cal = load_calibration()
     run_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
     fid = d["forecast_id"]
@@ -286,12 +375,12 @@ def commit(dossier_path):
               f"(base rate {q['base_rate_used'].get('value')})")
 
 
-def batch(dirpath):
+def batch(dirpath, skip_source_check=False):
     files = sorted(Path(dirpath).glob("*.json"))
     if not files:
         sys.exit(f"no *.json dossiers in {dirpath}")
     for f in files:
-        commit(f)
+        commit(f, skip_source_check=skip_source_check)
 
 
 # ---------------- tune (prints only; never writes) ----------------
@@ -333,12 +422,29 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         sys.exit(__doc__)
     cmd = sys.argv[1]
+    skip = "--skip-source-check" in sys.argv
     if cmd == "brief":
         brief(sys.argv[2])
     elif cmd == "commit":
-        commit(sys.argv[2])
+        commit(sys.argv[2], skip_source_check=skip)
     elif cmd == "batch":
-        batch(sys.argv[2])
+        batch(sys.argv[2], skip_source_check=skip)
+    elif cmd == "check":  # read-only: validate + verify citations resolve, write nothing to the record
+        d = json.loads(Path(sys.argv[2]).read_text(encoding="utf-8"))
+        errs = validate(d)
+        if errs:
+            print("VALIDATION ERRORS:")
+            for e in errs:
+                print("  -", e)
+            sys.exit(1)
+        report, ok = check_sources(d)
+        for qr in report["questions"]:
+            print(f"{'OK  ' if qr['grounded'] else 'FAIL'} {qr['reachable']}/{len(qr['sources'])} reachable  {qr['q']}")
+            for s in qr["sources"]:
+                tag = s["class"] + (f"/{s['status']}" if s["status"] else "")
+                print(f"      [{tag}] {s['url']}")
+        print("SOURCES:", "OK" if ok else "FAILED")
+        sys.exit(0 if ok else 1)
     elif cmd == "tune":
         tune()
     else:

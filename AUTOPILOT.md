@@ -154,7 +154,9 @@ Live world forecasts = `forecasts/world/<ID>.json` not resolved in `forecasts/wo
   opposing case, NEVER fetch betting odds / prediction-market prices / forecast aggregators),
   write the dossier to `forecasts/research/dossiers/<ID>.json`, then
   `python PredictionEngine/src/engine/m_research.py commit <dossier>` — this appends hashed rows
-  to `forecasts/research_ledger.csv` (same append-only law). The ordering is a hard rule:
+  to `forecasts/research_ledger.csv` (same append-only law). commit now also fetches every
+  citation and REJECTS a dossier whose sources don't resolve (finding #5: fabricated URLs);
+  `--skip-source-check` (sidecar-logged) is only for a known-offline run. The ordering is a hard rule:
   research happens before the market-refresh step of the same run so the researcher has not
   seen current prices.
 - **Market refresh:** USMID — Polymarket gamma-api (curl
@@ -269,6 +271,10 @@ FULL set: `{"sample": {}, "user": {}, "db": {"rules": [{"path": "asks",
   proves the number shown and scored is the number that was hashed). A FAILED verify_ledger means
   a pre-registered value drifted from what was hashed: a red-alert line at the TOP of the log —
   stop, surface it, do not republish until it is explained.
+- `python PredictionEngine/src/tests/test_golden.py`: pins the deterministic engines' outputs
+  (gate logic, de-vig, softmax, probit, seeded Monte Carlo). A FAIL means the math moved — a
+  regression, or a dependency bump that changed a seeded RNG stream and needs a deliberate
+  re-baseline. Red-alert; investigate before trusting any new numbers.
 - `python PredictionEngine/src/scoring/anchor.py upgrade` (finalizes pending Bitcoin
   attestations on earlier manifests), then `python PredictionEngine/src/scoring/anchor.py verify`
   (append-only audit: every anchored forecast hash must still exist — a FAILED verify is a
@@ -287,7 +293,8 @@ FULL set: `{"sample": {}, "user": {}, "db": {"rules": [{"path": "asks",
   `src/scoring/verify_ledger.py`.
 - M_research independence: a research pass must never fetch or consult betting odds,
   prediction-market prices, or forecast aggregators (m_research.py rejects dossiers citing
-  them). Research runs before the market-refresh step of the same run. Calibration
+  them). m_research.py commit also verifies every citation URL resolves and rejects a dossier
+  with fabricated or dead sources. Research runs before the market-refresh step of the same run. Calibration
   (forecasts/research/calibration.json) stays neutral (a=1, b=0) until the user adopts a
   tuned fit; `m_research.py tune` prints fits and never writes.
 - Every forecast config carries a `resolution` object (source, rules,
