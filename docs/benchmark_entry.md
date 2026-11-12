@@ -98,7 +98,7 @@ are not).
    `METACULUS_TOKEN` in the environment the harness runs in. Confirm the
    current tournament id (33121 per the bot template as of Oct 2026).
 3. Decide identity policy: ForecastBench offers irreversible anonymity;
-   entering as Trueinfo Labs / Psephos is the visibility play.
+   entering as Psephos is the visibility play.
 
 Until then the harness stops at building files — it never fabricates a
 submission, and every benchmark forecast it does produce is already

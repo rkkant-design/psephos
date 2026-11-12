@@ -6,7 +6,7 @@ they agree beyond 95%, and seals every forecast into the Bitcoin blockchain
 **before** the event — so the track record can be verified by anyone and edited by
 no one, misses included.
 
-By **Trueinfo Labs**.
+A personal, independent project.
 
 ---
 
