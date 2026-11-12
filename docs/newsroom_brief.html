@@ -1,0 +1,111 @@
+<title>Psephos for Newsrooms</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: single-column one-pager for a political editor; what it is, what the desk gets, why to trust it, the pilot. */
+:root{
+  --bg:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+  --grid:#e1e0d9; --baseline:#c3c2b7; --ring:rgba(11,11,11,.10);
+  --accent:#2a78d6; --accent-ink:#1c5cab;
+  --good:#0ca30c; --good-text:#006300; --serious:#ec835a; --critical:#d03b3b;
+  --sans:"Libre Franklin",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0d0d0d; --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --baseline:#383835; --ring:rgba(255,255,255,.10);
+    --accent:#3987e5; --accent-ink:#86b6ef; --good-text:#0ca30c; --critical:#e06666;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0d0d0d; --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781;
+  --grid:#2c2c2a; --baseline:#383835; --ring:rgba(255,255,255,.10);
+  --accent:#3987e5; --accent-ink:#86b6ef; --good-text:#0ca30c; --critical:#e06666;
+  color-scheme:dark;
+}
+body{background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px)); padding-right:max(16px,env(safe-area-inset-right,0px)); padding-block:0;}
+.wrap{max-width:820px; margin:0 auto; padding-block:36px 80px;}
+header.m{border-bottom:2px solid var(--ink); padding-bottom:16px;}
+.brand{font-size:20px; font-weight:800;} .brand span{color:var(--accent);}
+.kicker{font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin:26px 0 8px;}
+h1{font-size:33px; font-weight:800; letter-spacing:-.015em; margin:0 0 12px; text-wrap:balance;}
+.lede{font-size:17px; color:var(--ink2); max-width:62ch;}
+h2{font-size:14px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); border-bottom:1px solid var(--grid); padding-bottom:7px; margin:44px 0 16px;}
+p{font-size:15px; color:var(--ink2); max-width:68ch;}
+p b, li b{color:var(--ink);}
+.statstrip{display:grid; grid-template-columns:repeat(auto-fit,minmax(158px,1fr)); gap:10px; margin:22px 0 0;}
+.stat{background:var(--surface); border:1px solid var(--ring); border-radius:8px; padding:13px 16px;}
+.stat .v{font-size:25px; font-weight:800; line-height:1.1;}
+.stat .k{font-size:12px; color:var(--ink2); margin-top:4px;}
+.stat .e{font-size:11.5px; color:var(--muted); margin-top:8px; border-top:1px solid var(--grid); padding-top:7px; line-height:1.5;}
+.grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px;}
+.cardx{background:var(--surface); border:1px solid var(--ring); border-radius:8px; padding:14px 16px; font-size:13.5px; color:var(--ink2); min-width:0;}
+.cardx b{display:block; color:var(--ink); font-size:14.5px; margin-bottom:5px;}
+ul.clean{margin:10px 0 0; padding-left:18px; font-size:15px; color:var(--ink2); max-width:68ch;}
+ul.clean li{margin:7px 0;} ul.clean b{color:var(--ink);}
+.pilot{background:var(--surface); border:1px solid var(--ring); border-left:4px solid var(--accent); border-radius:10px; padding:18px 20px; margin:18px 0;}
+.pilot .pt{font-weight:800; font-size:16px; color:var(--ink);}
+.pilot .pp{font-family:var(--mono); font-size:13px; color:var(--accent-ink); margin:3px 0 10px;}
+.cta{display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 0;}
+.cta a{font-size:13.5px; font-weight:600; text-decoration:none; border-radius:7px; padding:9px 15px;}
+.cta .primary{background:var(--accent); color:#fff;}
+.cta .ghost{border:1px solid var(--grid); color:var(--ink2);}
+footer{margin-top:52px; border-top:1px solid var(--grid); padding-top:14px; font-size:12px; color:var(--muted); line-height:1.6;}
+@media (max-width:560px){ h1{font-size:25px;} }
+</style>
+<div class="wrap">
+<header class="m">
+  <div class="brand">Psephos<span>.</span></div>
+  <div class="kicker">For newsrooms &middot; November 2026</div>
+  <h1>Election forecasts your newsroom can publish &mdash; and defend.</h1>
+  <p class="lede">Psephos gives a political desk a weekly, source-linked read on the race it's covering: what changed, what it means, and &mdash; the part that protects your credibility &mdash; when a result is genuinely too close to call. Every forecast is sealed and verifiable before the event, and the misses stay public.</p>
+  <div class="statstrip">
+    <div class="stat"><div class="v">60/63</div><div class="k">certified calls correct (95.2%)</div>
+      <div class="e">It issues a call only when its independent methods all clear 95% &mdash; and refuses the rest. Everything, including the "too close to call" ones, is scored, so the record can't be gamed by answering only the easy questions.</div></div>
+    <div class="stat"><div class="v">26/26</div><div class="k">certified races right on US midterm night</div>
+      <div class="e">Its most recent live test: every race it was willing to call landed, and every upset of the night sat in a "too close to call" row, never a called one.</div></div>
+    <div class="stat"><div class="v">100%</div><div class="k">of forecasts sealed before the event</div>
+      <div class="e">Each forecast is cryptographically fingerprinted and timestamped into the Bitcoin blockchain the moment it's made. You &mdash; and your audience &mdash; can prove what was published before the result existed.</div></div>
+    <div class="stat"><div class="v">Public</div><div class="k">misses, kept on the record</div>
+      <div class="e">Wrong calls are never deleted. The Tamil Nadu 2026 miss &mdash; where a new party was underestimated &mdash; sits one click away, in red. A supplier that hides its misses can't be checked; this one can.</div></div>
+  </div>
+</header>
+
+<h2>The job your desk already does every week</h2>
+<p>A new poll drops, or an alliance shifts. A political editor has to decide, on deadline, whether it actually matters, which assumptions just changed, and what the desk can safely say on air or in print. Psephos does that read for you each week &mdash; with every claim linked to a source you can check before you publish.</p>
+
+<h2>What your desk gets</h2>
+<div class="grid2">
+  <div class="cardx"><b>A weekly briefing &amp; alerts</b>A short, plain-English read on the race, plus a same-day alert when the evidence materially changes &mdash; so you're never caught flat-footed by a poll or a defection.</div>
+  <div class="cardx"><b>A publishable chart</b>A clean seat-range graphic your graphics team can drop straight into coverage, refreshed as the forecast moves.</div>
+  <div class="cardx"><b>A forecast page you can verify</b>Its own shareable link, with the latest number, every past version, the exact resolution rule, and the data and proof open for a signed-out reader.</div>
+  <div class="cardx"><b>Wording you can stand behind</b>Approved, defensible language for each forecast &mdash; including "too close to call" when that's the honest answer, which keeps your desk out of a bad headline.</div>
+</div>
+
+<h2>Why you can trust the number</h2>
+<ul class="clean">
+  <li><b>It tells you when not to call it.</b> When independent methods genuinely disagree, the verdict is "too close to call," and it shows the split. No manufactured number to fill a lower-third.</li>
+  <li><b>It's verifiable, not "trust me."</b> Every forecast is Bitcoin-timestamped before the event, and the underlying data downloads from the page. Your audience can check it themselves, without an account.</li>
+  <li><b>It keeps its own scorecard &mdash; misses included.</b> Calls and "too close to calls" alike are graded after the result, and wrong calls stay public forever. That honesty is the whole point of using it.</li>
+</ul>
+
+<h2>How it handles the hard parts</h2>
+<p><b>Uncertainty</b> is a first-class answer, not a gap. <b>Corrections</b> reach you the same working day, by the same channel, and nothing is quietly overwritten. <b>Election-law windows</b> (ECI silence and polling periods) are agreed with you up front &mdash; horserace output is withheld when the rules require it, because your newsroom carries the publishing liability, not us.</p>
+
+<h2>A low-risk way to try it</h2>
+<div class="pilot">
+  <div class="pt">Founding newsroom pilot</div>
+  <div class="pp">One state &middot; six weeks &middot; Rs 75,000 fixed</div>
+  <p style="margin:0">A weekly briefing, material-change alerts, one publishable chart, and a verifiable forecast page &mdash; on a single race you're already covering &mdash; ending in a post-election review that scores every forecast honestly against the result. One page of scope, a live walkthrough, and a clear read on whether it earns a place in your coverage.</p>
+</div>
+
+<div class="cta">
+  <a class="primary" href="https://rkkant-design.github.io/psephos/#UP2027" target="_blank" rel="noopener">See a live forecast &rarr;</a>
+  <a class="ghost" href="https://rkkant-design.github.io/psephos/" target="_blank" rel="noopener">Browse the track record</a>
+</div>
+
+<footer>Psephos &mdash; built by Kamalkanth Ramani &middot; November 2026. Probabilistic analysis for research and editorial use; not a betting product and not financial advice. All track-record figures are computed from the pre-registration ledgers and are independently verifiable.</footer>
+</div>
