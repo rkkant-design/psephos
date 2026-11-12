@@ -1,12 +1,15 @@
 # Keeps the Psephos public record current WITHOUT the desktop app being open.
 # It does only the MECHANICAL, rule-based updates:
 #   - resolve finished football matches from the live fixture feed
-#   - re-score every resolved probability, recompute error-correlation
-#   - rebuild app_data.json, refresh the hosted proofs/CSVs
+#   - re-score, recompute error-correlation, rebuild app_data + hosted proofs/CSVs
 #   - commit the updated record and redeploy the public site
 # Judgment-heavy steps (admitting polls, reading tripwires, writing NEW forecasts,
 # resolving elections on AP-style calls, anchoring new manifests) are deliberately
 # NOT here - those stay with the weekly Claude autopilot, which recommends and stops.
+#
+# Commits ONLY on a substantive change: a newly resolved match. That is the sole
+# auto-input here (scores/app_data only move when a match resolves), so when nothing
+# resolves the run skips the rebuild/commit/deploy and makes no cosmetic date churn.
 name: Psephos autopilot (mechanical)
 
 on:
@@ -14,13 +17,11 @@ on:
     - cron: "0 6 * * *" # daily 06:00 UTC (~11:30 IST)
   workflow_dispatch: {}
 
-# contents: write -> push the updated record; pages/id-token -> redeploy the site
 permissions:
   contents: write
   pages: write
   id-token: write
 
-# serialise autopilot runs; the github-pages environment serialises deploys with pages.yml
 concurrency:
   group: psephos-autopilot
   cancel-in-progress: false
@@ -44,7 +45,19 @@ jobs:
       - name: Resolve finished matches from the live feed
         run: python src/scoring/epl_resolve.py || echo "resolve skipped (feed unreachable this run)"
 
+      - name: Did a match actually resolve?
+        id: changed
+        run: |
+          if git diff --quiet -- forecasts/matches_ledger.csv; then
+            echo "substantive=false" >> "$GITHUB_OUTPUT"
+            echo "No newly resolved match - skipping rebuild, commit and deploy (no cosmetic churn committed)."
+          else
+            echo "substantive=true" >> "$GITHUB_OUTPUT"
+            echo "A match resolved - rebuilding and publishing."
+          fi
+
       - name: Re-score, recompute correlation, rebuild the app
+        if: steps.changed.outputs.substantive == 'true'
         run: |
           set -e
           python src/scoring/score.py
@@ -54,21 +67,24 @@ jobs:
           cp data/processed/scores.csv site/app/scores.csv
           cp data/processed/scores.csv site/scores.csv
 
-      - name: Commit the updated record (only if something changed)
+      - name: Commit the updated record
+        if: steps.changed.outputs.substantive == 'true'
         run: |
           git config user.name "psephos-autopilot[bot]"
           git config user.email "psephos-autopilot@users.noreply.github.com"
           git add -A
-          if git diff --cached --quiet; then
-            echo "No changes this run."
-          else
-            git commit -m "autopilot: resolve matches, re-score, rebuild [skip ci]"
-            git push
-          fi
+          git diff --cached --quiet || git commit -m "autopilot: resolve matches, re-score, rebuild [skip ci]"
+          git push
 
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - name: Configure Pages
+        if: steps.changed.outputs.substantive == 'true'
+        uses: actions/configure-pages@v5
+      - name: Upload the site
+        if: steps.changed.outputs.substantive == 'true'
+        uses: actions/upload-pages-artifact@v3
         with:
           path: site/app
-      - id: deployment
+      - name: Deploy to GitHub Pages
+        if: steps.changed.outputs.substantive == 'true'
+        id: deployment
         uses: actions/deploy-pages@v4
