@@ -100,7 +100,7 @@ def league_sim(cfg):
 
 def ratings_tournament(cfg):
     m = cfg["model"]
-    tau = 8.0
+    tau = float(m.get("tau", 8.0))  # softmax temperature; widen it for high-variance fields
     r = {t: v + m.get("host_bonus", {}).get(t, 0) for t, v in m["ratings"].items()}
     w = {t: math.exp(v / tau) for t, v in r.items()}
     z = sum(w.values())
@@ -137,8 +137,11 @@ def market_probs(cfg):
     out = {}
     for q in cfg["questions"]:
         ent = q["entity"]
-        out[q["q"]] = (sum(entity_p.get(e, 0) for e in ent) if isinstance(ent, list)
-                       else entity_p.get(ent))
+        if not entity_p:  # no market data at all -> None everywhere (not a spurious 0 on set questions)
+            out[q["q"]] = None
+        else:
+            out[q["q"]] = (sum(entity_p.get(e, 0) for e in ent) if isinstance(ent, list)
+                           else entity_p.get(ent))
     return out, entity_p
 
 # ---------------- research instrument ----------------

@@ -1,0 +1,58 @@
+{
+  "forecast_id": "IPL2027",
+  "title": "IPL 2027 Winner",
+  "domain": "Cricket",
+  "freeze_date": "2026-11-12",
+  "resolve_date": "2027-05",
+  "adapter": "ratings_tournament",
+  "research": false,
+  "market": {
+    "source": "No dated IPL 2027 outright market this far out (squads not final; mini-auction 16 Dec 2026). Structural model only until a book prices it - every question is therefore WATCH-1INST by design."
+  },
+  "model": {
+    "source": "IPL 2026 final standings (Wikipedia '2026 Indian Premier League', league + playoff finish): RCB champions, GT runners-up, RR 3rd, SRH 4th, then PBKS, DC, KKR, CSK, MI, LSG.",
+    "tau": 40,
+    "note": "P(champion) proportional to exp(rating/tau). Rating = a 2026-strength index by final finish (RCB 100 down to LSG 64); tau widened to 40 (vs 8 for internationals) because T20 franchise cricket is extremely high-variance and squads are still unsettled. This deliberately flattens the field - the favourite sits near 15%, not 50%. It is a coarse, provisional prior, NOT a tournament simulation.",
+    "ratings": {
+      "Royal Challengers Bengaluru": 100,
+      "Gujarat Titans": 95,
+      "Rajasthan Royals": 90,
+      "Sunrisers Hyderabad": 88,
+      "Punjab Kings": 82,
+      "Delhi Capitals": 79,
+      "Kolkata Knight Riders": 76,
+      "Chennai Super Kings": 73,
+      "Mumbai Indians": 66,
+      "Lucknow Super Giants": 64
+    }
+  },
+  "resolution": {
+    "source": "The franchise awarded the IPL 2027 trophy per the official BCCI/IPL result (iplt20.com), final expected ~May 2027",
+    "resolve_by": "2027-06-30",
+    "rules": [
+      "Winner = the franchise that lifts the IPL 2027 trophy per the official result, including a final decided by DLS or a super over",
+      "A franchise is identified by its 2027 identity; a rebrand or relocation that the BCCI treats as the same franchise counts as that franchise",
+      "Tournament cancelled or not completed with no trophy awarded = VOID, logged and excluded from scoring"
+    ]
+  },
+  "questions": [
+    {"q": "Royal Challengers Bengaluru win IPL 2027", "entity": "Royal Challengers Bengaluru"},
+    {"q": "Gujarat Titans win IPL 2027", "entity": "Gujarat Titans"},
+    {"q": "Chennai Super Kings win IPL 2027", "entity": "Chennai Super Kings"},
+    {"q": "Mumbai Indians win IPL 2027", "entity": "Mumbai Indians"},
+    {"q": "Winner from the 2026 top four (RCB, GT, RR, SRH)", "entity": ["Royal Challengers Bengaluru", "Gujarat Titans", "Rajasthan Royals", "Sunrisers Hyderabad"]}
+  ],
+  "quality_flags": [
+    "Squads are NOT final. The IPL 2027 cycle is a MINI-auction: retention deadline 17 Nov 2026, mini-auction 16 Dec 2026 in Goa, player registration closes 23 Nov. Trades are live now (e.g. Rishabh Pant back to Delhi Capitals from LSG). This is a provisional read that WILL re-run once squads settle.",
+    "Because it is a mini-auction (unlimited retentions, no reset, no right-to-match this cycle), 2026 team strength carries over far more than in a mega-auction year - which is why a 2026-standings prior is defensible, but it is still coarse.",
+    "Single instrument only: there is no dated IPL 2027 outright betting market this far out, so every question is WATCH-1INST. The engine will NOT certify an IPL winner on one coarse instrument.",
+    "T20 franchise cricket is extremely high-variance: the eventual champion is routinely not the league-topper. The win probabilities are deliberately flat - the favourite is near 15%, not a lock.",
+    "Model is a championship-share by 2026-strength rating, not a ball-by-ball tournament simulation; no 2027 fixtures or squads are modelled yet."
+  ],
+  "tripwires": [
+    {"watch": "IPL 2027 retention lists published (deadline 17 Nov 2026)", "effect": "re-run with the retained cores"},
+    {"watch": "IPL 2027 mini-auction completed (16 Dec 2026, Goa)", "effect": "re-run on the final squads - the first non-provisional forecast"},
+    {"watch": "A major book publishes dated IPL 2027 outright odds", "effect": "add the market instrument; the dual gate becomes possible"},
+    {"watch": "IPL 2027 schedule and fixtures announced", "effect": "upgrade the model to a group-stage simulation"}
+  ]
+}

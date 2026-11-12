@@ -315,10 +315,10 @@ footer{margin-top:52px; border-top:1px solid var(--baseline); padding-top:16px; 
 const SEATS={UP:[403,202],WB:[294,148],TN:[234,118],BR:[243,122],KA:[224,113],MH:[288,145],MP:[230,116],RJ:[200,101],GJ:[182,92],KL:[140,71],PB:[117,59],HR:[90,46],DL:[70,36],UK:[70,36],JH:[81,41],CG:[90,46],AS:[126,64],TG:[119,60],HP:[68,35],GA:[40,21],MN:[60,31]};
 const ALIAS={up:"UP","uttar pradesh":"UP",punjab:"PB",uttarakhand:"UK",uk:"UK",goa:"GA",manipur:"MN",gujarat:"GJ",himachal:"HP","himachal pradesh":"HP",bihar:"BR",bengal:"WB","west bengal":"WB",wb:"WB","tamil nadu":"TN",tamilnadu:"TN",tn:"TN",kerala:"KL",assam:"AS",karnataka:"KA",maharashtra:"MH","madhya pradesh":"MP",mp:"MP",rajasthan:"RJ",delhi:"DL",haryana:"HR",jharkhand:"JH",chhattisgarh:"CG",telangana:"TG",pb:"PB",br:"BR",ka:"KA",mh:"MH",rj:"RJ",dl:"DL",hr:"HR",jh:"JH",cg:"CG",tg:"TG",kl:"KL",as:"AS",gj:"GJ",hp:"HP",ga:"GA",mn:"MN"};
 const WORLD_ALIAS={us:"USMID2026",usa:"USMID2026",america:"USMID2026",american:"USMID2026",midterm:"USMID2026",midterms:"USMID2026",house:"USMID2026",senate:"USMID2026",congress:"USMID2026",governor:"USMID2026",governors:"USMID2026",gubernatorial:"USMID2026",epl:"EPL2027",premier:"EPL2027",football:"EPL2027",soccer:"EPL2027",league:"EPL2027",arsenal:"EPL2027",city:"EPL2027",liverpool:"EPL2027",cricket:"CWC2027",icc:"CWC2027",cwc:"CWC2027",odi:"CWC2027",cup:"CWC2027",worldcup:"CWC2027"};
-const QMAP={UP2027:"Will the NDA finish as the largest bloc in Uttar Pradesh?",PB2027:"Who wins Punjab?",UK2027:"Who wins Uttarakhand?",USMID2026:"Who wins the US midterms - the House, the Senate, and all 71 governor and Senate races?",EPL2027:"Who wins the Premier League?",CWC2027:"Who wins the Cricket World Cup?"};
+const QMAP={UP2027:"Will the NDA finish as the largest bloc in Uttar Pradesh?",PB2027:"Who wins Punjab?",UK2027:"Who wins Uttarakhand?",USMID2026:"Who wins the US midterms - the House, the Senate, and all 71 governor and Senate races?",EPL2027:"Who wins the Premier League?",CWC2027:"Who wins the Cricket World Cup?",IPL2027:"Who wins IPL 2027?"};
 const FLAGSHIP={UP2027:{largest:"NDA is largest",majority:"NDA wins majority",bloc:"NDA"}};
 const PAGES_BASE="https://rkkant-design.github.io/psephos/";  /* public, signed-out mirror for proof files */
-const RESOLVES={USMID2026:"Resolves 3 Nov 2026",EPL2027:"Resolves May 2027",CWC2027:"Resolves Nov 2027",UP2027:"Election expected Feb-Mar 2027",PB2027:"Election expected Feb 2027",UK2027:"Election expected Feb 2027"};
+const RESOLVES={USMID2026:"Resolves 3 Nov 2026",EPL2027:"Resolves May 2027",CWC2027:"Resolves Nov 2027",UP2027:"Election expected Feb-Mar 2027",PB2027:"Election expected Feb 2027",UK2027:"Election expected Feb 2027",IPL2027:"Final expected May 2027"};
 const SC=["--s1","--s2","--s3","--s4","--s5","--s6"];
 const NAMEMAP={house_dem:"Democrats (House)",house_rep:"Republicans (House)",senate_dem:"Democrats (Senate)"};
 const pname=n=>NAMEMAP[n]||n;
@@ -361,8 +361,9 @@ function headline(e){
     if(e.domain){
       const cs=worldCombined(e);
       const lead=cs[0], sec=cs[1];
-      const open=lead&&sec&&(lead.p-sec.p<0.2||cs.some(x=>x.gap>=0.25));
-      s=lead?`Best combined read: <b>${esc(pname(lead.name))}</b> ${pct(lead.p)}${sec?` vs ${esc(pname(sec.name))} ${pct(sec.p)}`:""}${open?" &mdash; genuinely open; the methods disagree (tap to see why)":""}`:"";
+      const disagree=cs.some(x=>x.gap>=0.25), close=lead&&sec&&(lead.p-sec.p<0.2);
+      const openTxt=disagree?" &mdash; genuinely open; the methods disagree (tap to see why)":(close?" &mdash; genuinely open, too close to call":"");
+      s=lead?`Best combined read: <b>${esc(pname(lead.name))}</b> ${pct(lead.p)}${sec?` vs ${esc(pname(sec.name))} ${pct(sec.p)}`:""}${openTxt}`:"";
     }else{
       const lead=[...e.blocs].sort((a,b)=>(b.p_largest??0)-(a.p_largest??0))[0];
       s=lead?`Leaning <b>${esc(lead.name)}</b> (${pct(lead.p_largest)} to finish largest) &mdash; not yet callable`:"";
@@ -412,7 +413,7 @@ function renderHome(){
    <div class="stat"><div class="v">${t.live_open_calls}</div><div class="k">calls currently open on the record, hash-stamped</div></div>
    ${sc&&sc.overall_binary&&sc.overall_binary.n?`<div class="stat"><div class="v">${sc.overall_binary.n}</div><div class="k">probabilities scored at resolution &mdash; every one, not just the calls</div></div>`:""}`;
   const live=DATA.elections.filter(e=>e.status==="live"&&e.kind!=="matches");
-  const order=["USMID2026","UP2027","PB2027","UK2027","EPL2027","CWC2027"];
+  const order=["USMID2026","UP2027","PB2027","UK2027","EPL2027","CWC2027","IPL2027"];
   live.sort((a,b)=>(order.indexOf(a.id)+99)-(order.indexOf(b.id)+99));
   $("#homelive").innerHTML=live.slice(0,4).map(e=>card(e,true)).join("");
 }
@@ -669,6 +670,7 @@ function renderDetail(e){
     h+=resol()+flagsFold();
   }else if(e.domain){
     const ents=e.blocs.filter(b=>b.p_market!=null||b.p_model!=null);
+    const one=e.blocs.every(b=>b.p_market==null);  // single instrument (model only), no market yet
     const cs=worldCombined(e);
     if(cs.length){
       const lead=cs[0], disagree=cs.some(x=>x.gap>=0.25);
@@ -676,18 +678,20 @@ function renderDetail(e){
         ${cs.slice(0,4).map((c,i)=>{const col=`var(${SC[i%SC.length]})`;
           return `<div class="bloc"><div class="bn"><span class="swatch" style="background:${col}"></span>${esc(pname(c.name))}</div>
           <div class="track"><div class="range" style="left:0;width:${Math.max(1.2,c.p*100)}%;background:${col};opacity:.7"></div></div>
-          <div class="nums">combined ${pct(c.p)}${c.gap>=0.25?` &middot; <b>methods split by ${Math.round(c.gap*100)} points</b>`:""}</div></div>`;}).join("")}
-        <p class="hint" style="margin:10px 0 0">${disagree?
+          <div class="nums">${one?"model":"combined"} ${pct(c.p)}${c.gap>=0.25?` &middot; <b>methods split by ${Math.round(c.gap*100)} points</b>`:""}</div></div>`;}).join("")}
+        <p class="hint" style="margin:10px 0 0">${one?
+          `<b>One instrument, by design.</b> This is our structural model only &mdash; there is no betting market to cross-check it this far out &mdash; so every question stays <b>WATCH</b>: the engine will not certify a winner on a single coarse instrument. The quality flags below say exactly what the model can and cannot see.`:
+          disagree?
           `<b>Why no clear answer:</b> the methods genuinely disagree, and that disagreement is information &mdash; the first quality flag below explains exactly what each method can and cannot see. When independent methods split this wide, anyone offering you certainty is guessing.`:
           `The methods broadly agree; the combined number is the engine's best read.`}</p></section>`;
     }
-    h+=`<section class="block"><h4>What each method says</h4>
+    h+=`<section class="block"><h4>${one?"What the model says":"What each method says"}</h4>
       ${ents.map((b,i)=>{const col=`var(${SC[i%SC.length]})`;
         const bar=(v,op)=>v==null?'<div class="track" style="opacity:.35"></div>':`<div class="track"><div class="range" style="left:0;width:${Math.max(1.2,v*100)}%;background:${col};opacity:${op}"></div></div>`;
         return `<div class="bloc"><div class="bn"><span class="swatch" style="background:${col}"></span>${esc(pname(b.name))}</div>
-          <div style="display:grid;gap:3px;min-width:0">${bar(b.p_market,.45)}${bar(b.p_model,.85)}</div>
-          <div class="nums">betting market ${pct(b.p_market)} &middot; our model ${pct(b.p_model)}</div></div>`;}).join("")}
-      <div class="legend"><span>&#9646; lighter = what betting markets imply</span><span>&#9646; darker = our structural model</span><span>When they disagree, that disagreement is the story.</span></div></section>`;
+          <div style="display:grid;gap:3px;min-width:0">${one?bar(b.p_model,.85):bar(b.p_market,.45)+bar(b.p_model,.85)}</div>
+          <div class="nums">${one?`structural model ${pct(b.p_model)}`:`betting market ${pct(b.p_market)} &middot; our model ${pct(b.p_model)}`}</div></div>`;}).join("")}
+      ${one?`<div class="legend"><span>&#9646; our structural model, from the 2026 standings</span><span>no betting market yet &mdash; a second instrument is added when a book prices it</span></div>`:`<div class="legend"><span>&#9646; lighter = what betting markets imply</span><span>&#9646; darker = our structural model</span><span>When they disagree, that disagreement is the story.</span></div>`}</section>`;
     if(e.instruments) h+=fold("Where these numbers come from",`<ul class="plain"><li><b>Market:</b> ${esc(e.instruments.market_source||"")}</li><li><b>Model:</b> ${esc(e.instruments.model_note||"")}</li></ul>`);
     h+=`<section class="block"><h4>Verdicts &mdash; a CALL needs every method above 95%</h4><div class="gatewrap"><table class="gate">
       <tr><th>Question</th><th>Our model</th><th>Market</th><th>Verdict</th>${anyResolved?"<th>Outcome</th>":""}</tr>
@@ -766,7 +770,10 @@ const CAL_FIXED=[
  {date:"2027-02-01",ask:"Will Union Budget 2027-28 set a fiscal deficit target below 4.4% of GDP?",label:"India: Union Budget 2027-28",cat:"india"},
  {date:"2027-03-01",ask:"Will the 2027 Census of India count a population above 1.45 billion?",label:"India: Census 2027 reference date",cat:"india"},
  {month:"2027-01",ask:"Will any carmaker unveil a sub-Rs-15-lakh electric SUV at Bharat Mobility Global Expo 2027?",label:"Bharat Mobility Global Expo (Auto Expo): major car launches",cat:"auto"},
- {month:"2027-03",ask:"Who will win IPL 2027?",label:"IPL 2027 season expected to begin",cat:"sport"},
+ {date:"2026-11-17",id:"IPL2027",label:"IPL 2027 retention deadline",cat:"sport"},
+ {date:"2026-12-16",id:"IPL2027",label:"IPL 2027 mini-auction (Goa) &mdash; squads finalise, forecast re-runs",cat:"sport"},
+ {month:"2027-03",id:"IPL2027",label:"IPL 2027 season begins",cat:"sport"},
+ {month:"2027-05",id:"IPL2027",label:"IPL 2027 final &mdash; forecast resolves",cat:"sport"},
  {month:"2027-03",ask:"Will ISRO launch the first crewed Gaganyaan flight before 30 June 2027?",label:"Gaganyaan: first crewed flight targeted (Q1 2027)",cat:"space"},
  /* ---- big releases (dates as announced; slates can move) ---- */
  {date:"2027-04-07",ask:"Will S.S. Rajamouli's Varanasi gross over Rs 1,000 crore worldwide within 30 days of its 7 April 2027 release?",label:"Movie: Varanasi (Rajamouli x Mahesh Babu) worldwide release",cat:"movie"},
