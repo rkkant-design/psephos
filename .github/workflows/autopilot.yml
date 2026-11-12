@@ -1,0 +1,74 @@
+# Keeps the Psephos public record current WITHOUT the desktop app being open.
+# It does only the MECHANICAL, rule-based updates:
+#   - resolve finished football matches from the live fixture feed
+#   - re-score every resolved probability, recompute error-correlation
+#   - rebuild app_data.json, refresh the hosted proofs/CSVs
+#   - commit the updated record and redeploy the public site
+# Judgment-heavy steps (admitting polls, reading tripwires, writing NEW forecasts,
+# resolving elections on AP-style calls, anchoring new manifests) are deliberately
+# NOT here - those stay with the weekly Claude autopilot, which recommends and stops.
+name: Psephos autopilot (mechanical)
+
+on:
+  schedule:
+    - cron: "0 6 * * *" # daily 06:00 UTC (~11:30 IST)
+  workflow_dispatch: {}
+
+# contents: write -> push the updated record; pages/id-token -> redeploy the site
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# serialise autopilot runs; the github-pages environment serialises deploys with pages.yml
+concurrency:
+  group: psephos-autopilot
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install --quiet pandas numpy
+
+      - name: Resolve finished matches from the live feed
+        run: python src/scoring/epl_resolve.py || echo "resolve skipped (feed unreachable this run)"
+
+      - name: Re-score, recompute correlation, rebuild the app
+        run: |
+          set -e
+          python src/scoring/score.py
+          python src/pipeline/15_error_correlation.py
+          python src/webbuild/13_build_app_data.py
+          cp site/app_data.json site/app/app_data.json
+          cp data/processed/scores.csv site/app/scores.csv
+          cp data/processed/scores.csv site/scores.csv
+
+      - name: Commit the updated record (only if something changed)
+        run: |
+          git config user.name "psephos-autopilot[bot]"
+          git config user.email "psephos-autopilot@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes this run."
+          else
+            git commit -m "autopilot: resolve matches, re-score, rebuild [skip ci]"
+            git push
+          fi
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/app
+      - id: deployment
+        uses: actions/deploy-pages@v4
