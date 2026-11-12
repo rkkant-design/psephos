@@ -73,20 +73,35 @@ ol.ask{margin:0; padding-left:20px; font-size:14.5px; color:var(--ink2); max-wid
 ol.ask li{margin:9px 0;} ol.ask b{color:var(--ink);}
 footer{margin-top:56px; border-top:1px solid var(--grid); padding-top:14px; font-size:12px; color:var(--muted); line-height:1.6;}
 @media (max-width:560px){ h1{font-size:26px;} .mrow{grid-template-columns:1fr;} .mrow .mv{grid-column:1;} }
+@media print{
+  @page{ margin:11mm 11mm; }
+  body{ background:#fff; color:#0b0b0b; font-size:13px; }
+  .wrap{ max-width:none; padding-block:0; }
+  h1{ font-size:26px; }
+  h2{ margin:24px 0 10px; break-after:avoid; }
+  p{ font-size:13px; }
+  .statstrip{ gap:8px; } .stat{ padding:11px 13px; } .stat .v{ font-size:22px; } .stat .e{ font-size:10px; }
+  .cardx{ padding:12px 14px; font-size:12.5px; }
+  .tier{ padding:13px; } .tier .tp{ font-size:19px; }
+  figure{ margin:14px 0; } figcaption{ font-size:11px; }
+  .callout{ font-size:13px; } ol.ask{ font-size:13.5px; } ol.ask li{ margin:6px 0; }
+  .stat, .cardx, .tier, figure, .callout, ol.ask li, footer{ break-inside:avoid; }
+  footer{ margin-top:26px; }
+}
 </style>
 <div class="wrap">
 <header class="m">
   <div class="brand">Psephos<span>.</span></div>
   <div class="kicker">Founder's brief &middot; Kamalkanth Ramani &middot; November 2026</div>
   <h1>India's first verifiably honest prediction engine &mdash; built, live, and already on the record.</h1>
-  <p class="lede">I built Psephos to forecast elections, sport and world events with several independent methods, certify a CALL only when they agree beyond 95%, and seal every forecast into the Bitcoin blockchain before the event. The category it replaces was banned in India five months ago &mdash; the demand is proven, the legal supply is empty, and the 2027 election cycle is the stage.</p>
+  <p class="lede">I built Psephos to forecast elections, sport and world events with several independent methods, certify a CALL only when they agree beyond 95%, and seal every forecast with an independent, tamper-proof timestamp before the event. The category it replaces was banned in India five months ago &mdash; the demand is proven, the legal supply is empty, and the 2027 election cycle is the stage.</p>
   <div class="statstrip">
     <div class="stat"><div class="v">60/63</div><div class="k">certified calls correct to date (95.2%)</div>
       <div class="e">A CALL is issued only when every independent method is 95%+ sure. Of 63 graded, 60 were right &mdash; 28/28 in backtests, 26/26 live on US midterm night, 6/9 in the 2026 India blind test. The one failure mode is now an automatic safety rule.</div></div>
     <div class="stat"><div class="v">60+</div><div class="k">elections &amp; events covered, searchable app live</div>
       <div class="e">Indian state elections, US midterms, the Premier League (weekly match picks) and the Cricket World Cup &mdash; one working product, not a one-election experiment.</div></div>
     <div class="stat"><div class="v">100%</div><div class="k">of forecasts hash-sealed before the event</div>
-      <div class="e">Every forecast is cryptographically fingerprinted the moment it is made and anchored in the Bitcoin blockchain. Anyone can verify it was predicted before it happened; nobody &mdash; including me &mdash; can edit the record.</div></div>
+      <div class="e">Every forecast is fingerprinted the moment it is made and written to an independent public timestamp. Anyone can verify it was published before it happened; nobody &mdash; including me &mdash; can edit the record.</div></div>
     <div class="stat"><div class="v">26/26</div><div class="k">certified races right on US midterm night (Nov 3)</div>
       <div class="e">The first live public test landed: every one of the 26 races the gate was willing to call was correct, and every upset of the night sat in a "too close to call" row, never a called one.</div></div>
   </div>
@@ -122,7 +137,7 @@ footer{margin-top:56px; border-top:1px solid var(--grid); padding-top:14px; font
 <div class="grid2">
   <div class="cardx"><b>The engine</b>Four instruments per question: a structural model (reads 60 years of results, no news), bias-corrected polls, de-vigged markets, and a protocol-driven research pass. 10,000-run simulations; a CALL only when the methods independently clear 95%.</div>
   <div class="cardx"><b>The record</b>46 elections back-tested (zero wrong gate calls), a real out-of-sample cycle in 2026 (the one miss-pattern became a safety rule now active in Punjab), Brier-scored probabilities including the open ones, and a lifetime 60/63 on certified calls.</div>
-  <div class="cardx"><b>The trust machinery</b>Every forecast SHA-256-hashed at freeze, anchored into Bitcoin via OpenTimestamps, misses displayed in red forever. "Called it in October" becomes checkable by strangers &mdash; no competitor in this market can say that.</div>
+  <div class="cardx"><b>The trust machinery</b>Every forecast SHA-256-hashed at freeze and sealed into an independent public timestamp (the Bitcoin blockchain via OpenTimestamps &mdash; used as a public notary, not currency; only a fingerprint is stored). Misses in red forever. "Called it in October" becomes checkable by strangers &mdash; no competitor here can say that.</div>
   <div class="cardx"><b>The product</b>A live app: searchable forecasts, a moments calendar (elections, matches, launches), free-form Ask with instant protocol-driven estimates, weekly self-updating autopilot, and a public changelog. Entered independent benchmarks (ForecastBench) against the world's best AI forecasters.</div>
 </div>
 
@@ -139,7 +154,7 @@ footer{margin-top:56px; border-top:1px solid var(--grid); padding-top:14px; font
   <div class="tier hot"><div class="tw">Entry &middot; now</div><div class="tn">Founding newsroom pilot</div><div class="tp">Rs 75,000<small>/6 weeks</small></div>
     <ul><li>One state, weekly briefings + alerts</li><li>One publishable chart, a verifiable forecast page</li><li>A post-election scoring review</li></ul></div>
   <div class="tier"><div class="tw">Recurring &middot; B2B</div><div class="tn">Election-cycle license</div><div class="tp">Rs 2-4L<small>/cycle</small></div>
-    <ul><li>Multiple states, recurring briefings &amp; charts</li><li>Silence-period-compliant workflow built in</li><li>"Powered by a Bitcoin-sealed record"</li></ul></div>
+    <ul><li>Multiple states, recurring briefings &amp; charts</li><li>Silence-period-compliant workflow built in</li><li>"Powered by a tamper-proof, verifiable record"</li></ul></div>
   <div class="tier"><div class="tw">Enterprise</div><div class="tn">API / white-label</div><div class="tp">On ask</div>
     <ul><li>Consultancies, corporates, risk desks</li><li>API + custom question coverage</li><li>Private briefings on tripwire events</li></ul></div>
   <div class="tier"><div class="tw">Reach &middot; later</div><div class="tn">Public &amp; subscription</div><div class="tp">Rs 0&ndash;499</div>
@@ -177,7 +192,7 @@ footer{margin-top:56px; border-top:1px solid var(--grid); padding-top:14px; font
 
 <h2>Why this is defensible</h2>
 <div class="grid2">
-  <div class="cardx"><b>A provable record</b>Self-reported accuracy is marketing; a Bitcoin-anchored ledger is evidence. A rival can copy the method &mdash; it isn't secret &mdash; but not the dated, scored history that makes a single number trustworthy.</div>
+  <div class="cardx"><b>A provable record</b>Self-reported accuracy is marketing; an independently timestamped, tamper-proof ledger is evidence. A rival can copy the method &mdash; it isn't secret &mdash; but not the dated, scored history that makes a single number trustworthy.</div>
   <div class="cardx"><b>Abstention as the product</b>I certify which forecasts can be acted on and refuse the rest. Anyone whose revenue depends on always giving a confident number cannot copy a product built on refusing.</div>
   <div class="cardx"><b>Structural depth</b>Constituency-level models, measured alliance-transfer coefficients, pollster-error ledgers &mdash; numbers that live in decades of ingested results, not in news a generalist AI can read.</div>
   <div class="cardx"><b>India home field</b>The data, the languages, the election rhythm &mdash; and a measured science (the instruments' errors correlate at 0.745; I publish it) that global single-method rivals do not.</div>
