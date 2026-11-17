@@ -128,7 +128,11 @@ if wl_path.exists():
         rows = wl[wl.forecast_id == fid]
         resolved = rows.resolved.str.len().gt(0).any()
         em, eo = d["entity_probs"].get("market", {}), d["entity_probs"].get("model", {})
-        ents = sorted(set(em) | set(eo), key=lambda t: -(max(em.get(t, 0), eo.get(t, 0))))[:8]
+        # sort by probability desc, then name asc so ties break deterministically
+        # (set union iterates in hash-randomized order; without the name tiebreaker the
+        # bloc list reorders between runs and every rebuild shows a spurious diff)
+        ents = sorted(set(em) | set(eo),
+                      key=lambda t: (-(max(em.get(t, 0), eo.get(t, 0))), t))[:8]
         blocs = [{"name": t, "base": None, "m2": None, "m3": None, "p5": None, "med": None,
                   "p95": None, "p_maj": None, "p_largest": None, "actual": None,
                   "p_market": em.get(t), "p_model": eo.get(t)} for t in ents]
