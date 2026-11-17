@@ -668,10 +668,22 @@ changelog = [{"date": d,
               "entries": sorted(v, key=lambda e: 0 if e["kind"] == "run" else 1)}
              for d, v in sorted(_chg.items(), reverse=True)]
 
-# last_reviewed = the most recent full WEEKLY autopilot review (an autopilot-log run block).
-# Distinct from a forecast's freeze date (when it last CHANGED): it says the engine looked
-# at the whole slate on this date and, for a held forecast, chose not to move it.
+# last_reviewed = the most recent time the engine REVIEWED its live slate: either a full
+# autopilot-log run block, OR the latest (re-)registration of a forecast. A re-run writes a
+# ledger row dated today BEFORE the app is rebuilt, so this is robust to the log being
+# appended after the rebuild (which previously left last_reviewed a cycle stale). Distinct
+# from a forecast's freeze date (when it last CHANGED); mechanical match resolution does NOT
+# count as a review (matches_ledger is excluded).
 _run_dates = [d for d, v in _chg.items() if any(e["kind"] == "run" for e in v)]
+for _led in (FDIR / "ledger.csv", FDIR / "world_ledger.csv",
+             FDIR / "world" / "usmid_races_ledger.csv"):
+    if _led.exists():
+        try:
+            _r = pd.read_csv(_led, dtype=str).fillna("")
+            if "run_at_utc" in _r.columns and len(_r):
+                _run_dates.append(max(x[:10] for x in _r["run_at_utc"] if x))
+        except Exception:
+            pass
 last_reviewed = max(_run_dates) if _run_dates else str(date.today())
 
 out = {"generated": str(date.today()), "last_reviewed": last_reviewed,

@@ -1,6 +1,6 @@
 {
 "generated": "2026-11-17",
-"last_reviewed": "2026-11-10",
+"last_reviewed": "2026-11-17",
 "track": {
 "retrodiction_calls": 28,
 "retrodiction_correct": 28,
@@ -258,6 +258,18 @@
 {
 "date": "2026-11-17",
 "entries": [
+{
+"title": "weekly run: two PB polls admitted, PB2027 re-run; KS-Gov + MS-Sen resolved; EPL quiet (international break)",
+"items": [
+"Polls admitted: PB x2 (verified verbatim from the Wikipedia wikitext) \u2014 SCORE 15-Nov: AAP 35 / INC 23.5 / SAD 14.5 / BJP 14 / WPD 11 / Oth 2; Vote Vibe 12-Nov: AAP 33.5 / INC 27.6 / SAD 12.5 / BJP 14.7 / WPD 8.1 / Oth 3.6 (both unrated, ...",
+"Flags: PB WPD flag kept triggered, evidence refreshed with the two new data (11% SCORE 15-Nov, 8.1% Vote Vibe 12-Nov \u2014 neither toward 20% fracture nor below 5% fade). Insider flow: +2 UP events \u2014 Dharmendra Kashyap (ex-BJP MP Aonla) -> SP ...",
+"India re-run: PB2027 (polls admitted), freeze 2026-11-17, sha d18dfe02...: AAP P(majority) gate 0.4143 -> 0.4714, AAP largest 0.7418 -> 0.7931; all verdicts unchanged (WATCH / WATCH-FLAG).",
+"EPL: international break (MW11 plays 21-23 Nov) \u2014 epl_resolve: nothing newly resolvable; MW11 already pre-registered 10-Nov, NOT re-registered (no new inputs; re-run would only duplicate rows). US races: GOV-KANSAS resolved YES (AP call ...",
+"World: no re-runs. EPL2027 \u2014 no PL games since 10-Nov, table unchanged, no dated outright quote newer than the 10-Nov config (bet365 1/3 on 2-Nov \u2248 current 0.752 devig), dossier 7 days old. CWC2027 \u2014 only new ratings figures found are the ...",
+"Flagged for user, not acted on: (1) ASP(KR)-AIMIM tie-up for UP2027: ASP is not a modeled bloc and the config's tripwire watches BSP-ASP only \u2014 if this alliance polls >=5% it will trip the new-entrant rule; consider whether the UP tripwire ..."
+],
+"kind": "run"
+},
 {
 "title": "Re-registered Punjab Assembly 2027",
 "items": [
@@ -2173,20 +2185,6 @@
 "p_model": 0.1092
 },
 {
-"name": "Man City",
-"base": null,
-"m2": null,
-"m3": null,
-"p5": null,
-"med": null,
-"p95": null,
-"p_maj": null,
-"p_largest": null,
-"actual": null,
-"p_market": 0.0645,
-"p_model": 0.0506
-},
-{
 "name": "Liverpool",
 "base": null,
 "m2": null,
@@ -2199,6 +2197,20 @@
 "actual": null,
 "p_market": 0.0645,
 "p_model": 0.0075
+},
+{
+"name": "Man City",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": 0.0645,
+"p_model": 0.0506
 },
 {
 "name": "Chelsea",
