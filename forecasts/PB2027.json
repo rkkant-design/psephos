@@ -3,7 +3,7 @@
   "title": "Punjab Assembly 2027",
   "state": "PB",
   "expected_date": "2027-02",
-  "freeze_date": "2026-11-10",
+  "freeze_date": "2026-11-17",
   "majority": 59,
   "n_seats": 117,
   "baseline_ae": "PB2022",
@@ -47,6 +47,24 @@
     }
   },
   "polls": [
+    {
+      "agency": "SCORE",
+      "date": "2026-11-15",
+      "AAP": 35.0,
+      "INC": 23.5,
+      "SAD": 14.5,
+      "BJP": 14.0,
+      "rated": false
+    },
+    {
+      "agency": "Vote Vibe",
+      "date": "2026-11-12",
+      "AAP": 33.5,
+      "INC": 27.6,
+      "SAD": 12.5,
+      "BJP": 14.7,
+      "rated": false
+    },
     {
       "agency": "SCORE",
       "date": "2026-10-15",
@@ -98,7 +116,7 @@
   "new_entrant_flag": {
     "triggered": true,
     "entrant": "Akali Dal (Waris Punjab De) - Amritpal Singh",
-    "evidence": "polling 8.5-14% (SCORE 8.5, People's Pulse 14) with zero presence in PB2022 baseline and GE2024; satisfies the N=46 rule 'serious contender invisible to both baseline AE and prior GE'. TN2026/TVK precedent: all CALLs suppressed to WATCH-FLAG."
+    "evidence": "polling 8.1-14% and holding (SCORE 15-Nov-2026: 11%; Vote Vibe 12-Nov-2026: 8.1%; earlier SCORE 8.5, People's Pulse 14) with zero presence in PB2022 baseline and GE2024; satisfies the N=46 rule 'serious contender invisible to both baseline AE and prior GE'. TN2026/TVK precedent: all CALLs suppressed to WATCH-FLAG."
   },
   "resolution": {
     "source": "Election Commission of India official results (results.eci.gov.in), party-wise seat tally at first full declaration of all 117 seats",

@@ -1,9 +1,9 @@
 {
- "generated": "2026-11-12",
+ "generated": "2026-11-17",
  "overall_binary": {
-  "n": 202,
-  "brier": 0.1255,
-  "log": -0.544
+  "n": 206,
+  "brier": 0.1349,
+  "log": -0.5699
  },
  "india": {
   "n": 61,
@@ -40,28 +40,28 @@
   }
  },
  "us_races": {
-  "n": 132,
-  "brier": 0.0621,
-  "log": -0.2151,
+  "n": 136,
+  "brier": 0.0782,
+  "log": -0.264,
   "by_instrument": {
    "market": {
-    "n": 65,
-    "brier": 0.0331,
-    "log": -0.1275
+    "n": 67,
+    "brier": 0.0508,
+    "log": -0.1718
    },
    "model": {
-    "n": 67,
-    "brier": 0.0902,
-    "log": -0.3001
+    "n": 69,
+    "brier": 0.1049,
+    "log": -0.3536
    }
   },
   "note": "race-level US midterm rows (usmid_races_ledger.csv); dual instruments scored per race"
  },
  "skill_model_vs_market_us_races": {
-  "n_questions": 65,
-  "brier_model": 0.0929,
-  "brier_market": 0.0331,
-  "edge": -0.0598,
+  "n_questions": 67,
+  "brier_model": 0.108,
+  "brier_market": 0.0508,
+  "edge": -0.0573,
   "note": "edge > 0 means the structural model beats the market on identical questions"
  },
  "research": {
@@ -105,27 +105,27 @@
  "calibration": [
   {
    "bin": "0-5%",
-   "n": 45,
+   "n": 46,
    "claimed": 0.011,
-   "realized": 0.044
+   "realized": 0.065
   },
   {
    "bin": "5-20%",
-   "n": 31,
+   "n": 32,
    "claimed": 0.14,
-   "realized": 0.258
+   "realized": 0.281
   },
   {
    "bin": "20-40%",
-   "n": 68,
-   "claimed": 0.277,
-   "realized": 0.338
+   "n": 69,
+   "claimed": 0.278,
+   "realized": 0.348
   },
   {
    "bin": "40-60%",
-   "n": 40,
+   "n": 41,
    "claimed": 0.483,
-   "realized": 0.425
+   "realized": 0.439
   },
   {
    "bin": "60-80%",
@@ -147,22 +147,22 @@
   }
  ],
  "calibration_meta": {
-  "binary_n": 202,
+  "binary_n": 206,
   "binary_by_source": {
    "india": 61,
    "world": 6,
-   "us_races": 132,
+   "us_races": 136,
    "research": 3
   },
   "match_events": 90,
   "match_events_note": "30 resolved football matches x 3 outcomes (H/D/A), binary events for calibration only",
-  "total": 292,
-  "cutoff": "2026-11-10",
+  "total": 296,
+  "cutoff": "2026-11-17",
   "revisions": "the scored probability per question is the latest run that PREDATES its resolution (a live forecast's last pre-event lock); a re-run timestamped on or after the result is never scored. Blind/backtest runs all postdate resolution and score their latest run.",
   "voids": "VOID resolutions (e.g. a curtailed season with no official champion) are excluded and logged; WATCH rows ARE scored",
   "scoring_policy": "per question the OUTCOME comes from the latest resolved row, but the scored PROBABILITIES come from the latest run that predates the resolution date (a live forecast's last pre-event lock); a re-run timestamped on/after the result can never become the scored row. Blind/backtest runs all postdate resolution, so they score their latest run as before. scores.csv carries lead_days + cohort per row.",
   "scored_binary_rows_by_cohort": {
-   "live": 141,
+   "live": 145,
    "blind": 61
   },
   "note": "overall_binary Brier is the 202-row binary cohort; the calibration table pools those 202 plus the 90 football match-outcome events, 292 in all - the football events never enter the binary Brier means (different scale), only the calibration audit"

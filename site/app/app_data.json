@@ -1,5 +1,5 @@
 {
-"generated": "2026-11-12",
+"generated": "2026-11-17",
 "last_reviewed": "2026-11-10",
 "track": {
 "retrodiction_calls": 28,
@@ -34,11 +34,11 @@
 }
 },
 "scoring": {
-"generated": "2026-11-12",
+"generated": "2026-11-17",
 "overall_binary": {
-"n": 202,
-"brier": 0.1255,
-"log": -0.544
+"n": 206,
+"brier": 0.1349,
+"log": -0.5699
 },
 "india": {
 "n": 61,
@@ -75,28 +75,28 @@
 }
 },
 "us_races": {
-"n": 132,
-"brier": 0.0621,
-"log": -0.2151,
+"n": 136,
+"brier": 0.0782,
+"log": -0.264,
 "by_instrument": {
 "market": {
-"n": 65,
-"brier": 0.0331,
-"log": -0.1275
+"n": 67,
+"brier": 0.0508,
+"log": -0.1718
 },
 "model": {
-"n": 67,
-"brier": 0.0902,
-"log": -0.3001
+"n": 69,
+"brier": 0.1049,
+"log": -0.3536
 }
 },
 "note": "race-level US midterm rows (usmid_races_ledger.csv); dual instruments scored per race"
 },
 "skill_model_vs_market_us_races": {
-"n_questions": 65,
-"brier_model": 0.0929,
-"brier_market": 0.0331,
-"edge": -0.0598,
+"n_questions": 67,
+"brier_model": 0.108,
+"brier_market": 0.0508,
+"edge": -0.0573,
 "note": "edge > 0 means the structural model beats the market on identical questions"
 },
 "research": {
@@ -140,27 +140,27 @@
 "calibration": [
 {
 "bin": "0-5%",
-"n": 45,
+"n": 46,
 "claimed": 0.011,
-"realized": 0.044
+"realized": 0.065
 },
 {
 "bin": "5-20%",
-"n": 31,
+"n": 32,
 "claimed": 0.14,
-"realized": 0.258
+"realized": 0.281
 },
 {
 "bin": "20-40%",
-"n": 68,
-"claimed": 0.277,
-"realized": 0.338
+"n": 69,
+"claimed": 0.278,
+"realized": 0.348
 },
 {
 "bin": "40-60%",
-"n": 40,
+"n": 41,
 "claimed": 0.483,
-"realized": 0.425
+"realized": 0.439
 },
 {
 "bin": "60-80%",
@@ -182,22 +182,22 @@
 }
 ],
 "calibration_meta": {
-"binary_n": 202,
+"binary_n": 206,
 "binary_by_source": {
 "india": 61,
 "world": 6,
-"us_races": 132,
+"us_races": 136,
 "research": 3
 },
 "match_events": 90,
 "match_events_note": "30 resolved football matches x 3 outcomes (H/D/A), binary events for calibration only",
-"total": 292,
-"cutoff": "2026-11-10",
+"total": 296,
+"cutoff": "2026-11-17",
 "revisions": "the scored probability per question is the latest run that PREDATES its resolution (a live forecast's last pre-event lock); a re-run timestamped on or after the result is never scored. Blind/backtest runs all postdate resolution and score their latest run.",
 "voids": "VOID resolutions (e.g. a curtailed season with no official champion) are excluded and logged; WATCH rows ARE scored",
 "scoring_policy": "per question the OUTCOME comes from the latest resolved row, but the scored PROBABILITIES come from the latest run that predates the resolution date (a live forecast's last pre-event lock); a re-run timestamped on/after the result can never become the scored row. Blind/backtest runs all postdate resolution, so they score their latest run as before. scores.csv carries lead_days + cohort per row.",
 "scored_binary_rows_by_cohort": {
-"live": 141,
+"live": 145,
 "blind": 61
 },
 "note": "overall_binary Brier is the 202-row binary cohort; the calibration table pools those 202 plus the 90 football match-outcome events, 292 in all - the football events never enter the binary Brier means (different scale), only the calibration audit"
@@ -256,6 +256,18 @@
 },
 "changelog": [
 {
+"date": "2026-11-17",
+"entries": [
+{
+"title": "Re-registered Punjab Assembly 2027",
+"items": [
+"11 probabilities re-hashed; no verdict changed"
+],
+"kind": "ledger"
+}
+]
+},
+{
 "date": "2026-11-12",
 "entries": [
 {
@@ -300,7 +312,7 @@
 {
 "title": "Resolved US Midterms 2026 race board",
 "items": [
-"67 probabilities scored at resolution; calls 26/26 right"
+"69 probabilities scored at resolution; calls 26/26 right"
 ],
 "kind": "ledger"
 },
@@ -2161,20 +2173,6 @@
 "p_model": 0.1092
 },
 {
-"name": "Liverpool",
-"base": null,
-"m2": null,
-"m3": null,
-"p5": null,
-"med": null,
-"p95": null,
-"p_maj": null,
-"p_largest": null,
-"actual": null,
-"p_market": 0.0645,
-"p_model": 0.0075
-},
-{
 "name": "Man City",
 "base": null,
 "m2": null,
@@ -2187,6 +2185,20 @@
 "actual": null,
 "p_market": 0.0645,
 "p_model": 0.0506
+},
+{
+"name": "Liverpool",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": 0.0645,
+"p_model": 0.0075
 },
 {
 "name": "Chelsea",
@@ -2332,54 +2344,54 @@
 "year": 2027,
 "status": "live",
 "title": "Punjab Assembly 2027",
-"freeze": "2026-11-10",
+"freeze": "2026-11-17",
 "blocs": [
 {
 "name": "AAP",
 "base": 42.31,
 "m2": 34.77,
-"m3": 33.0,
-"p5": 31,
-"med": 55,
-"p95": 79,
-"p_maj": 0.4143,
-"p_largest": 0.7418,
+"m3": 33.5,
+"p5": 33,
+"med": 57,
+"p95": 81,
+"p_maj": 0.4714,
+"p_largest": 0.7931,
 "actual": null
 },
 {
 "name": "BJP",
 "base": 6.65,
 "m2": 12.25,
-"m3": 14.0,
+"m3": 14.14,
 "p5": 3,
-"med": 10,
-"p95": 25,
+"med": 11,
+"p95": 26,
 "p_maj": 0.0001,
-"p_largest": 0.0025,
+"p_largest": 0.0028,
 "actual": null
 },
 {
 "name": "INC",
 "base": 23.14,
 "m2": 24.68,
-"m3": 28.0,
-"p5": 17,
-"med": 37,
-"p95": 63,
-"p_maj": 0.0864,
-"p_largest": 0.2505,
+"m3": 27.02,
+"p5": 15,
+"med": 35,
+"p95": 61,
+"p_maj": 0.0658,
+"p_largest": 0.1996,
 "actual": null
 },
 {
 "name": "SAD",
 "base": 18.52,
 "m2": 16.17,
-"m3": 14.5,
+"m3": 14.1,
 "p5": 3,
 "med": 11,
-"p95": 28,
-"p_maj": 0.0001,
-"p_largest": 0.0052,
+"p95": 27,
+"p_maj": 0.0,
+"p_largest": 0.0045,
 "actual": null
 }
 ],
@@ -2387,7 +2399,7 @@
 {
 "q": "AAP wins majority",
 "p2": 0.59,
-"p3": 0.41,
+"p3": 0.47,
 "verdict": "WATCH",
 "outcome": null,
 "correct": null
@@ -2395,7 +2407,7 @@
 {
 "q": "AAP is largest",
 "p2": 0.88,
-"p3": 0.74,
+"p3": 0.79,
 "verdict": "WATCH",
 "outcome": null,
 "correct": null
@@ -2403,7 +2415,7 @@
 {
 "q": "INC wins majority",
 "p2": 0.03,
-"p3": 0.09,
+"p3": 0.07,
 "verdict": "WATCH",
 "outcome": null,
 "correct": null
@@ -2411,7 +2423,7 @@
 {
 "q": "INC is largest",
 "p2": 0.11,
-"p3": 0.25,
+"p3": 0.2,
 "verdict": "WATCH",
 "outcome": null,
 "correct": null
@@ -2427,7 +2439,7 @@
 {
 "q": "SAD is largest",
 "p2": 0.01,
-"p3": 0.01,
+"p3": 0.0,
 "verdict": "WATCH-FLAG",
 "outcome": null,
 "correct": null
@@ -2451,7 +2463,7 @@
 {
 "q": "BJP under 15 seats",
 "p2": 0.78,
-"p3": 0.72,
+"p3": 0.7,
 "verdict": "WATCH",
 "outcome": null,
 "correct": null
@@ -2459,7 +2471,7 @@
 {
 "q": "SAD under 20 seats",
 "p2": 0.73,
-"p3": 0.83,
+"p3": 0.84,
 "verdict": "WATCH",
 "outcome": null,
 "correct": null
@@ -2481,7 +2493,7 @@
 ],
 "nef": {
 "entrant": "Akali Dal (Waris Punjab De) - Amritpal Singh",
-"evidence": "polling 8.5-14% (SCORE 8.5, People's Pulse 14) with zero presence in PB2022 baseline and GE2024; satisfies the N=46 rule 'serious contender invisible to both baseline AE and prior GE'. TN2026/TVK precedent: all CALLs suppressed to WATCH-FLAG.",
+"evidence": "polling 8.1-14% and holding (SCORE 15-Nov-2026: 11%; Vote Vibe 12-Nov-2026: 8.1%; earlier SCORE 8.5, People's Pulse 14) with zero presence in PB2022 baseline and GE2024; satisfies the N=46 rule 'serious contender invisible to both baseline AE and prior GE'. TN2026/TVK precedent: all CALLs suppressed to WATCH-FLAG.",
 "triggered": true
 },
 "tripwires": [
@@ -2514,7 +2526,7 @@
 ],
 "source": "Election Commission of India official results (results.eci.gov.in), party-wise seat tally at first full declaration of all 117 seats"
 },
-"sha": "3c12f70c96ddf594ae6a2bc615e5ef05fd7b84acbc5f4d761f764463f7c3ef1c",
+"sha": "d18dfe02cbd5f8f529a1eb7f6d206bb1d7caef4bd46401632ffd1d3147541581",
 "versions": [
 {
 "run_at": "2026-10-23",
@@ -2737,16 +2749,90 @@
 "verdict": "WATCH-FLAG"
 }
 ]
+},
+{
+"run_at": "2026-11-17",
+"freeze": "2026-11-17",
+"sha": "d18dfe02cbd5f8f529a1eb7f6d206bb1d7caef4bd46401632ffd1d3147541581",
+"resolution_source": "Election Commission of India official results (results.eci.gov.in), party-wise seat tally at first full declaration of all 117 seats",
+"questions": [
+{
+"q": "AAP wins majority",
+"p2": 0.5913,
+"p3": 0.4714,
+"verdict": "WATCH"
+},
+{
+"q": "AAP is largest",
+"p2": 0.8765,
+"p3": 0.7931,
+"verdict": "WATCH"
+},
+{
+"q": "INC wins majority",
+"p2": 0.029,
+"p3": 0.0658,
+"verdict": "WATCH"
+},
+{
+"q": "INC is largest",
+"p2": 0.109,
+"p3": 0.1996,
+"verdict": "WATCH"
+},
+{
+"q": "SAD wins majority",
+"p2": 0.0003,
+"p3": 0.0,
+"verdict": "WATCH-FLAG"
+},
+{
+"q": "SAD is largest",
+"p2": 0.0121,
+"p3": 0.0045,
+"verdict": "WATCH-FLAG"
+},
+{
+"q": "BJP wins majority",
+"p2": 0.0,
+"p3": 0.0001,
+"verdict": "WATCH-FLAG"
+},
+{
+"q": "BJP is largest",
+"p2": 0.0024,
+"p3": 0.0028,
+"verdict": "WATCH-FLAG"
+},
+{
+"q": "BJP under 15 seats",
+"p2": 0.7796,
+"p3": 0.7033,
+"verdict": "WATCH"
+},
+{
+"q": "SAD under 20 seats",
+"p2": 0.7311,
+"p3": 0.8391,
+"verdict": "WATCH"
+},
+{
+"q": "Winner (largest) in {AAP, INC}",
+"p2": 0.9855,
+"p3": 0.9927,
+"verdict": "WATCH-FLAG"
+}
+]
 }
 ],
 "verify": {
-"manifest": "manifest_20261110T053933.json",
-"anchored_utc": "2026-11-10T05:39:33+00:00",
-"proof": "manifest_20261110T053933.json.ots",
+"manifest": "manifest_20261117T060919.json",
+"anchored_utc": "2026-11-17T06:09:19+00:00",
+"proof": "manifest_20261117T060919.json.ots",
 "anchor_status": "pending",
-"authored": "2026-11-10",
+"authored": "2026-11-17",
 "first_published": "2026-10-23",
-"sha": "3c12f70c96ddf594ae6a2bc615e5ef05fd7b84acbc5f4d761f764463f7c3ef1c",
+"sha": "d18dfe02cbd5f8f529a1eb7f6d206bb1d7caef4bd46401632ffd1d3147541581",
 "event_label": "Punjab poll, expected early 2027",
 "pre_event": true
 },
@@ -4319,7 +4405,7 @@
 "inc_party": "D",
 "inc_running": "none",
 "note": "open, Kelly term-limited",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -4919,7 +5005,7 @@
 "inc_party": "R",
 "inc_running": "elected",
 "note": "Hyde-Smith; somewhat competitive",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {

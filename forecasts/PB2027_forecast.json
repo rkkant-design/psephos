@@ -1,9 +1,9 @@
 {
  "forecast_id": "PB2027",
- "freeze_date": "2026-11-10",
+ "freeze_date": "2026-11-17",
  "new_entrant_flag": {
   "entrant": "Akali Dal (Waris Punjab De) - Amritpal Singh",
-  "evidence": "polling 8.5-14% (SCORE 8.5, People's Pulse 14) with zero presence in PB2022 baseline and GE2024; satisfies the N=46 rule 'serious contender invisible to both baseline AE and prior GE'. TN2026/TVK precedent: all CALLs suppressed to WATCH-FLAG.",
+  "evidence": "polling 8.1-14% and holding (SCORE 15-Nov-2026: 11%; Vote Vibe 12-Nov-2026: 8.1%; earlier SCORE 8.5, People's Pulse 14) with zero presence in PB2022 baseline and GE2024; satisfies the N=46 rule 'serious contender invisible to both baseline AE and prior GE'. TN2026/TVK precedent: all CALLs suppressed to WATCH-FLAG.",
   "triggered": true
  },
  "params": {
@@ -24,44 +24,44 @@
  ],
  "questions": [
   {
-   "p_gate": 0.4143,
+   "p_gate": 0.4714,
    "p_m2": 0.5913,
-   "p_m3": 0.4143,
+   "p_m3": 0.4714,
    "question": "AAP wins majority",
    "verdict": "WATCH"
   },
   {
-   "p_gate": 0.7418,
+   "p_gate": 0.7931,
    "p_m2": 0.8765,
-   "p_m3": 0.7418,
+   "p_m3": 0.7931,
    "question": "AAP is largest",
    "verdict": "WATCH"
   },
   {
    "p_gate": 0.029,
    "p_m2": 0.029,
-   "p_m3": 0.0864,
+   "p_m3": 0.0658,
    "question": "INC wins majority",
    "verdict": "WATCH"
   },
   {
    "p_gate": 0.109,
    "p_m2": 0.109,
-   "p_m3": 0.2505,
+   "p_m3": 0.1996,
    "question": "INC is largest",
    "verdict": "WATCH"
   },
   {
-   "p_gate": 0.0001,
+   "p_gate": 0.0,
    "p_m2": 0.0003,
-   "p_m3": 0.0001,
+   "p_m3": 0.0,
    "question": "SAD wins majority",
    "verdict": "WATCH-FLAG"
   },
   {
-   "p_gate": 0.0052,
+   "p_gate": 0.0045,
    "p_m2": 0.0121,
-   "p_m3": 0.0052,
+   "p_m3": 0.0045,
    "question": "SAD is largest",
    "verdict": "WATCH-FLAG"
   },
@@ -75,28 +75,28 @@
   {
    "p_gate": 0.0024,
    "p_m2": 0.0024,
-   "p_m3": 0.0025,
+   "p_m3": 0.0028,
    "question": "BJP is largest",
    "verdict": "WATCH-FLAG"
   },
   {
-   "p_gate": 0.7215,
+   "p_gate": 0.7033,
    "p_m2": 0.7796,
-   "p_m3": 0.7215,
+   "p_m3": 0.7033,
    "question": "BJP under 15 seats",
    "verdict": "WATCH"
   },
   {
    "p_gate": 0.7311,
    "p_m2": 0.7311,
-   "p_m3": 0.8291,
+   "p_m3": 0.8391,
    "question": "SAD under 20 seats",
    "verdict": "WATCH"
   },
   {
    "p_gate": 0.9855,
    "p_m2": 0.9855,
-   "p_m3": 0.9923,
+   "p_m3": 0.9927,
    "question": "Winner (largest) in {AAP, INC}",
    "verdict": "WATCH-FLAG"
   }
@@ -113,7 +113,7 @@
   ],
   "source": "Election Commission of India official results (results.eci.gov.in), party-wise seat tally at first full declaration of all 117 seats"
  },
- "run_at_utc": "2026-11-10T05:36:27+00:00",
+ "run_at_utc": "2026-11-17T06:05:48+00:00",
  "seats_m2": {
   "AAP": {
    "med": 62,
@@ -146,32 +146,32 @@
  },
  "seats_m3": {
   "AAP": {
-   "med": 55,
-   "p5": 31,
-   "p95": 79,
-   "p_largest": 0.7418,
-   "p_majority": 0.4143
+   "med": 57,
+   "p5": 33,
+   "p95": 81,
+   "p_largest": 0.7931,
+   "p_majority": 0.4714
   },
   "BJP": {
-   "med": 10,
+   "med": 11,
    "p5": 3,
-   "p95": 25,
-   "p_largest": 0.0025,
+   "p95": 26,
+   "p_largest": 0.0028,
    "p_majority": 0.0001
   },
   "INC": {
-   "med": 37,
-   "p5": 17,
-   "p95": 63,
-   "p_largest": 0.2505,
-   "p_majority": 0.0864
+   "med": 35,
+   "p5": 15,
+   "p95": 61,
+   "p_largest": 0.1996,
+   "p_majority": 0.0658
   },
   "SAD": {
    "med": 11,
    "p5": 3,
-   "p95": 28,
-   "p_largest": 0.0052,
-   "p_majority": 0.0001
+   "p95": 27,
+   "p_largest": 0.0045,
+   "p_majority": 0.0
   }
  },
  "state_shares": {
@@ -194,10 +194,10 @@
    "SAD": 16.17
   },
   "m3_pred": {
-   "AAP": 33.0,
-   "BJP": 14.0,
-   "INC": 28.0,
-   "SAD": 14.5
+   "AAP": 33.5,
+   "BJP": 14.14,
+   "INC": 27.02,
+   "SAD": 14.1
   }
  },
  "title": "Punjab Assembly 2027",
