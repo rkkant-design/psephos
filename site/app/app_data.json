@@ -1,6 +1,6 @@
 {
-"generated": "2026-11-17",
-"last_reviewed": "2026-11-17",
+"generated": "2026-11-18",
+"last_reviewed": "2026-11-18",
 "track": {
 "retrodiction_calls": 28,
 "retrodiction_correct": 28,
@@ -255,6 +255,18 @@
 }
 },
 "changelog": [
+{
+"date": "2026-11-18",
+"entries": [
+{
+"title": "Re-registered IPL 2027 Winner",
+"items": [
+"5 probabilities re-hashed; no verdict changed"
+],
+"kind": "ledger"
+}
+]
+},
 {
 "date": "2026-11-17",
 "entries": [
@@ -1375,7 +1387,7 @@
 "status": "live",
 "domain": "Cricket",
 "title": "IPL 2027 Winner",
-"freeze": "2026-11-12",
+"freeze": "2026-11-18",
 "blocs": [
 {
 "name": "Royal Challengers Bengaluru",
@@ -1389,7 +1401,7 @@
 "p_largest": null,
 "actual": null,
 "p_market": null,
-"p_model": 0.1533
+"p_model": 0.1461
 },
 {
 "name": "Gujarat Titans",
@@ -1403,7 +1415,7 @@
 "p_largest": null,
 "actual": null,
 "p_market": null,
-"p_model": 0.1353
+"p_model": 0.1355
 },
 {
 "name": "Rajasthan Royals",
@@ -1417,35 +1429,7 @@
 "p_largest": null,
 "actual": null,
 "p_market": null,
-"p_model": 0.1194
-},
-{
-"name": "Sunrisers Hyderabad",
-"base": null,
-"m2": null,
-"m3": null,
-"p5": null,
-"med": null,
-"p95": null,
-"p_maj": null,
-"p_largest": null,
-"actual": null,
-"p_market": null,
-"p_model": 0.1136
-},
-{
-"name": "Punjab Kings",
-"base": null,
-"m2": null,
-"m3": null,
-"p5": null,
-"med": null,
-"p95": null,
-"p_maj": null,
-"p_largest": null,
-"actual": null,
-"p_market": null,
-"p_model": 0.0977
+"p_model": 0.1226
 },
 {
 "name": "Delhi Capitals",
@@ -1459,7 +1443,35 @@
 "p_largest": null,
 "actual": null,
 "p_market": null,
-"p_model": 0.0907
+"p_model": 0.1055
+},
+{
+"name": "Punjab Kings",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": null,
+"p_model": 0.1029
+},
+{
+"name": "Sunrisers Hyderabad",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": null,
+"p_model": 0.0931
 },
 {
 "name": "Kolkata Knight Riders",
@@ -1473,10 +1485,10 @@
 "p_largest": null,
 "actual": null,
 "p_market": null,
-"p_model": 0.0841
+"p_model": 0.0802
 },
 {
-"name": "Chennai Super Kings",
+"name": "Mumbai Indians",
 "base": null,
 "m2": null,
 "m3": null,
@@ -1487,7 +1499,7 @@
 "p_largest": null,
 "actual": null,
 "p_market": null,
-"p_model": 0.0781
+"p_model": 0.0744
 }
 ],
 "questions": [
@@ -1509,7 +1521,7 @@
 },
 {
 "q": "Chennai Super Kings win IPL 2027",
-"p2": 0.08,
+"p2": 0.07,
 "p3": null,
 "verdict": "WATCH-1INST",
 "outcome": null,
@@ -1525,7 +1537,7 @@
 },
 {
 "q": "Winner from the 2026 top four (RCB, GT, RR, SRH)",
-"p2": 0.52,
+"p2": 0.5,
 "p3": null,
 "verdict": "WATCH-1INST",
 "outcome": null,
@@ -1533,7 +1545,7 @@
 }
 ],
 "flags": [
-"Squads are NOT final. The IPL 2027 cycle is a MINI-auction: retention deadline 17 Nov 2026, mini-auction 16 Dec 2026 in Goa, player registration closes 23 Nov. Trades are live now (e.g. Rishabh Pant back to Delhi Capitals from LSG). This is a provisional read that WILL re-run once squads settle.",
+"Retentions are now FINAL (official iplt20.com list, 18 Nov 2026): 184 players retained, 89 released into the auction pool. Squads are still NOT final - the mini-auction is 16 Dec 2026 in Goa with 66 open slots (25 overseas). This read is re-rated for retentions + trades but stays provisional until the auction settles squads.",
 "Because it is a mini-auction (unlimited retentions, no reset, no right-to-match this cycle), 2026 team strength carries over far more than in a mega-auction year - which is why a 2026-standings prior is defensible, but it is still coarse.",
 "Single instrument only: there is no dated IPL 2027 outright betting market this far out, so every question is WATCH-1INST. The engine will NOT certify an IPL winner on one coarse instrument.",
 "T20 franchise cricket is extremely high-variance: the eventual champion is routinely not the league-topper. The win probabilities are deliberately flat - the favourite is near 15%, not a lock.",
@@ -1541,8 +1553,8 @@
 ],
 "tripwires": [
 {
-"effect": "re-run with the retained cores",
-"watch": "IPL 2027 retention lists published (deadline 17 Nov 2026)"
+"effect": "DONE: re-rated on retained cores + trades at freeze 2026-11-18",
+"watch": "IPL 2027 retention lists published - FIRED 2026-11-18"
 },
 {
 "effect": "re-run on the final squads - the first non-provisional forecast",
@@ -1566,10 +1578,10 @@
 ],
 "source": "The franchise awarded the IPL 2027 trophy per the official BCCI/IPL result (iplt20.com), final expected ~May 2027"
 },
-"sha": "e3cc20a6f0998fd3ebfe9ff322d87efab0a5cc832b1ebc61fda94a977e35e6b8",
+"sha": "c1fc1ff4400dbfad30bb4e1df4d4254ef9fa5427aac1127f2314eaf4342bc621",
 "instruments": {
 "market_source": "No dated IPL 2027 outright market this far out (squads not final; mini-auction 16 Dec 2026). Structural model only until a book prices it - every question is therefore WATCH-1INST by design.",
-"model_note": "P(champion) proportional to exp(rating/tau). Rating = a 2026-strength index by final finish (RCB 100 down to LSG 64); tau widened to 40 (vs 8 for internationals) because T20 franchise cricket is extremely high-variance and squads are still unsettled. This deliberately flattens the field - the favourite sits near 15%, not 50%. It is a coarse, provisional prior, NOT a tournament simulation.",
+"model_note": "P(champion) proportional to exp(rating/tau). Rating = a coarse 2026-strength index adjusted BY EYE for retained cores and trades (mini-auction cycle, so 2026 strength carries over heavily). The deltas are a judgment, not a model output: +8 DC (Pant), +7 MI (Arshdeep + Bumrah/SKY/Tilak core), +6 LSG (Kuldeep/Curran), +4 PBKS (Hardik, Arshdeep out), +3 RR (Jadeja/Shami in), +2 GT (deepest squad + Harshal), -2 CSK (Dhoni gone, Jadeja out), -6 SRH (Head released, Harshal out); RCB & KKR held. tau stays 40 so the field is deliberately flat (favourite ~15%). STILL PROVISIONAL and single-instrument - squads are not final until the 16 Dec mini-auction.",
 "research_sha256": null
 },
 "resolve_date": "2027-05"

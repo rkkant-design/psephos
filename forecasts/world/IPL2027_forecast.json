@@ -3,28 +3,28 @@
  "entity_probs": {
   "market": {},
   "model": {
-   "Chennai Super Kings": 0.0781,
-   "Delhi Capitals": 0.0907,
-   "Gujarat Titans": 0.1353,
-   "Kolkata Knight Riders": 0.0841,
-   "Lucknow Super Giants": 0.0623,
-   "Mumbai Indians": 0.0655,
-   "Punjab Kings": 0.0977,
-   "Rajasthan Royals": 0.1194,
-   "Royal Challengers Bengaluru": 0.1533,
-   "Sunrisers Hyderabad": 0.1136
+   "Chennai Super Kings": 0.0707,
+   "Delhi Capitals": 0.1055,
+   "Gujarat Titans": 0.1355,
+   "Kolkata Knight Riders": 0.0802,
+   "Lucknow Super Giants": 0.069,
+   "Mumbai Indians": 0.0744,
+   "Punjab Kings": 0.1029,
+   "Rajasthan Royals": 0.1226,
+   "Royal Challengers Bengaluru": 0.1461,
+   "Sunrisers Hyderabad": 0.0931
   }
  },
  "forecast_id": "IPL2027",
- "freeze_date": "2026-11-12",
+ "freeze_date": "2026-11-18",
  "gate_rule": "dual: both instruments must clear 0.95; p_gate = min",
  "instruments": {
   "market_source": "No dated IPL 2027 outright market this far out (squads not final; mini-auction 16 Dec 2026). Structural model only until a book prices it - every question is therefore WATCH-1INST by design.",
-  "model_note": "P(champion) proportional to exp(rating/tau). Rating = a 2026-strength index by final finish (RCB 100 down to LSG 64); tau widened to 40 (vs 8 for internationals) because T20 franchise cricket is extremely high-variance and squads are still unsettled. This deliberately flattens the field - the favourite sits near 15%, not 50%. It is a coarse, provisional prior, NOT a tournament simulation.",
+  "model_note": "P(champion) proportional to exp(rating/tau). Rating = a coarse 2026-strength index adjusted BY EYE for retained cores and trades (mini-auction cycle, so 2026 strength carries over heavily). The deltas are a judgment, not a model output: +8 DC (Pant), +7 MI (Arshdeep + Bumrah/SKY/Tilak core), +6 LSG (Kuldeep/Curran), +4 PBKS (Hardik, Arshdeep out), +3 RR (Jadeja/Shami in), +2 GT (deepest squad + Harshal), -2 CSK (Dhoni gone, Jadeja out), -6 SRH (Head released, Harshal out); RCB & KKR held. tau stays 40 so the field is deliberately flat (favourite ~15%). STILL PROVISIONAL and single-instrument - squads are not final until the 16 Dec mini-auction.",
   "research_sha256": null
  },
  "quality_flags": [
-  "Squads are NOT final. The IPL 2027 cycle is a MINI-auction: retention deadline 17 Nov 2026, mini-auction 16 Dec 2026 in Goa, player registration closes 23 Nov. Trades are live now (e.g. Rishabh Pant back to Delhi Capitals from LSG). This is a provisional read that WILL re-run once squads settle.",
+  "Retentions are now FINAL (official iplt20.com list, 18 Nov 2026): 184 players retained, 89 released into the auction pool. Squads are still NOT final - the mini-auction is 16 Dec 2026 in Goa with 66 open slots (25 overseas). This read is re-rated for retentions + trades but stays provisional until the auction settles squads.",
   "Because it is a mini-auction (unlimited retentions, no reset, no right-to-match this cycle), 2026 team strength carries over far more than in a mega-auction year - which is why a 2026-standings prior is defensible, but it is still coarse.",
   "Single instrument only: there is no dated IPL 2027 outright betting market this far out, so every question is WATCH-1INST. The engine will NOT certify an IPL winner on one coarse instrument.",
   "T20 franchise cricket is extremely high-variance: the eventual champion is routinely not the league-topper. The win probabilities are deliberately flat - the favourite is near 15%, not a lock.",
@@ -34,7 +34,7 @@
   {
    "p_gate": null,
    "p_market": null,
-   "p_model": 0.1533,
+   "p_model": 0.1461,
    "p_research": null,
    "q": "Royal Challengers Bengaluru win IPL 2027",
    "verdict": "WATCH-1INST"
@@ -42,7 +42,7 @@
   {
    "p_gate": null,
    "p_market": null,
-   "p_model": 0.1353,
+   "p_model": 0.1355,
    "p_research": null,
    "q": "Gujarat Titans win IPL 2027",
    "verdict": "WATCH-1INST"
@@ -50,7 +50,7 @@
   {
    "p_gate": null,
    "p_market": null,
-   "p_model": 0.0781,
+   "p_model": 0.0707,
    "p_research": null,
    "q": "Chennai Super Kings win IPL 2027",
    "verdict": "WATCH-1INST"
@@ -58,7 +58,7 @@
   {
    "p_gate": null,
    "p_market": null,
-   "p_model": 0.0655,
+   "p_model": 0.0744,
    "p_research": null,
    "q": "Mumbai Indians win IPL 2027",
    "verdict": "WATCH-1INST"
@@ -66,7 +66,7 @@
   {
    "p_gate": null,
    "p_market": null,
-   "p_model": 0.5215,
+   "p_model": 0.4973,
    "p_research": null,
    "q": "Winner from the 2026 top four (RCB, GT, RR, SRH)",
    "verdict": "WATCH-1INST"
@@ -82,12 +82,12 @@
   "source": "The franchise awarded the IPL 2027 trophy per the official BCCI/IPL result (iplt20.com), final expected ~May 2027"
  },
  "resolve_date": "2027-05",
- "run_at_utc": "2026-11-12T09:24:35+00:00",
+ "run_at_utc": "2026-11-18T06:56:36+00:00",
  "title": "IPL 2027 Winner",
  "tripwires": [
   {
-   "effect": "re-run with the retained cores",
-   "watch": "IPL 2027 retention lists published (deadline 17 Nov 2026)"
+   "effect": "DONE: re-rated on retained cores + trades at freeze 2026-11-18",
+   "watch": "IPL 2027 retention lists published - FIRED 2026-11-18"
   },
   {
    "effect": "re-run on the final squads - the first non-provisional forecast",
