@@ -1,6 +1,6 @@
 {
  "source": "https://fixturedownload.com/feed/json/epl-2026",
- "fetched_utc": "2026-11-17T06:06:27+00:00",
+ "fetched_utc": "2026-11-23T05:54:26+00:00",
  "fixtures": [
   {
    "MatchNumber": 1,
@@ -1210,9 +1210,9 @@
    "HomeTeam": "Man City",
    "AwayTeam": "Fulham",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 1,
+   "AwayTeamScore": 1,
+   "Winner": "Draw"
   },
   {
    "MatchNumber": 101,
@@ -1222,9 +1222,9 @@
    "HomeTeam": "Bournemouth",
    "AwayTeam": "Nott'm Forest",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 2,
+   "AwayTeamScore": 0,
+   "Winner": "Bournemouth"
   },
   {
    "MatchNumber": 102,
@@ -1234,9 +1234,9 @@
    "HomeTeam": "Aston Villa",
    "AwayTeam": "Sunderland",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 0,
+   "AwayTeamScore": 0,
+   "Winner": "Draw"
   },
   {
    "MatchNumber": 104,
@@ -1246,9 +1246,9 @@
    "HomeTeam": "Chelsea",
    "AwayTeam": "Leeds",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 1,
+   "AwayTeamScore": 4,
+   "Winner": "Leeds"
   },
   {
    "MatchNumber": 105,
@@ -1258,9 +1258,9 @@
    "HomeTeam": "Coventry",
    "AwayTeam": "Crystal Palace",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 3,
+   "AwayTeamScore": 2,
+   "Winner": "Coventry"
   },
   {
    "MatchNumber": 110,
@@ -1270,9 +1270,9 @@
    "HomeTeam": "Spurs",
    "AwayTeam": "Ipswich",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 2,
+   "AwayTeamScore": 0,
+   "Winner": "Spurs"
   },
   {
    "MatchNumber": 109,
@@ -1282,9 +1282,9 @@
    "HomeTeam": "Newcastle",
    "AwayTeam": "Arsenal",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 2,
+   "AwayTeamScore": 2,
+   "Winner": "Draw"
   },
   {
    "MatchNumber": 106,
@@ -2403,36 +2403,12 @@
    "Winner": ""
   },
   {
-   "MatchNumber": 201,
+   "MatchNumber": 205,
    "RoundNumber": 21,
-   "DateUtc": "2027-01-16 15:00:00Z",
-   "Location": "Vitality Stadium",
-   "HomeTeam": "Bournemouth",
-   "AwayTeam": "Ipswich",
-   "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
-  },
-  {
-   "MatchNumber": 202,
-   "RoundNumber": 21,
-   "DateUtc": "2027-01-16 15:00:00Z",
-   "Location": "Villa Park",
-   "HomeTeam": "Aston Villa",
-   "AwayTeam": "Man Utd",
-   "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
-  },
-  {
-   "MatchNumber": 203,
-   "RoundNumber": 21,
-   "DateUtc": "2027-01-16 15:00:00Z",
-   "Location": "Gtech Community Stadium",
-   "HomeTeam": "Brentford",
-   "AwayTeam": "Brighton",
+   "DateUtc": "2027-01-16 12:30:00Z",
+   "Location": "Coventry Building Society Arena",
+   "HomeTeam": "Coventry",
+   "AwayTeam": "Everton",
    "Group": null,
    "HomeTeamScore": null,
    "AwayTeamScore": null,
@@ -2445,18 +2421,6 @@
    "Location": "Stamford Bridge",
    "HomeTeam": "Chelsea",
    "AwayTeam": "Sunderland",
-   "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
-  },
-  {
-   "MatchNumber": 205,
-   "RoundNumber": 21,
-   "DateUtc": "2027-01-16 15:00:00Z",
-   "Location": "Coventry Building Society Arena",
-   "HomeTeam": "Coventry",
-   "AwayTeam": "Everton",
    "Group": null,
    "HomeTeamScore": null,
    "AwayTeamScore": null,
@@ -2511,9 +2475,33 @@
    "Winner": ""
   },
   {
+   "MatchNumber": 202,
+   "RoundNumber": 21,
+   "DateUtc": "2027-01-16 17:30:00Z",
+   "Location": "Villa Park",
+   "HomeTeam": "Aston Villa",
+   "AwayTeam": "Man Utd",
+   "Group": null,
+   "HomeTeamScore": null,
+   "AwayTeamScore": null,
+   "Winner": ""
+  },
+  {
+   "MatchNumber": 201,
+   "RoundNumber": 21,
+   "DateUtc": "2027-01-17 14:00:00Z",
+   "Location": "Vitality Stadium",
+   "HomeTeam": "Bournemouth",
+   "AwayTeam": "Ipswich",
+   "Group": null,
+   "HomeTeamScore": null,
+   "AwayTeamScore": null,
+   "Winner": ""
+  },
+  {
    "MatchNumber": 210,
    "RoundNumber": 21,
-   "DateUtc": "2027-01-16 15:00:00Z",
+   "DateUtc": "2027-01-17 16:30:00Z",
    "Location": "Tottenham Hotspur Stadium",
    "HomeTeam": "Spurs",
    "AwayTeam": "Leeds",
@@ -2523,48 +2511,12 @@
    "Winner": ""
   },
   {
-   "MatchNumber": 211,
-   "RoundNumber": 22,
-   "DateUtc": "2027-01-23 15:00:00Z",
-   "Location": "Emirates Stadium",
-   "HomeTeam": "Arsenal",
-   "AwayTeam": "Newcastle",
-   "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
-  },
-  {
-   "MatchNumber": 212,
-   "RoundNumber": 22,
-   "DateUtc": "2027-01-23 15:00:00Z",
-   "Location": "American Express Stadium",
-   "HomeTeam": "Brighton",
-   "AwayTeam": "Man City",
-   "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
-  },
-  {
-   "MatchNumber": 213,
-   "RoundNumber": 22,
-   "DateUtc": "2027-01-23 15:00:00Z",
-   "Location": "Selhurst Park",
-   "HomeTeam": "Crystal Palace",
-   "AwayTeam": "Spurs",
-   "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
-  },
-  {
-   "MatchNumber": 214,
-   "RoundNumber": 22,
-   "DateUtc": "2027-01-23 15:00:00Z",
-   "Location": "Hill Dickinson Stadium",
-   "HomeTeam": "Everton",
-   "AwayTeam": "Brentford",
+   "MatchNumber": 203,
+   "RoundNumber": 21,
+   "DateUtc": "2027-01-18 20:00:00Z",
+   "Location": "Gtech Community Stadium",
+   "HomeTeam": "Brentford",
+   "AwayTeam": "Brighton",
    "Group": null,
    "HomeTeamScore": null,
    "AwayTeamScore": null,
@@ -2595,24 +2547,48 @@
    "Winner": ""
   },
   {
-   "MatchNumber": 217,
+   "MatchNumber": 211,
    "RoundNumber": 22,
-   "DateUtc": "2027-01-23 15:00:00Z",
-   "Location": "Elland Road",
-   "HomeTeam": "Leeds",
-   "AwayTeam": "Chelsea",
+   "DateUtc": "2027-01-23 17:30:00Z",
+   "Location": "Emirates Stadium",
+   "HomeTeam": "Arsenal",
+   "AwayTeam": "Newcastle",
    "Group": null,
    "HomeTeamScore": null,
    "AwayTeamScore": null,
    "Winner": ""
   },
   {
-   "MatchNumber": 218,
+   "MatchNumber": 212,
    "RoundNumber": 22,
-   "DateUtc": "2027-01-23 15:00:00Z",
-   "Location": "Old Trafford",
-   "HomeTeam": "Man Utd",
-   "AwayTeam": "Liverpool",
+   "DateUtc": "2027-01-23 20:00:00Z",
+   "Location": "American Express Stadium",
+   "HomeTeam": "Brighton",
+   "AwayTeam": "Man City",
+   "Group": null,
+   "HomeTeamScore": null,
+   "AwayTeamScore": null,
+   "Winner": ""
+  },
+  {
+   "MatchNumber": 213,
+   "RoundNumber": 22,
+   "DateUtc": "2027-01-24 14:00:00Z",
+   "Location": "Selhurst Park",
+   "HomeTeam": "Crystal Palace",
+   "AwayTeam": "Spurs",
+   "Group": null,
+   "HomeTeamScore": null,
+   "AwayTeamScore": null,
+   "Winner": ""
+  },
+  {
+   "MatchNumber": 214,
+   "RoundNumber": 22,
+   "DateUtc": "2027-01-24 14:00:00Z",
+   "Location": "Hill Dickinson Stadium",
+   "HomeTeam": "Everton",
+   "AwayTeam": "Brentford",
    "Group": null,
    "HomeTeamScore": null,
    "AwayTeamScore": null,
@@ -2621,7 +2597,7 @@
   {
    "MatchNumber": 219,
    "RoundNumber": 22,
-   "DateUtc": "2027-01-23 15:00:00Z",
+   "DateUtc": "2027-01-24 14:00:00Z",
    "Location": "The City Ground",
    "HomeTeam": "Nott'm Forest",
    "AwayTeam": "Bournemouth",
@@ -2633,7 +2609,7 @@
   {
    "MatchNumber": 220,
    "RoundNumber": 22,
-   "DateUtc": "2027-01-23 15:00:00Z",
+   "DateUtc": "2027-01-24 14:00:00Z",
    "Location": "Stadium of Light",
    "HomeTeam": "Sunderland",
    "AwayTeam": "Coventry",
@@ -2643,12 +2619,36 @@
    "Winner": ""
   },
   {
-   "MatchNumber": 221,
+   "MatchNumber": 218,
+   "RoundNumber": 22,
+   "DateUtc": "2027-01-24 16:30:00Z",
+   "Location": "Old Trafford",
+   "HomeTeam": "Man Utd",
+   "AwayTeam": "Liverpool",
+   "Group": null,
+   "HomeTeamScore": null,
+   "AwayTeamScore": null,
+   "Winner": ""
+  },
+  {
+   "MatchNumber": 217,
+   "RoundNumber": 22,
+   "DateUtc": "2027-01-25 20:00:00Z",
+   "Location": "Elland Road",
+   "HomeTeam": "Leeds",
+   "AwayTeam": "Chelsea",
+   "Group": null,
+   "HomeTeamScore": null,
+   "AwayTeamScore": null,
+   "Winner": ""
+  },
+  {
+   "MatchNumber": 227,
    "RoundNumber": 23,
-   "DateUtc": "2027-01-30 15:00:00Z",
-   "Location": "Vitality Stadium",
-   "HomeTeam": "Bournemouth",
-   "AwayTeam": "Fulham",
+   "DateUtc": "2027-01-30 12:30:00Z",
+   "Location": "Anfield",
+   "HomeTeam": "Liverpool",
+   "AwayTeam": "Everton",
    "Group": null,
    "HomeTeamScore": null,
    "AwayTeamScore": null,
@@ -2667,78 +2667,6 @@
    "Winner": ""
   },
   {
-   "MatchNumber": 223,
-   "RoundNumber": 23,
-   "DateUtc": "2027-01-30 15:00:00Z",
-   "Location": "Gtech Community Stadium",
-   "HomeTeam": "Brentford",
-   "AwayTeam": "Man Utd",
-   "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
-  },
-  {
-   "MatchNumber": 224,
-   "RoundNumber": 23,
-   "DateUtc": "2027-01-30 15:00:00Z",
-   "Location": "Stamford Bridge",
-   "HomeTeam": "Chelsea",
-   "AwayTeam": "Nott'm Forest",
-   "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
-  },
-  {
-   "MatchNumber": 225,
-   "RoundNumber": 23,
-   "DateUtc": "2027-01-30 15:00:00Z",
-   "Location": "Coventry Building Society Arena",
-   "HomeTeam": "Coventry",
-   "AwayTeam": "Leeds",
-   "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
-  },
-  {
-   "MatchNumber": 226,
-   "RoundNumber": 23,
-   "DateUtc": "2027-01-30 15:00:00Z",
-   "Location": "MKM Stadium",
-   "HomeTeam": "Hull",
-   "AwayTeam": "Crystal Palace",
-   "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
-  },
-  {
-   "MatchNumber": 227,
-   "RoundNumber": 23,
-   "DateUtc": "2027-01-30 15:00:00Z",
-   "Location": "Anfield",
-   "HomeTeam": "Liverpool",
-   "AwayTeam": "Everton",
-   "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
-  },
-  {
-   "MatchNumber": 228,
-   "RoundNumber": 23,
-   "DateUtc": "2027-01-30 15:00:00Z",
-   "Location": "Etihad Stadium",
-   "HomeTeam": "Man City",
-   "AwayTeam": "Arsenal",
-   "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
-  },
-  {
    "MatchNumber": 229,
    "RoundNumber": 23,
    "DateUtc": "2027-01-30 15:00:00Z",
@@ -2751,12 +2679,84 @@
    "Winner": ""
   },
   {
+   "MatchNumber": 224,
+   "RoundNumber": 23,
+   "DateUtc": "2027-01-30 17:30:00Z",
+   "Location": "Stamford Bridge",
+   "HomeTeam": "Chelsea",
+   "AwayTeam": "Nott'm Forest",
+   "Group": null,
+   "HomeTeamScore": null,
+   "AwayTeamScore": null,
+   "Winner": ""
+  },
+  {
+   "MatchNumber": 221,
+   "RoundNumber": 23,
+   "DateUtc": "2027-01-31 14:00:00Z",
+   "Location": "Vitality Stadium",
+   "HomeTeam": "Bournemouth",
+   "AwayTeam": "Fulham",
+   "Group": null,
+   "HomeTeamScore": null,
+   "AwayTeamScore": null,
+   "Winner": ""
+  },
+  {
+   "MatchNumber": 225,
+   "RoundNumber": 23,
+   "DateUtc": "2027-01-31 14:00:00Z",
+   "Location": "Coventry Building Society Arena",
+   "HomeTeam": "Coventry",
+   "AwayTeam": "Leeds",
+   "Group": null,
+   "HomeTeamScore": null,
+   "AwayTeamScore": null,
+   "Winner": ""
+  },
+  {
+   "MatchNumber": 226,
+   "RoundNumber": 23,
+   "DateUtc": "2027-01-31 14:00:00Z",
+   "Location": "MKM Stadium",
+   "HomeTeam": "Hull",
+   "AwayTeam": "Crystal Palace",
+   "Group": null,
+   "HomeTeamScore": null,
+   "AwayTeamScore": null,
+   "Winner": ""
+  },
+  {
    "MatchNumber": 230,
    "RoundNumber": 23,
-   "DateUtc": "2027-01-30 15:00:00Z",
+   "DateUtc": "2027-01-31 14:00:00Z",
    "Location": "Tottenham Hotspur Stadium",
    "HomeTeam": "Spurs",
    "AwayTeam": "Sunderland",
+   "Group": null,
+   "HomeTeamScore": null,
+   "AwayTeamScore": null,
+   "Winner": ""
+  },
+  {
+   "MatchNumber": 228,
+   "RoundNumber": 23,
+   "DateUtc": "2027-01-31 16:30:00Z",
+   "Location": "Etihad Stadium",
+   "HomeTeam": "Man City",
+   "AwayTeam": "Arsenal",
+   "Group": null,
+   "HomeTeamScore": null,
+   "AwayTeamScore": null,
+   "Winner": ""
+  },
+  {
+   "MatchNumber": 223,
+   "RoundNumber": 23,
+   "DateUtc": "2027-02-01 20:00:00Z",
+   "Location": "Gtech Community Stadium",
+   "HomeTeam": "Brentford",
+   "AwayTeam": "Man Utd",
    "Group": null,
    "HomeTeamScore": null,
    "AwayTeamScore": null,

@@ -1,5 +1,5 @@
 {
-"generated": "2026-11-18",
+"generated": "2026-11-23",
 "last_reviewed": "2026-11-18",
 "track": {
 "retrodiction_calls": 28,
@@ -34,7 +34,7 @@
 }
 },
 "scoring": {
-"generated": "2026-11-17",
+"generated": "2026-11-23",
 "overall_binary": {
 "n": 206,
 "brier": 0.1349,
@@ -106,17 +106,17 @@
 "note": "M_research (LLM research-forecaster) scored on calibrated p_research; same questions may also appear under india/world via their own instruments - each instrument answers for itself"
 },
 "matches": {
-"n": 30,
-"brier": 0.6624,
-"log": -1.1057,
+"n": 37,
+"brier": 0.6829,
+"log": -1.1226,
 "note": "three-way Brier, scale 0-2 (uniform ref 0.667); never pooled with binary"
 },
 "matches_skill_model_vs_market": {
-"n_matches": 19,
-"n_matchweeks": 2,
-"brier_model": 0.5946,
-"brier_market": 0.5589,
-"edge": -0.0356,
+"n_matches": 26,
+"n_matchweeks": 3,
+"brier_model": 0.642,
+"brier_market": 0.6042,
+"edge": -0.0378,
 "matchweeks": [
 {
 "matchweek": 9,
@@ -133,6 +133,14 @@
 "brier_market": 0.5182,
 "edge": -0.0322,
 "winner": "market"
+},
+{
+"matchweek": 11,
+"n": 7,
+"brier_model": 0.7707,
+"brier_market": 0.7269,
+"edge": -0.0438,
+"winner": "market"
 }
 ],
 "note": "3-way Brier (0-2 scale) on identical matches; edge > 0 means the model beats the de-vigged market"
@@ -146,27 +154,27 @@
 },
 {
 "bin": "5-20%",
-"n": 32,
-"claimed": 0.14,
-"realized": 0.281
+"n": 38,
+"claimed": 0.141,
+"realized": 0.289
 },
 {
 "bin": "20-40%",
-"n": 69,
-"claimed": 0.278,
-"realized": 0.348
+"n": 77,
+"claimed": 0.275,
+"realized": 0.338
 },
 {
 "bin": "40-60%",
-"n": 41,
-"claimed": 0.483,
-"realized": 0.439
+"n": 45,
+"claimed": 0.486,
+"realized": 0.444
 },
 {
 "bin": "60-80%",
-"n": 25,
-"claimed": 0.716,
-"realized": 0.68
+"n": 28,
+"claimed": 0.714,
+"realized": 0.643
 },
 {
 "bin": "80-95%",
@@ -189,10 +197,10 @@
 "us_races": 136,
 "research": 3
 },
-"match_events": 90,
-"match_events_note": "30 resolved football matches x 3 outcomes (H/D/A), binary events for calibration only",
-"total": 296,
-"cutoff": "2026-11-17",
+"match_events": 111,
+"match_events_note": "37 resolved football matches x 3 outcomes (H/D/A), binary events for calibration only",
+"total": 317,
+"cutoff": "2026-11-23",
 "revisions": "the scored probability per question is the latest run that PREDATES its resolution (a live forecast's last pre-event lock); a re-run timestamped on or after the result is never scored. Blind/backtest runs all postdate resolution and score their latest run.",
 "voids": "VOID resolutions (e.g. a curtailed season with no official champion) are excluded and logged; WATCH rows ARE scored",
 "scoring_policy": "per question the OUTCOME comes from the latest resolved row, but the scored PROBABILITIES come from the latest run that predates the resolution date (a live forecast's last pre-event lock); a re-run timestamped on/after the result can never become the scored row. Blind/backtest runs all postdate resolution, so they score their latest run as before. scores.csv carries lead_days + cohort per row.",
@@ -255,6 +263,18 @@
 }
 },
 "changelog": [
+{
+"date": "2026-11-23",
+"entries": [
+{
+"title": "Scored Premier League matchweek 11",
+"items": [
+"7 fixtures resolved: favourites 3/7, mean 3-way Brier 0.771 (0.667 = guessing)"
+],
+"kind": "ledger"
+}
+]
+},
 {
 "date": "2026-11-18",
 "entries": [
@@ -2042,9 +2062,9 @@
 "pH": 0.76,
 "pD": 0.17,
 "pA": 0.08,
-"outcome": null,
-"brier": null,
-"fav_hit": null
+"outcome": "D",
+"brier": 1.271,
+"fav_hit": false
 },
 {
 "home": "Bournemouth",
@@ -2053,9 +2073,9 @@
 "pH": 0.62,
 "pD": 0.22,
 "pA": 0.16,
-"outcome": null,
-"brier": null,
-"fav_hit": null
+"outcome": "H",
+"brier": 0.22,
+"fav_hit": true
 },
 {
 "home": "Aston Villa",
@@ -2064,9 +2084,9 @@
 "pH": 0.59,
 "pD": 0.23,
 "pA": 0.18,
-"outcome": null,
-"brier": null,
-"fav_hit": null
+"outcome": "D",
+"brier": 0.984,
+"fav_hit": false
 },
 {
 "home": "Chelsea",
@@ -2075,9 +2095,9 @@
 "pH": 0.51,
 "pD": 0.24,
 "pA": 0.24,
-"outcome": null,
-"brier": null,
-"fav_hit": null
+"outcome": "A",
+"brier": 0.892,
+"fav_hit": false
 },
 {
 "home": "Coventry",
@@ -2086,9 +2106,9 @@
 "pH": 0.46,
 "pD": 0.25,
 "pA": 0.29,
-"outcome": null,
-"brier": null,
-"fav_hit": null
+"outcome": "H",
+"brier": 0.438,
+"fav_hit": true
 },
 {
 "home": "Spurs",
@@ -2097,9 +2117,9 @@
 "pH": 0.48,
 "pD": 0.25,
 "pA": 0.28,
-"outcome": null,
-"brier": null,
-"fav_hit": null
+"outcome": "H",
+"brier": 0.412,
+"fav_hit": true
 },
 {
 "home": "Newcastle",
@@ -2108,9 +2128,9 @@
 "pH": 0.1,
 "pD": 0.19,
 "pA": 0.71,
-"outcome": null,
-"brier": null,
-"fav_hit": null
+"outcome": "D",
+"brier": 1.178,
+"fav_hit": false
 },
 {
 "home": "Hull",
@@ -2146,7 +2166,11 @@
 "fav_hit": null
 }
 ],
-"mw_summary": null,
+"mw_summary": {
+"n": 7,
+"brier3": 0.771,
+"fav_hits": 3
+},
 "flags": [
 "Single-instrument model forecasts (shrunk-PPG Poisson, stated priors): scored on Brier/log, never gate-CALLed.",
 "Three-way Brier scale 0-2; uniform guess scores 0.667."

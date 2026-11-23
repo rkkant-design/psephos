@@ -74,11 +74,19 @@ def test_us_house_probit():
 
 
 def test_ipl2027_real_config():
+    # Exercise ratings_tournament on the REAL config, but assert INVARIANTS (a valid,
+    # monotone softmax distribution), NOT pinned probabilities -- so a legitimate re-rate
+    # of the config (retentions, the mini-auction) does not trip this sentinel. The exact
+    # softmax math is pinned on fixed inputs in test_ratings_softmax; here we only check
+    # the real config still maps ratings -> a proper distribution.
     cfg = json.loads((ROOT / "forecasts" / "world" / "IPL2027.json").read_text(encoding="utf-8"))
+    ratings = cfg["model"]["ratings"]
     _, probs = wp.ratings_tournament(cfg)
-    _close(probs["Royal Challengers Bengaluru"], 0.153298, 1e-5)
-    _close(probs["Lucknow Super Giants"], 0.062326, 1e-5)
-    assert abs(sum(probs.values()) - 1.0) <= 1e-9  # a proper distribution
+    assert len(probs) == len(ratings)                 # every team priced
+    assert all(0.0 < p < 1.0 for p in probs.values())  # valid probabilities
+    assert abs(sum(probs.values()) - 1.0) <= 1e-9      # a proper distribution
+    # softmax is monotone: the highest-rated team must have the highest probability
+    assert max(ratings, key=ratings.get) == max(probs, key=probs.get)
 
 
 def test_league_sim_seeded():
