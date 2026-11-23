@@ -417,7 +417,7 @@ function renderHome(){
   const order=["USMID2026","UP2027","PB2027","UK2027","EPL2027","IPL2027","CWC2027"];
   live.sort((a,b)=>(order.indexOf(a.id)+99)-(order.indexOf(b.id)+99));
   $("#homelive").innerHTML=live.slice(0,6).map(e=>card(e,true)).join("");
-  if(DATA.last_reviewed){const f=$("#homefresh"); if(f) f.innerHTML=`Every live forecast was last reviewed <b>${esc(DATA.last_reviewed)}</b> &mdash; the engine checks them weekly and moves a number only when the evidence does.`;}
+  {const f=$("#homefresh"); const lu=DATA.last_updated||DATA.generated||DATA.last_reviewed; if(f&&lu) f.innerHTML=`Last updated <b>${esc(lu)}</b> &mdash; the engine reviews its live forecasts weekly and scores finished events as they resolve; a number only moves when the evidence does.`;}
 }
 function renderRecord(){
   const t=DATA.track, sc=DATA.scoring, pr=(t.lifetime_correct/t.lifetime_calls*100).toFixed(1);

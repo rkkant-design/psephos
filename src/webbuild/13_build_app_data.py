@@ -690,7 +690,24 @@ for _led in (FDIR / "ledger.csv", FDIR / "world_ledger.csv",
             pass
 last_reviewed = max(_run_dates) if _run_dates else str(date.today())
 
+# last_updated = the most recent date the record SUBSTANTIVELY changed: a forecast
+# review/re-run OR a resolved event (matches included). The home hero shows this as the
+# freshness signal; last_reviewed (forecast re-runs only) still drives the per-forecast
+# "reviewed weekly" line, which must not claim a review a match resolution didn't do.
+_updated = list(_run_dates)
+for _led in (FDIR / "ledger.csv", FDIR / "world_ledger.csv",
+             FDIR / "world" / "usmid_races_ledger.csv", FDIR / "matches_ledger.csv"):
+    if _led.exists():
+        try:
+            _r = pd.read_csv(_led, dtype=str).fillna("")
+            if "resolved" in _r.columns:
+                _updated += [x[:10] for x in _r["resolved"] if str(x).strip()]
+        except Exception:
+            pass
+last_updated = max(_updated) if _updated else str(date.today())
+
 out = {"generated": str(date.today()), "last_reviewed": last_reviewed,
+       "last_updated": last_updated,
        "track": track, "scoring": scoring,
        "changelog": changelog,
        "elections": sorted(elections, key=lambda e: (-e["year"], e["state"]))}
