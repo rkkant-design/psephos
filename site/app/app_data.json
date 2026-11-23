@@ -1,6 +1,6 @@
 {
 "generated": "2026-11-23",
-"last_reviewed": "2026-11-18",
+"last_reviewed": "2026-11-23",
 "last_updated": "2026-11-23",
 "track": {
 "retrodiction_calls": 28,
@@ -11,7 +11,7 @@
 "blind_correct": 6,
 "lifetime_calls": 63,
 "lifetime_correct": 60,
-"live_open_calls": 8,
+"live_open_calls": 7,
 "forward_calls": 35,
 "forward_correct": 32,
 "live_provenance": {
@@ -37,9 +37,9 @@
 "scoring": {
 "generated": "2026-11-23",
 "overall_binary": {
-"n": 206,
-"brier": 0.1349,
-"log": -0.5699
+"n": 208,
+"brier": 0.1372,
+"log": -0.5738
 },
 "india": {
 "n": 61,
@@ -76,9 +76,9 @@
 }
 },
 "us_races": {
-"n": 136,
-"brier": 0.0782,
-"log": -0.264,
+"n": 138,
+"brier": 0.0825,
+"log": -0.2743,
 "by_instrument": {
 "market": {
 "n": 67,
@@ -86,9 +86,9 @@
 "log": -0.1718
 },
 "model": {
-"n": 69,
-"brier": 0.1049,
-"log": -0.3536
+"n": 71,
+"brier": 0.1125,
+"log": -0.3711
 }
 },
 "note": "race-level US midterm rows (usmid_races_ledger.csv); dual instruments scored per race"
@@ -161,15 +161,15 @@
 },
 {
 "bin": "20-40%",
-"n": 77,
-"claimed": 0.275,
-"realized": 0.338
+"n": 78,
+"claimed": 0.274,
+"realized": 0.346
 },
 {
 "bin": "40-60%",
-"n": 45,
-"claimed": 0.486,
-"realized": 0.444
+"n": 46,
+"claimed": 0.487,
+"realized": 0.457
 },
 {
 "bin": "60-80%",
@@ -191,22 +191,22 @@
 }
 ],
 "calibration_meta": {
-"binary_n": 206,
+"binary_n": 208,
 "binary_by_source": {
 "india": 61,
 "world": 6,
-"us_races": 136,
+"us_races": 138,
 "research": 3
 },
 "match_events": 111,
 "match_events_note": "37 resolved football matches x 3 outcomes (H/D/A), binary events for calibration only",
-"total": 317,
+"total": 319,
 "cutoff": "2026-11-23",
 "revisions": "the scored probability per question is the latest run that PREDATES its resolution (a live forecast's last pre-event lock); a re-run timestamped on or after the result is never scored. Blind/backtest runs all postdate resolution and score their latest run.",
 "voids": "VOID resolutions (e.g. a curtailed season with no official champion) are excluded and logged; WATCH rows ARE scored",
 "scoring_policy": "per question the OUTCOME comes from the latest resolved row, but the scored PROBABILITIES come from the latest run that predates the resolution date (a live forecast's last pre-event lock); a re-run timestamped on/after the result can never become the scored row. Blind/backtest runs all postdate resolution, so they score their latest run as before. scores.csv carries lead_days + cohort per row.",
 "scored_binary_rows_by_cohort": {
-"live": 145,
+"live": 147,
 "blind": 61
 },
 "note": "overall_binary Brier is the 202-row binary cohort; the calibration table pools those 202 plus the 90 football match-outcome events, 292 in all - the football events never enter the binary Brier means (different scale), only the calibration audit"
@@ -268,9 +268,30 @@
 "date": "2026-11-23",
 "entries": [
 {
+"title": "Verdict changed on Premier League Winner 2026-27",
+"items": [
+"Liverpool win the title: CALL-NO -> WATCH"
+],
+"kind": "ledger"
+},
+{
 "title": "Scored Premier League matchweek 11",
 "items": [
 "7 fixtures resolved: favourites 3/7, mean 3-way Brier 0.771 (0.667 = guessing)"
+],
+"kind": "ledger"
+},
+{
+"title": "Pre-registered Premier League matchweek 12",
+"items": [
+"10 fixtures, probabilities locked before kickoff (sha 02caeee7...)"
+],
+"kind": "ledger"
+},
+{
+"title": "Research instrument priced Premier League Winner 2026-27",
+"items": [
+"5 questions, dossier hash-stamped (sha 21ae0d22...); written blind to market prices"
 ],
 "kind": "ledger"
 }
@@ -357,7 +378,7 @@
 {
 "title": "Resolved US Midterms 2026 race board",
 "items": [
-"69 probabilities scored at resolution; calls 26/26 right"
+"71 probabilities scored at resolution; calls 26/26 right"
 ],
 "kind": "ledger"
 },
@@ -2184,6 +2205,142 @@
 "sha": "dec19321f36c70101be566107e19642259229d6714702cc075da7eefdb0585d7"
 },
 {
+"id": "EPLMW12",
+"state": "Premier League",
+"st": "",
+"year": 2027,
+"status": "live",
+"domain": "Football",
+"kind": "matches",
+"title": "Premier League 2026-27 \u00b7 Matchweek 12",
+"freeze": "2026-11-23",
+"blocs": [],
+"questions": [],
+"matches": [
+{
+"home": "Nott'm Forest",
+"away": "Chelsea",
+"date": "2026-11-27",
+"pH": 0.31,
+"pD": 0.25,
+"pA": 0.44,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Leeds",
+"away": "Coventry",
+"date": "2026-11-28",
+"pH": 0.57,
+"pD": 0.23,
+"pA": 0.2,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Man Utd",
+"away": "Brentford",
+"date": "2026-11-28",
+"pH": 0.45,
+"pD": 0.25,
+"pA": 0.3,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Ipswich",
+"away": "Aston Villa",
+"date": "2026-11-28",
+"pH": 0.29,
+"pD": 0.25,
+"pA": 0.46,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Everton",
+"away": "Liverpool",
+"date": "2026-11-29",
+"pH": 0.37,
+"pD": 0.26,
+"pA": 0.38,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Brighton",
+"away": "Newcastle",
+"date": "2026-11-29",
+"pH": 0.64,
+"pD": 0.21,
+"pA": 0.15,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Crystal Palace",
+"away": "Hull",
+"date": "2026-11-29",
+"pH": 0.4,
+"pD": 0.25,
+"pA": 0.34,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Fulham",
+"away": "Bournemouth",
+"date": "2026-11-29",
+"pH": 0.33,
+"pD": 0.25,
+"pA": 0.42,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Sunderland",
+"away": "Spurs",
+"date": "2026-11-29",
+"pH": 0.42,
+"pD": 0.25,
+"pA": 0.32,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+},
+{
+"home": "Arsenal",
+"away": "Man City",
+"date": "2026-11-29",
+"pH": 0.58,
+"pD": 0.23,
+"pA": 0.19,
+"outcome": null,
+"brier": null,
+"fav_hit": null
+}
+],
+"mw_summary": null,
+"flags": [
+"Single-instrument model forecasts (shrunk-PPG Poisson, stated priors): scored on Brier/log, never gate-CALLed.",
+"Three-way Brier scale 0-2; uniform guess scores 0.667."
+],
+"tripwires": [],
+"resolution": {
+"source": "fixturedownload.com epl-2026 feed final score; league result after 90min+stoppage; abandoned match resolves on the completed restaging; awarded/forfeited results count as the official score",
+"rules": []
+},
+"sha": "02caeee7aa3093ddfb503f2a7db5983b3f73386f9025dd82ff945d90fdafc9da"
+},
+{
 "id": "EPL2027",
 "state": "Premier League Winner 2026-27",
 "st": "",
@@ -2191,7 +2348,7 @@
 "status": "live",
 "domain": "Football",
 "title": "Premier League Winner 2026-27",
-"freeze": "2026-11-10",
+"freeze": "2026-11-23",
 "blocs": [
 {
 "name": "Arsenal",
@@ -2204,22 +2361,8 @@
 "p_maj": null,
 "p_largest": null,
 "actual": null,
-"p_market": 0.7522,
-"p_model": 0.8271
-},
-{
-"name": "Brighton",
-"base": null,
-"m2": null,
-"m3": null,
-"p5": null,
-"med": null,
-"p95": null,
-"p_maj": null,
-"p_largest": null,
-"actual": null,
-"p_market": 0.0806,
-"p_model": 0.1092
+"p_market": 0.7534,
+"p_model": 0.8259
 },
 {
 "name": "Liverpool",
@@ -2232,8 +2375,22 @@
 "p_maj": null,
 "p_largest": null,
 "actual": null,
-"p_market": 0.0645,
-"p_model": 0.0075
+"p_market": 0.1116,
+"p_model": 0.0355
+},
+{
+"name": "Brighton",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": 0.0591,
+"p_model": 0.0737
 },
 {
 "name": "Man City",
@@ -2246,8 +2403,8 @@
 "p_maj": null,
 "p_largest": null,
 "actual": null,
-"p_market": 0.0645,
-"p_model": 0.0506
+"p_market": 0.0478,
+"p_model": 0.0559
 },
 {
 "name": "Chelsea",
@@ -2260,22 +2417,8 @@
 "p_maj": null,
 "p_largest": null,
 "actual": null,
-"p_market": 0.019,
-"p_model": 0.0023
-},
-{
-"name": "Everton",
-"base": null,
-"m2": null,
-"m3": null,
-"p5": null,
-"med": null,
-"p95": null,
-"p_maj": null,
-"p_largest": null,
-"actual": null,
-"p_market": null,
-"p_model": 0.0019
+"p_market": 0.008,
+"p_model": 0.0004
 },
 {
 "name": "Bournemouth",
@@ -2289,10 +2432,10 @@
 "p_largest": null,
 "actual": null,
 "p_market": null,
-"p_model": 0.0011
+"p_model": 0.0048
 },
 {
-"name": "Aston Villa",
+"name": "Leeds",
 "base": null,
 "m2": null,
 "m3": null,
@@ -2303,14 +2446,28 @@
 "p_largest": null,
 "actual": null,
 "p_market": null,
-"p_model": 0.0002
+"p_model": 0.0017
+},
+{
+"name": "Everton",
+"base": null,
+"m2": null,
+"m3": null,
+"p5": null,
+"med": null,
+"p95": null,
+"p_maj": null,
+"p_largest": null,
+"actual": null,
+"p_market": null,
+"p_model": 0.0015
 }
 ],
 "questions": [
 {
 "q": "Man City win the title",
-"p2": 0.05,
-"p3": 0.06,
+"p2": 0.06,
+"p3": 0.05,
 "verdict": "WATCH",
 "outcome": null,
 "correct": null
@@ -2326,22 +2483,22 @@
 {
 "q": "Winner in {Man City, Arsenal}",
 "p2": 0.88,
-"p3": 0.82,
+"p3": 0.8,
 "verdict": "WATCH",
 "outcome": null,
 "correct": null
 },
 {
 "q": "Liverpool win the title",
-"p2": 0.01,
-"p3": 0.06,
-"verdict": "CALL-NO",
+"p2": 0.04,
+"p3": 0.11,
+"verdict": "WATCH",
 "outcome": null,
 "correct": null
 },
 {
 "q": "Winner from current top 5",
-"p2": 1.0,
+"p2": 0.99,
 "p3": 0.98,
 "verdict": "CALL-YES",
 "outcome": null,
@@ -2378,11 +2535,11 @@
 ],
 "source": "Final official 2026-27 Premier League table (premierleague.com/tables) after the last matchday (~2027-05)"
 },
-"sha": "b9680da34942a0294bcb440cd0993efcf1a4ef0829a343ceed3d473b09ce779e",
+"sha": "2cafeb3d7502bef3a54b0289e51fcb6b2faf008fc4bf7c85786062695b44e7f0",
 "instruments": {
-"market_source": "Bookmaker outright odds, oddschecker.com PL page best price, fetched 2026-11-10 ~05:50 UTC (built-in browser), dated after MD10 (8 Nov); fractional Arsenal 2/7, Brighton 11/1, Liverpool 14/1, Man City 14/1, Chelsea 50/1",
+"market_source": "Bookmaker outright odds, oddschecker.com PL page best price, fetched 2026-11-23 (built-in browser), dated after MW11 (22 Nov); fractional Arsenal 1/3, Brighton 16/1, Liverpool 8/1, Man City 20/1, Chelsea 125/1",
 "model_note": "strength = games-played-shrunk PPG (k=12 prior games to league mean 1.37), fixed draw rate 0.24, 31 remaining games simulated independently, title by points then GD noise",
-"research_sha256": "f3ae9c907ef632f7f8cde2b9c10b2cd3dca35e996e1fa03283944b9753eac30b"
+"research_sha256": "21ae0d22a7565de8152d4aa91d093bf4e13708e09c1da3b5f78348b470438dd9"
 },
 "resolve_date": "2027-05"
 },
@@ -2878,7 +3035,7 @@
 "manifest": "manifest_20261117T060919.json",
 "anchored_utc": "2026-11-17T06:09:19+00:00",
 "proof": "manifest_20261117T060919.json.ots",
-"anchor_status": "pending",
+"anchor_status": "confirmed",
 "authored": "2026-11-17",
 "first_published": "2026-10-23",
 "sha": "d18dfe02cbd5f8f529a1eb7f6d206bb1d7caef4bd46401632ffd1d3147541581",
@@ -4274,7 +4431,7 @@
 "inc_party": "R",
 "inc_running": "none",
 "note": "open, Dunleavy term-limited; top-four primary",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {
@@ -4814,7 +4971,7 @@
 "inc_party": "R",
 "inc_running": "elected",
 "note": "Sullivan vs Peltola (D); competitive",
-"outcome": null,
+"outcome": "YES",
 "correct": null
 },
 {

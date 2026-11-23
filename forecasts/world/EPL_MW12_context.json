@@ -1,0 +1,39 @@
+{
+ "matchweek": 12,
+ "built_utc": "2026-11-23T07:30:00+00:00",
+ "market": {
+  "source": "oddschecker.com PL coupon best-price 1X2 (9 fixtures); Arsenal v Man City from wincomparator.com listed 1X2 (that fixture was absent from the oddschecker coupon at fetch time)",
+  "source_url": "https://www.oddschecker.com/football/english/premier-league",
+  "fetched_utc": "2026-11-23T07:30:00+00:00",
+  "odds_date": "2026-11-23",
+  "odds_format": "fractional",
+  "note": "Best available price per outcome from the oddschecker PL coupon (fetched in the built-in browser 2026-11-23) for 9 of 10 MW12 fixtures. Arsenal v Man City (Sun 29 Nov 16:30) did not appear on the oddschecker coupon; its 1X2 (6/5, 5/2, 2/1) is wincomparator's listed single-book line for 29-Nov-2026 (overround ~7.4%), recorded with a distinct source so the mixed origin is auditable. Fetched ~4-6 days before kickoff.",
+  "odds": {
+   "EPL2627-M111": {"home": "6/5", "draw": "5/2", "away": "2/1"},
+   "EPL2627-M112": {"home": "7/12", "draw": "7/2", "away": "23/5"},
+   "EPL2627-M113": {"home": "17/20", "draw": "14/5", "away": "310/100"},
+   "EPL2627-M114": {"home": "5/2", "draw": "13/5", "away": "21/20"},
+   "EPL2627-M115": {"home": "28/17", "draw": "13/5", "away": "13/8"},
+   "EPL2627-M116": {"home": "5/2", "draw": "14/5", "away": "21/20"},
+   "EPL2627-M117": {"home": "11/20", "draw": "57/17", "away": "5/1"},
+   "EPL2627-M118": {"home": "21/20", "draw": "14/5", "away": "5/2"},
+   "EPL2627-M119": {"home": "186/100", "draw": "5/2", "away": "29/20"},
+   "EPL2627-M120": {"home": "12/5", "draw": "12/5", "away": "23/20"}
+  }
+ },
+ "midweek_matches": {
+  "source": "UEFA league-phase MD5 fixtures 24-26 Nov 2026 involving PL clubs, from Wikipedia 2026-27 UCL/UEL/UECL league-phase pages (fetched 2026-11-23). UCL MD5 24-25 Nov; UEL MD5 26 Nov; Brighton's UECL game (v Univ. Craiova) is 26 Nov. EFL Cup QF is week of 14 Dec (outside the window). Arsenal (24 Nov) and Aston Villa (away, 24 Nov) dates are summary-sourced and slightly less certain than the other rows; both are recorded as 24 Nov. International/PL-to-PL matches are not cup/European and are not listed, per the v2 basis definition.",
+  "fetched_utc": "2026-11-23T07:30:00+00:00",
+  "matches": [
+   {"date": "2026-11-24", "competition": "UCL MD5", "teams": ["Man City"], "note": "Man City v Napoli"},
+   {"date": "2026-11-24", "competition": "UCL MD5", "teams": ["Arsenal"], "note": "Arsenal v Borussia Dortmund (date summary-sourced)"},
+   {"date": "2026-11-24", "competition": "UCL MD5", "teams": ["Aston Villa"], "note": "Galatasaray v Aston Villa (date summary-sourced)"},
+   {"date": "2026-11-25", "competition": "UCL MD5", "teams": ["Liverpool"], "note": "Club Brugge v Liverpool"},
+   {"date": "2026-11-25", "competition": "UCL MD5", "teams": ["Man Utd"], "note": "Sporting CP v Man Utd"},
+   {"date": "2026-11-26", "competition": "UEL MD5", "teams": ["Bournemouth"], "note": "Celta Vigo v Bournemouth"},
+   {"date": "2026-11-26", "competition": "UEL MD5", "teams": ["Crystal Palace"], "note": "Crystal Palace v Real Sociedad"},
+   {"date": "2026-11-26", "competition": "UEL MD5", "teams": ["Sunderland"], "note": "Sunderland v Jagiellonia Bialystok"},
+   {"date": "2026-11-26", "competition": "UECL MD4", "teams": ["Brighton"], "note": "Brighton v Universitatea Craiova"}
+  ]
+ }
+}

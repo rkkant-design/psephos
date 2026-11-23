@@ -2,54 +2,54 @@
  "forecast_id": "EPL2027",
  "title": "Premier League Winner 2026-27",
  "domain": "Football",
- "freeze_date": "2026-11-10",
+ "freeze_date": "2026-11-23",
  "resolve_date": "2027-05",
  "adapter": "league_sim",
  "research": true,
  "market": {
-  "source": "Bookmaker outright odds, oddschecker.com PL page best price, fetched 2026-11-10 ~05:50 UTC (built-in browser), dated after MD10 (8 Nov); fractional Arsenal 2/7, Brighton 11/1, Liverpool 14/1, Man City 14/1, Chelsea 50/1",
+  "source": "Bookmaker outright odds, oddschecker.com PL page best price, fetched 2026-11-23 (built-in browser), dated after MW11 (22 Nov); fractional Arsenal 1/3, Brighton 16/1, Liverpool 8/1, Man City 20/1, Chelsea 125/1",
   "odds": {
-   "Arsenal": 1.2857,
-   "Man City": 15.0,
-   "Chelsea": 51.0,
-   "Brighton": 12.0,
-   "Liverpool": 15.0
+   "Arsenal": 1.3333,
+   "Man City": 21.0,
+   "Chelsea": 126.0,
+   "Brighton": 17.0,
+   "Liverpool": 9.0
   },
   "others_implied": 0.02
  },
  "model": {
-  "table_asof": "2026-11-10 (Wikipedia 2026-27 Premier League, statistics correct as of 8 November 2026; MD10 complete; cross-checked against the fixturedownload results feed - identical)",
+  "table_asof": "2026-11-22 (Wikipedia 2026-27 Premier League, statistics correct as of 22 November 2026; MW11 complete except Brentford v Everton played 23 Nov; top-5 cross-checked against oddschecker PL table - identical pts/GD)",
   "note": "strength = games-played-shrunk PPG (k=12 prior games to league mean 1.37), fixed draw rate 0.24, 31 remaining games simulated independently, title by points then GD noise",
   "teams": [
    {
     "team": "Arsenal",
-    "p": 10,
-    "pts": 27,
+    "p": 11,
+    "pts": 28,
     "gd": 10
    },
    {
     "team": "Brighton",
-    "p": 10,
+    "p": 11,
     "pts": 22,
-    "gd": 19
+    "gd": 17
    },
    {
     "team": "Man City",
-    "p": 10,
-    "pts": 21,
+    "p": 11,
+    "pts": 22,
     "gd": 8
    },
    {
     "team": "Liverpool",
-    "p": 10,
-    "pts": 18,
-    "gd": 4
+    "p": 11,
+    "pts": 21,
+    "gd": 8
    },
    {
     "team": "Chelsea",
-    "p": 10,
+    "p": 11,
     "pts": 16,
-    "gd": 3
+    "gd": 0
    },
    {
     "team": "Everton",
@@ -59,9 +59,9 @@
    },
    {
     "team": "Bournemouth",
-    "p": 10,
-    "pts": 15,
-    "gd": 2
+    "p": 11,
+    "pts": 18,
+    "gd": 4
    },
    {
     "team": "Brentford",
@@ -71,75 +71,75 @@
    },
    {
     "team": "Leeds",
-    "p": 10,
-    "pts": 14,
-    "gd": 2
+    "p": 11,
+    "pts": 17,
+    "gd": 5
    },
    {
     "team": "Aston Villa",
-    "p": 10,
-    "pts": 13,
+    "p": 11,
+    "pts": 14,
     "gd": -3
    },
    {
     "team": "Tottenham",
-    "p": 10,
-    "pts": 12,
-    "gd": -1
+    "p": 11,
+    "pts": 15,
+    "gd": 1
    },
    {
     "team": "Newcastle",
-    "p": 10,
-    "pts": 12,
+    "p": 11,
+    "pts": 13,
     "gd": -3
    },
    {
     "team": "Hull City",
-    "p": 10,
-    "pts": 11,
-    "gd": 0
+    "p": 11,
+    "pts": 14,
+    "gd": 2
    },
    {
     "team": "Ipswich",
-    "p": 10,
+    "p": 11,
     "pts": 11,
-    "gd": -5
+    "gd": -7
    },
    {
     "team": "Fulham",
-    "p": 10,
-    "pts": 10,
+    "p": 11,
+    "pts": 11,
     "gd": -2
    },
    {
     "team": "Nottm Forest",
-    "p": 10,
+    "p": 11,
     "pts": 9,
-    "gd": -4
+    "gd": -6
    },
    {
     "team": "Coventry",
-    "p": 10,
-    "pts": 9,
-    "gd": -9
+    "p": 11,
+    "pts": 12,
+    "gd": -8
    },
    {
     "team": "Man United",
-    "p": 10,
+    "p": 11,
     "pts": 8,
-    "gd": -5
+    "gd": -9
    },
    {
     "team": "Sunderland",
-    "p": 10,
-    "pts": 8,
+    "p": 11,
+    "pts": 9,
     "gd": -9
    },
    {
     "team": "Crystal Palace",
-    "p": 10,
+    "p": 11,
     "pts": 7,
-    "gd": -14
+    "gd": -15
    }
   ]
  },

@@ -1,9 +1,9 @@
 {
  "generated": "2026-11-23",
  "overall_binary": {
-  "n": 206,
-  "brier": 0.1349,
-  "log": -0.5699
+  "n": 208,
+  "brier": 0.1372,
+  "log": -0.5738
  },
  "india": {
   "n": 61,
@@ -40,9 +40,9 @@
   }
  },
  "us_races": {
-  "n": 136,
-  "brier": 0.0782,
-  "log": -0.264,
+  "n": 138,
+  "brier": 0.0825,
+  "log": -0.2743,
   "by_instrument": {
    "market": {
     "n": 67,
@@ -50,9 +50,9 @@
     "log": -0.1718
    },
    "model": {
-    "n": 69,
-    "brier": 0.1049,
-    "log": -0.3536
+    "n": 71,
+    "brier": 0.1125,
+    "log": -0.3711
    }
   },
   "note": "race-level US midterm rows (usmid_races_ledger.csv); dual instruments scored per race"
@@ -125,15 +125,15 @@
   },
   {
    "bin": "20-40%",
-   "n": 77,
-   "claimed": 0.275,
-   "realized": 0.338
+   "n": 78,
+   "claimed": 0.274,
+   "realized": 0.346
   },
   {
    "bin": "40-60%",
-   "n": 45,
-   "claimed": 0.486,
-   "realized": 0.444
+   "n": 46,
+   "claimed": 0.487,
+   "realized": 0.457
   },
   {
    "bin": "60-80%",
@@ -155,22 +155,22 @@
   }
  ],
  "calibration_meta": {
-  "binary_n": 206,
+  "binary_n": 208,
   "binary_by_source": {
    "india": 61,
    "world": 6,
-   "us_races": 136,
+   "us_races": 138,
    "research": 3
   },
   "match_events": 111,
   "match_events_note": "37 resolved football matches x 3 outcomes (H/D/A), binary events for calibration only",
-  "total": 317,
+  "total": 319,
   "cutoff": "2026-11-23",
   "revisions": "the scored probability per question is the latest run that PREDATES its resolution (a live forecast's last pre-event lock); a re-run timestamped on or after the result is never scored. Blind/backtest runs all postdate resolution and score their latest run.",
   "voids": "VOID resolutions (e.g. a curtailed season with no official champion) are excluded and logged; WATCH rows ARE scored",
   "scoring_policy": "per question the OUTCOME comes from the latest resolved row, but the scored PROBABILITIES come from the latest run that predates the resolution date (a live forecast's last pre-event lock); a re-run timestamped on/after the result can never become the scored row. Blind/backtest runs all postdate resolution, so they score their latest run as before. scores.csv carries lead_days + cohort per row.",
   "scored_binary_rows_by_cohort": {
-   "live": 145,
+   "live": 147,
    "blind": 61
   },
   "note": "overall_binary Brier is the 202-row binary cohort; the calibration table pools those 202 plus the 90 football match-outcome events, 292 in all - the football events never enter the binary Brier means (different scale), only the calibration audit"

@@ -68,6 +68,7 @@ world,USMID2026,Democrats win Senate majority,2026-11-02,2026-11-02T11:59:32+00:
 world,USMID2026,Democrats win Senate majority,2026-11-02,2026-11-02T11:59:32+00:00,market,WATCH,0.725,1,0.075625,-0.3216,2026-11-10,8.0,live
 us_races,USMIDRACES2026,Democrats win the 2026 Alabama governor race,2026-11-02,2026-11-02T11:59:26+00:00,model,WATCH,0.2058,0,0.042354,-0.2304,2026-11-10,8.0,live
 us_races,USMIDRACES2026,Democrats win the 2026 Alabama governor race,2026-11-02,2026-11-02T11:59:26+00:00,market,WATCH,0.0471,0,0.002218,-0.0482,2026-11-10,8.0,live
+us_races,USMIDRACES2026,Democrats win the 2026 Alaska governor race,2026-11-02,2026-11-02T11:59:26+00:00,model,WATCH-1INST,0.5652,1,0.189051,-0.5706,2026-11-23,21.0,live
 us_races,USMIDRACES2026,Democrats win the 2026 Arizona governor race,2026-11-02,2026-11-02T11:59:26+00:00,model,WATCH,0.8569,1,0.020478,-0.1544,2026-11-10,8.0,live
 us_races,USMIDRACES2026,Democrats win the 2026 Arizona governor race,2026-11-02,2026-11-02T11:59:26+00:00,market,WATCH,0.935,1,0.004225,-0.0672,2026-11-10,8.0,live
 us_races,USMIDRACES2026,Democrats win the 2026 Arkansas governor race,2026-11-02,2026-11-02T11:59:26+00:00,model,WATCH,0.097,0,0.009409,-0.102,2026-11-10,8.0,live
@@ -137,6 +138,7 @@ us_races,USMIDRACES2026,Democrats win the 2026 Wyoming governor race,2026-11-02,
 us_races,USMIDRACES2026,Democrats win the 2026 Wyoming governor race,2026-11-02,2026-11-02T11:59:26+00:00,market,CALL-NO,0.0035,0,1.2e-05,-0.0035,2026-11-06,4.0,live
 us_races,USMIDRACES2026,Democrats win the 2026 Alabama Senate race,2026-11-02,2026-11-02T11:59:26+00:00,model,CALL-NO,0.0069,0,4.8e-05,-0.0069,2026-11-06,4.0,live
 us_races,USMIDRACES2026,Democrats win the 2026 Alabama Senate race,2026-11-02,2026-11-02T11:59:26+00:00,market,CALL-NO,0.016,0,0.000256,-0.0161,2026-11-06,4.0,live
+us_races,USMIDRACES2026,Democrats win the 2026 Alaska Senate race,2026-11-02,2026-11-02T11:59:26+00:00,model,WATCH-1INST,0.2513,1,0.560552,-1.3811,2026-11-23,21.0,live
 us_races,USMIDRACES2026,Democrats win the 2026 Arkansas Senate race,2026-11-02,2026-11-02T11:59:26+00:00,model,CALL-NO,0.0019,0,4e-06,-0.0019,2026-11-06,4.0,live
 us_races,USMIDRACES2026,Democrats win the 2026 Arkansas Senate race,2026-11-02,2026-11-02T11:59:26+00:00,market,CALL-NO,0.0356,0,0.001267,-0.0362,2026-11-06,4.0,live
 us_races,USMIDRACES2026,Democrats win the 2026 Colorado Senate race,2026-11-02,2026-11-02T11:59:26+00:00,model,CALL-YES,0.9994,1,0.0,-0.0006,2026-11-06,4.0,live

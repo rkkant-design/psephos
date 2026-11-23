@@ -1,3 +1,5 @@
 logged_utc,ledger,identity,outcome,correct,resolved_date,source
 2026-11-17T06:06:55+00:00,races,race_id=GOV-KANSAS,YES,,2026-11-17,https://www.kunc.org/npr-news/2026-11-12/cindy-holscher-wins-in-kansas-holding-governors-office-for-democrats
 2026-11-17T06:06:56+00:00,races,race_id=SEN-MISSISSIPPI,YES,,2026-11-17,https://mississippitoday.org/2026/11/11/why-ap-called-mississippi-senate-race-scott-colom/
+2026-11-23T06:09:25+00:00,races,race_id=GOV-ALASKA,YES,,2026-11-23,https://alaskapublic.org/news/politics/elections/2026-11-13/alaska-elects-democrat-jonathan-kreiss-tomkins-governor
+2026-11-23T06:09:25+00:00,races,race_id=SEN-ALASKA,YES,,2026-11-23,https://alaskapublic.org/news/politics/elections/2026-11-17/mary-peltola-wins-u-s-senate-seat-in-alaska

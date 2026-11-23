@@ -1,0 +1,97 @@
+{
+ "forecast_id": "EPL2027",
+ "checked_at_utc": "2026-11-23T06:17:19+00:00",
+ "min_reachable": 2,
+ "questions": [
+  {
+   "q": "Man City win the title",
+   "reachable": 2,
+   "grounded": true,
+   "sources": [
+    {
+     "url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Manchester_City_F.C._season",
+     "class": "ok",
+     "status": 200
+    },
+    {
+     "url": "https://www.premierleague.com/en/news/4475268/how-many-teams-have-won-premier-league-title-from-six-points-behind-leaders-after-12-matches",
+     "class": "ok",
+     "status": 200
+    }
+   ]
+  },
+  {
+   "q": "Arsenal win the title",
+   "reachable": 3,
+   "grounded": true,
+   "sources": [
+    {
+     "url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Premier_League",
+     "class": "ok",
+     "status": 200
+    },
+    {
+     "url": "https://www.vavel.com/en/football/2026/11/21/arsenal/1280126-injuries-fpl-and-contracts-what-arteta-had-to-say-ahead-of-arsenal-s-trip-to-newcastle.html",
+     "class": "ok",
+     "status": 200
+    },
+    {
+     "url": "https://www.premierleague.com/en/news/4475268/how-many-teams-have-won-premier-league-title-from-six-points-behind-leaders-after-12-matches",
+     "class": "ok",
+     "status": 200
+    }
+   ]
+  },
+  {
+   "q": "Winner in {Man City, Arsenal}",
+   "reachable": 2,
+   "grounded": true,
+   "sources": [
+    {
+     "url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Premier_League",
+     "class": "ok",
+     "status": 200
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Manchester_City_F.C._season",
+     "class": "ok",
+     "status": 200
+    }
+   ]
+  },
+  {
+   "q": "Liverpool win the title",
+   "reachable": 2,
+   "grounded": true,
+   "sources": [
+    {
+     "url": "https://www.espn.com/soccer/report/_/gameId/401879243",
+     "class": "ok",
+     "status": 200
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Premier_League",
+     "class": "ok",
+     "status": 200
+    }
+   ]
+  },
+  {
+   "q": "Winner from current top 5",
+   "reachable": 2,
+   "grounded": true,
+   "sources": [
+    {
+     "url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Premier_League",
+     "class": "ok",
+     "status": 200
+    },
+    {
+     "url": "https://www.livescore.com/en/news/football/premier-league/brighton-rise-to-second-but-gross-insists-seagulls-arent-in-the-premier-league-title-race-football-muse/",
+     "class": "ok",
+     "status": 200
+    }
+   ]
+  }
+ ]
+}

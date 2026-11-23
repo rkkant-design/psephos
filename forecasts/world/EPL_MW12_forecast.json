@@ -1,0 +1,520 @@
+{
+ "congestion_basis": {
+  "fetched_utc": "2026-11-23T07:30:00+00:00",
+  "matches": [
+   {
+    "competition": "UCL MD5",
+    "date": "2026-11-24",
+    "note": "Man City v Napoli",
+    "teams": [
+     "Man City"
+    ]
+   },
+   {
+    "competition": "UCL MD5",
+    "date": "2026-11-24",
+    "note": "Arsenal v Borussia Dortmund (date summary-sourced)",
+    "teams": [
+     "Arsenal"
+    ]
+   },
+   {
+    "competition": "UCL MD5",
+    "date": "2026-11-24",
+    "note": "Galatasaray v Aston Villa (date summary-sourced)",
+    "teams": [
+     "Aston Villa"
+    ]
+   },
+   {
+    "competition": "UCL MD5",
+    "date": "2026-11-25",
+    "note": "Club Brugge v Liverpool",
+    "teams": [
+     "Liverpool"
+    ]
+   },
+   {
+    "competition": "UCL MD5",
+    "date": "2026-11-25",
+    "note": "Sporting CP v Man Utd",
+    "teams": [
+     "Man Utd"
+    ]
+   },
+   {
+    "competition": "UEL MD5",
+    "date": "2026-11-26",
+    "note": "Celta Vigo v Bournemouth",
+    "teams": [
+     "Bournemouth"
+    ]
+   },
+   {
+    "competition": "UEL MD5",
+    "date": "2026-11-26",
+    "note": "Crystal Palace v Real Sociedad",
+    "teams": [
+     "Crystal Palace"
+    ]
+   },
+   {
+    "competition": "UEL MD5",
+    "date": "2026-11-26",
+    "note": "Sunderland v Jagiellonia Bialystok",
+    "teams": [
+     "Sunderland"
+    ]
+   },
+   {
+    "competition": "UECL MD4",
+    "date": "2026-11-26",
+    "note": "Brighton v Universitatea Craiova",
+    "teams": [
+     "Brighton"
+    ]
+   }
+  ],
+  "source": "UEFA league-phase MD5 fixtures 24-26 Nov 2026 involving PL clubs, from Wikipedia 2026-27 UCL/UEL/UECL league-phase pages (fetched 2026-11-23). UCL MD5 24-25 Nov; UEL MD5 26 Nov; Brighton's UECL game (v Univ. Craiova) is 26 Nov. EFL Cup QF is week of 14 Dec (outside the window). Arsenal (24 Nov) and Aston Villa (away, 24 Nov) dates are summary-sourced and slightly less certain than the other rows; both are recorded as 24 Nov. International/PL-to-PL matches are not cup/European and are not listed, per the v2 basis definition."
+ },
+ "forecast_id": "EPL2627-MW12",
+ "freeze_date": "2026-11-23",
+ "market": {
+  "fetched_utc": "2026-11-23T07:30:00+00:00",
+  "odds_date": "2026-11-23",
+  "raw_odds": {
+   "EPL2627-M111": {
+    "away": "2/1",
+    "draw": "5/2",
+    "home": "6/5"
+   },
+   "EPL2627-M112": {
+    "away": "23/5",
+    "draw": "7/2",
+    "home": "7/12"
+   },
+   "EPL2627-M113": {
+    "away": "310/100",
+    "draw": "14/5",
+    "home": "17/20"
+   },
+   "EPL2627-M114": {
+    "away": "21/20",
+    "draw": "13/5",
+    "home": "5/2"
+   },
+   "EPL2627-M115": {
+    "away": "13/8",
+    "draw": "13/5",
+    "home": "28/17"
+   },
+   "EPL2627-M116": {
+    "away": "21/20",
+    "draw": "14/5",
+    "home": "5/2"
+   },
+   "EPL2627-M117": {
+    "away": "5/1",
+    "draw": "57/17",
+    "home": "11/20"
+   },
+   "EPL2627-M118": {
+    "away": "5/2",
+    "draw": "14/5",
+    "home": "21/20"
+   },
+   "EPL2627-M119": {
+    "away": "29/20",
+    "draw": "5/2",
+    "home": "186/100"
+   },
+   "EPL2627-M120": {
+    "away": "23/20",
+    "draw": "12/5",
+    "home": "12/5"
+   }
+  },
+  "source": "oddschecker.com PL coupon best-price 1X2 (9 fixtures); Arsenal v Man City from wincomparator.com listed 1X2 (that fixture was absent from the oddschecker coupon at fetch time)",
+  "source_url": "https://www.oddschecker.com/football/english/premier-league"
+ },
+ "matches": [
+  {
+   "away": "Chelsea",
+   "congestion_away": "no",
+   "congestion_home": "no",
+   "congestion_note": "",
+   "date_utc": "2026-11-27 20:00:00Z",
+   "home": "Nott'm Forest",
+   "lambda_away": 1.511,
+   "lambda_home": 1.239,
+   "market_date": "2026-11-23",
+   "market_overround": 0.0435,
+   "market_pa": 0.3911,
+   "market_pd": 0.2738,
+   "market_ph": 0.3351,
+   "market_source": "oddschecker.com PL coupon best-price 1X2 (9 fixtures); Arsenal v Man City from wincomparator.com listed 1X2 (that fixture was absent from the oddschecker coupon at fetch time)",
+   "match_id": "EPL2627-M119",
+   "matchweek": 12,
+   "model_version": "v2",
+   "p_away": 0.4354,
+   "p_draw": 0.2528,
+   "p_home": 0.3118
+  },
+  {
+   "away": "Coventry",
+   "congestion_away": "no",
+   "congestion_home": "no",
+   "congestion_note": "",
+   "date_utc": "2026-11-28 15:00:00Z",
+   "home": "Leeds",
+   "lambda_away": 0.964,
+   "lambda_home": 1.786,
+   "market_date": "2026-11-23",
+   "market_overround": 0.0416,
+   "market_pa": 0.16,
+   "market_pd": 0.2206,
+   "market_ph": 0.6194,
+   "market_source": "oddschecker.com PL coupon best-price 1X2 (9 fixtures); Arsenal v Man City from wincomparator.com listed 1X2 (that fixture was absent from the oddschecker coupon at fetch time)",
+   "match_id": "EPL2627-M117",
+   "matchweek": 12,
+   "model_version": "v2",
+   "p_away": 0.2014,
+   "p_draw": 0.2315,
+   "p_home": 0.5671
+  },
+  {
+   "away": "Brentford",
+   "congestion_away": "no",
+   "congestion_home": "yes",
+   "congestion_note": "home: UCL MD5 2026-11-25 (3d before)",
+   "date_utc": "2026-11-28 15:00:00Z",
+   "home": "Man Utd",
+   "lambda_away": 1.211,
+   "lambda_home": 1.539,
+   "market_date": "2026-11-23",
+   "market_overround": 0.0367,
+   "market_pa": 0.2756,
+   "market_pd": 0.2538,
+   "market_ph": 0.4705,
+   "market_source": "oddschecker.com PL coupon best-price 1X2 (9 fixtures); Arsenal v Man City from wincomparator.com listed 1X2 (that fixture was absent from the oddschecker coupon at fetch time)",
+   "match_id": "EPL2627-M118",
+   "matchweek": 12,
+   "model_version": "v2",
+   "p_away": 0.2995,
+   "p_draw": 0.2515,
+   "p_home": 0.449
+  },
+  {
+   "away": "Aston Villa",
+   "congestion_away": "yes",
+   "congestion_home": "no",
+   "congestion_note": "away: UCL MD5 2026-11-24 (4d before)",
+   "date_utc": "2026-11-28 17:30:00Z",
+   "home": "Ipswich",
+   "lambda_away": 1.556,
+   "lambda_home": 1.194,
+   "market_date": "2026-11-23",
+   "market_overround": 0.0367,
+   "market_pa": 0.4705,
+   "market_pd": 0.2538,
+   "market_ph": 0.2756,
+   "market_source": "oddschecker.com PL coupon best-price 1X2 (9 fixtures); Arsenal v Man City from wincomparator.com listed 1X2 (that fixture was absent from the oddschecker coupon at fetch time)",
+   "match_id": "EPL2627-M116",
+   "matchweek": 12,
+   "model_version": "v2",
+   "p_away": 0.4571,
+   "p_draw": 0.2507,
+   "p_home": 0.2922
+  },
+  {
+   "away": "Liverpool",
+   "congestion_away": "yes",
+   "congestion_home": "no",
+   "congestion_note": "away: UCL MD5 2026-11-25 (4d before)",
+   "date_utc": "2026-11-29 12:00:00Z",
+   "home": "Everton",
+   "lambda_away": 1.387,
+   "lambda_home": 1.363,
+   "market_date": "2026-11-23",
+   "market_overround": 0.0513,
+   "market_pa": 0.464,
+   "market_pd": 0.2642,
+   "market_ph": 0.2718,
+   "market_source": "oddschecker.com PL coupon best-price 1X2 (9 fixtures); Arsenal v Man City from wincomparator.com listed 1X2 (that fixture was absent from the oddschecker coupon at fetch time)",
+   "match_id": "EPL2627-M114",
+   "matchweek": 12,
+   "model_version": "v2",
+   "p_away": 0.3776,
+   "p_draw": 0.2554,
+   "p_home": 0.367
+  },
+  {
+   "away": "Newcastle",
+   "congestion_away": "no",
+   "congestion_home": "yes",
+   "congestion_note": "home: UECL MD4 2026-11-26 (3d before)",
+   "date_utc": "2026-11-29 14:05:00Z",
+   "home": "Brighton",
+   "lambda_away": 0.808,
+   "lambda_home": 1.942,
+   "market_date": "2026-11-23",
+   "market_overround": 0.0324,
+   "market_pa": 0.173,
+   "market_pd": 0.2153,
+   "market_ph": 0.6118,
+   "market_source": "oddschecker.com PL coupon best-price 1X2 (9 fixtures); Arsenal v Man City from wincomparator.com listed 1X2 (that fixture was absent from the oddschecker coupon at fetch time)",
+   "match_id": "EPL2627-M112",
+   "matchweek": 12,
+   "model_version": "v2",
+   "p_away": 0.1484,
+   "p_draw": 0.2112,
+   "p_home": 0.6404
+  },
+  {
+   "away": "Hull",
+   "congestion_away": "no",
+   "congestion_home": "yes",
+   "congestion_note": "home: UEL MD5 2026-11-26 (3d before)",
+   "date_utc": "2026-11-29 14:05:00Z",
+   "home": "Crystal Palace",
+   "lambda_away": 1.313,
+   "lambda_home": 1.437,
+   "market_date": "2026-11-23",
+   "market_overround": 0.0476,
+   "market_pa": 0.2328,
+   "market_pd": 0.2512,
+   "market_ph": 0.516,
+   "market_source": "oddschecker.com PL coupon best-price 1X2 (9 fixtures); Arsenal v Man City from wincomparator.com listed 1X2 (that fixture was absent from the oddschecker coupon at fetch time)",
+   "match_id": "EPL2627-M113",
+   "matchweek": 12,
+   "model_version": "v2",
+   "p_away": 0.3442,
+   "p_draw": 0.2549,
+   "p_home": 0.4009
+  },
+  {
+   "away": "Bournemouth",
+   "congestion_away": "yes",
+   "congestion_home": "no",
+   "congestion_note": "away: UEL MD5 2026-11-26 (3d before)",
+   "date_utc": "2026-11-29 14:05:00Z",
+   "home": "Fulham",
+   "lambda_away": 1.48,
+   "lambda_home": 1.27,
+   "market_date": "2026-11-23",
+   "market_overround": 0.0365,
+   "market_pa": 0.3675,
+   "market_pd": 0.268,
+   "market_ph": 0.3645,
+   "market_source": "oddschecker.com PL coupon best-price 1X2 (9 fixtures); Arsenal v Man City from wincomparator.com listed 1X2 (that fixture was absent from the oddschecker coupon at fetch time)",
+   "match_id": "EPL2627-M115",
+   "matchweek": 12,
+   "model_version": "v2",
+   "p_away": 0.4209,
+   "p_draw": 0.2538,
+   "p_home": 0.3253
+  },
+  {
+   "away": "Spurs",
+   "congestion_away": "no",
+   "congestion_home": "yes",
+   "congestion_note": "home: UEL MD5 2026-11-26 (3d before)",
+   "date_utc": "2026-11-29 14:05:00Z",
+   "home": "Sunderland",
+   "lambda_away": 1.262,
+   "lambda_home": 1.488,
+   "market_date": "2026-11-23",
+   "market_overround": 0.0534,
+   "market_pa": 0.4416,
+   "market_pd": 0.2792,
+   "market_ph": 0.2792,
+   "market_source": "oddschecker.com PL coupon best-price 1X2 (9 fixtures); Arsenal v Man City from wincomparator.com listed 1X2 (that fixture was absent from the oddschecker coupon at fetch time)",
+   "match_id": "EPL2627-M120",
+   "matchweek": 12,
+   "model_version": "v2",
+   "p_away": 0.3216,
+   "p_draw": 0.2536,
+   "p_home": 0.4249
+  },
+  {
+   "away": "Man City",
+   "congestion_away": "no",
+   "congestion_home": "no",
+   "congestion_note": "",
+   "date_utc": "2026-11-29 16:30:00Z",
+   "home": "Arsenal",
+   "lambda_away": 0.932,
+   "lambda_home": 1.818,
+   "market_date": "2026-11-23",
+   "market_overround": 0.0736,
+   "market_pa": 0.3105,
+   "market_pd": 0.2661,
+   "market_ph": 0.4234,
+   "market_source": "oddschecker.com PL coupon best-price 1X2 (9 fixtures); Arsenal v Man City from wincomparator.com listed 1X2 (that fixture was absent from the oddschecker coupon at fetch time)",
+   "match_id": "EPL2627-M111",
+   "matchweek": 12,
+   "model_version": "v2",
+   "p_away": 0.1901,
+   "p_draw": 0.2278,
+   "p_home": 0.5821
+  }
+ ],
+ "matchweek": 12,
+ "model_version": "v2",
+ "priors": {
+  "c_goals_per_ppg": 1.5,
+  "home_adv_goals": 0.35,
+  "k": 12.0,
+  "league_ppg_fallback": 1.37,
+  "mu_total": 2.75,
+  "note": "v2: shrink to club's own prior (last season final PPG / promoted avg), independent Poisson, no Dixon-Coles draw correction; market column is benchmark instrument #2 (pick stays the model's); congestion recorded, not priced - measure first, model later",
+  "prior_source": "Wikipedia 2025-26 Premier League final table (fetched 2026-10-24); promoted sides 1.05 stated prior",
+  "promoted_prior": 1.05,
+  "team_priors_used": {
+   "Arsenal": 2.2368,
+   "Aston Villa": 1.7105,
+   "Bournemouth": 1.5,
+   "Brentford": 1.3947,
+   "Brighton": 1.3947,
+   "Chelsea": 1.3684,
+   "Coventry": 1.05,
+   "Crystal Palace": 1.1842,
+   "Everton": 1.2895,
+   "Fulham": 1.3684,
+   "Hull": 1.05,
+   "Ipswich": 1.05,
+   "Leeds": 1.2368,
+   "Liverpool": 1.5789,
+   "Man City": 2.0526,
+   "Man Utd": 1.8684,
+   "Newcastle": 1.2895,
+   "Nott'm Forest": 1.1579,
+   "Spurs": 1.0789,
+   "Sunderland": 1.4211
+  }
+ },
+ "resolution": "fixturedownload.com epl-2026 feed final score; league result after 90min+stoppage; abandoned match resolves on the completed restaging; awarded/forfeited results count as the official score",
+ "run_at_utc": "2026-11-23T06:07:10+00:00",
+ "table_basis": {
+  "Arsenal": {
+   "p": 11,
+   "ppg_shrunk": 2.3844,
+   "prior": 2.2368,
+   "pts": 28
+  },
+  "Aston Villa": {
+   "p": 11,
+   "ppg_shrunk": 1.5011,
+   "prior": 1.7105,
+   "pts": 14
+  },
+  "Bournemouth": {
+   "p": 11,
+   "ppg_shrunk": 1.5652,
+   "prior": 1.5,
+   "pts": 18
+  },
+  "Brentford": {
+   "p": 10,
+   "ppg_shrunk": 1.3971,
+   "prior": 1.3947,
+   "pts": 14
+  },
+  "Brighton": {
+   "p": 10,
+   "ppg_shrunk": 1.7608,
+   "prior": 1.3947,
+   "pts": 22
+  },
+  "Chelsea": {
+   "p": 11,
+   "ppg_shrunk": 1.4096,
+   "prior": 1.3684,
+   "pts": 16
+  },
+  "Coventry": {
+   "p": 11,
+   "ppg_shrunk": 1.0696,
+   "prior": 1.05,
+   "pts": 12
+  },
+  "Crystal Palace": {
+   "p": 11,
+   "ppg_shrunk": 0.9222,
+   "prior": 1.1842,
+   "pts": 7
+  },
+  "Everton": {
+   "p": 10,
+   "ppg_shrunk": 1.4306,
+   "prior": 1.2895,
+   "pts": 16
+  },
+  "Fulham": {
+   "p": 11,
+   "ppg_shrunk": 1.1922,
+   "prior": 1.3684,
+   "pts": 11
+  },
+  "Hull": {
+   "p": 10,
+   "ppg_shrunk": 1.0727,
+   "prior": 1.05,
+   "pts": 11
+  },
+  "Ipswich": {
+   "p": 11,
+   "ppg_shrunk": 1.0261,
+   "prior": 1.05,
+   "pts": 11
+  },
+  "Leeds": {
+   "p": 11,
+   "ppg_shrunk": 1.3844,
+   "prior": 1.2368,
+   "pts": 17
+  },
+  "Liverpool": {
+   "p": 10,
+   "ppg_shrunk": 1.6794,
+   "prior": 1.5789,
+   "pts": 18
+  },
+  "Man City": {
+   "p": 11,
+   "ppg_shrunk": 2.0275,
+   "prior": 2.0526,
+   "pts": 22
+  },
+  "Man Utd": {
+   "p": 10,
+   "ppg_shrunk": 1.3828,
+   "prior": 1.8684,
+   "pts": 8
+  },
+  "Newcastle": {
+   "p": 11,
+   "ppg_shrunk": 1.238,
+   "prior": 1.2895,
+   "pts": 13
+  },
+  "Nott'm Forest": {
+   "p": 11,
+   "ppg_shrunk": 0.9954,
+   "prior": 1.1579,
+   "pts": 9
+  },
+  "Spurs": {
+   "p": 11,
+   "ppg_shrunk": 1.2151,
+   "prior": 1.0789,
+   "pts": 15
+  },
+  "Sunderland": {
+   "p": 11,
+   "ppg_shrunk": 1.1327,
+   "prior": 1.4211,
+   "pts": 9
+  }
+ }
+}
