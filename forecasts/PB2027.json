@@ -3,7 +3,7 @@
   "title": "Punjab Assembly 2027",
   "state": "PB",
   "expected_date": "2027-02",
-  "freeze_date": "2026-11-17",
+  "freeze_date": "2026-11-24",
   "majority": 59,
   "n_seats": 117,
   "baseline_ae": "PB2022",
@@ -27,23 +27,16 @@
       },
       "note": "alone; no INDIA-bloc tie-up with AAP in Punjab"
     },
-    "SAD": {
+    "NDA": {
       "ae_base": {
-        "SAD": "1"
+        "SAD": "1",
+        "BJP": "t"
       },
       "ge": {
-        "SAD": "1"
+        "SAD": "1",
+        "BJP": "t"
       },
-      "note": "alone; no SAD-BSP alliance stated for 2027"
-    },
-    "BJP": {
-      "ae_base": {
-        "BJP": "1"
-      },
-      "ge": {
-        "BJP": "1"
-      },
-      "note": "alone since 2021 farm-law split"
+      "note": "SAD-BJP alliance announced 24-Nov-2026 (Amit Shah presser, New Delhi; SAD rejoins NDA as senior partner, ending the 2020 farm-law split). SAD anchor (full weight), BJP transferred at tau (~0.5) - imperfect SAD(rural-Panthic)<->BJP(urban-Hindu) transfer, further eroded by WPD pulling Panthic votes. Sources: thestatesman.com / businesstoday.in / thefederal.com, 24-Nov-2026."
     }
   },
   "polls": [
@@ -132,16 +125,10 @@
   },
   "sub_questions": [
     {
-      "q": "BJP under 15 seats",
-      "bloc": "BJP",
+      "q": "NDA (SAD+BJP) under 30 seats",
+      "bloc": "NDA",
       "op": "<",
-      "threshold": 15
-    },
-    {
-      "q": "SAD under 20 seats",
-      "bloc": "SAD",
-      "op": "<",
-      "threshold": 20
+      "threshold": 30
     },
     {
       "q": "Winner (largest) in {AAP, INC}",
@@ -157,7 +144,8 @@
     "NEW-ENTRANT FLAG ACTIVE: Waris Punjab De (Amritpal Singh) polls 8.5-14% with no electoral baseline - the exact TVK/TN2026 pattern. All would-be CALLs are suppressed to WATCH-FLAG per the validated N=46 rule.",
     "All final-window polls are unrated agencies; two partisan-affiliated polls (Desh Ka Verdict/INC, Aapka Opinion/AAP) excluded - seat-only projections, no vote shares.",
     "Poll spread is extreme: AAP 27-38, SAD 6-19 across agencies in the same window.",
-    "WPD is not a simulatable bloc (zero baseline): its 8-14% will come asymmetrically from AAP's and SAD's Panthic vote, which the uniform-swing Monte Carlo cannot represent."
+    "WPD is not a simulatable bloc (zero baseline): its 8-14% will come asymmetrically from AAP's and SAD's Panthic vote, which the uniform-swing Monte Carlo cannot represent.",
+    "SAD-BJP ALLIANCE (announced 24-Nov-2026): modeled as one NDA bloc (SAD anchor + BJP at tau transfer). Pre-alliance polls are party-wise, so the NDA poll share is composed SAD + tau*BJP; the real post-alliance transfer is uncertain (bitter 2020 split, rural-Sikh vs urban-Hindu bases, WPD draining the Panthic vote). FPTP also makes a ~25-28% combined vote seat-inefficient (2022: SAD 18%=3 seats, BJP 6.6%=2 seats)."
   ],
   "tripwires": [
     {
@@ -165,8 +153,8 @@
       "effect": "fracture would invalidate all two-way simulations; fade would lift the flag and make the gate decidable"
     },
     {
-      "watch": "Any SAD-BSP or SAD-WPD alliance formation",
-      "effect": "re-bloc and re-run with tau transfers"
+      "watch": "SAD-BJP seat-sharing finalized, or any SAD-BSP / SAD-WPD tie-up",
+      "effect": "SAD-BJP FIRED 24-Nov-2026 -> re-blocked to one NDA bloc (SAD + tau*BJP), freeze 2026-11-24; re-run again on finalized seat-sharing or any further alliance move"
     },
     {
       "watch": "A rated agency (CVoter/CSDS/Axis) publishes a vote-share poll",

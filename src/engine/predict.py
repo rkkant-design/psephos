@@ -85,8 +85,23 @@ def main(fid):
                 auto[b] = float(row.correction.iloc[0]) if len(row) else 0.0
         corr = {**auto, "rule": f"auto from pollster_corrections.csv ({st}): {auto}"}
         print(f"auto poll corrections ({st}): {auto}")
-    m3 = {b: float(fin[b].dropna().mean()) + float(corr.get(b, 0.0))
-          for b in blocs if b in fin.columns and fin[b].notna().any()}
+    def _m3_share(b):
+        """Bloc poll share: a direct poll column if one exists (single-party blocs
+        like AAP, or an alliance already polled as a unit, e.g. UP's NDA/INDIA),
+        else composed from member parties with the SAME tau weights as M2. The
+        composed path is needed for a freshly-formed alliance whose polls are still
+        party-wise (e.g. SAD+BJP after the 24-Nov-2026 tie-up: NDA = SAD + tau*BJP)."""
+        if b in fin.columns and fin[b].notna().any():
+            return float(fin[b].dropna().mean())
+        parts = [wmap[c] * float(fin[p].dropna().mean())
+                 for p, c in cfg["blocs"][b]["ae_base"].items()
+                 if p in fin.columns and fin[p].notna().any()]
+        return sum(parts) if parts else None
+    m3 = {}
+    for b in blocs:
+        _s = _m3_share(b)
+        if _s is not None:
+            m3[b] = _s + float(corr.get(b, 0.0))
     any_rated = bool(fin.get("rated", pd.Series(dtype=bool)).fillna(False).any())
     sig3 = cfg["sigma_state_m3_rated"] if any_rated else cfg["sigma_state_m3_unrated"]
     sig2 = cfg["sigma_state_m2"]
