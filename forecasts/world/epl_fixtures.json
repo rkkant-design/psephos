@@ -1,6 +1,6 @@
 {
  "source": "https://fixturedownload.com/feed/json/epl-2026",
- "fetched_utc": "2026-11-24T02:45:33+00:00",
+ "fetched_utc": "2026-11-24T16:37:13+00:00",
  "fixtures": [
   {
    "MatchNumber": 1,
@@ -1294,9 +1294,9 @@
    "HomeTeam": "Hull",
    "AwayTeam": "Brighton",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 2,
+   "AwayTeamScore": 0,
+   "Winner": "Hull"
   },
   {
    "MatchNumber": 107,
@@ -1306,9 +1306,9 @@
    "HomeTeam": "Liverpool",
    "AwayTeam": "Man Utd",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 4,
+   "AwayTeamScore": 0,
+   "Winner": "Liverpool"
   },
   {
    "MatchNumber": 103,
@@ -1318,9 +1318,9 @@
    "HomeTeam": "Brentford",
    "AwayTeam": "Everton",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 4,
+   "AwayTeamScore": 0,
+   "Winner": "Brentford"
   },
   {
    "MatchNumber": 119,
