@@ -1,6 +1,6 @@
 {
  "source": "https://fixturedownload.com/feed/json/epl-2026",
- "fetched_utc": "2026-11-24T16:37:13+00:00",
+ "fetched_utc": "2026-11-28T14:39:26+00:00",
  "fixtures": [
   {
    "MatchNumber": 1,
@@ -1330,9 +1330,9 @@
    "HomeTeam": "Nott'm Forest",
    "AwayTeam": "Chelsea",
    "Group": null,
-   "HomeTeamScore": null,
-   "AwayTeamScore": null,
-   "Winner": ""
+   "HomeTeamScore": 3,
+   "AwayTeamScore": 2,
+   "Winner": "Nott'm Forest"
   },
   {
    "MatchNumber": 117,
